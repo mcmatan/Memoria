@@ -1,0 +1,6 @@
+framework module Swinject {
+  umbrella header "Pods-Memoria-Swinject-umbrella.h"
+
+  export *
+  module * { export * }
+}

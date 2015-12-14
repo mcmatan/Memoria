@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>TesksFirstExplenation</key>
+	<string>Go to the location you desire,
+Then clock on the button to add a task.</string>
+	<key>or</key>
+	<string>Or</string>
+	<key>enterTestName</key>
+	<string>Enter task name</string>
+	<key>taskName</key>
+	<string>Task Name:</string>
+</dict>
+</plist>

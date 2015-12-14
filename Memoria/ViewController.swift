@@ -1,25 +1,12 @@
-//
-//  ViewController.swift
-//  Memoria
-//
-//  Created by Matan Cohen on 12/11/15.
-//  Copyright © 2015 MACMatan. All rights reserved.
-//
 
+import Foundation
 import UIKit
 
-class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+class ViewController : UIViewController {
+    let defaultBackgroundColor = UIColor.whiteColor()
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        self.view.backgroundColor = defaultBackgroundColor
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
-

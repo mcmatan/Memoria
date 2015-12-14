@@ -1,21 +1,21 @@
-//
-//  AppDelegate.swift
-//  Memoria
-//
-//  Created by Matan Cohen on 12/11/15.
-//  Copyright © 2015 MACMatan. All rights reserved.
-//
 
 import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    
     var window: UIWindow?
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        Bootstrapper.run()
+
+        let rootViewController = Bootstrapper.container.resolve(TabBarController.self)
+        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        self.window?.rootViewController = rootViewController
+        self.window?.makeKeyAndVisible()
+        
         return true
     }
 
