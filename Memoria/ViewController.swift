@@ -9,4 +9,11 @@ class ViewController : UIViewController {
         super.viewDidLayoutSubviews()
         self.view.backgroundColor = defaultBackgroundColor
     }
+    override init(nibName: String?, bundle: NSBundle?) {
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 }

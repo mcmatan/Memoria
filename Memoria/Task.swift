@@ -1,12 +1,32 @@
+//
+//  Task.swift
+//  Memoria
+//
+//  Created by Matan Cohen on 12/14/15.
+//  Copyright © 2015 MACMatan. All rights reserved.
+//
 
 import Foundation
+import RealmSwift
 
-class Task {
-    var name : String
-    var times : [NSDate]
+class Task: Object {
     
-    init(name : String, times : [NSDate]) {
+    dynamic var name = ""
+    dynamic var createdAt = NSDate()
+    
+    init(name : String, createdAt: NSDate) {
         self.name = name
-        self.times = times
+        self.createdAt = createdAt
+        super.init()
     }
+
+    required init() {
+        fatalError("init() has not been implemented")
+    }
+    
+// Specify properties to ignore (Realm won't persist these)
+    
+//  override static func ignoredProperties() -> [String] {
+//    return []
+//  }
 }

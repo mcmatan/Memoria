@@ -6,7 +6,6 @@ class Bootstrapper {
 
     class func run() {
         ViewsAndViewControllersAssembly.run(container)
-        ViewModelsAssembly.run(container)
         ServicesAssembly.run(container)
         FactorysAssembly.run(container)
         ControllersAssembly.run(container)

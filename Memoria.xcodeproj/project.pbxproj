@@ -7,32 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		19F5CF12B11DB7CCDDD1FAFB /* Pods_Memoria.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43E5A21D54B5E0665251F8E4 /* Pods_Memoria.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		901127221C1AF8CA0088DD6B /* MemoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901127211C1AF8CA0088DD6B /* MemoriesViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		901127241C1AF8D20088DD6B /* MemoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901127231C1AF8D20088DD6B /* MemoriesViewModel.swift */; settings = {ASSET_TAGS = (); }; };
-		9011272D1C1AFBE20088DD6B /* ViewModelsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901127281C1AFBE20088DD6B /* ViewModelsAssembly.swift */; settings = {ASSET_TAGS = (); }; };
-		9011272E1C1AFBE20088DD6B /* ViewsAndViewControllersAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901127291C1AFBE20088DD6B /* ViewsAndViewControllersAssembly.swift */; settings = {ASSET_TAGS = (); }; };
-		9011272F1C1AFBE20088DD6B /* Bootstrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9011272A1C1AFBE20088DD6B /* Bootstrapper.swift */; settings = {ASSET_TAGS = (); }; };
-		901127301C1AFBE20088DD6B /* ServicesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9011272B1C1AFBE20088DD6B /* ServicesAssembly.swift */; settings = {ASSET_TAGS = (); }; };
-		901127311C1AFBE20088DD6B /* FactorysAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9011272C1C1AFBE20088DD6B /* FactorysAssembly.swift */; settings = {ASSET_TAGS = (); }; };
-		9035FE051C1B064F00D98022 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9035FE041C1B064F00D98022 /* Button.swift */; settings = {ASSET_TAGS = (); }; };
-		9035FE081C1B095A00D98022 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9035FE071C1B095A00D98022 /* TabBarController.swift */; settings = {ASSET_TAGS = (); }; };
-		9035FE0A1C1B09EA00D98022 /* ControllersAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9035FE091C1B09EA00D98022 /* ControllersAssembly.swift */; settings = {ASSET_TAGS = (); }; };
-		9035FE0D1C1B0C9E00D98022 /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9035FE0C1C1B0C9E00D98022 /* TasksViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		9035FE0F1C1B0CAA00D98022 /* TasksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9035FE0E1C1B0CAA00D98022 /* TasksViewModel.swift */; settings = {ASSET_TAGS = (); }; };
-		9035FE121C1B0D1200D98022 /* DrugsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9035FE111C1B0D1200D98022 /* DrugsViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		9035FE141C1B0D2B00D98022 /* DrugsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9035FE131C1B0D2B00D98022 /* DrugsViewModel.swift */; settings = {ASSET_TAGS = (); }; };
-		9035FE171C1B17BA00D98022 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9035FE161C1B17BA00D98022 /* Content.swift */; settings = {ASSET_TAGS = (); }; };
-		9035FE191C1B18EE00D98022 /* ButtonsTexts.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9035FE181C1B18EE00D98022 /* ButtonsTexts.plist */; settings = {ASSET_TAGS = (); }; };
-		9035FE1B1C1B2B1D00D98022 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9035FE1A1C1B2B1D00D98022 /* ViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		9035FE1D1C1B2B9B00D98022 /* LabelsTexts.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9035FE1C1C1B2B9B00D98022 /* LabelsTexts.plist */; settings = {ASSET_TAGS = (); }; };
-		9035FE1F1C1B2BFB00D98022 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9035FE1E1C1B2BFB00D98022 /* TextView.swift */; settings = {ASSET_TAGS = (); }; };
-		9035FE211C1B2CF800D98022 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9035FE201C1B2CF800D98022 /* Label.swift */; settings = {ASSET_TAGS = (); }; };
-		9035FE251C1EC64500D98022 /* ReminderPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9035FE241C1EC64500D98022 /* ReminderPopUp.swift */; settings = {ASSET_TAGS = (); }; };
-		9035FE281C1ECC4800D98022 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9035FE271C1ECC4800D98022 /* AddTaskViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		9035FE2A1C1ECC5400D98022 /* AddTaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9035FE291C1ECC5400D98022 /* AddTaskViewModel.swift */; settings = {ASSET_TAGS = (); }; };
-		9035FE2C1C1ECFC300D98022 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9035FE2B1C1ECFC300D98022 /* TextField.swift */; settings = {ASSET_TAGS = (); }; };
-		9035FE311C1EDA5C00D98022 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9035FE301C1EDA5C00D98022 /* Task.swift */; settings = {ASSET_TAGS = (); }; };
+		19F5CF12B11DB7CCDDD1FAFB /* Pods_Memoria.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43E5A21D54B5E0665251F8E4 /* Pods_Memoria.framework */; };
+		901127221C1AF8CA0088DD6B /* MemoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901127211C1AF8CA0088DD6B /* MemoriesViewController.swift */; };
+		9011272E1C1AFBE20088DD6B /* ViewsAndViewControllersAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901127291C1AFBE20088DD6B /* ViewsAndViewControllersAssembly.swift */; };
+		9011272F1C1AFBE20088DD6B /* Bootstrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9011272A1C1AFBE20088DD6B /* Bootstrapper.swift */; };
+		901127301C1AFBE20088DD6B /* ServicesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9011272B1C1AFBE20088DD6B /* ServicesAssembly.swift */; };
+		901127311C1AFBE20088DD6B /* FactorysAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9011272C1C1AFBE20088DD6B /* FactorysAssembly.swift */; };
+		9035C6C71C20225300088434 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9035C6C61C20225300088434 /* TableView.swift */; };
+		9035C6D21C20234200088434 /* DataStructures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9035C6CF1C20234200088434 /* DataStructures.swift */; };
+		9035C6D31C20234200088434 /* DateInRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9035C6D01C20234200088434 /* DateInRegion.swift */; };
+		9035C6D41C20234200088434 /* NSDate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9035C6D11C20234200088434 /* NSDate+Extension.swift */; };
+		9035C6D71C2024BA00088434 /* UIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9035C6D61C2024BA00088434 /* UIConstants.swift */; };
+		9035FE051C1B064F00D98022 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9035FE041C1B064F00D98022 /* Button.swift */; };
+		9035FE081C1B095A00D98022 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9035FE071C1B095A00D98022 /* TabBarController.swift */; };
+		9035FE0A1C1B09EA00D98022 /* ControllersAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9035FE091C1B09EA00D98022 /* ControllersAssembly.swift */; };
+		9035FE0D1C1B0C9E00D98022 /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9035FE0C1C1B0C9E00D98022 /* TasksViewController.swift */; };
+		9035FE121C1B0D1200D98022 /* DrugsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9035FE111C1B0D1200D98022 /* DrugsViewController.swift */; };
+		9035FE171C1B17BA00D98022 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9035FE161C1B17BA00D98022 /* Content.swift */; };
+		9035FE191C1B18EE00D98022 /* ButtonsTexts.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9035FE181C1B18EE00D98022 /* ButtonsTexts.plist */; };
+		9035FE1B1C1B2B1D00D98022 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9035FE1A1C1B2B1D00D98022 /* ViewController.swift */; };
+		9035FE1D1C1B2B9B00D98022 /* LabelsTexts.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9035FE1C1C1B2B9B00D98022 /* LabelsTexts.plist */; };
+		9035FE1F1C1B2BFB00D98022 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9035FE1E1C1B2BFB00D98022 /* TextView.swift */; };
+		9035FE211C1B2CF800D98022 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9035FE201C1B2CF800D98022 /* Label.swift */; };
+		9035FE251C1EC64500D98022 /* ReminderPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9035FE241C1EC64500D98022 /* ReminderPopUp.swift */; };
+		9035FE281C1ECC4800D98022 /* AddTaskNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9035FE271C1ECC4800D98022 /* AddTaskNameViewController.swift */; };
+		9035FE2C1C1ECFC300D98022 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9035FE2B1C1ECFC300D98022 /* TextField.swift */; };
+		9035FE341C1F204D00D98022 /* TasksDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9035FE331C1F204D00D98022 /* TasksDataBase.swift */; };
+		905AF3BB1C1F2AEF0063713A /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905AF3BA1C1F2AEF0063713A /* Task.swift */; };
+		905AF3C11C1F3BD60063713A /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905AF3C01C1F3BD60063713A /* NavigationController.swift */; };
+		905AF3C41C1F41260063713A /* AddTaskTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905AF3C31C1F41260063713A /* AddTaskTimeViewController.swift */; };
+		90DC779C1C3AFC6F0062BCE3 /* DatePickerDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DC779B1C3AFC6F0062BCE3 /* DatePickerDialog.swift */; };
+		90DC779F1C3B02770062BCE3 /* AddTaskVoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DC779E1C3B02770062BCE3 /* AddTaskVoiceViewController.swift */; };
+		90DC77A21C3DA0F70062BCE3 /* Recorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DC77A11C3DA0F70062BCE3 /* Recorder.swift */; };
 		90E8C4971C1AA2B8009304A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E8C4961C1AA2B8009304A9 /* AppDelegate.swift */; };
 		90E8C49E1C1AA2B8009304A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90E8C49D1C1AA2B8009304A9 /* Assets.xcassets */; };
 		90E8C4A11C1AA2B8009304A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90E8C49F1C1AA2B8009304A9 /* LaunchScreen.storyboard */; };
@@ -61,19 +67,21 @@
 		08652CDF4564DF32C385FB8F /* Pods-Memoria.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Memoria.release.xcconfig"; path = "Pods/Target Support Files/Pods-Memoria/Pods-Memoria.release.xcconfig"; sourceTree = "<group>"; };
 		43E5A21D54B5E0665251F8E4 /* Pods_Memoria.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Memoria.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		901127211C1AF8CA0088DD6B /* MemoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoriesViewController.swift; sourceTree = "<group>"; };
-		901127231C1AF8D20088DD6B /* MemoriesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoriesViewModel.swift; sourceTree = "<group>"; };
-		901127281C1AFBE20088DD6B /* ViewModelsAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelsAssembly.swift; sourceTree = "<group>"; };
 		901127291C1AFBE20088DD6B /* ViewsAndViewControllersAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewsAndViewControllersAssembly.swift; sourceTree = "<group>"; };
 		9011272A1C1AFBE20088DD6B /* Bootstrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bootstrapper.swift; sourceTree = "<group>"; };
 		9011272B1C1AFBE20088DD6B /* ServicesAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicesAssembly.swift; sourceTree = "<group>"; };
 		9011272C1C1AFBE20088DD6B /* FactorysAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FactorysAssembly.swift; sourceTree = "<group>"; };
+		9035C6C61C20225300088434 /* TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
+		9035C6CF1C20234200088434 /* DataStructures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStructures.swift; sourceTree = "<group>"; };
+		9035C6D01C20234200088434 /* DateInRegion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateInRegion.swift; sourceTree = "<group>"; };
+		9035C6D11C20234200088434 /* NSDate+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Extension.swift"; sourceTree = "<group>"; };
+		9035C6D61C2024BA00088434 /* UIConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIConstants.swift; sourceTree = "<group>"; };
+		9035C6DD1C203F8B00088434 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		9035FE041C1B064F00D98022 /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		9035FE071C1B095A00D98022 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		9035FE091C1B09EA00D98022 /* ControllersAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllersAssembly.swift; sourceTree = "<group>"; };
 		9035FE0C1C1B0C9E00D98022 /* TasksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
-		9035FE0E1C1B0CAA00D98022 /* TasksViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksViewModel.swift; sourceTree = "<group>"; };
 		9035FE111C1B0D1200D98022 /* DrugsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrugsViewController.swift; sourceTree = "<group>"; };
-		9035FE131C1B0D2B00D98022 /* DrugsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrugsViewModel.swift; sourceTree = "<group>"; };
 		9035FE161C1B17BA00D98022 /* Content.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
 		9035FE181C1B18EE00D98022 /* ButtonsTexts.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ButtonsTexts.plist; sourceTree = "<group>"; };
 		9035FE1A1C1B2B1D00D98022 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -81,10 +89,15 @@
 		9035FE1E1C1B2BFB00D98022 /* TextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		9035FE201C1B2CF800D98022 /* Label.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
 		9035FE241C1EC64500D98022 /* ReminderPopUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderPopUp.swift; sourceTree = "<group>"; };
-		9035FE271C1ECC4800D98022 /* AddTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
-		9035FE291C1ECC5400D98022 /* AddTaskViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskViewModel.swift; sourceTree = "<group>"; };
+		9035FE271C1ECC4800D98022 /* AddTaskNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskNameViewController.swift; sourceTree = "<group>"; };
 		9035FE2B1C1ECFC300D98022 /* TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
-		9035FE301C1EDA5C00D98022 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		9035FE331C1F204D00D98022 /* TasksDataBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksDataBase.swift; sourceTree = "<group>"; };
+		905AF3BA1C1F2AEF0063713A /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		905AF3C01C1F3BD60063713A /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		905AF3C31C1F41260063713A /* AddTaskTimeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskTimeViewController.swift; sourceTree = "<group>"; };
+		90DC779B1C3AFC6F0062BCE3 /* DatePickerDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerDialog.swift; sourceTree = "<group>"; };
+		90DC779E1C3B02770062BCE3 /* AddTaskVoiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskVoiceViewController.swift; sourceTree = "<group>"; };
+		90DC77A11C3DA0F70062BCE3 /* Recorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recorder.swift; sourceTree = "<group>"; };
 		90E8C4931C1AA2B8009304A9 /* Memoria.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memoria.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90E8C4961C1AA2B8009304A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		90E8C49D1C1AA2B8009304A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -140,7 +153,6 @@
 			isa = PBXGroup;
 			children = (
 				901127211C1AF8CA0088DD6B /* MemoriesViewController.swift */,
-				901127231C1AF8D20088DD6B /* MemoriesViewModel.swift */,
 			);
 			name = BaseOptionsViewController;
 			sourceTree = "<group>";
@@ -157,13 +169,30 @@
 		901127321C1AFD020088DD6B /* Assemblies */ = {
 			isa = PBXGroup;
 			children = (
-				901127281C1AFBE20088DD6B /* ViewModelsAssembly.swift */,
 				901127291C1AFBE20088DD6B /* ViewsAndViewControllersAssembly.swift */,
 				9011272B1C1AFBE20088DD6B /* ServicesAssembly.swift */,
 				9011272C1C1AFBE20088DD6B /* FactorysAssembly.swift */,
 				9035FE091C1B09EA00D98022 /* ControllersAssembly.swift */,
 			);
 			name = Assemblies;
+			sourceTree = "<group>";
+		};
+		9035C6C81C2022F200088434 /* SwiftDate */ = {
+			isa = PBXGroup;
+			children = (
+				9035C6CF1C20234200088434 /* DataStructures.swift */,
+				9035C6D01C20234200088434 /* DateInRegion.swift */,
+				9035C6D11C20234200088434 /* NSDate+Extension.swift */,
+			);
+			name = SwiftDate;
+			sourceTree = "<group>";
+		};
+		9035C6D51C2024A000088434 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				9035C6D61C2024BA00088434 /* UIConstants.swift */,
+			);
+			name = Constants;
 			sourceTree = "<group>";
 		};
 		9035FE031C1B063600D98022 /* UIElements */ = {
@@ -174,6 +203,7 @@
 				9035FE1E1C1B2BFB00D98022 /* TextView.swift */,
 				9035FE201C1B2CF800D98022 /* Label.swift */,
 				9035FE2B1C1ECFC300D98022 /* TextField.swift */,
+				9035C6C61C20225300088434 /* TableView.swift */,
 			);
 			name = UIElements;
 			sourceTree = "<group>";
@@ -190,7 +220,6 @@
 			isa = PBXGroup;
 			children = (
 				9035FE0C1C1B0C9E00D98022 /* TasksViewController.swift */,
-				9035FE0E1C1B0CAA00D98022 /* TasksViewModel.swift */,
 			);
 			name = TasksViewController;
 			sourceTree = "<group>";
@@ -199,7 +228,6 @@
 			isa = PBXGroup;
 			children = (
 				9035FE111C1B0D1200D98022 /* DrugsViewController.swift */,
-				9035FE131C1B0D2B00D98022 /* DrugsViewModel.swift */,
 			);
 			name = DrugsViewController;
 			sourceTree = "<group>";
@@ -225,8 +253,7 @@
 		9035FE261C1ECC3B00D98022 /* AddTaskViewController */ = {
 			isa = PBXGroup;
 			children = (
-				9035FE271C1ECC4800D98022 /* AddTaskViewController.swift */,
-				9035FE291C1ECC5400D98022 /* AddTaskViewModel.swift */,
+				9035FE271C1ECC4800D98022 /* AddTaskNameViewController.swift */,
 			);
 			name = AddTaskViewController;
 			sourceTree = "<group>";
@@ -234,8 +261,10 @@
 		9035FE2D1C1ED15900D98022 /* Tasks */ = {
 			isa = PBXGroup;
 			children = (
-				9035FE261C1ECC3B00D98022 /* AddTaskViewController */,
+				90DC779D1C3B02320062BCE3 /* AddTaskVoiceViewController */,
 				9035FE0B1C1B0C8400D98022 /* TasksViewController */,
+				905AF3C21C1F410D0063713A /* AddTaskTimeViewController */,
+				9035FE261C1ECC3B00D98022 /* AddTaskViewController */,
 			);
 			name = Tasks;
 			sourceTree = "<group>";
@@ -243,6 +272,7 @@
 		9035FE2E1C1EDA4C00D98022 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				90DC77A01C3DA0ED0062BCE3 /* Recorder */,
 				9035FE2F1C1EDA5400D98022 /* Task */,
 			);
 			name = Model;
@@ -251,14 +281,81 @@
 		9035FE2F1C1EDA5400D98022 /* Task */ = {
 			isa = PBXGroup;
 			children = (
-				9035FE301C1EDA5C00D98022 /* Task.swift */,
 			);
 			name = Task;
+			sourceTree = "<group>";
+		};
+		9035FE321C1F203800D98022 /* DataBase */ = {
+			isa = PBXGroup;
+			children = (
+				905AF3B51C1F2A7A0063713A /* Model */,
+				9035FE331C1F204D00D98022 /* TasksDataBase.swift */,
+			);
+			name = DataBase;
+			sourceTree = "<group>";
+		};
+		905AF3B51C1F2A7A0063713A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				905AF3BA1C1F2AEF0063713A /* Task.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		905AF3BE1C1F3BC20063713A /* NavigationControllers */ = {
+			isa = PBXGroup;
+			children = (
+				905AF3BF1C1F3BC90063713A /* NavigationController */,
+				9035FE061C1B094800D98022 /* NavigationSegmentedController */,
+			);
+			name = NavigationControllers;
+			sourceTree = "<group>";
+		};
+		905AF3BF1C1F3BC90063713A /* NavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				905AF3C01C1F3BD60063713A /* NavigationController.swift */,
+			);
+			name = NavigationController;
+			sourceTree = "<group>";
+		};
+		905AF3C21C1F410D0063713A /* AddTaskTimeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				905AF3C31C1F41260063713A /* AddTaskTimeViewController.swift */,
+				90DC779A1C3AFC610062BCE3 /* DatePicker */,
+			);
+			name = AddTaskTimeViewController;
+			sourceTree = "<group>";
+		};
+		90DC779A1C3AFC610062BCE3 /* DatePicker */ = {
+			isa = PBXGroup;
+			children = (
+				90DC779B1C3AFC6F0062BCE3 /* DatePickerDialog.swift */,
+			);
+			name = DatePicker;
+			sourceTree = "<group>";
+		};
+		90DC779D1C3B02320062BCE3 /* AddTaskVoiceViewController */ = {
+			isa = PBXGroup;
+			children = (
+				90DC779E1C3B02770062BCE3 /* AddTaskVoiceViewController.swift */,
+			);
+			name = AddTaskVoiceViewController;
+			sourceTree = "<group>";
+		};
+		90DC77A01C3DA0ED0062BCE3 /* Recorder */ = {
+			isa = PBXGroup;
+			children = (
+				90DC77A11C3DA0F70062BCE3 /* Recorder.swift */,
+			);
+			name = Recorder;
 			sourceTree = "<group>";
 		};
 		90E8C48A1C1AA2B8009304A9 = {
 			isa = PBXGroup;
 			children = (
+				9035C6DD1C203F8B00088434 /* MyPlayground.playground */,
 				90E8C4951C1AA2B8009304A9 /* Memoria */,
 				90E8C4AA1C1AA2B8009304A9 /* MemoriaTests */,
 				90E8C4B51C1AA2B9009304A9 /* MemoriaUITests */,
@@ -281,9 +378,11 @@
 		90E8C4951C1AA2B8009304A9 /* Memoria */ = {
 			isa = PBXGroup;
 			children = (
+				9035C6D51C2024A000088434 /* Constants */,
+				905AF3BE1C1F3BC20063713A /* NavigationControllers */,
+				9035FE321C1F203800D98022 /* DataBase */,
 				9035FE2E1C1EDA4C00D98022 /* Model */,
 				9035FE151C1B17B200D98022 /* Cms */,
-				9035FE061C1B094800D98022 /* NavigationSegmentedController */,
 				9035FE031C1B063600D98022 /* UIElements */,
 				901127251C1AFAAF0088DD6B /* DipendencyInjection */,
 				9011271F1C1AF6730088DD6B /* Screens */,
@@ -316,6 +415,7 @@
 		B4427CF2D9A98A2F2E8DB352 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9035C6C81C2022F200088434 /* SwiftDate */,
 				43E5A21D54B5E0665251F8E4 /* Pods_Memoria.framework */,
 			);
 			name = Frameworks;
@@ -401,6 +501,7 @@
 				TargetAttributes = {
 					90E8C4921C1AA2B8009304A9 = {
 						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = PH85M24H5K;
 					};
 					90E8C4A61C1AA2B8009304A9 = {
 						CreatedOnToolsVersion = 7.0.1;
@@ -513,23 +614,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9011272D1C1AFBE20088DD6B /* ViewModelsAssembly.swift in Sources */,
-				901127241C1AF8D20088DD6B /* MemoriesViewModel.swift in Sources */,
 				9035FE2C1C1ECFC300D98022 /* TextField.swift in Sources */,
-				9035FE141C1B0D2B00D98022 /* DrugsViewModel.swift in Sources */,
 				9035FE171C1B17BA00D98022 /* Content.swift in Sources */,
 				9011272F1C1AFBE20088DD6B /* Bootstrapper.swift in Sources */,
 				901127221C1AF8CA0088DD6B /* MemoriesViewController.swift in Sources */,
 				9035FE081C1B095A00D98022 /* TabBarController.swift in Sources */,
-				9035FE2A1C1ECC5400D98022 /* AddTaskViewModel.swift in Sources */,
+				90DC779C1C3AFC6F0062BCE3 /* DatePickerDialog.swift in Sources */,
+				9035C6D71C2024BA00088434 /* UIConstants.swift in Sources */,
+				9035C6C71C20225300088434 /* TableView.swift in Sources */,
 				90E8C4971C1AA2B8009304A9 /* AppDelegate.swift in Sources */,
+				9035FE341C1F204D00D98022 /* TasksDataBase.swift in Sources */,
 				9035FE051C1B064F00D98022 /* Button.swift in Sources */,
+				905AF3BB1C1F2AEF0063713A /* Task.swift in Sources */,
+				905AF3C41C1F41260063713A /* AddTaskTimeViewController.swift in Sources */,
 				9035FE211C1B2CF800D98022 /* Label.swift in Sources */,
 				9035FE1B1C1B2B1D00D98022 /* ViewController.swift in Sources */,
-				9035FE0F1C1B0CAA00D98022 /* TasksViewModel.swift in Sources */,
+				90DC77A21C3DA0F70062BCE3 /* Recorder.swift in Sources */,
 				9035FE251C1EC64500D98022 /* ReminderPopUp.swift in Sources */,
-				9035FE281C1ECC4800D98022 /* AddTaskViewController.swift in Sources */,
-				9035FE311C1EDA5C00D98022 /* Task.swift in Sources */,
+				905AF3C11C1F3BD60063713A /* NavigationController.swift in Sources */,
+				90DC779F1C3B02770062BCE3 /* AddTaskVoiceViewController.swift in Sources */,
+				9035C6D21C20234200088434 /* DataStructures.swift in Sources */,
+				9035C6D31C20234200088434 /* DateInRegion.swift in Sources */,
+				9035FE281C1ECC4800D98022 /* AddTaskNameViewController.swift in Sources */,
+				9035C6D41C20234200088434 /* NSDate+Extension.swift in Sources */,
 				9035FE0D1C1B0C9E00D98022 /* TasksViewController.swift in Sources */,
 				901127301C1AFBE20088DD6B /* ServicesAssembly.swift in Sources */,
 				9035FE121C1B0D1200D98022 /* DrugsViewController.swift in Sources */,
@@ -669,6 +776,8 @@
 			baseConfigurationReference = BFCACEE2093F19BD06FD62C3 /* Pods-Memoria.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Memoria/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.MACApps.com.Memoria;
@@ -681,6 +790,8 @@
 			baseConfigurationReference = 08652CDF4564DF32C385FB8F /* Pods-Memoria.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Memoria/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.MACApps.com.Memoria;

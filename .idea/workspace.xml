@@ -2,20 +2,68 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="573748c1-16ea-4b3f-9c6b-5cbccd8c4215" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Memoria/BaseOptionsViewController.swift" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Memoria/BaseOptionsViewModel.swift" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Memoria/Bootstrapper.swift" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Memoria/FactorysAssembly.swift" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Memoria/ServicesAssembly.swift" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Memoria/ViewModelsAssembly.swift" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Memoria/ViewsAndViewControllersAssembly.swift" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Memoria/Base.lproj/Main.storyboard" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Memoria/ViewController.swift" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Memoria/AddTaskNameViewController.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Memoria/AddTaskTimeViewController.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Memoria/AddTaskVoiceViewController.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DataStructures.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DateInRegion.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Memoria/DatePickerDialog.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NSDate+Extension.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Memoria/NavigationController.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Memoria/TableView.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Memoria/TaskRM.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Memoria/TasksDataBase.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Memoria/UIConstants.swift" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Memoria/AddTaskViewController.swift" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Memoria/AddTaskViewModel.swift" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Memoria/DrugsViewModel.swift" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Memoria/MemoriesViewModel.swift" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Memoria/TasksViewModel.swift" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Memoria/ViewModelsAssembly.swift" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/Swinject/Swinject.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/Swinject/_SwinjectStoryboardBase.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/Matan.xcuserdatad/xcschemes/Pods-Memoria-SnapKit.xcscheme" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/Matan.xcuserdatad/xcschemes/Pods-Memoria-Swinject.xcscheme" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Memoria-SnapKit/Info.plist" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Memoria-SnapKit/Pods-Memoria-SnapKit-Private.xcconfig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Memoria-SnapKit/Pods-Memoria-SnapKit-dummy.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Memoria-SnapKit/Pods-Memoria-SnapKit-prefix.pch" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Memoria-SnapKit/Pods-Memoria-SnapKit-umbrella.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Memoria-SnapKit/Pods-Memoria-SnapKit.modulemap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Memoria-SnapKit/Pods-Memoria-SnapKit.xcconfig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Memoria-Swinject/Info.plist" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Memoria-Swinject/Pods-Memoria-Swinject-Private.xcconfig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Memoria-Swinject/Pods-Memoria-Swinject-dummy.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Memoria-Swinject/Pods-Memoria-Swinject-prefix.pch" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Memoria-Swinject/Pods-Memoria-Swinject-umbrella.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Memoria-Swinject/Pods-Memoria-Swinject.modulemap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Memoria-Swinject/Pods-Memoria-Swinject.xcconfig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Memoria/Pods-Memoria-environment.h" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Memoria/AppDelegate.swift" afterPath="$PROJECT_DIR$/Memoria/AppDelegate.swift" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Memoria/Info.plist" afterPath="$PROJECT_DIR$/Memoria/Info.plist" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Memoria/Base.lproj/LaunchScreen.storyboard" afterPath="$PROJECT_DIR$/Memoria/Base.lproj/LaunchScreen.storyboard" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Memoria/Bootstrapper.swift" afterPath="$PROJECT_DIR$/Memoria/Bootstrapper.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Memoria/ButtonsTexts.plist" afterPath="$PROJECT_DIR$/Memoria/ButtonsTexts.plist" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Memoria/ControllersAssembly.swift" afterPath="$PROJECT_DIR$/Memoria/ControllersAssembly.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Memoria/DrugsViewController.swift" afterPath="$PROJECT_DIR$/Memoria/DrugsViewController.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Memoria/LabelsTexts.plist" afterPath="$PROJECT_DIR$/Memoria/LabelsTexts.plist" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Manifest.lock" afterPath="$PROJECT_DIR$/Pods/Manifest.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Memoria.xcodeproj/xcuserdata/Matan.xcuserdatad/xcschemes/Memoria.xcscheme" afterPath="$PROJECT_DIR$/Memoria.xcodeproj/xcuserdata/Matan.xcuserdatad/xcschemes/Memoria.xcscheme" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Podfile.lock" afterPath="$PROJECT_DIR$/Podfile.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Podfile" afterPath="$PROJECT_DIR$/Podfile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Memoria/Pods-Memoria-acknowledgements.markdown" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Memoria/Pods-Memoria-acknowledgements.markdown" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Memoria/Pods-Memoria-acknowledgements.plist" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Memoria/Pods-Memoria-acknowledgements.plist" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Memoria/Pods-Memoria-frameworks.sh" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Memoria/Pods-Memoria-frameworks.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Memoria/Pods-Memoria-resources.sh" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Memoria/Pods-Memoria-resources.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Memoria/Pods-Memoria.debug.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Memoria/Pods-Memoria.debug.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Memoria/Pods-Memoria.release.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Memoria/Pods-Memoria.release.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/Matan.xcuserdatad/xcschemes/Pods-Memoria.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/Matan.xcuserdatad/xcschemes/Pods-Memoria.xcscheme" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Memoria/Task.swift" afterPath="$PROJECT_DIR$/Memoria/Task.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Memoria/TasksViewController.swift" afterPath="$PROJECT_DIR$/Memoria/TasksViewController.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Memoria/ViewController.swift" afterPath="$PROJECT_DIR$/Memoria/ViewController.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Memoria/ViewsAndViewControllersAssembly.swift" afterPath="$PROJECT_DIR$/Memoria/ViewsAndViewControllersAssembly.swift" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Memoria.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/Memoria.xcodeproj/project.pbxproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/project.pbxproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/Matan.xcuserdatad/xcschemes/xcschememanagement.plist" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/Matan.xcuserdatad/xcschemes/xcschememanagement.plist" />
     </list>
     <ignored path="Memoria.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,17 +81,57 @@
   <component name="DaemonCodeAnalyzer">
     <disable_hints />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="iphonesimulator_iPhone_6s_9.0_x86_64_1" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="iphonesimulator_iPhone_6s_9.2_x86_64_1" />
   <component name="FavoritesManager">
     <favorites_list name="Memoria" />
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AppDelegate.swift" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AppDelegate.swift" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Memoria/AppDelegate.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.11082474" vertical-offset="4" max-vertical-offset="780">
-              <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="825">
+              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ViewsAndViewControllersAssembly.swift" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Memoria/ViewsAndViewControllersAssembly.swift">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="390" max-vertical-offset="540">
+              <caret line="26" column="59" selection-start-line="26" selection-start-column="59" selection-end-line="26" selection-end-column="59" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AddTaskTimeViewController.swift" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Memoria/AddTaskTimeViewController.swift">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="690" max-vertical-offset="1365">
+              <caret line="46" column="36" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AddTaskNameViewController.swift" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Memoria/AddTaskNameViewController.swift">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="124" max-vertical-offset="1005">
+              <caret line="50" column="5" selection-start-line="7" selection-start-column="3" selection-end-line="50" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AddTaskVoiceViewController.swift" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Memoria/AddTaskVoiceViewController.swift">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.40592784" vertical-offset="45" max-vertical-offset="885">
+              <caret line="24" column="8" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -53,6 +141,17 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Memoria/AppDelegate.swift" />
+        <option value="$PROJECT_DIR$/Memoria/AddTaskViewController.swift" />
+        <option value="$PROJECT_DIR$/Memoria/ViewsAndViewControllersAssembly.swift" />
+        <option value="$PROJECT_DIR$/Memoria/AddTaskNameViewController.swift" />
+        <option value="$PROJECT_DIR$/Memoria/AddTaskVoiceViewController.swift" />
+      </list>
+    </option>
   </component>
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
@@ -85,7 +184,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Cidr.FilesView" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -135,10 +233,6 @@
               <option name="myItemId" value="Screens" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BaseOptionsView" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -156,12 +250,16 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Cidr.FilesView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="recentsLimit" value="5" />
     <property name="FullScreen" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
+    <property name="options.lastSelected" value="vcs.Git" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RunManager" selected="Application.Memoria">
     <configuration default="true" type="AppleRunConfiguration" factoryName="Application" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="Memoria" TARGET_NAME="Memoria" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Memoria" RUN_TARGET_NAME="Memoria" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
@@ -169,6 +267,22 @@
       <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
         <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
       </EXTENSION>
+      <method />
+    </configuration>
+    <configuration default="true" type="OCUnitRunConfiguration" factoryName="XCTest/Kiwi" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="Memoria" TARGET_NAME="MemoriaTests" CONFIG_NAME="Debug" TEST_MODE="SUITE_TEST">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="OCGoogleTestRunConfigurationType" factoryName="Google Test" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="Memoria" TARGET_NAME="Memoria" CONFIG_NAME="Debug" TEST_MODE="SUITE_TEST">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <pass-parent-envs>true</pass-parent-envs>
+      <envs />
       <method />
     </configuration>
     <configuration default="false" name="Memoria" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="Memoria" TARGET_NAME="Memoria" CONFIG_NAME="Debug" SCHEME_NAME="Memoria" RUN_TARGET_PROJECT_NAME="Memoria" RUN_TARGET_NAME="Memoria" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
@@ -180,13 +294,6 @@
       <ConfigurationWrapper RunnerId="AppRunner" />
       <method />
     </configuration>
-    <configuration default="false" name="Pods-Memoria-Swinject" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="Pods" TARGET_NAME="Pods-Memoria-Swinject" CONFIG_NAME="Debug" SCHEME_NAME="Pods-Memoria-Swinject" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
-      <envs />
-      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
-        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
-      </EXTENSION>
-      <method />
-    </configuration>
     <configuration default="false" name="Pods-Memoria" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="Pods" TARGET_NAME="Pods-Memoria" CONFIG_NAME="Debug" SCHEME_NAME="Pods-Memoria" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
       <envs />
       <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
@@ -194,10 +301,57 @@
       </EXTENSION>
       <method />
     </configuration>
-    <list size="3">
+    <configuration default="false" name="ReactiveCocoa" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="Pods" TARGET_NAME="ReactiveCocoa" CONFIG_NAME="Debug" SCHEME_NAME="ReactiveCocoa" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <method />
+    </configuration>
+    <configuration default="false" name="Realm" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="Pods" TARGET_NAME="Realm" CONFIG_NAME="Debug" SCHEME_NAME="Realm" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <method />
+    </configuration>
+    <configuration default="false" name="RealmSwift" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="Pods" TARGET_NAME="RealmSwift" CONFIG_NAME="Debug" SCHEME_NAME="RealmSwift" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <method />
+    </configuration>
+    <configuration default="false" name="Result" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="Pods" TARGET_NAME="Result" CONFIG_NAME="Debug" SCHEME_NAME="Result" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <method />
+    </configuration>
+    <configuration default="false" name="SnapKit" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="Pods" TARGET_NAME="SnapKit" CONFIG_NAME="Debug" SCHEME_NAME="SnapKit" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <method />
+    </configuration>
+    <configuration default="false" name="Swinject" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="Pods" TARGET_NAME="Swinject" CONFIG_NAME="Debug" SCHEME_NAME="Swinject" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <method />
+    </configuration>
+    <list size="8">
       <item index="0" class="java.lang.String" itemvalue="Application.Memoria" />
-      <item index="1" class="java.lang.String" itemvalue="Application.Pods-Memoria-Swinject" />
-      <item index="2" class="java.lang.String" itemvalue="Application.Pods-Memoria" />
+      <item index="1" class="java.lang.String" itemvalue="Application.Pods-Memoria" />
+      <item index="2" class="java.lang.String" itemvalue="Application.ReactiveCocoa" />
+      <item index="3" class="java.lang.String" itemvalue="Application.Realm" />
+      <item index="4" class="java.lang.String" itemvalue="Application.RealmSwift" />
+      <item index="5" class="java.lang.String" itemvalue="Application.Result" />
+      <item index="6" class="java.lang.String" itemvalue="Application.SnapKit" />
+      <item index="7" class="java.lang.String" itemvalue="Application.Swinject" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
@@ -215,26 +369,26 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.329602" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
@@ -262,6 +416,30 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Memoria/AppDelegate.swift">
       <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="825">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Memoria/ViewsAndViewControllersAssembly.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="390" max-vertical-offset="540">
+          <caret line="26" column="59" selection-start-line="26" selection-start-column="59" selection-end-line="26" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Memoria/AddTaskTimeViewController.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="435" max-vertical-offset="915">
+          <caret line="29" column="36" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Memoria/AddTaskNameViewController.swift">
+      <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
@@ -270,8 +448,56 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Memoria/AppDelegate.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11082474" vertical-offset="4" max-vertical-offset="780">
-          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Memoria/AppDelegate.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Memoria/AppDelegate.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="49" max-vertical-offset="825">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Memoria/ViewsAndViewControllersAssembly.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
+          <caret line="26" column="59" selection-start-line="26" selection-start-column="59" selection-end-line="26" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Memoria/AddTaskTimeViewController.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="690" max-vertical-offset="1365">
+          <caret line="46" column="36" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Memoria/AddTaskNameViewController.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="124" max-vertical-offset="1005">
+          <caret line="50" column="5" selection-start-line="7" selection-start-column="3" selection-end-line="50" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Memoria/AddTaskVoiceViewController.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.40592784" vertical-offset="45" max-vertical-offset="885">
+          <caret line="24" column="8" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
           <folding />
         </state>
       </provider>

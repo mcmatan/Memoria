@@ -4,17 +4,37 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-Memoria-SnapKit.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-Memoria-Swinject.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-Memoria.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ReactiveCocoa.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Realm.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>RealmSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Result.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SnapKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Swinject.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -22,17 +42,37 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>167D91732AC7F74824CA5EE8</key>
+		<key>07FADAE1D20AD9F3C9F10CFFE7A589A2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2799C225131449AA24CD982B</key>
+		<key>26B1B9F22E5311D64516BCF75D978FC1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F5BE12B07700DAAFF6283A73</key>
+		<key>4198804C3B1CA64E0A59F9F3F1B39E36</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>721620C1CB396220ADC3E6259D8E2EAC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9080AC643C4C119B557F130543D06425</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EA00A8EE8C461FE9B520092CCE3A2F60</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EBA940BD126F48AEBDD4E3656ED79A79</key>
 		<dict>
 			<key>primary</key>
 			<true/>

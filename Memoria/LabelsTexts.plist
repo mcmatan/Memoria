@@ -11,5 +11,11 @@ Then clock on the button to add a task.</string>
 	<string>Enter task name</string>
 	<key>taskName</key>
 	<string>Task Name:</string>
+	<key>addTaskTimeButton</key>
+	<string>Add time + </string>
+	<key>addTimeDoneBtn</key>
+	<string>Done</string>
+	<key>addTaskVoiceTopTxt</key>
+	<string>Record a sound to play every time the task firs (Optional)</string>
 </dict>
 </plist>

@@ -1,5 +1,8 @@
 
+
 import UIKit
+import RealmSwift
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -11,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         Bootstrapper.run()
 
-        let rootViewController = Bootstrapper.container.resolve(TabBarController.self)
+        let rootViewController = Bootstrapper.container.resolve(NavigationController.self)
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
         self.window?.rootViewController = rootViewController
         self.window?.makeKeyAndVisible()

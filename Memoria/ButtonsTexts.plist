@@ -12,5 +12,13 @@
 	<string>Manage tasks</string>
 	<key>Done</key>
 	<string>Done</string>
+	<key>addTaskTimeButton</key>
+	<string>+ Add time for task</string>
+	<key>btnStopRecord</key>
+	<string>Stop recording</string>
+	<key>btnPlay</key>
+	<string>Play</string>
+	<key>btnRecord</key>
+	<string>Record</string>
 </dict>
 </plist>

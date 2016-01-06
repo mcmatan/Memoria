@@ -8,9 +8,9 @@ public class ControllersAssembly {
     class func run(container : Container) {
         container.register(TabBarController.self) { c in
             let tabBar = TabBarController()
-            let left = TasksViewController()
-            let center = MemoriesViewController()
-            let right = DrugsViewController()
+            guard let left = c.resolve(TasksViewController.self) else {return tabBar}
+            guard let  center = c.resolve(MemoriesViewController.self) else {return tabBar}
+            guard let right = c.resolve(DrugsViewController.self) else {return tabBar}
             let controllers = [left, center, right]
             tabBar.viewControllers = controllers
             left.tabBarItem = UITabBarItem(
@@ -29,5 +29,9 @@ public class ControllersAssembly {
             return tabBar
         }
         
+        container.register(NavigationController.self) { c in
+            let navigationController = NavigationController(rootViewController : c.resolve(TabBarController)!)
+            return navigationController
+        }
     }
 }
