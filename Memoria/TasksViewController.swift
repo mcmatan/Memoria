@@ -37,22 +37,38 @@ class TasksViewController : ViewController {
         self.view.addSubview(thisIsMyLocation)
         self.view.addSubview(or)
         self.view.addSubview(manageTasks)
-        topExpelenationText.snp_makeConstraints { (make) -> Void in
-            make.top.equalTo(self.view.snp_top).offset(100)
-            make.centerX.equalTo(self.view.snp_centerX)
-        }
-        thisIsMyLocation.snp_makeConstraints { (make) -> Void in
-            make.top.equalTo(topExpelenationText.snp_bottom).offset(UIConstants.paddingBetweenElements)
-            make.centerX.equalTo(self.view.snp_centerX)
-        }
-        or.snp_makeConstraints { (make) -> Void in
-            make.top.equalTo(thisIsMyLocation.snp_bottom).offset(UIConstants.paddingBetweenElements)
-            make.centerX.equalTo(self.view.snp_centerX)
-        }
-        manageTasks.snp_makeConstraints { (make) -> Void in
-            make.top.equalTo(or.snp_bottom).offset(UIConstants.paddingBetweenElements)
-            make.centerX.equalTo(self.view.snp_centerX)
-        }
+        
+        topExpelenationText.translatesAutoresizingMaskIntoConstraints = false
+        thisIsMyLocation.translatesAutoresizingMaskIntoConstraints = false
+        or.translatesAutoresizingMaskIntoConstraints = false
+        manageTasks.translatesAutoresizingMaskIntoConstraints = false
+        
+        let topLayoutGuide = self.topLayoutGuide
+        let bottomLayoutGuide = self.bottomLayoutGuide
+        
+        let views : [String : AnyObject] =
+        ["topExpelenationText" : topExpelenationText,
+            "thisIsMyLocation" : thisIsMyLocation,
+            "or" : or,
+            "manageTasks" : manageTasks,
+            "topLayoutGuide" : topLayoutGuide,
+            "bottomLayoutGuide" : bottomLayoutGuide
+        ]
+        
+        var allConstrains = [NSLayoutConstraint]()
+        
+        let verticalLayout = NSLayoutConstraint.constraintsWithVisualFormat(
+            "V:[topLayoutGuide]-[topExpelenationText]-[thisIsMyLocation]-[or(topExpelenationText)]-[manageTasks]-[bottomLayoutGuide]"
+            , options: NSLayoutFormatOptions.AlignAllCenterX, metrics: nil, views: views)
+        
+        let horizintalLayout = NSLayoutConstraint.constraintsWithVisualFormat(
+            "H:|[topExpelenationText]|"
+            , options: [], metrics: nil, views: views)
+        
+        allConstrains += verticalLayout
+        allConstrains += horizintalLayout
+        NSLayoutConstraint.activateConstraints(allConstrains)
+
     }
     
     //MARK: Buttons presses

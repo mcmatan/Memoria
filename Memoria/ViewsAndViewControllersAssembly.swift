@@ -31,5 +31,9 @@ public class ViewsAndViewControllersAssembly {
             AddTaskVoiceViewController(container: container, taskName: name, tasksDates: tasksDates)
         }
 
+        container.register(AddTaskConfirmationViewController.self) { _, name, tasksDates , voiceURL in
+            AddTaskConfirmationViewController(container: container, taskName: name, datesList: tasksDates, voiceURL: voiceURL)
+        }
+
     }
 }

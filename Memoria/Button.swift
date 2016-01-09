@@ -4,8 +4,8 @@ import UIKit
 import SnapKit
 
 class Button : UIButton {
-    var defaultWidth = UIScreen.mainScreen().bounds.size.width - 80
-    var defaultHeight = 100
+    var myDefaultWidth = Double(UIScreen.mainScreen().bounds.size.width) - 80.0
+    var myDefaultHeight = 70.0
     
     init() {
         super.init(frame: CGRectZero)
@@ -22,10 +22,16 @@ class Button : UIButton {
     }
     
     func defaultSize() {
-        self.snp_makeConstraints { (make) -> Void in
-            make.width.equalTo(defaultWidth)
-            make.height.equalTo(defaultHeight)
-        }
+        self.defaultHeight()
+        self.defaultWidth()
+    }
+    
+    func defaultHeight() {
+        self.heightLayoutAs(myDefaultHeight)
+    }
+    
+    func defaultWidth() {
+        self.widthLayoutAs(myDefaultWidth)
     }
     
     func defaultColor() {

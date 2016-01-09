@@ -9,7 +9,6 @@ class AddTaskTimeViewController : ViewController, UITableViewDelegate, UITableVi
     var datesList = Array<NSDate>()
     var container : Container
     private var taskName : String
-    private var taskDates = Array<NSDate>()
     
     init(taskName : String, container : Container) {
         self.taskName = taskName
@@ -27,29 +26,13 @@ class AddTaskTimeViewController : ViewController, UITableViewDelegate, UITableVi
         
         let addTaskBtn = Button()
         addTaskBtn.setTitle(Content.getContent(ContentType.LabelTxt, name: "addTaskTimeButton"), forState: UIControlState.Normal)
-        addTaskBtn.setTitleColor(UIColor.blueColor(), forState: UIControlState.Normal)
-        self.view.addSubview(addTaskBtn)
-        self.view.addSubview(self.tableView)
-        addTaskBtn.snp_makeConstraints { (make) -> Void in
-            make.top.equalTo(self.view.snp_top).offset(UIConstants.defaultTopPadding)
-            make.leading.equalTo(self.view.snp_leading).offset(UIConstants.defaultLeftPadding)
-        }
+        addTaskBtn.defaultStyle()
         addTaskBtn.addTarget(self, action: "addTimeButtonPress", forControlEvents: UIControlEvents.TouchUpInside)
         let doneBtn = Button()
         doneBtn.setTitle(Content.getContent(ContentType.LabelTxt, name: "addTimeDoneBtn"), forState: UIControlState.Normal)
-        doneBtn.setTitleColor(UIColor.blueColor(), forState: UIControlState.Normal)
         doneBtn.addTarget(self, action: "doneBtnPress", forControlEvents: UIControlEvents.TouchUpInside)
-        self.view.addSubview(doneBtn)
-        doneBtn.snp_makeConstraints { (make) -> Void in
-            make.top.equalTo(self.view.snp_top).offset(UIConstants.defaultTopPadding)
-            make.trailing.equalTo(self.view.snp_trailing).offset(-UIConstants.defaultLeftPadding)
-        }
-        self.tableView.snp_makeConstraints { (make) -> Void in
-            make.top.equalTo(addTaskBtn.snp_bottom).offset(UIConstants.defaultPaddingBetweenElemets)
-            make.leading.equalTo(self.view.snp_leading).offset(UIConstants.defaultLeftPadding)
-            make.trailing.equalTo(self.view.snp_trailing).offset(-(UIConstants.defaultLeftPadding))
-            make.bottom.equalTo(self.view.snp_bottom).offset(-UIConstants.defaultLeftPadding)
-        }
+        doneBtn.defaultStyle()
+    
         self.tableView.layer.borderColor = UIColor.grayColor().CGColor
         self.tableView.layer.borderWidth = 1.0
         self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
@@ -57,6 +40,33 @@ class AddTaskTimeViewController : ViewController, UITableViewDelegate, UITableVi
         tableView.delegate = self
         tableView.dataSource = self
         
+        self.view.addSubview(addTaskBtn)
+        self.view.addSubview(self.tableView)
+        self.view.addSubview(doneBtn)
+
+        
+        addTaskBtn.translatesAutoresizingMaskIntoConstraints = false
+        doneBtn.translatesAutoresizingMaskIntoConstraints = false
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        
+        let views = [doneBtn, addTaskBtn,tableView]
+        let viewsInfoDic : [String : AnyObject] =
+        [
+            "addTaskBtn" : addTaskBtn,
+            "doneBtn" : doneBtn,
+            "tableView" : self.tableView
+        ]
+        
+
+        UIViewAutoLayoutExtentions.equalWidthsForViews(views)
+        
+        let verticalLayout = NSLayoutConstraint.constraintsWithVisualFormat(
+            "V:[addTaskBtn]-[doneBtn]-[tableView]", options: NSLayoutFormatOptions.AlignAllCenterX, metrics: nil, views: viewsInfoDic)
+        NSLayoutConstraint.activateConstraints(verticalLayout)
+        
+        addTaskBtn.topToViewControllerTopLayoutGuide(self)
+        tableView.bottomToViewControllerTopLayoutGuide(self)
+        addTaskBtn.centerVerticlyInSuperView()
     }
     
     //MARK: TableView
@@ -83,8 +93,15 @@ class AddTaskTimeViewController : ViewController, UITableViewDelegate, UITableVi
     }
 
     func doneBtnPress() {
-        let addTaskVoiceViewController = self.container.resolve(AddTaskVoiceViewController.self, arguments: (self.taskName, self.taskDates))
-        self.navigationController?.pushViewController(addTaskVoiceViewController!, animated: true)
+        
+        if let _ = self.navigationController {
+            let addTaskVoiceViewController = self.container.resolve(AddTaskVoiceViewController.self, arguments: (self.taskName, self.datesList))
+            self.navigationController?.pushViewController(addTaskVoiceViewController!, animated: true)
+        } else {
+            self.dismissViewControllerAnimated(true, completion: nil)
+        }
+
+        
     }
     
 }

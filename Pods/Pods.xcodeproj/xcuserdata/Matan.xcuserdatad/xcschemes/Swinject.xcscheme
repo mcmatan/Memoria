@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "26B1B9F22E5311D64516BCF75D978FC1"
-               BuildableName = "Swinject"
+               BuildableName = "Swinject.framework"
                BlueprintName = "Swinject"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>

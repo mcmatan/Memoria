@@ -17,5 +17,13 @@ Then clock on the button to add a task.</string>
 	<string>Done</string>
 	<key>addTaskVoiceTopTxt</key>
 	<string>Record a sound to play every time the task firs (Optional)</string>
+	<key>taskConfirmationTaskNameDesc</key>
+	<string>Task Name:</string>
+	<key>taskConfirmationTaskSoundDesc</key>
+	<string>Task Sound</string>
+	<key>taskConfirmationTaskTimeDesc</key>
+	<string>Task Times</string>
+	<key>addTaskVoiceTitle</key>
+	<string>Task Voice</string>
 </dict>
 </plist>

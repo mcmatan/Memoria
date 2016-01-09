@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "90E8C4921C1AA2B8009304A9"
-               BuildableName = "Memoria"
+               BuildableName = "Memoria.app"
                BlueprintName = "Memoria"
                ReferencedContainer = "container:Memoria.xcodeproj">
             </BuildableReference>
@@ -76,7 +76,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "90E8C4921C1AA2B8009304A9"
-            BuildableName = "Memoria"
+            BuildableName = "Memoria.app"
             BlueprintName = "Memoria"
             ReferencedContainer = "container:Memoria.xcodeproj">
          </BuildableReference>

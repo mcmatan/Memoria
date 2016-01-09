@@ -20,5 +20,15 @@
 	<string>Play</string>
 	<key>btnRecord</key>
 	<string>Record</string>
+	<key>taskConfirmationTaskSoundBtn</key>
+	<string>Task Sound:</string>
+	<key>taskConfirmationEditBtn</key>
+	<string>Edit</string>
+	<key>DoneButton</key>
+	<string>Done</string>
+	<key>EditButton</key>
+	<string>Edit +</string>
+	<key>PlaySound</key>
+	<string>Play Sound</string>
 </dict>
 </plist>
