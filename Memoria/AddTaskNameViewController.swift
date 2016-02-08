@@ -1,20 +1,29 @@
 
 import Foundation
 import UIKit
-import ReactiveCocoa
 import Swinject
 
 class AddTaskNameViewController: ViewController {
     var container : Container
     let enterNameTextField = TextField()
+    var currenctTaskCreator : CurrenctTaskCreator
+    var addTaskTimeViewController : AddTaskTimeViewController?
     
-    init(container : Container) {
+    init(container : Container, currenctTaskCreator : CurrenctTaskCreator) {
         self.container = container
+        self.currenctTaskCreator = currenctTaskCreator
         super.init(nibName: nil, bundle: nil)
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.enterNameTextField.text = currenctTaskCreator.getTaskName()
+        self.title = self.currenctTaskCreator.getTaskBeaconIdentifier()!.major
     }
     
     override func viewDidLoad() {
@@ -63,12 +72,13 @@ class AddTaskNameViewController: ViewController {
     
     func dontBtnPress() {
         if let inputTxt = self.enterNameTextField.text {
-            if let _ = self.navigationController {
-                let addTaskTimeViewController = self.container.resolve(AddTaskTimeViewController.self, argument: "\(inputTxt)")
-                self.navigationController?.pushViewController(addTaskTimeViewController!, animated: true)
-            } else {
-                self.dismissViewControllerAnimated(true, completion: nil)
+                let text = "\(inputTxt)"
+                self.currenctTaskCreator.setTaskName(text)
+            
+            if let _ = self.addTaskTimeViewController {} else {
+                self.addTaskTimeViewController = self.container.resolve(AddTaskTimeViewController.self)
             }
-        }
+                self.navigationController?.pushViewController(self.addTaskTimeViewController!, animated: true)
+            }
     }
 }

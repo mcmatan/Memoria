@@ -46,8 +46,16 @@ extension UIView {
     }
 
     func topToViewControllerTopLayoutGuide(viewControlelr : UIViewController) {
+        self.topToViewControllerTopLayoutGuide(viewControlelr, offset: 0)
+    }
+    
+    func topToViewControllerTopLayoutGuide(viewControlelr : UIViewController, offset : CGFloat) {
         self.translatesAutoresizingMaskIntoConstraints = false
         let topLayoutGuide = viewControlelr.topLayoutGuide
+        let matrics : [String : AnyObject] =
+        [
+            "offset" : offset
+        ]
         let views : [String : AnyObject] =
         [
             "me" : self,
@@ -55,11 +63,12 @@ extension UIView {
         ]
         var allConstrains = [NSLayoutConstraint]()
         let verticalLayout = NSLayoutConstraint.constraintsWithVisualFormat(
-            "V:[topLayoutGuide]-[me]"
-            , options: [], metrics: nil, views: views)
+            "V:[topLayoutGuide]-(offset)-[me]"
+            , options: [], metrics: matrics, views: views)
         allConstrains += verticalLayout
         NSLayoutConstraint.activateConstraints(allConstrains)
     }
+
     
     func bottomToViewControllerTopLayoutGuide(viewControlelr : UIViewController) {
         self.translatesAutoresizingMaskIntoConstraints = false

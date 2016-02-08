@@ -12,7 +12,7 @@ Then clock on the button to add a task.</string>
 	<key>taskName</key>
 	<string>Task Name:</string>
 	<key>addTaskTimeButton</key>
-	<string>Add time + </string>
+	<string>Edit time</string>
 	<key>addTimeDoneBtn</key>
 	<string>Done</string>
 	<key>addTaskVoiceTopTxt</key>

@@ -10,101 +10,84 @@ import Foundation
 import UIKit
 import Swinject
 
-class AddTaskConfirmationViewController : ViewController, UITableViewDelegate, UITableViewDataSource {
-    let tableView = UITableView()
+class AddTaskConfirmationViewController : ViewController {
     let cellIdentifier = "Cell"
-    var datesList : Array<NSDate>
     let container : Container
-    let taskName : String
-    let voiceURL : NSURL
     let recorder = Recorder()
+    let tasksServices : TasksServices
+    let lblTaskTime = Label()
+    var currenctTaskCreator : CurrenctTaskCreator
     
     var addTaskNameViewController : AddTaskNameViewController!
     var addTaskVoiceViewController : AddTaskVoiceViewController!
     var addTaskTimeViewController : AddTaskTimeViewController!
     
-    init(container : Container, taskName : String, datesList : Array<NSDate>, voiceURL : NSURL) {
+    let lblTaskName = Label()
+    
+    init(container : Container, tasksServices : TasksServices, currenctTaskCreator : CurrenctTaskCreator) {
+        self.currenctTaskCreator = currenctTaskCreator
+        self.tasksServices = tasksServices
         self.container = container
-        self.taskName = taskName
-        self.datesList = datesList
-        self.voiceURL = voiceURL
         super.init(nibName: nil, bundle: nil)
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+
+        lblTaskName.text = self.currenctTaskCreator.getTaskName()
+
+        let currenctTime = self.currenctTaskCreator.getTaskTime()
+        if let timeString = currenctTime!.toString() {
+            self.lblTaskTime.text = "\(timeString)"
+        }
+
+
     }
 
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationItem.setHidesBackButton(true, animated: false)
-    }
-    
-    func saveViewControllers() {
-        for viewController in (self.navigationController?.viewControllers)! {
-            if viewController.isKindOfClass(AddTaskNameViewController) {
-                addTaskNameViewController = viewController as! AddTaskNameViewController
-            }
-        }
-        for viewController in (self.navigationController?.viewControllers)! {
-            if viewController.isKindOfClass(AddTaskVoiceViewController) {
-                addTaskVoiceViewController = viewController as! AddTaskVoiceViewController
-            }
-        }
-        for viewController in (self.navigationController?.viewControllers)! {
-            if viewController.isKindOfClass(AddTaskTimeViewController) {
-                addTaskTimeViewController = viewController as! AddTaskTimeViewController
-            }
-        }
-        self.navigationController?.setViewControllers([self], animated: false)
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.saveViewControllers()
-         //Creation
+        let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Done, target: self, action: "doneButtonPress")
+        self.navigationItem.rightBarButtonItem = doneButton
+
         //Name
         let lblTaskNameDesc = Label()
-        lblTaskNameDesc.textColor = UIColor.blueColor()
+        lblTaskNameDesc.defaultyTitle()
         lblTaskNameDesc.text = Content.getContent(ContentType.LabelTxt, name: "taskConfirmationTaskNameDesc")
-        
-        let lblTaskName = Label()
-        lblTaskName.text = self.taskName
+    
         
         let btnEditTaskName = Button()
+        btnEditTaskName.defaultStyleMini()
         btnEditTaskName.setTitle(Content.getContent(ContentType.ButtonTxt, name: "EditButton"), forState: UIControlState.Normal)
-        btnEditTaskName.setTitleColor(UIColor.blueColor(), forState: UIControlState.Normal)
 
         //Sound
         let lblTaskSoundDesc = Label()
-        lblTaskSoundDesc.textColor = UIColor.blueColor()
+        lblTaskSoundDesc.defaultyTitle()
         lblTaskSoundDesc.text = Content.getContent(ContentType.LabelTxt, name: "taskConfirmationTaskSoundDesc")
 
         let btnTaskSound = Button()
+        btnTaskSound.defaultStyleMini()
         btnTaskSound.setTitle(Content.getContent(ContentType.ButtonTxt, name: "PlaySound"), forState: UIControlState.Normal)
-        btnTaskSound.setTitleColor(UIColor.greenColor(), forState: UIControlState.Normal)
         
         let btnEditTaskSound = Button()
+        btnEditTaskSound.defaultStyleMini()
         btnEditTaskSound.setTitle(Content.getContent(ContentType.ButtonTxt, name: "EditButton"), forState: UIControlState.Normal)
-        btnEditTaskSound.setTitleColor(UIColor.blueColor(), forState: UIControlState.Normal)
         
         //Time
         let lblTaskTimeDesc = Label()
-        lblTaskTimeDesc.textColor = UIColor.blueColor()
+        lblTaskTimeDesc.defaultyTitle()
         lblTaskTimeDesc.text = Content.getContent(ContentType.LabelTxt, name: "taskConfirmationTaskTimeDesc")
         
         let btnEditTaskTime = Button()
+        btnEditTaskTime.defaultStyleMini()
         btnEditTaskTime.setTitle(Content.getContent(ContentType.ButtonTxt, name: "EditButton"), forState: UIControlState.Normal)
-        btnEditTaskTime.setTitleColor(UIColor.blueColor(), forState: UIControlState.Normal)
     
-        self.tableView.layer.borderColor = UIColor.grayColor().CGColor
-        self.tableView.layer.borderWidth = 1.0
-        self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
-        self.tableView.separatorColor = UIColor.grayColor()
-        tableView.delegate = self
-        tableView.dataSource = self
 
+        
         self.view.addSubviewsWithAutoLayoutOn(
             [
             lblTaskNameDesc,
@@ -115,7 +98,7 @@ class AddTaskConfirmationViewController : ViewController, UITableViewDelegate, U
             btnEditTaskSound,//Edit
             lblTaskTimeDesc,
             btnEditTaskTime,//Edit
-            self.tableView
+            self.lblTaskTime
             ]
         )
         
@@ -129,18 +112,17 @@ class AddTaskConfirmationViewController : ViewController, UITableViewDelegate, U
             "btnEditTaskSound" : btnEditTaskSound,//Edit
             "lblTaskTimeDesc" : lblTaskTimeDesc,
             "btnEditTaskTime" : btnEditTaskTime,//Edit
-            "tableView" : tableView
+            "lblTaskTime" : lblTaskTime
         ]
         
         var allConstains = [NSLayoutConstraint]()
         let leftVerticalLayout = NSLayoutConstraint.constraintsWithVisualFormat(
-            "V:[lblTaskNameDesc]-[lblTaskName]-[lblTaskSoundDesc]-[btnTaskSound]-[lblTaskTimeDesc]-[tableView]", options: NSLayoutFormatOptions.AlignAllLeading, metrics: nil, views: viewsKeys)
+            "V:[lblTaskNameDesc]-[lblTaskName]-[lblTaskSoundDesc]-[btnTaskSound]-[lblTaskTimeDesc]-[lblTaskTime]", options: NSLayoutFormatOptions.AlignAllLeading, metrics: nil, views: viewsKeys)
         
         allConstains += leftVerticalLayout
         lblTaskNameDesc.LeadingToSuperView(true)
-        lblTaskNameDesc.topToViewControllerTopLayoutGuide(self)
-        tableView.trailingToSuperView(true)
-        tableView.bottomToViewControllerTopLayoutGuide(self)
+        lblTaskNameDesc.topToViewControllerTopLayoutGuide(self, offset: 20)
+        lblTaskTime.trailingToSuperView(true)
         
         btnEditTaskTime.trailingToSuperView(true)
         btnEditTaskTime.topAlighnToViewTop(lblTaskTimeDesc)
@@ -151,7 +133,6 @@ class AddTaskConfirmationViewController : ViewController, UITableViewDelegate, U
 
         NSLayoutConstraint.activateConstraints(allConstains)
         
-        self.tableView.reloadData()
         btnEditTaskTime.addTarget(self, action: "btnEditTaskTimePress", forControlEvents: UIControlEvents.TouchUpInside)
         btnEditTaskName.addTarget(self, action: "btnEditTaskNamePress", forControlEvents: UIControlEvents.TouchUpInside)
         btnEditTaskSound.addTarget(self, action: "btnEditTaskSoundPress", forControlEvents: UIControlEvents.TouchUpInside)
@@ -159,36 +140,57 @@ class AddTaskConfirmationViewController : ViewController, UITableViewDelegate, U
     
     }
 
-    //MARK: TableView
-    
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let currenctTime = self.datesList[indexPath.row]
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier)
-        if let timeString = currenctTime.toString() {
-            cell?.textLabel?.text = "\(timeString)"
-        }
-        return cell!
-    }
-    
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.datesList.count
-    }
-    
+//    //MARK: TableView
+//    
+//    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+//        let currenctTime = self.currenctTaskCreator.getTaskTime()
+//        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier)
+//        if let timeString = currenctTime!.toString() {
+//            cell?.textLabel?.text = "\(timeString)"
+//        }
+//        return cell!
+//    }
+//    
+//    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return 1
+//    }
+
     //MARK: Buttons press
     
     func btnEditTaskNamePress() {
-        self.navigationController!.presentViewController(self.addTaskNameViewController, animated: true, completion: nil)
+        for viewController in (self.navigationController?.viewControllers)! {
+            if viewController.isKindOfClass(AddTaskNameViewController) {
+                self.navigationController?.popToViewController(viewController, animated: true)
+            }
+        }
     }
 
     func btnEditTaskSoundPress() {
-        self.navigationController!.presentViewController(self.addTaskVoiceViewController, animated: true, completion: nil)
+        for viewController in (self.navigationController?.viewControllers)! {
+            if viewController.isKindOfClass(AddTaskVoiceViewController) {
+                self.navigationController?.popToViewController(viewController, animated: true)
+            }
+        }
     }
 
     func btnEditTaskTimePress() {
-        self.navigationController!.presentViewController(self.addTaskTimeViewController, animated: true, completion: nil)
+        for viewController in (self.navigationController?.viewControllers)! {
+            if viewController.isKindOfClass(AddTaskTimeViewController) {
+                self.navigationController?.popToViewController(viewController, animated: true)
+            }
+        }
     }
 
     func btnPlaySoundPress() {
-        self.recorder.playURL(self.voiceURL)
+        self.recorder.playURL(self.currenctTaskCreator.getTaskVoiceURL()!)
+    }
+    
+    func doneButtonPress() {
+        let task = self.currenctTaskCreator.getCurrenctTask()
+        self.tasksServices.saveTask(task)
+        if let manageAddTasksLocationViewController = self.container.resolve(ManageAddTasksLocationViewController.self) {
+            self.navigationController!.pushViewController(manageAddTasksLocationViewController, animated: true)
+        }
+
     }
 }

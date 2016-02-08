@@ -12,7 +12,7 @@ class ButtonAction : NSObject {
 }
 
 
-class PopUpPresenter : NSObject{
+class ReminderPopUp : NSObject{
     
     func presentPopUp(title : String, message : String , cancelButton : ButtonAction! , buttons : [ButtonAction]! , completion : (() -> Void)? ){
         let view = UIApplication.sharedApplication().keyWindow?.rootViewController

@@ -7,18 +7,25 @@ class AddTaskVoiceViewController : ViewController {
     var container : Container
     let enterNameTextField = TextField()
     var recorder = Recorder()
-    let taskName : String
-    let tasksDates : Array<NSDate>
+    var currenctTaskCreator : CurrenctTaskCreator
+    let btnRecord = Button()
+    var addTaskConfirmationViewController : AddTaskConfirmationViewController?
 
-    init(container : Container,taskName : String, tasksDates : Array<NSDate>) {
+    init(container : Container, currenctTaskCreator : CurrenctTaskCreator) {
         self.container = container
-        self.taskName = taskName
-        self.tasksDates = tasksDates
+        self.currenctTaskCreator = currenctTaskCreator
         super.init(nibName: nil, bundle: nil)
     }
 
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        if let isVoiceRecorder = currenctTaskCreator.getTaskVoiceURL() {
+            self.recorder.setURLToPlayFrom(isVoiceRecorder)
+        }
     }
     
 
@@ -27,27 +34,22 @@ class AddTaskVoiceViewController : ViewController {
 
         self.title = Content.getContent(ContentType.LabelTxt, name: "addTaskVoiceTitle")
 
-        let btnRecord = Button()
         btnRecord.defaultStyle()
-        btnRecord.setTitleColor(UIColor.redColor(), forState: UIControlState.Normal)
         btnRecord.setTitle(Content.getContent(ContentType.ButtonTxt, name: "btnRecord"), forState: UIControlState.Normal)
         btnRecord.addTarget(self, action: "recordButtonPress", forControlEvents: UIControlEvents.TouchUpInside)
         
         let btnStopRecord = Button()
-        btnStopRecord.setTitleColor(UIColor.blueColor(), forState: UIControlState.Normal)
         btnStopRecord.setTitle(Content.getContent(ContentType.ButtonTxt, name: "btnStopRecord"), forState: UIControlState.Normal)
         btnStopRecord.addTarget(self, action: "stopRecordButtonPress", forControlEvents: UIControlEvents.TouchUpInside)
         btnStopRecord.defaultStyle()
 
         let btnPlay = Button()
         btnPlay.defaultStyle()
-        btnPlay.setTitleColor(UIColor.greenColor(), forState: UIControlState.Normal)
         btnPlay.setTitle(Content.getContent(ContentType.ButtonTxt, name: "btnPlay"), forState: UIControlState.Normal)
         btnPlay.addTarget(self, action: "playButtonPress", forControlEvents: UIControlEvents.TouchUpInside)
         
         let btnDone = Button()
         btnDone.defaultStyle()
-        btnDone.setTitleColor(UIColor.blueColor(), forState: UIControlState.Normal)
         btnDone.setTitle(Content.getContent(ContentType.ButtonTxt, name: "DoneButton"), forState: UIControlState.Normal)
         btnDone.addTarget(self, action: "btnDonePress", forControlEvents: UIControlEvents.TouchUpInside)
 
@@ -60,6 +62,7 @@ class AddTaskVoiceViewController : ViewController {
         self.view.addSubview(btnStopRecord)
         self.view.addSubview(btnPlay)
         self.view.addSubview(btnDone)
+        
         
         
         let viewsKeys : [String : AnyObject] =
@@ -83,27 +86,31 @@ class AddTaskVoiceViewController : ViewController {
     //MARK: Buttons presses
 
     func recordButtonPress() {
+        self.btnRecord.startFlickeringRedColor()
         self.recorder.record()
     }
 
     func stopRecordButtonPress() {
+        self.btnRecord.stopFlickerRedColor()
         self.recorder.stop()
     }
 
     func playButtonPress() {
+        self.btnRecord.stopFlickerRedColor()        
         self.recorder.play()
     }
     
     func btnDonePress() {
-        let addTaskConfirmationPage = self.container.resolve(AddTaskConfirmationViewController.self,
-            arguments: (self.taskName, self.tasksDates, self.recorder.getRecordingURL()))
+        self.stopRecordButtonPress()
+        self.currenctTaskCreator.setTaskVoiceURL(self.recorder.getRecordingURL())
         
-        
-        if let _ = self.navigationController {
-                self.navigationController?.pushViewController(addTaskConfirmationPage!, animated: true)
-        } else {
-            self.dismissViewControllerAnimated(true, completion: nil)
+        if let _ = self.addTaskConfirmationViewController {} else {
+            self.addTaskConfirmationViewController = self.container.resolve(AddTaskConfirmationViewController.self)
         }
-
+        
+        self.navigationController?.pushViewController(self.addTaskConfirmationViewController!, animated: true)
+        
     }
+    
+    
 }

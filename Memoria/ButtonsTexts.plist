@@ -13,7 +13,7 @@
 	<key>Done</key>
 	<string>Done</string>
 	<key>addTaskTimeButton</key>
-	<string>+ Add time for task</string>
+	<string>Edit task time</string>
 	<key>btnStopRecord</key>
 	<string>Stop recording</string>
 	<key>btnPlay</key>

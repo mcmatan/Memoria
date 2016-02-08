@@ -2,68 +2,391 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="573748c1-16ea-4b3f-9c6b-5cbccd8c4215" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Memoria/AddTaskNameViewController.swift" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Memoria/AddTaskTimeViewController.swift" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Memoria/AddTaskVoiceViewController.swift" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DataStructures.swift" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DateInRegion.swift" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Memoria/DatePickerDialog.swift" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NSDate+Extension.swift" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Memoria/NavigationController.swift" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Memoria/TableView.swift" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Memoria/TaskRM.swift" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Memoria/TasksDataBase.swift" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Memoria/UIConstants.swift" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Memoria/AddTaskViewController.swift" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Memoria/AddTaskViewModel.swift" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Memoria/DrugsViewModel.swift" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Memoria/MemoriesViewModel.swift" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Memoria/TasksViewModel.swift" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Memoria/ViewModelsAssembly.swift" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/Swinject/Swinject.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Public/Swinject/_SwinjectStoryboardBase.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/Matan.xcuserdatad/xcschemes/Pods-Memoria-SnapKit.xcscheme" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/Matan.xcuserdatad/xcschemes/Pods-Memoria-Swinject.xcscheme" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Memoria-SnapKit/Info.plist" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Memoria-SnapKit/Pods-Memoria-SnapKit-Private.xcconfig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Memoria-SnapKit/Pods-Memoria-SnapKit-dummy.m" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Memoria-SnapKit/Pods-Memoria-SnapKit-prefix.pch" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Memoria-SnapKit/Pods-Memoria-SnapKit-umbrella.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Memoria-SnapKit/Pods-Memoria-SnapKit.modulemap" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Memoria-SnapKit/Pods-Memoria-SnapKit.xcconfig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Memoria-Swinject/Info.plist" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Memoria-Swinject/Pods-Memoria-Swinject-Private.xcconfig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Memoria-Swinject/Pods-Memoria-Swinject-dummy.m" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Memoria-Swinject/Pods-Memoria-Swinject-prefix.pch" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Memoria-Swinject/Pods-Memoria-Swinject-umbrella.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Memoria-Swinject/Pods-Memoria-Swinject.modulemap" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Memoria-Swinject/Pods-Memoria-Swinject.xcconfig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Memoria/Pods-Memoria-environment.h" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Memoria/CurrenctTaskCreator.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Memoria/IBeaconIdentifier.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Memoria/IBeaconServices.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Memoria/IbeaconLocationFinder.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Memoria/IbeaconLocationFinderHelper.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Memoria/ManageTasksViewController.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Memoria/Memoria-Bridging-Header.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Memoria/NotificationsNames.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Memoria/Reminder.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Memoria/TasksDB.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Memoria/TasksNotificationsPresenter.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Memoria/TasksNotificationsTracker.swift" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Memoria/TasksServices.swift" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Memoria/FactorysAssembly.swift" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Memoria/TasksDataBase.swift" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/MKAnnotationView+RACSignalSupport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/RACObjCRuntime.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa/EXTKeyPathCoding.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa/EXTRuntimeExtensions.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa/EXTScope.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa/NSArray+RACSequenceAdditions.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa/NSData+RACSupport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa/NSDictionary+RACSequenceAdditions.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa/NSEnumerator+RACSequenceAdditions.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa/NSFileHandle+RACSupport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa/NSIndexSet+RACSequenceAdditions.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa/NSInvocation+RACTypeParsing.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa/NSNotificationCenter+RACSupport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa/NSObject+RACDeallocating.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa/NSObject+RACDescription.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa/NSObject+RACKVOWrapper.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa/NSObject+RACLifting.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa/NSObject+RACPropertySubscribing.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa/NSObject+RACSelectorSignal.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa/NSOrderedSet+RACSequenceAdditions.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa/NSSet+RACSequenceAdditions.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa/NSString+RACKeyPathUtilities.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa/NSString+RACSequenceAdditions.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa/NSString+RACSupport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa/NSURLConnection+RACSupport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa/NSUserDefaults+RACSupport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa/RACArraySequence.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa/RACBehaviorSubject.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa/RACBlockTrampoline.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa/RACChannel.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa/RACCommand.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa/RACCompoundDisposable.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa/RACDelegateProxy.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa/RACDisposable.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa/RACDynamicPropertySuperclass.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa/RACDynamicSequence.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa/RACDynamicSignal.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa/RACEagerSequence.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa/RACEmptySequence.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa/RACEmptySignal.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa/RACErrorSignal.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa/RACEvent.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa/RACGroupedSignal.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa/RACImmediateScheduler.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa/RACIndexSetSequence.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa/RACKVOChannel.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa/RACKVOProxy.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa/RACKVOTrampoline.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa/RACMulticastConnection+Private.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa/RACMulticastConnection.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa/RACPassthroughSubscriber.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa/RACQueueScheduler+Subclass.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa/RACQueueScheduler.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa/RACReplaySubject.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa/RACReturnSignal.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa/RACScheduler+Private.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa/RACScheduler+Subclass.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa/RACScheduler.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa/RACScopedDisposable.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa/RACSequence.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa/RACSerialDisposable.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa/RACSignal+Operations.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa/RACSignal.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa/RACSignalSequence.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa/RACStream+Private.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa/RACStream.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa/RACStringSequence.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa/RACSubject.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa/RACSubscriber+Private.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa/RACSubscriber.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa/RACSubscriptingAssignmentTrampoline.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa/RACSubscriptionScheduler.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa/RACTargetQueueScheduler.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa/RACTestScheduler.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa/RACTuple.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa/RACTupleSequence.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa/RACUnarySequence.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa/RACUnit.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa/RACValueTransformer.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa/ReactiveCocoa-Bridging-Header.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/ReactiveCocoa/metamacros.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/UIActionSheet+RACSignalSupport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/UIAlertView+RACSignalSupport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/UIBarButtonItem+RACCommandSupport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/UIButton+RACCommandSupport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/UICollectionReusableView+RACSignalSupport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/UIControl+RACSignalSupport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/UIControl+RACSignalSupportPrivate.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/UIDatePicker+RACSignalSupport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/UIGestureRecognizer+RACSignalSupport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/UIImagePickerController+RACSignalSupport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/UIRefreshControl+RACCommandSupport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/UISegmentedControl+RACSignalSupport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/UISlider+RACSignalSupport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/UIStepper+RACSignalSupport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/UISwitch+RACSignalSupport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/UITableViewCell+RACSignalSupport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/UITableViewHeaderFooterView+RACSignalSupport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/UITextField+RACSignalSupport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Headers/Private/ReactiveCocoa/UITextView+RACSignalSupport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/Matan.xcuserdatad/xcschemes/ReactiveCocoa.xcscheme" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/Matan.xcuserdatad/xcschemes/Result.xcscheme" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/LICENSE.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/MKAnnotationView+RACSignalSupport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/MKAnnotationView+RACSignalSupport.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/NSArray+RACSequenceAdditions.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/NSArray+RACSequenceAdditions.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/NSData+RACSupport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/NSData+RACSupport.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/NSDictionary+RACSequenceAdditions.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/NSDictionary+RACSequenceAdditions.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/NSEnumerator+RACSequenceAdditions.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/NSEnumerator+RACSequenceAdditions.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/NSFileHandle+RACSupport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/NSFileHandle+RACSupport.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/NSIndexSet+RACSequenceAdditions.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/NSIndexSet+RACSequenceAdditions.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/NSInvocation+RACTypeParsing.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/NSInvocation+RACTypeParsing.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/NSNotificationCenter+RACSupport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/NSNotificationCenter+RACSupport.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/NSObject+RACDeallocating.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/NSObject+RACDeallocating.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/NSObject+RACDescription.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/NSObject+RACDescription.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/NSObject+RACKVOWrapper.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/NSObject+RACKVOWrapper.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/NSObject+RACLifting.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/NSObject+RACLifting.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/NSObject+RACPropertySubscribing.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/NSObject+RACPropertySubscribing.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/NSObject+RACSelectorSignal.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/NSObject+RACSelectorSignal.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/NSOrderedSet+RACSequenceAdditions.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/NSOrderedSet+RACSequenceAdditions.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/NSSet+RACSequenceAdditions.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/NSSet+RACSequenceAdditions.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/NSString+RACKeyPathUtilities.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/NSString+RACKeyPathUtilities.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/NSString+RACSequenceAdditions.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/NSString+RACSequenceAdditions.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/NSString+RACSupport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/NSString+RACSupport.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/NSURLConnection+RACSupport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/NSURLConnection+RACSupport.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/NSUserDefaults+RACSupport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/NSUserDefaults+RACSupport.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACArraySequence.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACArraySequence.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACBehaviorSubject.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACBehaviorSubject.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACBlockTrampoline.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACBlockTrampoline.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACChannel.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACChannel.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACCommand.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACCommand.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACCompoundDisposable.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACCompoundDisposable.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACCompoundDisposableProvider.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACDelegateProxy.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACDelegateProxy.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACDisposable.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACDisposable.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACDynamicPropertySuperclass.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACDynamicPropertySuperclass.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACDynamicSequence.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACDynamicSequence.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACDynamicSignal.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACDynamicSignal.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACEagerSequence.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACEagerSequence.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACEmptySequence.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACEmptySequence.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACEmptySignal.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACEmptySignal.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACErrorSignal.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACErrorSignal.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACEvent.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACEvent.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACGroupedSignal.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACGroupedSignal.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACImmediateScheduler.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACImmediateScheduler.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACIndexSetSequence.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACIndexSetSequence.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACKVOChannel.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACKVOChannel.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACKVOProxy.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACKVOProxy.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACKVOTrampoline.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACKVOTrampoline.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACMulticastConnection+Private.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACMulticastConnection.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACMulticastConnection.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACObjCRuntime.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACObjCRuntime.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACPassthroughSubscriber.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACPassthroughSubscriber.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACQueueScheduler+Subclass.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACQueueScheduler.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACQueueScheduler.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACReplaySubject.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACReplaySubject.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACReturnSignal.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACReturnSignal.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACScheduler+Private.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACScheduler+Subclass.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACScheduler.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACScheduler.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACScopedDisposable.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACScopedDisposable.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACSequence.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACSequence.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACSerialDisposable.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACSerialDisposable.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACSignal+Operations.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACSignal+Operations.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACSignal.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACSignal.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACSignalProvider.d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACSignalSequence.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACSignalSequence.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACStream+Private.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACStream.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACStream.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACStringSequence.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACStringSequence.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACSubject.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACSubject.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACSubscriber+Private.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACSubscriber.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACSubscriber.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACSubscriptingAssignmentTrampoline.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACSubscriptingAssignmentTrampoline.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACSubscriptionScheduler.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACSubscriptionScheduler.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACTargetQueueScheduler.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACTargetQueueScheduler.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACTestScheduler.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACTestScheduler.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACTuple.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACTuple.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACTupleSequence.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACTupleSequence.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACUnarySequence.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACUnarySequence.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACUnit.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACUnit.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACValueTransformer.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/RACValueTransformer.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/ReactiveCocoa-Bridging-Header.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/UIActionSheet+RACSignalSupport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/UIActionSheet+RACSignalSupport.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/UIAlertView+RACSignalSupport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/UIAlertView+RACSignalSupport.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/UIBarButtonItem+RACCommandSupport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/UIBarButtonItem+RACCommandSupport.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/UIButton+RACCommandSupport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/UIButton+RACCommandSupport.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/UICollectionReusableView+RACSignalSupport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/UICollectionReusableView+RACSignalSupport.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/UIControl+RACSignalSupport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/UIControl+RACSignalSupport.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/UIControl+RACSignalSupportPrivate.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/UIControl+RACSignalSupportPrivate.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/UIDatePicker+RACSignalSupport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/UIDatePicker+RACSignalSupport.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/UIGestureRecognizer+RACSignalSupport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/UIGestureRecognizer+RACSignalSupport.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/UIImagePickerController+RACSignalSupport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/UIImagePickerController+RACSignalSupport.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/UIRefreshControl+RACCommandSupport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/UIRefreshControl+RACCommandSupport.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/UISegmentedControl+RACSignalSupport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/UISegmentedControl+RACSignalSupport.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/UISlider+RACSignalSupport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/UISlider+RACSignalSupport.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/UIStepper+RACSignalSupport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/UIStepper+RACSignalSupport.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/UISwitch+RACSignalSupport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/UISwitch+RACSignalSupport.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/UITableViewCell+RACSignalSupport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/UITableViewCell+RACSignalSupport.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/UITableViewHeaderFooterView+RACSignalSupport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/UITableViewHeaderFooterView+RACSignalSupport.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/UITextField+RACSignalSupport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/UITextField+RACSignalSupport.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/UITextView+RACSignalSupport.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/UITextView+RACSignalSupport.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/extobjc/EXTKeyPathCoding.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/extobjc/EXTRuntimeExtensions.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/extobjc/EXTRuntimeExtensions.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/extobjc/EXTScope.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Objective-C/extobjc/metamacros.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/ReactiveCocoa.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Swift/Action.swift" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Swift/Atomic.swift" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Swift/Bag.swift" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Swift/Disposable.swift" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Swift/Errors.swift" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Swift/Event.swift" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Swift/FoundationExtensions.swift" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Swift/ObjectiveCBridging.swift" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Swift/Observer.swift" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Swift/Optional.swift" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Swift/Property.swift" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Swift/Scheduler.swift" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Swift/Signal.swift" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Swift/SignalProducer.swift" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/ReactiveCocoa/ReactiveCocoa/Swift/TupleExtensions.swift" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Result/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Result/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Result/Result/Result.swift" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Result/Result/ResultType.swift" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/ReactiveCocoa/Info.plist" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/ReactiveCocoa/ReactiveCocoa-dummy.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/ReactiveCocoa/ReactiveCocoa-prefix.pch" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/ReactiveCocoa/ReactiveCocoa-umbrella.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/ReactiveCocoa/ReactiveCocoa.modulemap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/ReactiveCocoa/ReactiveCocoa.xcconfig" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Result/Info.plist" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Result/Result-dummy.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Result/Result-prefix.pch" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Result/Result-umbrella.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Result/Result.modulemap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Result/Result.xcconfig" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Memoria/ControllersAssembly.swift" afterPath="$PROJECT_DIR$/Memoria/AssemblyControllers.swift" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Memoria/ServicesAssembly.swift" afterPath="$PROJECT_DIR$/Memoria/AssemblyModel.swift" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Memoria/TasksViewController.swift" afterPath="$PROJECT_DIR$/Memoria/AddTasksLocationViewController.swift" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Memoria/ViewsAndViewControllersAssembly.swift" afterPath="$PROJECT_DIR$/Memoria/AssemblyViewControllers.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Memoria.iml" afterPath="$PROJECT_DIR$/.idea/Memoria.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Memoria.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/Memoria.xcodeproj/project.pbxproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Memoria.xcworkspace/xcuserdata/Matan.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" afterPath="$PROJECT_DIR$/Memoria.xcworkspace/xcuserdata/Matan.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Memoria/AddTaskConfirmationViewController.swift" afterPath="$PROJECT_DIR$/Memoria/AddTaskConfirmationViewController.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Memoria/AddTaskNameViewController.swift" afterPath="$PROJECT_DIR$/Memoria/AddTaskNameViewController.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Memoria/AddTaskTimeViewController.swift" afterPath="$PROJECT_DIR$/Memoria/AddTaskTimeViewController.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Memoria/AddTaskVoiceViewController.swift" afterPath="$PROJECT_DIR$/Memoria/AddTaskVoiceViewController.swift" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Memoria/AppDelegate.swift" afterPath="$PROJECT_DIR$/Memoria/AppDelegate.swift" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Memoria/Bootstrapper.swift" afterPath="$PROJECT_DIR$/Memoria/Bootstrapper.swift" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Memoria/ButtonsTexts.plist" afterPath="$PROJECT_DIR$/Memoria/ButtonsTexts.plist" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Memoria/ControllersAssembly.swift" afterPath="$PROJECT_DIR$/Memoria/ControllersAssembly.swift" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Memoria/DrugsViewController.swift" afterPath="$PROJECT_DIR$/Memoria/DrugsViewController.swift" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Memoria/LabelsTexts.plist" afterPath="$PROJECT_DIR$/Memoria/LabelsTexts.plist" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Manifest.lock" afterPath="$PROJECT_DIR$/Pods/Manifest.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Memoria.xcodeproj/xcuserdata/Matan.xcuserdatad/xcschemes/Memoria.xcscheme" afterPath="$PROJECT_DIR$/Memoria.xcodeproj/xcuserdata/Matan.xcuserdatad/xcschemes/Memoria.xcscheme" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Podfile.lock" afterPath="$PROJECT_DIR$/Podfile.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Memoria/Button.swift" afterPath="$PROJECT_DIR$/Memoria/Button.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Memoria/Info.plist" afterPath="$PROJECT_DIR$/Memoria/Info.plist" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Memoria/Label.swift" afterPath="$PROJECT_DIR$/Memoria/Label.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Memoria/Recorder.swift" afterPath="$PROJECT_DIR$/Memoria/Recorder.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Memoria/Task.swift" afterPath="$PROJECT_DIR$/Memoria/Task.swift" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyPlayground.playground/Contents.swift" afterPath="$PROJECT_DIR$/MyPlayground.playground/Contents.swift" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Podfile" afterPath="$PROJECT_DIR$/Podfile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Podfile.lock" afterPath="$PROJECT_DIR$/Podfile.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Manifest.lock" afterPath="$PROJECT_DIR$/Pods/Manifest.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/project.pbxproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/Matan.xcuserdatad/xcschemes/Pods-Memoria.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/Matan.xcuserdatad/xcschemes/Pods-Memoria.xcscheme" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/Matan.xcuserdatad/xcschemes/Realm.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/Matan.xcuserdatad/xcschemes/Realm.xcscheme" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/Matan.xcuserdatad/xcschemes/RealmSwift.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/Matan.xcuserdatad/xcschemes/RealmSwift.xcscheme" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/Matan.xcuserdatad/xcschemes/SnapKit.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/Matan.xcuserdatad/xcschemes/SnapKit.xcscheme" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/Matan.xcuserdatad/xcschemes/Swinject.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/Matan.xcuserdatad/xcschemes/Swinject.xcscheme" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/Matan.xcuserdatad/xcschemes/xcschememanagement.plist" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/Matan.xcuserdatad/xcschemes/xcschememanagement.plist" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Memoria/Pods-Memoria-acknowledgements.markdown" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Memoria/Pods-Memoria-acknowledgements.markdown" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Memoria/Pods-Memoria-acknowledgements.plist" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Memoria/Pods-Memoria-acknowledgements.plist" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Memoria/Pods-Memoria-frameworks.sh" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Memoria/Pods-Memoria-frameworks.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Memoria/Pods-Memoria-resources.sh" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Memoria/Pods-Memoria-resources.sh" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Memoria/Pods-Memoria.debug.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Memoria/Pods-Memoria.debug.xcconfig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Memoria/Pods-Memoria.release.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Pods-Memoria/Pods-Memoria.release.xcconfig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/Matan.xcuserdatad/xcschemes/Pods-Memoria.xcscheme" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/Matan.xcuserdatad/xcschemes/Pods-Memoria.xcscheme" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Memoria/Task.swift" afterPath="$PROJECT_DIR$/Memoria/Task.swift" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Memoria/TasksViewController.swift" afterPath="$PROJECT_DIR$/Memoria/TasksViewController.swift" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Memoria/ViewController.swift" afterPath="$PROJECT_DIR$/Memoria/ViewController.swift" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Memoria/ViewsAndViewControllersAssembly.swift" afterPath="$PROJECT_DIR$/Memoria/ViewsAndViewControllersAssembly.swift" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Memoria.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/Memoria.xcodeproj/project.pbxproj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/project.pbxproj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/Matan.xcuserdatad/xcschemes/xcschememanagement.plist" afterPath="$PROJECT_DIR$/Pods/Pods.xcodeproj/xcuserdata/Matan.xcuserdatad/xcschemes/xcschememanagement.plist" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Realm/Realm.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Realm/Realm.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/RealmSwift/RealmSwift.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/RealmSwift/RealmSwift.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/SnapKit/SnapKit.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/SnapKit/SnapKit.xcconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pods/Target Support Files/Swinject/Swinject.xcconfig" afterPath="$PROJECT_DIR$/Pods/Target Support Files/Swinject/Swinject.xcconfig" />
     </list>
     <ignored path="Memoria.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -78,40 +401,87 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
-  <component name="DaemonCodeAnalyzer">
-    <disable_hints />
-  </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="iphonesimulator_iPhone_6s_9.2_x86_64_1" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="iphonesimulatoriPhone_6_9.2_x86_64_1" />
   <component name="FavoritesManager">
     <favorites_list name="Memoria" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="AppDelegate.swift" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Memoria/AppDelegate.swift">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="AssemblyModel.swift" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Memoria/AssemblyModel.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="825">
-              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="27" column="73" selection-start-line="27" selection-start-column="73" selection-end-line="27" selection-end-column="73" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ViewsAndViewControllersAssembly.swift" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Memoria/ViewsAndViewControllersAssembly.swift">
+      <file leaf-file-name="AddTasksLocationViewController.swift" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Memoria/AddTasksLocationViewController.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="390" max-vertical-offset="540">
-              <caret line="26" column="59" selection-start-line="26" selection-start-column="59" selection-end-line="26" selection-end-column="59" />
+            <state vertical-scroll-proportion="1.1536144">
+              <caret line="89" column="0" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AddTaskTimeViewController.swift" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Memoria/AddTaskTimeViewController.swift">
+      <file leaf-file-name="AssemblyControllers.swift" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Memoria/AssemblyControllers.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="690" max-vertical-offset="1365">
-              <caret line="46" column="36" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="36" />
+            <state vertical-scroll-proportion="1.0">
+              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AddTaskVoiceViewController.swift" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Memoria/AddTaskVoiceViewController.swift">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="111" column="8" selection-start-line="111" selection-start-column="8" selection-end-line="111" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AssemblyViewControllers.swift" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Memoria/AssemblyViewControllers.swift">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-7.296296">
+              <caret line="14" column="92" selection-start-line="14" selection-start-column="92" selection-end-line="14" selection-end-column="92" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TasksServices.swift" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Memoria/TasksServices.swift">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IBeaconServices.swift" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Memoria/IBeaconServices.swift">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="29" column="38" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IbeaconLocationFinder.swift" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Memoria/IbeaconLocationFinder.swift">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="59" column="18" selection-start-line="59" selection-start-column="18" selection-end-line="59" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -120,18 +490,8 @@
       <file leaf-file-name="AddTaskNameViewController.swift" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Memoria/AddTaskNameViewController.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="124" max-vertical-offset="1005">
-              <caret line="50" column="5" selection-start-line="7" selection-start-column="3" selection-end-line="50" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AddTaskVoiceViewController.swift" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Memoria/AddTaskVoiceViewController.swift">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.40592784" vertical-offset="45" max-vertical-offset="885">
-              <caret line="24" column="8" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -147,19 +507,28 @@
       <list>
         <option value="$PROJECT_DIR$/Memoria/AppDelegate.swift" />
         <option value="$PROJECT_DIR$/Memoria/AddTaskViewController.swift" />
-        <option value="$PROJECT_DIR$/Memoria/ViewsAndViewControllersAssembly.swift" />
-        <option value="$PROJECT_DIR$/Memoria/AddTaskNameViewController.swift" />
         <option value="$PROJECT_DIR$/Memoria/AddTaskVoiceViewController.swift" />
+        <option value="$PROJECT_DIR$/Memoria/ManageTasksViewController.swift" />
+        <option value="$PROJECT_DIR$/Memoria/ViewsAndViewControllersAssembly.swift" />
+        <option value="$PROJECT_DIR$/Memoria/AddTaskConfirmationViewController.swift" />
+        <option value="$PROJECT_DIR$/Memoria/TasksServices.swift" />
+        <option value="$PROJECT_DIR$/Memoria/AddTaskNameViewController.swift" />
+        <option value="$PROJECT_DIR$/Memoria/AssemblyViewControllers.swift" />
+        <option value="$PROJECT_DIR$/Memoria/AddTasksLocationViewController.swift" />
+        <option value="$PROJECT_DIR$/Memoria/AssemblyModel.swift" />
+        <option value="$PROJECT_DIR$/Memoria/Remider.swift" />
       </list>
     </option>
   </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsBuildToolPackageJson" detection-done="true" />
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="1440" />
-    <option name="height" value="873" />
+    <option name="width" value="1280" />
+    <option name="height" value="693" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -179,9 +548,11 @@
       <showLibraryContents />
       <hideEmptyPackages />
       <abbreviatePackageNames />
-      <autoscrollToSource />
-      <autoscrollFromSource />
+      <autoscrollToSource ProjectPane="true" />
+      <autoscrollFromSource ProjectPane="true" />
       <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
       <pane id="ProjectPane">
@@ -230,7 +601,295 @@
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="UI" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Memoria" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Memoria" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UI" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Screens" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Tasks" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TasksViewController" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Memoria" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Memoria" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UI" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Screens" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Tasks" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Memoria" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Memoria" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UI" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Screens" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Tasks" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AddTaskVoiceViewController" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Memoria" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Memoria" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UI" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Screens" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Tasks" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AddTaskNameViewController" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Memoria" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Memoria" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UI" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Screens" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Memoria" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Memoria" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Model" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Memoria" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Memoria" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Model" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Services" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Memoria" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Memoria" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Model" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Services" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IBeaconServices" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Memoria" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Memoria" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Model" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NotificationsRemider" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Memoria" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Memoria" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Model" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IbeaconLocationFinder" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Memoria" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Memoria" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DipendencyInjection" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Memoria" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Memoria" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DipendencyInjection" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Assemblies" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -260,6 +919,9 @@
     <property name="options.lastSelected" value="vcs.Git" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
   </component>
   <component name="RunManager" selected="Application.Memoria">
     <configuration default="true" type="AppleRunConfiguration" factoryName="Application" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="Memoria" TARGET_NAME="Memoria" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Memoria" RUN_TARGET_NAME="Memoria" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
@@ -269,11 +931,14 @@
       </EXTENSION>
       <method />
     </configuration>
-    <configuration default="true" type="OCUnitRunConfiguration" factoryName="XCTest/Kiwi" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="Memoria" TARGET_NAME="MemoriaTests" CONFIG_NAME="Debug" TEST_MODE="SUITE_TEST">
-      <envs />
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
     <configuration default="true" type="OCGoogleTestRunConfigurationType" factoryName="Google Test" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="Memoria" TARGET_NAME="Memoria" CONFIG_NAME="Debug" TEST_MODE="SUITE_TEST">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="OCUnitRunConfiguration" factoryName="XCTest/Kiwi" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="Memoria" TARGET_NAME="MemoriaTests" CONFIG_NAME="Debug" TEST_MODE="SUITE_TEST">
       <envs />
       <method />
     </configuration>
@@ -281,7 +946,14 @@
       <node-options />
       <gulpfile />
       <tasks />
+      <arguments />
       <pass-parent-envs>true</pass-parent-envs>
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
       <envs />
       <method />
     </configuration>
@@ -295,13 +967,6 @@
       <method />
     </configuration>
     <configuration default="false" name="Pods-Memoria" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="Pods" TARGET_NAME="Pods-Memoria" CONFIG_NAME="Debug" SCHEME_NAME="Pods-Memoria" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
-      <envs />
-      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
-        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
-      </EXTENSION>
-      <method />
-    </configuration>
-    <configuration default="false" name="ReactiveCocoa" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="Pods" TARGET_NAME="ReactiveCocoa" CONFIG_NAME="Debug" SCHEME_NAME="ReactiveCocoa" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
       <envs />
       <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
         <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
@@ -322,13 +987,6 @@
       </EXTENSION>
       <method />
     </configuration>
-    <configuration default="false" name="Result" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="Pods" TARGET_NAME="Result" CONFIG_NAME="Debug" SCHEME_NAME="Result" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
-      <envs />
-      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
-        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
-      </EXTENSION>
-      <method />
-    </configuration>
     <configuration default="false" name="SnapKit" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="Pods" TARGET_NAME="SnapKit" CONFIG_NAME="Debug" SCHEME_NAME="SnapKit" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
       <envs />
       <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
@@ -343,15 +1001,13 @@
       </EXTENSION>
       <method />
     </configuration>
-    <list size="8">
+    <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Application.Memoria" />
       <item index="1" class="java.lang.String" itemvalue="Application.Pods-Memoria" />
-      <item index="2" class="java.lang.String" itemvalue="Application.ReactiveCocoa" />
-      <item index="3" class="java.lang.String" itemvalue="Application.Realm" />
-      <item index="4" class="java.lang.String" itemvalue="Application.RealmSwift" />
-      <item index="5" class="java.lang.String" itemvalue="Application.Result" />
-      <item index="6" class="java.lang.String" itemvalue="Application.SnapKit" />
-      <item index="7" class="java.lang.String" itemvalue="Application.Swinject" />
+      <item index="2" class="java.lang.String" itemvalue="Application.Realm" />
+      <item index="3" class="java.lang.String" itemvalue="Application.RealmSwift" />
+      <item index="4" class="java.lang.String" itemvalue="Application.SnapKit" />
+      <item index="5" class="java.lang.String" itemvalue="Application.Swinject" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
@@ -368,29 +1024,29 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="873" extended-state="6" />
+    <frame x="0" y="23" width="1280" height="693" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.329602" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.42307693" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15230961" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -404,11 +1060,6 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <option name="myTodoPanelSettings">
-      <TodoPanelSettings />
-    </option>
-  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
@@ -416,31 +1067,31 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Memoria/AppDelegate.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="825">
+        <state vertical-scroll-proportion="0.0">
           <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Memoria/ViewsAndViewControllersAssembly.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="390" max-vertical-offset="540">
-          <caret line="26" column="59" selection-start-line="26" selection-start-column="59" selection-end-line="26" selection-end-column="59" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Memoria/AddTaskTimeViewController.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="435" max-vertical-offset="915">
-          <caret line="29" column="36" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="33" column="30" selection-start-line="33" selection-start-column="30" selection-end-line="33" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Memoria/AddTaskNameViewController.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="63" column="5" selection-start-line="7" selection-start-column="3" selection-end-line="22" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Memoria/AddTaskVoiceViewController.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
@@ -448,39 +1099,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Memoria/AppDelegate.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Memoria/AppDelegate.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Memoria/AppDelegate.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="49" max-vertical-offset="825">
+        <state vertical-scroll-proportion="0.0">
           <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Memoria/ViewsAndViewControllersAssembly.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
-          <caret line="26" column="59" selection-start-line="26" selection-start-column="59" selection-end-line="26" selection-end-column="59" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Memoria/AddTaskTimeViewController.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="690" max-vertical-offset="1365">
+        <state vertical-scroll-proportion="0.0">
           <caret line="46" column="36" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="36" />
           <folding />
         </state>
@@ -488,7 +1115,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Memoria/AddTaskNameViewController.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="124" max-vertical-offset="1005">
+        <state vertical-scroll-proportion="0.0">
           <caret line="50" column="5" selection-start-line="7" selection-start-column="3" selection-end-line="50" selection-end-column="5" />
           <folding />
         </state>
@@ -496,8 +1123,168 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Memoria/AddTaskVoiceViewController.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40592784" vertical-offset="45" max-vertical-offset="885">
-          <caret line="24" column="8" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Memoria/AppDelegate.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Memoria/AddTaskTimeViewController.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="36" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Memoria/AddTaskNameViewController.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Memoria/AppDelegate.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Memoria/AppDelegate.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Memoria/AppDelegate.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Memoria/AddTaskTimeViewController.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="27" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Memoria/ManageTasksViewController.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="27" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pods/Swinject/Swinject/Container.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Memoria/AddTaskConfirmationViewController.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Memoria/TasksNotificationsTracker.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="76" selection-start-line="24" selection-start-column="76" selection-end-line="24" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Memoria/TasksServices.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Memoria/AssemblyControllers.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.0">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Memoria/AddTaskVoiceViewController.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="111" column="8" selection-start-line="111" selection-start-column="8" selection-end-line="111" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Memoria/AddTaskNameViewController.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Memoria/AssemblyViewControllers.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.296296">
+          <caret line="14" column="92" selection-start-line="14" selection-start-column="92" selection-end-line="14" selection-end-column="92" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Memoria/IBeaconServices.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="38" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Memoria/IbeaconLocationFinder.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="59" column="18" selection-start-line="59" selection-start-column="18" selection-end-line="59" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Memoria/AssemblyModel.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="27" column="73" selection-start-line="27" selection-start-column="73" selection-end-line="27" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Memoria/AddTasksLocationViewController.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.1536144">
+          <caret line="89" column="0" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
           <folding />
         </state>
       </provider>

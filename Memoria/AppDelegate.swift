@@ -13,13 +13,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
         Bootstrapper.run()
-
+        application.registerUserNotificationSettings(UIUserNotificationSettings(forTypes: UIUserNotificationType.Alert, categories: nil))
         let rootViewController = Bootstrapper.container.resolve(NavigationController.self)
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
         self.window?.rootViewController = rootViewController
         self.window?.makeKeyAndVisible()
         
         return true
+    }
+    
+    func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
+        NSNotificationCenter.defaultCenter().postNotificationName(NotificationsNames.TaskTimeNotification, object: notification)
     }
 
     func applicationWillResignActive(application: UIApplication) {

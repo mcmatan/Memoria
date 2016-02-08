@@ -77,7 +77,7 @@ class Recorder : NSObject , AVAudioRecorderDelegate, AVAudioPlayerDelegate {
         recorder?.stop()
         player?.stop()
         
-        meterTimer.invalidate()
+        meterTimer?.invalidate()
         
         let session = AVAudioSession.sharedInstance()
         do {
@@ -119,6 +119,10 @@ class Recorder : NSObject , AVAudioRecorderDelegate, AVAudioPlayerDelegate {
     
     func getRecordingURL()->NSURL {
         return self.soundFileURL
+    }
+    
+    func setURLToPlayFrom(url : NSURL) {
+        self.soundFileURL = url
     }
     
     func recordWithPermission(setup:Bool) {

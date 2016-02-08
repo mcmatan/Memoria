@@ -1,32 +1,42 @@
 //
 //  Task.swift
-//  Memoria
+//  KontactTest
 //
-//  Created by Matan Cohen on 12/14/15.
-//  Copyright © 2015 MACMatan. All rights reserved.
+//  Created by Matan Cohen on 1/16/16.
+//  Copyright © 2016 MACMatan. All rights reserved.
 //
 
 import Foundation
-import RealmSwift
 
-class Task: Object {
-    
-    dynamic var name = ""
-    dynamic var createdAt = NSDate()
-    
-    init(name : String, createdAt: NSDate) {
-        self.name = name
-        self.createdAt = createdAt
-        super.init()
-    }
+class Task : NSObject {
+    var taskName: String?
+    var taskTime: NSDate?
+    var taskVoiceURL: NSURL?
+    var taskBeaconIdentifier : IBeaconIdentifier?
 
-    required init() {
-        fatalError("init() has not been implemented")
+    
+    init(taskName : String, taskTime : NSDate, taskVoiceURL : NSURL, taskBeaconIdentifier : IBeaconIdentifier) {
+        self.taskName = taskName
+        self.taskTime = taskTime
+        self.taskVoiceURL = taskVoiceURL
+        self.taskBeaconIdentifier = taskBeaconIdentifier
+        
     }
     
-// Specify properties to ignore (Realm won't persist these)
+    required convenience init(coder aDecoder: NSCoder) {
+        let taskName = aDecoder.decodeObjectForKey("taskName") as! String
+        let taskTime = aDecoder.decodeObjectForKey("taskTime") as! NSDate
+        let taskVoiceURL = aDecoder.decodeObjectForKey("taskVoiceURL") as! NSURL
+        let taskBeaconIdentifier = aDecoder.decodeObjectForKey("taskBeaconIdentifier") as! IBeaconIdentifier
+        self.init(taskName : taskName, taskTime : taskTime, taskVoiceURL : taskVoiceURL, taskBeaconIdentifier : taskBeaconIdentifier)
+        
+
+    }
     
-//  override static func ignoredProperties() -> [String] {
-//    return []
-//  }
+    func encodeWithCoder(aCoder: NSCoder) {
+        aCoder.encodeObject(taskName, forKey: "taskName")
+        aCoder.encodeObject(taskTime, forKey: "taskTime")
+        aCoder.encodeObject(taskVoiceURL, forKey: "taskVoiceURL")
+        aCoder.encodeObject(taskBeaconIdentifier, forKey: "taskBeaconIdentifier")
+    }
 }
