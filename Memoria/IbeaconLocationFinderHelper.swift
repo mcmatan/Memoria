@@ -8,6 +8,7 @@
 
 import Foundation
 
+
 class IbeaconLocationFinderHelper {
  
     class func locationManagerStateToString(state : KTKLocationManagerState) ->String {

@@ -1,0 +1,1 @@
+../../../../KontaktSDK/KontaktSDK/KontaktSDK.framework/Headers/NSString+Kontakt.h

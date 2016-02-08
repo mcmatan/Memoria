@@ -9,7 +9,8 @@ target 'Memoria' do
 pod 'Swinject', '1.0.0-beta.2'
 pod 'SnapKit', '~> 0.18'
 pod 'RealmSwift'
-pod 'KontaktSDK', '~> 6.2'
+pod 'KontaktSDK'
+
 end
 
 target 'MemoriaTests' do

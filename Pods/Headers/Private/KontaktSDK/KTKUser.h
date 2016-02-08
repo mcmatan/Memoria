@@ -1,1 +1,0 @@
-../../../KontaktSDK/KontaktSDK/Headers/KTKUser.h

@@ -13,11 +13,11 @@
             buildForProfiling = "YES"
             buildForArchiving = "YES">
             <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E082513E4AA9BA6460737990232D4E16"
-               BlueprintName = "Pods-Memoria"
-               ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "Pods_Memoria.framework">
+               BuildableIdentifier = 'primary'
+               BlueprintIdentifier = '5CE88B3784AFF21172868FF0'
+               BlueprintName = 'Pods-Memoria'
+               ReferencedContainer = 'container:Pods.xcodeproj'
+               BuildableName = 'Pods_Memoria.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

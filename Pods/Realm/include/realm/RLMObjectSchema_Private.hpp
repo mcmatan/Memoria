@@ -26,11 +26,9 @@
 
 namespace realm {
     class Table;
-    template<typename T> class BasicTableRef;
-    typedef BasicTableRef<Table> TableRef;
 }
 
-struct RLMObservationInfo;
+class RLMObservationInfo;
 
 // RLMObjectSchema private
 @interface RLMObjectSchema () {

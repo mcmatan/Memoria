@@ -10,6 +10,7 @@ class AddTasksLocationViewController : ViewController {
     let iBeaconServices : IBeaconServices
     var currenctTaskCreator : CurrenctTaskCreator
     var addTaskNameViewController : AddTaskNameViewController?
+    let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.Gray)
     
     init(container : Container, tasksServices : TasksServices, iBeaconServices : IBeaconServices, currenctTaskCreator : CurrenctTaskCreator) {
         self.container = container
@@ -30,6 +31,8 @@ class AddTasksLocationViewController : ViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        view.addSubview(activityIndicator)
         
         let topExpelenationText = Label()
         topExpelenationText.numberOfLines = 0
@@ -55,6 +58,7 @@ class AddTasksLocationViewController : ViewController {
         thisIsMyLocation.translatesAutoresizingMaskIntoConstraints = false
         or.translatesAutoresizingMaskIntoConstraints = false
         manageTasks.translatesAutoresizingMaskIntoConstraints = false
+        activityIndicator.translatesAutoresizingMaskIntoConstraints = false
         
         let topLayoutGuide = self.topLayoutGuide
         let bottomLayoutGuide = self.bottomLayoutGuide
@@ -78,6 +82,9 @@ class AddTasksLocationViewController : ViewController {
             "H:|[topExpelenationText]|"
             , options: [], metrics: nil, views: views)
         
+        UIViewAutoLayoutExtentions.centerVerticlyAlViewsInSuperView(activityIndicator)
+        UIViewAutoLayoutExtentions.centerHorizontalyAlViewsInSuperView(activityIndicator)
+        
         allConstrains += verticalLayout
         allConstrains += horizintalLayout
         NSLayoutConstraint.activateConstraints(allConstrains)
@@ -86,9 +93,11 @@ class AddTasksLocationViewController : ViewController {
     
     //MARK: Buttons presses
     
-    func thisIsMyLocationPress() {
 
+    func thisIsMyLocationPress() {
+    self.loader.show()
         self.iBeaconServices.isThereABeaconInArea { (result, beacon) -> Void in
+            self.loader.hide()
                 if result == false {
                     self.showNoBeaconInEreaMessage()
                     return

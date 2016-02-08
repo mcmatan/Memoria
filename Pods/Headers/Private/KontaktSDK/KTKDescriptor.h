@@ -1,1 +1,0 @@
-../../../KontaktSDK/KontaktSDK/Headers/KTKDescriptor.h

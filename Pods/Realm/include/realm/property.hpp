@@ -46,16 +46,16 @@ namespace realm {
     };
 
     struct Property {
-    public:
         std::string name;
         PropertyType type;
         std::string object_type;
-        bool is_primary;
-        bool is_indexed;
-        bool is_nullable;
+        bool is_primary = false;
+        bool is_indexed = false;
+        bool is_indexable() const { return type == PropertyTypeInt || type == PropertyTypeBool || type == PropertyTypeString || type == PropertyTypeDate; }
+        bool is_nullable = false;
 
-        size_t table_column;
-        bool requires_index() { return is_primary || is_indexed; }
+        size_t table_column = -1;
+        bool requires_index() const { return is_primary || is_indexed; }
     };
 
     static inline const char *string_for_property_type(PropertyType type) {
