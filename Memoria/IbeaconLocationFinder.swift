@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+
 class IbeaconLocationFinder : NSObject,  KTKLocationManagerDelegate {
     let minimunDistanceToBeacon = 1.0
     let searchForBeaconDelayTime = 2.0

@@ -84,16 +84,10 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "${PODS_ROOT}/KontaktSDK/KontaktSDK/KontaktSDK.framework"
-  install_framework "Pods-Memoria/Realm.framework"
-  install_framework "Pods-Memoria/RealmSwift.framework"
   install_framework "Pods-Memoria/SnapKit.framework"
   install_framework "Pods-Memoria/Swinject.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "${PODS_ROOT}/KontaktSDK/KontaktSDK/KontaktSDK.framework"
-  install_framework "Pods-Memoria/Realm.framework"
-  install_framework "Pods-Memoria/RealmSwift.framework"
   install_framework "Pods-Memoria/SnapKit.framework"
   install_framework "Pods-Memoria/Swinject.framework"
 fi

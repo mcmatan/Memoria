@@ -1,1 +1,0 @@
-../../../../KontaktSDK/KontaktSDK/KontaktSDK.framework/Headers/NSData+Kontakt.h

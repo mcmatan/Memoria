@@ -82,8 +82,8 @@ class AddTasksLocationViewController : ViewController {
             "H:|[topExpelenationText]|"
             , options: [], metrics: nil, views: views)
         
-        UIViewAutoLayoutExtentions.centerVerticlyAlViewsInSuperView(activityIndicator)
-        UIViewAutoLayoutExtentions.centerHorizontalyAlViewsInSuperView(activityIndicator)
+        UIViewAutoLayoutExtentions.centerVerticlyAlViewsInSuperView([activityIndicator])
+        UIViewAutoLayoutExtentions.centerHorizontalyAlViewsInSuperView([activityIndicator])
         
         allConstrains += verticalLayout
         allConstrains += horizintalLayout
@@ -95,9 +95,9 @@ class AddTasksLocationViewController : ViewController {
     
 
     func thisIsMyLocationPress() {
-    self.loader.show()
+    self.activityIndicator.startAnimating()
         self.iBeaconServices.isThereABeaconInArea { (result, beacon) -> Void in
-            self.loader.hide()
+            self.activityIndicator.stopAnimating()
                 if result == false {
                     self.showNoBeaconInEreaMessage()
                     return

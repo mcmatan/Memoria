@@ -8,8 +8,7 @@ use_frameworks!
 target 'Memoria' do
 pod 'Swinject', '1.0.0-beta.2'
 pod 'SnapKit', '~> 0.18'
-pod 'RealmSwift'
-pod 'KontaktSDK'
+# pod 'KontaktSDK', '~> 1.0'
 
 end
 
