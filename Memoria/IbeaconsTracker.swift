@@ -9,9 +9,18 @@
 import Foundation
 import UIKit
 
+/*
+IBeacon tracker should fire event every time NearBeacons change √
+NeaderTaskMonitor will catch the event and turn every Beacon to Task with TasksDB √
+Keep and dictionary with ibeaconIdentifer for NSDate, from the date he first starting tracking the beacon √
+A check will be made to see if when a events fires, remove beacons that are not in the area any more. √
+If an beacon with a task in the area more then x time, and event will be fired  √
+Task notification Tracker will listen to the event√
+
+*/
 
 class IbeaconsTracker : NSObject,  KTKLocationManagerDelegate {
-    let minimunDistanceToBeacon = 1.0 //In miters
+    let minimunDistanceToBeacon = 0.5 //In miters
     let searchForBeaconDelayTime = 2.0
     let locationManager = KTKLocationManager()
     var currentClosesBeacon : CLBeacon?
@@ -52,8 +61,9 @@ class IbeaconsTracker : NSObject,  KTKLocationManagerDelegate {
         dispatch_after(delayTime, dispatch_get_main_queue()) {
             if let _ = self.currentClosesBeacon {
                 handler(result: true, beacon: self.currentClosesBeacon)
-            }
+            } else {
             handler(result: false, beacon: nil)
+            }
         }
     }
     
@@ -97,8 +107,10 @@ class IbeaconsTracker : NSObject,  KTKLocationManagerDelegate {
         self.beaconsInErea?.removeAll()
         self.beaconsInErea = beacons as? [CLBeacon]
         
-        self.fireBeaconsNeatEvent(beacons as! [CLBeacon])
+        let onlyCloseBeacons = self.getOnlyCloseBeacons(beacons as! [CLBeacon])
+        self.fireBeaconsNearEvent(onlyCloseBeacons)
         
+        print("Ranged Close count: \(onlyCloseBeacons.count)")
         print("Ranged beacons count: \(beacons.count)")
         if ((beacons.count > 0) == false) {
             return
@@ -109,9 +121,9 @@ class IbeaconsTracker : NSObject,  KTKLocationManagerDelegate {
         }
     }
     
-    func fireBeaconsNeatEvent(beacons : [CLBeacon]) {
+    func fireBeaconsNearEvent(beacons : [CLBeacon]) {
         if (beacons.count > 0) {
-            let beaconsNearNotification = NSNotification(name: NotificationsNames.beaconIsNearMoreThenXTimeNotification, object: beacons, userInfo: nil)
+            let beaconsNearNotification = NSNotification(name: NotificationsNames.beaconsThatAreNearNotification, object: beacons, userInfo: nil)
             NSNotificationCenter.defaultCenter().postNotification(beaconsNearNotification)
         }
     }
@@ -132,6 +144,16 @@ class IbeaconsTracker : NSObject,  KTKLocationManagerDelegate {
             }
         }
         return nil
+    }
+    
+    private func getOnlyCloseBeacons(beacons : [CLBeacon])->[CLBeacon] {
+        var closeBeacons = [CLBeacon]()
+        for beacon in beacons {
+            if beacon.accuracy < self.minimunDistanceToBeacon {
+                closeBeacons.append(beacon)
+            }
+        }
+        return closeBeacons
     }
     
     

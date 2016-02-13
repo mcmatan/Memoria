@@ -13,6 +13,7 @@ class TasksNotificationsTracker : NSObject {
     let tasksServices : TasksServices
     let iBeaconServices : IBeaconServices
     let recorder : VoiceRecorder
+    let reminderPopUp = ReminderPopUp()
     
     init(tasksServices : TasksServices, iBeaconServices : IBeaconServices) {
         self.tasksServices = tasksServices
@@ -21,8 +22,16 @@ class TasksNotificationsTracker : NSObject {
         
         super.init()
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("taskTimeNotification:"), name: NotificationsNames.TaskTimeNotification, object:nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("tryingToPerformTaskNotAtTimeScheduledNotifiationRecevied:"), name: NotificationsNames.tryingToPerformTaskNotAtTimeScheduledNotifiation, object:nil)
     }
     
+    func tryingToPerformTaskNotAtTimeScheduledNotifiationRecevied(notificiation : NSNotification) {
+        if self.reminderPopUp.isPresented == true {
+            return
+        }
+        let task = notificiation.object as! Task
+        self.presentNotificiationTryingToPerformTaskNotAtTime(task)
+    }
     
     internal func taskTimeNotification(notification : NSNotification) {
         if let localNotification = notification.object as? UILocalNotification {
@@ -31,15 +40,30 @@ class TasksNotificationsTracker : NSObject {
             print(localNotification.userInfo![key])
             let majorAppendedByMinor = localNotification.userInfo![key] as? String
             let task = self.tasksServices.getTaskForMajorAppendedByMinorString(majorAppendedByMinor!)
-            self .presentNotificiationForTask(task)
+            self .presentNotificiationTimeForTask(task)
         }
     }
+    
+    
+    func presentNotificiationTryingToPerformTaskNotAtTime(task : Task) {
+        let text = "This is not the time for : \(task.taskName!).\n Its scheduled for \(task.taskTime!.toString()!)"
+        let cancelButton = ButtonAction(title: "Ok", handler: { (ButtonAction) -> Void in
+            self.iBeaconServices.isBeaconInErea(task.taskBeaconIdentifier!, handler: { (result) -> Void in
+                if (result == false) {
+                } else {
+                }
+            })
+        })
+        reminderPopUp.presentPopUp(task.taskName!, message: text, cancelButton: cancelButton, buttons: nil, completion: { () -> Void in
+            //
+        })
+    }
 
-    func presentNotificiationForTask(task : Task) {
+
+    func presentNotificiationTimeForTask(task : Task) {
         self.recorder .setURLToPlayFrom(task.taskVoiceURL!)
         self.recorder.play()
         let text = "You have a task names: \(task.taskName!) for now."
-        let reminderPopUp = ReminderPopUp()
         let cancelButton = ButtonAction(title: "Ok", handler: { (ButtonAction) -> Void in
             self.iBeaconServices.isBeaconInErea(task.taskBeaconIdentifier!, handler: { (result) -> Void in
                 if (result == false) {
@@ -58,7 +82,6 @@ class TasksNotificationsTracker : NSObject {
         self.recorder .setURLToPlayFrom(task.taskVoiceURL!)
         self.recorder.play()
         let text = "Sorry you dont seem to be at the erea of: \(task.taskName!) task. Please go to \(task.taskName!) ans press ok"
-        let reminderPopUp = ReminderPopUp()
         let cancelButton = ButtonAction(title: "Ok", handler: { (ButtonAction) -> Void in
             self.iBeaconServices.isBeaconInErea(task.taskBeaconIdentifier!, handler: { (result) -> Void in
                 if (result == false) {

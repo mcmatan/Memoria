@@ -31,7 +31,12 @@ public class AssemblyModel {
         container.register(ReminderSqueduler.self) { c in
             return ReminderSqueduler()
             }.inObjectScope(.Container)
-        
+
+        container.register(NearTaskMonitor.self) { c in
+            return NearTaskMonitor(tasksDB: container.resolve(TasksDB.self)!)
+            }.inObjectScope(.Container)
+        container.resolve(NearTaskMonitor.self)
+
     }
     
 }

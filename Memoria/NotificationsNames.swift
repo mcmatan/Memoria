@@ -10,6 +10,7 @@ import Foundation
 
 class NotificationsNames {
     static let enterdAreaWithActiveTeskNotification = "enterdAreaWithActiveTesk" //Holdes task
-    static let beaconIsNearMoreThenXTimeNotification = "beaconIsNear" // Holdes Tasks
+    static let beaconsThatAreNearNotification = "beaconIsNear" // Holdes CLBeacon Array
+    static let tryingToPerformTaskNotAtTimeScheduledNotifiation = "tryingToPerformTaskNotAtTimeScheduledNotifiation" // Holdes Task
     static let TaskTimeNotification = "TaskTimeNotification"
 }

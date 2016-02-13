@@ -16,7 +16,7 @@ class NearTaskMonitor: NSObject {
     init(tasksDB : TasksDB) {
         self.tasksDB = tasksDB
         super.init()
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("wdwd"), name: NotificationsNames.beaconIsNearMoreThenXTimeNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("beaconIsNearMoreThenXTimeNotificationReceived:"), name: NotificationsNames.beaconsThatAreNearNotification, object: nil)
     }
     
     func beaconIsNearMoreThenXTimeNotificationReceived(notification :NSNotification) {
@@ -41,7 +41,7 @@ class NearTaskMonitor: NSObject {
     func fireNotificationsForIdentifiers(identifiers : Array<String>) {
         for identifer in identifiers {
             let task = self.tasksDB.getTaskForIBeaconMajorAppendedByMinor(identifer)
-            let notification = NSNotification(name: NotificationsNames.beaconIsNearMoreThenXTimeNotification, object: task)
+            let notification = NSNotification(name: NotificationsNames.tryingToPerformTaskNotAtTimeScheduledNotifiation, object: task)
             NSNotificationCenter.defaultCenter().postNotification(notification)
         }
     }

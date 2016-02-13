@@ -10,7 +10,7 @@ class AddTasksLocationViewController : ViewController {
     let iBeaconServices : IBeaconServices
     var currenctTaskCreator : CurrenctTaskCreator
     var addTaskNameViewController : AddTaskNameViewController?
-    let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.Gray)
+    let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.WhiteLarge)
     
     init(container : Container, tasksServices : TasksServices, iBeaconServices : IBeaconServices, currenctTaskCreator : CurrenctTaskCreator) {
         self.container = container
@@ -32,8 +32,6 @@ class AddTasksLocationViewController : ViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.addSubview(activityIndicator)
-        
         let topExpelenationText = Label()
         topExpelenationText.numberOfLines = 0
         topExpelenationText.textAlignment = NSTextAlignment.Center
@@ -53,6 +51,7 @@ class AddTasksLocationViewController : ViewController {
         self.view.addSubview(thisIsMyLocation)
         self.view.addSubview(or)
         self.view.addSubview(manageTasks)
+        thisIsMyLocation.addSubview(activityIndicator)
         
         topExpelenationText.translatesAutoresizingMaskIntoConstraints = false
         thisIsMyLocation.translatesAutoresizingMaskIntoConstraints = false
