@@ -97,9 +97,8 @@ class IbeaconsTracker : NSObject,  KTKLocationManagerDelegate {
         self.beaconsInErea?.removeAll()
         self.beaconsInErea = beacons as? [CLBeacon]
         
-        let beaconsNearNotification = NSNotification(name: NotificationsNames.beaconIsNearMoreThenXTimeNotification, object: beacons, userInfo: nil)
-        NSNotificationCenter.defaultCenter().postNotification(beaconsNearNotification)
-
+        self.fireBeaconsNeatEvent(beacons as! [CLBeacon])
+        
         print("Ranged beacons count: \(beacons.count)")
         if ((beacons.count > 0) == false) {
             return
@@ -107,6 +106,13 @@ class IbeaconsTracker : NSObject,  KTKLocationManagerDelegate {
         let beacon = self.getClosestBeacon(beacons as? [CLBeacon])
         if beacon?.accuracy < self.minimunDistanceToBeacon {
             self.currentClosesBeacon = beacon
+        }
+    }
+    
+    func fireBeaconsNeatEvent(beacons : [CLBeacon]) {
+        if (beacons.count > 0) {
+            let beaconsNearNotification = NSNotification(name: NotificationsNames.beaconIsNearMoreThenXTimeNotification, object: beacons, userInfo: nil)
+            NSNotificationCenter.defaultCenter().postNotification(beaconsNearNotification)
         }
     }
     

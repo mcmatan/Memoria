@@ -40,6 +40,9 @@
 		905AF3C11C1F3BD60063713A /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905AF3C01C1F3BD60063713A /* NavigationController.swift */; };
 		905AF3C41C1F41260063713A /* AddTaskTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905AF3C31C1F41260063713A /* AddTaskTimeViewController.swift */; };
 		90C5887B1C46E0AC00D84C73 /* ManageTasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C5887A1C46E0AC00D84C73 /* ManageTasksViewController.swift */; };
+		90DC62091C6F5BFA000C4457 /* NearTaskMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DC62081C6F5BFA000C4457 /* NearTaskMonitor.swift */; };
+		90DC620C1C6F62BB000C4457 /* DictionaryExntentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DC620B1C6F62BB000C4457 /* DictionaryExntentions.swift */; };
+		90DC620E1C6F6B45000C4457 /* NSDateExntentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DC620D1C6F6B45000C4457 /* NSDateExntentions.swift */; };
 		90DC779C1C3AFC6F0062BCE3 /* DatePickerDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DC779B1C3AFC6F0062BCE3 /* DatePickerDialog.swift */; };
 		90DC779F1C3B02770062BCE3 /* AddTaskVoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DC779E1C3B02770062BCE3 /* AddTaskVoiceViewController.swift */; };
 		90DC77A21C3DA0F70062BCE3 /* VoiceRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DC77A11C3DA0F70062BCE3 /* VoiceRecorder.swift */; };
@@ -160,6 +163,9 @@
 		905AF3C01C1F3BD60063713A /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		905AF3C31C1F41260063713A /* AddTaskTimeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskTimeViewController.swift; sourceTree = "<group>"; };
 		90C5887A1C46E0AC00D84C73 /* ManageTasksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManageTasksViewController.swift; sourceTree = "<group>"; };
+		90DC62081C6F5BFA000C4457 /* NearTaskMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearTaskMonitor.swift; sourceTree = "<group>"; };
+		90DC620B1C6F62BB000C4457 /* DictionaryExntentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryExntentions.swift; sourceTree = "<group>"; };
+		90DC620D1C6F6B45000C4457 /* NSDateExntentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateExntentions.swift; sourceTree = "<group>"; };
 		90DC779B1C3AFC6F0062BCE3 /* DatePickerDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerDialog.swift; sourceTree = "<group>"; };
 		90DC779E1C3B02770062BCE3 /* AddTaskVoiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskVoiceViewController.swift; sourceTree = "<group>"; };
 		90DC77A11C3DA0F70062BCE3 /* VoiceRecorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceRecorder.swift; sourceTree = "<group>"; };
@@ -296,6 +302,7 @@
 		9008FBCA1C6F5952003C1549 /* NearTaskMonitor */ = {
 			isa = PBXGroup;
 			children = (
+				90DC62081C6F5BFA000C4457 /* NearTaskMonitor.swift */,
 			);
 			name = NearTaskMonitor;
 			sourceTree = "<group>";
@@ -504,6 +511,15 @@
 			name = ManageTasksViewController;
 			sourceTree = "<group>";
 		};
+		90DC620A1C6F6276000C4457 /* Categoris */ = {
+			isa = PBXGroup;
+			children = (
+				90DC620B1C6F62BB000C4457 /* DictionaryExntentions.swift */,
+				90DC620D1C6F6B45000C4457 /* NSDateExntentions.swift */,
+			);
+			name = Categoris;
+			sourceTree = "<group>";
+		};
 		90DC779A1C3AFC610062BCE3 /* DatePicker */ = {
 			isa = PBXGroup;
 			children = (
@@ -562,6 +578,7 @@
 		90E8C4951C1AA2B8009304A9 /* Memoria */ = {
 			isa = PBXGroup;
 			children = (
+				90DC620A1C6F6276000C4457 /* Categoris */,
 				90F009F81C4A7AFA002C98BA /* UI */,
 				901AEDF21C4136C900DD518A /* AutoLayoutMCExtentions */,
 				9035C6D51C2024A000088434 /* Constants */,
@@ -893,12 +910,14 @@
 				9008FB681C53D356003C1549 /* CurrenctTaskCreator.swift in Sources */,
 				9035FE051C1B064F00D98022 /* Button.swift in Sources */,
 				905AF3BB1C1F2AEF0063713A /* Task.swift in Sources */,
+				90DC62091C6F5BFA000C4457 /* NearTaskMonitor.swift in Sources */,
 				905AF3C41C1F41260063713A /* AddTaskTimeViewController.swift in Sources */,
 				9035FE211C1B2CF800D98022 /* Label.swift in Sources */,
 				901AEDF41C4136F500DD518A /* UIViewAutoLayoutExtentions.swift in Sources */,
 				90F00A0D1C4A7C25002C98BA /* TasksServices.swift in Sources */,
 				90F00A0F1C4A7C2F002C98BA /* IBeaconServices.swift in Sources */,
 				9035FE1B1C1B2B1D00D98022 /* ViewController.swift in Sources */,
+				90DC620C1C6F62BB000C4457 /* DictionaryExntentions.swift in Sources */,
 				90F009F71C4A7AE2002C98BA /* NotificationsNames.swift in Sources */,
 				90C5887B1C46E0AC00D84C73 /* ManageTasksViewController.swift in Sources */,
 				90DC77A21C3DA0F70062BCE3 /* VoiceRecorder.swift in Sources */,
@@ -910,6 +929,7 @@
 				90F00A001C4A7B73002C98BA /* TasksDB.swift in Sources */,
 				9035FE281C1ECC4800D98022 /* AddTaskNameViewController.swift in Sources */,
 				9035C6D41C20234200088434 /* NSDate+Extension.swift in Sources */,
+				90DC620E1C6F6B45000C4457 /* NSDateExntentions.swift in Sources */,
 				9035FE0D1C1B0C9E00D98022 /* AddTasksLocationViewController.swift in Sources */,
 				901127301C1AFBE20088DD6B /* AssemblyModel.swift in Sources */,
 				90F00A071C4A7C06002C98BA /* IbeaconsTracker.swift in Sources */,
