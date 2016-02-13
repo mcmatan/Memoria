@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class Task : NSObject {
     var taskName: String?
@@ -29,8 +30,6 @@ class Task : NSObject {
         let taskVoiceURL = aDecoder.decodeObjectForKey("taskVoiceURL") as! NSURL
         let taskBeaconIdentifier = aDecoder.decodeObjectForKey("taskBeaconIdentifier") as! IBeaconIdentifier
         self.init(taskName : taskName, taskTime : taskTime, taskVoiceURL : taskVoiceURL, taskBeaconIdentifier : taskBeaconIdentifier)
-        
-
     }
     
     func encodeWithCoder(aCoder: NSCoder) {

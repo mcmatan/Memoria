@@ -9,10 +9,10 @@
 import Foundation
 
 class IBeaconServices {
-    var ibeaconLocationFinder : IbeaconLocationFinder
+    var ibeaconLocationFinder : IbeaconsTracker
     var tasksDB : TasksDB
     
-    init(ibeaconLocationFinder : IbeaconLocationFinder, tasksDB : TasksDB) {
+    init(ibeaconLocationFinder : IbeaconsTracker, tasksDB : TasksDB) {
         self.ibeaconLocationFinder = ibeaconLocationFinder
         self.tasksDB = tasksDB
     }

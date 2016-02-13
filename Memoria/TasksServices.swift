@@ -10,9 +10,9 @@ import Foundation
 
 class TasksServices {
     var tasksDB : TasksDB
-    let reminder : Reminder
+    let reminder : ReminderSqueduler
 
-    init(tasksDB : TasksDB, reminder : Reminder) {
+    init(tasksDB : TasksDB, reminder : ReminderSqueduler) {
         self.reminder = reminder
         self.tasksDB = tasksDB
     }

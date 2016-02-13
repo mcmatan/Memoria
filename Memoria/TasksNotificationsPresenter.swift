@@ -12,12 +12,12 @@ import UIKit
 class TasksNotificationsPresenter : NSObject {
     let tasksServices : TasksServices
     let iBeaconServices : IBeaconServices
-    let recorder : Recorder
+    let recorder : VoiceRecorder
     
     init(tasksServices : TasksServices, iBeaconServices : IBeaconServices) {
         self.tasksServices = tasksServices
         self.iBeaconServices = iBeaconServices
-        self.recorder = Recorder()
+        self.recorder = VoiceRecorder()
         
         super.init()
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("taskTimeNotification:"), name: NotificationsNames.TaskTimeNotification, object:nil)
@@ -26,7 +26,7 @@ class TasksNotificationsPresenter : NSObject {
     
     internal func taskTimeNotification(notification : NSNotification) {
         if let localNotification = notification.object as? UILocalNotification {
-            let key = Reminder.TaskNotificationKey
+            let key = ReminderSqueduler.TaskNotificationKey
             
             print(localNotification.userInfo![key])
             let majorAppendedByMinor = localNotification.userInfo![key] as? String

@@ -10,7 +10,7 @@
 		19F5CF12B11DB7CCDDD1FAFB /* Pods_Memoria.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43E5A21D54B5E0665251F8E4 /* Pods_Memoria.framework */; };
 		9008FB651C4AC420003C1549 /* IBeaconIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9008FB641C4AC420003C1549 /* IBeaconIdentifier.swift */; };
 		9008FB681C53D356003C1549 /* CurrenctTaskCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9008FB671C53D356003C1549 /* CurrenctTaskCreator.swift */; };
-		9008FB6B1C57F7E2003C1549 /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9008FB6A1C57F7E2003C1549 /* Reminder.swift */; };
+		9008FB6B1C57F7E2003C1549 /* ReminderSqueduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9008FB6A1C57F7E2003C1549 /* ReminderSqueduler.swift */; };
 		9008FBC91C6F4A2D003C1549 /* libkontakt-ios-sdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9008FBC81C6F4A2D003C1549 /* libkontakt-ios-sdk.a */; };
 		901127221C1AF8CA0088DD6B /* MemoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901127211C1AF8CA0088DD6B /* MemoriesViewController.swift */; };
 		9011272E1C1AFBE20088DD6B /* AssemblyViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901127291C1AFBE20088DD6B /* AssemblyViewControllers.swift */; };
@@ -42,7 +42,7 @@
 		90C5887B1C46E0AC00D84C73 /* ManageTasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C5887A1C46E0AC00D84C73 /* ManageTasksViewController.swift */; };
 		90DC779C1C3AFC6F0062BCE3 /* DatePickerDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DC779B1C3AFC6F0062BCE3 /* DatePickerDialog.swift */; };
 		90DC779F1C3B02770062BCE3 /* AddTaskVoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DC779E1C3B02770062BCE3 /* AddTaskVoiceViewController.swift */; };
-		90DC77A21C3DA0F70062BCE3 /* Recorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DC77A11C3DA0F70062BCE3 /* Recorder.swift */; };
+		90DC77A21C3DA0F70062BCE3 /* VoiceRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DC77A11C3DA0F70062BCE3 /* VoiceRecorder.swift */; };
 		90DC77A71C3DAF440062BCE3 /* AddTaskConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DC77A61C3DAF440062BCE3 /* AddTaskConfirmationViewController.swift */; };
 		90E8C4971C1AA2B8009304A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E8C4961C1AA2B8009304A9 /* AppDelegate.swift */; };
 		90E8C49E1C1AA2B8009304A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90E8C49D1C1AA2B8009304A9 /* Assets.xcassets */; };
@@ -53,8 +53,8 @@
 		90F009FA1C4A7B0B002C98BA /* TasksNotificationsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F009F91C4A7B0B002C98BA /* TasksNotificationsPresenter.swift */; };
 		90F009FD1C4A7B5F002C98BA /* TasksNotificationsTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F009FC1C4A7B5F002C98BA /* TasksNotificationsTracker.swift */; };
 		90F00A001C4A7B73002C98BA /* TasksDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F009FF1C4A7B73002C98BA /* TasksDB.swift */; };
-		90F00A071C4A7C06002C98BA /* IbeaconLocationFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F00A051C4A7C06002C98BA /* IbeaconLocationFinder.swift */; };
-		90F00A081C4A7C06002C98BA /* IbeaconLocationFinderHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F00A061C4A7C06002C98BA /* IbeaconLocationFinderHelper.swift */; };
+		90F00A071C4A7C06002C98BA /* IbeaconsTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F00A051C4A7C06002C98BA /* IbeaconsTracker.swift */; };
+		90F00A081C4A7C06002C98BA /* IbeaconsTrackerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F00A061C4A7C06002C98BA /* IbeaconsTrackerHelper.swift */; };
 		90F00A0D1C4A7C25002C98BA /* TasksServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F00A0C1C4A7C25002C98BA /* TasksServices.swift */; };
 		90F00A0F1C4A7C2F002C98BA /* IBeaconServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F00A0E1C4A7C2F002C98BA /* IBeaconServices.swift */; };
 /* End PBXBuildFile section */
@@ -81,7 +81,7 @@
 		43E5A21D54B5E0665251F8E4 /* Pods_Memoria.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Memoria.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9008FB641C4AC420003C1549 /* IBeaconIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBeaconIdentifier.swift; sourceTree = "<group>"; };
 		9008FB671C53D356003C1549 /* CurrenctTaskCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrenctTaskCreator.swift; sourceTree = "<group>"; };
-		9008FB6A1C57F7E2003C1549 /* Reminder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
+		9008FB6A1C57F7E2003C1549 /* ReminderSqueduler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderSqueduler.swift; sourceTree = "<group>"; };
 		9008FB731C6F3E3E003C1549 /* Memoria-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Memoria-Bridging-Header.h"; sourceTree = "<group>"; };
 		9008FB981C6F4A2D003C1549 /* KontaktSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KontaktSDK.h; sourceTree = "<group>"; };
 		9008FB991C6F4A2D003C1549 /* KTKAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKAction.h; sourceTree = "<group>"; };
@@ -163,7 +163,7 @@
 		90C5887A1C46E0AC00D84C73 /* ManageTasksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManageTasksViewController.swift; sourceTree = "<group>"; };
 		90DC779B1C3AFC6F0062BCE3 /* DatePickerDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerDialog.swift; sourceTree = "<group>"; };
 		90DC779E1C3B02770062BCE3 /* AddTaskVoiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskVoiceViewController.swift; sourceTree = "<group>"; };
-		90DC77A11C3DA0F70062BCE3 /* Recorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recorder.swift; sourceTree = "<group>"; };
+		90DC77A11C3DA0F70062BCE3 /* VoiceRecorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceRecorder.swift; sourceTree = "<group>"; };
 		90DC77A61C3DAF440062BCE3 /* AddTaskConfirmationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskConfirmationViewController.swift; sourceTree = "<group>"; };
 		90E8C4931C1AA2B8009304A9 /* Memoria.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memoria.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90E8C4961C1AA2B8009304A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -181,8 +181,8 @@
 		90F009FC1C4A7B5F002C98BA /* TasksNotificationsTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksNotificationsTracker.swift; sourceTree = "<group>"; };
 		90F009FF1C4A7B73002C98BA /* TasksDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksDB.swift; sourceTree = "<group>"; };
 		90F00A021C4A7BB2002C98BA /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
-		90F00A051C4A7C06002C98BA /* IbeaconLocationFinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IbeaconLocationFinder.swift; sourceTree = "<group>"; };
-		90F00A061C4A7C06002C98BA /* IbeaconLocationFinderHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IbeaconLocationFinderHelper.swift; sourceTree = "<group>"; };
+		90F00A051C4A7C06002C98BA /* IbeaconsTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IbeaconsTracker.swift; sourceTree = "<group>"; };
+		90F00A061C4A7C06002C98BA /* IbeaconsTrackerHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IbeaconsTrackerHelper.swift; sourceTree = "<group>"; };
 		90F00A0C1C4A7C25002C98BA /* TasksServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksServices.swift; sourceTree = "<group>"; };
 		90F00A0E1C4A7C2F002C98BA /* IBeaconServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBeaconServices.swift; sourceTree = "<group>"; };
 		BFCACEE2093F19BD06FD62C3 /* Pods-Memoria.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Memoria.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Memoria/Pods-Memoria.debug.xcconfig"; sourceTree = "<group>"; };
@@ -223,12 +223,12 @@
 			name = CurrenctTaskCreator;
 			sourceTree = "<group>";
 		};
-		9008FB691C57F7A5003C1549 /* NotificationsRemider */ = {
+		9008FB691C57F7A5003C1549 /* ReminderSqueduler */ = {
 			isa = PBXGroup;
 			children = (
-				9008FB6A1C57F7E2003C1549 /* Reminder.swift */,
+				9008FB6A1C57F7E2003C1549 /* ReminderSqueduler.swift */,
 			);
-			name = NotificationsRemider;
+			name = ReminderSqueduler;
 			sourceTree = "<group>";
 		};
 		9008FB741C6F45AD003C1549 /* Kontaks */ = {
@@ -438,11 +438,9 @@
 		9035FE2E1C1EDA4C00D98022 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				9008FB691C57F7A5003C1549 /* NotificationsRemider */,
+				9008FB691C57F7A5003C1549 /* ReminderSqueduler */,
 				9008FB661C53D32F003C1549 /* CurrenctTaskCreator */,
-				90F00A091C4A7C0D002C98BA /* Services */,
-				90F00A041C4A7BFD002C98BA /* IbeaconLocationFinder */,
-				90F00A011C4A7B7E002C98BA /* Entities */,
+				90F00A041C4A7BFD002C98BA /* IbeaconsTracker */,
 				90F009FE1C4A7B69002C98BA /* TasksDB */,
 				90F009FB1C4A7B4B002C98BA /* TasksNotificationsTracker */,
 				90F009F51C4A7ADB002C98BA /* NotificationsNames */,
@@ -520,7 +518,7 @@
 		90DC77A01C3DA0ED0062BCE3 /* Recorder */ = {
 			isa = PBXGroup;
 			children = (
-				90DC77A11C3DA0F70062BCE3 /* Recorder.swift */,
+				90DC77A11C3DA0F70062BCE3 /* VoiceRecorder.swift */,
 			);
 			name = Recorder;
 			sourceTree = "<group>";
@@ -564,6 +562,8 @@
 				9035C6D51C2024A000088434 /* Constants */,
 				905AF3BE1C1F3BC20063713A /* NavigationControllers */,
 				9035FE321C1F203800D98022 /* DataBase */,
+				90F00A011C4A7B7E002C98BA /* Entities */,
+				90F00A091C4A7C0D002C98BA /* Services */,
 				9035FE2E1C1EDA4C00D98022 /* Model */,
 				9035FE151C1B17B200D98022 /* Cms */,
 				9035FE031C1B063600D98022 /* UIElements */,
@@ -637,13 +637,13 @@
 			name = Entities;
 			sourceTree = "<group>";
 		};
-		90F00A041C4A7BFD002C98BA /* IbeaconLocationFinder */ = {
+		90F00A041C4A7BFD002C98BA /* IbeaconsTracker */ = {
 			isa = PBXGroup;
 			children = (
-				90F00A051C4A7C06002C98BA /* IbeaconLocationFinder.swift */,
-				90F00A061C4A7C06002C98BA /* IbeaconLocationFinderHelper.swift */,
+				90F00A051C4A7C06002C98BA /* IbeaconsTracker.swift */,
+				90F00A061C4A7C06002C98BA /* IbeaconsTrackerHelper.swift */,
 			);
-			name = IbeaconLocationFinder;
+			name = IbeaconsTracker;
 			sourceTree = "<group>";
 		};
 		90F00A091C4A7C0D002C98BA /* Services */ = {
@@ -880,7 +880,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9035FE2C1C1ECFC300D98022 /* TextField.swift in Sources */,
-				90F00A081C4A7C06002C98BA /* IbeaconLocationFinderHelper.swift in Sources */,
+				90F00A081C4A7C06002C98BA /* IbeaconsTrackerHelper.swift in Sources */,
 				9035FE171C1B17BA00D98022 /* Content.swift in Sources */,
 				9011272F1C1AFBE20088DD6B /* Bootstrapper.swift in Sources */,
 				901127221C1AF8CA0088DD6B /* MemoriesViewController.swift in Sources */,
@@ -888,7 +888,7 @@
 				9008FB651C4AC420003C1549 /* IBeaconIdentifier.swift in Sources */,
 				90DC779C1C3AFC6F0062BCE3 /* DatePickerDialog.swift in Sources */,
 				9035C6D71C2024BA00088434 /* UIConstants.swift in Sources */,
-				9008FB6B1C57F7E2003C1549 /* Reminder.swift in Sources */,
+				9008FB6B1C57F7E2003C1549 /* ReminderSqueduler.swift in Sources */,
 				90DC77A71C3DAF440062BCE3 /* AddTaskConfirmationViewController.swift in Sources */,
 				9035C6C71C20225300088434 /* TableView.swift in Sources */,
 				90E8C4971C1AA2B8009304A9 /* AppDelegate.swift in Sources */,
@@ -904,7 +904,7 @@
 				9035FE1B1C1B2B1D00D98022 /* ViewController.swift in Sources */,
 				90F009F71C4A7AE2002C98BA /* NotificationsNames.swift in Sources */,
 				90C5887B1C46E0AC00D84C73 /* ManageTasksViewController.swift in Sources */,
-				90DC77A21C3DA0F70062BCE3 /* Recorder.swift in Sources */,
+				90DC77A21C3DA0F70062BCE3 /* VoiceRecorder.swift in Sources */,
 				9035FE251C1EC64500D98022 /* ReminderPopUp.swift in Sources */,
 				905AF3C11C1F3BD60063713A /* NavigationController.swift in Sources */,
 				90DC779F1C3B02770062BCE3 /* AddTaskVoiceViewController.swift in Sources */,
@@ -916,7 +916,7 @@
 				9035C6D41C20234200088434 /* NSDate+Extension.swift in Sources */,
 				9035FE0D1C1B0C9E00D98022 /* AddTasksLocationViewController.swift in Sources */,
 				901127301C1AFBE20088DD6B /* AssemblyModel.swift in Sources */,
-				90F00A071C4A7C06002C98BA /* IbeaconLocationFinder.swift in Sources */,
+				90F00A071C4A7C06002C98BA /* IbeaconsTracker.swift in Sources */,
 				9035FE121C1B0D1200D98022 /* DrugsViewController.swift in Sources */,
 				9035FE1F1C1B2BFB00D98022 /* TextView.swift in Sources */,
 				9011272E1C1AFBE20088DD6B /* AssemblyViewControllers.swift in Sources */,

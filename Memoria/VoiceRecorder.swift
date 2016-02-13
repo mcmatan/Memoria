@@ -8,7 +8,7 @@
 
 import Foundation
 import AVFoundation
-class Recorder : NSObject , AVAudioRecorderDelegate, AVAudioPlayerDelegate {
+class VoiceRecorder : NSObject , AVAudioRecorderDelegate, AVAudioPlayerDelegate {
     var recorder: AVAudioRecorder!
     var player:AVAudioPlayer!
     var soundFileURL:NSURL!

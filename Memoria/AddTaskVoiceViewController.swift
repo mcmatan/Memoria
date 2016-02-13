@@ -6,7 +6,7 @@ class AddTaskVoiceViewController : ViewController {
 
     var container : Container
     let enterNameTextField = TextField()
-    var recorder = Recorder()
+    var recorder = VoiceRecorder()
     var currenctTaskCreator : CurrenctTaskCreator
     let btnRecord = Button()
     var addTaskConfirmationViewController : AddTaskConfirmationViewController?

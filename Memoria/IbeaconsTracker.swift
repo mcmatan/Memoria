@@ -10,8 +10,8 @@ import Foundation
 import UIKit
 
 
-class IbeaconLocationFinder : NSObject,  KTKLocationManagerDelegate {
-    let minimunDistanceToBeacon = 1.0
+class IbeaconsTracker : NSObject,  KTKLocationManagerDelegate {
+    let minimunDistanceToBeacon = 1.0 //In miters
     let searchForBeaconDelayTime = 2.0
     let locationManager = KTKLocationManager()
     var currentClosesBeacon : CLBeacon?
@@ -81,7 +81,7 @@ class IbeaconLocationFinder : NSObject,  KTKLocationManagerDelegate {
     //MARK: LocationManagerDelegate
     
      func locationManager(locationManager: KTKLocationManager!, didChangeState state: KTKLocationManagerState, withError error: NSError!) {
-        print(IbeaconLocationFinderHelper.locationManagerStateToString(state))
+        print(IbeaconsTrackerHelper.locationManagerStateToString(state))
     }
     
     func locationManager(locationManager: KTKLocationManager!, didEnterRegion region: KTKRegion!) {
@@ -94,16 +94,9 @@ class IbeaconLocationFinder : NSObject,  KTKLocationManagerDelegate {
     
     func locationManager(locationManager: KTKLocationManager!, didRangeBeacons beacons: [AnyObject]!) {
         self.beaconsInErea = beacons as? [CLBeacon]
-        
-        for currenctBeacon in (beacons as? [CLBeacon])! {
-            if currenctBeacon.accuracy < self.minimunDistanceToBeacon {
-                if ((self.beaconsInErea?.contains(currenctBeacon)) != nil) {
-                    self.beaconsInErea?.removeAtIndex((self.beaconsInErea?.indexOf(currenctBeacon))!)
-                }
-                self.beaconsInErea?.append(currenctBeacon)
-            }
-        }
-        
+        self.beaconsInErea?.removeAll()
+        self.beaconsInErea = beacons as? [CLBeacon]
+
         print("Ranged beacons count: \(beacons.count)")
         if ((beacons.count > 0) == false) {
             return
@@ -119,7 +112,6 @@ class IbeaconLocationFinder : NSObject,  KTKLocationManagerDelegate {
             if isBeaconsList.count > 0 {
                 var closesBeacon = isBeaconsList.first
                 for beacon in isBeaconsList {
-                    self.printBeaconInfo(beacon)
                     if let isClosestProximity = closesBeacon?.accuracy {
                         if beacon.accuracy < isClosestProximity {
                             closesBeacon = beacon

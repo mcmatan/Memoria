@@ -13,7 +13,7 @@ import Swinject
 class AddTaskConfirmationViewController : ViewController {
     let cellIdentifier = "Cell"
     let container : Container
-    let recorder = Recorder()
+    let recorder = VoiceRecorder()
     let tasksServices : TasksServices
     let lblTaskTime = Label()
     var currenctTaskCreator : CurrenctTaskCreator

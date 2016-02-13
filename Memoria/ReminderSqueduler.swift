@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class Reminder {
+class ReminderSqueduler {
     static var TaskNotificationKey : String = "majorAppendedByMinorString"
     
     func squeduleReminderForTask(task : Task) {
@@ -24,7 +24,7 @@ class Reminder {
         notification.fireDate = fireDate
         notification.timeZone = NSTimeZone.defaultTimeZone()
         notification.soundName = UILocalNotificationDefaultSoundName
-        let key = Reminder.TaskNotificationKey
+        let key = ReminderSqueduler.TaskNotificationKey
         notification.userInfo = [key: majorAppendedByMinorString]
         notification.category = "Memoria"
         UIApplication.sharedApplication().scheduleLocalNotification(notification)
@@ -34,7 +34,7 @@ class Reminder {
         let key = task.taskBeaconIdentifier!.majorAppendedByMinorString()
         var notificationToCancel : UILocalNotification?
         for notification in UIApplication.sharedApplication().scheduledLocalNotifications! {
-            if notification.userInfo![Reminder.TaskNotificationKey] as! String == key {
+            if notification.userInfo![ReminderSqueduler.TaskNotificationKey] as! String == key {
                 notificationToCancel = notification
                 break
             }
