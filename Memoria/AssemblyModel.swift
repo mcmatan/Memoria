@@ -15,10 +15,6 @@ public class AssemblyModel {
             return TasksDB()
         }.inObjectScope(.Container)
 
-        container.register(TasksNotificationsTracker.self) { c in
-            return TasksNotificationsTracker(tasksDB: container.resolve(TasksDB.self)!)
-        }.inObjectScope(.Container)
-
         container.register(IBeaconServices.self) { c in
             return IBeaconServices(ibeaconLocationFinder: container.resolve(IbeaconsTracker.self)!, tasksDB:
             container.resolve(TasksDB.self)!)

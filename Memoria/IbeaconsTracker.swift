@@ -96,6 +96,9 @@ class IbeaconsTracker : NSObject,  KTKLocationManagerDelegate {
         self.beaconsInErea = beacons as? [CLBeacon]
         self.beaconsInErea?.removeAll()
         self.beaconsInErea = beacons as? [CLBeacon]
+        
+        let beaconsNearNotification = NSNotification(name: NotificationsNames.beaconIsNearMoreThenXTimeNotification, object: beacons, userInfo: nil)
+        NSNotificationCenter.defaultCenter().postNotification(beaconsNearNotification)
 
         print("Ranged beacons count: \(beacons.count)")
         if ((beacons.count > 0) == false) {
@@ -140,7 +143,6 @@ class IbeaconsTracker : NSObject,  KTKLocationManagerDelegate {
             break;
         case CLProximity.Near:
             print("Distance Near for major = \(beacon.major) minor = \(beacon.minor)")
-            NSNotificationCenter.defaultCenter().postNotificationName(NotificationsNames.beaconIsNearNotification, object: beacon)
             break;
         }
         print("")

@@ -1,5 +1,5 @@
 //
-//  TasksNotifications.swift
+//  TasksNotificationsPresenter.swift
 //  KontactTest
 //
 //  Created by Matan Cohen on 1/16/16.
@@ -8,49 +8,72 @@
 
 import Foundation
 import UIKit
-class TasksNotificationsTracker : NSObject  {
-    var tasksDB : TasksDB
-    var isPresentingMessage = false
+
+class TasksNotificationsTracker : NSObject {
+    let tasksServices : TasksServices
+    let iBeaconServices : IBeaconServices
+    let recorder : VoiceRecorder
     
-    init(tasksDB : TasksDB) {
-        self.tasksDB = tasksDB
+    init(tasksServices : TasksServices, iBeaconServices : IBeaconServices) {
+        self.tasksServices = tasksServices
+        self.iBeaconServices = iBeaconServices
+        self.recorder = VoiceRecorder()
+        
         super.init()
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("beaconIsNearNotification:"), name: NotificationsNames.beaconIsNearNotification, object: nil)
-    }
-
-    internal func beaconIsNearNotification(notification : NSNotification) {
-        if let isBeacon = notification.object {
-            let ibeaconIdentifier = IBeaconIdentifier.creatFromCLBeacon(isBeacon as! CLBeacon)
-            if (self.tasksDB.isThereTaskForIBeaconIdentifier(ibeaconIdentifier)) {
-                let task = self.tasksDB.getTaskForIBeaconIdentifier(ibeaconIdentifier)
-                self.presentQuestionIsUserCurrentlyDoingTask(task)
-            }
-        }
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("taskTimeNotification:"), name: NotificationsNames.TaskTimeNotification, object:nil)
     }
     
-    func presentQuestionIsUserCurrentlyDoingTask(task : Task) {
-        
-        if self.isPresentingMessage == true {
-            return
+    
+    internal func taskTimeNotification(notification : NSNotification) {
+        if let localNotification = notification.object as? UILocalNotification {
+            let key = ReminderSqueduler.TaskNotificationKey
+            
+            print(localNotification.userInfo![key])
+            let majorAppendedByMinor = localNotification.userInfo![key] as? String
+            let task = self.tasksServices.getTaskForMajorAppendedByMinorString(majorAppendedByMinor!)
+            self .presentNotificiationForTask(task)
         }
-        self.isPresentingMessage = true
-        
-        var text = ""
-        if let isTaskName = task.taskName {
-            text = "Are you currently doing task: \(isTaskName)?"
-        }
+    }
 
-        let alert = UIAlertController(title: text, message: "", preferredStyle: UIAlertControllerStyle.Alert)
-        let actionYes = UIAlertAction(title: "Yes", style: UIAlertActionStyle.Default) { (alert) -> Void in
-            self.isPresentingMessage = false
-        }
-        let actionNo = UIAlertAction(title: "No", style: UIAlertActionStyle.Default) { (alert) -> Void in
-            self.isPresentingMessage = false
-        }
-        alert.addAction(actionYes)
-        alert.addAction(actionNo)
-        let mainViewController = UIApplication.sharedApplication().keyWindow?.rootViewController
-      //  mainViewController?.presentViewController(alert, animated: true, completion: nil)
-
+    func presentNotificiationForTask(task : Task) {
+        self.recorder .setURLToPlayFrom(task.taskVoiceURL!)
+        self.recorder.play()
+        let text = "You have a task names: \(task.taskName!) for now."
+        let reminderPopUp = ReminderPopUp()
+        let cancelButton = ButtonAction(title: "Ok", handler: { (ButtonAction) -> Void in
+            self.iBeaconServices.isBeaconInErea(task.taskBeaconIdentifier!, handler: { (result) -> Void in
+                if (result == false) {
+                        self.presentNotificationTryingToPressOkWhenNotInTheErea(task)
+                } else {
+                        self.taskDone(task)
+                }
+            })
+        })
+        reminderPopUp.presentPopUp(task.taskName!, message: text, cancelButton: cancelButton, buttons: nil, completion: { () -> Void in
+            //
+        })
+    }
+    
+    func presentNotificationTryingToPressOkWhenNotInTheErea(task : Task) {
+        self.recorder .setURLToPlayFrom(task.taskVoiceURL!)
+        self.recorder.play()
+        let text = "Sorry you dont seem to be at the erea of: \(task.taskName!) task. Please go to \(task.taskName!) ans press ok"
+        let reminderPopUp = ReminderPopUp()
+        let cancelButton = ButtonAction(title: "Ok", handler: { (ButtonAction) -> Void in
+            self.iBeaconServices.isBeaconInErea(task.taskBeaconIdentifier!, handler: { (result) -> Void in
+                if (result == false) {
+                    self.presentNotificationTryingToPressOkWhenNotInTheErea(task)
+                } else {
+                    self.taskDone(task)
+                }
+            })
+        })
+        reminderPopUp.presentPopUp(task.taskName!, message: text, cancelButton: cancelButton, buttons: nil, completion: { () -> Void in
+            //
+        })
+    }
+    
+    func taskDone(task : Task) {
+        self.tasksServices.removeTask(task)
     }
 }

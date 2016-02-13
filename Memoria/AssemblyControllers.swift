@@ -35,17 +35,12 @@ public class AssemblyControllers {
             let navigationController = NavigationController(rootViewController : c.resolve(TabBarController)!)
             return navigationController
         }
-        
+
         container.register(TasksNotificationsTracker.self) { c in
-            return TasksNotificationsTracker(tasksDB: container.resolve(TasksDB.self)!)
-        }.inObjectScope(.Hierarchy)
-        container.resolve(TasksNotificationsTracker.self)
-        
-        container.register(TasksNotificationsPresenter.self) { c in
-            return TasksNotificationsPresenter(tasksServices: container.resolve(TasksServices.self)!,
+            return TasksNotificationsTracker(tasksServices: container.resolve(TasksServices.self)!,
                 iBeaconServices:  container.resolve(IBeaconServices.self)!)
             }.inObjectScope(.Container)
-        container.resolve(TasksNotificationsPresenter.self)
+        container.resolve(TasksNotificationsTracker.self)
         
     }
 }
