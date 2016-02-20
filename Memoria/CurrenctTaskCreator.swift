@@ -9,10 +9,21 @@
 import Foundation
 
 class CurrenctTaskCreator {
-    var task = Task(taskName: "", taskTime: NSDate(), taskVoiceURL: NSURL(), taskBeaconIdentifier: IBeaconIdentifier(uuid: "", major: "", minor: ""))
+    var task = Task(taskName: "",
+        taskTime: NSDate(),
+        taskVoiceURL: NSURL(),
+        taskBeaconIdentifier: IBeaconIdentifier(uuid: "", major: "", minor: ""),
+        taskTimePriorityHi : false
+    )
+    
     
     func startNewTask() {
-        self.task = Task(taskName: "", taskTime: NSDate(), taskVoiceURL: NSURL(), taskBeaconIdentifier: IBeaconIdentifier(uuid: "", major: "", minor: ""))
+        self.task = Task(taskName: "",
+            taskTime: NSDate(),
+            taskVoiceURL: NSURL(),
+            taskBeaconIdentifier: IBeaconIdentifier(uuid: "", major: "", minor: ""),
+            taskTimePriorityHi: false
+        )
     }
     
     func getCurrenctTask()->Task {
@@ -41,6 +52,11 @@ class CurrenctTaskCreator {
     func setTaskBeaconIdentifier(iBeaconIdentifier : IBeaconIdentifier) {
         self.task.taskBeaconIdentifier = iBeaconIdentifier
     }
+    
+    func setTaskTimePriority(hi : Bool) {
+        self.task.taskTimePriorityHi = hi
+    }
+
 
     //MARK: Getters
     
@@ -58,6 +74,10 @@ class CurrenctTaskCreator {
     
     func getTaskBeaconIdentifier()->IBeaconIdentifier? {
         return self.task.taskBeaconIdentifier!
+    }
+    
+    func getTaskTimePriority()->Bool? {
+        return self.task.taskTimePriorityHi
     }
 
 }

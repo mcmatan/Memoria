@@ -44,6 +44,7 @@ class AddTaskTimeViewController : ViewController {
     
         self.lblTime.font = UIFont.systemFontOfSize(25)
         self.lblTime.textAlignment = NSTextAlignment.Center
+        self.lblTime.numberOfLines = 0
         
         self.view.addSubview(addTaskBtn)
         self.view.addSubview(self.lblTime)
@@ -83,9 +84,8 @@ class AddTaskTimeViewController : ViewController {
     }
     
     func setTimeToDisplay(date : NSDate) {
-        if let timeString = date.toString() {
-            self.lblTime.text = "\(timeString)"
-        }
+        let timeString = date.descriptionWithLocale(NSLocale.currentLocale())
+        self.lblTime.text = "\(timeString)"
     }
 
     func doneBtnPress() {

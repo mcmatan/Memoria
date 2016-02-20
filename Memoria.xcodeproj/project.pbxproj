@@ -43,6 +43,7 @@
 		90DC62091C6F5BFA000C4457 /* NearTaskMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DC62081C6F5BFA000C4457 /* NearTaskMonitor.swift */; };
 		90DC620C1C6F62BB000C4457 /* DictionaryExntentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DC620B1C6F62BB000C4457 /* DictionaryExntentions.swift */; };
 		90DC620E1C6F6B45000C4457 /* NSDateExntentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DC620D1C6F6B45000C4457 /* NSDateExntentions.swift */; };
+		90DC62111C6F844A000C4457 /* AddTaskTimePriorityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DC62101C6F844A000C4457 /* AddTaskTimePriorityController.swift */; };
 		90DC779C1C3AFC6F0062BCE3 /* DatePickerDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DC779B1C3AFC6F0062BCE3 /* DatePickerDialog.swift */; };
 		90DC779F1C3B02770062BCE3 /* AddTaskVoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DC779E1C3B02770062BCE3 /* AddTaskVoiceViewController.swift */; };
 		90DC77A21C3DA0F70062BCE3 /* VoiceRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DC77A11C3DA0F70062BCE3 /* VoiceRecorder.swift */; };
@@ -166,6 +167,7 @@
 		90DC62081C6F5BFA000C4457 /* NearTaskMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearTaskMonitor.swift; sourceTree = "<group>"; };
 		90DC620B1C6F62BB000C4457 /* DictionaryExntentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryExntentions.swift; sourceTree = "<group>"; };
 		90DC620D1C6F6B45000C4457 /* NSDateExntentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateExntentions.swift; sourceTree = "<group>"; };
+		90DC62101C6F844A000C4457 /* AddTaskTimePriorityController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskTimePriorityController.swift; sourceTree = "<group>"; };
 		90DC779B1C3AFC6F0062BCE3 /* DatePickerDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerDialog.swift; sourceTree = "<group>"; };
 		90DC779E1C3B02770062BCE3 /* AddTaskVoiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskVoiceViewController.swift; sourceTree = "<group>"; };
 		90DC77A11C3DA0F70062BCE3 /* VoiceRecorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceRecorder.swift; sourceTree = "<group>"; };
@@ -392,12 +394,12 @@
 			name = NavigationSegmentedController;
 			sourceTree = "<group>";
 		};
-		9035FE0B1C1B0C8400D98022 /* TasksViewController */ = {
+		9035FE0B1C1B0C8400D98022 /* AddTasksLocationViewController */ = {
 			isa = PBXGroup;
 			children = (
 				9035FE0C1C1B0C9E00D98022 /* AddTasksLocationViewController.swift */,
 			);
-			name = TasksViewController;
+			name = AddTasksLocationViewController;
 			sourceTree = "<group>";
 		};
 		9035FE101C1B0D0800D98022 /* DrugsViewController */ = {
@@ -437,10 +439,11 @@
 		9035FE2D1C1ED15900D98022 /* Tasks */ = {
 			isa = PBXGroup;
 			children = (
+				90DC620F1C6F842F000C4457 /* AddTaskTimePriorityController */,
 				90C588791C46E09500D84C73 /* ManageTasksViewController */,
 				90DC77A51C3DAF340062BCE3 /* AddTaskConfirmationViewController */,
 				90DC779D1C3B02320062BCE3 /* AddTaskVoiceViewController */,
-				9035FE0B1C1B0C8400D98022 /* TasksViewController */,
+				9035FE0B1C1B0C8400D98022 /* AddTasksLocationViewController */,
 				905AF3C21C1F410D0063713A /* AddTaskTimeViewController */,
 				9035FE261C1ECC3B00D98022 /* AddTaskNameViewController */,
 			);
@@ -518,6 +521,14 @@
 				90DC620D1C6F6B45000C4457 /* NSDateExntentions.swift */,
 			);
 			name = Categoris;
+			sourceTree = "<group>";
+		};
+		90DC620F1C6F842F000C4457 /* AddTaskTimePriorityController */ = {
+			isa = PBXGroup;
+			children = (
+				90DC62101C6F844A000C4457 /* AddTaskTimePriorityController.swift */,
+			);
+			name = AddTaskTimePriorityController;
 			sourceTree = "<group>";
 		};
 		90DC779A1C3AFC610062BCE3 /* DatePicker */ = {
@@ -931,6 +942,7 @@
 				9035C6D41C20234200088434 /* NSDate+Extension.swift in Sources */,
 				90DC620E1C6F6B45000C4457 /* NSDateExntentions.swift in Sources */,
 				9035FE0D1C1B0C9E00D98022 /* AddTasksLocationViewController.swift in Sources */,
+				90DC62111C6F844A000C4457 /* AddTaskTimePriorityController.swift in Sources */,
 				901127301C1AFBE20088DD6B /* AssemblyModel.swift in Sources */,
 				90F00A071C4A7C06002C98BA /* IbeaconsTracker.swift in Sources */,
 				9035FE121C1B0D1200D98022 /* DrugsViewController.swift in Sources */,

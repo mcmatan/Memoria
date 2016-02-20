@@ -23,6 +23,8 @@ Then clock on the button to add a task.</string>
 	<string>Task Sound</string>
 	<key>taskConfirmationTaskTimeDesc</key>
 	<string>Task Times</string>
+	<key>taskConfirmationTaskTimePriorityDesc</key>
+	<string>Task Time Priority</string>
 	<key>addTaskVoiceTitle</key>
 	<string>Task Voice</string>
 </dict>

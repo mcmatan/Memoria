@@ -9,7 +9,7 @@ class AddTaskVoiceViewController : ViewController {
     var recorder = VoiceRecorder()
     var currenctTaskCreator : CurrenctTaskCreator
     let btnRecord = Button()
-    var addTaskConfirmationViewController : AddTaskConfirmationViewController?
+    var addTaskTimePriorityViewController : AddTaskTimePriorityController?
 
     init(container : Container, currenctTaskCreator : CurrenctTaskCreator) {
         self.container = container
@@ -104,11 +104,11 @@ class AddTaskVoiceViewController : ViewController {
         self.stopRecordButtonPress()
         self.currenctTaskCreator.setTaskVoiceURL(self.recorder.getRecordingURL())
         
-        if let _ = self.addTaskConfirmationViewController {} else {
-            self.addTaskConfirmationViewController = self.container.resolve(AddTaskConfirmationViewController.self)
+        if let _ = self.addTaskTimePriorityViewController {} else {
+            self.addTaskTimePriorityViewController = self.container.resolve(AddTaskTimePriorityController.self)
         }
         
-        self.navigationController?.pushViewController(self.addTaskConfirmationViewController!, animated: true)
+        self.navigationController?.pushViewController(self.addTaskTimePriorityViewController!, animated: true)
         
     }
     

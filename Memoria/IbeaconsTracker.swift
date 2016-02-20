@@ -16,7 +16,6 @@ Keep and dictionary with ibeaconIdentifer for NSDate, from the date he first sta
 A check will be made to see if when a events fires, remove beacons that are not in the area any more. √
 If an beacon with a task in the area more then x time, and event will be fired  √
 Task notification Tracker will listen to the event√
-
 */
 
 class IbeaconsTracker : NSObject,  KTKLocationManagerDelegate {
@@ -103,11 +102,10 @@ class IbeaconsTracker : NSObject,  KTKLocationManagerDelegate {
     }
     
     func locationManager(locationManager: KTKLocationManager!, didRangeBeacons beacons: [AnyObject]!) {
-        self.beaconsInErea = beacons as? [CLBeacon]
         self.beaconsInErea?.removeAll()
-        self.beaconsInErea = beacons as? [CLBeacon]
         
         let onlyCloseBeacons = self.getOnlyCloseBeacons(beacons as! [CLBeacon])
+        self.beaconsInErea = onlyCloseBeacons
         self.fireBeaconsNearEvent(onlyCloseBeacons)
         
         print("Ranged Close count: \(onlyCloseBeacons.count)")
@@ -122,10 +120,8 @@ class IbeaconsTracker : NSObject,  KTKLocationManagerDelegate {
     }
     
     func fireBeaconsNearEvent(beacons : [CLBeacon]) {
-        if (beacons.count > 0) {
-            let beaconsNearNotification = NSNotification(name: NotificationsNames.beaconsThatAreNearNotification, object: beacons, userInfo: nil)
-            NSNotificationCenter.defaultCenter().postNotification(beaconsNearNotification)
-        }
+        let beaconsNearNotification = NSNotification(name: NotificationsNames.beaconsThatAreNearNotification, object: beacons, userInfo: nil)
+        NSNotificationCenter.defaultCenter().postNotification(beaconsNearNotification)
     }
     
     private func getClosestBeacon(beaconsList : [CLBeacon]?)->CLBeacon? {

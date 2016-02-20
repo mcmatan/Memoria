@@ -21,6 +21,10 @@ class NearTaskMonitor: NSObject {
     
     func beaconIsNearMoreThenXTimeNotificationReceived(notification :NSNotification) {
         let beacons = notification.object as! [CLBeacon]
+        if beacons.count == 0 {
+            self.identifiersForDateStartedToMonitor.removeAll()
+            return
+        }
         let identifiers = self.getIbeaconMajorAppendedByMinorForBeacons(beacons)
         
         let identifiersThatNoLongerExistsAtMonitoring = self.getIdentifiersThatNoLongerExistsAtMonitoring(identifiers)
@@ -40,8 +44,36 @@ class NearTaskMonitor: NSObject {
     
     func fireNotificationsForIdentifiers(identifiers : Array<String>) {
         for identifer in identifiers {
-            let task = self.tasksDB.getTaskForIBeaconMajorAppendedByMinor(identifer)
-            let notification = NSNotification(name: NotificationsNames.tryingToPerformTaskNotAtTimeScheduledNotifiation, object: task)
+            if self.tasksDB.isThereTaskForMajorAppendedByMinor(identifer) == true {
+                let task = self.tasksDB.getTaskForIBeaconMajorAppendedByMinor(identifer)
+                let now = NSDate()
+                let aMinuteAgo = (now - 1.minutes)
+                if aMinuteAgo.isGreaterThanDate(task.taskTime!) {
+                    self.fireTryingPerformTaskBeforeTime(task)
+                }
+                if now.isGreaterThanDate(task.taskTime!) {
+                 self.fireTryingPerformTaskAfterTime(task)
+                }
+            }
+        }
+    }
+    
+    func fireTryingPerformTaskAfterTime(task : Task) {
+        if task.taskTimePriorityHi == true {
+            let notification = NSNotification(name: NotificationsNames.tryingToPerformTaskAfterTimeScheduledNotifiationWithHiPriority, object: task)
+            NSNotificationCenter.defaultCenter().postNotification(notification)
+        } else {
+            let notification = NSNotification(name: NotificationsNames.tryingToPerformTaskAfterTimeScheduledNotifiationWithLowPriority, object: task)
+            NSNotificationCenter.defaultCenter().postNotification(notification)
+        }
+    }
+    
+    func fireTryingPerformTaskBeforeTime(task : Task) {
+        if task.taskTimePriorityHi == true {
+            let notification = NSNotification(name: NotificationsNames.tryingToPerformTaskBeforeTimeScheduledNotifiationWithHiPriority, object: task)
+            NSNotificationCenter.defaultCenter().postNotification(notification)
+        } else {
+            let notification = NSNotification(name: NotificationsNames.tryingToPerformTaskBeforeTimeScheduledNotifiationWithLowPriority, object: task)
             NSNotificationCenter.defaultCenter().postNotification(notification)
         }
     }

@@ -41,6 +41,11 @@ public class AssemblyViewControllers {
         container.register(ManageAddTasksLocationViewController.self) { _ in
             return ManageAddTasksLocationViewController(tasksServices: container.resolve(TasksServices.self)!,currenctTaskCreator: container.resolve(CurrenctTaskCreator.self)!, container: container)
         }
+        container.register(AddTaskTimePriorityController.self) { _ in
+            return AddTaskTimePriorityController(container: container,
+                currenctTaskCreator: container.resolve(CurrenctTaskCreator.self)!)
+        }
+
 
     }
 }

@@ -60,13 +60,18 @@ class TasksDB {
     }
     
     func isThereTaskForIBeaconIdentifier(iBeaconIdentifier : IBeaconIdentifier)->Bool {
-        if let _ = self.tasksByMajorAppendedWithMinor[iBeaconIdentifier.majorAppendedByMinorString()] {
+        return self.isThereTaskForMajorAppendedByMinor(iBeaconIdentifier.majorAppendedByMinorString())  
+    }
+
+    func isThereTaskForMajorAppendedByMinor(MajorAppendedByMinor : String)->Bool {
+        if let _ = self.tasksByMajorAppendedWithMinor[MajorAppendedByMinor] {
             return true
         } else {
             return false
         }
-
+        
     }
+
     
     func saveDB() {
         let userDefaults = NSUserDefaults.standardUserDefaults()
