@@ -16,12 +16,14 @@ class AddTaskTimePriorityController: ViewController {
     var switchPrairity = UISwitch()
     var btnDone = Button()
     var container : Container
+    let tasksServices : TasksServices
     var currenctTaskCreator : CurrenctTaskCreator
     var addTaskVoiceViewController : AddTaskVoiceViewController?
     var addTaskConfirmationViewController : AddTaskConfirmationViewController?    
     
-    init(container : Container, currenctTaskCreator : CurrenctTaskCreator) {
+    init(container : Container, currenctTaskCreator : CurrenctTaskCreator, tasksServices : TasksServices) {
         self.container = container
+        self.tasksServices = tasksServices
         self.currenctTaskCreator = currenctTaskCreator
         super.init(nibName: nil, bundle: nil)
     }
@@ -87,13 +89,15 @@ class AddTaskTimePriorityController: ViewController {
     
     
     func doneBtnPress() {
-        
         self.currenctTaskCreator.setTaskTimePriority(self.switchPrairity.on)
+        self.tasksServices.saveTask(self.currenctTaskCreator.getCurrenctTask())
         
-        if let _ = self.addTaskConfirmationViewController {} else {
-            self.addTaskConfirmationViewController = self.container.resolve(AddTaskConfirmationViewController.self)
-        }
-        self.navigationController?.pushViewController(self.addTaskConfirmationViewController!, animated: true)
+        self.navigationController?.popToRootViewControllerAnimated(true)
+        
+//        if let _ = self.addTaskConfirmationViewController {} else {
+//            self.addTaskConfirmationViewController = self.container.resolve(AddTaskConfirmationViewController.self)
+//        }
+//        self.navigationController?.pushViewController(self.addTaskConfirmationViewController!, animated: true)
 
         
     }

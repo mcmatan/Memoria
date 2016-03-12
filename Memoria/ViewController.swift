@@ -3,7 +3,7 @@ import Foundation
 import UIKit
 
 class ViewController : UIViewController {
-    let defaultBackgroundColor = UIColor.whiteColor()
+    let defaultBackgroundColor = UIColor(rgba: "#e9f0f4")
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
@@ -16,4 +16,5 @@ class ViewController : UIViewController {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+
 }

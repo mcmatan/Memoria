@@ -19,17 +19,11 @@ extension UIView {
         self.centerVerticlyInSuperView()
     }
     
-    func centerHorizontalyInSuperView() {
+    func centerHorizontalyInSuperView()->NSLayoutConstraint {
         self.translatesAutoresizingMaskIntoConstraints = false
-        var allContraines = [NSLayoutConstraint]()
-        let constraints = NSLayoutConstraint.constraintsWithVisualFormat(
-            "H:[superview]-(<=1)-[me]",
-            options: NSLayoutFormatOptions.AlignAllCenterY,
-            metrics: nil,
-            views: ["superview":self.superview!, "me":self])
-        allContraines += constraints
-        
-        NSLayoutConstraint.activateConstraints(allContraines)
+        let constraint = NSLayoutConstraint(item: self, attribute: NSLayoutAttribute.CenterX, relatedBy: NSLayoutRelation.Equal, toItem: superview, attribute: NSLayoutAttribute.CenterX, multiplier: 1.0, constant: 0)
+        superview?.addConstraint(constraint)
+        return constraint
     }
     
     func centerVerticlyInSuperView() {
@@ -48,7 +42,7 @@ extension UIView {
     func topToViewControllerTopLayoutGuide(viewControlelr : UIViewController) {
         self.topToViewControllerTopLayoutGuide(viewControlelr, offset: 0)
     }
-    
+
     func topToViewControllerTopLayoutGuide(viewControlelr : UIViewController, offset : CGFloat) {
         self.translatesAutoresizingMaskIntoConstraints = false
         let topLayoutGuide = viewControlelr.topLayoutGuide
@@ -118,10 +112,35 @@ extension UIView {
         NSLayoutConstraint.activateConstraints(allConstrains)
     }
 
-    func topAlighnToViewTop(view : UIView) {
-        let contrain =  NSLayoutConstraint(item: self, attribute: NSLayoutAttribute.Top, relatedBy: NSLayoutRelation.Equal, toItem: view, attribute: NSLayoutAttribute.Top, multiplier: 1.0, constant: 0)
+    func topAlighnToViewTop(view : UIView)->NSLayoutConstraint {
+        return self.topAlighnToViewTop(view, offset: 0)
+    }
+    
+    func topAlighnToViewTop(view : UIView, offset : CGFloat)->NSLayoutConstraint {
+        self.translatesAutoresizingMaskIntoConstraints = false
+        let contrain =  NSLayoutConstraint(item: self, attribute: NSLayoutAttribute.Top, relatedBy: NSLayoutRelation.Equal, toItem: view, attribute: NSLayoutAttribute.Top, multiplier: 1.0, constant: offset)
+        NSLayoutConstraint.activateConstraints([contrain])
+        return contrain
+    }
+
+    func topAlighnToViewBottom(view : UIView) {
+        return self.topAlighnToViewBottom(view, offset: 0)
+    }
+    
+    func topAlighnToViewBottom(view : UIView, offset : CGFloat) {
+        self.translatesAutoresizingMaskIntoConstraints =  false
+        let contrain =  NSLayoutConstraint(item: self, attribute: NSLayoutAttribute.Top, relatedBy: NSLayoutRelation.Equal, toItem: view, attribute: NSLayoutAttribute.Bottom, multiplier: 1.0, constant: offset)
         NSLayoutConstraint.activateConstraints([contrain])
     }
+
+    //MARK: Bottom
+    
+    func bottomAlighnToViewBottom(view : UIView, offset : CGFloat) {
+        self.translatesAutoresizingMaskIntoConstraints =  false
+        let contrain =  NSLayoutConstraint(item: self, attribute: NSLayoutAttribute.Bottom, relatedBy: NSLayoutRelation.Equal, toItem: view, attribute: NSLayoutAttribute.Bottom, multiplier: 1.0, constant: offset)
+        NSLayoutConstraint.activateConstraints([contrain])
+    }
+
     
     func trailingToSuperView(withMargin : Bool) {
         var att = NSLayoutAttribute.Trailing
@@ -129,7 +148,7 @@ extension UIView {
         let contrain =  NSLayoutConstraint(item: self, attribute: NSLayoutAttribute.Trailing, relatedBy: NSLayoutRelation.Equal, toItem: self.superview, attribute: att, multiplier: 1.0, constant: 0)
         NSLayoutConstraint.activateConstraints([contrain])
     }
-    func LeadingToSuperView(withMargin : Bool) {
+    func leadingToSuperView(withMargin : Bool) {
         var att = NSLayoutAttribute.Leading
         att = withMargin ?  NSLayoutAttribute.LeadingMargin : NSLayoutAttribute.Leading
         let contrain =  NSLayoutConstraint(item: self, attribute: NSLayoutAttribute.Leading, relatedBy: NSLayoutRelation.Equal, toItem: self.superview, attribute: att, multiplier: 1.0, constant: 0)

@@ -39,11 +39,15 @@ public class AssemblyViewControllers {
         }
 
         container.register(ManageAddTasksLocationViewController.self) { _ in
-            return ManageAddTasksLocationViewController(tasksServices: container.resolve(TasksServices.self)!,currenctTaskCreator: container.resolve(CurrenctTaskCreator.self)!, container: container)
+            return ManageAddTasksLocationViewController(tasksServices: container.resolve(TasksServices.self)!,currenctTaskCreator: container.resolve(CurrenctTaskCreator.self)!, container: container, iBeaconServices: container.resolve(IBeaconServices.self)!)
         }
         container.register(AddTaskTimePriorityController.self) { _ in
             return AddTaskTimePriorityController(container: container,
-                currenctTaskCreator: container.resolve(CurrenctTaskCreator.self)!)
+                currenctTaskCreator: container.resolve(CurrenctTaskCreator.self)!, tasksServices: container.resolve(TasksServices.self)!)
+        }
+        
+        container.register(TaskNotificationPopUp.self) {   _ in task : Task
+            return TaskNotificationPopUp(task: task, recorder: container.resolve(VoiceRecorder.self)!)
         }
 
 

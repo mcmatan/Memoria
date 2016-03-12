@@ -45,6 +45,7 @@ class AddTaskConfirmationViewController : ViewController {
         if let isTimePriority = self.currenctTaskCreator.getTaskTimePriority() {
             let timePriorityToString = (isTimePriority == true) ? "Hi" : "Low"
             self.lblTaskTimePriority.text = timePriorityToString
+            self.lblTaskTimePriority.textColor = Colors.green()
         }
 
 
@@ -62,49 +63,44 @@ class AddTaskConfirmationViewController : ViewController {
 
         //Name
         let lblTaskNameDesc = Label()
-        lblTaskNameDesc.defaultyTitle()
+        lblTaskNameDesc.titleGray()
         lblTaskNameDesc.text = Content.getContent(ContentType.LabelTxt, name: "taskConfirmationTaskNameDesc")
     
         
         let btnEditTaskName = Button()
-        btnEditTaskName.defaultStyleMini()
-        btnEditTaskName.setTitle(Content.getContent(ContentType.ButtonTxt, name: "EditButton"), forState: UIControlState.Normal)
+        btnEditTaskName.editBtn()
 
         //Sound
         let lblTaskSoundDesc = Label()
-        lblTaskSoundDesc.defaultyTitle()
+        lblTaskSoundDesc.titleGray()
         lblTaskSoundDesc.text = Content.getContent(ContentType.LabelTxt, name: "taskConfirmationTaskSoundDesc")
 
         let btnTaskSound = Button()
-        btnTaskSound.defaultStyleMini()
-        btnTaskSound.setTitle(Content.getContent(ContentType.ButtonTxt, name: "PlaySound"), forState: UIControlState.Normal)
+        btnTaskSound.playSoundBtn()
         
         let btnEditTaskSound = Button()
-        btnEditTaskSound.defaultStyleMini()
-        btnEditTaskSound.setTitle(Content.getContent(ContentType.ButtonTxt, name: "EditButton"), forState: UIControlState.Normal)
+        btnEditTaskSound.editBtn()
         
         //Time
         let lblTaskTimeDesc = Label()
-        lblTaskTimeDesc.defaultyTitle()
+        lblTaskTimeDesc.titleGray()
         lblTaskTimeDesc.text = Content.getContent(ContentType.LabelTxt, name: "taskConfirmationTaskTimeDesc")
         
         lblTaskTime.defaultyTitle()
         
         let btnEditTaskTime = Button()
-        btnEditTaskTime.defaultStyleMini()
-        btnEditTaskTime.setTitle(Content.getContent(ContentType.ButtonTxt, name: "EditButton"), forState: UIControlState.Normal)
+        btnEditTaskTime.editBtn()
 
         
         //TimePriority
         let lblTimePriorityDesc = Label()
-        lblTimePriorityDesc.defaultyTitle()
+        lblTimePriorityDesc.titleGray()
         lblTimePriorityDesc.text = Content.getContent(ContentType.LabelTxt, name: "taskConfirmationTaskTimePriorityDesc")
         
         lblTaskTimePriority.defaultyTitle()
         
         let btnEditTaskTimePriority = Button()
-        btnEditTaskTimePriority.defaultStyleMini()
-        btnEditTaskTimePriority.setTitle(Content.getContent(ContentType.ButtonTxt, name: "EditButton"), forState: UIControlState.Normal)
+        btnEditTaskTimePriority.editBtn()
 
 
         
@@ -141,13 +137,14 @@ class AddTaskConfirmationViewController : ViewController {
             "btnEditTaskTimePriority" : btnEditTaskTimePriority
         ]
         
+        let matrics = ["padding" : 10];
         
         var allConstains = [NSLayoutConstraint]()
         let leftVerticalLayout = NSLayoutConstraint.constraintsWithVisualFormat(
-            "V:[lblTaskNameDesc]-[lblTaskName]-[lblTaskSoundDesc]-[btnTaskSound]-[lblTaskTimeDesc]-[lblTaskTime]-[lblTimePriorityDesc]-[lblTaskTimePriority]", options: NSLayoutFormatOptions.AlignAllLeading, metrics: nil, views: viewsKeys)
+            "V:[lblTaskNameDesc]-(padding)-[lblTaskName]-(padding)-[lblTaskSoundDesc]-(padding)-[btnTaskSound]-(padding)-[lblTaskTimeDesc]-(padding)-[lblTaskTime]-(padding)-[lblTimePriorityDesc]-(padding)-[lblTaskTimePriority]", options: NSLayoutFormatOptions.AlignAllLeading, metrics: matrics, views: viewsKeys)
         
         allConstains += leftVerticalLayout
-        lblTaskNameDesc.LeadingToSuperView(true)
+        lblTaskNameDesc.leadingToSuperView(true)
         lblTaskNameDesc.topToViewControllerTopLayoutGuide(self, offset: 20)
         lblTaskTime.trailingToSuperView(true)
         
@@ -180,32 +177,44 @@ class AddTaskConfirmationViewController : ViewController {
         for viewController in (self.navigationController?.viewControllers)! {
             if viewController.isKindOfClass(AddTaskNameViewController) {
                 self.navigationController?.popToViewController(viewController, animated: true)
+                return
             }
         }
+        let addTaskNameViewController = self.container.resolve(AddTaskNameViewController.self)
+        self.navigationController?.pushViewController(addTaskNameViewController!, animated: true)
     }
 
     func btnEditTaskSoundPress() {
         for viewController in (self.navigationController?.viewControllers)! {
             if viewController.isKindOfClass(AddTaskVoiceViewController) {
                 self.navigationController?.popToViewController(viewController, animated: true)
+                return
             }
         }
+        let addTaskVoiceViewController = self.container.resolve(AddTaskVoiceViewController.self)
+        self.navigationController?.pushViewController(addTaskVoiceViewController!, animated: true)
     }
 
     func btnEditTaskTimePress() {
         for viewController in (self.navigationController?.viewControllers)! {
             if viewController.isKindOfClass(AddTaskTimeViewController) {
                 self.navigationController?.popToViewController(viewController, animated: true)
+                return
             }
         }
+        let addTaskTimeViewController = self.container.resolve(AddTaskTimeViewController.self)
+        self.navigationController?.pushViewController(addTaskTimeViewController!, animated: true)
     }
     
     func btnEditTaskTimePriorityPress() {
         for viewController in (self.navigationController?.viewControllers)! {
             if viewController.isKindOfClass(AddTaskTimePriorityController) {
                 self.navigationController?.popToViewController(viewController, animated: true)
+                return
             }
         }
+        let addTaskTimePriorityController = self.container.resolve(AddTaskTimePriorityController.self)
+        self.navigationController?.pushViewController(addTaskTimePriorityController!, animated: true)
     }
 
 

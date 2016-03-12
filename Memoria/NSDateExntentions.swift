@@ -23,11 +23,22 @@ extension NSDate {
     
     func toStringWithCurrentRegion()-> String {
         let formatter = NSDateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd-hh-mm-ss"
+        formatter.dateFormat = "yyyy/MM/dd-hh:mm:ss"
         formatter.locale =  NSLocale.currentLocale()
         let formattedDateString = formatter.stringFromDate(self)
     
         return formattedDateString
+    }
+    
+    func toStringCurrentRegionShortTime()->String {
+        let formatter = NSDateFormatter()
+        formatter.dateFormat = "h:mm a"
+        formatter.AMSymbol = "AM"
+        formatter.PMSymbol = "PM"
+        formatter.locale = NSLocale.currentLocale()
+        
+        let dateString = formatter.stringFromDate(NSDate())
+        return dateString    // "3:11 AM
     }
     
         func isGreaterThanDate(dateToCompare: NSDate) -> Bool {
@@ -84,5 +95,27 @@ extension NSDate {
             //Return Result
             return dateWithHoursAdded
         }
+    
+    
+    func dateToDayPartDeifinisionString()->String {
+        let morningStartTime = 0
+        let morningEndTime = 12
+        let afterNoonStartTime = 12
+        let afterNoonEndTime = 18
+        let eaviningStartTime = 18
+        let eaviningEndTime = 25
+        
+        if (self.hour >= morningStartTime && self.hour <= morningEndTime) {
+            return "morning"
+        }
+        if (self.hour >= afterNoonStartTime && self.hour <= afterNoonEndTime) {
+            return "afternoon"
+        }
+        if (self.hour >= eaviningStartTime && self.hour <= eaviningEndTime) {
+            return "eavning"
+        }
+        
+        return "There is no time definision"
+    }
 }
 

@@ -76,7 +76,7 @@ class AddTaskVoiceViewController : ViewController {
         let verticalLayout = NSLayoutConstraint.constraintsWithVisualFormat(
         "V:[btnRecord]-[btnStopRecord]-[btnPlay]-[btnDone]", options: NSLayoutFormatOptions.AlignAllCenterX, metrics: nil, views: viewsKeys)
         
-        btnRecord.topToViewControllerTopLayoutGuide(self)
+        btnRecord.topToViewControllerTopLayoutGuide(self, offset: 10)
         btnRecord.centerVerticlyInSuperView()
         
         NSLayoutConstraint.activateConstraints(verticalLayout)

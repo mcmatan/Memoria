@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -13,26 +14,53 @@
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Memoria" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SVS-up-wqX">
-                                <rect key="frame" x="242" y="117" width="116.5" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <color key="textColor" red="0.0" green="0.61176470589999998" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login" translatesAutoresizingMaskIntoConstraints="NO" id="jX9-fT-hXt">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoDescription" translatesAutoresizingMaskIntoConstraints="NO" id="OSN-1u-cxy">
+                                <rect key="frame" x="55" y="157" width="304" height="73"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="EbR-bG-SWn">
+                                <rect key="frame" x="95" y="72" width="224" height="58"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="getStartedButton" translatesAutoresizingMaskIntoConstraints="NO" id="jz0-sD-flX">
+                                <rect key="frame" x="40" y="615" width="335" height="96"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="SVS-up-wqX" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="bCI-WV-id2"/>
-                            <constraint firstItem="SVS-up-wqX" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="97" id="ncH-Z3-5hQ"/>
+                            <constraint firstItem="jX9-fT-hXt" firstAttribute="top" secondItem="OSN-1u-cxy" secondAttribute="bottom" constant="-230" id="939-sb-7N9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OSN-1u-cxy" secondAttribute="trailing" constant="35" id="Aj0-Ix-FGs"/>
+                            <constraint firstItem="jX9-fT-hXt" firstAttribute="top" secondItem="EbR-bG-SWn" secondAttribute="bottom" constant="-130" id="DyD-XE-CCD"/>
+                            <constraint firstItem="EbR-bG-SWn" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="75" id="KRq-ge-80S"/>
+                            <constraint firstItem="jz0-sD-flX" firstAttribute="top" secondItem="jX9-fT-hXt" secondAttribute="bottom" constant="-121" id="UTZ-Ys-9eG"/>
+                            <constraint firstItem="jz0-sD-flX" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="20" id="X5D-IC-DVr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jX9-fT-hXt" secondAttribute="trailing" constant="-20" id="bCF-7B-FfP"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="jz0-sD-flX" secondAttribute="bottom" constant="25" id="fWa-hb-pEd"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="jX9-fT-hXt" secondAttribute="bottom" id="g4y-Oa-O6R"/>
+                            <constraint firstItem="EbR-bG-SWn" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="52" id="gKc-Qe-oyM"/>
+                            <constraint firstItem="jX9-fT-hXt" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="topMargin" id="j3t-lr-AJx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jz0-sD-flX" secondAttribute="trailing" constant="19" id="jLP-6L-Xmf"/>
+                            <constraint firstItem="jX9-fT-hXt" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="-20" id="lKJ-dj-aIb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="EbR-bG-SWn" secondAttribute="trailing" constant="75" id="ph4-qv-QbF"/>
+                            <constraint firstItem="OSN-1u-cxy" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="35" id="vhT-Mk-wve"/>
+                            <constraint firstItem="OSN-1u-cxy" firstAttribute="top" secondItem="EbR-bG-SWn" secondAttribute="bottom" constant="27" id="wcb-Ca-CcW"/>
                         </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="LogoDescription" width="147" height="25"/>
+        <image name="getStartedButton" width="165" height="30"/>
+        <image name="login" width="187" height="333"/>
+        <image name="logo" width="117" height="31"/>
+    </resources>
 </document>

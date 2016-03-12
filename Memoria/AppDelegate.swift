@@ -6,19 +6,42 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
+    var vc : UIViewController!
     var window: UIWindow?
-
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
+
         Bootstrapper.run()
         application.registerUserNotificationSettings(UIUserNotificationSettings(forTypes: UIUserNotificationType.Alert, categories: nil))
         let rootViewController = Bootstrapper.container.resolve(NavigationController.self)
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
         self.window?.rootViewController = rootViewController
         self.window?.makeKeyAndVisible()
+        self .navigationBarAppearance()
         
+
+        let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(1 * Double(NSEC_PER_SEC)))
+        dispatch_after(delayTime, dispatch_get_main_queue()) {
+            
+            let beaconIdentifier = IBeaconIdentifier(uuid: "124", major: "123", minor: "123")
+            let task = Task(taskName: "Take the dog out", taskTime: NSDate(), taskVoiceURL: NSURL(), taskBeaconIdentifier: beaconIdentifier, taskTimePriorityHi: true)
+            
+            self.vc = TaskNotificationPopUp(task:task)
+
+            rootViewController!.presentViewController(self.vc, animated: true, completion: nil)
+            
+        }
+
         return true
+    }
+    
+    func navigationBarAppearance() {
+        let image = UIImage(named: "navigationBar")
+        let navigationBarBackgroundImage = image
+        UINavigationBar.appearance().setBackgroundImage(navigationBarBackgroundImage, forBarMetrics: UIBarMetrics.Default)
+        UINavigationBar.appearance().barTintColor = UIColor.whiteColor()
+        UINavigationBar.appearance().tintColor = UIColor.whiteColor()
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor()]
     }
     
     func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {

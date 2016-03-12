@@ -11,17 +11,24 @@ import UIKit
 import Swinject
 
 class ManageAddTasksLocationViewController : ViewController, UITableViewDelegate, UITableViewDataSource {
+    let kCellHeight = 70
     let tasksServices : TasksServices
     var allTasks : [Task]!
     let cellIdentifer = "cell"
     let tableView = UITableView()
     let currenctTaskCreator : CurrenctTaskCreator
     let container : Container
+    let iBeaconServices : IBeaconServices
+    var addTaskNameViewController : AddTaskNameViewController?
+    let lblCount = Label()
+    let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.WhiteLarge)
+
     
-    init(tasksServices : TasksServices, currenctTaskCreator : CurrenctTaskCreator, container : Container) {
+    init(tasksServices : TasksServices, currenctTaskCreator : CurrenctTaskCreator, container : Container, iBeaconServices : IBeaconServices) {
         self.tasksServices = tasksServices
         self.currenctTaskCreator = currenctTaskCreator
         self.container = container
+        self.iBeaconServices = iBeaconServices
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -35,40 +42,63 @@ class ManageAddTasksLocationViewController : ViewController, UITableViewDelegate
         self.navigationItem.hidesBackButton = true
         
         self.allTasks = self.tasksServices.getAllTasks()
-        self.tableView.reloadData()
+        self.reloadTable()
+    
+    }
+    
+    private func reloadTable() {
+        self.tableView .reloadData()
+        self.lblCount.text =  "Remining \(self.allTasks.count)"
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let image = UIImage(named: "navigationBar")
+        self.navigationController?.navigationBar.setBackgroundImage(image, forBarMetrics: UIBarMetrics.Default)
+
+        
         self.allTasks = self.tasksServices.getAllTasks()
 
         let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Done, target: self, action: "doneButtonPress")
         self.navigationItem.rightBarButtonItem = doneButton
+        
+        let createTaskBtn = Button()
+        createTaskBtn.defaultStyle()
+        createTaskBtn.setTitle("+ Create a new task", forState: UIControlState.Normal)
+        createTaskBtn.addTarget(self, action: "createNewTask", forControlEvents: UIControlEvents.TouchUpInside)
 
         let lblTop = Label()
         lblTop.defaultyTitle()
-        lblTop.text = "My Tasks:"
+        lblTop.text = "My Memories"
         
-        tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: cellIdentifer)
+        lblCount.defaultyTitle()
+        lblCount.text = "No remining tasks"
+        lblCount.textColor = UIColor.grayColor()
+
         tableView.tableFooterView = UIView(frame: CGRectZero)
         
         let topLayout = self.topLayoutGuide
-        
+
+        self.view.addSubviewWithAutoLayoutOn(createTaskBtn)
         self.view.addSubviewWithAutoLayoutOn(lblTop)
         self.view.addSubviewWithAutoLayoutOn(tableView)
+        self.view.addSubviewWithAutoLayoutOn(lblCount)
+        createTaskBtn.addSubviewWithAutoLayoutOn(activityIndicator)
         
         let viewKeys : [String : AnyObject] =
         [
             "lblTop" : lblTop,
+            "lblCount" : lblCount,
             "tableView" : tableView,
-            "topLayout" : topLayout
+            "topLayout" : topLayout,
+            "createTaskBtn" : createTaskBtn,
         ]
         
         var allConstrins = [NSLayoutConstraint]()
         
         let verticalLayout = NSLayoutConstraint.constraintsWithVisualFormat(
-            "V:[topLayout]-[lblTop]-[tableView]-|", options: NSLayoutFormatOptions.AlignAllLeading, metrics: nil, views: viewKeys)
+            "V:[topLayout]-(20)-[createTaskBtn]-(20)-[lblTop]-[tableView]-(20)-|", options: NSLayoutFormatOptions.AlignAllCenterX, metrics: nil, views: viewKeys)
 
         let horizintalTableConstrain = NSLayoutConstraint.constraintsWithVisualFormat(
             "H:|-[tableView]-|", options: [], metrics: nil, views: viewKeys)
@@ -76,15 +106,21 @@ class ManageAddTasksLocationViewController : ViewController, UITableViewDelegate
         let horizintalTopLblConstrain = NSLayoutConstraint.constraintsWithVisualFormat(
         "H:|-[lblTop]-|", options: [], metrics: nil, views: viewKeys)
         
+        lblCount.topAlighnToViewTop(lblTop)
+        lblCount.trailingToSuperView(true)
+        
         allConstrins += verticalLayout
         allConstrins += horizintalTableConstrain
         allConstrins += horizintalTopLblConstrain
 
         NSLayoutConstraint.activateConstraints(allConstrins)
+        UIViewAutoLayoutExtentions.centerVerticlyAlViewsInSuperView([activityIndicator])
+        UIViewAutoLayoutExtentions.centerHorizontalyAlViewsInSuperView([activityIndicator])
+
         
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        
+     
     }
 
     func doneButtonPress() {
@@ -99,14 +135,26 @@ class ManageAddTasksLocationViewController : ViewController, UITableViewDelegate
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let task = self.allTasks[indexPath.row]
-        let textForCell = task.taskName
-        let cell = self.tableView.dequeueReusableCellWithIdentifier(cellIdentifer)
-        cell?.textLabel?.text = textForCell! + "       " +  (task.taskBeaconIdentifier!.major)
+        let textForCell = "Task name: "  + task.taskName!
+        let cellIdentifier = "Cell"
+        
+        var cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) 
+        if cell == nil {
+            cell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: cellIdentifier)
+        }
+        
+        cell?.textLabel?.text = textForCell
+        cell?.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator;
+        cell?.detailTextLabel?.text = "Schedule time:" + (task.taskTime?.toStringWithCurrentRegion())! + " major:" + (task.taskBeaconIdentifier!.major)
         return cell!
     }
     
     func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         return true
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return CGFloat(kCellHeight)
     }
 
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
@@ -115,7 +163,7 @@ class ManageAddTasksLocationViewController : ViewController, UITableViewDelegate
             self.tasksServices.removeTask(task)
             let index = self.allTasks.indexOf(task)
             self.allTasks.removeAtIndex(index!)
-            self.tableView.reloadData()
+            self.reloadTable()
             // handle delete (by removing the data from your array and updating the tableview)
         }
     }
@@ -143,7 +191,68 @@ class ManageAddTasksLocationViewController : ViewController, UITableViewDelegate
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let task = self.allTasks[indexPath.row]
         self.currenctTaskCreator.setCurrenctTask(task)
-        let addTaskNameController = self.container.resolve(AddTaskNameViewController.self)
-        self.navigationController?.pushViewController(addTaskNameController!, animated: true)
+        
+        let addTaskConfirmationViewController = self.container.resolve(AddTaskConfirmationViewController.self)
+        self.navigationController?.pushViewController(addTaskConfirmationViewController!, animated: true)
     }
+    
+    //MARK: Button press
+    
+    func createNewTask() {
+        self.activityIndicator.startAnimating()
+        self.iBeaconServices.isThereABeaconInArea { (result, beacon) -> Void in
+            self.activityIndicator.stopAnimating()
+            if result == false {
+                self.showNoBeaconInEreaMessage()
+                return
+            }
+            if self.iBeaconServices.isBeaconAlreadyHasATaskAssigned(beacon!) == true {
+                self.showBeaconHasAlreadyTaskAssignedMessage(beacon!)
+                return
+            }
+            
+            self.goToNextPage(beacon!)
+        }
+    }
+    
+    //MARK: Alerts
+    
+    func showNoBeaconInEreaMessage() {
+        let alert = UIAlertController(title: "No beacons detected in current area", message: "", preferredStyle: UIAlertControllerStyle.Alert)
+        let btnOk = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Cancel) { (action : UIAlertAction) in
+        }
+        alert.addAction(btnOk)
+        self.presentViewController(alert, animated: true, completion: nil)
+        
+    }
+    
+    func showBeaconHasAlreadyTaskAssignedMessage(closestBeacon : CLBeacon) {
+        let closeiBeaconIdentifier = IBeaconIdentifier.creatFromCLBeacon(closestBeacon)
+        let alert = UIAlertController(title: "The beacon you have selected \(closeiBeaconIdentifier.major), already has a task assigend to it", message: "Do you want to edit the task?", preferredStyle: UIAlertControllerStyle.Alert)
+        let btnYes = UIAlertAction(title: "Yes", style: UIAlertActionStyle.Default) { (action : UIAlertAction) in
+            let task = self.tasksServices.getTaskForIBeaconIdentifier(closeiBeaconIdentifier)
+            self.currenctTaskCreator.setCurrenctTask(task)
+            self.goToNextPage(closestBeacon)
+        }
+        
+        let btnNo = UIAlertAction(title: "No", style: UIAlertActionStyle.Cancel) { (action : UIAlertAction) in
+        }
+        alert.addAction(btnNo)
+        alert.addAction(btnYes)
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    //MARK: Navgiation
+    
+    func goToNextPage(closestBeacon : CLBeacon) {
+        let closeiBeaconIdentifier = IBeaconIdentifier.creatFromCLBeacon(closestBeacon)
+        self.currenctTaskCreator.setTaskBeaconIdentifier(closeiBeaconIdentifier)
+        
+        if let _ = self.addTaskNameViewController {} else {
+            self.addTaskNameViewController = self.container.resolve(AddTaskNameViewController.self)
+        }
+        self.navigationController?.pushViewController(self.addTaskNameViewController!, animated: true)
+    }
+
+
 }

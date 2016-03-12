@@ -8,16 +8,16 @@ public class AssemblyControllers {
     class func run(container : Container) {
         container.register(TabBarController.self) { c in
             let tabBar = TabBarController()
-            guard let left = c.resolve(AddTasksLocationViewController.self) else {return tabBar}
-            guard let  center = c.resolve(MemoriesViewController.self) else {return tabBar}
-            guard let right = c.resolve(DrugsViewController.self) else {return tabBar}
+            guard let left = c.resolve(ManageAddTasksLocationViewController.self) else {return tabBar}
+            guard let  _ = c.resolve(MemoriesViewController.self) else {return tabBar}
+            guard let _ = c.resolve(DrugsViewController.self) else {return tabBar}
 //            let controllers = [left, center, right]
  
             let controllers = [left]
             tabBar.viewControllers = controllers
             left.tabBarItem = UITabBarItem(
                 title: "Tasks",
-                image: nil,
+                image: UIImage(named: "TasksManagerLogoTabOnlyImage"),
                 tag: 1)
 //            center.tabBarItem = UITabBarItem(
 //                title: "Memories",
@@ -36,11 +36,11 @@ public class AssemblyControllers {
             return navigationController
         }
 
-        container.register(TasksNotificationsTracker.self) { c in
-            return TasksNotificationsTracker(tasksServices: container.resolve(TasksServices.self)!,
+        container.register(TasksNotificationsPresenter.self) { c in
+            return TasksNotificationsPresenter(tasksServices: container.resolve(TasksServices.self)!,
                 iBeaconServices:  container.resolve(IBeaconServices.self)!)
             }.inObjectScope(.Container)
-        container.resolve(TasksNotificationsTracker.self)
+        container.resolve(TasksNotificationsPresenter.self)
         
     }
 }
