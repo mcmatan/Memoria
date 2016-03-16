@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Swinject
 
 
 class TasksNotificationsPresenter : NSObject {
@@ -15,11 +16,13 @@ class TasksNotificationsPresenter : NSObject {
     let iBeaconServices : IBeaconServices
     let recorder : VoiceRecorder
     let reminderPopUp = ReminderPopUp()
+    let container : Container
     
-    init(tasksServices : TasksServices, iBeaconServices : IBeaconServices) {
+    init(tasksServices : TasksServices, iBeaconServices : IBeaconServices, container : Container) {
         self.tasksServices = tasksServices
         self.iBeaconServices = iBeaconServices
         self.recorder = VoiceRecorder()
+        self.container = container
         
         super.init()
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("taskTimeNotification:"), name: NotificationsNames.TaskTimeNotification, object:nil)
@@ -52,7 +55,6 @@ class TasksNotificationsPresenter : NSObject {
         self.presentNotificiationTryingToPerformTaskBeforeTimeWithPriorityLow(task)
     }
 
-    
     func tryingToPerformTaskWithHiPriorityBeforeTimeScheduledNotifiationRecevied(notificiation : NSNotification) {
         if self.reminderPopUp.isPresented == true {
             return
@@ -77,89 +79,33 @@ class TasksNotificationsPresenter : NSObject {
 //MARK:  Presentation
     
     func presentTaskIsOnHoldAndUserIsAtTheEreaPopUp(task : Task) {
-        let text = "Are you currently performing the task \(task.taskName), If not please do and press ok"
-        let okButton = ButtonAction(title: "Ok") { (ButtonAction) -> Void in
-            self.taskDone(task)
-        }
-        let cancelButton = ButtonAction(title: "Cancel", handler: { (ButtonAction) -> Void in
-
-        })
-        reminderPopUp.presentPopUp(task.taskName!, message: text, cancelButton: cancelButton, buttons: [okButton], completion: { () -> Void in
-            //
-        })
+        let taskVerificationPopUp = self.container.resolve(TaskVerificationPopUp.self, argument: task)
+        let mainViewController = UIApplication.sharedApplication().keyWindow?.rootViewController
+        mainViewController?.presentViewController(taskVerificationPopUp!, animated: true, completion: nil)
     }
     
     func presentNotificiationTryingToPerformTaskAfterTime(task : Task) {
-        let text = "Trying to perform The task \(task.taskName!) after its time.  Its for \(task.taskTime!.toStringWithCurrentRegion()) not for now."
-        let cancelButton = ButtonAction(title: "Ok", handler: { (ButtonAction) -> Void in
-            self.iBeaconServices.isBeaconInErea(task.taskBeaconIdentifier!, handler: { (result) -> Void in
-                if (result == false) {
-                } else {
-                }
-            })
-        })
-        reminderPopUp.presentPopUp(task.taskName!, message: text, cancelButton: cancelButton, buttons: nil, completion: { () -> Void in
-            //
-        })
+        let taskWarningPopUp = self.container.resolve(TaskWarningPopUp.self, argument: task)
+        let mainViewController = UIApplication.sharedApplication().keyWindow?.rootViewController
+        mainViewController?.presentViewController(taskWarningPopUp!, animated: true, completion: nil)
     }
 
     func presentNotificiationTryingToPerformTaskBeforeTimeWithPriorityHi(task : Task) {
-        let taskName = task.taskName!
-        let taskTime = task.taskTime!.toStringWithCurrentRegion()
-        let text = "Your trying to perform the task : \(taskName).\n bofre its time, that is: \(taskTime)"
-        
-        let cancelButton = ButtonAction(title: "Ok", handler: { (ButtonAction) -> Void in
-            self.iBeaconServices.isBeaconInErea(task.taskBeaconIdentifier!, handler: { (result) -> Void in
-                if (result == false) {
-                } else {
-                }
-            })
-        })
-        reminderPopUp.presentPopUp(task.taskName!, message: text, cancelButton: cancelButton, buttons: nil, completion: { () -> Void in
-            //
-        })
+        let taskWarningPopUp = self.container.resolve(TaskWarningPopUp.self, argument: task)
+        let mainViewController = UIApplication.sharedApplication().keyWindow?.rootViewController
+        mainViewController?.presentViewController(taskWarningPopUp!, animated: true, completion: nil)
     }
 
-    
     func presentNotificiationTryingToPerformTaskBeforeTimeWithPriorityLow(task : Task) {
-        let taskName = task.taskName!
-        let taskTime = task.taskTime!.toStringWithCurrentRegion()
-        let text = "Your trying to perform the task : \(taskName).\n before its time, that is: \(taskTime)"
-        let cancelButton = ButtonAction(title: "Ok", handler: { (ButtonAction) -> Void in
-            self.iBeaconServices.isBeaconInErea(task.taskBeaconIdentifier!, handler: { (result) -> Void in
-                if (result == false) {
-                } else {
-                }
-            })
-        })
-        
-        let markTaskAsDone = ButtonAction(title: "Mark as task as done") { (ButtonAction) -> Void in
-            self.tasksServices.removeTask(task)
-            self.presentTaskMarkedAsDone(task)
-        }
-        reminderPopUp.presentPopUp(task.taskName!, message: text, cancelButton: cancelButton, buttons: [markTaskAsDone], completion: { () -> Void in
-            //
-        })
+        let taskWarningPopUp = self.container.resolve(TaskWarningPopUp.self, argument: task)
+        let mainViewController = UIApplication.sharedApplication().keyWindow?.rootViewController
+        mainViewController?.presentViewController(taskWarningPopUp!, animated: true, completion: nil)
     }
-    
 
     func presentNotificiationTimeForTask(task : Task) {
-        
-        self.recorder .setURLToPlayFrom(task.taskVoiceURL!)
-        self.recorder.play()
-        let text = "You have a task names: \(task.taskName!) for now."
-        let cancelButton = ButtonAction(title: "Ok", handler: { (ButtonAction) -> Void in
-            self.iBeaconServices.isBeaconInErea(task.taskBeaconIdentifier!, handler: { (result) -> Void in
-                if (result == false) {
-                    self.tasksServices.setTaskIsOnHold(task)
-                } else {
-                        self.taskDone(task)
-                }
-            })
-        })
-        reminderPopUp.presentPopUp(task.taskName!, message: text, cancelButton: cancelButton, buttons: nil, completion: { () -> Void in
-            //
-        })
+        let notificationPopUp = self.container.resolve(TaskNotificationPopUp.self, argument: task)
+        let mainViewController = UIApplication.sharedApplication().keyWindow?.rootViewController
+        mainViewController?.presentViewController(notificationPopUp!, animated: true, completion: nil)
     }
     
     func presentTaskMarkedAsDone(task : Task) {

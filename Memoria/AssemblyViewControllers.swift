@@ -46,9 +46,18 @@ public class AssemblyViewControllers {
                 currenctTaskCreator: container.resolve(CurrenctTaskCreator.self)!, tasksServices: container.resolve(TasksServices.self)!)
         }
         
-        container.register(TaskNotificationPopUp.self) {   _ in task : Task
-            return TaskNotificationPopUp(task: task, recorder: container.resolve(VoiceRecorder.self)!)
+        container.register(TaskNotificationPopUp.self) { _, task in
+            TaskNotificationPopUp(task: task)
         }
+
+        container.register(TaskVerificationPopUp.self) { _, task in
+            TaskVerificationPopUp(task: task)
+        }
+
+        container.register(TaskWarningPopUp.self) { _, task in
+            TaskWarningPopUp(task: task)
+        }
+
 
 
     }

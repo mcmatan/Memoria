@@ -15,8 +15,25 @@ class TaskWarningPopUp : ViewController {
     let lblYouAllreadyTook = Label()
     let lblBeCareful = Label()
     let btnYes = Button()
-    let btnSoundPlaying = Button()    
+    let btnSoundPlaying = Button()
+    let task : Task
+    let recorder = VoiceRecorder()
 
+    init(task : Task) {
+        self.task  = task
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    //MARK: LifeCircle
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        self.btnPlayRecordPress()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +47,11 @@ class TaskWarningPopUp : ViewController {
         imgError.heightLayoutAs(117)
         imgError.topToViewControllerTopLayoutGuide(self, offset: 70)
         
-        self.lblYouAllreadyTook.text = "You Already took your medicine today"
+        let didAllreadyString = "You Already \(self.task.taskName!) today"
+        let laterTodayString = "The \(self.task.taskName!) is scheduled later today"
+        let warningString = (self.task.taskTime <= NSDate()) ? didAllreadyString : laterTodayString
+        
+        self.lblYouAllreadyTook.text = warningString
         self.lblYouAllreadyTook.font = UIFont.systemFontOfSize(26)
         self.lblYouAllreadyTook.numberOfLines = 2
         self.lblYouAllreadyTook.textAlignment = NSTextAlignment.Center
@@ -40,7 +61,11 @@ class TaskWarningPopUp : ViewController {
         self.lblYouAllreadyTook.leadingToSuperView(true)
         self.lblYouAllreadyTook.trailingToSuperView(true)
         
-        self.lblBeCareful.text = "Be careful not to take too many."
+        let didAllreadyStringBecareful = "Be careful not to do it twice"
+        let laterTodayStringBecareful = "Please wait for \(task.taskTime!.toStringCurrentRegionShortTime())"
+        let beCarefulString = (self.task.taskTime <= NSDate()) ? didAllreadyStringBecareful : laterTodayStringBecareful
+        
+        self.lblBeCareful.text = beCarefulString
         self.lblBeCareful.titleGray()
         self.lblBeCareful.font = UIFont.systemFontOfSize(24)
         self.lblBeCareful.textAlignment = NSTextAlignment.Center
@@ -53,11 +78,33 @@ class TaskWarningPopUp : ViewController {
         self.btnYes.notificiationThankYou()
         self.btnYes.centerHorizontalyInSuperView()
         self.btnYes.topAlighnToViewBottom(self.lblBeCareful, offset: 40)
+        self.btnYes.addTarget(self, action: "btnOkPress", forControlEvents: UIControlEvents.TouchUpInside)
         
         self.view.addSubview(self.btnSoundPlaying)
         self.btnSoundPlaying.notificiationPlayingGray()
         self.btnSoundPlaying.centerHorizontalyInSuperView()
         self.btnSoundPlaying.bottomAlighnToViewBottom(self.view, offset: -40)
-
+        self.btnSoundPlaying.addTarget(self, action: "btnPlayRecordPress", forControlEvents: UIControlEvents.TouchUpInside)
     }
+    
+    //MARK: Actions
+    
+    func playSound() {
+        if let isSound = self.task.taskVoiceURL {
+            if ("" != isSound.absoluteString) {
+                self.recorder.soundFileURL = isSound
+                self.recorder.play()
+            }
+        }
+    }
+    
+    //MARK: Buttons
+    func btnOkPress() {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func btnPlayRecordPress() {
+        self.playSound()
+    }
+
 }

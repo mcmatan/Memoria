@@ -38,7 +38,7 @@ public class AssemblyControllers {
 
         container.register(TasksNotificationsPresenter.self) { c in
             return TasksNotificationsPresenter(tasksServices: container.resolve(TasksServices.self)!,
-                iBeaconServices:  container.resolve(IBeaconServices.self)!)
+                iBeaconServices:  container.resolve(IBeaconServices.self)! , container: container)
             }.inObjectScope(.Container)
         container.resolve(TasksNotificationsPresenter.self)
         

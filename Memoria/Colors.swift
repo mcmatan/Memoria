@@ -15,7 +15,7 @@ class Colors {
     }
 
     static func lightGray()->UIColor {
-        return UIColor.lightGrayColor()
+        return UIColor(rgba: "#b9cbd5")
     }
 
 }

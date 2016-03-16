@@ -17,8 +17,8 @@ class TaskNotificationPopUp : ViewController {
     let task : Task
     let recorder : VoiceRecorder
     
-    init(task: Task, recorder : VoiceRecorder) {
-        self.recorder = recorder
+    init(task: Task) {
+        self.recorder = VoiceRecorder()
         self.task = task
         super.init(nibName: nil, bundle: nil)
     }

@@ -17,7 +17,23 @@ class TaskVerificationPopUp : ViewController {
     let btnYes = Button()
     let btnRemindMeLayer = Button()
     let btnSoundPlaying = Button()
+    let task : Task
+    let recorder = VoiceRecorder()
     
+    init(task : Task) {
+        self.task = task
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    //MARK: LifeCircle
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        self.playSound()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,15 +46,17 @@ class TaskVerificationPopUp : ViewController {
         imgLight.heightLayoutAs(150)
         imgLight.topToViewControllerTopLayoutGuide(self, offset: 70)
         
-        self.lblISeeYourNear.text = "I see your near your dog."
+        self.lblISeeYourNear.text = "I see your near \(self.task.taskName!)."
         self.lblISeeYourNear.font = UIFont.systemFontOfSize(28)
         self.lblISeeYourNear.numberOfLines = 0
         self.lblISeeYourNear.textAlignment = NSTextAlignment.Center
         self.view .addSubview(self.lblISeeYourNear)
         self.lblISeeYourNear.topAlighnToViewBottom(imgLight, offset: 10)
         self.lblISeeYourNear.centerHorizontalyInSuperView()
+        self.lblISeeYourNear.leadingToSuperView(true)
+        self.lblISeeYourNear.trailingToSuperView(true)
         
-        self.lblDidYouYet.text = "Did you feed him yet?"
+        self.lblDidYouYet.text = "Did you \(self.task.taskName!) yet?"
         self.lblDidYouYet.titleGray()
         self.lblDidYouYet.font = UIFont.systemFontOfSize(22)
         self.lblDidYouYet.textAlignment = NSTextAlignment.Center
@@ -56,10 +74,35 @@ class TaskVerificationPopUp : ViewController {
         self.btnRemindMeLayer.notificiationRemindMeLater()
         self.btnRemindMeLayer.centerHorizontalyInSuperView()
         self.btnRemindMeLayer.topAlighnToViewBottom(self.btnYes, offset: 13)
+        self.btnRemindMeLayer.addTarget(self, action: "btnRemoingMeLaterPress", forControlEvents: UIControlEvents.TouchUpInside)
 
         self.view.addSubview(self.btnSoundPlaying)
         self.btnSoundPlaying.notificiationPlayingGray()
         self.btnSoundPlaying.centerHorizontalyInSuperView()
         self.btnSoundPlaying.bottomAlighnToViewBottom(self.view, offset: -40)
+        self.btnSoundPlaying.addTarget(self, action: "btnPlayRecordPress", forControlEvents: UIControlEvents.TouchUpInside)
+        
     }
+    
+    //MARK: Actions
+    
+    func playSound() {
+        if let isSound = self.task.taskVoiceURL {
+            if ("" != isSound.absoluteString) {
+                self.recorder.soundFileURL = isSound
+                self.recorder.play()
+            }
+        }
+    }
+    
+    //MARK: Buttons
+    
+    func btnRemoingMeLaterPress() {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func btnPlayRecordPress() {
+        self.playSound()
+    }
+
 }
