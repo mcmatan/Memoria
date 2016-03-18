@@ -11,45 +11,41 @@ import Foundation
 class TasksServices {
     let onHoldTimoutTimeInMinutes = 5
     var tasksDB : TasksDB
-    let reminder : ReminderSqueduler
+    let scheduler : Scheduler
+    private let taskNotificationsTracker : TaskNotificationsTracker
 
-    init(tasksDB : TasksDB, reminder : ReminderSqueduler) {
-        self.reminder = reminder
+    init(tasksDB : TasksDB, scheduler : Scheduler, taskNotificationsTracker : TaskNotificationsTracker) {
+        self.scheduler = scheduler
         self.tasksDB = tasksDB
+        self.taskNotificationsTracker = taskNotificationsTracker
     }
     
     func saveTask(task :Task) {
-        self.reminder.squeduleReminderForTask(task)
+        self.scheduler.squeduleReminderForTask(task)
         self.tasksDB.saveTask(task)
     }
     
     func setTaskIsOnHold(task : Task) { // This meents a timout will be made for the user to approch the task
-        self.reminder.cancelReminderForTask(task)
+        self.scheduler.cancelReminderForTask(task)
         task.taskTime = (task.taskTime! + onHoldTimoutTimeInMinutes.minutes)
         task.taskisOnHold = true
-        self.reminder.squeduleReminderForTask(task)
+        self.scheduler.squeduleReminderForTask(task)
         self.tasksDB.saveTask(task)
     }
 
-    func setTaskAsDone(done : Bool, task : Task) {
-        self.reminder.cancelReminderForTask(task)
-        task.taskIsDone = done
-        task.taskisOnHold = false
-        if done == false {
-         self.reminder.squeduleReminderForTask(task)
-        }
-        self.tasksDB.saveTask(task)
+    func setTaskAsDone(task : Task) {
+        self.taskNotificationsTracker.markTaskAsDone(task)
     }
     
     func resqueduleTaskTimeTo(task : Task , time : NSDate) {
-        self.reminder.cancelReminderForTask(task)
+        self.scheduler.cancelReminderForTask(task)
         task.taskTime = time
-        self.reminder.squeduleReminderForTask(task)
+        self.scheduler.squeduleReminderForTask(task)
         self.tasksDB.saveTask(task)
     }
 
     func removeTask(task : Task)->Bool {
-        self.reminder.cancelReminderForTask(task)
+        self.scheduler.cancelReminderForTask(task)
        return self.tasksDB.removeTask(task)
     }
     

@@ -11,10 +11,13 @@ import Foundation
 class NotificationsNames {
     static let enterdAreaWithActiveTeskNotification = "enterdAreaWithActiveTesk" //Holdes task
     static let beaconsThatAreNearNotification = "beaconIsNear" // Holdes CLBeacon Array
-    static let tryingToPerformTaskBeforeTimeScheduledNotifiationWithHiPriority = "tryingToPerformTaskBeforeTimeScheduledNotifiationWithHiPriority" // Holdes Task
-    static let tryingToPerformTaskBeforeTimeScheduledNotifiationWithLowPriority = "tryingToPerformTaskBeforeTimeScheduledNotifiationWithLowPriority" // Holdes Task
-    static let tryingToPerformTaskAfterTimeScheduledNotifiationWithHiPriority = "tryingToPerformTaskAfterTimeScheduledNotifiationWithHiPriority" // Holdes Task
-    static let tryingToPerformTaskAfterTimeScheduledNotifiationWithLowPriority = "tryingToPerformTaskAfterTimeScheduledNotifiationWithLowPriority" // Holdes Task
 
     static let TaskTimeNotification = "TaskTimeNotification"
+    
+    static let kTaskDone = "TaskDone"
+
+    static let kPresentTaskNotification = "presentTaskNotification"
+    static let kPresentTaskVerification = "presentTaskVerification"
+    static let kPresentTaskWarning = "presentTaskWarning"
+    static let kPresentTaskMarkedAsDone = "presentTaskMarkedAsDone"
 }

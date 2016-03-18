@@ -10,8 +10,12 @@ import Foundation
 import UIKit
 
 class Colors {
+    static func lightGreen()->UIColor {
+        return UIColor(rgba: "#f4ffef")
+    }
+    
     static func green()->UIColor {
-        return UIColor.greenColor()
+        return UIColor(rgba: "#59b58f")
     }
 
     static func lightGray()->UIColor {

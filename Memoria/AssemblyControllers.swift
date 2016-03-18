@@ -8,7 +8,7 @@ public class AssemblyControllers {
     class func run(container : Container) {
         container.register(TabBarController.self) { c in
             let tabBar = TabBarController()
-            guard let left = c.resolve(ManageAddTasksLocationViewController.self) else {return tabBar}
+            guard let left = c.resolve(TaskManagerViewController.self) else {return tabBar}
             guard let  _ = c.resolve(MemoriesViewController.self) else {return tabBar}
             guard let _ = c.resolve(DrugsViewController.self) else {return tabBar}
 //            let controllers = [left, center, right]
@@ -41,6 +41,6 @@ public class AssemblyControllers {
                 iBeaconServices:  container.resolve(IBeaconServices.self)! , container: container)
             }.inObjectScope(.Container)
         container.resolve(TasksNotificationsPresenter.self)
-        
+
     }
 }

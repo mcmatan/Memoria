@@ -78,7 +78,6 @@ class AddTaskVoiceViewController : ViewController {
         
         btnRecord.topToViewControllerTopLayoutGuide(self, offset: 10)
         btnRecord.centerVerticlyInSuperView()
-        
         NSLayoutConstraint.activateConstraints(verticalLayout)
         
     }

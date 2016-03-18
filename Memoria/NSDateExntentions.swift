@@ -21,6 +21,36 @@ extension NSDate {
         return components.second
     }
     
+    func yearsFrom(date:NSDate) -> Int{
+        return NSCalendar.currentCalendar().components(.Year, fromDate: date, toDate: self, options: []).year
+    }
+    func monthsFrom(date:NSDate) -> Int{
+        return NSCalendar.currentCalendar().components(.Month, fromDate: date, toDate: self, options: []).month
+    }
+    func weeksFrom(date:NSDate) -> Int{
+        return NSCalendar.currentCalendar().components(.WeekOfYear, fromDate: date, toDate: self, options: []).weekOfYear
+    }
+    func daysFrom(date:NSDate) -> Int{
+        return NSCalendar.currentCalendar().components(.Day, fromDate: date, toDate: self, options: []).day
+    }
+    func hoursFrom(date:NSDate) -> Int{
+        return NSCalendar.currentCalendar().components(.Hour, fromDate: date, toDate: self, options: []).hour
+    }
+    func minutesFrom(date:NSDate) -> Int{
+        return NSCalendar.currentCalendar().components(.Minute, fromDate: date, toDate: self, options: []).minute
+    }
+    func secondsFrom(date:NSDate) -> Int{
+        return NSCalendar.currentCalendar().components(.Second, fromDate: date, toDate: self, options: []).second
+    }
+    
+    func isInThePast()->Bool {
+        return NSDate() > self
+    }
+    
+    func isInTheFuture()->Bool {
+        return NSDate() < self
+    }
+    
     func toStringWithCurrentRegion()-> String {
         let formatter = NSDateFormatter()
         formatter.dateFormat = "yyyy/MM/dd-hh:mm:ss"
@@ -37,7 +67,7 @@ extension NSDate {
         formatter.PMSymbol = "PM"
         formatter.locale = NSLocale.currentLocale()
         
-        let dateString = formatter.stringFromDate(NSDate())
+        let dateString = formatter.stringFromDate(self)
         return dateString    // "3:11 AM
     }
     

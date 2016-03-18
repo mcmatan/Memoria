@@ -58,11 +58,13 @@ class AddTaskNameViewController: ViewController {
             "done" : done
         ]
         let verticalLayout = NSLayoutConstraint.constraintsWithVisualFormat(
-            "V:[taskName]-[enterNameTextField]-[done]", options: NSLayoutFormatOptions.AlignAllCenterX, metrics: nil, views: viewsDic)
+            "V:[taskName]-[enterNameTextField]-[done]", options: [], metrics: nil, views: viewsDic)
         
         NSLayoutConstraint.activateConstraints(verticalLayout)
         taskName.topToViewControllerTopLayoutGuide(self)
         taskName.centerVerticlyInSuperView()
+        enterNameTextField.centerVerticlyInSuperView()
+        done.centerVerticlyInSuperView()
         
         print(taskName.intrinsicContentSize())
 

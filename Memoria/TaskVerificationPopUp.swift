@@ -19,9 +19,11 @@ class TaskVerificationPopUp : ViewController {
     let btnSoundPlaying = Button()
     let task : Task
     let recorder = VoiceRecorder()
+    let tasksServices : TasksServices
     
-    init(task : Task) {
+    init(task : Task, tasksServices : TasksServices) {
         self.task = task
+        self.tasksServices = tasksServices
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -41,7 +43,7 @@ class TaskVerificationPopUp : ViewController {
         
         let imgLight = ImageView(image: UIImage(named: "NotificationLight"))
         self.view.addSubview(imgLight)
-        imgLight.centerInSuperView()
+        imgLight.centerVerticlyInSuperView()
         imgLight.widthLayoutAs(120)
         imgLight.heightLayoutAs(150)
         imgLight.topToViewControllerTopLayoutGuide(self, offset: 70)
@@ -52,7 +54,7 @@ class TaskVerificationPopUp : ViewController {
         self.lblISeeYourNear.textAlignment = NSTextAlignment.Center
         self.view .addSubview(self.lblISeeYourNear)
         self.lblISeeYourNear.topAlighnToViewBottom(imgLight, offset: 10)
-        self.lblISeeYourNear.centerHorizontalyInSuperView()
+        self.lblISeeYourNear.centerVerticlyInSuperView()
         self.lblISeeYourNear.leadingToSuperView(true)
         self.lblISeeYourNear.trailingToSuperView(true)
         
@@ -62,23 +64,24 @@ class TaskVerificationPopUp : ViewController {
         self.lblDidYouYet.textAlignment = NSTextAlignment.Center
         self.lblDidYouYet.numberOfLines = 0
         self.view.addSubview(self.lblDidYouYet)
-        self.lblDidYouYet.centerHorizontalyInSuperView()
+        self.lblDidYouYet.centerVerticlyInSuperView()
         self.lblDidYouYet.topAlighnToViewBottom(self.lblISeeYourNear, offset: 13)
         
         self.view.addSubview(self.btnYes)
         self.btnYes.notificiationYesVericiation()
-        self.btnYes.centerHorizontalyInSuperView()
+        self.btnYes.centerVerticlyInSuperView()
         self.btnYes.topAlighnToViewBottom(self.lblDidYouYet, offset: 53)
+        self.btnYes.addTarget(self, action: Selector("btnYesPress"), forControlEvents: UIControlEvents.TouchUpInside)
 
         self.view.addSubview(self.btnRemindMeLayer)
         self.btnRemindMeLayer.notificiationRemindMeLater()
-        self.btnRemindMeLayer.centerHorizontalyInSuperView()
+        self.btnRemindMeLayer.centerVerticlyInSuperView()
         self.btnRemindMeLayer.topAlighnToViewBottom(self.btnYes, offset: 13)
         self.btnRemindMeLayer.addTarget(self, action: "btnRemoingMeLaterPress", forControlEvents: UIControlEvents.TouchUpInside)
 
         self.view.addSubview(self.btnSoundPlaying)
         self.btnSoundPlaying.notificiationPlayingGray()
-        self.btnSoundPlaying.centerHorizontalyInSuperView()
+        self.btnSoundPlaying.centerVerticlyInSuperView()
         self.btnSoundPlaying.bottomAlighnToViewBottom(self.view, offset: -40)
         self.btnSoundPlaying.addTarget(self, action: "btnPlayRecordPress", forControlEvents: UIControlEvents.TouchUpInside)
         
@@ -96,6 +99,13 @@ class TaskVerificationPopUp : ViewController {
     }
     
     //MARK: Buttons
+    
+    func btnYesPress() {
+        self.dismissViewControllerAnimated(true) { () -> Void in
+            self.tasksServices.setTaskAsDone(self.task)
+        }
+
+    }
     
     func btnRemoingMeLaterPress() {
         self.dismissViewControllerAnimated(true, completion: nil)

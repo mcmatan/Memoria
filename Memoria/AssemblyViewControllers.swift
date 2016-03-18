@@ -38,8 +38,8 @@ public class AssemblyViewControllers {
             return AddTaskConfirmationViewController(container: container, tasksServices: container.resolve(TasksServices.self)!, currenctTaskCreator: currentTaskCreator!)
         }
 
-        container.register(ManageAddTasksLocationViewController.self) { _ in
-            return ManageAddTasksLocationViewController(tasksServices: container.resolve(TasksServices.self)!,currenctTaskCreator: container.resolve(CurrenctTaskCreator.self)!, container: container, iBeaconServices: container.resolve(IBeaconServices.self)!)
+        container.register(TaskManagerViewController.self) { _ in
+            return TaskManagerViewController(tasksServices: container.resolve(TasksServices.self)!,currenctTaskCreator: container.resolve(CurrenctTaskCreator.self)!, container: container, iBeaconServices: container.resolve(IBeaconServices.self)!)
         }
         container.register(AddTaskTimePriorityController.self) { _ in
             return AddTaskTimePriorityController(container: container,
@@ -47,15 +47,17 @@ public class AssemblyViewControllers {
         }
         
         container.register(TaskNotificationPopUp.self) { _, task in
-            TaskNotificationPopUp(task: task)
+            return TaskNotificationPopUp(task: task)
         }
+        
+        container.resolve(TaskNotificationPopUp.self, argument: Task(taskName: "", taskTime: NSDate(), taskVoiceURL: NSURL(), taskBeaconIdentifier: IBeaconIdentifier(uuid: "", major: "", minor: ""), taskTimePriorityHi: true))
 
         container.register(TaskVerificationPopUp.self) { _, task in
-            TaskVerificationPopUp(task: task)
+            return TaskVerificationPopUp(task: task, tasksServices: container.resolve(TasksServices.self)!)
         }
 
         container.register(TaskWarningPopUp.self) { _, task in
-            TaskWarningPopUp(task: task)
+            return TaskWarningPopUp(task: task)
         }
 
 

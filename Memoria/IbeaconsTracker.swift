@@ -9,17 +9,13 @@
 import Foundation
 import UIKit
 
-/*
-IBeacon tracker should fire event every time NearBeacons change √
-NeaderTaskMonitor will catch the event and turn every Beacon to Task with TasksDB √
-Keep and dictionary with ibeaconIdentifer for NSDate, from the date he first starting tracking the beacon √
-A check will be made to see if when a events fires, remove beacons that are not in the area any more. √
-If an beacon with a task in the area more then x time, and event will be fired  √
-Task notification Tracker will listen to the event√
-*/
+protocol IbeaconsTrackerDelegate {
+    func beaconInErea(clBeacon : CLBeacon)
+}
 
 class IbeaconsTracker : NSObject,  KTKLocationManagerDelegate {
-    let minimunDistanceToBeacon = 0.5 //In miters
+    var delegate : IbeaconsTrackerDelegate?
+    let minimunDistanceToBeacon = 0.2 //In miters
     let searchForBeaconDelayTime = 2.0
     let locationManager = KTKLocationManager()
     var currentClosesBeacon : CLBeacon?
@@ -87,9 +83,10 @@ class IbeaconsTracker : NSObject,  KTKLocationManagerDelegate {
     
     }
     
+    //MARK: Private
     //MARK: LocationManagerDelegate
     
-     func locationManager(locationManager: KTKLocationManager!, didChangeState state: KTKLocationManagerState, withError error: NSError!) {
+    func locationManager(locationManager: KTKLocationManager!, didChangeState state: KTKLocationManagerState, withError error: NSError!) {
         print(IbeaconsTrackerHelper.locationManagerStateToString(state))
     }
     
@@ -106,7 +103,7 @@ class IbeaconsTracker : NSObject,  KTKLocationManagerDelegate {
         
         let onlyCloseBeacons = self.getOnlyCloseBeacons(beacons as! [CLBeacon])
         self.beaconsInErea = onlyCloseBeacons
-        self.fireBeaconsNearEvent(onlyCloseBeacons)
+        self.beaconIsNear(onlyCloseBeacons)
         
         print("Ranged Close count: \(onlyCloseBeacons.count)")
         print("Ranged beacons count: \(beacons.count)")
@@ -119,9 +116,12 @@ class IbeaconsTracker : NSObject,  KTKLocationManagerDelegate {
         }
     }
     
-    func fireBeaconsNearEvent(beacons : [CLBeacon]) {
-        let beaconsNearNotification = NSNotification(name: NotificationsNames.beaconsThatAreNearNotification, object: beacons, userInfo: nil)
-        NSNotificationCenter.defaultCenter().postNotification(beaconsNearNotification)
+    func beaconIsNear(beacons : [CLBeacon]) {
+        if let isDelegate = self.delegate {
+            for beacon in beacons {
+                isDelegate.beaconInErea(beacon)
+            }
+        }
     }
     
     private func getClosestBeacon(beaconsList : [CLBeacon]?)->CLBeacon? {

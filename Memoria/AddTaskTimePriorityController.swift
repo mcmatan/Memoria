@@ -79,7 +79,6 @@ class AddTaskTimePriorityController: ViewController {
         NSLayoutConstraint.activateConstraints(verticalLayout)
         
         lblExplenation.topToViewControllerTopLayoutGuide(self, offset: 20)
-//        switchPrairity.widthLayoutAs(100)
         switchPrairity.centerVerticlyInSuperView()
     }
     

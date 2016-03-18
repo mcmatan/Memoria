@@ -18,12 +18,17 @@ class TasksDB {
         self.loadDB()
     }
     
-    func getTaskForIBeaconMajorAppendedByMinor(majorAppendedMyMinor : String) ->Task {
-        return self.tasksByMajorAppendedWithMinor[majorAppendedMyMinor]!
+    func getTaskForIBeaconMajorAppendedByMinor(majorAppendedMyMinor : String) ->Task? {
+        return self.tasksByMajorAppendedWithMinor[majorAppendedMyMinor]
     }
     
-    func getTaskForIBeaconIdentifier(iBeaconIdentifier : IBeaconIdentifier) ->Task {
+    func getTaskForIBeaconIdentifier(iBeaconIdentifier : IBeaconIdentifier) ->Task? {
         return self.getTaskForIBeaconMajorAppendedByMinor(iBeaconIdentifier.majorAppendedByMinorString())
+    }
+    
+    func getTaskForCLBeacn(beacon : CLBeacon)->Task? {
+        let beaconIdentifier = IBeaconIdentifier.creatFromCLBeacon(beacon)
+        return self.getTaskForIBeaconIdentifier(beaconIdentifier)
     }
     
     func isTaskExistsForIbeaconIdentifier(iBeaconIdentifier : IBeaconIdentifier) ->Bool {

@@ -111,8 +111,8 @@ class AddTasksLocationViewController : ViewController {
     }
     
     func menageTasksButtonPress() {
-        if let manageAddTasksLocationViewController = self.container.resolve(ManageAddTasksLocationViewController.self) {
-            self.navigationController!.pushViewController(manageAddTasksLocationViewController, animated: true)
+        if let TaskManagerViewController = self.container.resolve(TaskManagerViewController.self) {
+            self.navigationController!.pushViewController(TaskManagerViewController, animated: true)
         }
     }
     

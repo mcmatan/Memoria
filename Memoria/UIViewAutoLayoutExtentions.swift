@@ -19,24 +19,18 @@ extension UIView {
         self.centerVerticlyInSuperView()
     }
     
-    func centerHorizontalyInSuperView()->NSLayoutConstraint {
+    func centerHorizontalyInSuperView()->NSLayoutConstraint { //Y
         self.translatesAutoresizingMaskIntoConstraints = false
-        let constraint = NSLayoutConstraint(item: self, attribute: NSLayoutAttribute.CenterX, relatedBy: NSLayoutRelation.Equal, toItem: superview, attribute: NSLayoutAttribute.CenterX, multiplier: 1.0, constant: 0)
+        let constraint = NSLayoutConstraint(item: self, attribute: NSLayoutAttribute.CenterY, relatedBy: NSLayoutRelation.Equal, toItem: superview, attribute: NSLayoutAttribute.CenterY, multiplier: 1.0, constant: 0)
         superview?.addConstraint(constraint)
         return constraint
     }
     
-    func centerVerticlyInSuperView() {
+    func centerVerticlyInSuperView()->NSLayoutConstraint { //X
         self.translatesAutoresizingMaskIntoConstraints = false
-        var allContraines = [NSLayoutConstraint]()
-        let constraints = NSLayoutConstraint.constraintsWithVisualFormat(
-            "V:[superview]-(<=1)-[me]",
-            options: NSLayoutFormatOptions.AlignAllCenterX,
-            metrics: nil,
-            views: ["superview":self.superview!, "me":self])
-        allContraines += constraints
-        NSLayoutConstraint.activateConstraints(allContraines)
-        
+        let constraint = NSLayoutConstraint(item: self, attribute: NSLayoutAttribute.CenterX, relatedBy: NSLayoutRelation.Equal, toItem: superview, attribute: NSLayoutAttribute.CenterX, multiplier: 1.0, constant: 0)
+        superview?.addConstraint(constraint)
+        return constraint
     }
 
     func topToViewControllerTopLayoutGuide(viewControlelr : UIViewController) {
@@ -80,36 +74,18 @@ extension UIView {
         NSLayoutConstraint.activateConstraints(allConstrains)
     }
     
-    func heightLayoutAs(height : Double) {
+    func heightLayoutAs(height : Double)->NSLayoutConstraint {
         self.translatesAutoresizingMaskIntoConstraints = false
-        let views : [String : AnyObject] =
-        ["me" : self
-        ]
-        let metrics : [String : AnyObject] = [
-            "height" : height
-        ]
-        var allConstrains = [NSLayoutConstraint]()
-        
-        let verticalLayout = NSLayoutConstraint.constraintsWithVisualFormat(
-            "V:[me(height)]"
-            , options: [], metrics: metrics, views: views)
-        allConstrains += verticalLayout
-        NSLayoutConstraint.activateConstraints(allConstrains)
+        self.translatesAutoresizingMaskIntoConstraints = false
+        let contrain =  NSLayoutConstraint(item: self, attribute: NSLayoutAttribute.Height, relatedBy: NSLayoutRelation.Equal, toItem: nil, attribute: NSLayoutAttribute.NotAnAttribute, multiplier: 1.0, constant: CGFloat(height))
+        NSLayoutConstraint.activateConstraints([contrain])
+        return contrain
     }
-    func widthLayoutAs(width : Double) {
+    func widthLayoutAs(width : Double)->NSLayoutConstraint {
         self.translatesAutoresizingMaskIntoConstraints = false
-        let views : [String : AnyObject] =
-        ["me" : self
-        ]
-        let metrics : [String : AnyObject] = [
-            "width" : width,
-        ]
-        var allConstrains = [NSLayoutConstraint]()
-        let horizintalLayout = NSLayoutConstraint.constraintsWithVisualFormat(
-            "H:[me(width)]"
-            , options: [], metrics: metrics, views: views)
-        allConstrains += horizintalLayout
-        NSLayoutConstraint.activateConstraints(allConstrains)
+        let contrain =  NSLayoutConstraint(item: self, attribute: NSLayoutAttribute.Width, relatedBy: NSLayoutRelation.Equal, toItem: nil, attribute: NSLayoutAttribute.NotAnAttribute, multiplier: 1.0, constant: CGFloat(width))
+        NSLayoutConstraint.activateConstraints([contrain])
+        return contrain
     }
 
     func topAlighnToViewTop(view : UIView)->NSLayoutConstraint {

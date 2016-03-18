@@ -1,5 +1,5 @@
 //
-//  ManageAddTasksLocationViewController.swift
+//  TaskManagerViewController.swift
 //  Memoria
 //
 //  Created by Matan Cohen on 1/13/16.
@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import Swinject
 
-class ManageAddTasksLocationViewController : ViewController, UITableViewDelegate, UITableViewDataSource {
+class TaskManagerViewController : ViewController, UITableViewDelegate, UITableViewDataSource {
     let kCellHeight = 70
     let tasksServices : TasksServices
     var allTasks : [Task]!
@@ -30,11 +30,14 @@ class ManageAddTasksLocationViewController : ViewController, UITableViewDelegate
         self.container = container
         self.iBeaconServices = iBeaconServices
         super.init(nibName: nil, bundle: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("reloadTable"), name: NotificationsNames.kTaskDone, object: nil)
     }
 
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    //MARK: LifeCycle
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
@@ -46,7 +49,8 @@ class ManageAddTasksLocationViewController : ViewController, UITableViewDelegate
     
     }
     
-    private func reloadTable() {
+    dynamic private func reloadTable() {
+        self.allTasks = self.tasksServices.getAllTasks()        
         self.tableView .reloadData()
         self.lblCount.text =  "Remining \(self.allTasks.count)"
     }
@@ -123,15 +127,7 @@ class ManageAddTasksLocationViewController : ViewController, UITableViewDelegate
      
     }
 
-    func doneButtonPress() {
-        if let _ = self.navigationController {
-            self.navigationController?.popToRootViewControllerAnimated(true)
-        } else {
-            self.dismissViewControllerAnimated(true, completion: nil)
-        }
-    }
-    
-    //TableView
+    //MARK: TableView
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let task = self.allTasks[indexPath.row]
@@ -146,6 +142,9 @@ class ManageAddTasksLocationViewController : ViewController, UITableViewDelegate
         cell?.textLabel?.text = textForCell
         cell?.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator;
         cell?.detailTextLabel?.text = "Schedule time:" + (task.taskTime?.toStringWithCurrentRegion())! + " major:" + (task.taskBeaconIdentifier!.major)
+        
+        cell?.contentView.backgroundColor = task.isTaskDone ? Colors.lightGreen() : UIColor.whiteColor()
+
         return cell!
     }
     
@@ -246,6 +245,7 @@ class ManageAddTasksLocationViewController : ViewController, UITableViewDelegate
     
     func goToNextPage(closestBeacon : CLBeacon) {
         let closeiBeaconIdentifier = IBeaconIdentifier.creatFromCLBeacon(closestBeacon)
+        self.currenctTaskCreator.startNewTask()
         self.currenctTaskCreator.setTaskBeaconIdentifier(closeiBeaconIdentifier)
         
         if let _ = self.addTaskNameViewController {} else {
@@ -254,5 +254,14 @@ class ManageAddTasksLocationViewController : ViewController, UITableViewDelegate
         self.navigationController?.pushViewController(self.addTaskNameViewController!, animated: true)
     }
 
+    //MARK: Buttons
+    func doneButtonPress() {
+        if let _ = self.navigationController {
+            self.navigationController?.popToRootViewControllerAnimated(true)
+        } else {
+            self.dismissViewControllerAnimated(true, completion: nil)
+        }
+    }
+    
 
 }

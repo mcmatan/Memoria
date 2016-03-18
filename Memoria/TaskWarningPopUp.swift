@@ -42,7 +42,7 @@ class TaskWarningPopUp : ViewController {
         
         let imgError = ImageView(image: UIImage(named: "NotificationWarningImg"))
         self.view.addSubview(imgError)
-        imgError.centerInSuperView()
+        imgError.centerVerticlyInSuperView()
         imgError.widthLayoutAs(87)
         imgError.heightLayoutAs(117)
         imgError.topToViewControllerTopLayoutGuide(self, offset: 70)
@@ -57,7 +57,7 @@ class TaskWarningPopUp : ViewController {
         self.lblYouAllreadyTook.textAlignment = NSTextAlignment.Center
         self.view .addSubview(self.lblYouAllreadyTook)
         self.lblYouAllreadyTook.topAlighnToViewBottom(imgError, offset: 23)
-        self.lblYouAllreadyTook.centerHorizontalyInSuperView()
+        self.lblYouAllreadyTook.centerVerticlyInSuperView()
         self.lblYouAllreadyTook.leadingToSuperView(true)
         self.lblYouAllreadyTook.trailingToSuperView(true)
         
@@ -71,18 +71,18 @@ class TaskWarningPopUp : ViewController {
         self.lblBeCareful.textAlignment = NSTextAlignment.Center
         self.lblBeCareful.numberOfLines = 0
         self.view.addSubview(self.lblBeCareful)
-        self.lblBeCareful.centerHorizontalyInSuperView()
+        self.lblBeCareful.centerVerticlyInSuperView()
         self.lblBeCareful.topAlighnToViewBottom(self.lblYouAllreadyTook, offset: 13)
         
         self.view.addSubview(self.btnYes)
         self.btnYes.notificiationThankYou()
-        self.btnYes.centerHorizontalyInSuperView()
+        self.btnYes.centerVerticlyInSuperView()
         self.btnYes.topAlighnToViewBottom(self.lblBeCareful, offset: 40)
         self.btnYes.addTarget(self, action: "btnOkPress", forControlEvents: UIControlEvents.TouchUpInside)
         
         self.view.addSubview(self.btnSoundPlaying)
         self.btnSoundPlaying.notificiationPlayingGray()
-        self.btnSoundPlaying.centerHorizontalyInSuperView()
+        self.btnSoundPlaying.centerVerticlyInSuperView()
         self.btnSoundPlaying.bottomAlighnToViewBottom(self.view, offset: -40)
         self.btnSoundPlaying.addTarget(self, action: "btnPlayRecordPress", forControlEvents: UIControlEvents.TouchUpInside)
     }
