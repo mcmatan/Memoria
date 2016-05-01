@@ -31,7 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //            self.vc = Bootstrapper.container.resolve(TaskVerificationPopUp.self, argument: task)
 //            self.vc = Bootstrapper.container.resolve(TaskWarningPopUp.self, argument: task)
             
- //           rootViewController!.presentViewController(self.vc, animated: true, completion: nil)
+//            rootViewController!.presentViewController(self.vc, animated: true, completion: nil)
             
         }
 

@@ -30,7 +30,7 @@ class TaskNotificationsTracker : NSObject, IbeaconsTrackerDelegate, SchedulerDel
     //MARK: Public
     internal func notificationScheduledTime(task : Task) {
         if task.isTaskDone == false {
-            NSNotificationCenter.defaultCenter().postNotificationName(NotificationsNames.TaskTimeNotification, object: task, userInfo: nil)
+            NSNotificationCenter.defaultCenter().postNotificationName(NotificationsNames.kPresentTaskNotification, object: task, userInfo: nil)
         }
     }
     

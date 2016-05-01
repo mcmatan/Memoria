@@ -34,7 +34,7 @@ class TaskNotificationPopUp : ViewController {
         
         let imgLight = ImageView(image: UIImage(named: "NotificationLight"))
         self.view.addSubview(imgLight)
-        imgLight.centerInSuperView()
+        imgLight.centerVerticlyInSuperView()
         imgLight.widthLayoutAs(120)
         imgLight.heightLayoutAs(150)
         imgLight.topToViewControllerTopLayoutGuide(self, offset: 70)
@@ -48,7 +48,7 @@ class TaskNotificationPopUp : ViewController {
         self.lblGoodAfternoon.textAlignment = NSTextAlignment.Center
         self.view .addSubview(self.lblGoodAfternoon)
         self.lblGoodAfternoon.topAlighnToViewBottom(imgLight, offset: 10)
-        self.lblGoodAfternoon.centerHorizontalyInSuperView()
+        self.lblGoodAfternoon.centerVerticlyInSuperView()
         
         let currentDate = NSDate()
         let timeForString = "It's \(currentDate.toStringCurrentRegionShortTime()),\ntime to \(task.taskName!)!"
@@ -59,20 +59,20 @@ class TaskNotificationPopUp : ViewController {
         self.lblItsTimeFor.textAlignment = NSTextAlignment.Center
         self.lblItsTimeFor.numberOfLines = 0
         self.view.addSubview(self.lblItsTimeFor)
-        self.lblItsTimeFor.centerHorizontalyInSuperView()
+        self.lblItsTimeFor.centerVerticlyInSuperView()
         self.lblItsTimeFor.topAlighnToViewBottom(self.lblGoodAfternoon, offset: 19)
         self.lblItsTimeFor.leadingToSuperView(true)
         self.lblItsTimeFor.trailingToSuperView(true)
         
         self.view.addSubview(self.playSoundBtn)
         self.playSoundBtn.notificiationPlaySoundBtn()
-        self.playSoundBtn.centerHorizontalyInSuperView()
+        self.playSoundBtn.centerVerticlyInSuperView()
         self.playSoundBtn.topAlighnToViewBottom(self.lblItsTimeFor, offset: 39)
         self.playSoundBtn.addTarget(self, action: "btnPlayRecordPress", forControlEvents: UIControlEvents.TouchUpInside)
 
         self.view.addSubview(self.btnOk)
         self.btnOk.notificiationOkThanksBtn()
-        self.btnOk.centerHorizontalyInSuperView()
+        self.btnOk.centerVerticlyInSuperView()
         self.btnOk.topAlighnToViewBottom(self.playSoundBtn, offset: 12)
         self.btnOk.addTarget(self, action: "btnOkPress", forControlEvents: UIControlEvents.TouchUpInside)
 
