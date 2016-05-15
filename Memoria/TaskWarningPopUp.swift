@@ -78,13 +78,13 @@ class TaskWarningPopUp : ViewController {
         self.btnYes.notificiationThankYou()
         self.btnYes.centerVerticlyInSuperView()
         self.btnYes.topAlighnToViewBottom(self.lblBeCareful, offset: 40)
-        self.btnYes.addTarget(self, action: "btnOkPress", forControlEvents: UIControlEvents.TouchUpInside)
+        self.btnYes.addTarget(self, action: #selector(TaskWarningPopUp.btnOkPress), forControlEvents: UIControlEvents.TouchUpInside)
         
         self.view.addSubview(self.btnSoundPlaying)
         self.btnSoundPlaying.notificiationPlayingGray()
         self.btnSoundPlaying.centerVerticlyInSuperView()
         self.btnSoundPlaying.bottomAlighnToViewBottom(self.view, offset: -40)
-        self.btnSoundPlaying.addTarget(self, action: "btnPlayRecordPress", forControlEvents: UIControlEvents.TouchUpInside)
+        self.btnSoundPlaying.addTarget(self, action: #selector(TaskWarningPopUp.btnPlayRecordPress), forControlEvents: UIControlEvents.TouchUpInside)
     }
     
     //MARK: Actions

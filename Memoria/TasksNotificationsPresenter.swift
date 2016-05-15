@@ -25,10 +25,10 @@ class TasksNotificationsPresenter : NSObject {
         self.container = container
         super.init()
 
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("presentTaskNotification:"), name: NotificationsNames.kPresentTaskNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("presentTaskVerification:"), name: NotificationsNames.kPresentTaskVerification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("presentTaskWarning:"), name: NotificationsNames.kPresentTaskWarning, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("presentTaskMarkedAsDone:"), name: NotificationsNames.kPresentTaskMarkedAsDone, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(TasksNotificationsPresenter.presentTaskNotification(_:)), name: NotificationsNames.kPresentTaskNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(TasksNotificationsPresenter.presentTaskVerification(_:)), name: NotificationsNames.kPresentTaskVerification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(TasksNotificationsPresenter.presentTaskWarning(_:)), name: NotificationsNames.kPresentTaskWarning, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(TasksNotificationsPresenter.presentTaskMarkedAsDone(_:)), name: NotificationsNames.kPresentTaskMarkedAsDone, object: nil)
     }
     
     //MARK: Public

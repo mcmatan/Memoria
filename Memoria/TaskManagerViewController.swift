@@ -30,7 +30,7 @@ class TaskManagerViewController : ViewController, UITableViewDelegate, UITableVi
         self.container = container
         self.iBeaconServices = iBeaconServices
         super.init(nibName: nil, bundle: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("reloadTable"), name: NotificationsNames.kTaskDone, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(TaskManagerViewController.reloadTable), name: NotificationsNames.kTaskDone, object: nil)
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -64,13 +64,13 @@ class TaskManagerViewController : ViewController, UITableViewDelegate, UITableVi
         
         self.allTasks = self.tasksServices.getAllTasks()
 
-        let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Done, target: self, action: "doneButtonPress")
+        let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Done, target: self, action: #selector(TaskManagerViewController.doneButtonPress))
         self.navigationItem.rightBarButtonItem = doneButton
         
         let createTaskBtn = Button()
         createTaskBtn.defaultStyle()
         createTaskBtn.setTitle("+ Create a new task", forState: UIControlState.Normal)
-        createTaskBtn.addTarget(self, action: "createNewTask", forControlEvents: UIControlEvents.TouchUpInside)
+        createTaskBtn.addTarget(self, action: #selector(TaskManagerViewController.createNewTask), forControlEvents: UIControlEvents.TouchUpInside)
 
         let lblTop = Label()
         lblTop.defaultyTitle()

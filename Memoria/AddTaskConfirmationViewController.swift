@@ -162,11 +162,11 @@ class AddTaskConfirmationViewController : ViewController {
 
         NSLayoutConstraint.activateConstraints(allConstains)
         
-        btnEditTaskTime.addTarget(self, action: "btnEditTaskTimePress", forControlEvents: UIControlEvents.TouchUpInside)
-        btnEditTaskName.addTarget(self, action: "btnEditTaskNamePress", forControlEvents: UIControlEvents.TouchUpInside)
-        btnEditTaskSound.addTarget(self, action: "btnEditTaskSoundPress", forControlEvents: UIControlEvents.TouchUpInside)
-        btnTaskSound.addTarget(self, action: "btnPlaySoundPress", forControlEvents: UIControlEvents.TouchUpInside)
-        btnEditTaskTimePriority.addTarget(self, action: "btnEditTaskTimePriorityPress", forControlEvents: UIControlEvents.TouchUpInside)
+        btnEditTaskTime.addTarget(self, action: #selector(AddTaskConfirmationViewController.btnEditTaskTimePress), forControlEvents: UIControlEvents.TouchUpInside)
+        btnEditTaskName.addTarget(self, action: #selector(AddTaskConfirmationViewController.btnEditTaskNamePress), forControlEvents: UIControlEvents.TouchUpInside)
+        btnEditTaskSound.addTarget(self, action: #selector(AddTaskConfirmationViewController.btnEditTaskSoundPress), forControlEvents: UIControlEvents.TouchUpInside)
+        btnTaskSound.addTarget(self, action: #selector(AddTaskConfirmationViewController.btnPlaySoundPress), forControlEvents: UIControlEvents.TouchUpInside)
+        btnEditTaskTimePriority.addTarget(self, action: #selector(AddTaskConfirmationViewController.btnEditTaskTimePriorityPress), forControlEvents: UIControlEvents.TouchUpInside)
     
     }
 

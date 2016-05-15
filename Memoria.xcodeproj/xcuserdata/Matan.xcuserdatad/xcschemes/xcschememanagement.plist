@@ -9,9 +9,24 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>MemoriaWatch (Notification).xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
+		<key>MemoriaWatch.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>90687A111CD684BD00789FEC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>90E8C4921C1AA2B8009304A9</key>
 		<dict>
 			<key>primary</key>

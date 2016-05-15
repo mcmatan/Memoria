@@ -200,7 +200,7 @@ public class DateInRegion :CustomStringConvertible,CustomDebugStringConvertible 
 			var ymdFactor = 0
 			if components.year != NSDateComponentUndefined { ymdFactor++ }
 			if components.month != NSDateComponentUndefined { ymdFactor++ }
-			if components.day != NSDateComponentUndefined { ymdFactor++ }
+			if components.day != NSDateComponentUndefined { ymdFactor += 1 }
 			
 			var ywwFactor = 0
 			if components.yearForWeekOfYear != NSDateComponentUndefined { ywwFactor++ }

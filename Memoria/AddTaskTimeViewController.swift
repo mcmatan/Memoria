@@ -36,10 +36,10 @@ class AddTaskTimeViewController : ViewController {
         let addTaskBtn = Button()
         addTaskBtn.setTitle(Content.getContent(ContentType.LabelTxt, name: "addTaskTimeButton"), forState: UIControlState.Normal)
         addTaskBtn.defaultStyle()
-        addTaskBtn.addTarget(self, action: "addTimeButtonPress", forControlEvents: UIControlEvents.TouchUpInside)
+        addTaskBtn.addTarget(self, action: #selector(AddTaskTimeViewController.addTimeButtonPress), forControlEvents: UIControlEvents.TouchUpInside)
         let doneBtn = Button()
         doneBtn.setTitle(Content.getContent(ContentType.LabelTxt, name: "addTimeDoneBtn"), forState: UIControlState.Normal)
-        doneBtn.addTarget(self, action: "doneBtnPress", forControlEvents: UIControlEvents.TouchUpInside)
+        doneBtn.addTarget(self, action: #selector(AddTaskTimeViewController.doneBtnPress), forControlEvents: UIControlEvents.TouchUpInside)
         doneBtn.defaultStyle()
     
         self.lblTime.font = UIFont.systemFontOfSize(25)

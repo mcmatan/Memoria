@@ -21,7 +21,7 @@ class Scheduler : NSObject {
     init(tasksDB : TasksDB) {
         self.tasksDB = tasksDB
         super.init()
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("taskTimeNotification:"), name: NotificationsNames.TaskTimeNotification, object:nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(Scheduler.taskTimeNotification(_:)), name: NotificationsNames.TaskTimeNotification, object:nil)
     }
     
     internal func taskTimeNotification(notification : NSNotification) {
@@ -30,7 +30,7 @@ class Scheduler : NSObject {
             let majorAppendedByMinor = localNotification.userInfo![key] as? String
             let task = self.tasksDB.getTaskForIBeaconMajorAppendedByMinor(majorAppendedByMinor!)
                 if let isTask = task {
-                    if let isDelegate = self.delegate {
+                    if let _ = self.delegate {
                             self.delegate!.notificationScheduledTime(isTask)
                     }
                 }

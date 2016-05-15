@@ -128,7 +128,7 @@ class VoiceRecorder : NSObject , AVAudioRecorderDelegate, AVAudioPlayerDelegate 
     func recordWithPermission(setup:Bool) {
         let session:AVAudioSession = AVAudioSession.sharedInstance()
         // ios 8 and later
-        if (session.respondsToSelector("requestRecordPermission:")) {
+        if (session.respondsToSelector(#selector(AVAudioSession.requestRecordPermission(_:)))) {
             AVAudioSession.sharedInstance().requestRecordPermission({(granted: Bool)-> Void in
                 if granted {
                     print("Permission to record granted")
@@ -139,7 +139,7 @@ class VoiceRecorder : NSObject , AVAudioRecorderDelegate, AVAudioPlayerDelegate 
                     self.recorder.record()
                     self.meterTimer = NSTimer.scheduledTimerWithTimeInterval(0.1,
                         target:self,
-                        selector:"updateAudioMeter:",
+                        selector:#selector(VoiceRecorder.updateAudioMeter(_:)),
                         userInfo:nil,
                         repeats:true)
                 } else {

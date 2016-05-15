@@ -68,13 +68,13 @@ class TaskNotificationPopUp : ViewController {
         self.playSoundBtn.notificiationPlaySoundBtn()
         self.playSoundBtn.centerVerticlyInSuperView()
         self.playSoundBtn.topAlighnToViewBottom(self.lblItsTimeFor, offset: 39)
-        self.playSoundBtn.addTarget(self, action: "btnPlayRecordPress", forControlEvents: UIControlEvents.TouchUpInside)
+        self.playSoundBtn.addTarget(self, action: #selector(TaskNotificationPopUp.btnPlayRecordPress), forControlEvents: UIControlEvents.TouchUpInside)
 
         self.view.addSubview(self.btnOk)
         self.btnOk.notificiationOkThanksBtn()
         self.btnOk.centerVerticlyInSuperView()
         self.btnOk.topAlighnToViewBottom(self.playSoundBtn, offset: 12)
-        self.btnOk.addTarget(self, action: "btnOkPress", forControlEvents: UIControlEvents.TouchUpInside)
+        self.btnOk.addTarget(self, action: #selector(TaskNotificationPopUp.btnOkPress), forControlEvents: UIControlEvents.TouchUpInside)
 
     }
     

@@ -46,7 +46,7 @@ class AddTaskTimePriorityController: ViewController {
         self.switchPrairity = UISwitch()
         
         self.btnDone.setTitle("Done", forState: UIControlState.Normal)
-        self.btnDone.addTarget(self, action: "doneBtnPress", forControlEvents: UIControlEvents.TouchUpInside)
+        self.btnDone.addTarget(self, action: #selector(AddTaskTimePriorityController.doneBtnPress), forControlEvents: UIControlEvents.TouchUpInside)
         self.btnDone.defaultStyle()
         
         self.lblExplenation.font = UIFont.systemFontOfSize(15)

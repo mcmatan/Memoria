@@ -71,19 +71,19 @@ class TaskVerificationPopUp : ViewController {
         self.btnYes.notificiationYesVericiation()
         self.btnYes.centerVerticlyInSuperView()
         self.btnYes.topAlighnToViewBottom(self.lblDidYouYet, offset: 53)
-        self.btnYes.addTarget(self, action: Selector("btnYesPress"), forControlEvents: UIControlEvents.TouchUpInside)
+        self.btnYes.addTarget(self, action: #selector(TaskVerificationPopUp.btnYesPress), forControlEvents: UIControlEvents.TouchUpInside)
 
         self.view.addSubview(self.btnRemindMeLayer)
         self.btnRemindMeLayer.notificiationRemindMeLater()
         self.btnRemindMeLayer.centerVerticlyInSuperView()
         self.btnRemindMeLayer.topAlighnToViewBottom(self.btnYes, offset: 13)
-        self.btnRemindMeLayer.addTarget(self, action: "btnRemoingMeLaterPress", forControlEvents: UIControlEvents.TouchUpInside)
+        self.btnRemindMeLayer.addTarget(self, action: #selector(TaskVerificationPopUp.btnRemoingMeLaterPress), forControlEvents: UIControlEvents.TouchUpInside)
 
         self.view.addSubview(self.btnSoundPlaying)
         self.btnSoundPlaying.notificiationPlayingGray()
         self.btnSoundPlaying.centerVerticlyInSuperView()
         self.btnSoundPlaying.bottomAlighnToViewBottom(self.view, offset: -40)
-        self.btnSoundPlaying.addTarget(self, action: "btnPlayRecordPress", forControlEvents: UIControlEvents.TouchUpInside)
+        self.btnSoundPlaying.addTarget(self, action: #selector(TaskVerificationPopUp.btnPlayRecordPress), forControlEvents: UIControlEvents.TouchUpInside)
         
     }
     

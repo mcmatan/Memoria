@@ -38,7 +38,7 @@ class AddTaskNameViewController: ViewController {
         let done = Button()
         done.defaultStyle()
         done.setTitle(Content.getContent(ContentType.ButtonTxt, name: "Done"), forState: UIControlState.Normal)
-        done.addTarget(self, action: "dontBtnPress", forControlEvents: UIControlEvents.TouchUpInside)
+        done.addTarget(self, action: #selector(AddTaskNameViewController.dontBtnPress), forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(taskName)
         self.view.addSubview(enterNameTextField)
         self.view.addSubview(done)

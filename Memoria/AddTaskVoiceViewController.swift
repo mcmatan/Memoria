@@ -36,22 +36,22 @@ class AddTaskVoiceViewController : ViewController {
 
         btnRecord.defaultStyle()
         btnRecord.setTitle(Content.getContent(ContentType.ButtonTxt, name: "btnRecord"), forState: UIControlState.Normal)
-        btnRecord.addTarget(self, action: "recordButtonPress", forControlEvents: UIControlEvents.TouchUpInside)
+        btnRecord.addTarget(self, action: #selector(AddTaskVoiceViewController.recordButtonPress), forControlEvents: UIControlEvents.TouchUpInside)
         
         let btnStopRecord = Button()
         btnStopRecord.setTitle(Content.getContent(ContentType.ButtonTxt, name: "btnStopRecord"), forState: UIControlState.Normal)
-        btnStopRecord.addTarget(self, action: "stopRecordButtonPress", forControlEvents: UIControlEvents.TouchUpInside)
+        btnStopRecord.addTarget(self, action: #selector(AddTaskVoiceViewController.stopRecordButtonPress), forControlEvents: UIControlEvents.TouchUpInside)
         btnStopRecord.defaultStyle()
 
         let btnPlay = Button()
         btnPlay.defaultStyle()
         btnPlay.setTitle(Content.getContent(ContentType.ButtonTxt, name: "btnPlay"), forState: UIControlState.Normal)
-        btnPlay.addTarget(self, action: "playButtonPress", forControlEvents: UIControlEvents.TouchUpInside)
+        btnPlay.addTarget(self, action: #selector(AddTaskVoiceViewController.playButtonPress), forControlEvents: UIControlEvents.TouchUpInside)
         
         let btnDone = Button()
         btnDone.defaultStyle()
         btnDone.setTitle(Content.getContent(ContentType.ButtonTxt, name: "DoneButton"), forState: UIControlState.Normal)
-        btnDone.addTarget(self, action: "btnDonePress", forControlEvents: UIControlEvents.TouchUpInside)
+        btnDone.addTarget(self, action: #selector(AddTaskVoiceViewController.btnDonePress), forControlEvents: UIControlEvents.TouchUpInside)
 
         btnRecord.translatesAutoresizingMaskIntoConstraints = false
         btnStopRecord.translatesAutoresizingMaskIntoConstraints = false
