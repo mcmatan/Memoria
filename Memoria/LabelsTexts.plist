@@ -4,7 +4,7 @@
 <dict>
 	<key>TesksFirstExplenation</key>
 	<string>Go to the location you desire,
-Then clock on the button to add a task.</string>
+Then click on the button to add a task.</string>
 	<key>or</key>
 	<string>Or</string>
 	<key>enterTestName</key>
@@ -27,5 +27,57 @@ Then clock on the button to add a task.</string>
 	<string>Task Time Priority</string>
 	<key>addTaskVoiceTitle</key>
 	<string>Task Voice</string>
+	<key>AddTaskPrirityExpenation</key>
+	<string>Turn switch on for Hi priority.\n That means You cannot accomplish the task not at time</string>
+	<key>TaskManagerRemaining</key>
+	<string>Remining %@</string>
+	<key>TaskManagerVCCreateTask</key>
+	<string>+ Create a new task</string>
+	<key>TaskManagerVCLblTop</key>
+	<string>My Memories</string>
+	<key>TaskManagerVCNoRemainingTasks</key>
+	<string>No remining tasks</string>
+	<key>TaskManagerVCTaskNameCell</key>
+	<string>Task name: </string>
+	<key>TaskManagerVCDetailsTxtCell</key>
+	<string>Schedule time: %@  major: %@</string>
+	<key>TaskManagerVCNoTasksAssigened</key>
+	<string>No tasks assigned</string>
+	<key>TaskManagerVCNoBeaconInEreas</key>
+	<string>No beacons detected in current area</string>
+	<key>TaskManagerVCTheBeaconHasTaskAllreadyMessage</key>
+	<string>The beacon you have selected %@, already has a task assigend to it</string>
+	<key>TaskManagerVCTheBeaconHasTaskAllreadyTitle</key>
+	<string>Do you want to edit the task?</string>
+	<key>AddTaskTimeDatePickerDialog</key>
+	<string>Choose a date</string>
+	<key>TaskWarningPopUpDidAllready</key>
+	<string>You Already %@ today</string>
+	<key>TaskWarningPopUpDidLaterToday</key>
+	<string>The %@ is scheduled later today</string>
+	<key>TaskWarningPopUpDidCerfulNotToTakeTwice</key>
+	<string>Be careful not to do it twice</string>
+	<key>TaskWarningPopUpDidPleaseWaitFor</key>
+	<string>Please wait for %@</string>
+	<key>TaskVerificationPopUpISeeYourNeer</key>
+	<string>I see your near %@</string>
+	<key>TaskVerificationPopUpDidYouYet</key>
+	<string>Did you %@ yet?</string>
+	<key>TaskVerificationPopUpUserName</key>
+	<string>Dor</string>
+	<key>TaskVerificationPopUpGoodTimeOfDay</key>
+	<string>Good %@ %@</string>
+	<key>TaskVerificationPopUpItsTimeFor</key>
+	<string>It&apos;s %@,\ntime to %@!&quot;</string>
+	<key>TabBarTasksLbl</key>
+	<string>Tasks</string>
+	<key>TaskManagerTitle</key>
+	<string>Tasks manager</string>
+	<key>TimeOfDayMorining</key>
+	<string>morning</string>
+	<key>TimeOfDayAfterNoon</key>
+	<string>afternoon</string>
+	<key>TimeOfDayEavning</key>
+	<string>eavning</string>
 </dict>
 </plist>

@@ -40,13 +40,13 @@ class AddTasksLocationViewController : ViewController {
         let thisIsMyLocation = Button()
         thisIsMyLocation.defaultStyle()
         thisIsMyLocation.setTitle(Content.getContent(ContentType.ButtonTxt, name: "ThisIsMyLocationTask"), forState: UIControlState.Normal)
-        thisIsMyLocation.addTarget(self, action: "thisIsMyLocationPress", forControlEvents: UIControlEvents.TouchUpInside)
+        thisIsMyLocation.addTarget(self, action: #selector(AddTasksLocationViewController.thisIsMyLocationPress), forControlEvents: UIControlEvents.TouchUpInside)
         let or = Label()
         or.text = Content.getContent(ContentType.LabelTxt, name: "or")
         let manageTasks = Button()
         manageTasks.defaultStyle()
         manageTasks.setTitle(Content.getContent(ContentType.ButtonTxt, name: "ManageTasks"), forState: UIControlState.Normal)
-        manageTasks.addTarget(self, action: "menageTasksButtonPress", forControlEvents: UIControlEvents.TouchUpInside)
+        manageTasks.addTarget(self, action: #selector(AddTasksLocationViewController.menageTasksButtonPress), forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(topExpelenationText)
         self.view.addSubview(thisIsMyLocation)
         self.view.addSubview(or)
@@ -119,8 +119,8 @@ class AddTasksLocationViewController : ViewController {
     //MARK: Alerts
     
     func showNoBeaconInEreaMessage() {
-        let alert = UIAlertController(title: "No beacons detected in current area", message: "", preferredStyle: UIAlertControllerStyle.Alert)
-        let btnOk = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Cancel) { (action : UIAlertAction) in
+        let alert = UIAlertController(title: Content.getContent(ContentType.LabelTxt, name: "TaskManagerVCNoBeaconInEreas"), message: "", preferredStyle: UIAlertControllerStyle.Alert)
+        let btnOk = UIAlertAction(title: Content.getContent(ContentType.ButtonTxt, name: "Ok"), style: UIAlertActionStyle.Cancel) { (action : UIAlertAction) in
         }
         alert.addAction(btnOk)
         self.presentViewController(alert, animated: true, completion: nil)
@@ -129,6 +129,7 @@ class AddTasksLocationViewController : ViewController {
     
     func showBeaconHasAlreadyTaskAssignedMessage(closestBeacon : CLBeacon) {
         let closeiBeaconIdentifier = IBeaconIdentifier.creatFromCLBeacon(closestBeacon)
+        
         let alert = UIAlertController(title: "The beacon you have selected \(closeiBeaconIdentifier.major), already has a task assigend to it", message: "Do you want to edit the task?", preferredStyle: UIAlertControllerStyle.Alert)
         let btnYes = UIAlertAction(title: "Yes", style: UIAlertActionStyle.Default) { (action : UIAlertAction) in
             let task = self.tasksServices.getTaskForIBeaconIdentifier(closeiBeaconIdentifier)

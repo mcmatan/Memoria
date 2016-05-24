@@ -52,7 +52,11 @@ class TaskManagerViewController : ViewController, UITableViewDelegate, UITableVi
     dynamic private func reloadTable() {
         self.allTasks = self.tasksServices.getAllTasks()        
         self.tableView .reloadData()
-        self.lblCount.text =  "Remining \(self.allTasks.count)"
+        
+        var remaining = self.allTasks.count
+        if (remaining > 0) {
+            self.lblCount.text = String.localizedStringWithFormat(Content.getContent(ContentType.LabelTxt, name: "TaskManagerRemaining"), remaining)
+        }
     }
     
     override func viewDidLoad() {
@@ -64,20 +68,20 @@ class TaskManagerViewController : ViewController, UITableViewDelegate, UITableVi
         
         self.allTasks = self.tasksServices.getAllTasks()
 
-        let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Done, target: self, action: #selector(TaskManagerViewController.doneButtonPress))
+        let doneButton = UIBarButtonItem(title: Content.getContent(ContentType.ButtonTxt, name: "Done"), style: UIBarButtonItemStyle.Done, target: self, action: #selector(TaskManagerViewController.doneButtonPress))
         self.navigationItem.rightBarButtonItem = doneButton
         
         let createTaskBtn = Button()
         createTaskBtn.defaultStyle()
-        createTaskBtn.setTitle("+ Create a new task", forState: UIControlState.Normal)
+        createTaskBtn.setTitle(Content.getContent(ContentType.LabelTxt, name: "TaskManagerVCCreateTask"), forState: UIControlState.Normal)
         createTaskBtn.addTarget(self, action: #selector(TaskManagerViewController.createNewTask), forControlEvents: UIControlEvents.TouchUpInside)
 
         let lblTop = Label()
         lblTop.defaultyTitle()
-        lblTop.text = "My Memories"
+        lblTop.text = Content.getContent(ContentType.LabelTxt, name: "TaskManagerVCLblTop")
         
         lblCount.defaultyTitle()
-        lblCount.text = "No remining tasks"
+        lblCount.text = Content.getContent(ContentType.LabelTxt, name: "TaskManagerVCNoRemainingTasks")
         lblCount.textColor = UIColor.grayColor()
 
         tableView.tableFooterView = UIView(frame: CGRectZero)
@@ -131,7 +135,7 @@ class TaskManagerViewController : ViewController, UITableViewDelegate, UITableVi
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let task = self.allTasks[indexPath.row]
-        let textForCell = "Task name: "  + task.taskName!
+        let textForCell = Content.getContent(ContentType.LabelTxt, name: "TaskManagerVCTaskNameCell")  + task.taskName!
         let cellIdentifier = "Cell"
         
         var cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) 
@@ -141,7 +145,7 @@ class TaskManagerViewController : ViewController, UITableViewDelegate, UITableVi
         
         cell?.textLabel?.text = textForCell
         cell?.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator;
-        cell?.detailTextLabel?.text = "Schedule time:" + (task.taskTime?.toStringWithCurrentRegion())! + " major:" + (task.taskBeaconIdentifier!.major)
+        let txt = String.localizedStringWithFormat(Content.getContent(ContentType.LabelTxt, name: "TaskManagerVCDetailsTxtCell"), (task.taskTime?.toStringWithCurrentRegion())! , (task.taskBeaconIdentifier!.major))
         
         cell?.contentView.backgroundColor = task.isTaskDone ? Colors.lightGreen() : UIColor.whiteColor()
 
@@ -174,7 +178,7 @@ class TaskManagerViewController : ViewController, UITableViewDelegate, UITableVi
         } else {
             let lblNoData = UILabel()
             lblNoData.frame = CGRectMake(0, 0, self.tableView.bounds.size.width, self.tableView.bounds.size.height)
-            lblNoData.text = "No tasks assigned"
+            lblNoData.text = Content.getContent(ContentType.LabelTxt, name: "TaskManagerVCNoTasksAssigened")
             lblNoData.textColor = UIColor.blackColor()
             lblNoData.textAlignment = NSTextAlignment.Center
             self.tableView.backgroundView = lblNoData
@@ -217,8 +221,8 @@ class TaskManagerViewController : ViewController, UITableViewDelegate, UITableVi
     //MARK: Alerts
     
     func showNoBeaconInEreaMessage() {
-        let alert = UIAlertController(title: "No beacons detected in current area", message: "", preferredStyle: UIAlertControllerStyle.Alert)
-        let btnOk = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Cancel) { (action : UIAlertAction) in
+        let alert = UIAlertController(title: Content.getContent(ContentType.LabelTxt, name: "TaskManagerVCNoBeaconInEreas"), message: "", preferredStyle: UIAlertControllerStyle.Alert)
+        let btnOk = UIAlertAction(title: Content.getContent(ContentType.ButtonTxt, name: "Ok"), style: UIAlertActionStyle.Cancel) { (action : UIAlertAction) in
         }
         alert.addAction(btnOk)
         self.presentViewController(alert, animated: true, completion: nil)
@@ -227,14 +231,18 @@ class TaskManagerViewController : ViewController, UITableViewDelegate, UITableVi
     
     func showBeaconHasAlreadyTaskAssignedMessage(closestBeacon : CLBeacon) {
         let closeiBeaconIdentifier = IBeaconIdentifier.creatFromCLBeacon(closestBeacon)
-        let alert = UIAlertController(title: "The beacon you have selected \(closeiBeaconIdentifier.major), already has a task assigend to it", message: "Do you want to edit the task?", preferredStyle: UIAlertControllerStyle.Alert)
-        let btnYes = UIAlertAction(title: "Yes", style: UIAlertActionStyle.Default) { (action : UIAlertAction) in
+        let title = String.localizedStringWithFormat(Content.getContent(ContentType.LabelTxt, name: "TaskManagerVCTheBeaconHasTaskAllreadyMessage"), closeiBeaconIdentifier.major)
+        let message = Content.getContent(ContentType.LabelTxt, name: "TaskManagerVCTheBeaconHasTaskAllreadyMessage")
+        let btnYesTxt = Content.getContent(ContentType.ButtonTxt, name: "Yes")
+        let btnNoTxt = Content.getContent(ContentType.ButtonTxt, name: "No")
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        let btnYes = UIAlertAction(title: btnYesTxt, style: UIAlertActionStyle.Default) { (action : UIAlertAction) in
             let task = self.tasksServices.getTaskForIBeaconIdentifier(closeiBeaconIdentifier)
             self.currenctTaskCreator.setCurrenctTask(task)
             self.goToNextPage(closestBeacon)
         }
         
-        let btnNo = UIAlertAction(title: "No", style: UIAlertActionStyle.Cancel) { (action : UIAlertAction) in
+        let btnNo = UIAlertAction(title: btnNoTxt, style: UIAlertActionStyle.Cancel) { (action : UIAlertAction) in
         }
         alert.addAction(btnNo)
         alert.addAction(btnYes)

@@ -136,13 +136,13 @@ extension NSDate {
         let eaviningEndTime = 25
         
         if (self.hour >= morningStartTime && self.hour <= morningEndTime) {
-            return "morning"
+            return Content.getContent(ContentType.LabelTxt, name: "TimeOfDayMorining")
         }
         if (self.hour >= afterNoonStartTime && self.hour <= afterNoonEndTime) {
-            return "afternoon"
+            return Content.getContent(ContentType.LabelTxt, name: "TimeOfDayAfterNoon")
         }
         if (self.hour >= eaviningStartTime && self.hour <= eaviningEndTime) {
-            return "eavning"
+            return Content.getContent(ContentType.LabelTxt, name: "TimeOfDayEavning")
         }
         
         return "There is no time definision"

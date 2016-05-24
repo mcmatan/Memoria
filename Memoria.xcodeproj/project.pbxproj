@@ -45,7 +45,10 @@
 		905AF3C11C1F3BD60063713A /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905AF3C01C1F3BD60063713A /* NavigationController.swift */; };
 		905AF3C41C1F41260063713A /* AddTaskTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905AF3C31C1F41260063713A /* AddTaskTimeViewController.swift */; };
 		906C36851C8E1CA80058EC85 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906C36841C8E1CA80058EC85 /* Colors.swift */; };
+		9075214F1CE904A800FDFF3D /* LabelsTextsHe.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9075214E1CE904A800FDFF3D /* LabelsTextsHe.plist */; };
 		90C5887B1C46E0AC00D84C73 /* TaskManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C5887A1C46E0AC00D84C73 /* TaskManagerViewController.swift */; };
+		90CE2AF51CF4DE0E00511ED4 /* ButtonsTextsHe.plist in Resources */ = {isa = PBXBuildFile; fileRef = 90CE2AF41CF4DE0E00511ED4 /* ButtonsTextsHe.plist */; };
+		90CE2AF71CF4E6A200511ED4 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CE2AF61CF4E6A200511ED4 /* Fonts.swift */; };
 		90DC620C1C6F62BB000C4457 /* DictionaryExntentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DC620B1C6F62BB000C4457 /* DictionaryExntentions.swift */; };
 		90DC620E1C6F6B45000C4457 /* NSDateExntentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DC620D1C6F6B45000C4457 /* NSDateExntentions.swift */; };
 		90DC62111C6F844A000C4457 /* AddTaskTimePriorityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DC62101C6F844A000C4457 /* AddTaskTimePriorityController.swift */; };
@@ -197,7 +200,10 @@
 		90687A2B1CD684BD00789FEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		90687A2D1CD684BD00789FEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		906C36841C8E1CA80058EC85 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		9075214E1CE904A800FDFF3D /* LabelsTextsHe.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LabelsTextsHe.plist; sourceTree = "<group>"; };
 		90C5887A1C46E0AC00D84C73 /* TaskManagerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskManagerViewController.swift; sourceTree = "<group>"; };
+		90CE2AF41CF4DE0E00511ED4 /* ButtonsTextsHe.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ButtonsTextsHe.plist; sourceTree = "<group>"; };
+		90CE2AF61CF4E6A200511ED4 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		90DC620B1C6F62BB000C4457 /* DictionaryExntentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryExntentions.swift; sourceTree = "<group>"; };
 		90DC620D1C6F6B45000C4457 /* NSDateExntentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateExntentions.swift; sourceTree = "<group>"; };
 		90DC62101C6F844A000C4457 /* AddTaskTimePriorityController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskTimePriorityController.swift; sourceTree = "<group>"; };
@@ -442,6 +448,7 @@
 				9035C6C61C20225300088434 /* TableView.swift */,
 				906C36841C8E1CA80058EC85 /* Colors.swift */,
 				9019EBE81C8F76AB008962A5 /* ImageView.swift */,
+				90CE2AF61CF4E6A200511ED4 /* Fonts.swift */,
 			);
 			name = UIElements;
 			sourceTree = "<group>";
@@ -474,8 +481,10 @@
 			isa = PBXGroup;
 			children = (
 				9035FE161C1B17BA00D98022 /* Content.swift */,
+				90CE2AF41CF4DE0E00511ED4 /* ButtonsTextsHe.plist */,
 				9035FE181C1B18EE00D98022 /* ButtonsTexts.plist */,
 				9035FE1C1C1B2B9B00D98022 /* LabelsTexts.plist */,
+				9075214E1CE904A800FDFF3D /* LabelsTextsHe.plist */,
 			);
 			name = Cms;
 			sourceTree = "<group>";
@@ -928,7 +937,9 @@
 			files = (
 				90E8C4A11C1AA2B8009304A9 /* LaunchScreen.storyboard in Resources */,
 				9035FE191C1B18EE00D98022 /* ButtonsTexts.plist in Resources */,
+				9075214F1CE904A800FDFF3D /* LabelsTextsHe.plist in Resources */,
 				9035FE1D1C1B2B9B00D98022 /* LabelsTexts.plist in Resources */,
+				90CE2AF51CF4DE0E00511ED4 /* ButtonsTextsHe.plist in Resources */,
 				90E8C49E1C1AA2B8009304A9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1030,6 +1041,7 @@
 				901AEDF41C4136F500DD518A /* UIViewAutoLayoutExtentions.swift in Sources */,
 				90F00A0D1C4A7C25002C98BA /* TasksServices.swift in Sources */,
 				90F00A0F1C4A7C2F002C98BA /* IBeaconServices.swift in Sources */,
+				90CE2AF71CF4E6A200511ED4 /* Fonts.swift in Sources */,
 				9035FE1B1C1B2B1D00D98022 /* ViewController.swift in Sources */,
 				90DC620C1C6F62BB000C4457 /* DictionaryExntentions.swift in Sources */,
 				90F009F71C4A7AE2002C98BA /* NotificationsNames.swift in Sources */,

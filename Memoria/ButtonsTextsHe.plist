@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ShowMeMyLovedOnes</key>
+	<string>תראה לי את האנשים הקרובים אליי</string>
+	<key>RemindMeWhereIAm</key>
+	<string>תזכיר לי מה לעשות</string>
+	<key>ThisIsMyLocationTask</key>
+	<string>זה המיקום שלי</string>
+	<key>ManageTasks</key>
+	<string>נהל משימות</string>
+	<key>Done</key>
+	<string>סיים</string>
+	<key>addTaskTimeButton</key>
+	<string>ערוך זמן משימה</string>
+	<key>btnStopRecord</key>
+	<string>הפסק להקליט</string>
+	<key>btnPlay</key>
+	<string>נגן</string>
+	<key>btnRecord</key>
+	<string>תקליט</string>
+	<key>taskConfirmationTaskSoundBtn</key>
+	<string>קול המשימה</string>
+	<key>taskConfirmationEditBtn</key>
+	<string>ערוך</string>
+	<key>DoneButton</key>
+	<string>סיים</string>
+	<key>EditButton</key>
+	<string>ערוך +</string>
+	<key>PlaySound</key>
+	<string>נגן</string>
+	<key>Ok</key>
+	<string>אוקי</string>
+	<key>Yes</key>
+	<string>כן</string>
+	<key>No</key>
+	<string>לא</string>
+	<key>NotificationThankYou</key>
+	<string>תודה</string>
+	<key>RemingMeLater</key>
+	<string>הזכר לי מאוחר יותר</string>
+	<key>OkThanks</key>
+	<string>בסדר תודה</string>
+</dict>
+</plist>

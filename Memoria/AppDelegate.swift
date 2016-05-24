@@ -25,13 +25,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             let beaconIdentifier = IBeaconIdentifier(uuid: "124", major: "123", minor: "123")
             let date = NSDate() - 3.hours
-            _ = Task(taskName: "Take the dog out", taskTime: date, taskVoiceURL: NSURL(), taskBeaconIdentifier: beaconIdentifier, taskTimePriorityHi: true)
+            let task = Task(taskName: "Take the dog out", taskTime: date, taskVoiceURL: NSURL(), taskBeaconIdentifier: beaconIdentifier, taskTimePriorityHi: true)
             
 //            self.vc = Bootstrapper.container.resolve(TaskNotificationPopUp.self, argument: task)
 //            self.vc = Bootstrapper.container.resolve(TaskVerificationPopUp.self, argument: task)
 //            self.vc = Bootstrapper.container.resolve(TaskWarningPopUp.self, argument: task)
             
-//            rootViewController!.presentViewController(self.vc, animated: true, completion: nil)
+            rootViewController!.presentViewController(self.vc, animated: true, completion: nil)
             
         }
 

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>TesksFirstExplenation</key>
+	<string>לך למיקום הרצוי
+ואז לחץ להוסיף משימה</string>
+	<key>or</key>
+	<string>או</string>
+	<key>enterTestName</key>
+	<string>הוסף של למשימה</string>
+	<key>taskName</key>
+	<string>שם המשימה:</string>
+	<key>addTaskTimeButton</key>
+	<string>ערוך את זמן המשימה</string>
+	<key>addTimeDoneBtn</key>
+	<string>סיים</string>
+	<key>addTaskVoiceTopTxt</key>
+	<string>הקלט קול שמע למשימה</string>
+	<key>taskConfirmationTaskNameDesc</key>
+	<string>שם המשימה</string>
+	<key>taskConfirmationTaskSoundDesc</key>
+	<string>קול המשימה</string>
+	<key>taskConfirmationTaskTimeDesc</key>
+	<string>זמן המשימה</string>
+	<key>taskConfirmationTaskTimePriorityDesc</key>
+	<string> עדיפות המשימה</string>
+	<key>addTaskVoiceTitle</key>
+	<string>קול המשימה</string>
+	<key>AddTaskPrirityExpenation</key>
+	<string>הגדר את המשימה בעדיפות גבוהה כדיי לא לאפשר ביצוע שלא בזמן המוגדר</string>
+	<key>TaskManagerRemaining</key>
+	<string>זמן הנותר %@</string>
+	<key>TaskManagerVCCreateTask</key>
+	<string>+ צור משימה חדשה</string>
+	<key>TaskManagerVCLblTop</key>
+	<string>הזכרונות שלי</string>
+	<key>TaskManagerVCNoRemainingTasks</key>
+	<string>אין משימות</string>
+	<key>TaskManagerVCTaskNameCell</key>
+	<string>שם המסימה:</string>
+	<key>TaskManagerVCDetailsTxtCell</key>
+	<string>זמן משימה: %@  major: %@</string>
+	<key>TaskManagerVCNoTasksAssigened</key>
+	<string>אין משימה משוייכת</string>
+	<key>TaskManagerVCNoBeaconInEreas</key>
+	<string>לא נמצאו ביקויינים בטווח</string>
+	<key>TaskManagerVCTheBeaconHasTaskAllreadyMessage</key>
+	<string>לביקון שבחרת %@ כבר יש משימה משוייכת</string>
+	<key>TaskManagerVCTheBeaconHasTaskAllreadyTitle</key>
+	<string>האם ברצונך לערוך את המשימה?</string>
+	<key>AddTaskTimeDatePickerDialog</key>
+	<string>בחר תאריך</string>
+	<key>TaskWarningPopUpDidAllready</key>
+	<string>כבר ביצעת את ה%@ היום</string>
+	<key>TaskWarningPopUpDidLaterToday</key>
+	<string>ה %@ מתוזמן לזמן מאוחר יותר היום</string>
+	<key>TaskWarningPopUpDidCerfulNotToTakeTwice</key>
+	<string>תזהר לא לבצע פעמיים</string>
+	<key>TaskWarningPopUpDidPleaseWaitFor</key>
+	<string>אנה המתן ל %@</string>
+	<key>TaskVerificationPopUpISeeYourNeer</key>
+	<string>אני רואה שאתה לייד %@</string>
+	<key>TaskVerificationPopUpDidYouYet</key>
+	<string>האם כבר בצעת את %@ היום?</string>
+	<key>TaskVerificationPopUpUserName</key>
+	<string>דור</string>
+	<key>TaskVerificationPopUpGoodTimeOfDay</key>
+	<string>%@ %@</string>
+	<key>TaskVerificationPopUpItsTimeFor</key>
+	<string>עכשיו %@ זה הזמן ל %@</string>
+	<key>TabBarTasksLbl</key>
+	<string>משימות</string>
+	<key>TaskManagerTitle</key>
+	<string>מנהל משימות</string>
+	<key>TimeOfDayMorining</key>
+	<string>בוקר טוב</string>
+	<key>TimeOfDayAfterNoon</key>
+	<string>צהוריים טובים</string>
+	<key>TimeOfDayEavning</key>
+	<string>ערב טוב</string>
+</dict>
+</plist>

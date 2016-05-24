@@ -30,5 +30,17 @@
 	<string>Edit +</string>
 	<key>PlaySound</key>
 	<string>Play Sound</string>
+	<key>Ok</key>
+	<string>Ok</string>
+	<key>Yes</key>
+	<string>Yes</string>
+	<key>No</key>
+	<string>No</string>
+	<key>NotificationThankYou</key>
+	<string>Thank you</string>
+	<key>RemingMeLater</key>
+	<string>Remind me later</string>
+	<key>OkThanks</key>
+	<string>Ok thanks!</string>
 </dict>
 </plist>

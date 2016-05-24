@@ -58,7 +58,7 @@ class AddTaskConfirmationViewController : ViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Done, target: self, action: "doneButtonPress")
+        let doneButton = UIBarButtonItem(title: Content.getContent(ContentType.ButtonTxt, name: "Done"), style: UIBarButtonItemStyle.Done, target: self, action: #selector(AddTaskConfirmationViewController.doneButtonPress))
         self.navigationItem.rightBarButtonItem = doneButton
 
         //Name

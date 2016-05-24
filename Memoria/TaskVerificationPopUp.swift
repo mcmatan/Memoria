@@ -48,7 +48,7 @@ class TaskVerificationPopUp : ViewController {
         imgLight.heightLayoutAs(150)
         imgLight.topToViewControllerTopLayoutGuide(self, offset: 70)
         
-        self.lblISeeYourNear.text = "I see your near \(self.task.taskName!)."
+        self.lblISeeYourNear.text = String.localizedStringWithFormat(Content.getContent(ContentType.LabelTxt, name: "TaskVerificationPopUpISeeYourNeer"), self.task.taskName!)
         self.lblISeeYourNear.font = UIFont.systemFontOfSize(28)
         self.lblISeeYourNear.numberOfLines = 0
         self.lblISeeYourNear.textAlignment = NSTextAlignment.Center
@@ -58,7 +58,8 @@ class TaskVerificationPopUp : ViewController {
         self.lblISeeYourNear.leadingToSuperView(true)
         self.lblISeeYourNear.trailingToSuperView(true)
         
-        self.lblDidYouYet.text = "Did you \(self.task.taskName!) yet?"
+        
+        self.lblDidYouYet.text = String.localizedStringWithFormat(Content.getContent(ContentType.LabelTxt, name: "TaskVerificationPopUpDidYouYet"), self.task.taskName!)
         self.lblDidYouYet.titleGray()
         self.lblDidYouYet.font = UIFont.systemFontOfSize(22)
         self.lblDidYouYet.textAlignment = NSTextAlignment.Center
@@ -66,6 +67,8 @@ class TaskVerificationPopUp : ViewController {
         self.view.addSubview(self.lblDidYouYet)
         self.lblDidYouYet.centerVerticlyInSuperView()
         self.lblDidYouYet.topAlighnToViewBottom(self.lblISeeYourNear, offset: 13)
+        self.lblDidYouYet.leadingToSuperView(true)
+        self.lblDidYouYet.trailingToSuperView(true)
         
         self.view.addSubview(self.btnYes)
         self.btnYes.notificiationYesVericiation()

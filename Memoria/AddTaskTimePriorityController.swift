@@ -45,13 +45,13 @@ class AddTaskTimePriorityController: ViewController {
         
         self.switchPrairity = UISwitch()
         
-        self.btnDone.setTitle("Done", forState: UIControlState.Normal)
+        self.btnDone.setTitle(Content.getContent(ContentType.ButtonTxt, name: "DoneButton"), forState: UIControlState.Normal)
         self.btnDone.addTarget(self, action: #selector(AddTaskTimePriorityController.doneBtnPress), forControlEvents: UIControlEvents.TouchUpInside)
         self.btnDone.defaultStyle()
         
         self.lblExplenation.font = UIFont.systemFontOfSize(15)
         self.lblExplenation.textAlignment = NSTextAlignment.Center
-        self.lblExplenation.text = "Turn switch on for Hi priority.\n That means You cannot accomplish the task not at time"
+        self.lblExplenation.text = Content.getContent(ContentType.LabelTxt, name: "AddTaskPrirityExpenation")
         self.lblExplenation.numberOfLines = 0
         
         self.view.addSubview(lblExplenation)

@@ -16,7 +16,7 @@ public class AssemblyControllers {
             let controllers = [left]
             tabBar.viewControllers = controllers
             left.tabBarItem = UITabBarItem(
-                title: "Tasks",
+                title: Content.getContent(ContentType.LabelTxt, name: "TabBarTasksLbl"),
                 image: UIImage(named: "TasksManagerLogoTabOnlyImage"),
                 tag: 1)
 //            center.tabBarItem = UITabBarItem(

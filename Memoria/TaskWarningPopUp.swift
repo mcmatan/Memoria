@@ -47,8 +47,9 @@ class TaskWarningPopUp : ViewController {
         imgError.heightLayoutAs(117)
         imgError.topToViewControllerTopLayoutGuide(self, offset: 70)
         
-        let didAllreadyString = "You Already \(self.task.taskName!) today"
-        let laterTodayString = "The \(self.task.taskName!) is scheduled later today"
+        
+        let didAllreadyString = String.localizedStringWithFormat(Content.getContent(ContentType.LabelTxt, name: "TaskWarningPopUpDidAllready"), self.task.taskName!)
+        let laterTodayString = String.localizedStringWithFormat(Content.getContent(ContentType.LabelTxt, name: "TaskWarningPopUpDidLaterToday"), self.task.taskName!)
         let warningString = (self.task.taskTime <= NSDate()) ? didAllreadyString : laterTodayString
         
         self.lblYouAllreadyTook.text = warningString
@@ -61,8 +62,8 @@ class TaskWarningPopUp : ViewController {
         self.lblYouAllreadyTook.leadingToSuperView(true)
         self.lblYouAllreadyTook.trailingToSuperView(true)
         
-        let didAllreadyStringBecareful = "Be careful not to do it twice"
-        let laterTodayStringBecareful = "Please wait for \(task.taskTime!.toStringCurrentRegionShortTime())"
+        let didAllreadyStringBecareful = Content.getContent(ContentType.LabelTxt, name: "TaskWarningPopUpDidCerfulNotToTakeTwice")
+        let laterTodayStringBecareful = String.localizedStringWithFormat(Content.getContent(ContentType.LabelTxt, name: "TaskWarningPopUpDidPleaseWaitFor"), task.taskTime!.toStringCurrentRegionShortTime())
         let beCarefulString = (self.task.taskTime <= NSDate()) ? didAllreadyStringBecareful : laterTodayStringBecareful
         
         self.lblBeCareful.text = beCarefulString

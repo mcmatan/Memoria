@@ -16,7 +16,7 @@ class Content : NSObject {
         var path : String!
         switch contentType {
         case ContentType.ButtonTxt:
-            path = NSBundle.mainBundle().pathForResource("ButtonsTexts", ofType: "plist") as String!
+            path = NSBundle.mainBundle().pathForResource("ButtonsTextsHe", ofType: "plist") as String!
         case ContentType.ToolTipTxt:
             path = NSBundle.mainBundle().pathForResource("ToolTipsPlist", ofType: "plist") as String!
         case ContentType.WarningTxt:
@@ -24,7 +24,7 @@ class Content : NSObject {
         case ContentType.AlertTxt:
             path = NSBundle.mainBundle().pathForResource("AlertsTxts", ofType: "plist") as String!
         case ContentType.LabelTxt:
-            path = NSBundle.mainBundle().pathForResource("LabelsTexts", ofType: "plist") as String!
+            path = NSBundle.mainBundle().pathForResource("LabelsTextsHe", ofType: "plist") as String!
         }
         
         if let _ = path {

@@ -53,6 +53,15 @@ class Button : UIButton {
         self.layer.cornerRadius = 4.0
     }
     
+    func defaultBigButton() {
+        self.clipsToBounds = false
+        self.layer.cornerRadius = 3.0
+        self.widthLayoutAs(242)
+        self.heightLayoutAs(44)
+        let font = Fonts.defaultBigButtonFont()
+        self.titleLabel?.font = font
+    }
+    
     internal func editBtn() {
         self.setBackgroundImage(UIImage(named: "EditBtn"), forState: UIControlState.Normal)
         self.widthLayoutAs(67)
@@ -66,40 +75,33 @@ class Button : UIButton {
     }
     
     internal func notificiationPlaySoundBtn() {
-        self.setBackgroundImage(UIImage(named: "PlayNotificiationSoundGreenBtn"), forState: UIControlState.Normal)
-        self.widthLayoutAs(242)
-        self.heightLayoutAs(44)
+        self.backgroundColor = Colors.green()
+        self.defaultBigButton()
+        self.setTitle(Content.getContent(ContentType.ButtonTxt, name: "PlaySound"), forState: UIControlState.Normal)
     }
     
     internal func notificiationOkThanksBtn() {
         self.backgroundColor = Colors.lightGray()
-        self.clipsToBounds = false
-        self.layer.cornerRadius = 3.0
-        self.widthLayoutAs(242)
-        self.heightLayoutAs(44)
-        let font = UIFont(name: ".SFUIText-Medium", size: 19)!
-        self.titleLabel?.font = font
-        
-        //SFUIText-Light
-        self.setTitle("Ok thanks!", forState: UIControlState.Normal)
+        self.defaultBigButton()
+        self.setTitle(Content.getContent(ContentType.ButtonTxt, name: "OkThanks"), forState: UIControlState.Normal)
     }
 
     internal func notificiationRemindMeLater() {
-        self.setBackgroundImage(UIImage(named: "BtnRemindMeLaterVerification"), forState: UIControlState.Normal)
-        self.widthLayoutAs(284)
-        self.heightLayoutAs(50)
+        self.backgroundColor = Colors.lightGray()
+        self.defaultBigButton()
+        self.setTitle(Content.getContent(ContentType.ButtonTxt, name: "RemingMeLater"), forState: UIControlState.Normal)
     }
 
     internal func notificiationYesVericiation() {
-        self.setBackgroundImage(UIImage(named: "BtnYesVerification"), forState: UIControlState.Normal)
-        self.widthLayoutAs(284)
-        self.heightLayoutAs(50)
+        self.backgroundColor = Colors.green()
+        self.defaultBigButton()
+        self.setTitle(Content.getContent(ContentType.ButtonTxt, name: "Yes"), forState: UIControlState.Normal)
     }
 
     internal func notificiationThankYou() {
-        self.setBackgroundImage(UIImage(named: "NotificationThankYouBtn"), forState: UIControlState.Normal)
-        self.widthLayoutAs(284)
-        self.heightLayoutAs(50)
+        self.backgroundColor = Colors.green()
+        self.defaultBigButton()
+        self.setTitle(Content.getContent(ContentType.ButtonTxt, name: "NotificationThankYou"), forState: UIControlState.Normal)
     }
     
     internal func notificiationPlayingGray() {

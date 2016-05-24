@@ -76,7 +76,8 @@ class AddTaskTimeViewController : ViewController {
     
     
     func addTimeButtonPress() {
-        DatePickerDialog().show("Choose a date", datePickerMode: UIDatePickerMode.DateAndTime) { (date) -> Void in
+        let txt = Content.getContent(ContentType.LabelTxt, name: "AddTaskTimeDatePickerDialog")
+        DatePickerDialog().show(txt, datePickerMode: UIDatePickerMode.DateAndTime) { (date) -> Void in
             print(date)
             self.chosenTime = date
             self.setTimeToDisplay(date)
