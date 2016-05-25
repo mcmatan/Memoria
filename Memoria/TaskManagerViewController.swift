@@ -55,7 +55,8 @@ class TaskManagerViewController : ViewController, UITableViewDelegate, UITableVi
         
         var remaining = self.allTasks.count
         if (remaining > 0) {
-            self.lblCount.text = String.localizedStringWithFormat(Content.getContent(ContentType.LabelTxt, name: "TaskManagerRemaining"), remaining)
+            let text = Content.getContent(ContentType.LabelTxt, name: "TaskManagerRemaining")
+            self.lblCount.text = String.localizedStringWithFormat(text, remaining)
         }
     }
     

@@ -15,7 +15,7 @@ protocol IbeaconsTrackerDelegate {
 
 class IbeaconsTracker : NSObject,  KTKLocationManagerDelegate {
     var delegate : IbeaconsTrackerDelegate?
-    let minimunDistanceToBeacon = 0.2 //In miters
+    let minimunDistanceToBeacon = 0.6 //In miters
     let searchForBeaconDelayTime = 2.0
     let locationManager = KTKLocationManager()
     var currentClosesBeacon : CLBeacon?

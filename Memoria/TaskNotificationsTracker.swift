@@ -46,12 +46,16 @@ class TaskNotificationsTracker : NSObject, IbeaconsTrackerDelegate, SchedulerDel
                 let isStandingLongEnouth = self.isNearTaskLongEnouth(task!)
                 if isStandingLongEnouth == true  {
                     if task!.isTaskDone == true {
+                        print("Task allready done, and standing near")
                         self.taskWarning(task!)
                     } else if self.shouldPerformTaskNow(task!) == true {
+                        print("Marking task as done, since standing near at task time")
                         self.markTaskAsDone(task!)
                     } else if task!.taskisOnHold == true {
+                        print("Marking task as done, since standing near at task when on hold")
                         self.markTaskAsDone(task!)
                     } else {
+                        print("Task not done and standing near")
                         self.taskNotDoneAndStandingNear(task!)
                     }
                 }
@@ -115,12 +119,15 @@ class TaskNotificationsTracker : NSObject, IbeaconsTrackerDelegate, SchedulerDel
     private func taskNotDoneAndStandingNear(task : Task) {
         if task.taskTimePriorityHi == true {
                 if task.taskTime?.isInTheFuture() == true { // If the task in the future, warn user about not doing it now.
+                    print("Showing warning since stadning near not at time, and hi prioriry")
                 self.taskWarning(task)
                 } else { // If the task is at the past, and its not done. so let the user confiem he allready did.
+                    print("If the task is at the past, and its not done. so let the user confiem he allready did.")
                 NSNotificationCenter.defaultCenter().postNotificationName(NotificationsNames.kPresentTaskVerification, object: task, userInfo: nil)
             }
         } else {
             //TODO: :Push-Verification Early-Completion
+            print("Showing verification")
             NSNotificationCenter.defaultCenter().postNotificationName(NotificationsNames.kPresentTaskVerification, object: task, userInfo: nil)
         }
     }
