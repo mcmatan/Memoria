@@ -10,7 +10,7 @@ import Foundation
 
 class TaskNotificationsTracker : NSObject, IbeaconsTrackerDelegate, SchedulerDelegate {
     private let taskDB : TasksDB
-    private let minTimeFromWarningToWarning = 3 // min
+    private let minTimeFromWarningToWarning = 1.5 // min
     private let timeFromTaskDoneToShowWarningWhenNear = 60 //Sec
     private let maxTimeStandingNearTaskBeforeAction = 10 //Sec
     private let timeForRecognisionThatPerformingTaskInSec = 10 // Sec
@@ -50,10 +50,10 @@ class TaskNotificationsTracker : NSObject, IbeaconsTrackerDelegate, SchedulerDel
                         self.taskWarning(task!)
                     } else if self.shouldPerformTaskNow(task!) == true {
                         print("Marking task as done, since standing near at task time")
-                        self.markTaskAsDone(task!)
+                        self.verifyUserDoingTask(task!)
                     } else if task!.taskisOnHold == true {
                         print("Marking task as done, since standing near at task when on hold")
-                        self.markTaskAsDone(task!)
+                        self.verifyUserDoingTask(task!)
                     } else {
                         print("Task not done and standing near")
                         self.taskNotDoneAndStandingNear(task!)
@@ -132,6 +132,10 @@ class TaskNotificationsTracker : NSObject, IbeaconsTrackerDelegate, SchedulerDel
         }
     }
     
+    private func verifyUserDoingTask(task : Task) {
+        NSNotificationCenter.defaultCenter().postNotificationName(NotificationsNames.kPresentTaskVerification, object: task, userInfo: nil)
+    }
+    
     private func taskWarning(task : Task) {
         let now = NSDate()
         if (now.secondsFrom(task.taskTime!) > timeFromTaskDoneToShowWarningWhenNear
@@ -141,7 +145,7 @@ class TaskNotificationsTracker : NSObject, IbeaconsTrackerDelegate, SchedulerDel
             if task.taskTimePriorityHi == true {
                 if let isTaskLastWarningShow = task.timeLastWarningWasShow {
                     let now = NSDate()
-                    if isTaskLastWarningShow.minutesFrom(now) < minTimeFromWarningToWarning {
+                    if Float(isTaskLastWarningShow.minutesFrom(now)) < Float(minTimeFromWarningToWarning) {
                         return
                     }
                 }
