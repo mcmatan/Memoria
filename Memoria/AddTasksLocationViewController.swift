@@ -10,7 +10,7 @@ class AddTasksLocationViewController : ViewController {
     let iBeaconServices : IBeaconServices
     var currenctTaskCreator : CurrenctTaskCreator
     var addTaskNameViewController : AddTaskNameViewController?
-    let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.WhiteLarge)
+    let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.whiteLarge)
     
     init(container : Container, tasksServices : TasksServices, iBeaconServices : IBeaconServices, currenctTaskCreator : CurrenctTaskCreator) {
         self.container = container
@@ -24,7 +24,7 @@ class AddTasksLocationViewController : ViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.currenctTaskCreator.startNewTask()
     }
@@ -34,19 +34,19 @@ class AddTasksLocationViewController : ViewController {
         
         let topExpelenationText = Label()
         topExpelenationText.numberOfLines = 0
-        topExpelenationText.textAlignment = NSTextAlignment.Center
-        let txt = Content.getContent(ContentType.LabelTxt, name: "TesksFirstExplenation")
+        topExpelenationText.textAlignment = NSTextAlignment.center
+        let txt = Content.getContent(ContentType.labelTxt, name: "TesksFirstExplenation")
         topExpelenationText.text = txt
         let thisIsMyLocation = Button()
         thisIsMyLocation.defaultStyle()
-        thisIsMyLocation.setTitle(Content.getContent(ContentType.ButtonTxt, name: "ThisIsMyLocationTask"), forState: UIControlState.Normal)
-        thisIsMyLocation.addTarget(self, action: #selector(AddTasksLocationViewController.thisIsMyLocationPress), forControlEvents: UIControlEvents.TouchUpInside)
+        thisIsMyLocation.setTitle(Content.getContent(ContentType.buttonTxt, name: "ThisIsMyLocationTask"), for: UIControlState())
+        thisIsMyLocation.addTarget(self, action: #selector(AddTasksLocationViewController.thisIsMyLocationPress), for: UIControlEvents.touchUpInside)
         let or = Label()
-        or.text = Content.getContent(ContentType.LabelTxt, name: "or")
+        or.text = Content.getContent(ContentType.labelTxt, name: "or")
         let manageTasks = Button()
         manageTasks.defaultStyle()
-        manageTasks.setTitle(Content.getContent(ContentType.ButtonTxt, name: "ManageTasks"), forState: UIControlState.Normal)
-        manageTasks.addTarget(self, action: #selector(AddTasksLocationViewController.menageTasksButtonPress), forControlEvents: UIControlEvents.TouchUpInside)
+        manageTasks.setTitle(Content.getContent(ContentType.buttonTxt, name: "ManageTasks"), for: UIControlState())
+        manageTasks.addTarget(self, action: #selector(AddTasksLocationViewController.menageTasksButtonPress), for: UIControlEvents.touchUpInside)
         self.view.addSubview(topExpelenationText)
         self.view.addSubview(thisIsMyLocation)
         self.view.addSubview(or)
@@ -73,12 +73,12 @@ class AddTasksLocationViewController : ViewController {
         
         var allConstrains = [NSLayoutConstraint]()
         
-        let verticalLayout = NSLayoutConstraint.constraintsWithVisualFormat(
-            "V:[topLayoutGuide]-[topExpelenationText]-[thisIsMyLocation]-[or(topExpelenationText)]-[manageTasks]-[bottomLayoutGuide]"
-            , options: NSLayoutFormatOptions.AlignAllCenterX, metrics: nil, views: views)
+        let verticalLayout = NSLayoutConstraint.constraints(
+            withVisualFormat: "V:[topLayoutGuide]-[topExpelenationText]-[thisIsMyLocation]-[or(topExpelenationText)]-[manageTasks]-[bottomLayoutGuide]"
+            , options: NSLayoutFormatOptions.alignAllCenterX, metrics: nil, views: views)
         
-        let horizintalLayout = NSLayoutConstraint.constraintsWithVisualFormat(
-            "H:|[topExpelenationText]|"
+        let horizintalLayout = NSLayoutConstraint.constraints(
+            withVisualFormat: "H:|[topExpelenationText]|"
             , options: [], metrics: nil, views: views)
         
         UIViewAutoLayoutExtentions.centerVerticlyAlViewsInSuperView([activityIndicator])
@@ -86,7 +86,7 @@ class AddTasksLocationViewController : ViewController {
         
         allConstrains += verticalLayout
         allConstrains += horizintalLayout
-        NSLayoutConstraint.activateConstraints(allConstrains)
+        NSLayoutConstraint.activate(allConstrains)
 
     }
     
@@ -119,34 +119,34 @@ class AddTasksLocationViewController : ViewController {
     //MARK: Alerts
     
     func showNoBeaconInEreaMessage() {
-        let alert = UIAlertController(title: Content.getContent(ContentType.LabelTxt, name: "TaskManagerVCNoBeaconInEreas"), message: "", preferredStyle: UIAlertControllerStyle.Alert)
-        let btnOk = UIAlertAction(title: Content.getContent(ContentType.ButtonTxt, name: "Ok"), style: UIAlertActionStyle.Cancel) { (action : UIAlertAction) in
+        let alert = UIAlertController(title: Content.getContent(ContentType.labelTxt, name: "TaskManagerVCNoBeaconInEreas"), message: "", preferredStyle: UIAlertControllerStyle.alert)
+        let btnOk = UIAlertAction(title: Content.getContent(ContentType.buttonTxt, name: "Ok"), style: UIAlertActionStyle.cancel) { (action : UIAlertAction) in
         }
         alert.addAction(btnOk)
-        self.presentViewController(alert, animated: true, completion: nil)
+        self.present(alert, animated: true, completion: nil)
 
     }
     
-    func showBeaconHasAlreadyTaskAssignedMessage(closestBeacon : CLBeacon) {
+    func showBeaconHasAlreadyTaskAssignedMessage(_ closestBeacon : CLBeacon) {
         let closeiBeaconIdentifier = IBeaconIdentifier.creatFromCLBeacon(closestBeacon)
         
-        let alert = UIAlertController(title: "The beacon you have selected \(closeiBeaconIdentifier.major), already has a task assigend to it", message: "Do you want to edit the task?", preferredStyle: UIAlertControllerStyle.Alert)
-        let btnYes = UIAlertAction(title: "Yes", style: UIAlertActionStyle.Default) { (action : UIAlertAction) in
+        let alert = UIAlertController(title: "The beacon you have selected \(closeiBeaconIdentifier.major), already has a task assigend to it", message: "Do you want to edit the task?", preferredStyle: UIAlertControllerStyle.alert)
+        let btnYes = UIAlertAction(title: "Yes", style: UIAlertActionStyle.default) { (action : UIAlertAction) in
             let task = self.tasksServices.getTaskForIBeaconIdentifier(closeiBeaconIdentifier)
             self.currenctTaskCreator.setCurrenctTask(task)
             self.goToNextPage(closestBeacon)
         }
         
-        let btnNo = UIAlertAction(title: "No", style: UIAlertActionStyle.Cancel) { (action : UIAlertAction) in
+        let btnNo = UIAlertAction(title: "No", style: UIAlertActionStyle.cancel) { (action : UIAlertAction) in
         }
         alert.addAction(btnNo)
         alert.addAction(btnYes)
-        self.presentViewController(alert, animated: true, completion: nil)
+        self.present(alert, animated: true, completion: nil)
     }
     
     //MARK: Navgiation
     
-    func goToNextPage(closestBeacon : CLBeacon) {
+    func goToNextPage(_ closestBeacon : CLBeacon) {
         let closeiBeaconIdentifier = IBeaconIdentifier.creatFromCLBeacon(closestBeacon)
         self.currenctTaskCreator.setTaskBeaconIdentifier(closeiBeaconIdentifier)
         

@@ -21,7 +21,7 @@ class AddTaskVoiceViewController : ViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         if let isVoiceRecorder = currenctTaskCreator.getTaskVoiceURL() {
             self.recorder.setURLToPlayFrom(isVoiceRecorder)
@@ -32,26 +32,26 @@ class AddTaskVoiceViewController : ViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.title = Content.getContent(ContentType.LabelTxt, name: "addTaskVoiceTitle")
+        self.title = Content.getContent(ContentType.labelTxt, name: "addTaskVoiceTitle")
 
         btnRecord.defaultStyle()
-        btnRecord.setTitle(Content.getContent(ContentType.ButtonTxt, name: "btnRecord"), forState: UIControlState.Normal)
-        btnRecord.addTarget(self, action: #selector(AddTaskVoiceViewController.recordButtonPress), forControlEvents: UIControlEvents.TouchUpInside)
+        btnRecord.setTitle(Content.getContent(ContentType.buttonTxt, name: "btnRecord"), for: UIControlState.normal)
+        btnRecord.addTarget(self, action: #selector(AddTaskVoiceViewController.recordButtonPress), for: UIControlEvents.touchUpInside)
         
         let btnStopRecord = Button()
-        btnStopRecord.setTitle(Content.getContent(ContentType.ButtonTxt, name: "btnStopRecord"), forState: UIControlState.Normal)
-        btnStopRecord.addTarget(self, action: #selector(AddTaskVoiceViewController.stopRecordButtonPress), forControlEvents: UIControlEvents.TouchUpInside)
+        btnStopRecord.setTitle(Content.getContent(ContentType.buttonTxt, name: "btnStopRecord"), for: UIControlState.normal)
+        btnStopRecord.addTarget(self, action: #selector(AddTaskVoiceViewController.stopRecordButtonPress), for: UIControlEvents.touchUpInside)
         btnStopRecord.defaultStyle()
 
         let btnPlay = Button()
         btnPlay.defaultStyle()
-        btnPlay.setTitle(Content.getContent(ContentType.ButtonTxt, name: "btnPlay"), forState: UIControlState.Normal)
-        btnPlay.addTarget(self, action: #selector(AddTaskVoiceViewController.playButtonPress), forControlEvents: UIControlEvents.TouchUpInside)
+        btnPlay.setTitle(Content.getContent(ContentType.buttonTxt, name: "btnPlay"), for: UIControlState.normal)
+        btnPlay.addTarget(self, action: #selector(AddTaskVoiceViewController.playButtonPress), for: UIControlEvents.touchUpInside)
         
         let btnDone = Button()
         btnDone.defaultStyle()
-        btnDone.setTitle(Content.getContent(ContentType.ButtonTxt, name: "DoneButton"), forState: UIControlState.Normal)
-        btnDone.addTarget(self, action: #selector(AddTaskVoiceViewController.btnDonePress), forControlEvents: UIControlEvents.TouchUpInside)
+        btnDone.setTitle(Content.getContent(ContentType.buttonTxt, name: "DoneButton"), for: UIControlState.normal)
+        btnDone.addTarget(self, action: #selector(AddTaskVoiceViewController.btnDonePress), for: UIControlEvents.touchUpInside)
 
         btnRecord.translatesAutoresizingMaskIntoConstraints = false
         btnStopRecord.translatesAutoresizingMaskIntoConstraints = false
@@ -73,12 +73,12 @@ class AddTaskVoiceViewController : ViewController {
             "btnDone" : btnDone
         ]
         
-        let verticalLayout = NSLayoutConstraint.constraintsWithVisualFormat(
-        "V:[btnRecord]-[btnStopRecord]-[btnPlay]-[btnDone]", options: NSLayoutFormatOptions.AlignAllCenterX, metrics: nil, views: viewsKeys)
+        let verticalLayout = NSLayoutConstraint.constraints(
+            withVisualFormat: "V:[btnRecord]-[btnStopRecord]-[btnPlay]-[btnDone]", options: NSLayoutFormatOptions.alignAllCenterX, metrics: nil, views: viewsKeys)
         
         btnRecord.topToViewControllerTopLayoutGuide(self, offset: 10)
         btnRecord.centerVerticlyInSuperView()
-        NSLayoutConstraint.activateConstraints(verticalLayout)
+        NSLayoutConstraint.activate(verticalLayout)
         
     }
 

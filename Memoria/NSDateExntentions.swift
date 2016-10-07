@@ -9,74 +9,74 @@
 import Foundation
 import UIKit
 
-extension NSDate {
+extension Date {
     
-    func secoundsAgoFromDate(date : NSDate)->NSInteger {
-        let calendar = NSCalendar.currentCalendar()
-        let unitFlags = NSCalendarUnit.Second
-        let earliest = self.earlierDate(date)
+    func secoundsAgoFromDate(_ date : Date)->NSInteger {
+        let calendar = Calendar.current
+        let unitFlags = NSCalendar.Unit.second
+        let earliest = (self as NSDate).earlierDate(date)
         let latest = (earliest == self) ? date : self
-        let components:NSDateComponents = calendar.components(unitFlags, fromDate: earliest, toDate: latest, options: NSCalendarOptions.WrapComponents)
+        let components:DateComponents = (calendar as NSCalendar).components(unitFlags, from: earliest, to: latest, options: NSCalendar.Options.wrapComponents)
         
-        return components.second
+        return components.second!
     }
     
-    func yearsFrom(date:NSDate) -> Int{
-        return NSCalendar.currentCalendar().components(.Year, fromDate: date, toDate: self, options: []).year
+    func yearsFrom(_ date:Date) -> Int{
+        return (Calendar.current as NSCalendar).components(.year, from: date, to: self, options: []).year!
     }
-    func monthsFrom(date:NSDate) -> Int{
-        return NSCalendar.currentCalendar().components(.Month, fromDate: date, toDate: self, options: []).month
+    func monthsFrom(_ date:Date) -> Int{
+        return (Calendar.current as NSCalendar).components(.month, from: date, to: self, options: []).month!
     }
-    func weeksFrom(date:NSDate) -> Int{
-        return NSCalendar.currentCalendar().components(.WeekOfYear, fromDate: date, toDate: self, options: []).weekOfYear
+    func weeksFrom(_ date:Date) -> Int{
+        return (Calendar.current as NSCalendar).components(.weekOfYear, from: date, to: self, options: []).weekOfYear!
     }
-    func daysFrom(date:NSDate) -> Int{
-        return NSCalendar.currentCalendar().components(.Day, fromDate: date, toDate: self, options: []).day
+    func daysFrom(_ date:Date) -> Int{
+        return (Calendar.current as NSCalendar).components(.day, from: date, to: self, options: []).day!
     }
-    func hoursFrom(date:NSDate) -> Int{
-        return NSCalendar.currentCalendar().components(.Hour, fromDate: date, toDate: self, options: []).hour
+    func hoursFrom(_ date:Date) -> Int{
+        return (Calendar.current as NSCalendar).components(.hour, from: date, to: self, options: []).hour!
     }
-    func minutesFrom(date:NSDate) -> Int{
-        return NSCalendar.currentCalendar().components(.Minute, fromDate: date, toDate: self, options: []).minute
+    func minutesFrom(_ date:Date) -> Int{
+        return (Calendar.current as NSCalendar).components(.minute, from: date, to: self, options: []).minute!
     }
-    func secondsFrom(date:NSDate) -> Int{
-        return NSCalendar.currentCalendar().components(.Second, fromDate: date, toDate: self, options: []).second
+    func secondsFrom(_ date:Date) -> Int{
+        return (Calendar.current as NSCalendar).components(.second, from: date, to: self, options: []).second!
     }
     
     func isInThePast()->Bool {
-        return NSDate() > self
+        return Date() > self
     }
     
     func isInTheFuture()->Bool {
-        return NSDate() < self
+        return Date() < self
     }
     
     func toStringWithCurrentRegion()-> String {
-        let formatter = NSDateFormatter()
+        let formatter = DateFormatter()
         formatter.dateFormat = "yyyy/MM/dd-hh:mm:ss"
-        formatter.locale =  NSLocale.currentLocale()
-        let formattedDateString = formatter.stringFromDate(self)
+        formatter.locale =  Locale.current
+        let formattedDateString = formatter.string(from: self)
     
         return formattedDateString
     }
     
     func toStringCurrentRegionShortTime()->String {
-        let formatter = NSDateFormatter()
+        let formatter = DateFormatter()
         formatter.dateFormat = "h:mm a"
-        formatter.AMSymbol = "AM"
-        formatter.PMSymbol = "PM"
-        formatter.locale = NSLocale.currentLocale()
+        formatter.amSymbol = "AM"
+        formatter.pmSymbol = "PM"
+        formatter.locale = Locale.current
         
-        let dateString = formatter.stringFromDate(self)
+        let dateString = formatter.string(from: self)
         return dateString    // "3:11 AM
     }
     
-        func isGreaterThanDate(dateToCompare: NSDate) -> Bool {
+        func isGreaterThanDate(_ dateToCompare: Date) -> Bool {
             //Declare Variables
             var isGreater = false
             
             //Compare Values
-            if self.compare(dateToCompare) == NSComparisonResult.OrderedDescending {
+            if self.compare(dateToCompare) == ComparisonResult.orderedDescending {
                 isGreater = true
             }
             
@@ -84,12 +84,12 @@ extension NSDate {
             return isGreater
         }
         
-        func isLessThanDate(dateToCompare: NSDate) -> Bool {
+        func isLessThanDate(_ dateToCompare: Date) -> Bool {
             //Declare Variables
             var isLess = false
             
             //Compare Values
-            if self.compare(dateToCompare) == NSComparisonResult.OrderedAscending {
+            if self.compare(dateToCompare) == ComparisonResult.orderedAscending {
                 isLess = true
             }
             
@@ -97,12 +97,12 @@ extension NSDate {
             return isLess
         }
         
-        func equalToDate(dateToCompare: NSDate) -> Bool {
+        func equalToDate(_ dateToCompare: Date) -> Bool {
             //Declare Variables
             var isEqualTo = false
             
             //Compare Values
-            if self.compare(dateToCompare) == NSComparisonResult.OrderedSame {
+            if self.compare(dateToCompare) == ComparisonResult.orderedSame {
                 isEqualTo = true
             }
             
@@ -110,17 +110,17 @@ extension NSDate {
             return isEqualTo
         }
         
-        func addDays(daysToAdd: Int) -> NSDate {
-            let secondsInDays: NSTimeInterval = Double(daysToAdd) * 60 * 60 * 24
-            let dateWithDaysAdded: NSDate = self.dateByAddingTimeInterval(secondsInDays)
+        func addDays(_ daysToAdd: Int) -> Date {
+            let secondsInDays: TimeInterval = Double(daysToAdd) * 60 * 60 * 24
+            let dateWithDaysAdded: Date = self.addingTimeInterval(secondsInDays)
             
             //Return Result
             return dateWithDaysAdded
         }
         
-        func addHours(hoursToAdd: Int) -> NSDate {
-            let secondsInHours: NSTimeInterval = Double(hoursToAdd) * 60 * 60
-            let dateWithHoursAdded: NSDate = self.dateByAddingTimeInterval(secondsInHours)
+        func addHours(_ hoursToAdd: Int) -> Date {
+            let secondsInHours: TimeInterval = Double(hoursToAdd) * 60 * 60
+            let dateWithHoursAdded: Date = self.addingTimeInterval(secondsInHours)
             
             //Return Result
             return dateWithHoursAdded
@@ -136,13 +136,13 @@ extension NSDate {
         let eaviningEndTime = 25
         
         if (self.hour >= morningStartTime && self.hour <= morningEndTime) {
-            return Content.getContent(ContentType.LabelTxt, name: "TimeOfDayMorining")
+            return Content.getContent(ContentType.labelTxt, name: "TimeOfDayMorining")
         }
         if (self.hour >= afterNoonStartTime && self.hour <= afterNoonEndTime) {
-            return Content.getContent(ContentType.LabelTxt, name: "TimeOfDayAfterNoon")
+            return Content.getContent(ContentType.labelTxt, name: "TimeOfDayAfterNoon")
         }
         if (self.hour >= eaviningStartTime && self.hour <= eaviningEndTime) {
-            return Content.getContent(ContentType.LabelTxt, name: "TimeOfDayEavning")
+            return Content.getContent(ContentType.labelTxt, name: "TimeOfDayEavning")
         }
         
         return "There is no time definision"

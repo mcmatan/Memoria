@@ -6,9 +6,9 @@ class TabBarController : UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = Content.getContent(ContentType.LabelTxt, name: "TaskManagerTitle")
+        self.title = Content.getContent(ContentType.labelTxt, name: "TaskManagerTitle")
      
         let image = UIImage(named: "navigationBar")
-        self.navigationController?.navigationBar.setBackgroundImage(image, forBarMetrics: UIBarMetrics.Default)
+        self.navigationController?.navigationBar.setBackgroundImage(image, for: UIBarMetrics.default)
     }
 }

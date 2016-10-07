@@ -9,7 +9,7 @@ class MemoriesViewController : ViewController {
         
         let remindMe = Button()
         remindMe.defaultStyle()
-        remindMe.setTitle(Content.getContent(ContentType.ButtonTxt, name: "RemindMeWhereIAm"), forState: UIControlState.Normal)
+        remindMe.setTitle(Content.getContent(ContentType.buttonTxt, name: "RemindMeWhereIAm"), for: UIControlState())
         self.view.addSubview(remindMe)
         remindMe.centerInSuperView()
     }

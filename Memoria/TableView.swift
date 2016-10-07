@@ -5,8 +5,8 @@ import UIKit
 class TableView : UITableView {
 
     init() {
-        super.init(frame: CGRectZero, style: UITableViewStyle.Grouped)
-        self.backgroundColor = UIColor.whiteColor()
+        super.init(frame: CGRect.zero, style: UITableViewStyle.grouped)
+        self.backgroundColor = UIColor.white
     }
     
 

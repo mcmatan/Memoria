@@ -33,7 +33,7 @@ class AddTaskConfirmationViewController : ViewController {
         super.init(nibName: nil, bundle: nil)
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
         lblTaskName.text = self.currenctTaskCreator.getTaskName()
@@ -58,13 +58,13 @@ class AddTaskConfirmationViewController : ViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let doneButton = UIBarButtonItem(title: Content.getContent(ContentType.ButtonTxt, name: "Done"), style: UIBarButtonItemStyle.Done, target: self, action: #selector(AddTaskConfirmationViewController.doneButtonPress))
+        let doneButton = UIBarButtonItem(title: Content.getContent(ContentType.buttonTxt, name: "Done"), style: UIBarButtonItemStyle.done, target: self, action: #selector(AddTaskConfirmationViewController.doneButtonPress))
         self.navigationItem.rightBarButtonItem = doneButton
 
         //Name
         let lblTaskNameDesc = Label()
         lblTaskNameDesc.titleGray()
-        lblTaskNameDesc.text = Content.getContent(ContentType.LabelTxt, name: "taskConfirmationTaskNameDesc")
+        lblTaskNameDesc.text = Content.getContent(ContentType.labelTxt, name: "taskConfirmationTaskNameDesc")
     
         
         let btnEditTaskName = Button()
@@ -73,7 +73,7 @@ class AddTaskConfirmationViewController : ViewController {
         //Sound
         let lblTaskSoundDesc = Label()
         lblTaskSoundDesc.titleGray()
-        lblTaskSoundDesc.text = Content.getContent(ContentType.LabelTxt, name: "taskConfirmationTaskSoundDesc")
+        lblTaskSoundDesc.text = Content.getContent(ContentType.labelTxt, name: "taskConfirmationTaskSoundDesc")
 
         let btnTaskSound = Button()
         btnTaskSound.playSoundBtn()
@@ -84,7 +84,7 @@ class AddTaskConfirmationViewController : ViewController {
         //Time
         let lblTaskTimeDesc = Label()
         lblTaskTimeDesc.titleGray()
-        lblTaskTimeDesc.text = Content.getContent(ContentType.LabelTxt, name: "taskConfirmationTaskTimeDesc")
+        lblTaskTimeDesc.text = Content.getContent(ContentType.labelTxt, name: "taskConfirmationTaskTimeDesc")
         
         lblTaskTime.defaultyTitle()
         
@@ -95,7 +95,7 @@ class AddTaskConfirmationViewController : ViewController {
         //TimePriority
         let lblTimePriorityDesc = Label()
         lblTimePriorityDesc.titleGray()
-        lblTimePriorityDesc.text = Content.getContent(ContentType.LabelTxt, name: "taskConfirmationTaskTimePriorityDesc")
+        lblTimePriorityDesc.text = Content.getContent(ContentType.labelTxt, name: "taskConfirmationTaskTimePriorityDesc")
         
         lblTaskTimePriority.defaultyTitle()
         
@@ -140,8 +140,8 @@ class AddTaskConfirmationViewController : ViewController {
         let matrics = ["padding" : 10];
         
         var allConstains = [NSLayoutConstraint]()
-        let leftVerticalLayout = NSLayoutConstraint.constraintsWithVisualFormat(
-            "V:[lblTaskNameDesc]-(padding)-[lblTaskName]-(padding)-[lblTaskSoundDesc]-(padding)-[btnTaskSound]-(padding)-[lblTaskTimeDesc]-(padding)-[lblTaskTime]-(padding)-[lblTimePriorityDesc]-(padding)-[lblTaskTimePriority]", options: NSLayoutFormatOptions.AlignAllLeading, metrics: matrics, views: viewsKeys)
+        let leftVerticalLayout = NSLayoutConstraint.constraints(
+            withVisualFormat: "V:[lblTaskNameDesc]-(padding)-[lblTaskName]-(padding)-[lblTaskSoundDesc]-(padding)-[btnTaskSound]-(padding)-[lblTaskTimeDesc]-(padding)-[lblTaskTime]-(padding)-[lblTimePriorityDesc]-(padding)-[lblTaskTimePriority]", options: NSLayoutFormatOptions.alignAllLeading, metrics: matrics, views: viewsKeys)
         
         allConstains += leftVerticalLayout
         lblTaskNameDesc.leadingToSuperView(true)
@@ -160,13 +160,13 @@ class AddTaskConfirmationViewController : ViewController {
         btnEditTaskTimePriority.trailingToSuperView(true)
         btnEditTaskTimePriority.topAlighnToViewTop(lblTimePriorityDesc) 
 
-        NSLayoutConstraint.activateConstraints(allConstains)
+        NSLayoutConstraint.activate(allConstains)
         
-        btnEditTaskTime.addTarget(self, action: #selector(AddTaskConfirmationViewController.btnEditTaskTimePress), forControlEvents: UIControlEvents.TouchUpInside)
-        btnEditTaskName.addTarget(self, action: #selector(AddTaskConfirmationViewController.btnEditTaskNamePress), forControlEvents: UIControlEvents.TouchUpInside)
-        btnEditTaskSound.addTarget(self, action: #selector(AddTaskConfirmationViewController.btnEditTaskSoundPress), forControlEvents: UIControlEvents.TouchUpInside)
-        btnTaskSound.addTarget(self, action: #selector(AddTaskConfirmationViewController.btnPlaySoundPress), forControlEvents: UIControlEvents.TouchUpInside)
-        btnEditTaskTimePriority.addTarget(self, action: #selector(AddTaskConfirmationViewController.btnEditTaskTimePriorityPress), forControlEvents: UIControlEvents.TouchUpInside)
+        btnEditTaskTime.addTarget(self, action: #selector(AddTaskConfirmationViewController.btnEditTaskTimePress), for: UIControlEvents.touchUpInside)
+        btnEditTaskName.addTarget(self, action: #selector(AddTaskConfirmationViewController.btnEditTaskNamePress), for: UIControlEvents.touchUpInside)
+        btnEditTaskSound.addTarget(self, action: #selector(AddTaskConfirmationViewController.btnEditTaskSoundPress), for: UIControlEvents.touchUpInside)
+        btnTaskSound.addTarget(self, action: #selector(AddTaskConfirmationViewController.btnPlaySoundPress), for: UIControlEvents.touchUpInside)
+        btnEditTaskTimePriority.addTarget(self, action: #selector(AddTaskConfirmationViewController.btnEditTaskTimePriorityPress), for: UIControlEvents.touchUpInside)
     
     }
 
@@ -175,7 +175,7 @@ class AddTaskConfirmationViewController : ViewController {
     
     func btnEditTaskNamePress() {
         for viewController in (self.navigationController?.viewControllers)! {
-            if viewController.isKindOfClass(AddTaskNameViewController) {
+            if viewController.isKind(of: AddTaskNameViewController.self) {
                 self.navigationController?.popToViewController(viewController, animated: true)
                 return
             }
@@ -186,7 +186,7 @@ class AddTaskConfirmationViewController : ViewController {
 
     func btnEditTaskSoundPress() {
         for viewController in (self.navigationController?.viewControllers)! {
-            if viewController.isKindOfClass(AddTaskVoiceViewController) {
+            if viewController.isKind(of: AddTaskVoiceViewController.self) {
                 self.navigationController?.popToViewController(viewController, animated: true)
                 return
             }
@@ -197,7 +197,7 @@ class AddTaskConfirmationViewController : ViewController {
 
     func btnEditTaskTimePress() {
         for viewController in (self.navigationController?.viewControllers)! {
-            if viewController.isKindOfClass(AddTaskTimeViewController) {
+            if viewController.isKind(of: AddTaskTimeViewController.self) {
                 self.navigationController?.popToViewController(viewController, animated: true)
                 return
             }
@@ -208,7 +208,7 @@ class AddTaskConfirmationViewController : ViewController {
     
     func btnEditTaskTimePriorityPress() {
         for viewController in (self.navigationController?.viewControllers)! {
-            if viewController.isKindOfClass(AddTaskTimePriorityController) {
+            if viewController.isKind(of: AddTaskTimePriorityController.self) {
                 self.navigationController?.popToViewController(viewController, animated: true)
                 return
             }

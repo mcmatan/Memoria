@@ -19,7 +19,7 @@ class AddTaskNameViewController: ViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         self.enterNameTextField.text = currenctTaskCreator.getTaskName()
@@ -30,15 +30,15 @@ class AddTaskNameViewController: ViewController {
         super.viewDidLoad()
         
         let taskName = Label()
-        taskName.text = Content.getContent(ContentType.LabelTxt, name: "taskName")
-        enterNameTextField.placeholder = Content.getContent(ContentType.LabelTxt, name: "enterTestName")
-        enterNameTextField.textAlignment = NSTextAlignment.Center
-        enterNameTextField.layer.borderColor = UIColor.grayColor().CGColor
+        taskName.text = Content.getContent(ContentType.labelTxt, name: "taskName")
+        enterNameTextField.placeholder = Content.getContent(ContentType.labelTxt, name: "enterTestName")
+        enterNameTextField.textAlignment = NSTextAlignment.center
+        enterNameTextField.layer.borderColor = UIColor.gray.cgColor
         enterNameTextField.layer.borderWidth = 0.5
         let done = Button()
         done.defaultStyle()
-        done.setTitle(Content.getContent(ContentType.ButtonTxt, name: "Done"), forState: UIControlState.Normal)
-        done.addTarget(self, action: #selector(AddTaskNameViewController.dontBtnPress), forControlEvents: UIControlEvents.TouchUpInside)
+        done.setTitle(Content.getContent(ContentType.buttonTxt, name: "Done"), for: UIControlState())
+        done.addTarget(self, action: #selector(AddTaskNameViewController.dontBtnPress), for: UIControlEvents.touchUpInside)
         self.view.addSubview(taskName)
         self.view.addSubview(enterNameTextField)
         self.view.addSubview(done)
@@ -57,16 +57,16 @@ class AddTaskNameViewController: ViewController {
             "enterNameTextField" : enterNameTextField,
             "done" : done
         ]
-        let verticalLayout = NSLayoutConstraint.constraintsWithVisualFormat(
-            "V:[taskName]-[enterNameTextField]-[done]", options: [], metrics: nil, views: viewsDic)
+        let verticalLayout = NSLayoutConstraint.constraints(
+            withVisualFormat: "V:[taskName]-[enterNameTextField]-[done]", options: [], metrics: nil, views: viewsDic)
         
-        NSLayoutConstraint.activateConstraints(verticalLayout)
+        NSLayoutConstraint.activate(verticalLayout)
         taskName.topToViewControllerTopLayoutGuide(self)
         taskName.centerVerticlyInSuperView()
         enterNameTextField.centerVerticlyInSuperView()
         done.centerVerticlyInSuperView()
         
-        print(taskName.intrinsicContentSize())
+        print(taskName.intrinsicContentSize)
 
     }
     

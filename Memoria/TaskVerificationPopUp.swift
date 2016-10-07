@@ -32,14 +32,14 @@ class TaskVerificationPopUp : ViewController {
     }
     
     //MARK: LifeCircle
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.playSound()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.white
         
         let imgLight = ImageView(image: UIImage(named: "NotificationLight"))
         self.view.addSubview(imgLight)
@@ -48,10 +48,10 @@ class TaskVerificationPopUp : ViewController {
         imgLight.heightLayoutAs(150)
         imgLight.topToViewControllerTopLayoutGuide(self, offset: 70)
         
-        self.lblISeeYourNear.text = String.localizedStringWithFormat(Content.getContent(ContentType.LabelTxt, name: "TaskVerificationPopUpISeeYourNeer"), self.task.taskName!)
-        self.lblISeeYourNear.font = UIFont.systemFontOfSize(28)
+        self.lblISeeYourNear.text = String.localizedStringWithFormat(Content.getContent(ContentType.labelTxt, name: "TaskVerificationPopUpISeeYourNeer"), self.task.taskName!)
+        self.lblISeeYourNear.font = UIFont.systemFont(ofSize: 28)
         self.lblISeeYourNear.numberOfLines = 0
-        self.lblISeeYourNear.textAlignment = NSTextAlignment.Center
+        self.lblISeeYourNear.textAlignment = NSTextAlignment.center
         self.view .addSubview(self.lblISeeYourNear)
         self.lblISeeYourNear.topAlighnToViewBottom(imgLight, offset: 10)
         self.lblISeeYourNear.centerVerticlyInSuperView()
@@ -59,10 +59,10 @@ class TaskVerificationPopUp : ViewController {
         self.lblISeeYourNear.trailingToSuperView(true)
         
         
-        self.lblDidYouYet.text = String.localizedStringWithFormat(Content.getContent(ContentType.LabelTxt, name: "TaskVerificationPopUpDidYouYet"), self.task.taskName!)
+        self.lblDidYouYet.text = String.localizedStringWithFormat(Content.getContent(ContentType.labelTxt, name: "TaskVerificationPopUpDidYouYet"), self.task.taskName!)
         self.lblDidYouYet.titleGray()
-        self.lblDidYouYet.font = UIFont.systemFontOfSize(22)
-        self.lblDidYouYet.textAlignment = NSTextAlignment.Center
+        self.lblDidYouYet.font = UIFont.systemFont(ofSize: 22)
+        self.lblDidYouYet.textAlignment = NSTextAlignment.center
         self.lblDidYouYet.numberOfLines = 0
         self.view.addSubview(self.lblDidYouYet)
         self.lblDidYouYet.centerVerticlyInSuperView()
@@ -74,19 +74,19 @@ class TaskVerificationPopUp : ViewController {
         self.btnYes.notificiationYesVericiation()
         self.btnYes.centerVerticlyInSuperView()
         self.btnYes.topAlighnToViewBottom(self.lblDidYouYet, offset: 53)
-        self.btnYes.addTarget(self, action: #selector(TaskVerificationPopUp.btnYesPress), forControlEvents: UIControlEvents.TouchUpInside)
+        self.btnYes.addTarget(self, action: #selector(TaskVerificationPopUp.btnYesPress), for: UIControlEvents.touchUpInside)
 
         self.view.addSubview(self.btnRemindMeLayer)
         self.btnRemindMeLayer.notificiationRemindMeLater()
         self.btnRemindMeLayer.centerVerticlyInSuperView()
         self.btnRemindMeLayer.topAlighnToViewBottom(self.btnYes, offset: 13)
-        self.btnRemindMeLayer.addTarget(self, action: #selector(TaskVerificationPopUp.btnRemoingMeLaterPress), forControlEvents: UIControlEvents.TouchUpInside)
+        self.btnRemindMeLayer.addTarget(self, action: #selector(TaskVerificationPopUp.btnRemoingMeLaterPress), for: UIControlEvents.touchUpInside)
 
         self.view.addSubview(self.btnSoundPlaying)
         self.btnSoundPlaying.notificiationPlayingGray()
         self.btnSoundPlaying.centerVerticlyInSuperView()
         self.btnSoundPlaying.bottomAlighnToViewBottom(self.view, offset: -40)
-        self.btnSoundPlaying.addTarget(self, action: #selector(TaskVerificationPopUp.btnPlayRecordPress), forControlEvents: UIControlEvents.TouchUpInside)
+        self.btnSoundPlaying.addTarget(self, action: #selector(TaskVerificationPopUp.btnPlayRecordPress), for: UIControlEvents.touchUpInside)
         
     }
     
@@ -104,14 +104,14 @@ class TaskVerificationPopUp : ViewController {
     //MARK: Buttons
     
     func btnYesPress() {
-        self.dismissViewControllerAnimated(true) { () -> Void in
+        self.dismiss(animated: true) { () -> Void in
             self.tasksServices.setTaskAsDone(self.task)
         }
 
     }
     
     func btnRemoingMeLaterPress() {
-        self.dismissViewControllerAnimated(true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
     }
     
     func btnPlayRecordPress() {

@@ -9,7 +9,7 @@ class ViewController : UIViewController {
         super.viewDidLayoutSubviews()
         self.view.backgroundColor = defaultBackgroundColor
     }
-    override init(nibName: String?, bundle: NSBundle?) {
+    override init(nibName: String?, bundle: Bundle?) {
         super.init(nibName: nil, bundle: nil)
     }
 

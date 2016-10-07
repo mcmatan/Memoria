@@ -12,7 +12,7 @@ import UIKit
 class ImageView : UIImageView {
     override init(image: UIImage?) {
         super.init(image : image)
-        self.contentMode = UIViewContentMode.ScaleAspectFill
+        self.contentMode = UIViewContentMode.scaleAspectFill
     }
 
     required init?(coder aDecoder: NSCoder) {

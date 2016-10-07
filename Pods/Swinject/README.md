@@ -1,11 +1,17 @@
-# Swinject
+<p align="center">
+  <img src="https://avatars0.githubusercontent.com/u/13637225?v=3&s=600" width="33%">
+</p>
+
+Swinject
+========
 
 [![Travis CI](https://travis-ci.org/Swinject/Swinject.svg?branch=master)](https://travis-ci.org/Swinject/Swinject)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![CocoaPods Version](https://img.shields.io/cocoapods/v/Swinject.svg?style=flat)](http://cocoapods.org/pods/Swinject)
 [![License](https://img.shields.io/cocoapods/l/Swinject.svg?style=flat)](http://cocoapods.org/pods/Swinject)
 [![Platform](https://img.shields.io/cocoapods/p/Swinject.svg?style=flat)](http://cocoapods.org/pods/Swinject)
-[![Swift Version](https://img.shields.io/badge/Swift-2.1-F16D39.svg?style=flat)](https://developer.apple.com/swift)
+[![Swift Version](https://img.shields.io/badge/Swift-2.2-F16D39.svg?style=flat)](https://developer.apple.com/swift)
+[![Swift Version](https://img.shields.io/badge/Swift-3.0-F16D39.svg?style=flat)](https://developer.apple.com/swift)
 
 Swinject is a lightweight [dependency injection](https://en.wikipedia.org/wiki/Dependency_injection) framework for Swift.
 
@@ -13,18 +19,23 @@ Dependency injection (DI) is a software design pattern that implements Inversion
 
 ## Features
 
-- [x] Pure Swift Types
+- [x] [Pure Swift Type Support](./Documentation/README.md#user-content-pure-swift-type-support)
+- [x] [Injection with Arguments](./Documentation/DIContainer.md#registration-with-arguments-to-di-container)
 - [x] [Initializer/Property/Method Injections](./Documentation/InjectionPatterns.md)
-- [x] [Initialization Callback](./Documentation/InjectionPatterns.md)
+- [x] [Initialization Callback](./Documentation/InjectionPatterns.md#user-content-initialization-callback)
 - [x] [Circular Dependency Injection](./Documentation/CircularDependencies.md)
-- [x] [Injection with Arguments](./Documentation/DIContainer.md)
-- [x] [Self-registration (Self-binding)](./Documentation/Misc.md)
-- [x] [Container Hierarchy](./Documentation/ContainerHierarchy.md)
 - [x] [Object Scopes as None (Transient), Graph, Container (Singleton) and Hierarchy](./Documentation/ObjectScopes.md)
-- [x] [Thread Safety](./Documentation/ThreadSafety.md)
-- [x] Injection of both Reference and [Value Types](./Documentation/Misc.md)
-- [x] [Storyboard](./Documentation/Storyboard.md)
+- [x] Support of both Reference and [Value Types](./Documentation/Misc.md#value-types)
+- [x] [Self-registration (Self-binding)](./Documentation/Misc.md#self-registration-self-binding)
+- [x] [Container Hierarchy](./Documentation/ContainerHierarchy.md)
 - [x] [Property Injection from Resource files](./Documentation/Properties.md)
+- [x] [Thread Safety](./Documentation/ThreadSafety.md)
+- [x] [Modular Components](./Documentation/Assembler.md)
+- [x] [Storyboard](./Documentation/Storyboard.md)
+
+## Extensions
+
+- **[Swinject-CodeGen](https://github.com/Swinject/Swinject-CodeGen)**: Type-safe code generation of `Container` from a CSV/YAML file defining dependencies.
 
 ## Requirements
 
@@ -39,7 +50,7 @@ Swinject is available through [Carthage](https://github.com/Carthage/Carthage) o
 
 To install Swinject with Carthage, add the following line to your `Cartfile`.
 
-    github "Swinject/Swinject" "1.0.0-beta.2"
+    github "Swinject/Swinject" ~> 1.1.0
 
 
 Then run `carthage update --no-use-binaries` command or just `carthage update`. For details of the installation and usage of Carthage, visit [its project page](https://github.com/Carthage/Carthage).
@@ -49,65 +60,76 @@ Then run `carthage update --no-use-binaries` command or just `carthage update`. 
 
 To install Swinject with CocoaPods, add the following lines to your `Podfile`.
 
-    source 'https://github.com/CocoaPods/Specs.git'
-    platform :ios, '8.0'
-    use_frameworks!
+```ruby
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '8.0' # or platform :osx, '10.10' if your target is OS X.
+use_frameworks!
 
-    pod 'Swinject', '1.0.0-beta.2'
+pod 'Swinject', '~> 1.1.0'
+```
 
 Then run `pod install` command. For details of the installation and usage of CocoaPods, visit [its official website](https://cocoapods.org).
 
 ## Documentation
 
-All documentation can be found in the [Documentation folder](./Documentation), including patterns of dependency injection and examples.
+- [Technical documents](./Documentation) including patterns of dependency injection and examples.
+- [API reference](http://cocoadocs.org/docsets/Swinject/)
 
 ## Basic Usage
 
 First, register a service and component pair to a `Container`, where the component is created by the registered closure as a factory. In this example, `Cat` and `PetOwner` are component classes implementing `AnimalType` and `PersonType` service protocols, respectively.
 
-    let container = Container()
-    container.register(AnimalType.self) { _ in Cat(name: "Mimi") }
-    container.register(PersonType.self) { r in
-         PetOwner(pet: r.resolve(AnimalType.self)!)
-    }
+```swift
+let container = Container()
+container.register(AnimalType.self) { _ in Cat(name: "Mimi") }
+container.register(PersonType.self) { r in
+    PetOwner(pet: r.resolve(AnimalType.self)!)
+}
+```
 
 Then get an instance of a service from the container. The person is resolved to a pet owner, and playing with the cat named Mimi!
 
-    let person = container.resolve(PersonType.self)!
-    person.play() // prints "I'm playing with Mimi."
+```swift
+let person = container.resolve(PersonType.self)!
+person.play() // prints "I'm playing with Mimi."
+```
 
 Where definitions of the protocols and classes are
 
-    protocol AnimalType {
-        var name: String? { get }
-    }
+```swift
+protocol AnimalType {
+    var name: String? { get }
+}
 
-    class Cat: AnimalType {
-        let name: String?
+class Cat: AnimalType {
+    let name: String?
 
-        init(name: String?) {
-            self.name = name
-        }
+    init(name: String?) {
+        self.name = name
     }
+}
+```
 
 and
 
-    protocol PersonType {
-        func play()
+```swift
+protocol PersonType {
+    func play()
+}
+
+class PetOwner: PersonType {
+    let pet: AnimalType
+
+    init(pet: AnimalType) {
+        self.pet = pet
     }
 
-    class PetOwner: PersonType {
-        let pet: AnimalType
-
-        init(pet: AnimalType) {
-            self.pet = pet
-        }
-
-        func play() {
-            let name = pet.name ?? "someone"
-            print("I'm playing with \(name).")
-        }
+    func play() {
+        let name = pet.name ?? "someone"
+        print("I'm playing with \(name).")
     }
+}
+```
 
 Notice that the `pet` of `PetOwner` is automatically set as the instance of `Cat` when `PersonType` is resolved to the instance of `PetOwner`. If a container already set up is given, you do not have to care what are the actual types of the services and how they are created with their dependency.
 
@@ -117,7 +139,7 @@ Services must be registered to a container before they are used. Typical ways of
 
 The following view controller class is used in addition to the protocols and classes above in the examples below.
 
-```
+```swift
 class PersonViewController: UIViewController {
     var person: PersonType?
 }
@@ -127,16 +149,14 @@ class PersonViewController: UIViewController {
 
 Services should be registered in an extension of `SwinjectStoryboard` if you use `SwinjectStoryboard`. Refer to [the document of SwinjectStoryboard](./Documentation/Storyboard.md) for its details.
 
-```
+```swift
 extension SwinjectStoryboard {
     class func setup() {
-        let container = defaultContainer
-
-        container.register(AnimalType.self) { _ in Cat(name: "Mimi") }
-        container.register(PersonType.self) { r in
+        defaultContainer.register(AnimalType.self) { _ in Cat(name: "Mimi") }
+        defaultContainer.register(PersonType.self) { r in
             PetOwner(pet: r.resolve(AnimalType.self)!)
         }
-        container.register(PersonViewController.self) { r in
+        defaultContainer.register(PersonViewController.self) { r in
             let controller = PersonViewController()
             controller.person = r.resolve(PersonType.self)
             return controller
@@ -149,7 +169,7 @@ extension SwinjectStoryboard {
 
 Typically services are registered to a container in `AppDelegate` if you do not use `SwinjectStoryboard` to instantiate view controllers. If you register the services in `AppDelegate` especially before exiting the call of `application:didFinishLaunchingWithOptions:`, it is ensured that the services are registered before they are used.
 
-```
+```swift
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     let container = Container() { c in

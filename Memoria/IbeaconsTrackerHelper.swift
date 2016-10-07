@@ -10,15 +10,15 @@ import Foundation
 
 class IbeaconsTrackerHelper {
 
-    class func locationManagerStateToString(state : KTKLocationManagerState) ->String {
+    class func locationManagerStateToString(_ state : KTKLocationManagerState) ->String {
         switch (state) {
-        case KTKLocationManagerState.Failed:
+        case KTKLocationManagerState.failed:
             return "KTKLocationManagerState.Failed"
-        case KTKLocationManagerState.Inactive:
+        case KTKLocationManagerState.inactive:
             return "KTKLocationManagerState.Inactive"
-        case KTKLocationManagerState.Initializing:
+        case KTKLocationManagerState.initializing:
             return "KTKLocationManagerState.Initializing"
-        case KTKLocationManagerState.Monitoring:
+        case KTKLocationManagerState.monitoring:
             return "KTKLocationManagerState.Monitoring"
         }
     }

@@ -10,9 +10,9 @@ import Foundation
 
 extension Dictionary {
 
-    public mutating func removeValuesForKeys(keys : Array<Key>) {
+    public mutating func removeValuesForKeys(_ keys : Array<Key>) {
         for key in keys {
-            self.removeValueForKey(key)
+            self.removeValue(forKey: key)
         }
     }
 }

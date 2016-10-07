@@ -22,23 +22,23 @@ class IBeaconIdentifier : NSObject {
         return self.major + self.minor
     }
     
-    static func creatFromCLBeacon(cLBeacon : CLBeacon)->IBeaconIdentifier {
-        return IBeaconIdentifier(uuid: cLBeacon.proximityUUID.UUIDString, major: cLBeacon.major.stringValue, minor: cLBeacon.minor.stringValue)
+    static func creatFromCLBeacon(_ cLBeacon : CLBeacon)->IBeaconIdentifier {
+        return IBeaconIdentifier(uuid: cLBeacon.proximityUUID.uuidString, major: cLBeacon.major.stringValue, minor: cLBeacon.minor.stringValue)
     }
     
     
     required convenience init(coder aDecoder: NSCoder) {
-        let uuid = aDecoder.decodeObjectForKey("uuid") as! String
-        let major = aDecoder.decodeObjectForKey("major") as! String
-        let minor = aDecoder.decodeObjectForKey("minor") as! String
+        let uuid = aDecoder.decodeObject(forKey: "uuid") as! String
+        let major = aDecoder.decodeObject(forKey: "major") as! String
+        let minor = aDecoder.decodeObject(forKey: "minor") as! String
         self.init(uuid : uuid, major : major, minor : minor)
         
     }
     
-    func encodeWithCoder(aCoder: NSCoder) {
-        aCoder.encodeObject(uuid, forKey: "uuid")
-        aCoder.encodeObject(major, forKey: "major")
-        aCoder.encodeObject(minor, forKey: "minor")
+    func encodeWithCoder(_ aCoder: NSCoder) {
+        aCoder.encode(uuid, forKey: "uuid")
+        aCoder.encode(major, forKey: "major")
+        aCoder.encode(minor, forKey: "minor")
     }
     
 }

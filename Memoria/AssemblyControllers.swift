@@ -3,9 +3,9 @@ import Foundation
 import Swinject
 import UIKit
 
-public class AssemblyControllers {
+open class AssemblyControllers {
     
-    class func run(container : Container) {
+    class func run(_ container : Container) {
         container.register(TabBarController.self) { c in
             let tabBar = TabBarController()
             guard let left = c.resolve(TaskManagerViewController.self) else {return tabBar}
@@ -16,7 +16,7 @@ public class AssemblyControllers {
             let controllers = [left]
             tabBar.viewControllers = controllers
             left.tabBarItem = UITabBarItem(
-                title: Content.getContent(ContentType.LabelTxt, name: "TabBarTasksLbl"),
+                title: Content.getContent(ContentType.labelTxt, name: "TabBarTasksLbl"),
                 image: UIImage(named: "TasksManagerLogoTabOnlyImage"),
                 tag: 1)
 //            center.tabBarItem = UITabBarItem(
@@ -32,14 +32,14 @@ public class AssemblyControllers {
         }
         
         container.register(NavigationController.self) { c in
-            let navigationController = NavigationController(rootViewController : c.resolve(TabBarController)!)
+            let navigationController = NavigationController(rootViewController : c.resolve(TabBarController.self)!)
             return navigationController
         }
 
         container.register(TasksNotificationsPresenter.self) { c in
             return TasksNotificationsPresenter(tasksServices: container.resolve(TasksServices.self)!,
                 iBeaconServices:  container.resolve(IBeaconServices.self)! , container: container)
-            }.inObjectScope(.Container)
+            }.inObjectScope(ObjectScope.container)
         container.resolve(TasksNotificationsPresenter.self)
 
     }

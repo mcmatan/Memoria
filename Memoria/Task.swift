@@ -11,20 +11,20 @@ import UIKit
 
 class Task : NSObject {
     var taskName: String?   
-    var taskTime: NSDate?
-    var taskVoiceURL: NSURL?
+    var taskTime: Date?
+    var taskVoiceURL: URL?
     var taskBeaconIdentifier : IBeaconIdentifier?
     var taskTimePriorityHi : Bool?
     var taskisOnHold = false // This is when user didnt do the task on time, and a interval is started to the future
-    var standingNearFromDate : NSDate?
+    var standingNearFromDate : Date?
     var isTaskDone = false
-    var timeLastWarningWasShow : NSDate?
+    var timeLastWarningWasShow : Date?
     
 
     //Convinece
      init(taskName : String,
-        taskTime : NSDate,
-        taskVoiceURL : NSURL,
+        taskTime : Date,
+        taskVoiceURL : URL,
         taskBeaconIdentifier : IBeaconIdentifier,
         taskTimePriorityHi : Bool) {
         self.taskName = taskName
@@ -36,13 +36,13 @@ class Task : NSObject {
 
     
     init(taskName : String,
-        taskTime : NSDate,
-        taskVoiceURL : NSURL,
+        taskTime : Date,
+        taskVoiceURL : URL,
         taskBeaconIdentifier : IBeaconIdentifier,
         taskTimePriorityHi : Bool,
         taskisOnHold : Bool,
-        standingNearFromDate : NSDate?,
-        timeLastWarningWasShow : NSDate?,
+        standingNearFromDate : Date?,
+        timeLastWarningWasShow : Date?,
         isTaskDone :Bool
         ) {
             self.taskName = taskName
@@ -56,29 +56,29 @@ class Task : NSObject {
     }
     
     required convenience init(coder aDecoder: NSCoder) {
-        let taskName = aDecoder.decodeObjectForKey("taskName") as! String
-        let taskTime = aDecoder.decodeObjectForKey("taskTime") as! NSDate
-        let taskVoiceURL = aDecoder.decodeObjectForKey("taskVoiceURL") as! NSURL
-        let taskBeaconIdentifier = aDecoder.decodeObjectForKey("taskBeaconIdentifier") as! IBeaconIdentifier
-        let taskTimePriorityHi = aDecoder.decodeBoolForKey("taskTimePriorityHi")
-        let taskisOnHold = aDecoder.decodeBoolForKey("taskisOnHold")
-        let standingNearFromDate = aDecoder.decodeObjectForKey("standingNearFromDate") as! NSDate?
-        let timeLastWarningWasShow = aDecoder.decodeObjectForKey("timeLastWarningWasShow") as! NSDate?
-        let isTaskDone = aDecoder.decodeBoolForKey("isTaskDone")
+        let taskName = aDecoder.decodeObject(forKey: "taskName") as! String
+        let taskTime = aDecoder.decodeObject(forKey: "taskTime") as! Date
+        let taskVoiceURL = aDecoder.decodeObject(forKey: "taskVoiceURL") as! URL
+        let taskBeaconIdentifier = aDecoder.decodeObject(forKey: "taskBeaconIdentifier") as! IBeaconIdentifier
+        let taskTimePriorityHi = aDecoder.decodeBool(forKey: "taskTimePriorityHi")
+        let taskisOnHold = aDecoder.decodeBool(forKey: "taskisOnHold")
+        let standingNearFromDate = aDecoder.decodeObject(forKey: "standingNearFromDate") as! Date?
+        let timeLastWarningWasShow = aDecoder.decodeObject(forKey: "timeLastWarningWasShow") as! Date?
+        let isTaskDone = aDecoder.decodeBool(forKey: "isTaskDone")
         self.init(taskName : taskName, taskTime : taskTime, taskVoiceURL : taskVoiceURL, taskBeaconIdentifier : taskBeaconIdentifier , taskTimePriorityHi : taskTimePriorityHi,
             taskisOnHold : taskisOnHold,
             standingNearFromDate : standingNearFromDate,timeLastWarningWasShow : timeLastWarningWasShow, isTaskDone : isTaskDone)
     }
     
-    func encodeWithCoder(aCoder: NSCoder) {
-        aCoder.encodeObject(taskName, forKey: "taskName")
-        aCoder.encodeObject(taskTime, forKey: "taskTime")
-        aCoder.encodeObject(taskVoiceURL, forKey: "taskVoiceURL")
-        aCoder.encodeObject(taskBeaconIdentifier, forKey: "taskBeaconIdentifier")
-        aCoder.encodeBool(taskTimePriorityHi!, forKey: "taskTimePriorityHi")
-        aCoder.encodeBool(isTaskDone, forKey: "isTaskDone")
-        aCoder.encodeBool(taskisOnHold, forKey: "taskisOnHold")
-        aCoder.encodeObject(standingNearFromDate, forKey: "standingNearFromDate")
-        aCoder.encodeObject(timeLastWarningWasShow, forKey: "timeLastWarningWasShow")
+    func encodeWithCoder(_ aCoder: NSCoder) {
+        aCoder.encode(taskName, forKey: "taskName")
+        aCoder.encode(taskTime, forKey: "taskTime")
+        aCoder.encode(taskVoiceURL, forKey: "taskVoiceURL")
+        aCoder.encode(taskBeaconIdentifier, forKey: "taskBeaconIdentifier")
+        aCoder.encode(taskTimePriorityHi!, forKey: "taskTimePriorityHi")
+        aCoder.encode(isTaskDone, forKey: "isTaskDone")
+        aCoder.encode(taskisOnHold, forKey: "taskisOnHold")
+        aCoder.encode(standingNearFromDate, forKey: "standingNearFromDate")
+        aCoder.encode(timeLastWarningWasShow, forKey: "timeLastWarningWasShow")
     }
 }

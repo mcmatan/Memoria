@@ -4,11 +4,11 @@ import UIKit
 
 extension UIView {
 
-    func addSubviewWithAutoLayoutOn(subview : UIView) {
+    func addSubviewWithAutoLayoutOn(_ subview : UIView) {
         subview.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(subview)
     }
-    func addSubviewsWithAutoLayoutOn(subviews : [UIView]) {
+    func addSubviewsWithAutoLayoutOn(_ subviews : [UIView]) {
         for view in subviews {
             view.translatesAutoresizingMaskIntoConstraints = false
             self.addSubview(view)
@@ -21,28 +21,28 @@ extension UIView {
     
     func centerHorizontalyInSuperView()->NSLayoutConstraint { //Y
         self.translatesAutoresizingMaskIntoConstraints = false
-        let constraint = NSLayoutConstraint(item: self, attribute: NSLayoutAttribute.CenterY, relatedBy: NSLayoutRelation.Equal, toItem: superview, attribute: NSLayoutAttribute.CenterY, multiplier: 1.0, constant: 0)
+        let constraint = NSLayoutConstraint(item: self, attribute: NSLayoutAttribute.centerY, relatedBy: NSLayoutRelation.equal, toItem: superview, attribute: NSLayoutAttribute.centerY, multiplier: 1.0, constant: 0)
         superview?.addConstraint(constraint)
         return constraint
     }
     
     func centerVerticlyInSuperView()->NSLayoutConstraint { //X
         self.translatesAutoresizingMaskIntoConstraints = false
-        let constraint = NSLayoutConstraint(item: self, attribute: NSLayoutAttribute.CenterX, relatedBy: NSLayoutRelation.Equal, toItem: superview, attribute: NSLayoutAttribute.CenterX, multiplier: 1.0, constant: 0)
+        let constraint = NSLayoutConstraint(item: self, attribute: NSLayoutAttribute.centerX, relatedBy: NSLayoutRelation.equal, toItem: superview, attribute: NSLayoutAttribute.centerX, multiplier: 1.0, constant: 0)
         superview?.addConstraint(constraint)
         return constraint
     }
 
-    func topToViewControllerTopLayoutGuide(viewControlelr : UIViewController) {
+    func topToViewControllerTopLayoutGuide(_ viewControlelr : UIViewController) {
         self.topToViewControllerTopLayoutGuide(viewControlelr, offset: 0)
     }
 
-    func topToViewControllerTopLayoutGuide(viewControlelr : UIViewController, offset : CGFloat) {
+    func topToViewControllerTopLayoutGuide(_ viewControlelr : UIViewController, offset : CGFloat) {
         self.translatesAutoresizingMaskIntoConstraints = false
         let topLayoutGuide = viewControlelr.topLayoutGuide
         let matrics : [String : AnyObject] =
         [
-            "offset" : offset
+            "offset" : offset as AnyObject
         ]
         let views : [String : AnyObject] =
         [
@@ -50,15 +50,15 @@ extension UIView {
             "topLayoutGuide" : topLayoutGuide
         ]
         var allConstrains = [NSLayoutConstraint]()
-        let verticalLayout = NSLayoutConstraint.constraintsWithVisualFormat(
-            "V:[topLayoutGuide]-(offset)-[me]"
+        let verticalLayout = NSLayoutConstraint.constraints(
+            withVisualFormat: "V:[topLayoutGuide]-(offset)-[me]"
             , options: [], metrics: matrics, views: views)
         allConstrains += verticalLayout
-        NSLayoutConstraint.activateConstraints(allConstrains)
+        NSLayoutConstraint.activate(allConstrains)
     }
 
     
-    func bottomToViewControllerTopLayoutGuide(viewControlelr : UIViewController) {
+    func bottomToViewControllerTopLayoutGuide(_ viewControlelr : UIViewController) {
         self.translatesAutoresizingMaskIntoConstraints = false
         let bottomLayoutGuide = viewControlelr.bottomLayoutGuide
         let views : [String : AnyObject] =
@@ -67,68 +67,68 @@ extension UIView {
             "bottomLayoutGuide" : bottomLayoutGuide
         ]
         var allConstrains = [NSLayoutConstraint]()
-        let verticalLayout = NSLayoutConstraint.constraintsWithVisualFormat(
-            "V:[me]-[bottomLayoutGuide]"
+        let verticalLayout = NSLayoutConstraint.constraints(
+            withVisualFormat: "V:[me]-[bottomLayoutGuide]"
             , options: [], metrics: nil, views: views)
         allConstrains += verticalLayout
-        NSLayoutConstraint.activateConstraints(allConstrains)
+        NSLayoutConstraint.activate(allConstrains)
     }
     
-    func heightLayoutAs(height : Double)->NSLayoutConstraint {
+    func heightLayoutAs(_ height : Double)->NSLayoutConstraint {
         self.translatesAutoresizingMaskIntoConstraints = false
         self.translatesAutoresizingMaskIntoConstraints = false
-        let contrain =  NSLayoutConstraint(item: self, attribute: NSLayoutAttribute.Height, relatedBy: NSLayoutRelation.Equal, toItem: nil, attribute: NSLayoutAttribute.NotAnAttribute, multiplier: 1.0, constant: CGFloat(height))
-        NSLayoutConstraint.activateConstraints([contrain])
+        let contrain =  NSLayoutConstraint(item: self, attribute: NSLayoutAttribute.height, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.notAnAttribute, multiplier: 1.0, constant: CGFloat(height))
+        NSLayoutConstraint.activate([contrain])
         return contrain
     }
-    func widthLayoutAs(width : Double)->NSLayoutConstraint {
+    func widthLayoutAs(_ width : Double)->NSLayoutConstraint {
         self.translatesAutoresizingMaskIntoConstraints = false
-        let contrain =  NSLayoutConstraint(item: self, attribute: NSLayoutAttribute.Width, relatedBy: NSLayoutRelation.Equal, toItem: nil, attribute: NSLayoutAttribute.NotAnAttribute, multiplier: 1.0, constant: CGFloat(width))
-        NSLayoutConstraint.activateConstraints([contrain])
+        let contrain =  NSLayoutConstraint(item: self, attribute: NSLayoutAttribute.width, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.notAnAttribute, multiplier: 1.0, constant: CGFloat(width))
+        NSLayoutConstraint.activate([contrain])
         return contrain
     }
 
-    func topAlighnToViewTop(view : UIView)->NSLayoutConstraint {
+    func topAlighnToViewTop(_ view : UIView)->NSLayoutConstraint {
         return self.topAlighnToViewTop(view, offset: 0)
     }
     
-    func topAlighnToViewTop(view : UIView, offset : CGFloat)->NSLayoutConstraint {
+    func topAlighnToViewTop(_ view : UIView, offset : CGFloat)->NSLayoutConstraint {
         self.translatesAutoresizingMaskIntoConstraints = false
-        let contrain =  NSLayoutConstraint(item: self, attribute: NSLayoutAttribute.Top, relatedBy: NSLayoutRelation.Equal, toItem: view, attribute: NSLayoutAttribute.Top, multiplier: 1.0, constant: offset)
-        NSLayoutConstraint.activateConstraints([contrain])
+        let contrain =  NSLayoutConstraint(item: self, attribute: NSLayoutAttribute.top, relatedBy: NSLayoutRelation.equal, toItem: view, attribute: NSLayoutAttribute.top, multiplier: 1.0, constant: offset)
+        NSLayoutConstraint.activate([contrain])
         return contrain
     }
 
-    func topAlighnToViewBottom(view : UIView) {
+    func topAlighnToViewBottom(_ view : UIView) {
         return self.topAlighnToViewBottom(view, offset: 0)
     }
     
-    func topAlighnToViewBottom(view : UIView, offset : CGFloat) {
+    func topAlighnToViewBottom(_ view : UIView, offset : CGFloat) {
         self.translatesAutoresizingMaskIntoConstraints =  false
-        let contrain =  NSLayoutConstraint(item: self, attribute: NSLayoutAttribute.Top, relatedBy: NSLayoutRelation.Equal, toItem: view, attribute: NSLayoutAttribute.Bottom, multiplier: 1.0, constant: offset)
-        NSLayoutConstraint.activateConstraints([contrain])
+        let contrain =  NSLayoutConstraint(item: self, attribute: NSLayoutAttribute.top, relatedBy: NSLayoutRelation.equal, toItem: view, attribute: NSLayoutAttribute.bottom, multiplier: 1.0, constant: offset)
+        NSLayoutConstraint.activate([contrain])
     }
 
     //MARK: Bottom
     
-    func bottomAlighnToViewBottom(view : UIView, offset : CGFloat) {
+    func bottomAlighnToViewBottom(_ view : UIView, offset : CGFloat) {
         self.translatesAutoresizingMaskIntoConstraints =  false
-        let contrain =  NSLayoutConstraint(item: self, attribute: NSLayoutAttribute.Bottom, relatedBy: NSLayoutRelation.Equal, toItem: view, attribute: NSLayoutAttribute.Bottom, multiplier: 1.0, constant: offset)
-        NSLayoutConstraint.activateConstraints([contrain])
+        let contrain =  NSLayoutConstraint(item: self, attribute: NSLayoutAttribute.bottom, relatedBy: NSLayoutRelation.equal, toItem: view, attribute: NSLayoutAttribute.bottom, multiplier: 1.0, constant: offset)
+        NSLayoutConstraint.activate([contrain])
     }
 
     
-    func trailingToSuperView(withMargin : Bool) {
-        var att = NSLayoutAttribute.Trailing
-        att = withMargin ?  NSLayoutAttribute.TrailingMargin : NSLayoutAttribute.Trailing
-        let contrain =  NSLayoutConstraint(item: self, attribute: NSLayoutAttribute.Trailing, relatedBy: NSLayoutRelation.Equal, toItem: self.superview, attribute: att, multiplier: 1.0, constant: 0)
-        NSLayoutConstraint.activateConstraints([contrain])
+    func trailingToSuperView(_ withMargin : Bool) {
+        var att = NSLayoutAttribute.trailing
+        att = withMargin ?  NSLayoutAttribute.trailingMargin : NSLayoutAttribute.trailing
+        let contrain =  NSLayoutConstraint(item: self, attribute: NSLayoutAttribute.trailing, relatedBy: NSLayoutRelation.equal, toItem: self.superview, attribute: att, multiplier: 1.0, constant: 0)
+        NSLayoutConstraint.activate([contrain])
     }
-    func leadingToSuperView(withMargin : Bool) {
-        var att = NSLayoutAttribute.Leading
-        att = withMargin ?  NSLayoutAttribute.LeadingMargin : NSLayoutAttribute.Leading
-        let contrain =  NSLayoutConstraint(item: self, attribute: NSLayoutAttribute.Leading, relatedBy: NSLayoutRelation.Equal, toItem: self.superview, attribute: att, multiplier: 1.0, constant: 0)
-        NSLayoutConstraint.activateConstraints([contrain])
+    func leadingToSuperView(_ withMargin : Bool) {
+        var att = NSLayoutAttribute.leading
+        att = withMargin ?  NSLayoutAttribute.leadingMargin : NSLayoutAttribute.leading
+        let contrain =  NSLayoutConstraint(item: self, attribute: NSLayoutAttribute.leading, relatedBy: NSLayoutRelation.equal, toItem: self.superview, attribute: att, multiplier: 1.0, constant: 0)
+        NSLayoutConstraint.activate([contrain])
     }
     func clipToWidthSuperView() {
         let viewsKeys : [String : AnyObject] =
@@ -136,50 +136,50 @@ extension UIView {
             "me" : self,
             "superView" : self.superview!
         ]
-        let constrain = NSLayoutConstraint.constraintsWithVisualFormat(
-            "H:|[me]|", options: [], metrics: nil, views: viewsKeys)
-        NSLayoutConstraint.activateConstraints(constrain)
+        let constrain = NSLayoutConstraint.constraints(
+            withVisualFormat: "H:|[me]|", options: [], metrics: nil, views: viewsKeys)
+        NSLayoutConstraint.activate(constrain)
     }
 
 }
 
 class UIViewAutoLayoutExtentions {
-    class func centerVerticlyAlViewsInSuperView(views : [UIView]) {
+    class func centerVerticlyAlViewsInSuperView(_ views : [UIView]) {
         for view in views {
             view.centerVerticlyInSuperView()
         }
     }
-    class func centerHorizontalyAlViewsInSuperView(views : [UIView]) {
+    class func centerHorizontalyAlViewsInSuperView(_ views : [UIView]) {
         for view in views {
             view.centerHorizontalyInSuperView()
         }
     }
-    class func equalHegihtForViews(views : [UIView]) {
+    class func equalHegihtForViews(_ views : [UIView]) {
         var firstView : UIView?
         for currentView in views {
                 if let isLastView = firstView {
-                    let contraint = NSLayoutConstraint(item: currentView, attribute: NSLayoutAttribute.Height, relatedBy: NSLayoutRelation.Equal, toItem: isLastView, attribute: NSLayoutAttribute.Height, multiplier: 1.0, constant: 0.0)
-                    NSLayoutConstraint.activateConstraints([contraint])
+                    let contraint = NSLayoutConstraint(item: currentView, attribute: NSLayoutAttribute.height, relatedBy: NSLayoutRelation.equal, toItem: isLastView, attribute: NSLayoutAttribute.height, multiplier: 1.0, constant: 0.0)
+                    NSLayoutConstraint.activate([contraint])
                 } else {
                     firstView = currentView
                 }
         }
     }
-    class func equalWidthsForViews(views : [UIView]) {
+    class func equalWidthsForViews(_ views : [UIView]) {
         var firstView : UIView?
         for currentView in views {
             if let isFirstView = firstView {
-                NSLayoutConstraint(item: currentView, attribute: .Width, relatedBy: .Equal, toItem: isFirstView, attribute:.Width, multiplier: 1.0, constant:0.0).active = true
+                NSLayoutConstraint(item: currentView, attribute: .width, relatedBy: .equal, toItem: isFirstView, attribute:.width, multiplier: 1.0, constant:0.0).isActive = true
             } else {
                 firstView = currentView
             }
         }
     }
-    class func equalHeightsForViews(views : [UIView]) {
+    class func equalHeightsForViews(_ views : [UIView]) {
         var firstView : UIView?
         for currentView in views {
             if let isFirstView = firstView {
-                NSLayoutConstraint(item: currentView, attribute: .Height, relatedBy: .Equal, toItem: isFirstView, attribute:.Height, multiplier: 1.0, constant:0.0).active = true
+                NSLayoutConstraint(item: currentView, attribute: .height, relatedBy: .equal, toItem: isFirstView, attribute:.height, multiplier: 1.0, constant:0.0).isActive = true
             } else {
                 firstView = currentView
             }

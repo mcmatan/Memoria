@@ -10,8 +10,8 @@ import Foundation
 
 class CurrenctTaskCreator {
     var task = Task(taskName: "",
-        taskTime: NSDate(),
-        taskVoiceURL: NSURL(),
+        taskTime: Date(),
+        taskVoiceURL: URL(string: "www.google.com")!,
         taskBeaconIdentifier: IBeaconIdentifier(uuid: "", major: "", minor: ""),
         taskTimePriorityHi : false
     )
@@ -19,8 +19,8 @@ class CurrenctTaskCreator {
     
     func startNewTask() {
         self.task = Task(taskName: "",
-            taskTime: NSDate(),
-            taskVoiceURL: NSURL(),
+            taskTime: Date(),
+            taskVoiceURL: URL(string: "www.google.com")!,
             taskBeaconIdentifier: IBeaconIdentifier(uuid: "", major: "", minor: ""),
             taskTimePriorityHi: false
         )
@@ -30,30 +30,30 @@ class CurrenctTaskCreator {
         return self.task
     }
 
-    func setCurrenctTask(task : Task) {
+    func setCurrenctTask(_ task : Task) {
         self.task = task
     }
 
     
     //MARK: Setters
 
-    func setTaskName(name : String) {
+    func setTaskName(_ name : String) {
         self.task.taskName = name
     }
     
-    func setTaskTime(date : NSDate) {
+    func setTaskTime(_ date : Date) {
         self.task.taskTime = date
     }
     
-    func setTaskVoiceURL(url : NSURL) {
+    func setTaskVoiceURL(_ url : URL) {
         self.task.taskVoiceURL = url
     }
     
-    func setTaskBeaconIdentifier(iBeaconIdentifier : IBeaconIdentifier) {
+    func setTaskBeaconIdentifier(_ iBeaconIdentifier : IBeaconIdentifier) {
         self.task.taskBeaconIdentifier = iBeaconIdentifier
     }
     
-    func setTaskTimePriority(hi : Bool) {
+    func setTaskTimePriority(_ hi : Bool) {
         self.task.taskTimePriorityHi = hi
     }
 
@@ -64,11 +64,11 @@ class CurrenctTaskCreator {
         return self.task.taskName!
     }
     
-    func getTaskTime()->NSDate? {
+    func getTaskTime()->Date? {
         return self.task.taskTime!
     }
     
-    func getTaskVoiceURL()->NSURL? {
+    func getTaskVoiceURL()->URL? {
         return self.task.taskVoiceURL
     }
     

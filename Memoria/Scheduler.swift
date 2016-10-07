@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 protocol SchedulerDelegate {
-    func notificationScheduledTime(task : Task)
+    func notificationScheduledTime(_ task : Task)
 }
 
 class Scheduler : NSObject {
@@ -21,10 +21,10 @@ class Scheduler : NSObject {
     init(tasksDB : TasksDB) {
         self.tasksDB = tasksDB
         super.init()
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(Scheduler.taskTimeNotification(_:)), name: NotificationsNames.TaskTimeNotification, object:nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(Scheduler.taskTimeNotification(_:)), name: NSNotification.Name(rawValue: NotificationsNames.TaskTimeNotification), object:nil)
     }
     
-    internal func taskTimeNotification(notification : NSNotification) {
+    internal func taskTimeNotification(_ notification : Notification) {
         if let localNotification = notification.object as? UILocalNotification {
             let key = Scheduler.TaskNotificationKey
             let majorAppendedByMinor = localNotification.userInfo![key] as? String
@@ -37,7 +37,7 @@ class Scheduler : NSObject {
         }
     }
     
-    internal func squeduleReminderForTask(task : Task) {
+    internal func squeduleReminderForTask(_ task : Task) {
         let alertBody = task.taskName
         let alertAction = task.taskName
         let fireDate = task.taskTime
@@ -46,26 +46,26 @@ class Scheduler : NSObject {
         let notification = UILocalNotification()
         notification.alertBody = alertBody
         notification.alertAction = alertAction
-        notification.fireDate = fireDate
-        notification.timeZone = NSTimeZone.defaultTimeZone()
+        notification.fireDate = fireDate as Date?
+        notification.timeZone = TimeZone.current
         notification.soundName = UILocalNotificationDefaultSoundName
         let key = Scheduler.TaskNotificationKey
         notification.userInfo = [key: majorAppendedByMinorString]
         notification.category = "Memoria"
-        UIApplication.sharedApplication().scheduleLocalNotification(notification)
+        UIApplication.shared.scheduleLocalNotification(notification)
     }
     
-    internal func cancelReminderForTask(task : Task) {
+    internal func cancelReminderForTask(_ task : Task) {
         let key = task.taskBeaconIdentifier!.majorAppendedByMinorString()
         var notificationToCancel : UILocalNotification?
-        for notification in UIApplication.sharedApplication().scheduledLocalNotifications! {
+        for notification in UIApplication.shared.scheduledLocalNotifications! {
             if notification.userInfo![Scheduler.TaskNotificationKey] as! String == key {
                 notificationToCancel = notification
                 break
             }
         }
         if let isNotification = notificationToCancel {
-            UIApplication.sharedApplication().cancelLocalNotification(isNotification)
+            UIApplication.shared.cancelLocalNotification(isNotification)
         }
         
         

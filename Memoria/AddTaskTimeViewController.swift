@@ -7,7 +7,7 @@ class AddTaskTimeViewController : ViewController {
     var cellIdentifier = "cell"
     var lblTime  = Label()
     var container : Container
-    var chosenTime = NSDate()
+    var chosenTime = Date()
     var currenctTaskCreator : CurrenctTaskCreator
     var addTaskVoiceViewController : AddTaskVoiceViewController?
     
@@ -21,12 +21,12 @@ class AddTaskTimeViewController : ViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.title = self.currenctTaskCreator.getTaskName()
         if let isTimes = currenctTaskCreator.getTaskTime() {
-            self.chosenTime = isTimes
-            self.setTimeToDisplay(isTimes)
+            self.chosenTime = isTimes as Date
+            self.setTimeToDisplay(isTimes as Date)
         }
     }
     
@@ -34,16 +34,16 @@ class AddTaskTimeViewController : ViewController {
         super.viewDidLoad()
         
         let addTaskBtn = Button()
-        addTaskBtn.setTitle(Content.getContent(ContentType.LabelTxt, name: "addTaskTimeButton"), forState: UIControlState.Normal)
+        addTaskBtn.setTitle(Content.getContent(ContentType.labelTxt, name: "addTaskTimeButton"), for: UIControlState())
         addTaskBtn.defaultStyle()
-        addTaskBtn.addTarget(self, action: #selector(AddTaskTimeViewController.addTimeButtonPress), forControlEvents: UIControlEvents.TouchUpInside)
+        addTaskBtn.addTarget(self, action: #selector(AddTaskTimeViewController.addTimeButtonPress), for: UIControlEvents.touchUpInside)
         let doneBtn = Button()
-        doneBtn.setTitle(Content.getContent(ContentType.LabelTxt, name: "addTimeDoneBtn"), forState: UIControlState.Normal)
-        doneBtn.addTarget(self, action: #selector(AddTaskTimeViewController.doneBtnPress), forControlEvents: UIControlEvents.TouchUpInside)
+        doneBtn.setTitle(Content.getContent(ContentType.labelTxt, name: "addTimeDoneBtn"), for: UIControlState())
+        doneBtn.addTarget(self, action: #selector(AddTaskTimeViewController.doneBtnPress), for: UIControlEvents.touchUpInside)
         doneBtn.defaultStyle()
     
-        self.lblTime.font = UIFont.systemFontOfSize(25)
-        self.lblTime.textAlignment = NSTextAlignment.Center
+        self.lblTime.font = UIFont.systemFont(ofSize: 25)
+        self.lblTime.textAlignment = NSTextAlignment.center
         self.lblTime.numberOfLines = 0
         
         self.view.addSubview(addTaskBtn)
@@ -55,7 +55,7 @@ class AddTaskTimeViewController : ViewController {
         doneBtn.translatesAutoresizingMaskIntoConstraints = false
         self.lblTime.translatesAutoresizingMaskIntoConstraints = false
         
-        let views = [doneBtn, addTaskBtn,lblTime]
+        let views = [doneBtn, addTaskBtn,lblTime] as [Any]
         let viewsInfoDic : [String : AnyObject] =
         [
             "addTaskBtn" : addTaskBtn,
@@ -64,11 +64,11 @@ class AddTaskTimeViewController : ViewController {
         ]
         
 
-        UIViewAutoLayoutExtentions.equalWidthsForViews(views)
+        UIViewAutoLayoutExtentions.equalWidthsForViews(views as! [UIView])
         
-        let verticalLayout = NSLayoutConstraint.constraintsWithVisualFormat(
-            "V:[addTaskBtn]-[doneBtn]-[lblTime]", options: NSLayoutFormatOptions.AlignAllCenterX, metrics: nil, views: viewsInfoDic)
-        NSLayoutConstraint.activateConstraints(verticalLayout)
+        let verticalLayout = NSLayoutConstraint.constraints(
+            withVisualFormat: "V:[addTaskBtn]-[doneBtn]-[lblTime]", options: NSLayoutFormatOptions.alignAllCenterX, metrics: nil, views: viewsInfoDic)
+        NSLayoutConstraint.activate(verticalLayout)
         
         addTaskBtn.topToViewControllerTopLayoutGuide(self, offset: 20)
         addTaskBtn.centerVerticlyInSuperView()
@@ -76,16 +76,16 @@ class AddTaskTimeViewController : ViewController {
     
     
     func addTimeButtonPress() {
-        let txt = Content.getContent(ContentType.LabelTxt, name: "AddTaskTimeDatePickerDialog")
-        DatePickerDialog().show(txt, datePickerMode: UIDatePickerMode.DateAndTime) { (date) -> Void in
+        let txt = Content.getContent(ContentType.labelTxt, name: "AddTaskTimeDatePickerDialog")
+        DatePickerDialog().show(txt, datePickerMode: UIDatePickerMode.dateAndTime) { (date) -> Void in
             print(date)
             self.chosenTime = date
             self.setTimeToDisplay(date)
         }
     }
     
-    func setTimeToDisplay(date : NSDate) {
-        let timeString = date.descriptionWithLocale(NSLocale.currentLocale())
+    func setTimeToDisplay(_ date : Date) {
+        let timeString = date.description(with: Locale.current)
         self.lblTime.text = "\(timeString)"
     }
 
