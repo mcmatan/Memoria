@@ -1,6 +1,11 @@
 # Acknowledgements
 This application makes use of the following third party libraries:
 
+## EstimoteSDK
+
+Copyright 2015 Estimote, Inc. All rights reserved.
+
+
 ## KontaktSDK
 
 Copyright (c) 2015 Kontakt.io (http://kontakt.io)

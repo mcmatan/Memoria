@@ -13,4 +13,6 @@
 #import <CoreLocation/CoreLocation.h>
 #import <CoreBluetooth/CoreBluetooth.h>
 
+#import <EstimoteSDK/EstimoteSDK.h>
+
 #endif
