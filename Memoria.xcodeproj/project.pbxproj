@@ -10,7 +10,6 @@
 		63E7386C4BCD17B9C29135D9 /* Pods_MemoriaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C63E54DC6EDD468C89232C63 /* Pods_MemoriaTests.framework */; };
 		9008FB651C4AC420003C1549 /* IBeaconIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9008FB641C4AC420003C1549 /* IBeaconIdentifier.swift */; };
 		9008FB681C53D356003C1549 /* CurrenctTaskCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9008FB671C53D356003C1549 /* CurrenctTaskCreator.swift */; };
-		9008FBC91C6F4A2D003C1549 /* libkontakt-ios-sdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9008FBC81C6F4A2D003C1549 /* libkontakt-ios-sdk.a */; };
 		901127221C1AF8CA0088DD6B /* MemoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901127211C1AF8CA0088DD6B /* MemoriesViewController.swift */; };
 		9011272E1C1AFBE20088DD6B /* AssemblyViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901127291C1AFBE20088DD6B /* AssemblyViewControllers.swift */; };
 		9011272F1C1AFBE20088DD6B /* Bootstrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9011272A1C1AFBE20088DD6B /* Bootstrapper.swift */; };
@@ -109,55 +108,6 @@
 		9008FB641C4AC420003C1549 /* IBeaconIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBeaconIdentifier.swift; sourceTree = "<group>"; };
 		9008FB671C53D356003C1549 /* CurrenctTaskCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrenctTaskCreator.swift; sourceTree = "<group>"; };
 		9008FB731C6F3E3E003C1549 /* Memoria-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Memoria-Bridging-Header.h"; sourceTree = "<group>"; };
-		9008FB981C6F4A2D003C1549 /* KontaktSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KontaktSDK.h; sourceTree = "<group>"; };
-		9008FB991C6F4A2D003C1549 /* KTKAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKAction.h; sourceTree = "<group>"; };
-		9008FB9A1C6F4A2D003C1549 /* KTKActionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKActionManager.h; sourceTree = "<group>"; };
-		9008FB9B1C6F4A2D003C1549 /* KTKBeacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKBeacon.h; sourceTree = "<group>"; };
-		9008FB9C1C6F4A2D003C1549 /* KTKBeaconDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKBeaconDevice.h; sourceTree = "<group>"; };
-		9008FB9D1C6F4A2D003C1549 /* KTKBeaconManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKBeaconManager.h; sourceTree = "<group>"; };
-		9008FB9E1C6F4A2D003C1549 /* KTKBeaconProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKBeaconProfile.h; sourceTree = "<group>"; };
-		9008FB9F1C6F4A2D003C1549 /* KTKBluetoothDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKBluetoothDevice.h; sourceTree = "<group>"; };
-		9008FBA01C6F4A2D003C1549 /* KTKBluetoothManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKBluetoothManager.h; sourceTree = "<group>"; };
-		9008FBA11C6F4A2D003C1549 /* KTKCharacteristicDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKCharacteristicDescriptor.h; sourceTree = "<group>"; };
-		9008FBA21C6F4A2D003C1549 /* KTKClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKClient.h; sourceTree = "<group>"; };
-		9008FBA31C6F4A2D003C1549 /* KTKCloudBeacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKCloudBeacon.h; sourceTree = "<group>"; };
-		9008FBA41C6F4A2D003C1549 /* KTKCompany.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKCompany.h; sourceTree = "<group>"; };
-		9008FBA51C6F4A2D003C1549 /* KTKConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKConverter.h; sourceTree = "<group>"; };
-		9008FBA61C6F4A2D003C1549 /* KTKDataTransferObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKDataTransferObject.h; sourceTree = "<group>"; };
-		9008FBA71C6F4A2D003C1549 /* KTKDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKDescriptor.h; sourceTree = "<group>"; };
-		9008FBA81C6F4A2D003C1549 /* KTKDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKDevice.h; sourceTree = "<group>"; };
-		9008FBA91C6F4A2D003C1549 /* KTKEddystone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKEddystone.h; sourceTree = "<group>"; };
-		9008FBAA1C6F4A2D003C1549 /* KTKEddystoneDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKEddystoneDevice.h; sourceTree = "<group>"; };
-		9008FBAB1C6F4A2D003C1549 /* KTKEddystoneFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKEddystoneFrame.h; sourceTree = "<group>"; };
-		9008FBAC1C6F4A2D003C1549 /* KTKEddystoneRegion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKEddystoneRegion.h; sourceTree = "<group>"; };
-		9008FBAD1C6F4A2D003C1549 /* KTKEddystoneTLM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKEddystoneTLM.h; sourceTree = "<group>"; };
-		9008FBAE1C6F4A2D003C1549 /* KTKEddystoneUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKEddystoneUID.h; sourceTree = "<group>"; };
-		9008FBAF1C6F4A2D003C1549 /* KTKEddystoneURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKEddystoneURL.h; sourceTree = "<group>"; };
-		9008FBB01C6F4A2D003C1549 /* KTKError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKError.h; sourceTree = "<group>"; };
-		9008FBB11C6F4A2D003C1549 /* KTKFirmware.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKFirmware.h; sourceTree = "<group>"; };
-		9008FBB21C6F4A2D003C1549 /* KTKHexConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKHexConverter.h; sourceTree = "<group>"; };
-		9008FBB31C6F4A2D003C1549 /* KTKLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKLocationManager.h; sourceTree = "<group>"; };
-		9008FBB41C6F4A2D003C1549 /* KTKManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKManager.h; sourceTree = "<group>"; };
-		9008FBB51C6F4A2D003C1549 /* KTKNumberConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKNumberConverter.h; sourceTree = "<group>"; };
-		9008FBB61C6F4A2D003C1549 /* KTKNumberDiscreteConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKNumberDiscreteConverter.h; sourceTree = "<group>"; };
-		9008FBB71C6F4A2D003C1549 /* KTKNumberLinearConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKNumberLinearConverter.h; sourceTree = "<group>"; };
-		9008FBB81C6F4A2D003C1549 /* KTKPaging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKPaging.h; sourceTree = "<group>"; };
-		9008FBB91C6F4A2D003C1549 /* KTKPagingBeacons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKPagingBeacons.h; sourceTree = "<group>"; };
-		9008FBBA1C6F4A2D003C1549 /* KTKPagingConfigs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKPagingConfigs.h; sourceTree = "<group>"; };
-		9008FBBB1C6F4A2D003C1549 /* KTKPagingDevices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKPagingDevices.h; sourceTree = "<group>"; };
-		9008FBBC1C6F4A2D003C1549 /* KTKPagingVenues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKPagingVenues.h; sourceTree = "<group>"; };
-		9008FBBD1C6F4A2D003C1549 /* KTKPublicAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKPublicAction.h; sourceTree = "<group>"; };
-		9008FBBE1C6F4A2D003C1549 /* KTKPublicBeacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKPublicBeacon.h; sourceTree = "<group>"; };
-		9008FBBF1C6F4A2D003C1549 /* KTKPublicVenue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKPublicVenue.h; sourceTree = "<group>"; };
-		9008FBC01C6F4A2D003C1549 /* KTKRegion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKRegion.h; sourceTree = "<group>"; };
-		9008FBC11C6F4A2D003C1549 /* KTKServiceDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKServiceDescriptor.h; sourceTree = "<group>"; };
-		9008FBC21C6F4A2D003C1549 /* KTKStringConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKStringConverter.h; sourceTree = "<group>"; };
-		9008FBC31C6F4A2D003C1549 /* KTKSubordinate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKSubordinate.h; sourceTree = "<group>"; };
-		9008FBC41C6F4A2D003C1549 /* KTKUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKUser.h; sourceTree = "<group>"; };
-		9008FBC51C6F4A2D003C1549 /* KTKUUIDConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKUUIDConverter.h; sourceTree = "<group>"; };
-		9008FBC61C6F4A2D003C1549 /* KTKVenue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKVenue.h; sourceTree = "<group>"; };
-		9008FBC71C6F4A2D003C1549 /* KTKVenueBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKVenueBase.h; sourceTree = "<group>"; };
-		9008FBC81C6F4A2D003C1549 /* libkontakt-ios-sdk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libkontakt-ios-sdk.a"; sourceTree = "<group>"; };
 		901127211C1AF8CA0088DD6B /* MemoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoriesViewController.swift; sourceTree = "<group>"; };
 		901127291C1AFBE20088DD6B /* AssemblyViewControllers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssemblyViewControllers.swift; sourceTree = "<group>"; };
 		9011272A1C1AFBE20088DD6B /* Bootstrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bootstrapper.swift; sourceTree = "<group>"; };
@@ -241,7 +191,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9008FBC91C6F4A2D003C1549 /* libkontakt-ios-sdk.a in Frameworks */,
 				B92DC516395A9D906DE0E162 /* Pods_Memoria.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,70 +233,6 @@
 				9008FB671C53D356003C1549 /* CurrenctTaskCreator.swift */,
 			);
 			name = CurrenctTaskCreator;
-			sourceTree = "<group>";
-		};
-		9008FB741C6F45AD003C1549 /* Kontaks */ = {
-			isa = PBXGroup;
-			children = (
-				9008FB971C6F4A2D003C1549 /* kontakt-ios-sdk */,
-				9008FBC81C6F4A2D003C1549 /* libkontakt-ios-sdk.a */,
-			);
-			name = Kontaks;
-			sourceTree = "<group>";
-		};
-		9008FB971C6F4A2D003C1549 /* kontakt-ios-sdk */ = {
-			isa = PBXGroup;
-			children = (
-				9008FB981C6F4A2D003C1549 /* KontaktSDK.h */,
-				9008FB991C6F4A2D003C1549 /* KTKAction.h */,
-				9008FB9A1C6F4A2D003C1549 /* KTKActionManager.h */,
-				9008FB9B1C6F4A2D003C1549 /* KTKBeacon.h */,
-				9008FB9C1C6F4A2D003C1549 /* KTKBeaconDevice.h */,
-				9008FB9D1C6F4A2D003C1549 /* KTKBeaconManager.h */,
-				9008FB9E1C6F4A2D003C1549 /* KTKBeaconProfile.h */,
-				9008FB9F1C6F4A2D003C1549 /* KTKBluetoothDevice.h */,
-				9008FBA01C6F4A2D003C1549 /* KTKBluetoothManager.h */,
-				9008FBA11C6F4A2D003C1549 /* KTKCharacteristicDescriptor.h */,
-				9008FBA21C6F4A2D003C1549 /* KTKClient.h */,
-				9008FBA31C6F4A2D003C1549 /* KTKCloudBeacon.h */,
-				9008FBA41C6F4A2D003C1549 /* KTKCompany.h */,
-				9008FBA51C6F4A2D003C1549 /* KTKConverter.h */,
-				9008FBA61C6F4A2D003C1549 /* KTKDataTransferObject.h */,
-				9008FBA71C6F4A2D003C1549 /* KTKDescriptor.h */,
-				9008FBA81C6F4A2D003C1549 /* KTKDevice.h */,
-				9008FBA91C6F4A2D003C1549 /* KTKEddystone.h */,
-				9008FBAA1C6F4A2D003C1549 /* KTKEddystoneDevice.h */,
-				9008FBAB1C6F4A2D003C1549 /* KTKEddystoneFrame.h */,
-				9008FBAC1C6F4A2D003C1549 /* KTKEddystoneRegion.h */,
-				9008FBAD1C6F4A2D003C1549 /* KTKEddystoneTLM.h */,
-				9008FBAE1C6F4A2D003C1549 /* KTKEddystoneUID.h */,
-				9008FBAF1C6F4A2D003C1549 /* KTKEddystoneURL.h */,
-				9008FBB01C6F4A2D003C1549 /* KTKError.h */,
-				9008FBB11C6F4A2D003C1549 /* KTKFirmware.h */,
-				9008FBB21C6F4A2D003C1549 /* KTKHexConverter.h */,
-				9008FBB31C6F4A2D003C1549 /* KTKLocationManager.h */,
-				9008FBB41C6F4A2D003C1549 /* KTKManager.h */,
-				9008FBB51C6F4A2D003C1549 /* KTKNumberConverter.h */,
-				9008FBB61C6F4A2D003C1549 /* KTKNumberDiscreteConverter.h */,
-				9008FBB71C6F4A2D003C1549 /* KTKNumberLinearConverter.h */,
-				9008FBB81C6F4A2D003C1549 /* KTKPaging.h */,
-				9008FBB91C6F4A2D003C1549 /* KTKPagingBeacons.h */,
-				9008FBBA1C6F4A2D003C1549 /* KTKPagingConfigs.h */,
-				9008FBBB1C6F4A2D003C1549 /* KTKPagingDevices.h */,
-				9008FBBC1C6F4A2D003C1549 /* KTKPagingVenues.h */,
-				9008FBBD1C6F4A2D003C1549 /* KTKPublicAction.h */,
-				9008FBBE1C6F4A2D003C1549 /* KTKPublicBeacon.h */,
-				9008FBBF1C6F4A2D003C1549 /* KTKPublicVenue.h */,
-				9008FBC01C6F4A2D003C1549 /* KTKRegion.h */,
-				9008FBC11C6F4A2D003C1549 /* KTKServiceDescriptor.h */,
-				9008FBC21C6F4A2D003C1549 /* KTKStringConverter.h */,
-				9008FBC31C6F4A2D003C1549 /* KTKSubordinate.h */,
-				9008FBC41C6F4A2D003C1549 /* KTKUser.h */,
-				9008FBC51C6F4A2D003C1549 /* KTKUUIDConverter.h */,
-				9008FBC61C6F4A2D003C1549 /* KTKVenue.h */,
-				9008FBC71C6F4A2D003C1549 /* KTKVenueBase.h */,
-			);
-			path = "kontakt-ios-sdk";
 			sourceTree = "<group>";
 		};
 		9011271F1C1AF6730088DD6B /* Screens */ = {
@@ -812,7 +697,6 @@
 		B4427CF2D9A98A2F2E8DB352 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9008FB741C6F45AD003C1549 /* Kontaks */,
 				AE2216E1B6AD497467804F14 /* Pods_Memoria.framework */,
 				C63E54DC6EDD468C89232C63 /* Pods_MemoriaTests.framework */,
 				54BE932400BB9F6741D73728 /* Pods_MemoriaUITests.framework */,

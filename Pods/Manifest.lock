@@ -1,18 +1,21 @@
 PODS:
+  - KontaktSDK (1.2.3)
   - SnapKit (3.0.1)
   - SwiftDate (4.0.4)
   - Swinject (2.0.0-beta.2)
 
 DEPENDENCIES:
+  - KontaktSDK (~> 1.1)
   - SnapKit (~> 3.0.1)
   - SwiftDate (~> 4.0)
   - Swinject (~> 2.0.0-beta.2)
 
 SPEC CHECKSUMS:
+  KontaktSDK: 1716f9c7f6d71914f8f3489d5da8bde58252d581
   SnapKit: f818b8326d45b4e1c777d0ab27b5c0a3624bfdeb
   SwiftDate: 16d9e299eafb8021d921e874f13c0f79e7f1a801
   Swinject: 69a893192efa9f2cc44be79ef423d04d571b6af9
 
-PODFILE CHECKSUM: abaded2b74773a11da623d7c4f5626394ba39779
+PODFILE CHECKSUM: eef4f98438c141f792c1db6283379a44df76c3d1
 
 COCOAPODS: 1.0.1
