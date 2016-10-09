@@ -167,8 +167,9 @@ class TaskNotificationsTracker : NSObject, IbeaconsTrackerDelegate, SchedulerDel
     fileprivate func verifyUserDoingTask(_ task : Task) {
         let now = Date()
         if let isTaskTimeLastVerifyWasShow = task.timeLastVerifyWasShow {
-            if Float(isTaskTimeLastVerifyWasShow.minutesFrom(now)) < Float(minTimeFromVerificationToVerification) {
-                print("Should show verification, but too close to the last one, will wait few more secounds")
+            let secoundFromLastVerificaion = abs(Float(isTaskTimeLastVerifyWasShow.secondsFrom(now)))
+            if secoundFromLastVerificaion < Float(minTimeFromVerificationToVerification) {
+                print("Should show verification, but too close to the last one, will wait \(secoundFromLastVerificaion) secounds")
                 return
             }
         }
