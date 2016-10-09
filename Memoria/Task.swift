@@ -19,6 +19,7 @@ class Task : NSObject {
     var standingNearFromDate : Date?
     var isTaskDone = false
     var timeLastWarningWasShow : Date?
+    var timeLastVerifyWasShow : Date?
     
 
     //Convinece

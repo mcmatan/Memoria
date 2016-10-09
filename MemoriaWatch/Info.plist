@@ -31,5 +31,7 @@
 	<string>com.MACApps.com.Memoria</string>
 	<key>WKWatchKitApp</key>
 	<true/>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>Memoria uses Bluetooth technology to make location future possible, by accepting this message you will let us use it, to help you.</string>
 </dict>
 </plist>

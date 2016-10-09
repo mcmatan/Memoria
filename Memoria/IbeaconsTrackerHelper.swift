@@ -10,18 +10,19 @@ import Foundation
 import KontaktSDK
 
 class IbeaconsTrackerHelper {
-
-//    //KTKRemoved
-//    class func locationManagerStateToString(_ state : KTKLocationManagerState) ->String {
-//        switch (state) {
-//        case KTKLocationManagerState.failed:
-//            return "KTKLocationManagerState.Failed"
-//        case KTKLocationManagerState.inactive:
-//            return "KTKLocationManagerState.Inactive"
-//        case KTKLocationManagerState.initializing:
-//            return "KTKLocationManagerState.Initializing"
-//        case KTKLocationManagerState.monitoring:
-//            return "KTKLocationManagerState.Monitoring"
-//        }
-//    }
+    
+    class func locationManagerStateToString(_ state : CLAuthorizationStatus) ->String {
+        switch (state) {
+        case CLAuthorizationStatus.notDetermined:
+            return "CLAuthorizationStatus.Failed"
+        case CLAuthorizationStatus.restricted:
+            return "CLAuthorizationStatus.restricted"
+        case CLAuthorizationStatus.denied:
+            return "CLAuthorizationStatus.denied"
+        case CLAuthorizationStatus.authorizedAlways:
+            return "CLAuthorizationStatus.authorizedAlways"
+        case CLAuthorizationStatus.authorizedWhenInUse:
+            return "CLAuthorizationStatus.authorizedWhenInUse"
+        }
+    }
 }

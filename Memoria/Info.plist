@@ -22,6 +22,12 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>Memoria uses Bluetooth technology to make location future possible, by accepting this message you will let us use it, to help you.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Memoria uses Bluetooth technology to make location future possible, by accepting this message you will let us use it, to help you.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Memoria would like to use your microphone for better notifications</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>bluetooth-central</string>
@@ -45,7 +51,5 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance </key>
 	<string>NO</string>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>Memoria uses Bluetooth technology to make location future possible, by accepting this message you will let us use it, to help you.</string>
 </dict>
 </plist>

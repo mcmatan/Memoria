@@ -44,6 +44,11 @@ open class AssemblyModel {
                 ibeaconsTracker: container.resolve(IbeaconsTracker.self)!)
             }.inObjectScope(ObjectScope.container)
          container.resolve(TaskNotificationsTracker.self)
+        
+        container.register(IBeaconWrapper.self) { c in
+            return IBeaconWrapper()
+            }.inObjectScope(ObjectScope.container)
+        let _ = container.resolve(IBeaconWrapper.self)
 
     }
     

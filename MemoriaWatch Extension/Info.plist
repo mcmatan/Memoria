@@ -34,5 +34,7 @@
 	</dict>
 	<key>WKExtensionDelegateClassName</key>
 	<string>$(PRODUCT_MODULE_NAME).ExtensionDelegate</string>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>Memoria uses Bluetooth technology to make location future possible, by accepting this message you will let us use it, to help you.</string>
 </dict>
 </plist>

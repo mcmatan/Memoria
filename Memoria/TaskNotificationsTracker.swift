@@ -46,6 +46,7 @@ class TaskNotificationsTracker : NSObject, IbeaconsTrackerDelegate, SchedulerDel
     fileprivate let maxTimeStandingNearTaskBeforeAction = 10 //Sec
     fileprivate let timeForRecognisionThatPerformingTaskInSec = 10 // Sec
     fileprivate let onHoldIntervalIntilNextNotification = 60 * 5 // Sec
+    fileprivate let minTimeFromVerificationToVerification = 30 // Sec
     fileprivate let scheduler : Scheduler
     fileprivate let ibeaconsTracker : IbeaconsTracker
     
@@ -154,16 +155,24 @@ class TaskNotificationsTracker : NSObject, IbeaconsTrackerDelegate, SchedulerDel
                 self.taskWarning(task)
                 } else { // If the task is at the past, and its not done. so let the user confiem he allready did.
                     print("If the task is at the past, and its not done. so let the user confiem he allready did.")
-                NotificationCenter.default.post(name: Notification.Name(rawValue: NotificationsNames.kPresentTaskVerification), object: task, userInfo: nil)
+                self.verifyUserDoingTask(task)
             }
         } else {
             //TODO: :Push-Verification Early-Completion
             print("Showing verification")
-            NotificationCenter.default.post(name: Notification.Name(rawValue: NotificationsNames.kPresentTaskVerification), object: task, userInfo: nil)
+            self.verifyUserDoingTask(task)
         }
     }
     
     fileprivate func verifyUserDoingTask(_ task : Task) {
+        let now = Date()
+        if let isTaskTimeLastVerifyWasShow = task.timeLastVerifyWasShow {
+            if Float(isTaskTimeLastVerifyWasShow.minutesFrom(now)) < Float(minTimeFromVerificationToVerification) {
+                print("Should show verification, but too close to the last one, will wait few more secounds")
+                return
+            }
+        }
+        task.timeLastVerifyWasShow = now
         NotificationCenter.default.post(name: Notification.Name(rawValue: NotificationsNames.kPresentTaskVerification), object: task, userInfo: nil)
     }
     
