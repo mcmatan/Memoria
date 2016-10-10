@@ -43,6 +43,7 @@
 		906C36851C8E1CA80058EC85 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906C36841C8E1CA80058EC85 /* Colors.swift */; };
 		9075214F1CE904A800FDFF3D /* LabelsTextsHe.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9075214E1CE904A800FDFF3D /* LabelsTextsHe.plist */; };
 		909CB2801DA914160075507C /* IBeaconWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909CB27F1DA914160075507C /* IBeaconWrapper.swift */; };
+		90B0C53F1DAAE3870019D59B /* ApplicationExntentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B0C53E1DAAE3870019D59B /* ApplicationExntentions.swift */; };
 		90C5887B1C46E0AC00D84C73 /* TaskManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C5887A1C46E0AC00D84C73 /* TaskManagerViewController.swift */; };
 		90CE2AF51CF4DE0E00511ED4 /* ButtonsTextsHe.plist in Resources */ = {isa = PBXBuildFile; fileRef = 90CE2AF41CF4DE0E00511ED4 /* ButtonsTextsHe.plist */; };
 		90CE2AF71CF4E6A200511ED4 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CE2AF61CF4E6A200511ED4 /* Fonts.swift */; };
@@ -152,6 +153,7 @@
 		906C36841C8E1CA80058EC85 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		9075214E1CE904A800FDFF3D /* LabelsTextsHe.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LabelsTextsHe.plist; sourceTree = "<group>"; };
 		909CB27F1DA914160075507C /* IBeaconWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBeaconWrapper.swift; sourceTree = "<group>"; };
+		90B0C53E1DAAE3870019D59B /* ApplicationExntentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationExntentions.swift; sourceTree = "<group>"; };
 		90C5887A1C46E0AC00D84C73 /* TaskManagerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskManagerViewController.swift; sourceTree = "<group>"; };
 		90CE2AF41CF4DE0E00511ED4 /* ButtonsTextsHe.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ButtonsTextsHe.plist; sourceTree = "<group>"; };
 		90CE2AF61CF4E6A200511ED4 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
@@ -526,6 +528,7 @@
 				90DC62121C78981B000C4457 /* UIColorExtension.swift */,
 				90DC620B1C6F62BB000C4457 /* DictionaryExntentions.swift */,
 				90DC620D1C6F6B45000C4457 /* NSDateExntentions.swift */,
+				90B0C53E1DAAE3870019D59B /* ApplicationExntentions.swift */,
 			);
 			name = Categoris;
 			sourceTree = "<group>";
@@ -1034,6 +1037,7 @@
 				90DC620E1C6F6B45000C4457 /* NSDateExntentions.swift in Sources */,
 				9035FE0D1C1B0C9E00D98022 /* AddTasksLocationViewController.swift in Sources */,
 				90DC62111C6F844A000C4457 /* AddTaskTimePriorityController.swift in Sources */,
+				90B0C53F1DAAE3870019D59B /* ApplicationExntentions.swift in Sources */,
 				901127301C1AFBE20088DD6B /* AssemblyModel.swift in Sources */,
 				90F00A071C4A7C06002C98BA /* IbeaconsTracker.swift in Sources */,
 				9035FE121C1B0D1200D98022 /* DrugsViewController.swift in Sources */,

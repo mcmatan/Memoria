@@ -16,9 +16,14 @@ class IBeaconWrapper: NSObject, ESTBeaconManagerDelegate {
         super.init()
         self.beaconManager.delegate = self
         self.beaconManager.requestAlwaysAuthorization() // Location for the app also when in background
-        self.beaconManager.startMonitoring(for: CLBeaconRegion(
+//        self.beaconManager.startMonitoring(for: CLBeaconRegion(
+//            proximityUUID: NSUUID(uuidString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D")! as UUID,
+//            major: 58227, minor: 39732, identifier: "6e00185bd93bb636c15d2b54e7e4ad09"))
+        
+        self.beaconManager.stopMonitoring(for: CLBeaconRegion(
             proximityUUID: NSUUID(uuidString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D")! as UUID,
             major: 58227, minor: 39732, identifier: "6e00185bd93bb636c15d2b54e7e4ad09"))
+        self.beaconManager.stopMonitoringForAllRegions()
         
     }
     

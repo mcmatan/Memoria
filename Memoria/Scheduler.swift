@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import SwiftDate
 
 protocol SchedulerDelegate {
     func notificationScheduledTime(_ task : Task)
@@ -28,19 +29,27 @@ class Scheduler : NSObject {
         if let localNotification = notification.object as? UILocalNotification {
             let key = Scheduler.TaskNotificationKey
             let majorAppendedByMinor = localNotification.userInfo![key] as? String
+            guard let _ = majorAppendedByMinor else {
+                return
+            }
             let task = self.tasksDB.getTaskForIBeaconMajorAppendedByMinor(majorAppendedByMinor!)
-                if let isTask = task {
-                    if let _ = self.delegate {
-                            self.delegate!.notificationScheduledTime(isTask)
-                    }
-                }
+            guard let isTask = task else {
+                return
+            }
+            if let _ = self.delegate {
+                    self.delegate!.notificationScheduledTime(isTask)
+            }
         }
     }
     
     internal func squeduleReminderForTask(_ task : Task) {
+        self.squeduleReminderForTask(task, date: task.taskTime!)
+    }
+    
+    private func squeduleReminderForTask(_ task : Task, date: Date) {
         let alertBody = task.taskName
         let alertAction = task.taskName
-        let fireDate = task.taskTime
+        let fireDate = date
         let majorAppendedByMinorString = task.taskBeaconIdentifier!.majorAppendedByMinorString()
         
         let notification = UILocalNotification()

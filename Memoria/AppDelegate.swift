@@ -49,6 +49,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ application: UIApplication, didReceive notification: UILocalNotification) {
+        print("Did recive task notification at time")
         NotificationCenter.default.post(name: Notification.Name(rawValue: NotificationsNames.TaskTimeNotification), object: notification)
     }
 
