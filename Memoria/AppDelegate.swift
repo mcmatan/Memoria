@@ -13,7 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
 
         Bootstrapper.run()
-        application.registerUserNotificationSettings(UIUserNotificationSettings(types: [.alert,  .sound, .badge], categories: nil))
+        application.registerUserNotificationSettings(UIUserNotificationSettings(types: [.alert,  .sound], categories: nil))
         let rootViewController = Bootstrapper.container.resolve(NavigationController.self)
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.rootViewController = rootViewController
