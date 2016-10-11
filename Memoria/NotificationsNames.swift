@@ -12,7 +12,7 @@ class NotificationsNames {
     static let enterdAreaWithActiveTeskNotification = "enterdAreaWithActiveTesk" //Holdes task
     static let beaconsThatAreNearNotification = "beaconIsNear" // Holdes CLBeacon Array
 
-    static let TaskTimeNotification = "TaskTimeNotification"
+    static let NotificationDidOccur = "NotificationDidOccur"
     
     static let kTaskDone = "TaskDone"
 

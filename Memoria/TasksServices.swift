@@ -12,10 +12,10 @@ import SwiftDate
 class TasksServices {
     let onHoldTimoutTimeInMinutes = 5
     var tasksDB : TasksDB
-    let scheduler : Scheduler
+    let scheduler : NotificationScheduler
     fileprivate let taskNotificationsTracker : TaskNotificationsTracker
 
-    init(tasksDB : TasksDB, scheduler : Scheduler, taskNotificationsTracker : TaskNotificationsTracker) {
+    init(tasksDB : TasksDB, scheduler : NotificationScheduler, taskNotificationsTracker : TaskNotificationsTracker) {
         self.scheduler = scheduler
         self.tasksDB = tasksDB
         self.taskNotificationsTracker = taskNotificationsTracker

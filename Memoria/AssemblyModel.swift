@@ -23,7 +23,7 @@ open class AssemblyModel {
 
         container.register(TasksServices.self) { c in
             return TasksServices(tasksDB: container.resolve(TasksDB.self)!,
-                scheduler: container.resolve(Scheduler.self)!,
+                scheduler: container.resolve(NotificationScheduler.self)!,
                 taskNotificationsTracker: container.resolve(TaskNotificationsTracker.self)!
             )
         }.inObjectScope(ObjectScope.container)
@@ -31,19 +31,24 @@ open class AssemblyModel {
         container.register(CurrenctTaskCreator.self) { c in
             return CurrenctTaskCreator()
             }.inObjectScope(ObjectScope.container)
-
-        container.register(Scheduler.self) { c in
-            return Scheduler(
+        
+        container.register(NotificationExecuter.self) { c in
+            return NotificationExecuter(
                 tasksDB: container.resolve(TasksDB.self)!)
+            }.inObjectScope(ObjectScope.container)
+
+        container.register(NotificationScheduler.self) { c in
+            return NotificationScheduler()
             }.inObjectScope(ObjectScope.container)
         
         container.register(TaskNotificationsTracker.self) { c in
             return TaskNotificationsTracker(
                 taskDB: container.resolve(TasksDB.self)!,
-                scheduler: container.resolve(Scheduler.self)!,
-                ibeaconsTracker: container.resolve(IbeaconsTracker.self)!)
+                scheduler: container.resolve(NotificationScheduler.self)!,
+                ibeaconsTracker: container.resolve(IbeaconsTracker.self)!,
+            notificationExecuter: container.resolve(NotificationExecuter.self)!)
             }.inObjectScope(ObjectScope.container)
-         container.resolve(TaskNotificationsTracker.self)
+         let _ = container.resolve(TaskNotificationsTracker.self)
         
         container.register(IBeaconWrapper.self) { c in
             return IBeaconWrapper()

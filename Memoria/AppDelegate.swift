@@ -13,7 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
 
         Bootstrapper.run()
-        application.registerUserNotificationSettings(UIUserNotificationSettings(types: UIUserNotificationType.alert, categories: nil))
+        application.registerUserNotificationSettings(UIUserNotificationSettings(types: [.alert,  .sound, .badge], categories: nil))
         let rootViewController = Bootstrapper.container.resolve(NavigationController.self)
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.rootViewController = rootViewController
@@ -50,7 +50,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didReceive notification: UILocalNotification) {
         print("Did recive task notification at time")
-        NotificationCenter.default.post(name: Notification.Name(rawValue: NotificationsNames.TaskTimeNotification), object: notification)
+        NotificationCenter.default.post(name: Notification.Name(rawValue: NotificationsNames.NotificationDidOccur), object: notification)
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

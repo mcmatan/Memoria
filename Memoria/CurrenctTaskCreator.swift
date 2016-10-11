@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwiftDate
 
 class CurrenctTaskCreator {
     var task = Task(taskName: "",
@@ -42,6 +43,9 @@ class CurrenctTaskCreator {
     }
     
     func setTaskTime(_ date : Date) {
+        if Date() < date {
+            self.task.isTaskDone = false
+        }
         self.task.taskTime = date
     }
     

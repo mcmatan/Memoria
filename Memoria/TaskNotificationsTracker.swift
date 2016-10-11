@@ -39,7 +39,7 @@ fileprivate func >= <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
 }
 
 
-class TaskNotificationsTracker : NSObject, IbeaconsTrackerDelegate, SchedulerDelegate {
+class TaskNotificationsTracker : NSObject, IbeaconsTrackerDelegate, NotificationExecuterDelegate {
     fileprivate let taskDB : TasksDB
     fileprivate let minTimeFromWarningToWarning = 1.5 // min
     fileprivate let timeFromTaskDoneToShowWarningWhenNear = 60 //Sec
@@ -47,20 +47,20 @@ class TaskNotificationsTracker : NSObject, IbeaconsTrackerDelegate, SchedulerDel
     fileprivate let timeForRecognisionThatPerformingTaskInSec = 10 // Sec
     fileprivate let onHoldIntervalIntilNextNotification = 60 * 5 // Sec
     fileprivate let minTimeFromVerificationToVerification = 30 // Sec
-    fileprivate let scheduler : Scheduler
+    fileprivate let scheduler : NotificationScheduler
     fileprivate let ibeaconsTracker : IbeaconsTracker
     
-    init(taskDB : TasksDB, scheduler : Scheduler, ibeaconsTracker : IbeaconsTracker) {
+    init(taskDB : TasksDB, scheduler : NotificationScheduler, ibeaconsTracker : IbeaconsTracker, notificationExecuter: NotificationExecuter) {
         self.taskDB = taskDB
         self.scheduler = scheduler
         self.ibeaconsTracker = ibeaconsTracker
         super.init()
-        self.scheduler.delegate = self        
+        notificationExecuter.delegate = self
         self.ibeaconsTracker.delegate = self
     }
     
     //MARK: Public
-    internal func notificationScheduledTime(_ task : Task) {
+    internal func notificationDidOccur(_ task : Task) {
         if task.isTaskDone == false {
             NotificationCenter.default.post(name: Notification.Name(rawValue: NotificationsNames.kPresentTaskNotification), object: task, userInfo: nil)
         }
@@ -109,7 +109,7 @@ class TaskNotificationsTracker : NSObject, IbeaconsTrackerDelegate, SchedulerDel
         DispatchQueue.main.asyncAfter(deadline: delayTime) {
             if let isTaskNotDeleted = self.taskDB.getTaskForIBeaconIdentifier(taskIdentifier!) {
                 if isTaskNotDeleted.taskisOnHold == true {
-                    self.notificationScheduledTime(task)
+                    self.notificationDidOccur(task)
                 }
             }
         }
