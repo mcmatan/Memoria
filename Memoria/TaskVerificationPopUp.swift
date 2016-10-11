@@ -111,6 +111,7 @@ class TaskVerificationPopUp : ViewController {
     }
     
     func btnRemoingMeLaterPress() {
+        self.tasksServices.snoozeTask(task: self.task)
         self.dismiss(animated: true, completion: nil)
     }
     

@@ -22,7 +22,7 @@ class NotificationScheduler : NSObject, INotificationScheduler {
         self.squeduleReminderForTask(task, date: task.taskTime!)
     }
     
-    private func squeduleReminderForTask(_ task : Task, date: Date) {
+    internal func squeduleReminderForTask(_ task : Task, date: Date) {
         let alertBody = task.taskName
         let alertAction = task.taskName
         let fireDate = date

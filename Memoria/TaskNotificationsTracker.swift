@@ -44,7 +44,7 @@ class TaskNotificationsTracker : NSObject, IbeaconsTrackerDelegate, Notification
     fileprivate let minTimeFromWarningToWarning = 1.5 // min
     fileprivate let timeFromTaskDoneToShowWarningWhenNear = 60 //Sec
     fileprivate let maxTimeStandingNearTaskBeforeAction = 10 //Sec
-    fileprivate let timeForRecognisionThatPerformingTaskInSec = 10 // Sec
+    fileprivate let timeForRecognisionThatPerformingTaskInSec = 60 * 5 // Sec
     fileprivate let onHoldIntervalIntilNextNotification = 60 * 5 // Sec
     fileprivate let minTimeFromVerificationToVerification = 30 // Sec
     fileprivate let scheduler : NotificationScheduler
@@ -100,19 +100,6 @@ class TaskNotificationsTracker : NSObject, IbeaconsTrackerDelegate, Notification
         self.taskDB.saveTask(task)
         NotificationCenter.default.post(name: Notification.Name(rawValue: NotificationsNames.kTaskDone), object: task, userInfo: nil)
         NotificationCenter.default.post(name: Notification.Name(rawValue: NotificationsNames.kPresentTaskMarkedAsDone), object: task, userInfo: nil)
-    }
-    
-    internal func remindMeLater(_ task : Task) {
-        task.taskisOnHold = true
-        let taskIdentifier = task.taskBeaconIdentifier
-        let delayTime = DispatchTime.now() + Double(Int64(Double(self.onHoldIntervalIntilNextNotification) * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
-        DispatchQueue.main.asyncAfter(deadline: delayTime) {
-            if let isTaskNotDeleted = self.taskDB.getTaskForIBeaconIdentifier(taskIdentifier!) {
-                if isTaskNotDeleted.taskisOnHold == true {
-                    self.notificationDidOccur(task)
-                }
-            }
-        }
     }
     
     //MARK: Private

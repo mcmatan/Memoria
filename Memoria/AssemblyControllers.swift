@@ -40,7 +40,7 @@ open class AssemblyControllers {
             return TasksNotificationsPresenter(tasksServices: container.resolve(TasksServices.self)!,
                 iBeaconServices:  container.resolve(IBeaconServices.self)! , container: container)
             }.inObjectScope(ObjectScope.container)
-        container.resolve(TasksNotificationsPresenter.self)
+        let _ = container.resolve(TasksNotificationsPresenter.self)
 
     }
 }

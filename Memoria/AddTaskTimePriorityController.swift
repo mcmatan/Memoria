@@ -91,7 +91,7 @@ class AddTaskTimePriorityController: ViewController {
         self.currenctTaskCreator.setTaskTimePriority(self.switchPrairity.isOn)
         self.tasksServices.saveTask(self.currenctTaskCreator.getCurrenctTask())
         
-        self.navigationController?.popToRootViewController(animated: true)
+        let _ = self.navigationController?.popToRootViewController(animated: true)
         
 //        if let _ = self.addTaskConfirmationViewController {} else {
 //            self.addTaskConfirmationViewController = self.container.resolve(AddTaskConfirmationViewController.self)

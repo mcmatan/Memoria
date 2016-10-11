@@ -16,10 +16,12 @@ class TaskNotificationPopUp : ViewController {
     let btnOk = Button()
     let task : Task
     let recorder : VoiceRecorder
+    let tasksServices: TasksServices
     
-    init(task: Task) {
+    init(task: Task, tasksServices: TasksServices) {
         self.recorder = VoiceRecorder()
         self.task = task
+        self.tasksServices = tasksServices
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -100,6 +102,7 @@ class TaskNotificationPopUp : ViewController {
     //MARK: Buttons
     
     func btnOkPress() {
+        self.tasksServices.snoozeTask(task: self.task)
         self.dismiss(animated: true, completion: nil)
     }
     

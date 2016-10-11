@@ -47,10 +47,8 @@ open class AssemblyViewControllers {
         }
         
         container.register(TaskNotificationPopUp.self) { _, task in
-            return TaskNotificationPopUp(task: task)
+            return TaskNotificationPopUp(task: task, tasksServices: container.resolve(TasksServices.self)!)
         }
-        
-        container.resolve(TaskNotificationPopUp.self, argument: Task(taskName: "", taskTime: Date(), taskVoiceURL: URL(string: "www.google.com")!, taskBeaconIdentifier: IBeaconIdentifier(uuid: "", major: "", minor: ""), taskTimePriorityHi: true))
 
         container.register(TaskVerificationPopUp.self) { _, task in
             return TaskVerificationPopUp(task: task, tasksServices: container.resolve(TasksServices.self)!)
@@ -59,8 +57,6 @@ open class AssemblyViewControllers {
         container.register(TaskWarningPopUp.self) { _, task in
             return TaskWarningPopUp(task: task)
         }
-
-
 
     }
 }

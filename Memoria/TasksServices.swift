@@ -10,9 +10,9 @@ import Foundation
 import SwiftDate
 
 class TasksServices {
-    let onHoldTimoutTimeInMinutes = 5
-    var tasksDB : TasksDB
-    let scheduler : NotificationScheduler
+    private let snoozeMin = 5
+    private var tasksDB : TasksDB
+    private let scheduler : NotificationScheduler
     fileprivate let taskNotificationsTracker : TaskNotificationsTracker
 
     init(tasksDB : TasksDB, scheduler : NotificationScheduler, taskNotificationsTracker : TaskNotificationsTracker) {
@@ -26,12 +26,8 @@ class TasksServices {
         self.tasksDB.saveTask(task)
     }
     
-    func setTaskIsOnHold(_ task : Task) { // This meents a timout will be made for the user to approch the task
-        self.scheduler.cancelReminderForTask(task)
-        task.taskTime = (task.taskTime! + onHoldTimoutTimeInMinutes.minutes)
-        task.taskisOnHold = true
-        self.scheduler.squeduleReminderForTask(task)
-        self.tasksDB.saveTask(task)
+    func snoozeTask(task: Task) {
+        self.scheduler.squeduleReminderForTask(task, date: Date() + snoozeMin.minutes)
     }
 
     func setTaskAsDone(_ task : Task) {

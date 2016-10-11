@@ -26,11 +26,10 @@ extension UIView {
         return constraint
     }
     
-    func centerVerticlyInSuperView()->NSLayoutConstraint { //X
+    func centerVerticlyInSuperView() { //X
         self.translatesAutoresizingMaskIntoConstraints = false
         let constraint = NSLayoutConstraint(item: self, attribute: NSLayoutAttribute.centerX, relatedBy: NSLayoutRelation.equal, toItem: superview, attribute: NSLayoutAttribute.centerX, multiplier: 1.0, constant: 0)
         superview?.addConstraint(constraint)
-        return constraint
     }
 
     func topToViewControllerTopLayoutGuide(_ viewControlelr : UIViewController) {
@@ -74,18 +73,16 @@ extension UIView {
         NSLayoutConstraint.activate(allConstrains)
     }
     
-    func heightLayoutAs(_ height : Double)->NSLayoutConstraint {
+    func heightLayoutAs(_ height : Double) {
         self.translatesAutoresizingMaskIntoConstraints = false
         self.translatesAutoresizingMaskIntoConstraints = false
         let contrain =  NSLayoutConstraint(item: self, attribute: NSLayoutAttribute.height, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.notAnAttribute, multiplier: 1.0, constant: CGFloat(height))
         NSLayoutConstraint.activate([contrain])
-        return contrain
     }
-    func widthLayoutAs(_ width : Double)->NSLayoutConstraint {
+    func widthLayoutAs(_ width : Double) {
         self.translatesAutoresizingMaskIntoConstraints = false
         let contrain =  NSLayoutConstraint(item: self, attribute: NSLayoutAttribute.width, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.notAnAttribute, multiplier: 1.0, constant: CGFloat(width))
         NSLayoutConstraint.activate([contrain])
-        return contrain
     }
 
     func topAlighnToViewTop(_ view : UIView)->NSLayoutConstraint {
