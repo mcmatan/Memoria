@@ -34,6 +34,7 @@ class NotificationExecuter: NSObject {
             guard let isTask = task else {
                 return
             }
+            self.removeRepeatedNotifications(notification: localNotification)
             if let _ = self.delegate {
                 self.delegate!.notificationDidOccur(isTask)
             }
@@ -41,7 +42,12 @@ class NotificationExecuter: NSObject {
     }
     
     
-    private func remoteRepeatedNotifications() {
-        
+    private func removeRepeatedNotifications(notification: UILocalNotification) {
+        let allSqudulesNotifications = UIApplication.shared.scheduledLocalNotifications
+        for sqeduledNotification in allSqudulesNotifications! {
+            if sqeduledNotification.alertBody == notification.alertBody {
+                UIApplication.shared.cancelLocalNotification(sqeduledNotification)
+            }
+        }
     }
 }

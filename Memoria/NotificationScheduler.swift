@@ -38,10 +38,10 @@ class NotificationScheduler : NSObject, INotificationScheduler {
         let key = NotificationScheduler.TaskNotificationKey
         notification.userInfo = [key: majorAppendedByMinorString]
         notification.category = "Memoria"
-        squeduleReminderWithBackupReminders(notification: notification)
+        squeduleReminderWithRepeat(notification: notification)
     }
     
-    private func squeduleReminderWithBackupReminders(notification: UILocalNotification) {
+    private func squeduleReminderWithRepeat(notification: UILocalNotification) {
         let numberOfReminders = 10
         for i in 0...numberOfReminders {
             let addedNotification = notification.copy() as! UILocalNotification
@@ -62,9 +62,5 @@ class NotificationScheduler : NSObject, INotificationScheduler {
         if let isNotification = notificationToCancel {
             UIApplication.shared.cancelLocalNotification(isNotification)
         }
-        
-        
     }
-
-
 }
