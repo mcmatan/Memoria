@@ -4,14 +4,14 @@ import UIKit
 import SnapKit
 
 class Button : UIButton {
-    var myDefaultWidth = Double(UIScreen.mainScreen().bounds.size.width) - 40.0
+    var myDefaultWidth = Double(UIScreen.main.bounds.size.width) - 40.0
     var myDefaultHeight = 50.0
     
-    var colorFlicker = UIColor.redColor()
-    var flickerTimer : NSTimer?
+    var colorFlicker = UIColor.red
+    var flickerTimer : Timer?
     
     init() {
-        super.init(frame: CGRectZero)
+        super.init(frame: CGRect.zero)
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -25,7 +25,7 @@ class Button : UIButton {
     }
     
     func defaultStyleMini() {
-        self.titleLabel?.font = UIFont.systemFontOfSize(15)
+        self.titleLabel?.font = UIFont.systemFont(ofSize: 15)
         self.defaultColor()
         self.defaultCornerRaduis()
         self.contentEdgeInsets = UIEdgeInsetsMake(5, 10, 5, 10)
@@ -63,13 +63,13 @@ class Button : UIButton {
     }
     
     internal func editBtn() {
-        self.setBackgroundImage(UIImage(named: "EditBtn"), forState: UIControlState.Normal)
+        self.setBackgroundImage(UIImage(named: "EditBtn"), for: UIControlState())
         self.widthLayoutAs(67)
         self.heightLayoutAs(30)
     }
     
     internal func playSoundBtn() {
-        self.setBackgroundImage(UIImage(named: "PlaySoundBtn"), forState: UIControlState.Normal)
+        self.setBackgroundImage(UIImage(named: "PlaySoundBtn"), for: UIControlState())
         self.widthLayoutAs(136)
         self.heightLayoutAs(32)
     }
@@ -77,35 +77,35 @@ class Button : UIButton {
     internal func notificiationPlaySoundBtn() {
         self.backgroundColor = Colors.green()
         self.defaultBigButton()
-        self.setTitle(Content.getContent(ContentType.ButtonTxt, name: "PlaySound"), forState: UIControlState.Normal)
+        self.setTitle(Content.getContent(ContentType.buttonTxt, name: "PlaySound"), for: UIControlState())
     }
     
     internal func notificiationOkThanksBtn() {
         self.backgroundColor = Colors.lightGray()
         self.defaultBigButton()
-        self.setTitle(Content.getContent(ContentType.ButtonTxt, name: "OkThanks"), forState: UIControlState.Normal)
+        self.setTitle(Content.getContent(ContentType.buttonTxt, name: "OkThanks"), for: UIControlState())
     }
 
     internal func notificiationRemindMeLater() {
         self.backgroundColor = Colors.lightGray()
         self.defaultBigButton()
-        self.setTitle(Content.getContent(ContentType.ButtonTxt, name: "RemingMeLater"), forState: UIControlState.Normal)
+        self.setTitle(Content.getContent(ContentType.buttonTxt, name: "RemingMeLater"), for: UIControlState())
     }
 
     internal func notificiationYesVericiation() {
         self.backgroundColor = Colors.green()
         self.defaultBigButton()
-        self.setTitle(Content.getContent(ContentType.ButtonTxt, name: "Yes"), forState: UIControlState.Normal)
+        self.setTitle(Content.getContent(ContentType.buttonTxt, name: "Yes"), for: UIControlState())
     }
 
     internal func notificiationThankYou() {
         self.backgroundColor = Colors.green()
         self.defaultBigButton()
-        self.setTitle(Content.getContent(ContentType.ButtonTxt, name: "NotificationThankYou"), forState: UIControlState.Normal)
+        self.setTitle(Content.getContent(ContentType.buttonTxt, name: "NotificationThankYou"), for: UIControlState())
     }
     
     internal func notificiationPlayingGray() {
-        self.setBackgroundImage(UIImage(named: "BtnSoundPlayingGrayNotification"), forState: UIControlState.Normal)
+        self.setBackgroundImage(UIImage(named: "BtnSoundPlayingGrayNotification"), for: UIControlState())
         self.widthLayoutAs(165)
         self.heightLayoutAs(22)
     }
@@ -121,7 +121,7 @@ class Button : UIButton {
     
     //MARK : color flicker
     func startFlickeringRedColor() {
-        self.flickerTimer = NSTimer.scheduledTimerWithTimeInterval(0.3, target: self, selector: #selector(Button.tickRedColor), userInfo: nil, repeats: true)
+        self.flickerTimer = Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(Button.tickRedColor), userInfo: nil, repeats: true)
     }
     
     func stopFlickerRedColor() {
@@ -132,8 +132,8 @@ class Button : UIButton {
     }
     
     func tickRedColor() {
-        if (self.backgroundColor == UIColor.redColor()) {
+        if (self.backgroundColor == UIColor.red) {
             self.defaultColor()
-        } else { self.backgroundColor = UIColor.redColor() }
+        } else { self.backgroundColor = UIColor.red }
     }
 }

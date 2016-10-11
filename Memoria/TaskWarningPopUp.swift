@@ -10,6 +10,26 @@ import Foundation
 
 import Foundation
 import UIKit
+fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l < r
+  case (nil, _?):
+    return true
+  default:
+    return false
+  }
+}
+
+fileprivate func <= <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l <= r
+  default:
+    return !(rhs < lhs)
+  }
+}
+
 
 class TaskWarningPopUp : ViewController {
     let lblYouAllreadyTook = Label()
@@ -30,7 +50,7 @@ class TaskWarningPopUp : ViewController {
     
     //MARK: LifeCircle
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.btnPlayRecordPress()
     }
@@ -38,7 +58,7 @@ class TaskWarningPopUp : ViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.white
         
         let imgError = ImageView(image: UIImage(named: "NotificationWarningImg"))
         self.view.addSubview(imgError)
@@ -48,28 +68,28 @@ class TaskWarningPopUp : ViewController {
         imgError.topToViewControllerTopLayoutGuide(self, offset: 70)
         
         
-        let didAllreadyString = String.localizedStringWithFormat(Content.getContent(ContentType.LabelTxt, name: "TaskWarningPopUpDidAllready"), self.task.taskName!)
-        let laterTodayString = String.localizedStringWithFormat(Content.getContent(ContentType.LabelTxt, name: "TaskWarningPopUpDidLaterToday"), self.task.taskName!)
-        let warningString = (self.task.taskTime <= NSDate()) ? didAllreadyString : laterTodayString
+        let didAllreadyString = String.localizedStringWithFormat(Content.getContent(ContentType.labelTxt, name: "TaskWarningPopUpDidAllready"), self.task.taskName!)
+        let laterTodayString = String.localizedStringWithFormat(Content.getContent(ContentType.labelTxt, name: "TaskWarningPopUpDidLaterToday"), self.task.taskName!)
+        let warningString = (self.task.taskTime <= Date()) ? didAllreadyString : laterTodayString
         
         self.lblYouAllreadyTook.text = warningString
-        self.lblYouAllreadyTook.font = UIFont.systemFontOfSize(26)
+        self.lblYouAllreadyTook.font = UIFont.systemFont(ofSize: 26)
         self.lblYouAllreadyTook.numberOfLines = 2
-        self.lblYouAllreadyTook.textAlignment = NSTextAlignment.Center
+        self.lblYouAllreadyTook.textAlignment = NSTextAlignment.center
         self.view .addSubview(self.lblYouAllreadyTook)
         self.lblYouAllreadyTook.topAlighnToViewBottom(imgError, offset: 23)
         self.lblYouAllreadyTook.centerVerticlyInSuperView()
         self.lblYouAllreadyTook.leadingToSuperView(true)
         self.lblYouAllreadyTook.trailingToSuperView(true)
         
-        let didAllreadyStringBecareful = Content.getContent(ContentType.LabelTxt, name: "TaskWarningPopUpDidCerfulNotToTakeTwice")
-        let laterTodayStringBecareful = String.localizedStringWithFormat(Content.getContent(ContentType.LabelTxt, name: "TaskWarningPopUpDidPleaseWaitFor"), task.taskTime!.toStringCurrentRegionShortTime())
-        let beCarefulString = (self.task.taskTime <= NSDate()) ? didAllreadyStringBecareful : laterTodayStringBecareful
+        let didAllreadyStringBecareful = Content.getContent(ContentType.labelTxt, name: "TaskWarningPopUpDidCerfulNotToTakeTwice")
+        let laterTodayStringBecareful = String.localizedStringWithFormat(Content.getContent(ContentType.labelTxt, name: "TaskWarningPopUpDidPleaseWaitFor"), task.taskTime!.toStringCurrentRegionShortTime())
+        let beCarefulString = (self.task.taskTime <= Date()) ? didAllreadyStringBecareful : laterTodayStringBecareful
         
         self.lblBeCareful.text = beCarefulString
         self.lblBeCareful.titleGray()
-        self.lblBeCareful.font = UIFont.systemFontOfSize(24)
-        self.lblBeCareful.textAlignment = NSTextAlignment.Center
+        self.lblBeCareful.font = UIFont.systemFont(ofSize: 24)
+        self.lblBeCareful.textAlignment = NSTextAlignment.center
         self.lblBeCareful.numberOfLines = 0
         self.view.addSubview(self.lblBeCareful)
         self.lblBeCareful.centerVerticlyInSuperView()
@@ -79,13 +99,13 @@ class TaskWarningPopUp : ViewController {
         self.btnYes.notificiationThankYou()
         self.btnYes.centerVerticlyInSuperView()
         self.btnYes.topAlighnToViewBottom(self.lblBeCareful, offset: 40)
-        self.btnYes.addTarget(self, action: #selector(TaskWarningPopUp.btnOkPress), forControlEvents: UIControlEvents.TouchUpInside)
+        self.btnYes.addTarget(self, action: #selector(TaskWarningPopUp.btnOkPress), for: UIControlEvents.touchUpInside)
         
         self.view.addSubview(self.btnSoundPlaying)
         self.btnSoundPlaying.notificiationPlayingGray()
         self.btnSoundPlaying.centerVerticlyInSuperView()
         self.btnSoundPlaying.bottomAlighnToViewBottom(self.view, offset: -40)
-        self.btnSoundPlaying.addTarget(self, action: #selector(TaskWarningPopUp.btnPlayRecordPress), forControlEvents: UIControlEvents.TouchUpInside)
+        self.btnSoundPlaying.addTarget(self, action: #selector(TaskWarningPopUp.btnPlayRecordPress), for: UIControlEvents.touchUpInside)
     }
     
     //MARK: Actions
@@ -101,7 +121,7 @@ class TaskWarningPopUp : ViewController {
     
     //MARK: Buttons
     func btnOkPress() {
-        self.dismissViewControllerAnimated(true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
     }
     
     func btnPlayRecordPress() {

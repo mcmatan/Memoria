@@ -3,9 +3,9 @@
 import Foundation
 import Swinject
 
-public class AssemblyViewControllers {
+open class AssemblyViewControllers {
 
-    class func run(container : Container) {
+    class func run(_ container : Container) {
         container.register(MemoriesViewController.self) { c in
             return MemoriesViewController()
         }
@@ -47,10 +47,8 @@ public class AssemblyViewControllers {
         }
         
         container.register(TaskNotificationPopUp.self) { _, task in
-            return TaskNotificationPopUp(task: task)
+            return TaskNotificationPopUp(task: task, tasksServices: container.resolve(TasksServices.self)!)
         }
-        
-        container.resolve(TaskNotificationPopUp.self, argument: Task(taskName: "", taskTime: NSDate(), taskVoiceURL: NSURL(), taskBeaconIdentifier: IBeaconIdentifier(uuid: "", major: "", minor: ""), taskTimePriorityHi: true))
 
         container.register(TaskVerificationPopUp.self) { _, task in
             return TaskVerificationPopUp(task: task, tasksServices: container.resolve(TasksServices.self)!)
@@ -59,8 +57,6 @@ public class AssemblyViewControllers {
         container.register(TaskWarningPopUp.self) { _, task in
             return TaskWarningPopUp(task: task)
         }
-
-
 
     }
 }

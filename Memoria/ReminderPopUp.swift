@@ -4,8 +4,8 @@ import UIKit
 
 class ButtonAction : NSObject {
     var title: String
-    var handler : ((ButtonAction!) -> Void)!
-    init(title: String, handler: ((ButtonAction!) -> Void)!) {
+    var handler : ((ButtonAction?) -> Void)!
+    init(title: String, handler: ((ButtonAction?) -> Void)!) {
         self.title = title
         self.handler = handler
     }
@@ -15,14 +15,14 @@ class ButtonAction : NSObject {
 class ReminderPopUp : NSObject{
     var isPresented = false
     
-    func presentPopUp(title : String, message : String , cancelButton : ButtonAction! , buttons : [ButtonAction]! , completion : (() -> Void)? ){
+    func presentPopUp(_ title : String, message : String , cancelButton : ButtonAction! , buttons : [ButtonAction]! , completion : (() -> Void)? ){
         self.isPresented = true
-        let view = UIApplication.sharedApplication().keyWindow?.rootViewController
-        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        let view = UIApplication.shared.keyWindow?.rootViewController
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
         
         if let isButtons = buttons {
             for buttonAction in isButtons {
-                alert.addAction(UIAlertAction(title: buttonAction.title, style: UIAlertActionStyle.Default, handler: { (UIAlertAction) -> Void in
+                alert.addAction(UIAlertAction(title: buttonAction.title, style: UIAlertActionStyle.default, handler: { (UIAlertAction) -> Void in
                     buttonAction.handler(buttonAction)
                     self.isPresented = false
                 }))
@@ -30,14 +30,14 @@ class ReminderPopUp : NSObject{
         }
         
         if let isCancelButton = cancelButton {
-            alert.addAction(UIAlertAction(title: isCancelButton.title, style: UIAlertActionStyle.Cancel, handler: { (UIAlertAction) -> Void in
+            alert.addAction(UIAlertAction(title: isCancelButton.title, style: UIAlertActionStyle.cancel, handler: { (UIAlertAction) -> Void in
                 isCancelButton.handler(isCancelButton)
                 self.isPresented = false
             }))
         }
 
         
-        view!.presentViewController(alert, animated: true, completion: completion)
+        view!.present(alert, animated: true, completion: completion)
         
     }
 }

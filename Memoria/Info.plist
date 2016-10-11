@@ -22,14 +22,19 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>Memoria uses Bluetooth technology to make location future possible, by accepting this message you will let us use it, to help you.</string>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>Required for ios 8 compatibilty</string>
+	<string>Memoria uses Bluetooth technology to make location future possible, by accepting this message you will let us use it, to help you.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Memoria would like to use your microphone for better notifications</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>bluetooth-central</string>
 		<string>bluetooth-peripheral</string>
 		<string>fetch</string>
 		<string>location</string>
+		<string>remote-notification</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>

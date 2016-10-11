@@ -1,45 +1,45 @@
 import Foundation
 
 @objc enum ContentType : Int {
-    case ButtonTxt
-    case WarningTxt
-    case AlertTxt
-    case ToolTipTxt
-    case LabelTxt
+    case buttonTxt
+    case warningTxt
+    case alertTxt
+    case toolTipTxt
+    case labelTxt
 }
 
 class Content : NSObject {
     
     
-    @objc class func getContent(contentType : ContentType , name : String)->String  {
+    @objc class func getContent(_ contentType : ContentType , name : String)->String  {
         
         var path : String!
         switch contentType {
-        case ContentType.ButtonTxt:
-            path = NSBundle.mainBundle().pathForResource("ButtonsTextsHe", ofType: "plist") as String!
-        case ContentType.ToolTipTxt:
-            path = NSBundle.mainBundle().pathForResource("ToolTipsPlist", ofType: "plist") as String!
-        case ContentType.WarningTxt:
-            path = NSBundle.mainBundle().pathForResource("WarningsTxts", ofType: "plist") as String!
-        case ContentType.AlertTxt:
-            path = NSBundle.mainBundle().pathForResource("AlertsTxts", ofType: "plist") as String!
-        case ContentType.LabelTxt:
-            path = NSBundle.mainBundle().pathForResource("LabelsTextsHe", ofType: "plist") as String!
+        case ContentType.buttonTxt:
+            path = Bundle.main.path(forResource: "ButtonsTextsHe", ofType: "plist") as String!
+        case ContentType.toolTipTxt:
+            path = Bundle.main.path(forResource: "ToolTipsPlist", ofType: "plist") as String!
+        case ContentType.warningTxt:
+            path = Bundle.main.path(forResource: "WarningsTxts", ofType: "plist") as String!
+        case ContentType.alertTxt:
+            path = Bundle.main.path(forResource: "AlertsTxts", ofType: "plist") as String!
+        case ContentType.labelTxt:
+            path = Bundle.main.path(forResource: "LabelsTextsHe", ofType: "plist") as String!
         }
         
         if let _ = path {
             let dic : NSDictionary = NSDictionary(contentsOfFile: path)!
             
-            if let value: AnyObject = dic[name] {
+            if let value: AnyObject = dic.value(forKey: name) as AnyObject? {
                 if let isString = value as? String {
                     
-                    let finalString = isString.stringByReplacingOccurrencesOfString("Stox", withString: "GetStocks")
+                    let finalString = isString.replacingOccurrences(of: "Stox", with: "GetStocks")
                     return finalString
                 }
             }
         }
         
-        NSException(name: "Content cant find request for contnt", reason: "Content cant find request for type \(contentType) name \(name)", userInfo: nil)
+        NSException(name: NSExceptionName(rawValue: "Content cant find request for contnt"), reason: "Content cant find request for type \(contentType) name \(name)", userInfo: nil)
         
         return ""
     }

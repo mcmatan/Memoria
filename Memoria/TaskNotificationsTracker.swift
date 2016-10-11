@@ -7,30 +7,62 @@
 //
 
 import Foundation
+import SwiftDate
 
-class TaskNotificationsTracker : NSObject, IbeaconsTrackerDelegate, SchedulerDelegate {
-    private let taskDB : TasksDB
-    private let minTimeFromWarningToWarning = 1.5 // min
-    private let timeFromTaskDoneToShowWarningWhenNear = 60 //Sec
-    private let maxTimeStandingNearTaskBeforeAction = 10 //Sec
-    private let timeForRecognisionThatPerformingTaskInSec = 10 // Sec
-    private let onHoldIntervalIntilNextNotification = 60 * 5 // Sec
-    private let scheduler : Scheduler
-    private let ibeaconsTracker : IbeaconsTracker
+fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l < r
+  case (nil, _?):
+    return true
+  default:
+    return false
+  }
+}
+
+fileprivate func <= <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l <= r
+  default:
+    return !(rhs < lhs)
+  }
+}
+
+fileprivate func >= <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l >= r
+  default:
+    return !(lhs < rhs)
+  }
+}
+
+
+class TaskNotificationsTracker : NSObject, IbeaconsTrackerDelegate, NotificationExecuterDelegate {
+    fileprivate let taskDB : TasksDB
+    fileprivate let minTimeFromWarningToWarning = 1.5 // min
+    fileprivate let timeFromTaskDoneToShowWarningWhenNear = 60 //Sec
+    fileprivate let maxTimeStandingNearTaskBeforeAction = 10 //Sec
+    fileprivate let timeForRecognisionThatPerformingTaskInSec = 60 * 5 // Sec
+    fileprivate let onHoldIntervalIntilNextNotification = 60 * 5 // Sec
+    fileprivate let minTimeFromVerificationToVerification = 30 // Sec
+    fileprivate let scheduler : NotificationScheduler
+    fileprivate let ibeaconsTracker : IbeaconsTracker
     
-    init(taskDB : TasksDB, scheduler : Scheduler, ibeaconsTracker : IbeaconsTracker) {
+    init(taskDB : TasksDB, scheduler : NotificationScheduler, ibeaconsTracker : IbeaconsTracker, notificationExecuter: NotificationExecuter) {
         self.taskDB = taskDB
         self.scheduler = scheduler
         self.ibeaconsTracker = ibeaconsTracker
         super.init()
-        self.scheduler.delegate = self        
+        notificationExecuter.delegate = self
         self.ibeaconsTracker.delegate = self
     }
     
     //MARK: Public
-    internal func notificationScheduledTime(task : Task) {
+    internal func notificationDidOccur(_ task : Task) {
         if task.isTaskDone == false {
-            NSNotificationCenter.defaultCenter().postNotificationName(NotificationsNames.kPresentTaskNotification, object: task, userInfo: nil)
+            NotificationCenter.default.post(name: Notification.Name(rawValue: NotificationsNames.kPresentTaskNotification), object: task, userInfo: nil)
         }
     }
     
@@ -39,7 +71,7 @@ class TaskNotificationsTracker : NSObject, IbeaconsTrackerDelegate, SchedulerDel
     //2.should perform task as this time.
     //3.task was on hold.
     //4.warn user for standing near task not at his time, if hi priority.
-    internal func beaconInErea(beacon : CLBeacon) {
+    internal func beaconInErea(_ beacon : CLBeacon) {
         var task = self.taskDB.getTaskForCLBeacn(beacon)
             if let _ = task {
                 task = self.addOrUpdateStandingNearFromDate(task!)
@@ -62,34 +94,21 @@ class TaskNotificationsTracker : NSObject, IbeaconsTrackerDelegate, SchedulerDel
             }
     }
     
-    internal func markTaskAsDone(task : Task) {
+    internal func markTaskAsDone(_ task : Task) {
         task.isTaskDone = true
         self.scheduler.cancelReminderForTask(task)
         self.taskDB.saveTask(task)
-        NSNotificationCenter.defaultCenter().postNotificationName(NotificationsNames.kTaskDone, object: task, userInfo: nil)
-        NSNotificationCenter.defaultCenter().postNotificationName(NotificationsNames.kPresentTaskMarkedAsDone, object: task, userInfo: nil)
-    }
-    
-    internal func remindMeLater(task : Task) {
-        task.taskisOnHold = true
-        let taskIdentifier = task.taskBeaconIdentifier
-        let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(Double(self.onHoldIntervalIntilNextNotification) * Double(NSEC_PER_SEC)))
-        dispatch_after(delayTime, dispatch_get_main_queue()) {
-            if let isTaskNotDeleted = self.taskDB.getTaskForIBeaconIdentifier(taskIdentifier!) {
-                if isTaskNotDeleted.taskisOnHold == true {
-                    self.notificationScheduledTime(task)
-                }
-            }
-        }
+        NotificationCenter.default.post(name: Notification.Name(rawValue: NotificationsNames.kTaskDone), object: task, userInfo: nil)
+        NotificationCenter.default.post(name: Notification.Name(rawValue: NotificationsNames.kPresentTaskMarkedAsDone), object: task, userInfo: nil)
     }
     
     //MARK: Private
     
     //MARK: Standing near a beacon states
     
-    private func isNearTaskLongEnouth(task : Task)->Bool {
+    fileprivate func isNearTaskLongEnouth(_ task : Task)->Bool {
         if let isDate = task.standingNearFromDate {
-            let now = NSDate()
+            let now = Date()
             if now.secondsFrom(isDate) > maxTimeStandingNearTaskBeforeAction {
                     return true
             }
@@ -97,8 +116,8 @@ class TaskNotificationsTracker : NSObject, IbeaconsTrackerDelegate, SchedulerDel
         return false
     }
     
-    private func shouldPerformTaskNow(task : Task)->Bool {
-        let now = NSDate()
+    fileprivate func shouldPerformTaskNow(_ task : Task)->Bool {
+        let now = Date()
         let nowPlusIntercal = (now + timeForRecognisionThatPerformingTaskInSec.seconds)
         let nowMinusInterval = (now - timeForRecognisionThatPerformingTaskInSec.seconds)
         if (task.taskTime <= nowPlusIntercal && task.taskTime >= nowMinusInterval) {
@@ -107,50 +126,59 @@ class TaskNotificationsTracker : NSObject, IbeaconsTrackerDelegate, SchedulerDel
         return false
     }
     
-    private func addOrUpdateStandingNearFromDate(task : Task)->Task {
+    fileprivate func addOrUpdateStandingNearFromDate(_ task : Task)->Task {
         if let _ = task.standingNearFromDate {
             return task
         } else {
-            task.standingNearFromDate = NSDate()
+            task.standingNearFromDate = Date()
             return task
         }
     }
     
-    private func taskNotDoneAndStandingNear(task : Task) {
+    fileprivate func taskNotDoneAndStandingNear(_ task : Task) {
         if task.taskTimePriorityHi == true {
                 if task.taskTime?.isInTheFuture() == true { // If the task in the future, warn user about not doing it now.
                     print("Showing warning since stadning near not at time, and hi prioriry")
                 self.taskWarning(task)
                 } else { // If the task is at the past, and its not done. so let the user confiem he allready did.
                     print("If the task is at the past, and its not done. so let the user confiem he allready did.")
-                NSNotificationCenter.defaultCenter().postNotificationName(NotificationsNames.kPresentTaskVerification, object: task, userInfo: nil)
+                self.verifyUserDoingTask(task)
             }
         } else {
             //TODO: :Push-Verification Early-Completion
             print("Showing verification")
-            NSNotificationCenter.defaultCenter().postNotificationName(NotificationsNames.kPresentTaskVerification, object: task, userInfo: nil)
+            self.verifyUserDoingTask(task)
         }
     }
     
-    private func verifyUserDoingTask(task : Task) {
-        NSNotificationCenter.defaultCenter().postNotificationName(NotificationsNames.kPresentTaskVerification, object: task, userInfo: nil)
+    fileprivate func verifyUserDoingTask(_ task : Task) {
+        let now = Date()
+        if let isTaskTimeLastVerifyWasShow = task.timeLastVerifyWasShow {
+            let secoundFromLastVerificaion = abs(Float(isTaskTimeLastVerifyWasShow.secondsFrom(now)))
+            if secoundFromLastVerificaion < Float(minTimeFromVerificationToVerification) {
+                print("Should show verification, but too close to the last one, will wait \(secoundFromLastVerificaion) secounds")
+                return
+            }
+        }
+        task.timeLastVerifyWasShow = now
+        NotificationCenter.default.post(name: Notification.Name(rawValue: NotificationsNames.kPresentTaskVerification), object: task, userInfo: nil)
     }
     
-    private func taskWarning(task : Task) {
-        let now = NSDate()
+    fileprivate func taskWarning(_ task : Task) {
+        let now = Date()
         if (now.secondsFrom(task.taskTime!) > timeFromTaskDoneToShowWarningWhenNear
             ||
             now.secondsFrom(task.taskTime!) < -timeFromTaskDoneToShowWarningWhenNear
             ) {
             if task.taskTimePriorityHi == true {
                 if let isTaskLastWarningShow = task.timeLastWarningWasShow {
-                    let now = NSDate()
+                    let now = Date()
                     if Float(isTaskLastWarningShow.minutesFrom(now)) < Float(minTimeFromWarningToWarning) {
                         return
                     }
                 }
-                task.timeLastWarningWasShow = NSDate()
-                NSNotificationCenter.defaultCenter().postNotificationName(NotificationsNames.kPresentTaskWarning, object: task, userInfo: nil)
+                task.timeLastWarningWasShow = Date()
+                NotificationCenter.default.post(name: Notification.Name(rawValue: NotificationsNames.kPresentTaskWarning), object: task, userInfo: nil)
             }            
         }
     }

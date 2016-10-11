@@ -1,1 +1,0 @@
-../../../Swinject/Swinject/iOS-tvOS/Swinject.h

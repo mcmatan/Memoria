@@ -17,15 +17,15 @@ class IBeaconServices {
         self.tasksDB = tasksDB
     }
     
-    func isThereABeaconInArea(handler: (( result : Bool, beacon : CLBeacon?) -> Void)!) {
+    func isThereABeaconInArea(_ handler: (( _ result : Bool, _ beacon : CLBeacon?) -> Void)!) {
         return self.ibeaconLocationFinder.isThereABeaconInArea(handler)
     }
     
-    internal func isBeaconInErea(iBeaconIdentifier : IBeaconIdentifier , handler: (( result : Bool) -> Void)!) {
+    internal func isBeaconInErea(_ iBeaconIdentifier : IBeaconIdentifier , handler: (( _ result : Bool) -> Void)!) {
         return self.ibeaconLocationFinder.isBeaconInErea(iBeaconIdentifier, handler: handler)
     }
     
-    func isBeaconAlreadyHasATaskAssigned(beacon :CLBeacon)->Bool {
+    func isBeaconAlreadyHasATaskAssigned(_ beacon :CLBeacon)->Bool {
         let closestIBeacon = beacon
         return self.tasksDB.isThereTaskForIBeaconIdentifier(IBeaconIdentifier.creatFromCLBeacon(closestIBeacon))
     }

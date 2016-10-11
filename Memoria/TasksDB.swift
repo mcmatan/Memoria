@@ -18,20 +18,20 @@ class TasksDB {
         self.loadDB()
     }
     
-    func getTaskForIBeaconMajorAppendedByMinor(majorAppendedMyMinor : String) ->Task? {
+    func getTaskForIBeaconMajorAppendedByMinor(_ majorAppendedMyMinor : String) ->Task? {
         return self.tasksByMajorAppendedWithMinor[majorAppendedMyMinor]
     }
     
-    func getTaskForIBeaconIdentifier(iBeaconIdentifier : IBeaconIdentifier) ->Task? {
+    func getTaskForIBeaconIdentifier(_ iBeaconIdentifier : IBeaconIdentifier) ->Task? {
         return self.getTaskForIBeaconMajorAppendedByMinor(iBeaconIdentifier.majorAppendedByMinorString())
     }
     
-    func getTaskForCLBeacn(beacon : CLBeacon)->Task? {
+    func getTaskForCLBeacn(_ beacon : CLBeacon)->Task? {
         let beaconIdentifier = IBeaconIdentifier.creatFromCLBeacon(beacon)
         return self.getTaskForIBeaconIdentifier(beaconIdentifier)
     }
     
-    func isTaskExistsForIbeaconIdentifier(iBeaconIdentifier : IBeaconIdentifier) ->Bool {
+    func isTaskExistsForIbeaconIdentifier(_ iBeaconIdentifier : IBeaconIdentifier) ->Bool {
         if let _ = self.tasksByMajorAppendedWithMinor[iBeaconIdentifier.majorAppendedByMinorString()] {
             return true
         } else {
@@ -39,19 +39,18 @@ class TasksDB {
         }
     }
     
-    func saveTask(task : Task)->Bool {
+    func saveTask(_ task : Task) {
         if let isTaskBeaconIdentifier = task.taskBeaconIdentifier {
             self.tasksByMajorAppendedWithMinor[isTaskBeaconIdentifier.majorAppendedByMinorString()] = task
             self.saveDB()
-            self.loadDB()            
-            return true
+            self.loadDB()
         }
-        return false
+        print("Did not save task!!!!!")
     }
     
-    func removeTask(task : Task)->Bool {
+    func removeTask(_ task : Task)->Bool {
         if let isTaskBeaconIdentifier = task.taskBeaconIdentifier {
-            self.tasksByMajorAppendedWithMinor.removeValueForKey(isTaskBeaconIdentifier.majorAppendedByMinorString())
+            self.tasksByMajorAppendedWithMinor.removeValue(forKey: isTaskBeaconIdentifier.majorAppendedByMinorString())
             self.saveDB()
             self.loadDB()
             return true
@@ -64,11 +63,11 @@ class TasksDB {
         return Array(self.tasksByMajorAppendedWithMinor.values)
     }
     
-    func isThereTaskForIBeaconIdentifier(iBeaconIdentifier : IBeaconIdentifier)->Bool {
+    func isThereTaskForIBeaconIdentifier(_ iBeaconIdentifier : IBeaconIdentifier)->Bool {
         return self.isThereTaskForMajorAppendedByMinor(iBeaconIdentifier.majorAppendedByMinorString())  
     }
 
-    func isThereTaskForMajorAppendedByMinor(MajorAppendedByMinor : String)->Bool {
+    func isThereTaskForMajorAppendedByMinor(_ MajorAppendedByMinor : String)->Bool {
         if let _ = self.tasksByMajorAppendedWithMinor[MajorAppendedByMinor] {
             return true
         } else {
@@ -79,18 +78,18 @@ class TasksDB {
 
     
     func saveDB() {
-        let userDefaults = NSUserDefaults.standardUserDefaults()
-        let encodedData = NSKeyedArchiver.archivedDataWithRootObject(self.tasksByMajorAppendedWithMinor)
-        userDefaults.setObject(encodedData, forKey: "tasks")
+        let userDefaults = UserDefaults.standard
+        let encodedData = NSKeyedArchiver.archivedData(withRootObject: self.tasksByMajorAppendedWithMinor)
+        userDefaults.set(encodedData, forKey: "tasks")
         userDefaults.synchronize()
     }
     
     func loadDB() {
-        let userDefaults = NSUserDefaults.standardUserDefaults()
-        let decoded  = userDefaults.objectForKey("tasks") as? NSData
+        let userDefaults = UserDefaults.standard
+        let decoded  = userDefaults.object(forKey: "tasks") as? Data
         
         if let isDecoded = decoded {
-            if let isDecodedTasks = NSKeyedUnarchiver.unarchiveObjectWithData(isDecoded){
+            if let isDecodedTasks = NSKeyedUnarchiver.unarchiveObject(with: isDecoded){
                 if let isDecodedTasksAsStringToTask = isDecodedTasks as? [String : Task] {
                     self.tasksByMajorAppendedWithMinor = isDecodedTasksAsStringToTask
                 }

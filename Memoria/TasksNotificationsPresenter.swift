@@ -25,15 +25,15 @@ class TasksNotificationsPresenter : NSObject {
         self.container = container
         super.init()
 
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(TasksNotificationsPresenter.presentTaskNotification(_:)), name: NotificationsNames.kPresentTaskNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(TasksNotificationsPresenter.presentTaskVerification(_:)), name: NotificationsNames.kPresentTaskVerification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(TasksNotificationsPresenter.presentTaskWarning(_:)), name: NotificationsNames.kPresentTaskWarning, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(TasksNotificationsPresenter.presentTaskMarkedAsDone(_:)), name: NotificationsNames.kPresentTaskMarkedAsDone, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(TasksNotificationsPresenter.presentTaskNotification(_:)), name: NSNotification.Name(rawValue: NotificationsNames.kPresentTaskNotification), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(TasksNotificationsPresenter.presentTaskVerification(_:)), name: NSNotification.Name(rawValue: NotificationsNames.kPresentTaskVerification), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(TasksNotificationsPresenter.presentTaskWarning(_:)), name: NSNotification.Name(rawValue: NotificationsNames.kPresentTaskWarning), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(TasksNotificationsPresenter.presentTaskMarkedAsDone(_:)), name: NSNotification.Name(rawValue: NotificationsNames.kPresentTaskMarkedAsDone), object: nil)
     }
     
     //MARK: Public
     
-    internal func presentTaskMarkedAsDone(notification : NSNotification) {
+    internal func presentTaskMarkedAsDone(_ notification : Notification) {
         let task = notification.object as? Task
         let text = "Task has marked as done"
         let cancelButton = ButtonAction(title: "Ok", handler: { (ButtonAction) -> Void in
@@ -42,25 +42,25 @@ class TasksNotificationsPresenter : NSObject {
         reminderPopUp.presentPopUp(task!.taskName!, message: text, cancelButton: cancelButton, buttons: nil, completion: { () -> Void in})
     }
     
-    internal func presentTaskNotification(notification : NSNotification) {
+    internal func presentTaskNotification(_ notification : Notification) {
         let task = notification.object as? Task
         let notificationPopUp = self.container.resolve(TaskNotificationPopUp.self, argument: task!)
-        let mainViewController = UIApplication.sharedApplication().keyWindow?.rootViewController
-        mainViewController?.presentViewController(notificationPopUp!, animated: true, completion: nil)
+        let mainViewController = UIApplication.shared.keyWindow?.rootViewController
+        mainViewController?.present(notificationPopUp!, animated: true, completion: nil)
     }
 
-    internal func presentTaskVerification(notification : NSNotification) {
+    internal func presentTaskVerification(_ notification : Notification) {
         let task = notification.object as? Task
         let notificationPopUp = self.container.resolve(TaskVerificationPopUp.self, argument: task!)
-        let mainViewController = UIApplication.sharedApplication().keyWindow?.rootViewController
-        mainViewController?.presentViewController(notificationPopUp!, animated: true, completion: nil)
+        let mainViewController = UIApplication.shared.keyWindow?.rootViewController
+        mainViewController?.present(notificationPopUp!, animated: true, completion: nil)
     }
 
-    internal func presentTaskWarning(notification : NSNotification) {
+    internal func presentTaskWarning(_ notification : Notification) {
         let task = notification.object as? Task
         let notificationPopUp = self.container.resolve(TaskWarningPopUp.self, argument: task!)
-        let mainViewController = UIApplication.sharedApplication().keyWindow?.rootViewController
-        mainViewController?.presentViewController(notificationPopUp!, animated: true, completion: nil)
+        let mainViewController = UIApplication.shared.keyWindow?.rootViewController
+        mainViewController?.present(notificationPopUp!, animated: true, completion: nil)
     }
 
 }

@@ -7,10 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		19F5CF12B11DB7CCDDD1FAFB /* Pods_Memoria.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43E5A21D54B5E0665251F8E4 /* Pods_Memoria.framework */; };
+		63E7386C4BCD17B9C29135D9 /* Pods_MemoriaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C63E54DC6EDD468C89232C63 /* Pods_MemoriaTests.framework */; };
 		9008FB651C4AC420003C1549 /* IBeaconIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9008FB641C4AC420003C1549 /* IBeaconIdentifier.swift */; };
 		9008FB681C53D356003C1549 /* CurrenctTaskCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9008FB671C53D356003C1549 /* CurrenctTaskCreator.swift */; };
-		9008FBC91C6F4A2D003C1549 /* libkontakt-ios-sdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9008FBC81C6F4A2D003C1549 /* libkontakt-ios-sdk.a */; };
 		901127221C1AF8CA0088DD6B /* MemoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901127211C1AF8CA0088DD6B /* MemoriesViewController.swift */; };
 		9011272E1C1AFBE20088DD6B /* AssemblyViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901127291C1AFBE20088DD6B /* AssemblyViewControllers.swift */; };
 		9011272F1C1AFBE20088DD6B /* Bootstrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9011272A1C1AFBE20088DD6B /* Bootstrapper.swift */; };
@@ -20,12 +19,9 @@
 		9019EBEB1C90CA16008962A5 /* TaskVerificationPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9019EBEA1C90CA16008962A5 /* TaskVerificationPopUp.swift */; };
 		9019EBED1C90D573008962A5 /* TaskWarningPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9019EBEC1C90D573008962A5 /* TaskWarningPopUp.swift */; };
 		9019EBF01C99F3B3008962A5 /* TaskNotificationsTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9019EBEF1C99F3B3008962A5 /* TaskNotificationsTracker.swift */; };
-		9019EBF31C99F5FE008962A5 /* Scheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9019EBF21C99F5FE008962A5 /* Scheduler.swift */; };
+		9019EBF31C99F5FE008962A5 /* NotificationScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9019EBF21C99F5FE008962A5 /* NotificationScheduler.swift */; };
 		901AEDF41C4136F500DD518A /* UIViewAutoLayoutExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901AEDF31C4136F500DD518A /* UIViewAutoLayoutExtentions.swift */; };
 		9035C6C71C20225300088434 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9035C6C61C20225300088434 /* TableView.swift */; };
-		9035C6D21C20234200088434 /* DataStructures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9035C6CF1C20234200088434 /* DataStructures.swift */; };
-		9035C6D31C20234200088434 /* DateInRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9035C6D01C20234200088434 /* DateInRegion.swift */; };
-		9035C6D41C20234200088434 /* NSDate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9035C6D11C20234200088434 /* NSDate+Extension.swift */; };
 		9035C6D71C2024BA00088434 /* UIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9035C6D61C2024BA00088434 /* UIConstants.swift */; };
 		9035FE051C1B064F00D98022 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9035FE041C1B064F00D98022 /* Button.swift */; };
 		9035FE081C1B095A00D98022 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9035FE071C1B095A00D98022 /* TabBarController.swift */; };
@@ -44,8 +40,11 @@
 		905AF3BB1C1F2AEF0063713A /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905AF3BA1C1F2AEF0063713A /* Task.swift */; };
 		905AF3C11C1F3BD60063713A /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905AF3C01C1F3BD60063713A /* NavigationController.swift */; };
 		905AF3C41C1F41260063713A /* AddTaskTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905AF3C31C1F41260063713A /* AddTaskTimeViewController.swift */; };
+		905D0BE31DACF47300845973 /* NotificationExecuter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905D0BE21DACF47300845973 /* NotificationExecuter.swift */; };
 		906C36851C8E1CA80058EC85 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906C36841C8E1CA80058EC85 /* Colors.swift */; };
 		9075214F1CE904A800FDFF3D /* LabelsTextsHe.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9075214E1CE904A800FDFF3D /* LabelsTextsHe.plist */; };
+		909CB2801DA914160075507C /* IBeaconWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909CB27F1DA914160075507C /* IBeaconWrapper.swift */; };
+		90B0C53F1DAAE3870019D59B /* ApplicationExntentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B0C53E1DAAE3870019D59B /* ApplicationExntentions.swift */; };
 		90C5887B1C46E0AC00D84C73 /* TaskManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C5887A1C46E0AC00D84C73 /* TaskManagerViewController.swift */; };
 		90CE2AF51CF4DE0E00511ED4 /* ButtonsTextsHe.plist in Resources */ = {isa = PBXBuildFile; fileRef = 90CE2AF41CF4DE0E00511ED4 /* ButtonsTextsHe.plist */; };
 		90CE2AF71CF4E6A200511ED4 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CE2AF61CF4E6A200511ED4 /* Fonts.swift */; };
@@ -69,6 +68,8 @@
 		90F00A081C4A7C06002C98BA /* IbeaconsTrackerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F00A061C4A7C06002C98BA /* IbeaconsTrackerHelper.swift */; };
 		90F00A0D1C4A7C25002C98BA /* TasksServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F00A0C1C4A7C25002C98BA /* TasksServices.swift */; };
 		90F00A0F1C4A7C2F002C98BA /* IBeaconServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F00A0E1C4A7C2F002C98BA /* IBeaconServices.swift */; };
+		B92DC516395A9D906DE0E162 /* Pods_Memoria.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE2216E1B6AD497467804F14 /* Pods_Memoria.framework */; };
+		EE76AB32A0992B34963CCDBB /* Pods_MemoriaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54BE932400BB9F6741D73728 /* Pods_MemoriaUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,60 +103,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		08652CDF4564DF32C385FB8F /* Pods-Memoria.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Memoria.release.xcconfig"; path = "Pods/Target Support Files/Pods-Memoria/Pods-Memoria.release.xcconfig"; sourceTree = "<group>"; };
-		43E5A21D54B5E0665251F8E4 /* Pods_Memoria.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Memoria.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1825021465EEA879F0AF68D4 /* Pods-MemoriaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemoriaUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MemoriaUITests/Pods-MemoriaUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		1DA0B14D704433549B3B3868 /* Pods-Memoria.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Memoria.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Memoria/Pods-Memoria.debug.xcconfig"; sourceTree = "<group>"; };
+		43E6309D377C47D3B4E9B681 /* Pods-MemoriaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemoriaUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MemoriaUITests/Pods-MemoriaUITests.release.xcconfig"; sourceTree = "<group>"; };
+		54BE932400BB9F6741D73728 /* Pods_MemoriaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MemoriaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		61745D56CC2A844FA0E1BF06 /* Pods-MemoriaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemoriaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MemoriaTests/Pods-MemoriaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9008FB641C4AC420003C1549 /* IBeaconIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBeaconIdentifier.swift; sourceTree = "<group>"; };
 		9008FB671C53D356003C1549 /* CurrenctTaskCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrenctTaskCreator.swift; sourceTree = "<group>"; };
 		9008FB731C6F3E3E003C1549 /* Memoria-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Memoria-Bridging-Header.h"; sourceTree = "<group>"; };
-		9008FB981C6F4A2D003C1549 /* KontaktSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KontaktSDK.h; sourceTree = "<group>"; };
-		9008FB991C6F4A2D003C1549 /* KTKAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKAction.h; sourceTree = "<group>"; };
-		9008FB9A1C6F4A2D003C1549 /* KTKActionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKActionManager.h; sourceTree = "<group>"; };
-		9008FB9B1C6F4A2D003C1549 /* KTKBeacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKBeacon.h; sourceTree = "<group>"; };
-		9008FB9C1C6F4A2D003C1549 /* KTKBeaconDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKBeaconDevice.h; sourceTree = "<group>"; };
-		9008FB9D1C6F4A2D003C1549 /* KTKBeaconManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKBeaconManager.h; sourceTree = "<group>"; };
-		9008FB9E1C6F4A2D003C1549 /* KTKBeaconProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKBeaconProfile.h; sourceTree = "<group>"; };
-		9008FB9F1C6F4A2D003C1549 /* KTKBluetoothDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKBluetoothDevice.h; sourceTree = "<group>"; };
-		9008FBA01C6F4A2D003C1549 /* KTKBluetoothManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKBluetoothManager.h; sourceTree = "<group>"; };
-		9008FBA11C6F4A2D003C1549 /* KTKCharacteristicDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKCharacteristicDescriptor.h; sourceTree = "<group>"; };
-		9008FBA21C6F4A2D003C1549 /* KTKClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKClient.h; sourceTree = "<group>"; };
-		9008FBA31C6F4A2D003C1549 /* KTKCloudBeacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKCloudBeacon.h; sourceTree = "<group>"; };
-		9008FBA41C6F4A2D003C1549 /* KTKCompany.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKCompany.h; sourceTree = "<group>"; };
-		9008FBA51C6F4A2D003C1549 /* KTKConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKConverter.h; sourceTree = "<group>"; };
-		9008FBA61C6F4A2D003C1549 /* KTKDataTransferObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKDataTransferObject.h; sourceTree = "<group>"; };
-		9008FBA71C6F4A2D003C1549 /* KTKDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKDescriptor.h; sourceTree = "<group>"; };
-		9008FBA81C6F4A2D003C1549 /* KTKDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKDevice.h; sourceTree = "<group>"; };
-		9008FBA91C6F4A2D003C1549 /* KTKEddystone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKEddystone.h; sourceTree = "<group>"; };
-		9008FBAA1C6F4A2D003C1549 /* KTKEddystoneDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKEddystoneDevice.h; sourceTree = "<group>"; };
-		9008FBAB1C6F4A2D003C1549 /* KTKEddystoneFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKEddystoneFrame.h; sourceTree = "<group>"; };
-		9008FBAC1C6F4A2D003C1549 /* KTKEddystoneRegion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKEddystoneRegion.h; sourceTree = "<group>"; };
-		9008FBAD1C6F4A2D003C1549 /* KTKEddystoneTLM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKEddystoneTLM.h; sourceTree = "<group>"; };
-		9008FBAE1C6F4A2D003C1549 /* KTKEddystoneUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKEddystoneUID.h; sourceTree = "<group>"; };
-		9008FBAF1C6F4A2D003C1549 /* KTKEddystoneURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKEddystoneURL.h; sourceTree = "<group>"; };
-		9008FBB01C6F4A2D003C1549 /* KTKError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKError.h; sourceTree = "<group>"; };
-		9008FBB11C6F4A2D003C1549 /* KTKFirmware.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKFirmware.h; sourceTree = "<group>"; };
-		9008FBB21C6F4A2D003C1549 /* KTKHexConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKHexConverter.h; sourceTree = "<group>"; };
-		9008FBB31C6F4A2D003C1549 /* KTKLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKLocationManager.h; sourceTree = "<group>"; };
-		9008FBB41C6F4A2D003C1549 /* KTKManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKManager.h; sourceTree = "<group>"; };
-		9008FBB51C6F4A2D003C1549 /* KTKNumberConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKNumberConverter.h; sourceTree = "<group>"; };
-		9008FBB61C6F4A2D003C1549 /* KTKNumberDiscreteConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKNumberDiscreteConverter.h; sourceTree = "<group>"; };
-		9008FBB71C6F4A2D003C1549 /* KTKNumberLinearConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKNumberLinearConverter.h; sourceTree = "<group>"; };
-		9008FBB81C6F4A2D003C1549 /* KTKPaging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKPaging.h; sourceTree = "<group>"; };
-		9008FBB91C6F4A2D003C1549 /* KTKPagingBeacons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKPagingBeacons.h; sourceTree = "<group>"; };
-		9008FBBA1C6F4A2D003C1549 /* KTKPagingConfigs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKPagingConfigs.h; sourceTree = "<group>"; };
-		9008FBBB1C6F4A2D003C1549 /* KTKPagingDevices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKPagingDevices.h; sourceTree = "<group>"; };
-		9008FBBC1C6F4A2D003C1549 /* KTKPagingVenues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKPagingVenues.h; sourceTree = "<group>"; };
-		9008FBBD1C6F4A2D003C1549 /* KTKPublicAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKPublicAction.h; sourceTree = "<group>"; };
-		9008FBBE1C6F4A2D003C1549 /* KTKPublicBeacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKPublicBeacon.h; sourceTree = "<group>"; };
-		9008FBBF1C6F4A2D003C1549 /* KTKPublicVenue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKPublicVenue.h; sourceTree = "<group>"; };
-		9008FBC01C6F4A2D003C1549 /* KTKRegion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKRegion.h; sourceTree = "<group>"; };
-		9008FBC11C6F4A2D003C1549 /* KTKServiceDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKServiceDescriptor.h; sourceTree = "<group>"; };
-		9008FBC21C6F4A2D003C1549 /* KTKStringConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKStringConverter.h; sourceTree = "<group>"; };
-		9008FBC31C6F4A2D003C1549 /* KTKSubordinate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKSubordinate.h; sourceTree = "<group>"; };
-		9008FBC41C6F4A2D003C1549 /* KTKUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKUser.h; sourceTree = "<group>"; };
-		9008FBC51C6F4A2D003C1549 /* KTKUUIDConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKUUIDConverter.h; sourceTree = "<group>"; };
-		9008FBC61C6F4A2D003C1549 /* KTKVenue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKVenue.h; sourceTree = "<group>"; };
-		9008FBC71C6F4A2D003C1549 /* KTKVenueBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKVenueBase.h; sourceTree = "<group>"; };
-		9008FBC81C6F4A2D003C1549 /* libkontakt-ios-sdk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libkontakt-ios-sdk.a"; sourceTree = "<group>"; };
 		901127211C1AF8CA0088DD6B /* MemoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoriesViewController.swift; sourceTree = "<group>"; };
 		901127291C1AFBE20088DD6B /* AssemblyViewControllers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssemblyViewControllers.swift; sourceTree = "<group>"; };
 		9011272A1C1AFBE20088DD6B /* Bootstrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bootstrapper.swift; sourceTree = "<group>"; };
@@ -165,12 +120,9 @@
 		9019EBEA1C90CA16008962A5 /* TaskVerificationPopUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskVerificationPopUp.swift; sourceTree = "<group>"; };
 		9019EBEC1C90D573008962A5 /* TaskWarningPopUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskWarningPopUp.swift; sourceTree = "<group>"; };
 		9019EBEF1C99F3B3008962A5 /* TaskNotificationsTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskNotificationsTracker.swift; sourceTree = "<group>"; };
-		9019EBF21C99F5FE008962A5 /* Scheduler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scheduler.swift; sourceTree = "<group>"; };
+		9019EBF21C99F5FE008962A5 /* NotificationScheduler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationScheduler.swift; sourceTree = "<group>"; };
 		901AEDF31C4136F500DD518A /* UIViewAutoLayoutExtentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewAutoLayoutExtentions.swift; sourceTree = "<group>"; };
 		9035C6C61C20225300088434 /* TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
-		9035C6CF1C20234200088434 /* DataStructures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStructures.swift; sourceTree = "<group>"; };
-		9035C6D01C20234200088434 /* DateInRegion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateInRegion.swift; sourceTree = "<group>"; };
-		9035C6D11C20234200088434 /* NSDate+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Extension.swift"; sourceTree = "<group>"; };
 		9035C6D61C2024BA00088434 /* UIConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIConstants.swift; sourceTree = "<group>"; };
 		9035C6DD1C203F8B00088434 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		9035FE041C1B064F00D98022 /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
@@ -190,6 +142,8 @@
 		905AF3BA1C1F2AEF0063713A /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		905AF3C01C1F3BD60063713A /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		905AF3C31C1F41260063713A /* AddTaskTimeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskTimeViewController.swift; sourceTree = "<group>"; };
+		905D0BE01DACEE6700845973 /* Memoria.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Memoria.entitlements; sourceTree = "<group>"; };
+		905D0BE21DACF47300845973 /* NotificationExecuter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationExecuter.swift; sourceTree = "<group>"; };
 		90687A151CD684BD00789FEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		90687A171CD684BD00789FEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		90687A191CD684BD00789FEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -201,6 +155,8 @@
 		90687A2D1CD684BD00789FEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		906C36841C8E1CA80058EC85 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		9075214E1CE904A800FDFF3D /* LabelsTextsHe.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LabelsTextsHe.plist; sourceTree = "<group>"; };
+		909CB27F1DA914160075507C /* IBeaconWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBeaconWrapper.swift; sourceTree = "<group>"; };
+		90B0C53E1DAAE3870019D59B /* ApplicationExntentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationExntentions.swift; sourceTree = "<group>"; };
 		90C5887A1C46E0AC00D84C73 /* TaskManagerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskManagerViewController.swift; sourceTree = "<group>"; };
 		90CE2AF41CF4DE0E00511ED4 /* ButtonsTextsHe.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ButtonsTextsHe.plist; sourceTree = "<group>"; };
 		90CE2AF61CF4E6A200511ED4 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
@@ -231,7 +187,10 @@
 		90F00A061C4A7C06002C98BA /* IbeaconsTrackerHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IbeaconsTrackerHelper.swift; sourceTree = "<group>"; };
 		90F00A0C1C4A7C25002C98BA /* TasksServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksServices.swift; sourceTree = "<group>"; };
 		90F00A0E1C4A7C2F002C98BA /* IBeaconServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBeaconServices.swift; sourceTree = "<group>"; };
-		BFCACEE2093F19BD06FD62C3 /* Pods-Memoria.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Memoria.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Memoria/Pods-Memoria.debug.xcconfig"; sourceTree = "<group>"; };
+		AE2216E1B6AD497467804F14 /* Pods_Memoria.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Memoria.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C63E54DC6EDD468C89232C63 /* Pods_MemoriaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MemoriaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDD77D9E984A3EDA2AE776FD /* Pods-Memoria.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Memoria.release.xcconfig"; path = "Pods/Target Support Files/Pods-Memoria/Pods-Memoria.release.xcconfig"; sourceTree = "<group>"; };
+		E622C2F938AF247193CA81BA /* Pods-MemoriaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemoriaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MemoriaTests/Pods-MemoriaTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,8 +198,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19F5CF12B11DB7CCDDD1FAFB /* Pods_Memoria.framework in Frameworks */,
-				9008FBC91C6F4A2D003C1549 /* libkontakt-ios-sdk.a in Frameworks */,
+				B92DC516395A9D906DE0E162 /* Pods_Memoria.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,6 +206,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63E7386C4BCD17B9C29135D9 /* Pods_MemoriaTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,82 +214,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE76AB32A0992B34963CCDBB /* Pods_MemoriaUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		073179F040A5335FBE4072AF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1DA0B14D704433549B3B3868 /* Pods-Memoria.debug.xcconfig */,
+				DDD77D9E984A3EDA2AE776FD /* Pods-Memoria.release.xcconfig */,
+				61745D56CC2A844FA0E1BF06 /* Pods-MemoriaTests.debug.xcconfig */,
+				E622C2F938AF247193CA81BA /* Pods-MemoriaTests.release.xcconfig */,
+				1825021465EEA879F0AF68D4 /* Pods-MemoriaUITests.debug.xcconfig */,
+				43E6309D377C47D3B4E9B681 /* Pods-MemoriaUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		9008FB661C53D32F003C1549 /* CurrenctTaskCreator */ = {
 			isa = PBXGroup;
 			children = (
 				9008FB671C53D356003C1549 /* CurrenctTaskCreator.swift */,
 			);
 			name = CurrenctTaskCreator;
-			sourceTree = "<group>";
-		};
-		9008FB741C6F45AD003C1549 /* Kontaks */ = {
-			isa = PBXGroup;
-			children = (
-				9008FB971C6F4A2D003C1549 /* kontakt-ios-sdk */,
-				9008FBC81C6F4A2D003C1549 /* libkontakt-ios-sdk.a */,
-			);
-			name = Kontaks;
-			sourceTree = "<group>";
-		};
-		9008FB971C6F4A2D003C1549 /* kontakt-ios-sdk */ = {
-			isa = PBXGroup;
-			children = (
-				9008FB981C6F4A2D003C1549 /* KontaktSDK.h */,
-				9008FB991C6F4A2D003C1549 /* KTKAction.h */,
-				9008FB9A1C6F4A2D003C1549 /* KTKActionManager.h */,
-				9008FB9B1C6F4A2D003C1549 /* KTKBeacon.h */,
-				9008FB9C1C6F4A2D003C1549 /* KTKBeaconDevice.h */,
-				9008FB9D1C6F4A2D003C1549 /* KTKBeaconManager.h */,
-				9008FB9E1C6F4A2D003C1549 /* KTKBeaconProfile.h */,
-				9008FB9F1C6F4A2D003C1549 /* KTKBluetoothDevice.h */,
-				9008FBA01C6F4A2D003C1549 /* KTKBluetoothManager.h */,
-				9008FBA11C6F4A2D003C1549 /* KTKCharacteristicDescriptor.h */,
-				9008FBA21C6F4A2D003C1549 /* KTKClient.h */,
-				9008FBA31C6F4A2D003C1549 /* KTKCloudBeacon.h */,
-				9008FBA41C6F4A2D003C1549 /* KTKCompany.h */,
-				9008FBA51C6F4A2D003C1549 /* KTKConverter.h */,
-				9008FBA61C6F4A2D003C1549 /* KTKDataTransferObject.h */,
-				9008FBA71C6F4A2D003C1549 /* KTKDescriptor.h */,
-				9008FBA81C6F4A2D003C1549 /* KTKDevice.h */,
-				9008FBA91C6F4A2D003C1549 /* KTKEddystone.h */,
-				9008FBAA1C6F4A2D003C1549 /* KTKEddystoneDevice.h */,
-				9008FBAB1C6F4A2D003C1549 /* KTKEddystoneFrame.h */,
-				9008FBAC1C6F4A2D003C1549 /* KTKEddystoneRegion.h */,
-				9008FBAD1C6F4A2D003C1549 /* KTKEddystoneTLM.h */,
-				9008FBAE1C6F4A2D003C1549 /* KTKEddystoneUID.h */,
-				9008FBAF1C6F4A2D003C1549 /* KTKEddystoneURL.h */,
-				9008FBB01C6F4A2D003C1549 /* KTKError.h */,
-				9008FBB11C6F4A2D003C1549 /* KTKFirmware.h */,
-				9008FBB21C6F4A2D003C1549 /* KTKHexConverter.h */,
-				9008FBB31C6F4A2D003C1549 /* KTKLocationManager.h */,
-				9008FBB41C6F4A2D003C1549 /* KTKManager.h */,
-				9008FBB51C6F4A2D003C1549 /* KTKNumberConverter.h */,
-				9008FBB61C6F4A2D003C1549 /* KTKNumberDiscreteConverter.h */,
-				9008FBB71C6F4A2D003C1549 /* KTKNumberLinearConverter.h */,
-				9008FBB81C6F4A2D003C1549 /* KTKPaging.h */,
-				9008FBB91C6F4A2D003C1549 /* KTKPagingBeacons.h */,
-				9008FBBA1C6F4A2D003C1549 /* KTKPagingConfigs.h */,
-				9008FBBB1C6F4A2D003C1549 /* KTKPagingDevices.h */,
-				9008FBBC1C6F4A2D003C1549 /* KTKPagingVenues.h */,
-				9008FBBD1C6F4A2D003C1549 /* KTKPublicAction.h */,
-				9008FBBE1C6F4A2D003C1549 /* KTKPublicBeacon.h */,
-				9008FBBF1C6F4A2D003C1549 /* KTKPublicVenue.h */,
-				9008FBC01C6F4A2D003C1549 /* KTKRegion.h */,
-				9008FBC11C6F4A2D003C1549 /* KTKServiceDescriptor.h */,
-				9008FBC21C6F4A2D003C1549 /* KTKStringConverter.h */,
-				9008FBC31C6F4A2D003C1549 /* KTKSubordinate.h */,
-				9008FBC41C6F4A2D003C1549 /* KTKUser.h */,
-				9008FBC51C6F4A2D003C1549 /* KTKUUIDConverter.h */,
-				9008FBC61C6F4A2D003C1549 /* KTKVenue.h */,
-				9008FBC71C6F4A2D003C1549 /* KTKVenueBase.h */,
-			);
-			path = "kontakt-ios-sdk";
 			sourceTree = "<group>";
 		};
 		9011271F1C1AF6730088DD6B /* Screens */ = {
@@ -403,12 +312,12 @@
 			name = TaskNotificationsTracker;
 			sourceTree = "<group>";
 		};
-		9019EBF11C99F5E6008962A5 /* Scheduler */ = {
+		9019EBF11C99F5E6008962A5 /* NotificationScheduler */ = {
 			isa = PBXGroup;
 			children = (
-				9019EBF21C99F5FE008962A5 /* Scheduler.swift */,
+				9019EBF21C99F5FE008962A5 /* NotificationScheduler.swift */,
 			);
-			name = Scheduler;
+			name = NotificationScheduler;
 			sourceTree = "<group>";
 		};
 		901AEDF21C4136C900DD518A /* AutoLayoutMCExtentions */ = {
@@ -417,16 +326,6 @@
 				901AEDF31C4136F500DD518A /* UIViewAutoLayoutExtentions.swift */,
 			);
 			name = AutoLayoutMCExtentions;
-			sourceTree = "<group>";
-		};
-		9035C6C81C2022F200088434 /* SwiftDate */ = {
-			isa = PBXGroup;
-			children = (
-				9035C6CF1C20234200088434 /* DataStructures.swift */,
-				9035C6D01C20234200088434 /* DateInRegion.swift */,
-				9035C6D11C20234200088434 /* NSDate+Extension.swift */,
-			);
-			name = SwiftDate;
 			sourceTree = "<group>";
 		};
 		9035C6D51C2024A000088434 /* Constants */ = {
@@ -525,7 +424,9 @@
 		9035FE2E1C1EDA4C00D98022 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				9019EBF11C99F5E6008962A5 /* Scheduler */,
+				905D0BE11DACF45A00845973 /* NotificationExecuter */,
+				909CB27E1DA913E60075507C /* IBeaconWrapper */,
+				9019EBF11C99F5E6008962A5 /* NotificationScheduler */,
 				9019EBEE1C99F39C008962A5 /* TaskNotificationsTracker */,
 				9008FB661C53D32F003C1549 /* CurrenctTaskCreator */,
 				90F00A041C4A7BFD002C98BA /* IbeaconsTracker */,
@@ -578,6 +479,14 @@
 			name = AddTaskTimeViewController;
 			sourceTree = "<group>";
 		};
+		905D0BE11DACF45A00845973 /* NotificationExecuter */ = {
+			isa = PBXGroup;
+			children = (
+				905D0BE21DACF47300845973 /* NotificationExecuter.swift */,
+			);
+			name = NotificationExecuter;
+			sourceTree = "<group>";
+		};
 		90687A131CD684BD00789FEC /* MemoriaWatch */ = {
 			isa = PBXGroup;
 			children = (
@@ -609,6 +518,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		909CB27E1DA913E60075507C /* IBeaconWrapper */ = {
+			isa = PBXGroup;
+			children = (
+				909CB27F1DA914160075507C /* IBeaconWrapper.swift */,
+			);
+			name = IBeaconWrapper;
+			sourceTree = "<group>";
+		};
 		90C588791C46E09500D84C73 /* ManageTasksViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -623,6 +540,7 @@
 				90DC62121C78981B000C4457 /* UIColorExtension.swift */,
 				90DC620B1C6F62BB000C4457 /* DictionaryExntentions.swift */,
 				90DC620D1C6F6B45000C4457 /* NSDateExntentions.swift */,
+				90B0C53E1DAAE3870019D59B /* ApplicationExntentions.swift */,
 			);
 			name = Categoris;
 			sourceTree = "<group>";
@@ -677,8 +595,8 @@
 				90687A131CD684BD00789FEC /* MemoriaWatch */,
 				90687A221CD684BD00789FEC /* MemoriaWatch Extension */,
 				90E8C4941C1AA2B8009304A9 /* Products */,
-				CE394404C54793319264ADEA /* Pods */,
 				B4427CF2D9A98A2F2E8DB352 /* Frameworks */,
+				073179F040A5335FBE4072AF /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -695,6 +613,7 @@
 		90E8C4951C1AA2B8009304A9 /* Memoria */ = {
 			isa = PBXGroup;
 			children = (
+				905D0BE01DACEE6700845973 /* Memoria.entitlements */,
 				90DC620A1C6F6276000C4457 /* Categoris */,
 				90F009F81C4A7AFA002C98BA /* UI */,
 				901AEDF21C4136C900DD518A /* AutoLayoutMCExtentions */,
@@ -805,20 +724,11 @@
 		B4427CF2D9A98A2F2E8DB352 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9008FB741C6F45AD003C1549 /* Kontaks */,
-				9035C6C81C2022F200088434 /* SwiftDate */,
-				43E5A21D54B5E0665251F8E4 /* Pods_Memoria.framework */,
+				AE2216E1B6AD497467804F14 /* Pods_Memoria.framework */,
+				C63E54DC6EDD468C89232C63 /* Pods_MemoriaTests.framework */,
+				54BE932400BB9F6741D73728 /* Pods_MemoriaUITests.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		CE394404C54793319264ADEA /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				BFCACEE2093F19BD06FD62C3 /* Pods-Memoria.debug.xcconfig */,
-				08652CDF4564DF32C385FB8F /* Pods-Memoria.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -828,13 +738,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 90E8C4BB1C1AA2B9009304A9 /* Build configuration list for PBXNativeTarget "Memoria" */;
 			buildPhases = (
-				18EEDFFB538741169FB4351E /* Check Pods Manifest.lock */,
+				B6D8836D48F3B6B91D6A300A /* [CP] Check Pods Manifest.lock */,
 				90E8C48F1C1AA2B8009304A9 /* Sources */,
 				90E8C4901C1AA2B8009304A9 /* Frameworks */,
 				90E8C4911C1AA2B8009304A9 /* Resources */,
-				1B932E17277E031955A09A5C /* Embed Pods Frameworks */,
-				36DC59FBD0E540DE7F9D592F /* Copy Pods Resources */,
 				90687A381CD684BD00789FEC /* Embed Watch Content */,
+				484B3066EE07E321514809EC /* [CP] Embed Pods Frameworks */,
+				5B0094F06CD553BDBF139007 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -849,9 +759,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 90E8C4BE1C1AA2B9009304A9 /* Build configuration list for PBXNativeTarget "MemoriaTests" */;
 			buildPhases = (
+				72EB12872D208C6F5BA36A9A /* [CP] Check Pods Manifest.lock */,
 				90E8C4A31C1AA2B8009304A9 /* Sources */,
 				90E8C4A41C1AA2B8009304A9 /* Frameworks */,
 				90E8C4A51C1AA2B8009304A9 /* Resources */,
+				DC6B93F85AF4F4888FA8388A /* [CP] Embed Pods Frameworks */,
+				C9D9408E02B6B3EAD53D4263 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -867,9 +780,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 90E8C4C11C1AA2B9009304A9 /* Build configuration list for PBXNativeTarget "MemoriaUITests" */;
 			buildPhases = (
+				6C41524BCF57EF3CD0783098 /* [CP] Check Pods Manifest.lock */,
 				90E8C4AE1C1AA2B9009304A9 /* Sources */,
 				90E8C4AF1C1AA2B9009304A9 /* Frameworks */,
 				90E8C4B01C1AA2B9009304A9 /* Resources */,
+				D40B6361DB5A33D4DBDE91B6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -888,24 +803,30 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = MACMatan;
 				TargetAttributes = {
 					90E8C4921C1AA2B8009304A9 = {
 						CreatedOnToolsVersion = 7.0.1;
 						DevelopmentTeam = PH85M24H5K;
+						LastSwiftMigration = 0800;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 0;
 							};
 						};
 					};
 					90E8C4A61C1AA2B8009304A9 = {
 						CreatedOnToolsVersion = 7.0.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = 90E8C4921C1AA2B8009304A9;
 					};
 					90E8C4B11C1AA2B9009304A9 = {
 						CreatedOnToolsVersion = 7.0.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = 90E8C4921C1AA2B8009304A9;
 					};
 				};
@@ -961,29 +882,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		18EEDFFB538741169FB4351E /* Check Pods Manifest.lock */ = {
+		484B3066EE07E321514809EC /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		1B932E17277E031955A09A5C /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -991,19 +897,109 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Memoria/Pods-Memoria-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		36DC59FBD0E540DE7F9D592F /* Copy Pods Resources */ = {
+		5B0094F06CD553BDBF139007 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Memoria/Pods-Memoria-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6C41524BCF57EF3CD0783098 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		72EB12872D208C6F5BA36A9A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B6D8836D48F3B6B91D6A300A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C9D9408E02B6B3EAD53D4263 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MemoriaTests/Pods-MemoriaTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D40B6361DB5A33D4DBDE91B6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MemoriaUITests/Pods-MemoriaUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DC6B93F85AF4F4888FA8388A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MemoriaTests/Pods-MemoriaTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1018,10 +1014,12 @@
 				9019EBF01C99F3B3008962A5 /* TaskNotificationsTracker.swift in Sources */,
 				9035FE171C1B17BA00D98022 /* Content.swift in Sources */,
 				9011272F1C1AFBE20088DD6B /* Bootstrapper.swift in Sources */,
+				905D0BE31DACF47300845973 /* NotificationExecuter.swift in Sources */,
+				909CB2801DA914160075507C /* IBeaconWrapper.swift in Sources */,
 				901127221C1AF8CA0088DD6B /* MemoriesViewController.swift in Sources */,
 				9019EBED1C90D573008962A5 /* TaskWarningPopUp.swift in Sources */,
 				9035FE081C1B095A00D98022 /* TabBarController.swift in Sources */,
-				9019EBF31C99F5FE008962A5 /* Scheduler.swift in Sources */,
+				9019EBF31C99F5FE008962A5 /* NotificationScheduler.swift in Sources */,
 				9019EBEB1C90CA16008962A5 /* TaskVerificationPopUp.swift in Sources */,
 				9008FB651C4AC420003C1549 /* IBeaconIdentifier.swift in Sources */,
 				90DC779C1C3AFC6F0062BCE3 /* DatePickerDialog.swift in Sources */,
@@ -1051,14 +1049,12 @@
 				9035FE251C1EC64500D98022 /* ReminderPopUp.swift in Sources */,
 				905AF3C11C1F3BD60063713A /* NavigationController.swift in Sources */,
 				90DC779F1C3B02770062BCE3 /* AddTaskVoiceViewController.swift in Sources */,
-				9035C6D21C20234200088434 /* DataStructures.swift in Sources */,
-				9035C6D31C20234200088434 /* DateInRegion.swift in Sources */,
 				90F00A001C4A7B73002C98BA /* TasksDB.swift in Sources */,
 				9035FE281C1ECC4800D98022 /* AddTaskNameViewController.swift in Sources */,
-				9035C6D41C20234200088434 /* NSDate+Extension.swift in Sources */,
 				90DC620E1C6F6B45000C4457 /* NSDateExntentions.swift in Sources */,
 				9035FE0D1C1B0C9E00D98022 /* AddTasksLocationViewController.swift in Sources */,
 				90DC62111C6F844A000C4457 /* AddTaskTimePriorityController.swift in Sources */,
+				90B0C53F1DAAE3870019D59B /* ApplicationExntentions.swift in Sources */,
 				901127301C1AFBE20088DD6B /* AssemblyModel.swift in Sources */,
 				90F00A071C4A7C06002C98BA /* IbeaconsTracker.swift in Sources */,
 				9035FE121C1B0D1200D98022 /* DrugsViewController.swift in Sources */,
@@ -1132,8 +1128,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1177,8 +1175,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1197,6 +1197,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				USER_HEADER_SEARCH_PATHS = "";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1204,12 +1205,14 @@
 		};
 		90E8C4BC1C1AA2B9009304A9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BFCACEE2093F19BD06FD62C3 /* Pods-Memoria.debug.xcconfig */;
+			baseConfigurationReference = 1DA0B14D704433549B3B3868 /* Pods-Memoria.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: cohen.abravanel@gmail.com (V88TJNTSQC)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Matan Cohen (V88TJNTSQC)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = PH85M24H5K;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1230,18 +1233,21 @@
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Memoria/Memoria-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				USE_HEADERMAP = NO;
 			};
 			name = Debug;
 		};
 		90E8C4BD1C1AA2B9009304A9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 08652CDF4564DF32C385FB8F /* Pods-Memoria.release.xcconfig */;
+			baseConfigurationReference = DDD77D9E984A3EDA2AE776FD /* Pods-Memoria.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: cohen.abravanel@gmail.com (V88TJNTSQC)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Matan Cohen (V88TJNTSQC)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = PH85M24H5K;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1261,41 +1267,48 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Memoria/Memoria-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				USE_HEADERMAP = NO;
 			};
 			name = Release;
 		};
 		90E8C4BF1C1AA2B9009304A9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61745D56CC2A844FA0E1BF06 /* Pods-MemoriaTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = MemoriaTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.MACApps.com.MemoriaTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Memoria.app/Memoria";
 			};
 			name = Debug;
 		};
 		90E8C4C01C1AA2B9009304A9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E622C2F938AF247193CA81BA /* Pods-MemoriaTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = MemoriaTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.MACApps.com.MemoriaTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Memoria.app/Memoria";
 			};
 			name = Release;
 		};
 		90E8C4C21C1AA2B9009304A9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1825021465EEA879F0AF68D4 /* Pods-MemoriaUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = MemoriaUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.MACApps.com.MemoriaUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = Memoria;
 				USES_XCTRUNNER = YES;
 			};
@@ -1303,11 +1316,13 @@
 		};
 		90E8C4C31C1AA2B9009304A9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43E6309D377C47D3B4E9B681 /* Pods-MemoriaUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = MemoriaUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.MACApps.com.MemoriaUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = Memoria;
 				USES_XCTRUNNER = YES;
 			};

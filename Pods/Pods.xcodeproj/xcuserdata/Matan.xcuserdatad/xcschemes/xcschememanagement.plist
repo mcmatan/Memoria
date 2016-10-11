@@ -8,72 +8,61 @@
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>1</integer>
+		</dict>
+		<key>Pods-MemoriaTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-MemoriaUITests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>SnapKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>2</integer>
+		</dict>
+		<key>SwiftDate.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Swinject.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>3</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>07FADAE1D20AD9F3C9F10CFFE7A589A2</key>
+		<key>21F0D2CF24A683047AA57CF0E9B4CDFA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1CB486E8488A874DA1E36037150528F0</key>
+		<key>2C9A6E209BD5CC6C15AD6D5D208A9B11</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>26B1B9F22E5311D64516BCF75D978FC1</key>
+		<key>7665294CA1FA5544A110536767870A8A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>309BA7FD9DA8A9153DD03CFC2FD00AE3</key>
+		<key>DBB7CDE592353D4DBD3D4B4E5386D4C8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4198804C3B1CA64E0A59F9F3F1B39E36</key>
+		<key>E0B1204E84C4C3CAEDA0AB979D1159C2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>67AD961B7BBD559251C18FEE72C7794C</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>721620C1CB396220ADC3E6259D8E2EAC</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>9080AC643C4C119B557F130543D06425</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>EA00A8EE8C461FE9B520092CCE3A2F60</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>EBA940BD126F48AEBDD4E3656ED79A79</key>
+		<key>F8C6ECD08D4F476747C33078F67B50C9</key>
 		<dict>
 			<key>primary</key>
 			<true/>

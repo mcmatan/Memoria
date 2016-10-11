@@ -1,44 +1,45 @@
-//
-//  IbeaconService.swift
-//  KontactTest
-//
-//  Created by Matan Cohen on 1/14/16.
-//  Copyright © 2016 MACMatan. All rights reserved.
-//
-
 import Foundation
 import UIKit
-
-protocol IbeaconsTrackerDelegate {
-    func beaconInErea(clBeacon : CLBeacon)
+fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+    switch (lhs, rhs) {
+    case let (l?, r?):
+        return l < r
+    case (nil, _?):
+        return true
+    default:
+        return false
+    }
 }
 
-class IbeaconsTracker : NSObject,  KTKLocationManagerDelegate {
+
+protocol IbeaconsTrackerDelegate {
+    func beaconInErea(_ clBeacon : CLBeacon)
+}
+
+class IbeaconsTracker : NSObject  , ESTBeaconManagerDelegate {
     var delegate : IbeaconsTrackerDelegate?
     let minimunDistanceToBeacon = 1.3 //In miters
     let searchForBeaconDelayTime = 2.0
-    let locationManager = KTKLocationManager()
+    let beaconManager = ESTBeaconManager()
     var currentClosesBeacon : CLBeacon?
     var beaconsInErea : [CLBeacon]?
     
     override init() {
         super.init()
-        self.locationManager.delegate = self
         
-        if (KTKLocationManager.canMonitorBeacons() == false) {
-            print("Can not monitor beacons")
-        }
+        self.beaconManager.delegate = self
+        self.beaconManager.requestAlwaysAuthorization() // Location for the app also when in background
         
-        let region = KTKRegion(UUID: "f7826da6-4fa2-4e98-8024-bc5b71e0893e")
-        self.locationManager.setRegions([region])
-        self.locationManager.startMonitoringBeacons()
         
-        if UIApplication.sharedApplication().backgroundRefreshStatus == UIBackgroundRefreshStatus.Available {
+        let uuid = UUID(uuidString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D")
+        self.beaconManager.startRangingBeacons(in: CLBeaconRegion(proximityUUID: uuid!, identifier: "6e00185bd93bb636c15d2b54e7e4ad09"))
+        
+        if UIApplication.shared.backgroundRefreshStatus == UIBackgroundRefreshStatus.available {
             print("Background updates are available for the app.")
-        }else if UIApplication.sharedApplication().backgroundRefreshStatus == UIBackgroundRefreshStatus.Denied
+        }else if UIApplication.shared.backgroundRefreshStatus == UIBackgroundRefreshStatus.denied
         {
             print("The user explicitly disabled background behavior for this app or for the whole system.")
-        }else if UIApplication.sharedApplication().backgroundRefreshStatus == UIBackgroundRefreshStatus.Restricted
+        }else if UIApplication.shared.backgroundRefreshStatus == UIBackgroundRefreshStatus.restricted
         {
             print("Background updates are unavailable and the user cannot enable them again. For example, this status can occur when parental controls are in effect for the current user.")
         }
@@ -46,26 +47,26 @@ class IbeaconsTracker : NSObject,  KTKLocationManagerDelegate {
     }
     
     internal func StopMonitoring() {
-        self.locationManager.stopMonitoringBeacons()
+        self.beaconManager.stopMonitoringForAllRegions()
     }
     
     
-    internal func isThereABeaconInArea(handler: (( result : Bool, beacon : CLBeacon?) -> Void)!) {
+    internal func isThereABeaconInArea(_ handler: (( _ result : Bool, _ beacon : CLBeacon?) -> Void)!) {
         self.currentClosesBeacon = nil
-        let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(self.searchForBeaconDelayTime * Double(NSEC_PER_SEC)))
-        dispatch_after(delayTime, dispatch_get_main_queue()) {
+        let delayTime = DispatchTime.now() + Double(Int64(self.searchForBeaconDelayTime * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
+        DispatchQueue.main.asyncAfter(deadline: delayTime) {
             if let _ = self.currentClosesBeacon {
-                handler(result: true, beacon: self.currentClosesBeacon)
+                handler(true, self.currentClosesBeacon)
             } else {
-            handler(result: false, beacon: nil)
+                handler(false, nil)
             }
         }
     }
     
-    internal func isBeaconInErea(iBeaconIdentifier : IBeaconIdentifier , handler: (( result : Bool) -> Void)!) {
+    internal func isBeaconInErea(_ iBeaconIdentifier : IBeaconIdentifier , handler: (( _ result : Bool) -> Void)!) {
         self.beaconsInErea = []
-        let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(self.searchForBeaconDelayTime * Double(NSEC_PER_SEC)))
-        dispatch_after(delayTime, dispatch_get_main_queue()) {
+        let delayTime = DispatchTime.now() + Double(Int64(self.searchForBeaconDelayTime * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
+        DispatchQueue.main.asyncAfter(deadline: delayTime) {
             
             var isExists = false
             if let isBeaconsInErea = self.beaconsInErea {
@@ -75,33 +76,25 @@ class IbeaconsTracker : NSObject,  KTKLocationManagerDelegate {
                         isExists = true
                     }
                 }
-             handler(result: (isExists))
+                handler((isExists))
             } else {
-                handler(result: (false))
+                handler((false))
             }
         }
-    
+        
     }
     
     //MARK: Private
     //MARK: LocationManagerDelegate
     
-    func locationManager(locationManager: KTKLocationManager!, didChangeState state: KTKLocationManagerState, withError error: NSError!) {
-        print(IbeaconsTrackerHelper.locationManagerStateToString(state))
+    func beaconManager(_ manager: Any, didChange status: CLAuthorizationStatus) {
+        print(IbeaconsTrackerHelper.locationManagerStateToString(status))
     }
     
-    func locationManager(locationManager: KTKLocationManager!, didEnterRegion region: KTKRegion!) {
-        print("Enter region \(region.uuid)");
-    }
-    
-    func locationManager(locationManager: KTKLocationManager!, didExitRegion region: KTKRegion!) {
-        print("Exit region \(region.uuid)");
-    }
-    
-    func locationManager(locationManager: KTKLocationManager!, didRangeBeacons beacons: [AnyObject]!) {
+    func beaconManager(_ manager: Any, didRangeBeacons beacons: [CLBeacon], in region: CLBeaconRegion) {
         self.beaconsInErea?.removeAll()
         
-        let onlyCloseBeacons = self.getOnlyCloseBeacons(beacons as! [CLBeacon])
+        let onlyCloseBeacons = self.getOnlyCloseBeacons(beacons)
         self.beaconsInErea = onlyCloseBeacons
         self.beaconIsNear(onlyCloseBeacons)
         
@@ -110,13 +103,22 @@ class IbeaconsTracker : NSObject,  KTKLocationManagerDelegate {
         if ((beacons.count > 0) == false) {
             return
         }
-        let beacon = self.getClosestBeacon(beacons as? [CLBeacon])
+        let beacon = self.getClosestBeacon(beacons)
         if beacon?.accuracy < self.minimunDistanceToBeacon {
             self.currentClosesBeacon = beacon
         }
+        
     }
     
-    func beaconIsNear(beacons : [CLBeacon]) {
+    func beaconManager(_ manager: Any, didEnter region: CLBeaconRegion) {
+        print("Enter region \(region.proximityUUID)");
+    }
+    
+    func beaconManager(_ manager: Any, didExitRegion region: CLBeaconRegion) {
+        print("Exit region \(region.proximityUUID)");
+    }
+    
+    func beaconIsNear(_ beacons : [CLBeacon]) {
         if let isDelegate = self.delegate {
             for beacon in beacons {
                 isDelegate.beaconInErea(beacon)
@@ -124,7 +126,7 @@ class IbeaconsTracker : NSObject,  KTKLocationManagerDelegate {
         }
     }
     
-    private func getClosestBeacon(beaconsList : [CLBeacon]?)->CLBeacon? {
+    fileprivate func getClosestBeacon(_ beaconsList : [CLBeacon]?)->CLBeacon? {
         if let isBeaconsList = beaconsList {
             if isBeaconsList.count > 0 {
                 var closesBeacon = isBeaconsList.first
@@ -142,7 +144,7 @@ class IbeaconsTracker : NSObject,  KTKLocationManagerDelegate {
         return nil
     }
     
-    private func getOnlyCloseBeacons(beacons : [CLBeacon])->[CLBeacon] {
+    fileprivate func getOnlyCloseBeacons(_ beacons : [CLBeacon])->[CLBeacon] {
         var closeBeacons = [CLBeacon]()
         for beacon in beacons {
             if beacon.accuracy < self.minimunDistanceToBeacon {
@@ -153,26 +155,25 @@ class IbeaconsTracker : NSObject,  KTKLocationManagerDelegate {
     }
     
     
-    private func printBeaconInfo(beacon : CLBeacon) {
+    fileprivate func printBeaconInfo(_ beacon : CLBeacon) {
         print("IBeacon rssi = \(beacon.rssi) uuid  = \(beacon.proximityUUID) accurecy = \(beacon.accuracy)")
         switch (beacon.proximity) {
-        case CLProximity.Far:
+        case CLProximity.far:
             print("Distance Far for major = \(beacon.major) minor = \(beacon.minor)")
             break;
-        case CLProximity.Immediate:
+        case CLProximity.immediate:
             print("Distance Immediate for major = \(beacon.major) minor = \(beacon.minor)")
             break;
-        case CLProximity.Unknown:
+        case CLProximity.unknown:
             print("Distance Unknown for major = \(beacon.major) minor = \(beacon.minor)")
             break;
-        case CLProximity.Near:
+        case CLProximity.near:
             print("Distance Near for major = \(beacon.major) minor = \(beacon.minor)")
             break;
         }
         print("")
         print("")
         print("")
-
     }
-
+    
 }

@@ -32,11 +32,11 @@ class AddTaskTimePriorityController: ViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.title = self.currenctTaskCreator.getTaskName()
         if let isTimePriority = currenctTaskCreator.getTaskTimePriority() {
-            self.switchPrairity.on = isTimePriority
+            self.switchPrairity.isOn = isTimePriority
         }
     }
     
@@ -45,13 +45,13 @@ class AddTaskTimePriorityController: ViewController {
         
         self.switchPrairity = UISwitch()
         
-        self.btnDone.setTitle(Content.getContent(ContentType.ButtonTxt, name: "DoneButton"), forState: UIControlState.Normal)
-        self.btnDone.addTarget(self, action: #selector(AddTaskTimePriorityController.doneBtnPress), forControlEvents: UIControlEvents.TouchUpInside)
+        self.btnDone.setTitle(Content.getContent(ContentType.buttonTxt, name: "DoneButton"), for: UIControlState())
+        self.btnDone.addTarget(self, action: #selector(AddTaskTimePriorityController.doneBtnPress), for: UIControlEvents.touchUpInside)
         self.btnDone.defaultStyle()
         
-        self.lblExplenation.font = UIFont.systemFontOfSize(15)
-        self.lblExplenation.textAlignment = NSTextAlignment.Center
-        self.lblExplenation.text = Content.getContent(ContentType.LabelTxt, name: "AddTaskPrirityExpenation")
+        self.lblExplenation.font = UIFont.systemFont(ofSize: 15)
+        self.lblExplenation.textAlignment = NSTextAlignment.center
+        self.lblExplenation.text = Content.getContent(ContentType.labelTxt, name: "AddTaskPrirityExpenation")
         self.lblExplenation.numberOfLines = 0
         
         self.view.addSubview(lblExplenation)
@@ -63,7 +63,7 @@ class AddTaskTimePriorityController: ViewController {
         switchPrairity.translatesAutoresizingMaskIntoConstraints = false
         btnDone.translatesAutoresizingMaskIntoConstraints = false
         
-        let views = [lblExplenation,btnDone]
+        let views = [lblExplenation,btnDone] as [Any]
         let viewsInfoDic : [String : AnyObject] =
         [
             "switchPrairity" : switchPrairity,
@@ -72,26 +72,26 @@ class AddTaskTimePriorityController: ViewController {
         ]
         
         
-        UIViewAutoLayoutExtentions.equalWidthsForViews(views)
+        UIViewAutoLayoutExtentions.equalWidthsForViews(views as! [UIView])
         
-        let verticalLayout = NSLayoutConstraint.constraintsWithVisualFormat(
-            "V:[lblExplenation]-[switchPrairity]-[btnDone]", options: NSLayoutFormatOptions.AlignAllCenterX, metrics: nil, views: viewsInfoDic)
-        NSLayoutConstraint.activateConstraints(verticalLayout)
+        let verticalLayout = NSLayoutConstraint.constraints(
+            withVisualFormat: "V:[lblExplenation]-[switchPrairity]-[btnDone]", options: NSLayoutFormatOptions.alignAllCenterX, metrics: nil, views: viewsInfoDic)
+        NSLayoutConstraint.activate(verticalLayout)
         
         lblExplenation.topToViewControllerTopLayoutGuide(self, offset: 20)
         switchPrairity.centerVerticlyInSuperView()
     }
     
-    func timePriorirtySwitchStateChage(change : UISwitch) {
-        self.currenctTaskCreator.setTaskTimePriority(change.on)
+    func timePriorirtySwitchStateChage(_ change : UISwitch) {
+        self.currenctTaskCreator.setTaskTimePriority(change.isOn)
     }
     
     
     func doneBtnPress() {
-        self.currenctTaskCreator.setTaskTimePriority(self.switchPrairity.on)
+        self.currenctTaskCreator.setTaskTimePriority(self.switchPrairity.isOn)
         self.tasksServices.saveTask(self.currenctTaskCreator.getCurrenctTask())
         
-        self.navigationController?.popToRootViewControllerAnimated(true)
+        let _ = self.navigationController?.popToRootViewController(animated: true)
         
 //        if let _ = self.addTaskConfirmationViewController {} else {
 //            self.addTaskConfirmationViewController = self.container.resolve(AddTaskConfirmationViewController.self)
