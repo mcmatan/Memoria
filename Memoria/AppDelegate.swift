@@ -52,6 +52,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print("Did recive task notification at time")
         NotificationCenter.default.post(name: Notification.Name(rawValue: NotificationsNames.NotificationDidOccur), object: notification)
     }
+    
+    func application(_ application: UIApplication, handleActionWithIdentifier identifier: String?, for notification: UILocalNotification, completionHandler: @escaping () -> Void) {
+        completionHandler()
+    }
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

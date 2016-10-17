@@ -15,10 +15,15 @@ open class AssemblyModel {
         container.register(TasksDB.self) { c in
             return TasksDB()
         }.inObjectScope(ObjectScope.container)
+        
+        container.register(IBeaconCloudType.self) { c in
+            return IBeaconCloud()
+            }.inObjectScope(ObjectScope.container)
 
         container.register(IBeaconServices.self) { c in
-            return IBeaconServices(ibeaconLocationFinder: container.resolve(IbeaconsTracker.self)!, tasksDB:
-            container.resolve(TasksDB.self)!)
+            return IBeaconServices(ibeaconLocationFinder: container.resolve(IbeaconsTracker.self)!,
+                                   tasksDB:container.resolve(TasksDB.self)!,
+            beaconCloud:container.resolve(IBeaconCloudType.self)!)
         }.inObjectScope(ObjectScope.container)
 
         container.register(TasksServices.self) { c in
@@ -49,11 +54,6 @@ open class AssemblyModel {
             notificationExecuter: container.resolve(NotificationExecuter.self)!)
             }.inObjectScope(ObjectScope.container)
          let _ = container.resolve(TaskNotificationsTracker.self)
-        
-        container.register(IBeaconWrapper.self) { c in
-            return IBeaconWrapper()
-            }.inObjectScope(ObjectScope.container)
-        let _ = container.resolve(IBeaconWrapper.self)
 
     }
     

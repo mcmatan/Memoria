@@ -8,10 +8,14 @@ class AddTaskNameViewController: ViewController {
     let enterNameTextField = TextField()
     var currenctTaskCreator : CurrenctTaskCreator
     var addTaskTimeViewController : AddTaskTimeViewController?
+    let beaconServices: IBeaconServices
+    var beaconDraw = UIView()
+    let btnDone = Button()
     
-    init(container : Container, currenctTaskCreator : CurrenctTaskCreator) {
+    init(container : Container, currenctTaskCreator : CurrenctTaskCreator,beaconServices: IBeaconServices) {
         self.container = container
         self.currenctTaskCreator = currenctTaskCreator
+        self.beaconServices = beaconServices
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -24,6 +28,7 @@ class AddTaskNameViewController: ViewController {
         
         self.enterNameTextField.text = currenctTaskCreator.getTaskName()
         self.title = self.currenctTaskCreator.getTaskBeaconIdentifier()!.major
+        self.addBeaconShape()
     }
     
     override func viewDidLoad() {
@@ -35,19 +40,18 @@ class AddTaskNameViewController: ViewController {
         enterNameTextField.textAlignment = NSTextAlignment.center
         enterNameTextField.layer.borderColor = UIColor.gray.cgColor
         enterNameTextField.layer.borderWidth = 0.5
-        let done = Button()
-        done.defaultStyle()
-        done.setTitle(Content.getContent(ContentType.buttonTxt, name: "Done"), for: UIControlState())
-        done.addTarget(self, action: #selector(AddTaskNameViewController.dontBtnPress), for: UIControlEvents.touchUpInside)
+        btnDone.defaultStyle()
+        btnDone.setTitle(Content.getContent(ContentType.buttonTxt, name: "Done"), for: UIControlState())
+        btnDone.addTarget(self, action: #selector(AddTaskNameViewController.dontBtnPress), for: UIControlEvents.touchUpInside)
         self.view.addSubview(taskName)
         self.view.addSubview(enterNameTextField)
-        self.view.addSubview(done)
+        self.view.addSubview(btnDone)
 
         taskName.translatesAutoresizingMaskIntoConstraints = false
         enterNameTextField.translatesAutoresizingMaskIntoConstraints = false
-        done.translatesAutoresizingMaskIntoConstraints = false
+        btnDone.translatesAutoresizingMaskIntoConstraints = false
         
-        let views = [taskName, enterNameTextField, done];
+        let views = [taskName, enterNameTextField, btnDone];
         UIViewAutoLayoutExtentions.equalHegihtForViews(views)
         UIViewAutoLayoutExtentions.equalWidthsForViews(views)
         
@@ -55,19 +59,31 @@ class AddTaskNameViewController: ViewController {
         [
             "taskName" : taskName,
             "enterNameTextField" : enterNameTextField,
-            "done" : done
+            "btnDone" : btnDone
         ]
         let verticalLayout = NSLayoutConstraint.constraints(
-            withVisualFormat: "V:[taskName]-[enterNameTextField]-[done]", options: [], metrics: nil, views: viewsDic)
+            withVisualFormat: "V:[taskName]-[enterNameTextField]-[btnDone]", options: [], metrics: nil, views: viewsDic)
         
         NSLayoutConstraint.activate(verticalLayout)
         taskName.topToViewControllerTopLayoutGuide(self)
         taskName.centerVerticlyInSuperView()
         enterNameTextField.centerVerticlyInSuperView()
-        done.centerVerticlyInSuperView()
+        btnDone.centerVerticlyInSuperView()
         
         print(taskName.intrinsicContentSize)
-
+    }
+    
+    func addBeaconShape() {
+        self.beaconDraw.removeFromSuperview()
+        let backgroundColor = self.beaconServices.getBeaconColorFor(beaconIdentifier: self.currenctTaskCreator.getTaskBeaconIdentifier()!)
+        let beaconWidth = CGFloat(25)
+        let beaconHeight = CGFloat(40)
+        let rect = CGRect(x: self.view.centerX - beaconWidth/2, y: self.view.centerY - beaconHeight/2, width: beaconWidth, height: beaconHeight)
+        let beaconShape = BeaconShape(rect: rect, backgroundColor: backgroundColor, lineColor: UIColor.white)
+        self.beaconDraw = beaconShape
+        
+        let barButtonItem = UIBarButtonItem(customView: beaconShape)
+        self.navigationItem.rightBarButtonItem = barButtonItem
     }
     
     //MARK: Button Presses

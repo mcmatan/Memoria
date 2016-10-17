@@ -26,7 +26,8 @@ open class AssemblyViewControllers {
         }
         
         container.register(AddTaskNameViewController.self) { _ in
-            return AddTaskNameViewController(container: container, currenctTaskCreator: container.resolve(CurrenctTaskCreator.self)!)
+            return AddTaskNameViewController(container: container, currenctTaskCreator: container.resolve(CurrenctTaskCreator.self)!,
+                                              beaconServices: container.resolve(IBeaconServices.self)!)
         }
 
         container.register(AddTaskVoiceViewController.self) { _ in

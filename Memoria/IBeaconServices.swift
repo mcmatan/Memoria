@@ -7,14 +7,17 @@
 //
 
 import Foundation
+import UIKit
 
 class IBeaconServices {
     var ibeaconLocationFinder : IbeaconsTracker
     var tasksDB : TasksDB
+    let beaconCloud: IBeaconCloudType
     
-    init(ibeaconLocationFinder : IbeaconsTracker, tasksDB : TasksDB) {
+    init(ibeaconLocationFinder : IbeaconsTracker, tasksDB : TasksDB, beaconCloud: IBeaconCloudType) {
         self.ibeaconLocationFinder = ibeaconLocationFinder
         self.tasksDB = tasksDB
+        self.beaconCloud = beaconCloud
     }
     
     func isThereABeaconInArea(_ handler: (( _ result : Bool, _ beacon : CLBeacon?) -> Void)!) {
@@ -28,5 +31,9 @@ class IBeaconServices {
     func isBeaconAlreadyHasATaskAssigned(_ beacon :CLBeacon)->Bool {
         let closestIBeacon = beacon
         return self.tasksDB.isThereTaskForIBeaconIdentifier(IBeaconIdentifier.creatFromCLBeacon(closestIBeacon))
+    }
+    
+    func getBeaconColorFor(beaconIdentifier :IBeaconIdentifier)->UIColor {
+        return self.beaconCloud.getColorFor(beaconIdentifier: beaconIdentifier)
     }
 }

@@ -28,6 +28,25 @@ class NotificationScheduler : NSObject, INotificationScheduler {
         let fireDate = date
         let majorAppendedByMinorString = task.taskBeaconIdentifier!.majorAppendedByMinorString()
         
+        let restartAction = UIMutableUserNotificationAction()
+        restartAction.identifier = "xx"
+        restartAction.isDestructive = false
+        restartAction.title = "Restart"
+        restartAction.activationMode = .background
+        restartAction.isAuthenticationRequired = false
+        
+        let categoryIdentifier = "category.identifier"
+        let category = UIMutableUserNotificationCategory()
+
+        category.identifier = categoryIdentifier
+        category.setActions([restartAction], for: .minimal)
+        category.setActions([restartAction], for: .default)
+        
+        let categories = Set(arrayLiteral: category)
+        let settings = UIUserNotificationSettings(types: [UIUserNotificationType.alert, UIUserNotificationType.sound], categories: categories)
+        UIApplication.shared.registerUserNotificationSettings(settings)
+        
+        
         let notification = UILocalNotification()
         notification.alertBody = alertBody
         notification.alertAction = alertAction
@@ -37,7 +56,7 @@ class NotificationScheduler : NSObject, INotificationScheduler {
         notification.soundName = UILocalNotificationDefaultSoundName;
         let key = NotificationScheduler.TaskNotificationKey
         notification.userInfo = [key: majorAppendedByMinorString]
-        notification.category = "Memoria"
+        notification.category = categoryIdentifier
         squeduleReminderWithRepeat(notification: notification)
     }
     

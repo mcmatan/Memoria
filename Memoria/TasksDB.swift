@@ -44,8 +44,9 @@ class TasksDB {
             self.tasksByMajorAppendedWithMinor[isTaskBeaconIdentifier.majorAppendedByMinorString()] = task
             self.saveDB()
             self.loadDB()
+        } else {
+         print("Did not save task!!!!!")   
         }
-        print("Did not save task!!!!!")
     }
     
     func removeTask(_ task : Task)->Bool {

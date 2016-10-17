@@ -19,22 +19,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Memoria/TaskNotificationsTracker.swift"
-            timestampString = "497878678.019184"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
-            landmarkName = "beaconInErea(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "Memoria/TaskVerificationPopUp.swift"
             timestampString = "497879884.540872"
             startingColumnNumber = "9223372036854775807"
@@ -52,7 +36,7 @@
                   moduleName = "Memoria"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Matan/Documents/ObjectiveC/onpi/Memoria/Memoria/TaskVerificationPopUp.swift"
-                  timestampString = "497884604.955677"
+                  timestampString = "498396310.026643"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "107"
@@ -67,7 +51,7 @@
                   moduleName = "Memoria"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Matan/Documents/ObjectiveC/onpi/Memoria/Memoria/TaskVerificationPopUp.swift"
-                  timestampString = "497884604.95783"
+                  timestampString = "498396310.028455"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "108"
@@ -100,7 +84,7 @@
                   moduleName = "Memoria"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Matan/Documents/ObjectiveC/onpi/Memoria/Memoria/TaskVerificationPopUp.swift"
-                  timestampString = "497884604.961655"
+                  timestampString = "498396310.032197"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "96"
@@ -115,7 +99,7 @@
                   moduleName = "Memoria"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Matan/Documents/ObjectiveC/onpi/Memoria/Memoria/TaskVerificationPopUp.swift"
-                  timestampString = "497884604.96347"
+                  timestampString = "498396310.034021"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "96"
@@ -155,86 +139,6 @@
             endingLineNumber = "119"
             landmarkName = "btnPlayRecordPress()"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Memoria/TaskWarningPopUp.swift"
-            timestampString = "497879894.636521"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "124"
-            endingLineNumber = "124"
-            landmarkName = "btnOkPress()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Memoria/TaskWarningPopUp.swift"
-            timestampString = "497879895.478012"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "128"
-            endingLineNumber = "128"
-            landmarkName = "btnPlayRecordPress()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Memoria/TaskWarningPopUp.swift"
-            timestampString = "497879896.50417"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "114"
-            endingLineNumber = "114"
-            landmarkName = "playSound()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Memoria.TaskWarningPopUp.playSound () -&gt; ()"
-                  moduleName = "Memoria"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Matan/Documents/ObjectiveC/onpi/Memoria/Memoria/TaskWarningPopUp.swift"
-                  timestampString = "497884604.980578"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "114"
-                  endingLineNumber = "114"
-                  offsetFromSymbolStart = "24">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Memoria.TaskWarningPopUp.playSound () -&gt; ()"
-                  moduleName = "Memoria"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Matan/Documents/ObjectiveC/onpi/Memoria/Memoria/TaskWarningPopUp.swift"
-                  timestampString = "497884604.982506"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "114"
-                  endingLineNumber = "114"
-                  offsetFromSymbolStart = "132">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
