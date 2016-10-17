@@ -77,13 +77,13 @@ class AddTaskTimeViewController : ViewController {
     
     
     func addTimeButtonPress() {
+        let minumTimeFromNowByMinutes = 2 // This is a hack, the date picker works wrong after setting minumun time.
         let txt = Content.getContent(ContentType.labelTxt, name: "AddTaskTimeDatePickerDialog")
         let datePicker = DatePickerDialog()
-        let minimunDate = Date() + 2.minutes
+        let minimunDate = Date() + minumTimeFromNowByMinutes.minutes
         datePicker.setMinimunDate(date: minimunDate)
-        
-        //datePicker.setMinimunDate(date: (Date().minute += 2))
-        datePicker.show(txt, datePickerMode: UIDatePickerMode.dateAndTime) { (date) -> Void in
+
+        datePicker.show(txt, doneButtonTitle: "Done", cancelButtonTitle: "Cancel", defaultDate: minimunDate, datePickerMode: UIDatePickerMode.dateAndTime) { (date) in
             print(date)
             self.chosenTime = date
             self.setTimeToDisplay(date)

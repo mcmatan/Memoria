@@ -61,12 +61,13 @@ class NotificationScheduler : NSObject, INotificationScheduler {
     }
     
     private func squeduleReminderWithRepeat(notification: UILocalNotification) {
-        let numberOfReminders = 10
-        for i in 0...numberOfReminders {
-            let addedNotification = notification.copy() as! UILocalNotification
-            addedNotification.fireDate = addedNotification.fireDate! + (10 * i).seconds
-            UIApplication.shared.scheduleLocalNotification(addedNotification)
-        }
+                UIApplication.shared.scheduleLocalNotification(notification)
+//        let numberOfReminders = 10
+//        for i in 0...numberOfReminders {
+//            let addedNotification = notification.copy() as! UILocalNotification
+//            addedNotification.fireDate = addedNotification.fireDate! + (10 * i).seconds
+//            UIApplication.shared.scheduleLocalNotification(addedNotification)
+//        }
     }
     
     internal func cancelReminderForTask(_ task : Task) {
