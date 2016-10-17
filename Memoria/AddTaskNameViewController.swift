@@ -27,7 +27,7 @@ class AddTaskNameViewController: ViewController {
         super.viewWillAppear(animated)
         
         self.enterNameTextField.text = currenctTaskCreator.getTaskName()
-        self.title = self.currenctTaskCreator.getTaskBeaconIdentifier()!.major
+        self.title = "IBeacon:" + self.currenctTaskCreator.getTaskBeaconIdentifier()!.major
         self.addBeaconShape()
     }
     
