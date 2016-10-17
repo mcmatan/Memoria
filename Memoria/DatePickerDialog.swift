@@ -24,6 +24,7 @@ class DatePickerDialog: UIView {
     
     /* Vars */
     fileprivate var title: String!
+    fileprivate var minimunDate: Date?
     fileprivate var doneButtonTitle: String!
     fileprivate var cancelButtonTitle: String!
     fileprivate var defaultDate: Date!
@@ -50,6 +51,10 @@ class DatePickerDialog: UIView {
     /* Create the dialog view, and animate opening the dialog */
     func show(_ title: String, datePickerMode: UIDatePickerMode = .dateAndTime, callback: @escaping ((_ date: Date) -> Void)) {
         show(title, doneButtonTitle: "Done", cancelButtonTitle: "Cancel", datePickerMode: datePickerMode, callback: callback)
+    }
+    
+    func setMinimunDate(date: Date) {
+        self.minimunDate = date
     }
     
     func show(_ title: String, doneButtonTitle: String, cancelButtonTitle: String, defaultDate: Date = Date(), datePickerMode: UIDatePickerMode = .dateAndTime, callback: @escaping ((_ date: Date) -> Void)) {
@@ -191,6 +196,9 @@ class DatePickerDialog: UIView {
         dialogContainer.addSubview(self.titleLabel)
         
         self.datePicker = UIDatePicker(frame: CGRect(x: 0, y: 30, width: 0, height: 0))
+        if let isMinumunDate = self.minimunDate {
+            self.datePicker.minimumDate = self.minimunDate
+        }
         self.datePicker.autoresizingMask = UIViewAutoresizing.flexibleRightMargin
         self.datePicker.frame.size.width = 300
         self.datePicker.datePickerMode = self.datePickerMode

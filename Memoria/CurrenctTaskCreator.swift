@@ -34,7 +34,6 @@ class CurrenctTaskCreator {
     func setCurrenctTask(_ task : Task) {
         self.task = task
     }
-
     
     //MARK: Setters
 

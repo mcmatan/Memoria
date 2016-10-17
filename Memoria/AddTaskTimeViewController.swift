@@ -2,6 +2,7 @@
 import Foundation
 import UIKit
 import Swinject
+import SwiftDate
 
 class AddTaskTimeViewController : ViewController {
     var cellIdentifier = "cell"
@@ -77,7 +78,12 @@ class AddTaskTimeViewController : ViewController {
     
     func addTimeButtonPress() {
         let txt = Content.getContent(ContentType.labelTxt, name: "AddTaskTimeDatePickerDialog")
-        DatePickerDialog().show(txt, datePickerMode: UIDatePickerMode.dateAndTime) { (date) -> Void in
+        let datePicker = DatePickerDialog()
+        let minimunDate = Date() + 2.minutes
+        datePicker.setMinimunDate(date: minimunDate)
+        
+        //datePicker.setMinimunDate(date: (Date().minute += 2))
+        datePicker.show(txt, datePickerMode: UIDatePickerMode.dateAndTime) { (date) -> Void in
             print(date)
             self.chosenTime = date
             self.setTimeToDisplay(date)
