@@ -121,6 +121,7 @@ class Button : UIButton {
     
     //MARK : color flicker
     func startFlickeringRedColor() {
+        self.stopFlickerRedColor()
         self.flickerTimer = Timer.scheduledTimer(timeInterval: 0.3, target: self, selector: #selector(Button.tickRedColor), userInfo: nil, repeats: true)
     }
     
@@ -129,6 +130,7 @@ class Button : UIButton {
             self.flickerTimer!.invalidate()
             self.flickerTimer = nil
         }
+        self.defaultColor()
     }
     
     func tickRedColor() {

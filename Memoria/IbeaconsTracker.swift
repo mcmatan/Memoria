@@ -108,6 +108,20 @@ class IbeaconsTracker : NSObject  , ESTBeaconManagerDelegate {
             self.currentClosesBeacon = beacon
         }
         
+        for beacon in beacons {
+          self.printBeaconInfo(beacon: beacon, region: region)
+        }
+    }
+    
+    func printBeaconInfo(beacon: CLBeacon, region: CLBeaconRegion) {
+        let beaconIdString = "Did monitore beacon with Identifer = \(beacon.major) \(beacon.minor)"
+        let CLProximity = "CLProximity = \(IbeaconsTrackerHelper.proximityToString(proximetly: beacon.proximity))"
+        let accurecy = "accurecy = \(beacon.accuracy)"
+        let rssi = "rssi = \(beacon.rssi)"
+        print(beaconIdString)
+        print(CLProximity)
+        print(accurecy)
+        print(rssi)
     }
     
     func beaconManager(_ manager: Any, didEnter region: CLBeaconRegion) {

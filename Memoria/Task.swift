@@ -25,7 +25,7 @@ class Task : NSObject {
     //Convinece
      init(taskName : String,
         taskTime : Date,
-        taskVoiceURL : URL,
+        taskVoiceURL : URL?,
         taskBeaconIdentifier : IBeaconIdentifier,
         taskTimePriorityHi : Bool) {
         self.taskName = taskName

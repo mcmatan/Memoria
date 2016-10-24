@@ -23,9 +23,15 @@ class AddTaskVoiceViewController : ViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.recorder.setupRecorder()
         if let isVoiceRecorder = currenctTaskCreator.getTaskVoiceURL() {
             self.recorder.setURLToPlayFrom(isVoiceRecorder)
         }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.btnRecord.stopFlickerRedColor()
     }
     
 
@@ -95,7 +101,8 @@ class AddTaskVoiceViewController : ViewController {
     }
 
     func playButtonPress() {
-        self.btnRecord.stopFlickerRedColor()        
+        self.btnRecord.stopFlickerRedColor()
+        self.recorder.stop()
         self.recorder.play()
     }
     

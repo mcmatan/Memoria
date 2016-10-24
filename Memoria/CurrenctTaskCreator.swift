@@ -12,7 +12,7 @@ import SwiftDate
 class CurrenctTaskCreator {
     var task = Task(taskName: "",
         taskTime: Date(),
-        taskVoiceURL: URL(string: "www.google.com")!,
+        taskVoiceURL: nil,
         taskBeaconIdentifier: IBeaconIdentifier(uuid: "", major: "", minor: ""),
         taskTimePriorityHi : false
     )
@@ -21,7 +21,7 @@ class CurrenctTaskCreator {
     func startNewTask() {
         self.task = Task(taskName: "",
             taskTime: Date(),
-            taskVoiceURL: URL(string: "www.google.com")!,
+            taskVoiceURL: nil,
             taskBeaconIdentifier: IBeaconIdentifier(uuid: "", major: "", minor: ""),
             taskTimePriorityHi: false
         )
