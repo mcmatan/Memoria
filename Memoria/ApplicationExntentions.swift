@@ -13,4 +13,15 @@ extension UIApplication {
     static func isApplicationActive()->Bool {
         return UIApplication.shared.applicationState == UIApplicationState.active
     }
+    
+    static func showLocalNotification(text: String) {
+        let notification = UILocalNotification()
+        notification.alertBody =
+        text
+        UIApplication.shared.presentLocalNotificationNow(notification)
+    }
+    
+    static func beginBackgroundTask() {
+        UIApplication.shared.beginBackgroundTask(expirationHandler: {})
+    }
 }

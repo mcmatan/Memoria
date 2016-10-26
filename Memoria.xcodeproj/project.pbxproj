@@ -10,6 +10,8 @@
 		63E7386C4BCD17B9C29135D9 /* Pods_MemoriaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C63E54DC6EDD468C89232C63 /* Pods_MemoriaTests.framework */; };
 		9008FB651C4AC420003C1549 /* IBeaconIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9008FB641C4AC420003C1549 /* IBeaconIdentifier.swift */; };
 		9008FB681C53D356003C1549 /* CurrenctTaskCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9008FB671C53D356003C1549 /* CurrenctTaskCreator.swift */; };
+		900E72291DBEBDCD00C9AC93 /* CLBeaconExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900E72281DBEBDCD00C9AC93 /* CLBeaconExtentions.swift */; };
+		900E722B1DBF58D700C9AC93 /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900E722A1DBF58D700C9AC93 /* SoundPlayer.swift */; };
 		901127221C1AF8CA0088DD6B /* MemoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901127211C1AF8CA0088DD6B /* MemoriesViewController.swift */; };
 		9011272E1C1AFBE20088DD6B /* AssemblyViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901127291C1AFBE20088DD6B /* AssemblyViewControllers.swift */; };
 		9011272F1C1AFBE20088DD6B /* Bootstrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9011272A1C1AFBE20088DD6B /* Bootstrapper.swift */; };
@@ -114,6 +116,8 @@
 		9008FB641C4AC420003C1549 /* IBeaconIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBeaconIdentifier.swift; sourceTree = "<group>"; };
 		9008FB671C53D356003C1549 /* CurrenctTaskCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrenctTaskCreator.swift; sourceTree = "<group>"; };
 		9008FB731C6F3E3E003C1549 /* Memoria-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Memoria-Bridging-Header.h"; sourceTree = "<group>"; };
+		900E72281DBEBDCD00C9AC93 /* CLBeaconExtentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLBeaconExtentions.swift; sourceTree = "<group>"; };
+		900E722A1DBF58D700C9AC93 /* SoundPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
 		901127211C1AF8CA0088DD6B /* MemoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoriesViewController.swift; sourceTree = "<group>"; };
 		901127291C1AFBE20088DD6B /* AssemblyViewControllers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssemblyViewControllers.swift; sourceTree = "<group>"; };
 		9011272A1C1AFBE20088DD6B /* Bootstrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bootstrapper.swift; sourceTree = "<group>"; };
@@ -247,6 +251,14 @@
 				9008FB671C53D356003C1549 /* CurrenctTaskCreator.swift */,
 			);
 			name = CurrenctTaskCreator;
+			sourceTree = "<group>";
+		};
+		900E722C1DBF58DA00C9AC93 /* SoundPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				900E722A1DBF58D700C9AC93 /* SoundPlayer.swift */,
+			);
+			name = SoundPlayer;
 			sourceTree = "<group>";
 		};
 		9011271F1C1AF6730088DD6B /* Screens */ = {
@@ -455,6 +467,7 @@
 		9035FE2E1C1EDA4C00D98022 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				900E722C1DBF58DA00C9AC93 /* SoundPlayer */,
 				901349871DB4C8B9005FA445 /* IBeaconCloud */,
 				905D0BE11DACF45A00845973 /* NotificationExecuter */,
 				9019EBF11C99F5E6008962A5 /* NotificationScheduler */,
@@ -566,6 +579,7 @@
 				90DC620D1C6F6B45000C4457 /* NSDateExntentions.swift */,
 				90B0C53E1DAAE3870019D59B /* ApplicationExntentions.swift */,
 				907224C71DBCFFB4001A3A7C /* StringExtentions.swift */,
+				900E72281DBEBDCD00C9AC93 /* CLBeaconExtentions.swift */,
 			);
 			name = Categoris;
 			sourceTree = "<group>";
@@ -1043,10 +1057,12 @@
 				9011272F1C1AFBE20088DD6B /* Bootstrapper.swift in Sources */,
 				905D0BE31DACF47300845973 /* NotificationExecuter.swift in Sources */,
 				907224C81DBCFFB4001A3A7C /* StringExtentions.swift in Sources */,
+				900E722B1DBF58D700C9AC93 /* SoundPlayer.swift in Sources */,
 				901127221C1AF8CA0088DD6B /* MemoriesViewController.swift in Sources */,
 				9013498A1DB4D554005FA445 /* BeaconShape.swift in Sources */,
 				9019EBED1C90D573008962A5 /* TaskWarningPopUp.swift in Sources */,
 				9035FE081C1B095A00D98022 /* TabBarController.swift in Sources */,
+				900E72291DBEBDCD00C9AC93 /* CLBeaconExtentions.swift in Sources */,
 				9019EBF31C99F5FE008962A5 /* NotificationScheduler.swift in Sources */,
 				9019EBEB1C90CA16008962A5 /* TaskVerificationPopUp.swift in Sources */,
 				9008FB651C4AC420003C1549 /* IBeaconIdentifier.swift in Sources */,

@@ -93,12 +93,6 @@ class AddTaskTimePriorityController: ViewController {
         
         let _ = self.navigationController?.popToRootViewController(animated: true)
         
-//        if let _ = self.addTaskConfirmationViewController {} else {
-//            self.addTaskConfirmationViewController = self.container.resolve(AddTaskConfirmationViewController.self)
-//        }
-//        self.navigationController?.pushViewController(self.addTaskConfirmationViewController!, animated: true)
-
-        
     }
     
 

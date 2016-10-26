@@ -29,7 +29,8 @@ open class AssemblyModel {
         container.register(TasksServices.self) { c in
             return TasksServices(tasksDB: container.resolve(TasksDB.self)!,
                 scheduler: container.resolve(NotificationScheduler.self)!,
-                taskNotificationsTracker: container.resolve(TaskNotificationsTracker.self)!
+                taskNotificationsTracker: container.resolve(TaskNotificationsTracker.self)!,
+                beaconTracker: container.resolve(IbeaconsTracker.self)!
             )
         }.inObjectScope(ObjectScope.container)
 

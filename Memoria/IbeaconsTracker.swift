@@ -1,15 +1,5 @@
 import Foundation
 import UIKit
-fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
-    switch (lhs, rhs) {
-    case let (l?, r?):
-        return l < r
-    case (nil, _?):
-        return true
-    default:
-        return false
-    }
-}
 
 
 protocol IbeaconsTrackerDelegate {
@@ -18,19 +8,18 @@ protocol IbeaconsTrackerDelegate {
 
 class IbeaconsTracker : NSObject  , ESTBeaconManagerDelegate {
     var delegate : IbeaconsTrackerDelegate?
-    let minimunDistanceToBeacon = 1.3 //In miters
     let searchForBeaconDelayTime = 2.0
+    let setNearBeaconInterval = 4.0
     let beaconManager = ESTBeaconManager()
-    var currentClosesBeacon : CLBeacon?
-    var beaconsInErea : [CLBeacon]?
+    var beaconsNearMeByDate = Dictionary<Date, CLBeacon>()
+    var closestBeacon: CLBeacon?
     
     override init() {
         super.init()
         
         self.beaconManager.delegate = self
         self.beaconManager.requestAlwaysAuthorization() // Location for the app also when in background
-        
-        
+
         let uuid = UUID(uuidString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D")
         self.beaconManager.startRangingBeacons(in: CLBeaconRegion(proximityUUID: uuid!, identifier: "6e00185bd93bb636c15d2b54e7e4ad09"))
         
@@ -45,43 +34,43 @@ class IbeaconsTracker : NSObject  , ESTBeaconManagerDelegate {
         }
         
     }
-    
+
     internal func StopMonitoring() {
         self.beaconManager.stopMonitoringForAllRegions()
     }
     
     
     internal func isThereABeaconInArea(_ handler: (( _ result : Bool, _ beacon : CLBeacon?) -> Void)!) {
-        self.currentClosesBeacon = nil
         let delayTime = DispatchTime.now() + Double(Int64(self.searchForBeaconDelayTime * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
         DispatchQueue.main.asyncAfter(deadline: delayTime) {
-            if let _ = self.currentClosesBeacon {
-                handler(true, self.currentClosesBeacon)
-            } else {
+            if let isLastClosestBeaon = self.closestBeacon {
+                handler(true, isLastClosestBeaon)
+            }else {
                 handler(false, nil)
             }
         }
     }
     
     internal func isBeaconInErea(_ iBeaconIdentifier : IBeaconIdentifier , handler: (( _ result : Bool) -> Void)!) {
-        self.beaconsInErea = []
         let delayTime = DispatchTime.now() + Double(Int64(self.searchForBeaconDelayTime * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
         DispatchQueue.main.asyncAfter(deadline: delayTime) {
-            
-            var isExists = false
-            if let isBeaconsInErea = self.beaconsInErea {
-                for beacon in isBeaconsInErea {
-                    let currenctBeaconIdentifer = IBeaconIdentifier.creatFromCLBeacon(beacon)
-                    if currenctBeaconIdentifer.majorAppendedByMinorString() == iBeaconIdentifier.majorAppendedByMinorString() {
-                        isExists = true
-                    }
-                }
-                handler((isExists))
-            } else {
-                handler((false))
+            if let _ = self.closestBeacon {
+                handler(true)
+            }else {
+                handler(false)
             }
         }
         
+    }
+    
+    internal func registerForBeacon(uuid: String, major: String, minor: String) {
+        let region: CLBeaconRegion = CLBeaconRegion(proximityUUID:UUID(uuidString: uuid)! , major: CLBeaconMajorValue(major)!, minor: CLBeaconMinorValue(minor)!, identifier: "8b06778d9ccf96577eab493295772b18")
+        self.beaconManager.startMonitoring(for: region)
+    }
+    
+    internal func unRegisterForBeacon(uuid: String, major: String, minor: String) {
+        let region: CLBeaconRegion = CLBeaconRegion(proximityUUID:UUID(uuidString: uuid)! , major: CLBeaconMajorValue(major)!, minor: CLBeaconMinorValue(minor)!, identifier: "Some identifer")
+        self.beaconManager.stopMonitoring(for: region)
     }
     
     //MARK: Private
@@ -92,102 +81,107 @@ class IbeaconsTracker : NSObject  , ESTBeaconManagerDelegate {
     }
     
     func beaconManager(_ manager: Any, didRangeBeacons beacons: [CLBeacon], in region: CLBeaconRegion) {
-        self.beaconsInErea?.removeAll()
         
-        let onlyCloseBeacons = self.getOnlyCloseBeacons(beacons)
-        self.beaconsInErea = onlyCloseBeacons
-        self.beaconIsNear(onlyCloseBeacons)
-        
-        print("Ranged Close count: \(onlyCloseBeacons.count)")
         print("Ranged beacons count: \(beacons.count)")
         if ((beacons.count > 0) == false) {
             return
         }
-        let beacon = self.getClosestBeacon(beacons)
-        if beacon?.accuracy < self.minimunDistanceToBeacon {
-            self.currentClosesBeacon = beacon
+        
+        let closestBeacons = self.getBeaconsNearMe(beacons)
+        if ((closestBeacons.count > 0) == false) {
+            return
         }
         
-        for beacon in beacons {
-          self.printBeaconInfo(beacon: beacon, region: region)
+        self.removeOldBeaconsFromBeaconsByDate()
+        self.addNewBeaconsToBeaconsByDate(beacons: closestBeacons)
+        self.checkForMostRandomBeaconAndUpdateNear(beacons: Array(self.beaconsNearMeByDate.values))
+        IbeaconsTrackerHelper.printBeaconsInfo(beacons: beacons, region: region)
+    }
+    
+    func addNewBeaconsToBeaconsByDate(beacons: [CLBeacon]) {
+        for closeBeacon in beacons {
+            self.beaconsNearMeByDate[Date()] = closeBeacon
         }
     }
     
-    func printBeaconInfo(beacon: CLBeacon, region: CLBeaconRegion) {
-        let beaconIdString = "Did monitore beacon with Identifer = \(beacon.major) \(beacon.minor)"
-        let CLProximity = "CLProximity = \(IbeaconsTrackerHelper.proximityToString(proximetly: beacon.proximity))"
-        let accurecy = "accurecy = \(beacon.accuracy)"
-        let rssi = "rssi = \(beacon.rssi)"
-        print(beaconIdString)
-        print(CLProximity)
-        print(accurecy)
-        print(rssi)
+    func removeOldBeaconsFromBeaconsByDate() {
+        print("------------------------------------------")
+        print("------------------------------------------")
+        print("------------------------------------------")
+        print("Before valus = \(self.beaconsNearMeByDate)")
+        let validTimeInSecounds = -3.0
+        
+        var datesToRemove = [Date]()
+        //Remove old dates
+        for date in self.beaconsNearMeByDate.keys {
+            if date.timeIntervalSinceNow < validTimeInSecounds {
+                datesToRemove.append(date)
+                print("Removing date = \(date) and current date = \(Date()) time interva lince now = \(date.timeIntervalSinceNow) valid time in secounds = \(validTimeInSecounds)")
+            }
+        }
+        
+        for dateToRemove in datesToRemove {
+            self.beaconsNearMeByDate.removeValue(forKey: dateToRemove)
+        }
+        
+        print("After valus = \(self.beaconsNearMeByDate)")
+        print("------------------------------------------")
+        print("------------------------------------------")
+        print("------------------------------------------")
+    }
+    
+
+    
+    func checkForMostRandomBeaconAndUpdateNear(beacons: [CLBeacon]) {
+        let repeatedTimeForCountAsClose = 2
+        let closestBeacons = beacons.filter { (beacon) -> Bool in
+            var repeatedBeaconCount = 0
+            for beaconNeaerMe in beacons {
+                if beaconNeaerMe.isEqualToBeacon(beacon: beacon) == true {
+                        repeatedBeaconCount += 1
+                }
+            }
+            return repeatedBeaconCount >= repeatedTimeForCountAsClose
+        }
+        
+        print("-----------------------------")
+        if (closestBeacons.count > 0) == true {
+            self.beaconIsNear(beacon: closestBeacons.first! )
+            self.closestBeacon = closestBeacons.first
+        } else {
+            self.closestBeacon = nil
+        }
+        print("-----------------------------")
     }
     
     func beaconManager(_ manager: Any, didEnter region: CLBeaconRegion) {
         print("Enter region \(region.proximityUUID)");
+        
+        UIApplication.showLocalNotification(text: "Enter region")
+        UIApplication.beginBackgroundTask()
     }
     
     func beaconManager(_ manager: Any, didExitRegion region: CLBeaconRegion) {
         print("Exit region \(region.proximityUUID)");
+        
+        UIApplication.showLocalNotification(text: "Exit region")
     }
     
-    func beaconIsNear(_ beacons : [CLBeacon]) {
+    func beaconIsNear(beacon : CLBeacon) {
         if let isDelegate = self.delegate {
-            for beacon in beacons {
-                isDelegate.beaconInErea(beacon)
-            }
+            isDelegate.beaconInErea(beacon)
         }
     }
-    
-    fileprivate func getClosestBeacon(_ beaconsList : [CLBeacon]?)->CLBeacon? {
-        if let isBeaconsList = beaconsList {
-            if isBeaconsList.count > 0 {
-                var closesBeacon = isBeaconsList.first
-                for beacon in isBeaconsList {
-                    if let isClosestProximity = closesBeacon?.accuracy {
-                        if beacon.accuracy < isClosestProximity {
-                            closesBeacon = beacon
-                        }
-                    }
-                }
-                print("Cosest beacon major = \(closesBeacon?.major))")
-                return closesBeacon
-            }
-        }
-        return nil
-    }
-    
-    fileprivate func getOnlyCloseBeacons(_ beacons : [CLBeacon])->[CLBeacon] {
+  
+    fileprivate func getBeaconsNearMe(_ beacons : [CLBeacon])->[CLBeacon] {
         var closeBeacons = [CLBeacon]()
         for beacon in beacons {
-            if beacon.accuracy < self.minimunDistanceToBeacon {
+            if (beacon.proximity == CLProximity.immediate || beacon.proximity == CLProximity.near) {
                 closeBeacons.append(beacon)
             }
         }
         return closeBeacons
     }
     
-    
-    fileprivate func printBeaconInfo(_ beacon : CLBeacon) {
-        print("IBeacon rssi = \(beacon.rssi) uuid  = \(beacon.proximityUUID) accurecy = \(beacon.accuracy)")
-        switch (beacon.proximity) {
-        case CLProximity.far:
-            print("Distance Far for major = \(beacon.major) minor = \(beacon.minor)")
-            break;
-        case CLProximity.immediate:
-            print("Distance Immediate for major = \(beacon.major) minor = \(beacon.minor)")
-            break;
-        case CLProximity.unknown:
-            print("Distance Unknown for major = \(beacon.major) minor = \(beacon.minor)")
-            break;
-        case CLProximity.near:
-            print("Distance Near for major = \(beacon.major) minor = \(beacon.minor)")
-            break;
-        }
-        print("")
-        print("")
-        print("")
-    }
-    
+
 }

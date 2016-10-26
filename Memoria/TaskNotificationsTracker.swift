@@ -41,6 +41,7 @@ fileprivate func >= <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
 
 class TaskNotificationsTracker : NSObject, IbeaconsTrackerDelegate, NotificationExecuterDelegate {
     fileprivate let taskDB : TasksDB
+    fileprivate let shouldWaitForWarningToWarning = false
     fileprivate let minTimeFromWarningToWarning = 1.5 // min
     fileprivate let timeFromTaskDoneToShowWarningWhenNear = 60 //Sec
     fileprivate let maxTimeStandingNearTaskBeforeAction = 10 //Sec
@@ -77,6 +78,7 @@ class TaskNotificationsTracker : NSObject, IbeaconsTrackerDelegate, Notification
                 task = self.addOrUpdateStandingNearFromDate(task!)
                 let isStandingLongEnouth = self.isNearTaskLongEnouth(task!)
                 if isStandingLongEnouth == true  {
+                    UIApplication.showLocalNotification(text: "STANDING NEAR ENOUTH TIME!")
                     if task!.isTaskDone == true {
                         print("Task allready done, and standing near")
                         self.taskWarning(task!)
@@ -98,6 +100,7 @@ class TaskNotificationsTracker : NSObject, IbeaconsTrackerDelegate, Notification
         task.isTaskDone = true
         self.scheduler.cancelReminderForTask(task)
         self.taskDB.saveTask(task)
+        self.ibeaconsTracker.unRegisterForBeacon(uuid: (task.taskBeaconIdentifier?.uuid)!, major: (task.taskBeaconIdentifier?.major)!, minor: (task.taskBeaconIdentifier?.minor)!)
         NotificationCenter.default.post(name: Notification.Name(rawValue: NotificationsNames.kTaskDone), object: task, userInfo: nil)
         NotificationCenter.default.post(name: Notification.Name(rawValue: NotificationsNames.kPresentTaskMarkedAsDone), object: task, userInfo: nil)
     }
@@ -173,7 +176,8 @@ class TaskNotificationsTracker : NSObject, IbeaconsTrackerDelegate, Notification
             if task.taskTimePriorityHi == true {
                 if let isTaskLastWarningShow = task.timeLastWarningWasShow {
                     let now = Date()
-                    if Float(isTaskLastWarningShow.minutesFrom(now)) < Float(minTimeFromWarningToWarning) {
+                    if ((Float(isTaskLastWarningShow.minutesFrom(now)) < Float(minTimeFromWarningToWarning))
+                    && (self.shouldWaitForWarningToWarning == true )){
                         return
                     }
                 }

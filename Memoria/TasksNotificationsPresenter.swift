@@ -54,6 +54,7 @@ class TasksNotificationsPresenter : NSObject {
         let notificationPopUp = self.container.resolve(TaskVerificationPopUp.self, argument: task!)
         let mainViewController = UIApplication.shared.keyWindow?.rootViewController
         mainViewController?.present(notificationPopUp!, animated: true, completion: nil)
+        UIApplication.showLocalNotification(text: "Are you currently doing the task?")
     }
 
     internal func presentTaskWarning(_ notification : Notification) {
@@ -61,6 +62,7 @@ class TasksNotificationsPresenter : NSObject {
         let notificationPopUp = self.container.resolve(TaskWarningPopUp.self, argument: task!)
         let mainViewController = UIApplication.shared.keyWindow?.rootViewController
         mainViewController?.present(notificationPopUp!, animated: true, completion: nil)
+        UIApplication.showLocalNotification(text: "You have allready dont this task, please do not do it twice")
     }
 
 }

@@ -176,7 +176,7 @@ class AddTaskConfirmationViewController : ViewController {
     func btnEditTaskNamePress() {
         for viewController in (self.navigationController?.viewControllers)! {
             if viewController.isKind(of: AddTaskNameViewController.self) {
-                self.navigationController?.popToViewController(viewController, animated: true)
+                let _ = self.navigationController?.popToViewController(viewController, animated: true)
                 return
             }
         }
@@ -187,7 +187,7 @@ class AddTaskConfirmationViewController : ViewController {
     func btnEditTaskSoundPress() {
         for viewController in (self.navigationController?.viewControllers)! {
             if viewController.isKind(of: AddTaskVoiceViewController.self) {
-                self.navigationController?.popToViewController(viewController, animated: true)
+                let _ = self.navigationController?.popToViewController(viewController, animated: true)
                 return
             }
         }
@@ -198,7 +198,7 @@ class AddTaskConfirmationViewController : ViewController {
     func btnEditTaskTimePress() {
         for viewController in (self.navigationController?.viewControllers)! {
             if viewController.isKind(of: AddTaskTimeViewController.self) {
-                self.navigationController?.popToViewController(viewController, animated: true)
+                let _ = self.navigationController?.popToViewController(viewController, animated: true)
                 return
             }
         }
@@ -209,7 +209,7 @@ class AddTaskConfirmationViewController : ViewController {
     func btnEditTaskTimePriorityPress() {
         for viewController in (self.navigationController?.viewControllers)! {
             if viewController.isKind(of: AddTaskTimePriorityController.self) {
-                self.navigationController?.popToViewController(viewController, animated: true)
+                let _ = self.navigationController?.popToViewController(viewController, animated: true)
                 return
             }
         }

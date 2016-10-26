@@ -233,11 +233,10 @@ class TaskManagerViewController : ViewController, UITableViewDelegate, UITableVi
     
     func showBeaconHasAlreadyTaskAssignedMessage(_ closestBeacon : CLBeacon) {
         let closeiBeaconIdentifier = IBeaconIdentifier.creatFromCLBeacon(closestBeacon)
-        let title = String.localizedStringWithFormat(Content.getContent(ContentType.labelTxt, name: "TaskManagerVCTheBeaconHasTaskAllreadyMessage"), closeiBeaconIdentifier.major)
-        let message = Content.getContent(ContentType.labelTxt, name: "TaskManagerVCTheBeaconHasTaskAllreadyMessage")
+        let title = Content.getContent(ContentType.labelTxt, name: "TaskManagerVCTheBeaconHasTaskAllreadyMessage")
         let btnYesTxt = Content.getContent(ContentType.buttonTxt, name: "Yes")
         let btnNoTxt = Content.getContent(ContentType.buttonTxt, name: "No")
-        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        let alert = UIAlertController(title: title, message: "", preferredStyle: UIAlertControllerStyle.alert)
         let btnYes = UIAlertAction(title: btnYesTxt, style: UIAlertActionStyle.default) { (action : UIAlertAction) in
             let task = self.tasksServices.getTaskForIBeaconIdentifier(closeiBeaconIdentifier)
             self.currenctTaskCreator.setCurrenctTask(task)
