@@ -87,7 +87,10 @@ class IbeaconsTracker : NSObject  , ESTBeaconManagerDelegate {
             return
         }
         
+        IbeaconsTrackerHelper.printBeaconsInfo(beacons: beacons, region: region)
+        
         let closestBeacons = self.getBeaconsNearMe(beacons)
+        print("Ranged Close beacons beacons count: \(closestBeacons.count)")
         if ((closestBeacons.count > 0) == false) {
             return
         }
@@ -95,7 +98,7 @@ class IbeaconsTracker : NSObject  , ESTBeaconManagerDelegate {
         self.removeOldBeaconsFromBeaconsByDate()
         self.addNewBeaconsToBeaconsByDate(beacons: closestBeacons)
         self.checkForMostRandomBeaconAndUpdateNear(beacons: Array(self.beaconsNearMeByDate.values))
-        IbeaconsTrackerHelper.printBeaconsInfo(beacons: beacons, region: region)
+        
     }
     
     func addNewBeaconsToBeaconsByDate(beacons: [CLBeacon]) {

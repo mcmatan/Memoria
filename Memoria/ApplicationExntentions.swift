@@ -10,18 +10,24 @@ import Foundation
 import UIKit
 
 extension UIApplication {
+    static var bacgkroundTaskIdentifer: UIBackgroundTaskIdentifier?
     static func isApplicationActive()->Bool {
         return UIApplication.shared.applicationState == UIApplicationState.active
     }
     
     static func showLocalNotification(text: String) {
         let notification = UILocalNotification()
-        notification.alertBody =
-        text
+        notification.alertBody = text
+            notification.soundName = UILocalNotificationDefaultSoundName;
         UIApplication.shared.presentLocalNotificationNow(notification)
     }
     
     static func beginBackgroundTask() {
-        UIApplication.shared.beginBackgroundTask(expirationHandler: {})
+//        if let isBackgroundTaskIdentifer = UIApplication.bacgkroundTaskIdentifer {
+//            UIApplication.shared.endBackgroundTask(isBackgroundTaskIdentifer)
+//        }
+//        self.bacgkroundTaskIdentifer = UIApplication.shared.beginBackgroundTask(expirationHandler: {
+//            UIApplication.beginBackgroundTask()
+//        })
     }
 }

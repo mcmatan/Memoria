@@ -28,19 +28,19 @@ class NotificationScheduler : NSObject, INotificationScheduler {
         let fireDate = date
         let majorAppendedByMinorString = task.taskBeaconIdentifier!.majorAppendedByMinorString()
         
-        let restartAction = UIMutableUserNotificationAction()
-        restartAction.identifier = "xx"
-        restartAction.isDestructive = false
-        restartAction.title = "Restart"
-        restartAction.activationMode = .background
-        restartAction.isAuthenticationRequired = false
+//        let restartAction = UIMutableUserNotificationAction()
+//        restartAction.identifier = NotificationsNames.ConfirmTaskNotification
+//        restartAction.isDestructive = false
+//        restartAction.title = "Ok Thanks"
+//        restartAction.activationMode = .background
+//        restartAction.isAuthenticationRequired = false
         
         let categoryIdentifier = "category.identifier"
         let category = UIMutableUserNotificationCategory()
 
         category.identifier = categoryIdentifier
-        category.setActions([restartAction], for: .minimal)
-        category.setActions([restartAction], for: .default)
+//        category.setActions([restartAction], for: .minimal)
+//        category.setActions([restartAction], for: .default)
         
         let categories = Set(arrayLiteral: category)
         let settings = UIUserNotificationSettings(types: [UIUserNotificationType.alert, UIUserNotificationType.sound], categories: categories)

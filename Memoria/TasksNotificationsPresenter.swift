@@ -40,6 +40,7 @@ class TasksNotificationsPresenter : NSObject {
             self.iBeaconServices.isBeaconInErea(task!.taskBeaconIdentifier!, handler: { (result) -> Void in})
         })
         reminderPopUp.presentPopUp(task!.taskName!, message: text, cancelButton: cancelButton, buttons: nil, completion: { () -> Void in})
+        UIApplication.showLocalNotification(text: "Task was marked as done")
     }
     
     internal func presentTaskNotification(_ notification : Notification) {
@@ -47,6 +48,7 @@ class TasksNotificationsPresenter : NSObject {
         let notificationPopUp = self.container.resolve(TaskNotificationPopUp.self, argument: task!)
         let mainViewController = UIApplication.shared.keyWindow?.rootViewController
         mainViewController?.present(notificationPopUp!, animated: true, completion: nil)
+        UIApplication.showLocalNotification(text: "Task Time!")
     }
 
     internal func presentTaskVerification(_ notification : Notification) {

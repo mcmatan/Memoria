@@ -15,7 +15,6 @@ class Task : NSObject {
     var taskVoiceURL: URL?
     var taskBeaconIdentifier : IBeaconIdentifier?
     var taskTimePriorityHi : Bool?
-    var taskisOnHold = false // This is when user didnt do the task on time, and a interval is started to the future
     var standingNearFromDate : Date?
     var isTaskDone = false
     var timeLastWarningWasShow : Date?
@@ -41,7 +40,6 @@ class Task : NSObject {
         taskVoiceURL : URL,
         taskBeaconIdentifier : IBeaconIdentifier,
         taskTimePriorityHi : Bool,
-        taskisOnHold : Bool,
         standingNearFromDate : Date?,
         timeLastWarningWasShow : Date?,
         isTaskDone :Bool
@@ -62,12 +60,10 @@ class Task : NSObject {
         let taskVoiceURL = aDecoder.decodeObject(forKey: "taskVoiceURL") as! URL
         let taskBeaconIdentifier = aDecoder.decodeObject(forKey: "taskBeaconIdentifier") as! IBeaconIdentifier
         let taskTimePriorityHi = aDecoder.decodeBool(forKey: "taskTimePriorityHi")
-        let taskisOnHold = aDecoder.decodeBool(forKey: "taskisOnHold")
         let standingNearFromDate = aDecoder.decodeObject(forKey: "standingNearFromDate") as! Date?
         let timeLastWarningWasShow = aDecoder.decodeObject(forKey: "timeLastWarningWasShow") as! Date?
         let isTaskDone = aDecoder.decodeBool(forKey: "isTaskDone")
         self.init(taskName : taskName, taskTime : taskTime, taskVoiceURL : taskVoiceURL, taskBeaconIdentifier : taskBeaconIdentifier , taskTimePriorityHi : taskTimePriorityHi,
-            taskisOnHold : taskisOnHold,
             standingNearFromDate : standingNearFromDate,timeLastWarningWasShow : timeLastWarningWasShow, isTaskDone : isTaskDone)
     }
     
@@ -78,7 +74,6 @@ class Task : NSObject {
         aCoder.encode(taskBeaconIdentifier, forKey: "taskBeaconIdentifier")
         aCoder.encode(taskTimePriorityHi!, forKey: "taskTimePriorityHi")
         aCoder.encode(isTaskDone, forKey: "isTaskDone")
-        aCoder.encode(taskisOnHold, forKey: "taskisOnHold")
         aCoder.encode(standingNearFromDate, forKey: "standingNearFromDate")
         aCoder.encode(timeLastWarningWasShow, forKey: "timeLastWarningWasShow")
     }

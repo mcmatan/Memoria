@@ -20,4 +20,6 @@ class NotificationsNames {
     static let kPresentTaskVerification = "presentTaskVerification"
     static let kPresentTaskWarning = "presentTaskWarning"
     static let kPresentTaskMarkedAsDone = "presentTaskMarkedAsDone"
+    
+    static let ConfirmTaskNotification = "ConfirmTaskNotification" 
 }

@@ -44,7 +44,7 @@ class TaskNotificationsTracker : NSObject, IbeaconsTrackerDelegate, Notification
     fileprivate let shouldWaitForWarningToWarning = false
     fileprivate let minTimeFromWarningToWarning = 1.5 // min
     fileprivate let timeFromTaskDoneToShowWarningWhenNear = 60 //Sec
-    fileprivate let maxTimeStandingNearTaskBeforeAction = 10 //Sec
+    fileprivate let maxTimeStandingNearTaskBeforeAction = 2 //Sec
     fileprivate let timeForRecognisionThatPerformingTaskInSec = 60 * 5 // Sec
     fileprivate let onHoldIntervalIntilNextNotification = 60 * 5 // Sec
     fileprivate let minTimeFromVerificationToVerification = 30 // Sec
@@ -78,15 +78,11 @@ class TaskNotificationsTracker : NSObject, IbeaconsTrackerDelegate, Notification
                 task = self.addOrUpdateStandingNearFromDate(task!)
                 let isStandingLongEnouth = self.isNearTaskLongEnouth(task!)
                 if isStandingLongEnouth == true  {
-                    UIApplication.showLocalNotification(text: "STANDING NEAR ENOUTH TIME!")
                     if task!.isTaskDone == true {
                         print("Task allready done, and standing near")
                         self.taskWarning(task!)
                     } else if self.shouldPerformTaskNow(task!) == true {
                         print("Marking task as done, since standing near at task time")
-                        self.verifyUserDoingTask(task!)
-                    } else if task!.taskisOnHold == true {
-                        print("Marking task as done, since standing near at task when on hold")
                         self.verifyUserDoingTask(task!)
                     } else {
                         print("Task not done and standing near")
