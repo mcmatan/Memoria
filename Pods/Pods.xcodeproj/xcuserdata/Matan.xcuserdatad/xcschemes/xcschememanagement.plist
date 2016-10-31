@@ -4,6 +4,16 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>AEConsole.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>AELog.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Memoria.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,7 +47,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1CB486E8488A874DA1E36037150528F0</key>
+		<key>0C4AC792A9B15A03BC1A03ADA2507CF7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -47,27 +57,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2C9A6E209BD5CC6C15AD6D5D208A9B11</key>
+		<key>5E6F0876401C257514F6AC5751A7BA49</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>309BA7FD9DA8A9153DD03CFC2FD00AE3</key>
+		<key>7167030DB592C2725B979CBB237F1ADB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>67AD961B7BBD559251C18FEE72C7794C</key>
+		<key>CBFA0553FDB68E5E84B3CF80F0112AA9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7665294CA1FA5544A110536767870A8A</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>DBB7CDE592353D4DBD3D4B4E5386D4C8</key>
+		<key>D8F77563BF425B353693D6B85C45C3FE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -77,7 +82,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F8C6ECD08D4F476747C33078F67B50C9</key>
+		<key>FAA9CF07F99E674FC8A913E85166CB43</key>
 		<dict>
 			<key>primary</key>
 			<true/>

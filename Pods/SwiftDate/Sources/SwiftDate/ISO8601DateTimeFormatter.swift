@@ -77,6 +77,10 @@ public class ISO8601DateTimeFormatter {
 		/// Equivalent to specifying withFullDate, withFullTime, withDashSeparatorInDate,
 		/// withColonSeparatorInTime, and withColonSeparatorInTimeZone.
 		public static let withInternetDateTime = ISO8601DateTimeFormatter.Options(rawValue: 1 << 10)
+		
+		// The format used for internet date times; it's similar to .withInternetDateTime
+		// but include milliseconds ('yyyy-MM-dd'T'HH:mm:ss.SSSZZZZZ').
+		public static let withInternetDateTimeExtended = ISO8601DateTimeFormatter.Options(rawValue: 1 << 11)
 	}
 	
 	/// Options for generating and parsing ISO 8601 date representations.
@@ -91,9 +95,18 @@ public class ISO8601DateTimeFormatter {
 			return self.formatter.timeZone
 		}
 	}
+    
+    public var locale: Locale? {
+        get {
+            return self.formatter.locale
+        }
+        set {
+            self.formatter.locale = newValue
+        }
+    }
 	
 	/// formatter instance used for date
-	private var formatter: DateFormatter = DateFormatter()
+    private var formatter: DateFormatter = DateFormatter()
 	
 	public init() {
 		self.timeZone = TimeZone(secondsFromGMT: 0)!
@@ -134,6 +147,10 @@ public class ISO8601DateTimeFormatter {
 	
 	/// Evaluate formatting string
 	public var formatterString: String {
+		if formatOptions.contains(.withInternetDateTimeExtended) {
+			return "yyyy-MM-dd'T'HH:mm:ss.SSSZZZZZ"
+		}
+		
 		if formatOptions.contains(.withInternetDateTime) {
 			return "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
 		}

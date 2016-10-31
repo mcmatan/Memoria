@@ -53,10 +53,13 @@ class TaskManagerViewController : ViewController, UITableViewDelegate, UITableVi
         self.allTasks = self.tasksServices.getAllTasks()        
         self.tableView .reloadData()
         
-        let remaining = self.allTasks.count
-        if (remaining > 0) {
+        let remainingTasks = self.allTasks.filter { task in
+            return task.isTaskDone
+        }
+        let remainingCount = remainingTasks.count
+        if (remainingCount > 0) {
             let text = Content.getContent(ContentType.labelTxt, name: "TaskManagerRemaining")
-            let format = String.localizedStringWithFormat(text, "\(remaining)")
+            let format = String.localizedStringWithFormat(text, "\(remainingCount)")
             self.lblCount.text = format
         }
     }
@@ -137,7 +140,7 @@ class TaskManagerViewController : ViewController, UITableViewDelegate, UITableVi
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let task = self.allTasks[(indexPath as NSIndexPath).row]
-        let textForCell = Content.getContent(ContentType.labelTxt, name: "TaskManagerVCTaskNameCell")  + task.taskName!
+        let textForCell = Content.getContent(ContentType.labelTxt, name: "TaskManagerVCTaskNameCell") + " " + task.taskName!
         let cellIdentifier = "Cell"
         
         var cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) 

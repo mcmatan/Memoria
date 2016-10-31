@@ -6,6 +6,8 @@ protocol IbeaconsTrackerDelegate {
     func beaconInErea(_ clBeacon : CLBeacon)
 }
 
+let rssiMinimunValue = -90
+
 class IbeaconsTracker : NSObject  , ESTBeaconManagerDelegate {
     var delegate : IbeaconsTrackerDelegate?
     let searchForBeaconDelayTime = 2.0
@@ -179,7 +181,10 @@ class IbeaconsTracker : NSObject  , ESTBeaconManagerDelegate {
     fileprivate func getBeaconsNearMe(_ beacons : [CLBeacon])->[CLBeacon] {
         var closeBeacons = [CLBeacon]()
         for beacon in beacons {
-            if (beacon.proximity == CLProximity.immediate || beacon.proximity == CLProximity.near) {
+//            if (beacon.proximity == CLProximity.immediate || beacon.proximity == CLProximity.near) {
+//                closeBeacons.append(beacon)
+//            }
+            if (beacon.rssi > rssiMinimunValue && beacon.rssi != 0) {
                 closeBeacons.append(beacon)
             }
         }

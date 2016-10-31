@@ -10,6 +10,10 @@ pod 'SnapKit', '~> 3.0.1'
 pod 'SwiftDate', '~> 4.0'
 pod 'KontaktSDK', '~> 1.1'
 pod 'EstimoteSDK', '~> 4.9'
+pod 'AEConsole', '~> 0.3'
+
+
+
 
 # pod 'KontaktSDK', '~> 1.0'
 

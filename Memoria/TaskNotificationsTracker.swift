@@ -155,7 +155,7 @@ class TaskNotificationsTracker : NSObject, IbeaconsTrackerDelegate, Notification
         if let isTaskTimeLastVerifyWasShow = task.timeLastVerifyWasShow {
             let secoundFromLastVerificaion = abs(Float(isTaskTimeLastVerifyWasShow.secondsFrom(now)))
             if secoundFromLastVerificaion < Float(minTimeFromVerificationToVerification) {
-                print("Should show verification, but too close to the last one, will wait \(secoundFromLastVerificaion) secounds")
+                print("Should show verification, but too close to the last one, will wait \(secoundFromLastVerificaion - secoundFromLastVerificaion) secounds")
                 return
             }
         }

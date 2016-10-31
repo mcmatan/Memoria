@@ -10,7 +10,7 @@
 	<key>enterTestName</key>
 	<string>הוסף של למשימה</string>
 	<key>taskName</key>
-	<string>שם המשימה:</string>
+	<string>הכנס את שם המשימה:</string>
 	<key>addTaskTimeButton</key>
 	<string>ערוך את זמן המשימה</string>
 	<key>addTimeDoneBtn</key>
@@ -28,17 +28,17 @@
 	<key>addTaskVoiceTitle</key>
 	<string>קול המשימה</string>
 	<key>AddTaskPrirityExpenation</key>
-	<string>הגדר את המשימה בעדיפות גבוהה כדיי לא לאפשר ביצוע שלא בזמן המוגדר</string>
+	<string>בחר בעדיפות גבוהה על מנת לא לאפשר ביצוע משימה שלא בזמן המוגדר</string>
 	<key>TaskManagerRemaining</key>
-	<string>נותר %@</string>
+	<string>משימות שטרם הושלמו: %@</string>
 	<key>TaskManagerVCCreateTask</key>
-	<string>+ צור משימה חדשה</string>
+	<string>+ משימה חדשה</string>
 	<key>TaskManagerVCLblTop</key>
 	<string>הזכרונות שלי</string>
 	<key>TaskManagerVCNoRemainingTasks</key>
 	<string>אין משימות</string>
 	<key>TaskManagerVCTaskNameCell</key>
-	<string>שם המסימה:</string>
+	<string>שם המשימה:</string>
 	<key>TaskManagerVCDetailsTxtCell</key>
 	<string>זמן משימה: %@  major: %@</string>
 	<key>TaskManagerVCNoTasksAssigened</key>
@@ -76,7 +76,7 @@
 	<key>TimeOfDayMorining</key>
 	<string>בוקר טוב</string>
 	<key>TimeOfDayAfterNoon</key>
-	<string>צהוריים טובים</string>
+	<string>צהריים טובים</string>
 	<key>TimeOfDayEavning</key>
 	<string>ערב טוב</string>
 </dict>
