@@ -18,8 +18,6 @@
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
-	<key>CFBundleSignature</key>
-	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>UISupportedInterfaceOrientations</key>
@@ -31,7 +29,5 @@
 	<string>com.MACApps.com.Memoria</string>
 	<key>WKWatchKitApp</key>
 	<true/>
-	<key>NSBluetoothPeripheralUsageDescription</key>
-	<string>Memoria uses Bluetooth technology to make location future possible, by accepting this message you will let us use it, to help you.</string>
 </dict>
 </plist>

@@ -1,21 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="10032"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11077"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="MemoriaWatch" customModuleProvider="target">
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Watch" customModuleProvider="target">
                     <items>
-                        <group width="1" height="64.5" alignment="left" id="bLq-gk-eRq">
-                            <items>
-                                <button width="63" height="100" alignment="left" title="Button" id="izh-Jl-kE0"/>
-                                <button width="63" height="100" alignment="left" title="Button" id="BPP-vr-lTQ"/>
-                            </items>
-                        </group>
+                        <button width="1" alignment="left" title="Button" id="Wuj-vG-bVz">
+                            <color key="titleColor" red="0.98039215690000003" green="0.066666666669999999" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                        </button>
                     </items>
                 </controller>
             </objects>
@@ -26,6 +23,7 @@
             <objects>
                 <notificationController id="YCC-NB-fut">
                     <items>
+                        <imageView height="111" alignment="left" image="images.png" id="7Ey-8D-Nt3"/>
                         <label alignment="left" text="Alert Label" id="IdU-wH-bcW"/>
                     </items>
                     <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
@@ -37,10 +35,14 @@
             </objects>
             <point key="canvasLocation" x="220" y="643"/>
         </scene>
-        <!--Notification Controller-->
+        <!--Costum Notificiation Controller-->
         <scene sceneID="ZPc-GJ-vnh">
             <objects>
-                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="MemoriaWatch" customModuleProvider="target"/>
+                <controller id="4sK-HA-Art" customClass="CostumNotificiationController">
+                    <items>
+                        <imageView height="111" alignment="left" image="weather-icon-png-27.png" id="Wjx-Vn-edE"/>
+                    </items>
+                </controller>
             </objects>
             <point key="canvasLocation" x="468" y="643"/>
         </scene>

@@ -47,6 +47,12 @@ open class AssemblyModel {
             return NotificationScheduler()
             }.inObjectScope(ObjectScope.container)
         
+        
+        container.register(WatchCommunicationType.self) { c in
+            return WatchCommunication()
+            }.inObjectScope(ObjectScope.container)
+        let _ = container.resolve(WatchCommunicationType.self)
+        
         container.register(TaskNotificationsTracker.self) { c in
             return TaskNotificationsTracker(
                 taskDB: container.resolve(TasksDB.self)!,

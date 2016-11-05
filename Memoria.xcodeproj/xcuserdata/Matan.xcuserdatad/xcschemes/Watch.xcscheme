@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "90687A111CD684BD00789FEC"
-               BuildableName = "MemoriaWatch.app"
-               BlueprintName = "MemoriaWatch"
+               BlueprintIdentifier = "90222C381DCDD7F200A5A80D"
+               BuildableName = "Watch.app"
+               BlueprintName = "Watch"
                ReferencedContainer = "container:Memoria.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -34,20 +34,6 @@
                ReferencedContainer = "container:Memoria.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "90687A1D1CD684BD00789FEC"
-               BuildableName = "MemoriaWatch Extension.appex"
-               BlueprintName = "MemoriaWatch Extension"
-               ReferencedContainer = "container:Memoria.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -60,9 +46,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "90687A111CD684BD00789FEC"
-            BuildableName = "MemoriaWatch.app"
-            BlueprintName = "MemoriaWatch"
+            BlueprintIdentifier = "90222C381DCDD7F200A5A80D"
+            BuildableName = "Watch.app"
+            BlueprintName = "Watch"
             ReferencedContainer = "container:Memoria.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -85,18 +71,18 @@
          RemotePath = "/Memoria">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "90687A111CD684BD00789FEC"
-            BuildableName = "MemoriaWatch.app"
-            BlueprintName = "MemoriaWatch"
+            BlueprintIdentifier = "90222C381DCDD7F200A5A80D"
+            BuildableName = "Watch.app"
+            BlueprintName = "Watch"
             ReferencedContainer = "container:Memoria.xcodeproj">
          </BuildableReference>
       </RemoteRunnable>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "90687A111CD684BD00789FEC"
-            BuildableName = "MemoriaWatch.app"
-            BlueprintName = "MemoriaWatch"
+            BlueprintIdentifier = "90222C381DCDD7F200A5A80D"
+            BuildableName = "Watch.app"
+            BlueprintName = "Watch"
             ReferencedContainer = "container:Memoria.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -115,18 +101,18 @@
          RemotePath = "/Memoria">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "90687A111CD684BD00789FEC"
-            BuildableName = "MemoriaWatch.app"
-            BlueprintName = "MemoriaWatch"
+            BlueprintIdentifier = "90222C381DCDD7F200A5A80D"
+            BuildableName = "Watch.app"
+            BlueprintName = "Watch"
             ReferencedContainer = "container:Memoria.xcodeproj">
          </BuildableReference>
       </RemoteRunnable>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "90687A111CD684BD00789FEC"
-            BuildableName = "MemoriaWatch.app"
-            BlueprintName = "MemoriaWatch"
+            BlueprintIdentifier = "90222C381DCDD7F200A5A80D"
+            BuildableName = "Watch.app"
+            BlueprintName = "Watch"
             ReferencedContainer = "container:Memoria.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
