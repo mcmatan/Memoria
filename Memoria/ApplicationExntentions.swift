@@ -26,7 +26,7 @@ extension UIApplication {
 //        if let isBackgroundTaskIdentifer = UIApplication.bacgkroundTaskIdentifer {
 //            UIApplication.shared.endBackgroundTask(isBackgroundTaskIdentifer)
 //        }
-        self.bacgkroundTaskIdentifer = UIApplication.shared.beginBackgroundTask(expirationHandler: {
-        })
+//        self.bacgkroundTaskIdentifer = UIApplication.shared.beginBackgroundTask(expirationHandler: {
+//        })
     }
 }

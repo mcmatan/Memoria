@@ -46,6 +46,8 @@
 		905AF3C11C1F3BD60063713A /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905AF3C01C1F3BD60063713A /* NavigationController.swift */; };
 		905AF3C41C1F41260063713A /* AddTaskTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905AF3C31C1F41260063713A /* AddTaskTimeViewController.swift */; };
 		905D0BE31DACF47300845973 /* NotificationExecuter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905D0BE21DACF47300845973 /* NotificationExecuter.swift */; };
+		906648ED1DCB64B600896220 /* BackgroundTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906648EC1DCB64B600896220 /* BackgroundTask.swift */; };
+		906648EF1DCB699F00896220 /* 3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 906648EE1DCB699F00896220 /* 3.wav */; };
 		906C36851C8E1CA80058EC85 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906C36841C8E1CA80058EC85 /* Colors.swift */; };
 		907224C81DBCFFB4001A3A7C /* StringExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907224C71DBCFFB4001A3A7C /* StringExtentions.swift */; };
 		9075214F1CE904A800FDFF3D /* LabelsTextsHe.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9075214E1CE904A800FDFF3D /* LabelsTextsHe.plist */; };
@@ -155,6 +157,8 @@
 		905AF3C31C1F41260063713A /* AddTaskTimeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskTimeViewController.swift; sourceTree = "<group>"; };
 		905D0BE01DACEE6700845973 /* Memoria.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Memoria.entitlements; sourceTree = "<group>"; };
 		905D0BE21DACF47300845973 /* NotificationExecuter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationExecuter.swift; sourceTree = "<group>"; };
+		906648EC1DCB64B600896220 /* BackgroundTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundTask.swift; sourceTree = "<group>"; };
+		906648EE1DCB699F00896220 /* 3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 3.wav; sourceTree = "<group>"; };
 		90687A151CD684BD00789FEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		90687A171CD684BD00789FEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		90687A191CD684BD00789FEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -467,6 +471,7 @@
 		9035FE2E1C1EDA4C00D98022 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				906648EB1DCB649F00896220 /* InfitineBackgroundTask */,
 				900E722C1DBF58DA00C9AC93 /* SoundPlayer */,
 				901349871DB4C8B9005FA445 /* IBeaconCloud */,
 				905D0BE11DACF45A00845973 /* NotificationExecuter */,
@@ -529,6 +534,15 @@
 				905D0BE21DACF47300845973 /* NotificationExecuter.swift */,
 			);
 			name = NotificationExecuter;
+			sourceTree = "<group>";
+		};
+		906648EB1DCB649F00896220 /* InfitineBackgroundTask */ = {
+			isa = PBXGroup;
+			children = (
+				906648EE1DCB699F00896220 /* 3.wav */,
+				906648EC1DCB64B600896220 /* BackgroundTask.swift */,
+			);
+			name = InfitineBackgroundTask;
 			sourceTree = "<group>";
 		};
 		90687A131CD684BD00789FEC /* MemoriaWatch */ = {
@@ -897,6 +911,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				906648EF1DCB699F00896220 /* 3.wav in Resources */,
 				90E8C4A11C1AA2B8009304A9 /* LaunchScreen.storyboard in Resources */,
 				9035FE191C1B18EE00D98022 /* ButtonsTexts.plist in Resources */,
 				9075214F1CE904A800FDFF3D /* LabelsTextsHe.plist in Resources */,
@@ -1084,6 +1099,7 @@
 				901AEDF41C4136F500DD518A /* UIViewAutoLayoutExtentions.swift in Sources */,
 				90F00A0D1C4A7C25002C98BA /* TasksServices.swift in Sources */,
 				90F00A0F1C4A7C2F002C98BA /* IBeaconServices.swift in Sources */,
+				906648ED1DCB64B600896220 /* BackgroundTask.swift in Sources */,
 				90CE2AF71CF4E6A200511ED4 /* Fonts.swift in Sources */,
 				9035FE1B1C1B2B1D00D98022 /* ViewController.swift in Sources */,
 				90DC620C1C6F62BB000C4457 /* DictionaryExntentions.swift in Sources */,

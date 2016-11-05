@@ -43,7 +43,7 @@ class TaskNotificationsTracker : NSObject, IbeaconsTrackerDelegate, Notification
     fileprivate let taskDB : TasksDB
     fileprivate let shouldWaitForWarningToWarning = false
     fileprivate let minTimeFromWarningToWarning = 1.5 // min
-    fileprivate let timeFromTaskDoneToShowWarningWhenNear = 60 //Sec
+    fileprivate let timeFromTaskDoneToShowWarningWhenNear = 0//60 //Sec
     fileprivate let maxTimeStandingNearTaskBeforeAction = 2 //Sec
     fileprivate let timeForRecognisionThatPerformingTaskInSec = 60 * 5 // Sec
     fileprivate let onHoldIntervalIntilNextNotification = 60 * 5 // Sec
@@ -155,7 +155,7 @@ class TaskNotificationsTracker : NSObject, IbeaconsTrackerDelegate, Notification
         if let isTaskTimeLastVerifyWasShow = task.timeLastVerifyWasShow {
             let secoundFromLastVerificaion = abs(Float(isTaskTimeLastVerifyWasShow.secondsFrom(now)))
             if secoundFromLastVerificaion < Float(minTimeFromVerificationToVerification) {
-                print("Should show verification, but too close to the last one, will wait \(secoundFromLastVerificaion - secoundFromLastVerificaion) secounds")
+                print("Should show verification, but too close to the last one, will wait \(Float(minTimeFromVerificationToVerification) - secoundFromLastVerificaion) secounds")
                 return
             }
         }

@@ -6,7 +6,7 @@ protocol IbeaconsTrackerDelegate {
     func beaconInErea(_ clBeacon : CLBeacon)
 }
 
-let rssiMinimunValue = -90
+let rssiMinimunValue = -75
 
 class IbeaconsTracker : NSObject  , ESTBeaconManagerDelegate {
     var delegate : IbeaconsTrackerDelegate?
@@ -138,7 +138,7 @@ class IbeaconsTracker : NSObject  , ESTBeaconManagerDelegate {
 
     
     func checkForMostRandomBeaconAndUpdateNear(beacons: [CLBeacon]) {
-        let repeatedTimeForCountAsClose = 2
+        let repeatedTimeForCountAsClose = 3
         let closestBeacons = beacons.filter { (beacon) -> Bool in
             var repeatedBeaconCount = 0
             for beaconNeaerMe in beacons {
