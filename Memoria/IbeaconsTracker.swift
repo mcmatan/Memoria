@@ -89,13 +89,13 @@ class IbeaconsTracker : NSObject  , ESTBeaconManagerDelegate {
             return
         }
         
-        IbeaconsTrackerHelper.printBeaconsInfo(beacons: beacons, region: region)
-        
         let closestBeacons = self.getBeaconsNearMe(beacons)
         print("Ranged Close beacons beacons count: \(closestBeacons.count)")
         if ((closestBeacons.count > 0) == false) {
             return
         }
+        
+        IbeaconsTrackerHelper.printBeaconsInfo(beacons: closestBeacons, region: region)
         
         self.removeOldBeaconsFromBeaconsByDate()
         self.addNewBeaconsToBeaconsByDate(beacons: closestBeacons)
@@ -138,7 +138,7 @@ class IbeaconsTracker : NSObject  , ESTBeaconManagerDelegate {
 
     
     func checkForMostRandomBeaconAndUpdateNear(beacons: [CLBeacon]) {
-        let repeatedTimeForCountAsClose = 3
+        let repeatedTimeForCountAsClose = 2
         let closestBeacons = beacons.filter { (beacon) -> Bool in
             var repeatedBeaconCount = 0
             for beaconNeaerMe in beacons {
@@ -161,15 +161,10 @@ class IbeaconsTracker : NSObject  , ESTBeaconManagerDelegate {
     
     func beaconManager(_ manager: Any, didEnter region: CLBeaconRegion) {
         print("Enter region \(region.proximityUUID)");
-        
-        UIApplication.showLocalNotification(text: "Enter region")
-        UIApplication.beginBackgroundTask()
     }
     
     func beaconManager(_ manager: Any, didExitRegion region: CLBeaconRegion) {
         print("Exit region \(region.proximityUUID)");
-        
-        UIApplication.showLocalNotification(text: "Exit region")
     }
     
     func beaconIsNear(beacon : CLBeacon) {
@@ -181,12 +176,12 @@ class IbeaconsTracker : NSObject  , ESTBeaconManagerDelegate {
     fileprivate func getBeaconsNearMe(_ beacons : [CLBeacon])->[CLBeacon] {
         var closeBeacons = [CLBeacon]()
         for beacon in beacons {
-//            if (beacon.proximity == CLProximity.immediate || beacon.proximity == CLProximity.near) {
-//                closeBeacons.append(beacon)
-//            }
-            if (beacon.rssi > rssiMinimunValue && beacon.rssi != 0) {
+            if (beacon.proximity == CLProximity.immediate || beacon.proximity == CLProximity.near) {
                 closeBeacons.append(beacon)
             }
+//            if (beacon.rssi > rssiMinimunValue && beacon.rssi != 0) {
+//                closeBeacons.append(beacon)
+//            }
         }
         return closeBeacons
     }

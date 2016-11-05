@@ -8,46 +8,49 @@
 
 import Foundation
 import UIKit
+import UserNotifications
 
-protocol NotificationExecuterDelegate {
-    func notificationDidOccur(_ task : Task)
-}
-
-class NotificationExecuter: NSObject {
-    var delegate : NotificationExecuterDelegate?
+class NotificationExecuter: NSObject, UNUserNotificationCenterDelegate {
     let tasksDB : TasksDB
     
     init(tasksDB : TasksDB) {
         self.tasksDB = tasksDB
         super.init()
-        NotificationCenter.default.addObserver(self, selector: #selector(NotificationExecuter.notificationDidOccur(_:)), name: NSNotification.Name(rawValue: NotificationsNames.NotificationDidOccur), object:nil)
+        UNUserNotificationCenter.current().delegate = self
     }
     
-    internal func notificationDidOccur(_ notification : Notification) {
-        if let localNotification = notification.object as? UILocalNotification {
-            let key = NotificationScheduler.TaskNotificationKey
-            let majorAppendedByMinor = localNotification.userInfo![key] as? String
-            guard let _ = majorAppendedByMinor else {
-                return
-            }
-            let task = self.tasksDB.getTaskForIBeaconMajorAppendedByMinor(majorAppendedByMinor!)
-            guard let isTask = task else {
-                return
-            }
-            self.removeRepeatedNotifications(notification: localNotification)
-            if let _ = self.delegate {
-                self.delegate!.notificationDidOccur(isTask)
+    //Delegate
+    
+    //On Show
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Swift.Void) {
+        print(#function)
+        let task = self.getTaskFromNotification(notification: notification)
+        guard let isTask = task else {
+            return
+        }
+        
+        if isTask.isTaskDone == false {
+            NotificationCenter.default.post(name: Notification.Name(rawValue: NotificationsNames.kPresentTaskNotification), object: task, userInfo: nil)
+        }
+    }
+    
+    //On Tap
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Swift.Void) {
+        print(#function)
+        if response.notification.request.content.categoryIdentifier == LocalNotificationCategotry.notification.rawValue {
+            if let isTask = self.getTaskFromNotification(notification: response.notification) {
+             NotificationCenter.default.post(name: Notification.Name(rawValue: NotificationsNames.kPresentTaskNotification), object: isTask, userInfo: nil)
             }
         }
     }
     
-    
-    private func removeRepeatedNotifications(notification: UILocalNotification) {
-        let allSqudulesNotifications = UIApplication.shared.scheduledLocalNotifications
-        for sqeduledNotification in allSqudulesNotifications! {
-            if sqeduledNotification.alertBody == notification.alertBody {
-                UIApplication.shared.cancelLocalNotification(sqeduledNotification)
-            }
+    func getTaskFromNotification(notification: UNNotification)->Task? {
+        let key = NotificationScheduler.TaskNotificationKey
+        let majorAppendedByMinor = notification.request.content.userInfo[key] as? String
+        guard let _ = majorAppendedByMinor else {
+            return nil
         }
+        let task = self.tasksDB.getTaskForIBeaconMajorAppendedByMinor(majorAppendedByMinor!)
+        return task
     }
 }

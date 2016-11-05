@@ -44,9 +44,9 @@ class TasksServices {
         self.tasksDB.saveTask(task)
     }
 
-    func removeTask(_ task : Task)->Bool {
+    func removeTask(_ task : Task) {
         self.scheduler.cancelReminderForTask(task)
-       return self.tasksDB.removeTask(task)
+       let _ = self.tasksDB.removeTask(task)
     }
     
     func getAllTasks()->[Task] {

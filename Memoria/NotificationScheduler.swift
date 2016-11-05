@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import SwiftDate
+import UserNotifications
 
 protocol INotificationScheduler {
     func squeduleReminderForTask(_ task : Task)
@@ -23,64 +24,17 @@ class NotificationScheduler : NSObject, INotificationScheduler {
     }
     
     internal func squeduleReminderForTask(_ task : Task, date: Date) {
+        
         let alertBody = task.taskName
-        let alertAction = task.taskName
-        let fireDate = date
         let majorAppendedByMinorString = task.taskBeaconIdentifier!.majorAppendedByMinorString()
-        
-//        let restartAction = UIMutableUserNotificationAction()
-//        restartAction.identifier = NotificationsNames.ConfirmTaskNotification
-//        restartAction.isDestructive = false
-//        restartAction.title = "Ok Thanks"
-//        restartAction.activationMode = .background
-//        restartAction.isAuthenticationRequired = false
-        
-        let categoryIdentifier = "category.identifier"
-        let category = UIMutableUserNotificationCategory()
-
-        category.identifier = categoryIdentifier
-//        category.setActions([restartAction], for: .minimal)
-//        category.setActions([restartAction], for: .default)
-        
-        let categories = Set(arrayLiteral: category)
-        let settings = UIUserNotificationSettings(types: [UIUserNotificationType.alert, UIUserNotificationType.sound], categories: categories)
-        UIApplication.shared.registerUserNotificationSettings(settings)
-        
-        
-        let notification = UILocalNotification()
-        notification.alertBody = alertBody
-        notification.alertAction = alertAction
-        notification.fireDate = fireDate as Date?
-        notification.timeZone = TimeZone.current
-        notification.applicationIconBadgeNumber = 1;
-        notification.soundName = UILocalNotificationDefaultSoundName;
         let key = NotificationScheduler.TaskNotificationKey
-        notification.userInfo = [key: majorAppendedByMinorString]
-        notification.category = categoryIdentifier
-        squeduleReminderWithRepeat(notification: notification)
-    }
-    
-    private func squeduleReminderWithRepeat(notification: UILocalNotification) {
-                UIApplication.shared.scheduleLocalNotification(notification)
-//        let numberOfReminders = 10
-//        for i in 0...numberOfReminders {
-//            let addedNotification = notification.copy() as! UILocalNotification
-//            addedNotification.fireDate = addedNotification.fireDate! + (10 * i).seconds
-//            UIApplication.shared.scheduleLocalNotification(addedNotification)
-//        }
+        let userInfo = [key: majorAppendedByMinorString]
+        
+        UIApplication.showLocalNotification(title: alertBody!, subtitle: alertBody!, body: "Tap to open", localNotificationCategory: LocalNotificationCategotry.notification, date: date, userInfo: userInfo)
+
     }
     
     internal func cancelReminderForTask(_ task : Task) {
-        let key = task.taskBeaconIdentifier!.majorAppendedByMinorString()
-        var notificationToCancel : UILocalNotification?
-        for notification in UIApplication.shared.scheduledLocalNotifications! {
-            if notification.userInfo![NotificationScheduler.TaskNotificationKey] as! String == key {
-                notificationToCancel = notification
-                break
-            }
-        }
-        if let isNotification = notificationToCancel {
-            UIApplication.shared.cancelLocalNotification(isNotification)
-        }
+        UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [task.taskName!])
     }
 }

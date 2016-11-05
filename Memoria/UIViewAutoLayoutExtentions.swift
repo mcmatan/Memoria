@@ -15,7 +15,7 @@ extension UIView {
         }
     }
     func centerInSuperView() {
-        self.centerHorizontalyInSuperView()
+        let _ = self.centerHorizontalyInSuperView()
         self.centerVerticlyInSuperView()
     }
     

@@ -196,7 +196,7 @@ class DatePickerDialog: UIView {
         dialogContainer.addSubview(self.titleLabel)
         
         self.datePicker = UIDatePicker(frame: CGRect(x: 0, y: 30, width: 0, height: 0))
-        if let isMinumunDate = self.minimunDate {
+        if self.minimunDate != nil {
             self.datePicker.minimumDate = self.minimunDate
         }
         self.datePicker.autoresizingMask = UIViewAutoresizing.flexibleRightMargin

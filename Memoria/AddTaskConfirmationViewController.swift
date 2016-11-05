@@ -149,16 +149,16 @@ class AddTaskConfirmationViewController : ViewController {
         lblTaskTime.trailingToSuperView(true)
         
         btnEditTaskTime.trailingToSuperView(true)
-        btnEditTaskTime.topAlighnToViewTop(lblTaskTimeDesc)
+        let _ = btnEditTaskTime.topAlighnToViewTop(lblTaskTimeDesc)
         
         btnEditTaskSound.trailingToSuperView(true)
-        btnEditTaskSound.topAlighnToViewTop(lblTaskSoundDesc)
+        let _ = btnEditTaskSound.topAlighnToViewTop(lblTaskSoundDesc)
         
         btnEditTaskName.trailingToSuperView(true)
-        btnEditTaskName.topAlighnToViewTop(lblTaskNameDesc)
+        let _ = btnEditTaskName.topAlighnToViewTop(lblTaskNameDesc)
         
         btnEditTaskTimePriority.trailingToSuperView(true)
-        btnEditTaskTimePriority.topAlighnToViewTop(lblTimePriorityDesc) 
+        let _ = btnEditTaskTimePriority.topAlighnToViewTop(lblTimePriorityDesc) 
 
         NSLayoutConstraint.activate(allConstains)
         

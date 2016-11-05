@@ -39,15 +39,15 @@ fileprivate func >= <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
 }
 
 
-class TaskNotificationsTracker : NSObject, IbeaconsTrackerDelegate, NotificationExecuterDelegate {
+class TaskNotificationsTracker : NSObject, IbeaconsTrackerDelegate {
     fileprivate let taskDB : TasksDB
     fileprivate let shouldWaitForWarningToWarning = false
     fileprivate let minTimeFromWarningToWarning = 1.5 // min
     fileprivate let timeFromTaskDoneToShowWarningWhenNear = 0//60 //Sec
-    fileprivate let maxTimeStandingNearTaskBeforeAction = 2 //Sec
-    fileprivate let timeForRecognisionThatPerformingTaskInSec = 60 * 5 // Sec
-    fileprivate let onHoldIntervalIntilNextNotification = 60 * 5 // Sec
-    fileprivate let minTimeFromVerificationToVerification = 30 // Sec
+    fileprivate let maxTimeStandingNearTaskBeforeAction = 0//2 //Sec
+    fileprivate let timeForRecognisionThatPerformingTaskInSec = 0//60 * 5 // Sec
+    fileprivate let onHoldIntervalIntilNextNotification = 0 // 60 * 5 // Sec
+    fileprivate let minTimeFromVerificationToVerification = 0//30 // Sec
     fileprivate let scheduler : NotificationScheduler
     fileprivate let ibeaconsTracker : IbeaconsTracker
     
@@ -56,15 +56,7 @@ class TaskNotificationsTracker : NSObject, IbeaconsTrackerDelegate, Notification
         self.scheduler = scheduler
         self.ibeaconsTracker = ibeaconsTracker
         super.init()
-        notificationExecuter.delegate = self
         self.ibeaconsTracker.delegate = self
-    }
-    
-    //MARK: Public
-    internal func notificationDidOccur(_ task : Task) {
-        if task.isTaskDone == false {
-            NotificationCenter.default.post(name: Notification.Name(rawValue: NotificationsNames.kPresentTaskNotification), object: task, userInfo: nil)
-        }
     }
     
     //Things that can happen when standing near task:
@@ -82,7 +74,7 @@ class TaskNotificationsTracker : NSObject, IbeaconsTrackerDelegate, Notification
                         print("Task allready done, and standing near")
                         self.taskWarning(task!)
                     } else if self.shouldPerformTaskNow(task!) == true {
-                        print("Marking task as done, since standing near at task time")
+                        print("Asking if doing task, since standing near at task time")
                         self.verifyUserDoingTask(task!)
                     } else {
                         print("Task not done and standing near")

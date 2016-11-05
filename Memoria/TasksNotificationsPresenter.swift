@@ -40,7 +40,7 @@ class TasksNotificationsPresenter : NSObject {
             self.iBeaconServices.isBeaconInErea(task!.taskBeaconIdentifier!, handler: { (result) -> Void in})
         })
         reminderPopUp.presentPopUp(task!.taskName!, message: text, cancelButton: cancelButton, buttons: nil, completion: { () -> Void in})
-        UIApplication.showLocalNotification(text: "Task was marked as done")
+        UIApplication.showLocalNotification(title: "Task was marked as done", subtitle: "Task name: \(task?.taskName)", body: "Tap to open", localNotificationCategory: LocalNotificationCategotry.done)
     }
     
     internal func presentTaskNotification(_ notification : Notification) {
@@ -54,7 +54,7 @@ class TasksNotificationsPresenter : NSObject {
         let goodTimeOfDatString = String.localizedStringWithFormat(Content.getContent(ContentType.labelTxt, name: "TaskVerificationPopUpGoodTimeOfDay"), (task?.taskTime!.dateToDayPartDeifinisionString())!, userName)
         let timeForString = String.localizedStringWithFormat(Content.getContent(ContentType.labelTxt, name: "TaskVerificationPopUpItsTimeFor"), currentDate.toStringCurrentRegionShortTime(), (task?.taskName!)!)
         
-        UIApplication.showLocalNotification(text: goodTimeOfDatString + " " + timeForString)
+        UIApplication.showLocalNotification(title: "Notification", subtitle: (task?.taskName)!, body: goodTimeOfDatString + " " + timeForString, localNotificationCategory: LocalNotificationCategotry.notification)
     }
 
     internal func presentTaskVerification(_ notification : Notification) {
@@ -65,7 +65,7 @@ class TasksNotificationsPresenter : NSObject {
         
         let iSeeYourNear = String.localizedStringWithFormat(Content.getContent(ContentType.labelTxt, name: "TaskVerificationPopUpISeeYourNeer"), (task?.taskName!)!)
         let didYouYet = String.localizedStringWithFormat(Content.getContent(ContentType.labelTxt, name: "TaskVerificationPopUpDidYouYet"), (task?.taskName!)!)
-        UIApplication.showLocalNotification(text: iSeeYourNear + " " + didYouYet)
+        UIApplication.showLocalNotification(title: "Verification", subtitle: (task?.taskName)!, body: iSeeYourNear + " " + didYouYet, localNotificationCategory: LocalNotificationCategotry.verification)
     }
 
     internal func presentTaskWarning(_ notification : Notification) {
@@ -82,7 +82,7 @@ class TasksNotificationsPresenter : NSObject {
         let laterTodayStringBecareful = String.localizedStringWithFormat(Content.getContent(ContentType.labelTxt, name: "TaskWarningPopUpDidPleaseWaitFor"), task.taskTime!.toStringCurrentRegionShortTime())
         let beCarefulString = (task.taskTime! <= Date()) ? didAllreadyStringBecareful : laterTodayStringBecareful
         
-        UIApplication.showLocalNotification(text: warningString + " " + beCarefulString)
+        UIApplication.showLocalNotification(title: "Warning", subtitle: task.taskName!, body: warningString + " " + beCarefulString, localNotificationCategory: LocalNotificationCategotry.warning)
     }
 
 }

@@ -119,7 +119,7 @@ class TaskManagerViewController : ViewController, UITableViewDelegate, UITableVi
         let horizintalTopLblConstrain = NSLayoutConstraint.constraints(
         withVisualFormat: "H:|-[lblTop]-|", options: [], metrics: nil, views: viewKeys)
         
-        lblCount.topAlighnToViewTop(lblTop)
+        let _ = lblCount.topAlighnToViewTop(lblTop)
         lblCount.trailingToSuperView(true)
         
         allConstrins += verticalLayout
@@ -150,7 +150,7 @@ class TaskManagerViewController : ViewController, UITableViewDelegate, UITableVi
         
         cell?.textLabel?.text = textForCell
         cell?.accessoryType = UITableViewCellAccessoryType.disclosureIndicator;
-        let txt = String.localizedStringWithFormat(Content.getContent(ContentType.labelTxt, name: "TaskManagerVCDetailsTxtCell"), (task.taskTime?.toStringWithCurrentRegion())! , (task.taskBeaconIdentifier!.major))
+        _ = String.localizedStringWithFormat(Content.getContent(ContentType.labelTxt, name: "TaskManagerVCDetailsTxtCell"), (task.taskTime?.toStringWithCurrentRegion())! , (task.taskBeaconIdentifier!.major))
         
         cell?.contentView.backgroundColor = task.isTaskDone ? Colors.lightGreen() : UIColor.white
 
@@ -269,7 +269,7 @@ class TaskManagerViewController : ViewController, UITableViewDelegate, UITableVi
     //MARK: Buttons
     func doneButtonPress() {
         if let _ = self.navigationController {
-            self.navigationController?.popToRootViewController(animated: true)
+            let _ = self.navigationController?.popToRootViewController(animated: true)
         } else {
             self.dismiss(animated: true, completion: nil)
         }
