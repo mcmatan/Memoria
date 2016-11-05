@@ -26,8 +26,6 @@ class WatchCommunication: NSObject, WCSessionDelegate, WatchCommunicationType {
             print("Watch not supported!")
         }
         
-//        self.sendSomeData()
-//        self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(sendSomeData), userInfo: nil, repeats: true)
     }
     
     func sendSomeData() {

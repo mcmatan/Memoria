@@ -36,7 +36,6 @@
 		90222C571DCDD7F200A5A80D /* Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 90222C391DCDD7F200A5A80D /* Watch.app */; };
 		90222C601DCDFC9F00A5A80D /* IOSCommunication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90222C5F1DCDFC9F00A5A80D /* IOSCommunication.swift */; };
 		90222C621DCE0DFF00A5A80D /* images.png in Resources */ = {isa = PBXBuildFile; fileRef = 90222C611DCE0DFF00A5A80D /* images.png */; };
-		90222C661DCE1BA200A5A80D /* CostumNotificiationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90222C651DCE1BA200A5A80D /* CostumNotificiationController.swift */; };
 		90222C681DCE1CD300A5A80D /* weather-icon-png-27.png in Resources */ = {isa = PBXBuildFile; fileRef = 90222C671DCE1CD300A5A80D /* weather-icon-png-27.png */; };
 		9035C6C71C20225300088434 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9035C6C61C20225300088434 /* TableView.swift */; };
 		9035C6D71C2024BA00088434 /* UIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9035C6D61C2024BA00088434 /* UIConstants.swift */; };
@@ -187,7 +186,6 @@
 		90222C541DCDD7F200A5A80D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90222C5F1DCDFC9F00A5A80D /* IOSCommunication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOSCommunication.swift; sourceTree = "<group>"; };
 		90222C611DCE0DFF00A5A80D /* images.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = images.png; sourceTree = "<group>"; };
-		90222C651DCE1BA200A5A80D /* CostumNotificiationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CostumNotificiationController.swift; sourceTree = "<group>"; };
 		90222C671DCE1CD300A5A80D /* weather-icon-png-27.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weather-icon-png-27.png"; sourceTree = "<group>"; };
 		9035C6C61C20225300088434 /* TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
 		9035C6D61C2024BA00088434 /* UIConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIConstants.swift; sourceTree = "<group>"; };
@@ -446,7 +444,6 @@
 				90222C4C1DCDD7F200A5A80D /* InterfaceController.swift */,
 				90222C4E1DCDD7F200A5A80D /* ExtensionDelegate.swift */,
 				90222C501DCDD7F200A5A80D /* NotificationController.swift */,
-				90222C651DCE1BA200A5A80D /* CostumNotificiationController.swift */,
 				90222C5F1DCDFC9F00A5A80D /* IOSCommunication.swift */,
 				90222C521DCDD7F200A5A80D /* Assets.xcassets */,
 				90222C541DCDD7F200A5A80D /* Info.plist */,
@@ -1201,7 +1198,6 @@
 			files = (
 				90222C511DCDD7F200A5A80D /* NotificationController.swift in Sources */,
 				90222C4F1DCDD7F200A5A80D /* ExtensionDelegate.swift in Sources */,
-				90222C661DCE1BA200A5A80D /* CostumNotificiationController.swift in Sources */,
 				90222C601DCDFC9F00A5A80D /* IOSCommunication.swift in Sources */,
 				90222C4D1DCDD7F200A5A80D /* InterfaceController.swift in Sources */,
 			);
@@ -1653,6 +1649,7 @@
 				90222C5B1DCDD7F200A5A80D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		90222C5E1DCDD7F200A5A80D /* Build configuration list for PBXNativeTarget "Watch" */ = {
 			isa = XCConfigurationList;
@@ -1661,6 +1658,7 @@
 				90222C591DCDD7F200A5A80D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		90E8C48E1C1AA2B8009304A9 /* Build configuration list for PBXProject "Memoria" */ = {
 			isa = XCConfigurationList;
