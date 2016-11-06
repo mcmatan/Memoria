@@ -70,5 +70,19 @@ enum TaskType: String {
             return url!
         }
     }
+    
+//    func soundURLString(localNotificationCategotry: LocalNotificationCategotry)->String {
+//        switch localNotificationCategotry {
+//        case .notification:
+//            return "pillsNotification.m4a"
+//        case .warning:
+//            return "pillsWarning.m4a"
+//        case .verification:
+//            return "pillsVerification.m4a"
+//        default:
+//            print("No maching notification category!")
+//            return "pillsVerification.m4a"
+//        }
+//    }
 }
 

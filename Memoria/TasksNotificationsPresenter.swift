@@ -49,12 +49,7 @@ class TasksNotificationsPresenter : NSObject {
         let mainViewController = UIApplication.shared.keyWindow?.rootViewController
         mainViewController?.present(notificationPopUp!, animated: true, completion: nil)
         
-        let currentDate = Date()
-        let userName = Content.getContent(ContentType.labelTxt, name: "TaskVerificationPopUpUserName")
-        let goodTimeOfDatString = String.localizedStringWithFormat(Content.getContent(ContentType.labelTxt, name: "TaskVerificationPopUpGoodTimeOfDay"), (task?.taskTime!.dateToDayPartDeifinisionString())!, userName)
-        let timeForString = String.localizedStringWithFormat(Content.getContent(ContentType.labelTxt, name: "TaskVerificationPopUpItsTimeFor"), currentDate.toStringCurrentRegionShortTime(), (task?.taskType.name)!())
-        
-        LocalNotificationPresenter.showLocalNotification(title: "Notification", subtitle: (task?.taskType.name())!, body: goodTimeOfDatString + " " + timeForString, localNotificationCategory: LocalNotificationCategotry.notification)
+        LocalNotificationPresenter.showLocalNotificationForTask(task: task!, localNotificationCategotry: LocalNotificationCategotry.notification)
     }
 
     internal func presentTaskVerification(_ notification : Notification) {
@@ -63,9 +58,7 @@ class TasksNotificationsPresenter : NSObject {
         let mainViewController = UIApplication.shared.keyWindow?.rootViewController
         mainViewController?.present(notificationPopUp!, animated: true, completion: nil)
         
-        let iSeeYourNear = String.localizedStringWithFormat(Content.getContent(ContentType.labelTxt, name: "TaskVerificationPopUpISeeYourNeer"), (task?.taskType.name)!())
-        let didYouYet = String.localizedStringWithFormat(Content.getContent(ContentType.labelTxt, name: "TaskVerificationPopUpDidYouYet"), (task?.taskType.name)!())
-        LocalNotificationPresenter.showLocalNotification(title: "Verification", subtitle: (task?.taskType.name())!, body: iSeeYourNear + " " + didYouYet, localNotificationCategory: LocalNotificationCategotry.verification)
+        LocalNotificationPresenter.showLocalNotificationForTask(task: task!, localNotificationCategotry: LocalNotificationCategotry.verification)
     }
 
     internal func presentTaskWarning(_ notification : Notification) {
@@ -74,15 +67,7 @@ class TasksNotificationsPresenter : NSObject {
         let mainViewController = UIApplication.shared.keyWindow?.rootViewController
         mainViewController?.present(notificationPopUp!, animated: true, completion: nil)
         
-        let didAllreadyString = String.localizedStringWithFormat(Content.getContent(ContentType.labelTxt, name: "TaskWarningPopUpDidAllready"), task.taskType.name())
-        let laterTodayString = String.localizedStringWithFormat(Content.getContent(ContentType.labelTxt, name: "TaskWarningPopUpDidLaterToday"), task.taskType.name())
-        let warningString = (task.taskTime! <= Date()) ? didAllreadyString : laterTodayString
-        
-        let didAllreadyStringBecareful = Content.getContent(ContentType.labelTxt, name: "TaskWarningPopUpDidCerfulNotToTakeTwice")
-        let laterTodayStringBecareful = String.localizedStringWithFormat(Content.getContent(ContentType.labelTxt, name: "TaskWarningPopUpDidPleaseWaitFor"), task.taskTime!.toStringCurrentRegionShortTime())
-        let beCarefulString = (task.taskTime! <= Date()) ? didAllreadyStringBecareful : laterTodayStringBecareful
-        
-        LocalNotificationPresenter.showLocalNotification(title: "Warning", subtitle: task.taskType.name(), body: warningString + " " + beCarefulString, localNotificationCategory: LocalNotificationCategotry.warning)
+        LocalNotificationPresenter.showLocalNotificationForTask(task: task, localNotificationCategotry: LocalNotificationCategotry.warning)
     }
 
 }
