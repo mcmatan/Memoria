@@ -24,7 +24,7 @@ class AddTaskTimeViewController : ViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.title = self.currenctTaskCreator.getTaskName()
+        self.title = self.currenctTaskCreator.task.taskType.name()
         if let isTimes = currenctTaskCreator.getTaskTime() {
             self.chosenTime = isTimes as Date
             self.setTimeToDisplay(isTimes as Date)

@@ -51,8 +51,20 @@
 		9035FE1F1C1B2BFB00D98022 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9035FE1E1C1B2BFB00D98022 /* TextView.swift */; };
 		9035FE211C1B2CF800D98022 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9035FE201C1B2CF800D98022 /* Label.swift */; };
 		9035FE251C1EC64500D98022 /* ReminderPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9035FE241C1EC64500D98022 /* ReminderPopUp.swift */; };
-		9035FE281C1ECC4800D98022 /* AddTaskNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9035FE271C1ECC4800D98022 /* AddTaskNameViewController.swift */; };
 		9035FE2C1C1ECFC300D98022 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9035FE2B1C1ECFC300D98022 /* TextField.swift */; };
+		903B30C11DCE957E0015C6FA /* LocalNotificationCategotry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903B30C01DCE957E0015C6FA /* LocalNotificationCategotry.swift */; };
+		903B30C21DCE957E0015C6FA /* LocalNotificationCategotry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903B30C01DCE957E0015C6FA /* LocalNotificationCategotry.swift */; };
+		903B30C71DCF53D20015C6FA /* pillsNotification.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 903B30C41DCF53D20015C6FA /* pillsNotification.m4a */; };
+		903B30C81DCF53D20015C6FA /* pillsNotification.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 903B30C41DCF53D20015C6FA /* pillsNotification.m4a */; };
+		903B30C91DCF53D30015C6FA /* pillsNotification.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 903B30C41DCF53D20015C6FA /* pillsNotification.m4a */; };
+		903B30CA1DCF53D30015C6FA /* pillsVerification.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 903B30C51DCF53D20015C6FA /* pillsVerification.m4a */; };
+		903B30CB1DCF53D30015C6FA /* pillsVerification.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 903B30C51DCF53D20015C6FA /* pillsVerification.m4a */; };
+		903B30CC1DCF53D30015C6FA /* pillsVerification.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 903B30C51DCF53D20015C6FA /* pillsVerification.m4a */; };
+		903B30CD1DCF53D30015C6FA /* pillsWarning.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 903B30C61DCF53D20015C6FA /* pillsWarning.m4a */; };
+		903B30CE1DCF53D30015C6FA /* pillsWarning.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 903B30C61DCF53D20015C6FA /* pillsWarning.m4a */; };
+		903B30CF1DCF53D30015C6FA /* pillsWarning.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 903B30C61DCF53D20015C6FA /* pillsWarning.m4a */; };
+		903B30D21DCF5B2C0015C6FA /* AddTaskTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903B30D11DCF5B2C0015C6FA /* AddTaskTypeViewController.swift */; };
+		903B30D31DCF5B2C0015C6FA /* AddTaskTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903B30D11DCF5B2C0015C6FA /* AddTaskTypeViewController.swift */; };
 		905AF3BB1C1F2AEF0063713A /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905AF3BA1C1F2AEF0063713A /* Task.swift */; };
 		905AF3C11C1F3BD60063713A /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905AF3C01C1F3BD60063713A /* NavigationController.swift */; };
 		905AF3C41C1F41260063713A /* AddTaskTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905AF3C31C1F41260063713A /* AddTaskTimeViewController.swift */; };
@@ -72,7 +84,6 @@
 		90DC62111C6F844A000C4457 /* AddTaskTimePriorityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DC62101C6F844A000C4457 /* AddTaskTimePriorityController.swift */; };
 		90DC62131C78981B000C4457 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DC62121C78981B000C4457 /* UIColorExtension.swift */; };
 		90DC779C1C3AFC6F0062BCE3 /* DatePickerDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DC779B1C3AFC6F0062BCE3 /* DatePickerDialog.swift */; };
-		90DC779F1C3B02770062BCE3 /* AddTaskVoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DC779E1C3B02770062BCE3 /* AddTaskVoiceViewController.swift */; };
 		90DC77A21C3DA0F70062BCE3 /* VoiceRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DC77A11C3DA0F70062BCE3 /* VoiceRecorder.swift */; };
 		90DC77A71C3DAF440062BCE3 /* AddTaskConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DC77A61C3DAF440062BCE3 /* AddTaskConfirmationViewController.swift */; };
 		90E8C4971C1AA2B8009304A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E8C4961C1AA2B8009304A9 /* AppDelegate.swift */; };
@@ -202,8 +213,12 @@
 		9035FE1E1C1B2BFB00D98022 /* TextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		9035FE201C1B2CF800D98022 /* Label.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
 		9035FE241C1EC64500D98022 /* ReminderPopUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderPopUp.swift; sourceTree = "<group>"; };
-		9035FE271C1ECC4800D98022 /* AddTaskNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskNameViewController.swift; sourceTree = "<group>"; };
 		9035FE2B1C1ECFC300D98022 /* TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		903B30C01DCE957E0015C6FA /* LocalNotificationCategotry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalNotificationCategotry.swift; sourceTree = "<group>"; };
+		903B30C41DCF53D20015C6FA /* pillsNotification.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = pillsNotification.m4a; sourceTree = "<group>"; };
+		903B30C51DCF53D20015C6FA /* pillsVerification.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = pillsVerification.m4a; sourceTree = "<group>"; };
+		903B30C61DCF53D20015C6FA /* pillsWarning.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = pillsWarning.m4a; sourceTree = "<group>"; };
+		903B30D11DCF5B2C0015C6FA /* AddTaskTypeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskTypeViewController.swift; sourceTree = "<group>"; };
 		905AF3BA1C1F2AEF0063713A /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		905AF3C01C1F3BD60063713A /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		905AF3C31C1F41260063713A /* AddTaskTimeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskTimeViewController.swift; sourceTree = "<group>"; };
@@ -224,7 +239,6 @@
 		90DC62101C6F844A000C4457 /* AddTaskTimePriorityController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskTimePriorityController.swift; sourceTree = "<group>"; };
 		90DC62121C78981B000C4457 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		90DC779B1C3AFC6F0062BCE3 /* DatePickerDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerDialog.swift; sourceTree = "<group>"; };
-		90DC779E1C3B02770062BCE3 /* AddTaskVoiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskVoiceViewController.swift; sourceTree = "<group>"; };
 		90DC77A11C3DA0F70062BCE3 /* VoiceRecorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceRecorder.swift; sourceTree = "<group>"; };
 		90DC77A61C3DAF440062BCE3 /* AddTaskConfirmationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskConfirmationViewController.swift; sourceTree = "<group>"; };
 		90E8C4931C1AA2B8009304A9 /* Memoria.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memoria.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -531,24 +545,15 @@
 			name = ReminderPopUp;
 			sourceTree = "<group>";
 		};
-		9035FE261C1ECC3B00D98022 /* AddTaskNameViewController */ = {
-			isa = PBXGroup;
-			children = (
-				9035FE271C1ECC4800D98022 /* AddTaskNameViewController.swift */,
-			);
-			name = AddTaskNameViewController;
-			sourceTree = "<group>";
-		};
 		9035FE2D1C1ED15900D98022 /* Tasks */ = {
 			isa = PBXGroup;
 			children = (
+				903B30D01DCF5B190015C6FA /* AddTaskTypeViewController */,
 				90DC620F1C6F842F000C4457 /* AddTaskTimePriorityController */,
 				90C588791C46E09500D84C73 /* ManageTasksViewController */,
 				90DC77A51C3DAF340062BCE3 /* AddTaskConfirmationViewController */,
-				90DC779D1C3B02320062BCE3 /* AddTaskVoiceViewController */,
 				9035FE0B1C1B0C8400D98022 /* AddTasksLocationViewController */,
 				905AF3C21C1F410D0063713A /* AddTaskTimeViewController */,
-				9035FE261C1ECC3B00D98022 /* AddTaskNameViewController */,
 			);
 			name = Tasks;
 			sourceTree = "<group>";
@@ -578,6 +583,33 @@
 				905AF3B51C1F2A7A0063713A /* Model */,
 			);
 			name = DataBase;
+			sourceTree = "<group>";
+		};
+		903B30BF1DCE956E0015C6FA /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				903B30C31DCF53C20015C6FA /* Sounds */,
+				903B30C01DCE957E0015C6FA /* LocalNotificationCategotry.swift */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		903B30C31DCF53C20015C6FA /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				903B30C41DCF53D20015C6FA /* pillsNotification.m4a */,
+				903B30C51DCF53D20015C6FA /* pillsVerification.m4a */,
+				903B30C61DCF53D20015C6FA /* pillsWarning.m4a */,
+			);
+			name = Sounds;
+			sourceTree = "<group>";
+		};
+		903B30D01DCF5B190015C6FA /* AddTaskTypeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				903B30D11DCF5B2C0015C6FA /* AddTaskTypeViewController.swift */,
+			);
+			name = AddTaskTypeViewController;
 			sourceTree = "<group>";
 		};
 		905AF3B51C1F2A7A0063713A /* Model */ = {
@@ -677,14 +709,6 @@
 			name = DatePicker;
 			sourceTree = "<group>";
 		};
-		90DC779D1C3B02320062BCE3 /* AddTaskVoiceViewController */ = {
-			isa = PBXGroup;
-			children = (
-				90DC779E1C3B02770062BCE3 /* AddTaskVoiceViewController.swift */,
-			);
-			name = AddTaskVoiceViewController;
-			sourceTree = "<group>";
-		};
 		90DC77A01C3DA0ED0062BCE3 /* Recorder */ = {
 			isa = PBXGroup;
 			children = (
@@ -732,6 +756,7 @@
 		90E8C4951C1AA2B8009304A9 /* Memoria */ = {
 			isa = PBXGroup;
 			children = (
+				903B30BF1DCE956E0015C6FA /* Common */,
 				905D0BE01DACEE6700845973 /* Memoria.entitlements */,
 				90DC620A1C6F6276000C4457 /* Categoris */,
 				90F009F81C4A7AFA002C98BA /* UI */,
@@ -1025,7 +1050,10 @@
 			files = (
 				90222C681DCE1CD300A5A80D /* weather-icon-png-27.png in Resources */,
 				90222C621DCE0DFF00A5A80D /* images.png in Resources */,
+				903B30C81DCF53D20015C6FA /* pillsNotification.m4a in Resources */,
 				90222C3F1DCDD7F200A5A80D /* Assets.xcassets in Resources */,
+				903B30CB1DCF53D30015C6FA /* pillsVerification.m4a in Resources */,
+				903B30CE1DCF53D30015C6FA /* pillsWarning.m4a in Resources */,
 				90222C3D1DCDD7F200A5A80D /* Interface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1034,6 +1062,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				903B30C91DCF53D30015C6FA /* pillsNotification.m4a in Resources */,
+				903B30CC1DCF53D30015C6FA /* pillsVerification.m4a in Resources */,
+				903B30CF1DCF53D30015C6FA /* pillsWarning.m4a in Resources */,
 				90222C531DCDD7F200A5A80D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1042,12 +1073,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				903B30C71DCF53D20015C6FA /* pillsNotification.m4a in Resources */,
 				906648EF1DCB699F00896220 /* 3.wav in Resources */,
 				90E8C4A11C1AA2B8009304A9 /* LaunchScreen.storyboard in Resources */,
 				9035FE191C1B18EE00D98022 /* ButtonsTexts.plist in Resources */,
+				903B30CA1DCF53D30015C6FA /* pillsVerification.m4a in Resources */,
 				9075214F1CE904A800FDFF3D /* LabelsTextsHe.plist in Resources */,
 				9035FE1D1C1B2B9B00D98022 /* LabelsTexts.plist in Resources */,
 				90CE2AF51CF4DE0E00511ED4 /* ButtonsTextsHe.plist in Resources */,
+				903B30CD1DCF53D30015C6FA /* pillsWarning.m4a in Resources */,
 				90E8C49E1C1AA2B8009304A9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1200,6 +1234,8 @@
 				90222C4F1DCDD7F200A5A80D /* ExtensionDelegate.swift in Sources */,
 				90222C601DCDFC9F00A5A80D /* IOSCommunication.swift in Sources */,
 				90222C4D1DCDD7F200A5A80D /* InterfaceController.swift in Sources */,
+				903B30C21DCE957E0015C6FA /* LocalNotificationCategotry.swift in Sources */,
+				903B30D31DCF5B2C0015C6FA /* AddTaskTypeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1241,6 +1277,7 @@
 				9035FE211C1B2CF800D98022 /* Label.swift in Sources */,
 				901AEDF41C4136F500DD518A /* UIViewAutoLayoutExtentions.swift in Sources */,
 				90F00A0D1C4A7C25002C98BA /* TasksServices.swift in Sources */,
+				903B30C11DCE957E0015C6FA /* LocalNotificationCategotry.swift in Sources */,
 				90F00A0F1C4A7C2F002C98BA /* IBeaconServices.swift in Sources */,
 				906648ED1DCB64B600896220 /* BackgroundTask.swift in Sources */,
 				90CE2AF71CF4E6A200511ED4 /* Fonts.swift in Sources */,
@@ -1252,10 +1289,9 @@
 				90DC77A21C3DA0F70062BCE3 /* VoiceRecorder.swift in Sources */,
 				9035FE251C1EC64500D98022 /* ReminderPopUp.swift in Sources */,
 				905AF3C11C1F3BD60063713A /* NavigationController.swift in Sources */,
-				90DC779F1C3B02770062BCE3 /* AddTaskVoiceViewController.swift in Sources */,
 				90F00A001C4A7B73002C98BA /* TasksDB.swift in Sources */,
-				9035FE281C1ECC4800D98022 /* AddTaskNameViewController.swift in Sources */,
 				90DC620E1C6F6B45000C4457 /* NSDateExntentions.swift in Sources */,
+				903B30D21DCF5B2C0015C6FA /* AddTaskTypeViewController.swift in Sources */,
 				9035FE0D1C1B0C9E00D98022 /* AddTasksLocationViewController.swift in Sources */,
 				90DC62111C6F844A000C4457 /* AddTaskTimePriorityController.swift in Sources */,
 				90B0C53F1DAAE3870019D59B /* ApplicationExntentions.swift in Sources */,

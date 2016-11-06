@@ -16,7 +16,7 @@ class Content : NSObject {
         var path : String!
         switch contentType {
         case ContentType.buttonTxt:
-            path = Bundle.main.path(forResource: "ButtonsTextsHe", ofType: "plist") as String!
+            path = Bundle.main.path(forResource: "ButtonsTexts", ofType: "plist") as String!
         case ContentType.toolTipTxt:
             path = Bundle.main.path(forResource: "ToolTipsPlist", ofType: "plist") as String!
         case ContentType.warningTxt:
@@ -24,7 +24,7 @@ class Content : NSObject {
         case ContentType.alertTxt:
             path = Bundle.main.path(forResource: "AlertsTxts", ofType: "plist") as String!
         case ContentType.labelTxt:
-            path = Bundle.main.path(forResource: "LabelsTextsHe", ofType: "plist") as String!
+            path = Bundle.main.path(forResource: "LabelsTexts", ofType: "plist") as String!
         }
         
         if let _ = path {
@@ -32,9 +32,7 @@ class Content : NSObject {
             
             if let value: AnyObject = dic.value(forKey: name) as AnyObject? {
                 if let isString = value as? String {
-                    
-                    let finalString = isString.replacingOccurrences(of: "Stox", with: "GetStocks")
-                    return finalString
+                    return isString
                 }
             }
         }

@@ -10,21 +10,16 @@ import Foundation
 import SwiftDate
 
 class CurrenctTaskCreator {
-    var task = Task(taskName: "",
-        taskTime: Date(),
-        taskVoiceURL: nil,
-        taskBeaconIdentifier: IBeaconIdentifier(uuid: "", major: "", minor: ""),
-        taskTimePriorityHi : false
-    )
+    
+    class func emptyTask()->Task {
+      return  Task(taskType: TaskType.drugs, taskTime: Date(), taskBeaconIdentifier: IBeaconIdentifier(uuid: "", major: "", minor: ""), taskTimePriorityHi: false)
+    }
+    
+    var task = CurrenctTaskCreator.emptyTask()
     
     
     func startNewTask() {
-        self.task = Task(taskName: "",
-            taskTime: Date(),
-            taskVoiceURL: nil,
-            taskBeaconIdentifier: IBeaconIdentifier(uuid: "", major: "", minor: ""),
-            taskTimePriorityHi: false
-        )
+        self.task = CurrenctTaskCreator.emptyTask()
     }
     
     func getCurrenctTask()->Task {
@@ -37,19 +32,11 @@ class CurrenctTaskCreator {
     
     //MARK: Setters
 
-    func setTaskName(_ name : String) {
-        self.task.taskName = name
-    }
-    
     func setTaskTime(_ date : Date) {
         if Date() < date {
             self.task.isTaskDone = false
         }
         self.task.taskTime = date
-    }
-    
-    func setTaskVoiceURL(_ url : URL) {
-        self.task.taskVoiceURL = url
     }
     
     func setTaskBeaconIdentifier(_ iBeaconIdentifier : IBeaconIdentifier) {
@@ -63,16 +50,8 @@ class CurrenctTaskCreator {
 
     //MARK: Getters
     
-    func getTaskName()->String? {
-        return self.task.taskName!
-    }
-    
     func getTaskTime()->Date? {
         return self.task.taskTime!
-    }
-    
-    func getTaskVoiceURL()->URL? {
-        return self.task.taskVoiceURL
     }
     
     func getTaskBeaconIdentifier()->IBeaconIdentifier? {

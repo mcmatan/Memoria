@@ -24,15 +24,6 @@ open class AssemblyViewControllers {
         container.register(AddTaskTimeViewController.self) { _   in
             return AddTaskTimeViewController(container: container, currenctTaskCreator: container.resolve(CurrenctTaskCreator.self)!)
         }
-        
-        container.register(AddTaskNameViewController.self) { _ in
-            return AddTaskNameViewController(container: container, currenctTaskCreator: container.resolve(CurrenctTaskCreator.self)!,
-                                              beaconServices: container.resolve(IBeaconServices.self)!)
-        }
-
-        container.register(AddTaskVoiceViewController.self) { _ in
-            return AddTaskVoiceViewController(container: container, currenctTaskCreator: container.resolve(CurrenctTaskCreator.self)!)
-        }
 
         container.register(AddTaskConfirmationViewController.self) { _  in
             let currentTaskCreator = container.resolve(CurrenctTaskCreator.self)

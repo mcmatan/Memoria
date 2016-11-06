@@ -18,7 +18,6 @@ class AddTaskTimePriorityController: ViewController {
     var container : Container
     let tasksServices : TasksServices
     var currenctTaskCreator : CurrenctTaskCreator
-    var addTaskVoiceViewController : AddTaskVoiceViewController?
     var addTaskConfirmationViewController : AddTaskConfirmationViewController?    
     
     init(container : Container, currenctTaskCreator : CurrenctTaskCreator, tasksServices : TasksServices) {
@@ -34,7 +33,7 @@ class AddTaskTimePriorityController: ViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.title = self.currenctTaskCreator.getTaskName()
+        self.title = self.currenctTaskCreator.task.taskType.name()
         if let isTimePriority = currenctTaskCreator.getTaskTimePriority() {
             self.switchPrairity.isOn = isTimePriority
         }

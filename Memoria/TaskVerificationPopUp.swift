@@ -48,7 +48,7 @@ class TaskVerificationPopUp : ViewController {
         imgLight.heightLayoutAs(150)
         imgLight.topToViewControllerTopLayoutGuide(self, offset: 70)
         
-        self.lblISeeYourNear.text = String.localizedStringWithFormat(Content.getContent(ContentType.labelTxt, name: "TaskVerificationPopUpISeeYourNeer"), self.task.taskName!)
+        self.lblISeeYourNear.text = String.localizedStringWithFormat(Content.getContent(ContentType.labelTxt, name: "TaskVerificationPopUpISeeYourNeer"), self.task.taskType.name())
         self.lblISeeYourNear.font = UIFont.systemFont(ofSize: 28)
         self.lblISeeYourNear.numberOfLines = 0
         self.lblISeeYourNear.textAlignment = NSTextAlignment.center
@@ -59,7 +59,7 @@ class TaskVerificationPopUp : ViewController {
         self.lblISeeYourNear.trailingToSuperView(true)
         
         
-        self.lblDidYouYet.text = String.localizedStringWithFormat(Content.getContent(ContentType.labelTxt, name: "TaskVerificationPopUpDidYouYet"), self.task.taskName!)
+        self.lblDidYouYet.text = String.localizedStringWithFormat(Content.getContent(ContentType.labelTxt, name: "TaskVerificationPopUpDidYouYet"), self.task.taskType.name())
         self.lblDidYouYet.titleGray()
         self.lblDidYouYet.font = UIFont.systemFont(ofSize: 22)
         self.lblDidYouYet.textAlignment = NSTextAlignment.center
@@ -93,12 +93,11 @@ class TaskVerificationPopUp : ViewController {
     //MARK: Actions
     
     func playSound() {
-        if let isSound = self.task.taskVoiceURL {
+        let isSound = self.task.taskType.soundURL(localNotificationCategotry: LocalNotificationCategotry.verification)
             if ("" != isSound.absoluteString) {
-                self.recorder.soundFileURL = isSound
+                self.recorder.soundFileURL = isSound as URL!
                 self.recorder.play()
             }
-        }
     }
     
     //MARK: Buttons

@@ -54,7 +54,7 @@ class TaskNotificationPopUp : ViewController {
         
         let currentDate = Date()
         
-        let timeForString = String.localizedStringWithFormat(Content.getContent(ContentType.labelTxt, name: "TaskVerificationPopUpItsTimeFor"), currentDate.toStringCurrentRegionShortTime(), task.taskName!)
+        let timeForString = String.localizedStringWithFormat(Content.getContent(ContentType.labelTxt, name: "TaskVerificationPopUpItsTimeFor"), currentDate.toStringCurrentRegionShortTime(), task.taskType.name())
         // format"It's 4:00 PM.\nTime to feed your dog!"
         self.lblItsTimeFor.text = timeForString
         self.lblItsTimeFor.titleGray()
@@ -91,12 +91,11 @@ class TaskNotificationPopUp : ViewController {
     //MARK: Actions
     
     func playSound() {
-        if let isSound = self.task.taskVoiceURL {
+        let isSound = self.task.taskType.soundURL(localNotificationCategotry: LocalNotificationCategotry.notification) 
             if ("" != isSound.absoluteString) {
                 self.recorder.soundFileURL = isSound
                 self.recorder.play()
             }
-        }
     }
     
     //MARK: Buttons

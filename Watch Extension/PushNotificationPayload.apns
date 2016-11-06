@@ -4,7 +4,7 @@
             "body": "Test message",
             "title": "Optional title"
         },
-        "category": "myCategory"
+        "category": "notification"
     },
     
     "WatchKit Simulator Actions": [

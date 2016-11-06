@@ -19,7 +19,6 @@ class TaskManagerViewController : ViewController, UITableViewDelegate, UITableVi
     let currenctTaskCreator : CurrenctTaskCreator
     let container : Container
     let iBeaconServices : IBeaconServices
-    var addTaskNameViewController : AddTaskNameViewController?
     let lblCount = Label()
     let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.whiteLarge)
 
@@ -140,7 +139,7 @@ class TaskManagerViewController : ViewController, UITableViewDelegate, UITableVi
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let task = self.allTasks[(indexPath as NSIndexPath).row]
-        let textForCell = Content.getContent(ContentType.labelTxt, name: "TaskManagerVCTaskNameCell") + " " + task.taskName!
+        let textForCell = Content.getContent(ContentType.labelTxt, name: "TaskManagerVCTaskNameCell") + " " + task.taskType.name()
         let cellIdentifier = "Cell"
         
         var cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) 

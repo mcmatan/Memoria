@@ -68,8 +68,8 @@ class TaskWarningPopUp : ViewController {
         imgError.topToViewControllerTopLayoutGuide(self, offset: 70)
         
         
-        let didAllreadyString = String.localizedStringWithFormat(Content.getContent(ContentType.labelTxt, name: "TaskWarningPopUpDidAllready"), self.task.taskName!)
-        let laterTodayString = String.localizedStringWithFormat(Content.getContent(ContentType.labelTxt, name: "TaskWarningPopUpDidLaterToday"), self.task.taskName!)
+        let didAllreadyString = String.localizedStringWithFormat(Content.getContent(ContentType.labelTxt, name: "TaskWarningPopUpDidAllready"), self.task.taskType.name())
+        let laterTodayString = String.localizedStringWithFormat(Content.getContent(ContentType.labelTxt, name: "TaskWarningPopUpDidLaterToday"), self.task.taskType.name())
         let warningString = (self.task.taskTime <= Date()) ? didAllreadyString : laterTodayString
         
         self.lblYouAllreadyTook.text = warningString
@@ -111,12 +111,11 @@ class TaskWarningPopUp : ViewController {
     //MARK: Actions
     
     func playSound() {
-        if let isSound = self.task.taskVoiceURL {
+        let isSound = self.task.taskType.soundURL(localNotificationCategotry: LocalNotificationCategotry.warning)
             if ("" != isSound.absoluteString) {
                 self.recorder.soundFileURL = isSound
                 self.recorder.play()
             }
-        }
     }
     
     //MARK: Buttons

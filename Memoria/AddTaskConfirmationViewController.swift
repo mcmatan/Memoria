@@ -19,8 +19,6 @@ class AddTaskConfirmationViewController : ViewController {
     let lblTaskTimePriority = Label()
     var currenctTaskCreator : CurrenctTaskCreator
     
-    var addTaskNameViewController : AddTaskNameViewController!
-    var addTaskVoiceViewController : AddTaskVoiceViewController!
     var addTaskTimeViewController : AddTaskTimeViewController!
     var addTaskTimePriorityViewController : AddTaskTimePriorityController!
     
@@ -36,7 +34,7 @@ class AddTaskConfirmationViewController : ViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        lblTaskName.text = self.currenctTaskCreator.getTaskName()
+        lblTaskName.text = self.currenctTaskCreator.task.taskType.name()
 
         let currenctTime = self.currenctTaskCreator.getTaskTime()
         let timeString = currenctTime!.toStringWithCurrentRegion()
@@ -163,8 +161,6 @@ class AddTaskConfirmationViewController : ViewController {
         NSLayoutConstraint.activate(allConstains)
         
         btnEditTaskTime.addTarget(self, action: #selector(AddTaskConfirmationViewController.btnEditTaskTimePress), for: UIControlEvents.touchUpInside)
-        btnEditTaskName.addTarget(self, action: #selector(AddTaskConfirmationViewController.btnEditTaskNamePress), for: UIControlEvents.touchUpInside)
-        btnEditTaskSound.addTarget(self, action: #selector(AddTaskConfirmationViewController.btnEditTaskSoundPress), for: UIControlEvents.touchUpInside)
         btnTaskSound.addTarget(self, action: #selector(AddTaskConfirmationViewController.btnPlaySoundPress), for: UIControlEvents.touchUpInside)
         btnEditTaskTimePriority.addTarget(self, action: #selector(AddTaskConfirmationViewController.btnEditTaskTimePriorityPress), for: UIControlEvents.touchUpInside)
     
@@ -173,28 +169,6 @@ class AddTaskConfirmationViewController : ViewController {
 
     //MARK: Buttons press
     
-    func btnEditTaskNamePress() {
-        for viewController in (self.navigationController?.viewControllers)! {
-            if viewController.isKind(of: AddTaskNameViewController.self) {
-                let _ = self.navigationController?.popToViewController(viewController, animated: true)
-                return
-            }
-        }
-        let addTaskNameViewController = self.container.resolve(AddTaskNameViewController.self)
-        self.navigationController?.pushViewController(addTaskNameViewController!, animated: true)
-    }
-
-    func btnEditTaskSoundPress() {
-        for viewController in (self.navigationController?.viewControllers)! {
-            if viewController.isKind(of: AddTaskVoiceViewController.self) {
-                let _ = self.navigationController?.popToViewController(viewController, animated: true)
-                return
-            }
-        }
-        let addTaskVoiceViewController = self.container.resolve(AddTaskVoiceViewController.self)
-        self.navigationController?.pushViewController(addTaskVoiceViewController!, animated: true)
-    }
-
     func btnEditTaskTimePress() {
         for viewController in (self.navigationController?.viewControllers)! {
             if viewController.isKind(of: AddTaskTimeViewController.self) {
@@ -219,7 +193,8 @@ class AddTaskConfirmationViewController : ViewController {
 
 
     func btnPlaySoundPress() {
-        self.recorder.playURL(self.currenctTaskCreator.getTaskVoiceURL()!)
+        //Removing recornig functionllaity
+        //self.recorder.playURL(self.currenctTaskCreator.getTaskVoiceURL()!)
     }
     
     func doneButtonPress() {

@@ -25,16 +25,16 @@ class NotificationScheduler : NSObject, INotificationScheduler {
     
     internal func squeduleReminderForTask(_ task : Task, date: Date) {
         
-        let alertBody = task.taskName
+        let alertBody = task.taskType.name()
         let majorAppendedByMinorString = task.taskBeaconIdentifier!.majorAppendedByMinorString()
         let key = NotificationScheduler.TaskNotificationKey
         let userInfo = [key: majorAppendedByMinorString]
         
-        UIApplication.showLocalNotification(title: alertBody!, subtitle: alertBody!, body: "Tap to open", localNotificationCategory: LocalNotificationCategotry.notification, date: date, userInfo: userInfo)
+        LocalNotificationPresenter.showLocalNotification(title: alertBody, subtitle: alertBody, body: "Tap to open", localNotificationCategory: LocalNotificationCategotry.notification, date: date, userInfo: userInfo)
 
     }
     
     internal func cancelReminderForTask(_ task : Task) {
-        UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [task.taskName!])
+        UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [task.taskType.name()])
     }
 }

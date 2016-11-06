@@ -9,7 +9,6 @@ class AddTasksLocationViewController : ViewController {
     let tasksServices : TasksServices
     let iBeaconServices : IBeaconServices
     var currenctTaskCreator : CurrenctTaskCreator
-    var addTaskNameViewController : AddTaskNameViewController?
     let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.whiteLarge)
     
     init(container : Container, tasksServices : TasksServices, iBeaconServices : IBeaconServices, currenctTaskCreator : CurrenctTaskCreator) {
