@@ -12,9 +12,21 @@ import UserNotifications
 
 class LocalNotificationPresenter {
     
-    static func showLocalNotificationForTask(task: Task) {
-        
-    }
+//    static func showLocalNotificationForTask(task: Task) {
+//        switch task.taskType {
+//        case taskType.c:
+//            <#code#>
+//        default:
+//            <#code#>
+//        }
+//    }
+//    
+    
+    
+    
+    
+    
+    
 
     static func showLocalNotification(title: String, subtitle: String, body: String, localNotificationCategory: LocalNotificationCategotry) {
         self.showLocalNotification(title: title, subtitle: subtitle, body: body, localNotificationCategory: localNotificationCategory, date: nil)
@@ -35,6 +47,8 @@ class LocalNotificationPresenter {
         if let isUserInfo = userInfo {
             content.userInfo = isUserInfo
         }
+        
+        
         let fireTimeInterval = (date != nil) ? date!.timeIntervalSinceNow : TimeInterval(0.01)
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: fireTimeInterval, repeats: false)
         let requestIdentifier = content.categoryIdentifier

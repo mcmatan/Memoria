@@ -17,6 +17,11 @@ class NotificationExecuter: NSObject, UNUserNotificationCenterDelegate {
         self.tasksDB = tasksDB
         super.init()
         UNUserNotificationCenter.current().delegate = self
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) { (granted, error) in
+            if let isError = error {
+                print("Error when requestAuthorization! error = \(isError.localizedDescription)")
+            }
+        }
     }
     
     //Delegate

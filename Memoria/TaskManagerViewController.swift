@@ -20,6 +20,7 @@ class TaskManagerViewController : ViewController, UITableViewDelegate, UITableVi
     let container : Container
     let iBeaconServices : IBeaconServices
     let lblCount = Label()
+    var addTaskTypeViewController: AddTaskTypeViewController?
     let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.whiteLarge)
 
     
@@ -259,10 +260,10 @@ class TaskManagerViewController : ViewController, UITableViewDelegate, UITableVi
         self.currenctTaskCreator.startNewTask()
         self.currenctTaskCreator.setTaskBeaconIdentifier(closeiBeaconIdentifier)
         
-        if let _ = self.addTaskNameViewController {} else {
-            self.addTaskNameViewController = self.container.resolve(AddTaskNameViewController.self)
+        if let _ = self.addTaskTypeViewController {} else {
+            self.addTaskTypeViewController = self.container.resolve(AddTaskTypeViewController.self)
         }
-        self.navigationController?.pushViewController(self.addTaskNameViewController!, animated: true)
+        self.navigationController?.pushViewController(self.addTaskTypeViewController!, animated: true)
     }
 
     //MARK: Buttons

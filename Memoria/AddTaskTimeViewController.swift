@@ -10,7 +10,7 @@ class AddTaskTimeViewController : ViewController {
     var container : Container
     var chosenTime = Date()
     var currenctTaskCreator : CurrenctTaskCreator
-    var addTaskVoiceViewController : AddTaskVoiceViewController?
+    var addTaskTimePriorityController : AddTaskTimePriorityController?
     
     init(container : Container, currenctTaskCreator : CurrenctTaskCreator) {
         self.container = container
@@ -28,6 +28,10 @@ class AddTaskTimeViewController : ViewController {
         if let isTimes = currenctTaskCreator.getTaskTime() {
             self.chosenTime = isTimes as Date
             self.setTimeToDisplay(isTimes as Date)
+        }else {
+            let minumunDate = self.getMinimunDate()
+            self.chosenTime = minumunDate as Date
+            self.setTimeToDisplay(minumunDate as Date)
         }
     }
     
@@ -77,17 +81,24 @@ class AddTaskTimeViewController : ViewController {
     
     
     func addTimeButtonPress() {
-        let minumTimeFromNowByMinutes = 2 // This is a hack, the date picker works wrong after setting minumun time.
+        
+        let minimunDate = self.getMinimunDate()
         let txt = Content.getContent(ContentType.labelTxt, name: "AddTaskTimeDatePickerDialog")
         let datePicker = DatePickerDialog()
-        let minimunDate = Date() + minumTimeFromNowByMinutes.minutes
+        
         datePicker.setMinimunDate(date: minimunDate)
-
+        
         datePicker.show(txt, doneButtonTitle: "Done", cancelButtonTitle: "Cancel", defaultDate: minimunDate, datePickerMode: UIDatePickerMode.dateAndTime) { (date) in
             print(date)
             self.chosenTime = date
             self.setTimeToDisplay(date)
         }
+    }
+    
+    func getMinimunDate() ->Date {
+        let minumTimeFromNowByMinutes = 2 // This is a hack, the date picker works wrong after setting minumun time.
+        let minimunDate = Date() + minumTimeFromNowByMinutes.minutes
+        return minimunDate
     }
     
     func setTimeToDisplay(_ date : Date) {
@@ -99,11 +110,10 @@ class AddTaskTimeViewController : ViewController {
         
         self.currenctTaskCreator.setTaskTime(self.chosenTime)
     
-        if let _ = self.addTaskVoiceViewController {} else {
-            self.addTaskVoiceViewController =  self.container.resolve(AddTaskVoiceViewController.self)
+        if let _ = self.addTaskTimePriorityController {} else {
+            self.addTaskTimePriorityController =  self.container.resolve(AddTaskTimePriorityController.self)
         }
-        self.navigationController?.pushViewController(self.addTaskVoiceViewController!, animated: true)
-        
+        self.navigationController?.pushViewController(self.addTaskTimePriorityController!, animated: true)
     }
 
 }

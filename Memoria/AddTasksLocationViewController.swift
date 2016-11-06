@@ -9,6 +9,7 @@ class AddTasksLocationViewController : ViewController {
     let tasksServices : TasksServices
     let iBeaconServices : IBeaconServices
     var currenctTaskCreator : CurrenctTaskCreator
+    var addTaskTypeViewController: AddTaskTypeViewController?
     let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.whiteLarge)
     
     init(container : Container, tasksServices : TasksServices, iBeaconServices : IBeaconServices, currenctTaskCreator : CurrenctTaskCreator) {
@@ -149,10 +150,10 @@ class AddTasksLocationViewController : ViewController {
         let closeiBeaconIdentifier = IBeaconIdentifier.creatFromCLBeacon(closestBeacon)
         self.currenctTaskCreator.setTaskBeaconIdentifier(closeiBeaconIdentifier)
         
-        if let _ = self.addTaskNameViewController {} else {
-            self.addTaskNameViewController = self.container.resolve(AddTaskNameViewController.self)
+        if let _ = self.addTaskTypeViewController {} else {
+            self.addTaskTypeViewController = self.container.resolve(AddTaskTypeViewController.self)
         }
-        self.navigationController?.pushViewController(self.addTaskNameViewController!, animated: true)
+        self.navigationController?.pushViewController(self.addTaskTypeViewController!, animated: true)
 
     }
 }

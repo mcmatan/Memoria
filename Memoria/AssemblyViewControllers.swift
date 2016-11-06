@@ -38,6 +38,10 @@ open class AssemblyViewControllers {
                 currenctTaskCreator: container.resolve(CurrenctTaskCreator.self)!, tasksServices: container.resolve(TasksServices.self)!)
         }
         
+        container.register(AddTaskTypeViewController.self) { _ in
+            return AddTaskTypeViewController(container: container, currenctTaskCreator: container.resolve(CurrenctTaskCreator.self)!)
+        }
+        
         container.register(TaskNotificationPopUp.self) { _, task in
             return TaskNotificationPopUp(task: task, tasksServices: container.resolve(TasksServices.self)!)
         }

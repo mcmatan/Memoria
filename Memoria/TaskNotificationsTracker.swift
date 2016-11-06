@@ -41,11 +41,11 @@ fileprivate func >= <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
 
 class TaskNotificationsTracker : NSObject, IbeaconsTrackerDelegate {
     fileprivate let taskDB : TasksDB
-    fileprivate let shouldWaitForWarningToWarning = false
-    fileprivate let minTimeFromWarningToWarning = 1.5 // min
+    fileprivate let shouldWaitForWarningToWarning = true
+    fileprivate let secoundsTimeFromWarningToWarning = 10 //100 // Sec
     fileprivate let timeFromTaskDoneToShowWarningWhenNear = 0//60 //Sec
     fileprivate let maxTimeStandingNearTaskBeforeAction = 0//2 //Sec
-    fileprivate let timeForRecognisionThatPerformingTaskInSec = 0//60 * 5 // Sec
+    fileprivate let shouldPerformTaskTimeWindow = 60 * 5 // Sec
     fileprivate let onHoldIntervalIntilNextNotification = 0 // 60 * 5 // Sec
     fileprivate let minTimeFromVerificationToVerification = 0//30 // Sec
     fileprivate let scheduler : NotificationScheduler
@@ -109,8 +109,8 @@ class TaskNotificationsTracker : NSObject, IbeaconsTrackerDelegate {
     
     fileprivate func shouldPerformTaskNow(_ task : Task)->Bool {
         let now = Date()
-        let nowPlusIntercal = (now + timeForRecognisionThatPerformingTaskInSec.seconds)
-        let nowMinusInterval = (now - timeForRecognisionThatPerformingTaskInSec.seconds)
+        let nowPlusIntercal = (now + shouldPerformTaskTimeWindow.seconds)
+        let nowMinusInterval = (now - shouldPerformTaskTimeWindow.seconds)
         if (task.taskTime <= nowPlusIntercal && task.taskTime >= nowMinusInterval) {
             return true
         }
@@ -164,7 +164,10 @@ class TaskNotificationsTracker : NSObject, IbeaconsTrackerDelegate {
             if task.taskTimePriorityHi == true {
                 if let isTaskLastWarningShow = task.timeLastWarningWasShow {
                     let now = Date()
-                    if ((Float(isTaskLastWarningShow.minutesFrom(now)) < Float(minTimeFromWarningToWarning))
+                    
+                    let lastStanding = Float(isTaskLastWarningShow.secondsFrom(now))
+                    let secoundsNear = Float(secoundsTimeFromWarningToWarning)
+                    if ((-lastStanding < secoundsNear)
                     && (self.shouldWaitForWarningToWarning == true )){
                         return
                     }

@@ -23,7 +23,7 @@ class Task : NSObject {
     //Convinece
      init(
         taskType: TaskType,
-        taskTime : Date,
+        taskTime : Date?,
         taskBeaconIdentifier : IBeaconIdentifier,
         taskTimePriorityHi : Bool
         ) {
@@ -71,7 +71,7 @@ class Task : NSObject {
     }
     
     func encodeWithCoder(_ aCoder: NSCoder) {
-        aCoder.encode(taskType, forKey: "taskType")
+        aCoder.encode(taskType.rawValue, forKey: "taskType")
         aCoder.encode(taskTime, forKey: "taskTime")
         aCoder.encode(taskBeaconIdentifier, forKey: "taskBeaconIdentifier")
         aCoder.encode(taskTimePriorityHi!, forKey: "taskTimePriorityHi")

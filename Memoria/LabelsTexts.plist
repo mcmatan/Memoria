@@ -13,6 +13,8 @@ Then click on the button to add a task.</string>
 	<string>Task Name:</string>
 	<key>addTaskTimeButton</key>
 	<string>Edit time</string>
+	<key>chooseTaskTypeBtn</key>
+	<string>Choose task type</string>
 	<key>addTimeDoneBtn</key>
 	<string>Done</string>
 	<key>addTaskVoiceTopTxt</key>

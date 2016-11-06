@@ -33,9 +33,9 @@ enum TaskType: String {
         case .brushTeeth:
             return "Brush your teeth"
         case .food:
-            return "Eat some food"
+            return "Eat food"
         case .drugs:
-            return "Task youe pills"
+            return "Take your pills"
         }
     }
     
@@ -59,7 +59,7 @@ enum TaskType: String {
             let url = Bundle.main.url(forResource: "pillsNotification", withExtension: "m4a")
             return url!
         case .warning:
-            let url = Bundle.main.url(forResource: "pillsWarnig", withExtension: "m4a")
+            let url = Bundle.main.url(forResource: "pillsWarning", withExtension: "m4a")
             return url!
         case .verification:
             let url = Bundle.main.url(forResource: "pillsVerification", withExtension: "m4a")

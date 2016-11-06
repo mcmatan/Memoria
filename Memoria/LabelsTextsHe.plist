@@ -13,6 +13,8 @@
 	<string>הכנס את שם המשימה:</string>
 	<key>addTaskTimeButton</key>
 	<string>ערוך את זמן המשימה</string>
+	<key>chooseTaskTypeBtn</key>
+	<string>בחר את סוג המשימה</string>
 	<key>addTimeDoneBtn</key>
 	<string>סיים</string>
 	<key>addTaskVoiceTopTxt</key>

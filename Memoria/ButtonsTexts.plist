@@ -12,8 +12,6 @@
 	<string>Manage tasks</string>
 	<key>Done</key>
 	<string>Done</string>
-	<key>addTaskTimeButton</key>
-	<string>Edit task time</string>
 	<key>btnStopRecord</key>
 	<string>Stop recording</string>
 	<key>btnPlay</key>
