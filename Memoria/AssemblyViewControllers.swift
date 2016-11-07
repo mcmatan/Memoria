@@ -9,14 +9,11 @@ open class AssemblyViewControllers {
         container.register(MemoriesViewController.self) { c in
             return MemoriesViewController()
         }
-        container.register(AddTasksLocationViewController.self) { _ in
-            let currentTaskCreator = container.resolve(CurrenctTaskCreator.self)!
-            currentTaskCreator.startNewTask()
-            return AddTasksLocationViewController(container: container, tasksServices: container.resolve(TasksServices.self)!, iBeaconServices: container.resolve(IBeaconServices.self)!, currenctTaskCreator: currentTaskCreator)
-        }
+        
         container.register(MemoriesViewController.self) { c in
              return MemoriesViewController()
         }
+        
         container.register(DrugsViewController.self) { c in
             return DrugsViewController()
         }

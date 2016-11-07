@@ -25,12 +25,14 @@ class NotificationScheduler : NSObject, INotificationScheduler {
     
     internal func squeduleReminderForTask(_ task : Task, date: Date) {
         
-        let alertBody = task.taskType.name()
-        let majorAppendedByMinorString = task.taskBeaconIdentifier!.majorAppendedByMinorString()
-        let key = NotificationScheduler.TaskNotificationKey
-        let userInfo = [key: majorAppendedByMinorString]
-        
-        LocalNotificationPresenter.showLocalNotification(title: alertBody, subtitle: alertBody, body: "Tap to open", localNotificationCategory: LocalNotificationCategotry.notification, date: date, userInfo: userInfo)
+        LocalNotificationPresenter.showLocalNotificationForTask(task: task, localNotificationCategotry: LocalNotificationCategotry.notification, date: date)
+//        
+//        let alertBody = task.taskType.name()
+//        let majorAppendedByMinorString = task.taskBeaconIdentifier!.majorAppendedByMinorString()
+//        let key = NotificationScheduler.TaskNotificationKey
+//        let userInfo = [key: majorAppendedByMinorString]
+//        
+//        LocalNotificationPresenter.showLocalNotification(title: alertBody, subtitle: alertBody, body: "Tap to open", localNotificationCategory: LocalNotificationCategotry.notification, date: date, userInfo: userInfo)
 
     }
     

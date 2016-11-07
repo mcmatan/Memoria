@@ -24,7 +24,7 @@ class NotificationExecuter: NSObject, UNUserNotificationCenterDelegate {
         }
     }
     
-    //Delegate
+    //UNUserNotificationCenterDelegate Delegate
     
     //On Show
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Swift.Void) {

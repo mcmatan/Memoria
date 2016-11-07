@@ -40,7 +40,7 @@ class TasksNotificationsPresenter : NSObject {
             self.iBeaconServices.isBeaconInErea(task!.taskBeaconIdentifier!, handler: { (result) -> Void in})
         })
         reminderPopUp.presentPopUp(task!.taskType.name(), message: text, cancelButton: cancelButton, buttons: nil, completion: { () -> Void in})
-        LocalNotificationPresenter.showLocalNotification(title: "Task was marked as done", subtitle: "Task name: \(task?.taskType.name)", body: "Tap to open", localNotificationCategory: LocalNotificationCategotry.done)
+//        LocalNotificationPresenter.showLocalNotification(title: "Task was marked as done", subtitle: "Task name: \(task?.taskType.name)", body: "Tap to open", localNotificationCategory: LocalNotificationCategotry.done)
     }
     
     internal func presentTaskNotification(_ notification : Notification) {

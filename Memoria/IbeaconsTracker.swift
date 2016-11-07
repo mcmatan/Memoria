@@ -110,10 +110,10 @@ class IbeaconsTracker : NSObject  , ESTBeaconManagerDelegate {
     }
     
     func removeOldBeaconsFromBeaconsByDate() {
-        print("------------------------------------------")
-        print("------------------------------------------")
-        print("------------------------------------------")
-        print("Before valus = \(self.beaconsNearMeByDate)")
+//        print("------------------------------------------")
+//        print("------------------------------------------")
+//        print("------------------------------------------")
+//        print("Before valus = \(self.beaconsNearMeByDate)")
         let validTimeInSecounds = -3.0
         
         var datesToRemove = [Date]()
@@ -129,10 +129,10 @@ class IbeaconsTracker : NSObject  , ESTBeaconManagerDelegate {
             self.beaconsNearMeByDate.removeValue(forKey: dateToRemove)
         }
         
-        print("After valus = \(self.beaconsNearMeByDate)")
-        print("------------------------------------------")
-        print("------------------------------------------")
-        print("------------------------------------------")
+//        print("After valus = \(self.beaconsNearMeByDate)")
+//        print("------------------------------------------")
+//        print("------------------------------------------")
+//        print("------------------------------------------")
     }
     
 

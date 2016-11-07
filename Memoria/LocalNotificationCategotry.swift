@@ -56,33 +56,33 @@ enum TaskType: String {
     func soundURL(localNotificationCategotry: LocalNotificationCategotry)->URL {
         switch localNotificationCategotry {
         case .notification:
-            let url = Bundle.main.url(forResource: "pillsNotification", withExtension: "m4a")
+            let url = Bundle.main.url(forResource: "pillsNotification", withExtension: "aiff")
             return url!
         case .warning:
-            let url = Bundle.main.url(forResource: "pillsWarning", withExtension: "m4a")
+            let url = Bundle.main.url(forResource: "pillsWarning", withExtension: "aiff")
             return url!
         case .verification:
-            let url = Bundle.main.url(forResource: "pillsVerification", withExtension: "m4a")
+            let url = Bundle.main.url(forResource: "pillsVerification", withExtension: "aiff")
             return url!
         default:
             print("No maching notification category!")
-            let url = Bundle.main.url(forResource: "pillsVerification", withExtension: "m4a")
+            let url = Bundle.main.url(forResource: "pillsVerification", withExtension: "aiff")
             return url!
         }
     }
-    
-//    func soundURLString(localNotificationCategotry: LocalNotificationCategotry)->String {
-//        switch localNotificationCategotry {
-//        case .notification:
-//            return "pillsNotification.m4a"
-//        case .warning:
-//            return "pillsWarning.m4a"
-//        case .verification:
-//            return "pillsVerification.m4a"
-//        default:
-//            print("No maching notification category!")
-//            return "pillsVerification.m4a"
-//        }
-//    }
+
+    func imageURL()->URL {
+        switch self {
+        case .brushTeeth:
+            let url = Bundle.main.url(forResource: "brushTeeth", withExtension: "png")
+            return url!
+        case .drugs:
+            let url = Bundle.main.url(forResource: "drugs", withExtension: "png")
+            return url!
+        case .food:
+            let url = Bundle.main.url(forResource: "food", withExtension: "png")
+            return url!
+        }
+    }
 }
 

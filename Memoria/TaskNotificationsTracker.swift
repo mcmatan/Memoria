@@ -47,9 +47,10 @@ class TaskNotificationsTracker : NSObject, IbeaconsTrackerDelegate {
     fileprivate let maxTimeStandingNearTaskBeforeAction = 0//2 //Sec
     fileprivate let shouldPerformTaskTimeWindow = 60 * 5 // Sec
     fileprivate let onHoldIntervalIntilNextNotification = 0 // 60 * 5 // Sec
-    fileprivate let minTimeFromVerificationToVerification = 0//30 // Sec
+    fileprivate let minTimeFromVerificationToVerification = 10//30 // Sec
     fileprivate let scheduler : NotificationScheduler
     fileprivate let ibeaconsTracker : IbeaconsTracker
+    
     
     init(taskDB : TasksDB, scheduler : NotificationScheduler, ibeaconsTracker : IbeaconsTracker, notificationExecuter: NotificationExecuter) {
         self.taskDB = taskDB

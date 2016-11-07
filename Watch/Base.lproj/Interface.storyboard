@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11542" systemVersion="15F34" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11077"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11508"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
@@ -10,9 +13,7 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Watch" customModuleProvider="target">
                     <items>
-                        <button width="1" alignment="left" title="Button" id="Wuj-vG-bVz">
-                            <color key="titleColor" red="0.98039215690000003" green="0.066666666669999999" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
-                        </button>
+                        <imageView width="136" height="141" alignment="left" image="AppIcon" id="lXJ-A8-nd6"/>
                     </items>
                 </controller>
             </objects>
@@ -23,7 +24,7 @@
             <objects>
                 <notificationController id="YCC-NB-fut">
                     <items>
-                        <imageView width="136" height="111" alignment="left" image="images.png" id="7Ey-8D-Nt3">
+                        <imageView width="136" height="111" alignment="left" image="memoriaIcon.png" id="7Ey-8D-Nt3">
                             <color key="tintColor" red="0.9718208773" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         </imageView>
                         <label alignment="left" text="Alert Label" id="IdU-wH-bcW">
