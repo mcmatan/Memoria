@@ -13,32 +13,68 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Watch" customModuleProvider="target">
                     <items>
-                        <imageView width="136" height="141" alignment="left" image="AppIcon" id="lXJ-A8-nd6"/>
+                        <imageView width="136" height="141" alignment="center" verticalAlignment="center" image="MemoriaAppIcon" contentMode="scaleAspectFill" id="lXJ-A8-nd6"/>
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="345"/>
+            <point key="canvasLocation" x="159" y="290"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
             <objects>
                 <notificationController id="YCC-NB-fut">
                     <items>
-                        <imageView width="136" height="111" alignment="left" image="memoriaIcon.png" id="7Ey-8D-Nt3">
-                            <color key="tintColor" red="0.9718208773" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        </imageView>
                         <label alignment="left" text="Alert Label" id="IdU-wH-bcW">
-                            <color key="textColor" red="0.015686274510000001" green="0.87058823529999996" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </label>
+                        <imageView width="136" height="96" alignment="left" image="pills" contentMode="scaleAspectFit" id="KRN-Eh-LuV"/>
                     </items>
-                    <notificationCategory key="notificationCategory" identifier="notification" id="JfB-70-Muf"/>
-                    <color key="backgroundColor" red="0.63921568630000003" green="0.75686274509999996" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <notificationCategory key="notificationCategory" identifier="pills-verification" id="JfB-70-Muf"/>
+                    <color key="backgroundColor" red="0.14509803921568626" green="0.78823529411764703" blue="0.36470588235294116" alpha="1" colorSpace="calibratedRGB"/>
                     <connections>
                         <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
                     </connections>
                 </notificationController>
             </objects>
             <point key="canvasLocation" x="220" y="643"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="FX9-9o-JGr">
+            <objects>
+                <notificationController id="E8d-n7-yxb">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="kR2-AB-yCX">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </label>
+                        <imageView width="136" height="96" alignment="left" image="pills" contentMode="scaleAspectFit" id="KOd-Mp-dSB"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="pills-warning" id="2og-VL-2ne"/>
+                    <color key="backgroundColor" red="0.88627450980392153" green="0.20000000000000001" blue="0.23137254901960785" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="kR2-AB-yCX" id="d4x-aP-6Yb"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="453" y="438"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="7Zn-Z7-2Qd">
+            <objects>
+                <notificationController id="f69-tm-1qf">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="PK2-dG-pji">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </label>
+                        <imageView width="136" height="96" alignment="left" image="pills" contentMode="scaleAspectFit" id="1un-ed-1ZD"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="pills-notification" id="MgM-3b-iFM"/>
+                    <color key="backgroundColor" red="0.29803921568627451" green="0.59999999999999998" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="PK2-dG-pji" id="gFO-Yf-OV0"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="665" y="643"/>
         </scene>
     </scenes>
 </document>
