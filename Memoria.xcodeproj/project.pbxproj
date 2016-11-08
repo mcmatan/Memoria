@@ -417,30 +417,6 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
-		9019EBE31C8F66FC008962A5 /* TaskNotificationPopUp */ = {
-			isa = PBXGroup;
-			children = (
-				9019EBE61C8F68A2008962A5 /* TaskNotificationPopUp.swift */,
-			);
-			name = TaskNotificationPopUp;
-			sourceTree = "<group>";
-		};
-		9019EBE41C8F6883008962A5 /* TaskVerificationPopUp */ = {
-			isa = PBXGroup;
-			children = (
-				9019EBEA1C90CA16008962A5 /* TaskVerificationPopUp.swift */,
-			);
-			name = TaskVerificationPopUp;
-			sourceTree = "<group>";
-		};
-		9019EBE51C8F688D008962A5 /* TaskWarningPopUp */ = {
-			isa = PBXGroup;
-			children = (
-				9019EBEC1C90D573008962A5 /* TaskWarningPopUp.swift */,
-			);
-			name = TaskWarningPopUp;
-			sourceTree = "<group>";
-		};
 		9019EBEE1C99F39C008962A5 /* TaskNotificationsTracker */ = {
 			isa = PBXGroup;
 			children = (
@@ -562,9 +538,9 @@
 		9035FE231C1EC60E00D98022 /* ReminderPopUp */ = {
 			isa = PBXGroup;
 			children = (
-				9019EBE51C8F688D008962A5 /* TaskWarningPopUp */,
-				9019EBE41C8F6883008962A5 /* TaskVerificationPopUp */,
-				9019EBE31C8F66FC008962A5 /* TaskNotificationPopUp */,
+				9019EBE61C8F68A2008962A5 /* TaskNotificationPopUp.swift */,
+				9019EBEC1C90D573008962A5 /* TaskWarningPopUp.swift */,
+				9019EBEA1C90CA16008962A5 /* TaskVerificationPopUp.swift */,
 				9035FE241C1EC64500D98022 /* ReminderPopUp.swift */,
 			);
 			name = ReminderPopUp;

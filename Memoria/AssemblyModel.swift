@@ -66,6 +66,14 @@ open class AssemblyModel {
             notificationExecuter: container.resolve(NotificationExecuter.self)!)
             }.inObjectScope(ObjectScope.container)
          let _ = container.resolve(TaskNotificationsTracker.self)
+        
+        
+        container.register(TaskActionsPerformaer.self) { c in
+            return TaskActionsPerformaer(
+                taskServices: container.resolve(TasksServices.self)!)
+            }.inObjectScope(ObjectScope.container)
+        let _ = container.resolve(TaskActionsPerformaer.self)
+        
 
     }
     

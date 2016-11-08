@@ -19,11 +19,9 @@ class TaskVerificationPopUp : ViewController {
     let btnSoundPlaying = Button()
     let task : Task
     let recorder = VoiceRecorder()
-    let tasksServices : TasksServices
     
     init(task : Task, tasksServices : TasksServices) {
         self.task = task
-        self.tasksServices = tasksServices
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -103,14 +101,11 @@ class TaskVerificationPopUp : ViewController {
     //MARK: Buttons
     
     func btnYesPress() {
-        self.dismiss(animated: true) { () -> Void in
-            self.tasksServices.setTaskAsDone(self.task)
-        }
-
+        NotificationCenter.default.post(name: NotificationsNames.kTask_Action_markAsDone, object: self.task)
     }
     
     func btnRemoingMeLaterPress() {
-        self.tasksServices.snoozeTask(task: self.task)
+        NotificationCenter.default.post(name: NotificationsNames.kTask_Action_Snooze, object: self.task)
         self.dismiss(animated: true, completion: nil)
     }
     

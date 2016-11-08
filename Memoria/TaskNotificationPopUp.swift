@@ -15,13 +15,9 @@ class TaskNotificationPopUp : ViewController {
     let playSoundBtn = Button()
     let btnOk = Button()
     let task : Task
-    let recorder : VoiceRecorder
-    let tasksServices: TasksServices
     
     init(task: Task, tasksServices: TasksServices) {
-        self.recorder = VoiceRecorder()
         self.task = task
-        self.tasksServices = tasksServices
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -91,17 +87,13 @@ class TaskNotificationPopUp : ViewController {
     //MARK: Actions
     
     func playSound() {
-        let isSound = self.task.taskType.soundURL(localNotificationCategotry: LocalNotificationCategotry.notification) 
-            if ("" != isSound.absoluteString) {
-                self.recorder.soundFileURL = isSound
-                self.recorder.play()
-            }
+        NotificationCenter.default.post(name: NotificationsNames.kTask_Action_playSound, object: self.task)
     }
     
     //MARK: Buttons
     
     func btnOkPress() {
-        self.tasksServices.snoozeTask(task: self.task)
+        NotificationCenter.default.post(name: NotificationsNames.kTask_Action_Snooze, object: self.task)
         self.dismiss(animated: true, completion: nil)
     }
     

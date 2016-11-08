@@ -9,19 +9,13 @@
 import Foundation
 
 class NotificationsNames {
-    static let enterdAreaWithActiveTeskNotification = "enterdAreaWithActiveTesk" //Holdes task
-    static let beaconsThatAreNearNotification = "beaconIsNear" // Holdes CLBeacon Array
-
-    static let NotificationDidOccur = "NotificationDidOccur"
     
     static let kTaskDone = "TaskDone"
-
+    
     static let kPresentTaskNotification = Notification.Name(rawValue: "presentTaskNotification")
     static let kPresentTaskVerification = Notification.Name(rawValue: "presentTaskVerification")
     static let kPresentTaskWarning = Notification.Name(rawValue: "presentTaskWarning")
     static let kPresentTaskMarkedAsDone = Notification.Name(rawValue: "presentTaskMarkedAsDone")
-    
-    static let ConfirmTaskNotification = Notification.Name(rawValue: "ConfirmTaskNotification")
     
     
     //All will pass "Task" Object"

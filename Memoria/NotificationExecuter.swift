@@ -49,13 +49,13 @@ class NotificationExecuter: NSObject, UNUserNotificationCenterDelegate {
         }
         switch response.actionIdentifier {
         case NotificationActionsInfos.playSound.identifer:
-            NotificationCenter.default.post(name: NotificationsNames.kVerificationPlaysSoundPress, object: isTask)
+            NotificationCenter.default.post(name: NotificationsNames.kTask_Action_playSound, object: isTask)
         case NotificationActionsInfos.verificationConfirm.identifer:
-            NotificationCenter.default.post(name: NotificationsNames.kVerificationConfirmPress, object: isTask)
+            NotificationCenter.default.post(name: NotificationsNames.kTask_Action_markAsDone, object: isTask)
         case NotificationActionsInfos.verificationRemindMeLater.identifer:
-            NotificationCenter.default.post(name: NotificationsNames.kVericiationRemindMeLaterPress, object: isTask)
+            NotificationCenter.default.post(name: NotificationsNames.kTask_Action_Snooze, object: isTask)
         case NotificationActionsInfos.warningThankYou.identifer: break
-            
+        default: break;
         }
         
     }

@@ -8,43 +8,43 @@
 
 import Foundation
 import UIKit
+import SwiftDate
 
 class TaskActionsPerformaer: NSObject {
     let recorder = VoiceRecorder()
-    let taskNotificationsTracker: TaskNotificationsTracker
-    let notificationScheduler: NotificationScheduler
+    let taskServices: TasksServices
     
-    init(notificationScheduler: NotificationScheduler, taskNotificationsTracker: TaskNotificationsTracker) {
-        self.taskNotificationsTracker = taskNotificationsTracker
-        self.notificationScheduler = notificationScheduler
+    init(taskServices: TasksServices) {
+        self.taskServices = taskServices
         super.init()
         self.regidterForEvents()
     }
     
     func regidterForEvents() {
-        NotificationCenter.default.addObserver(self, selector: #selector(TaskActionsPerformaer.playSound), name: NotificationsNames.kTask_Action_playSound, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(TaskActionsPerformaer.playSound(notification:)), name: NotificationsNames.kTask_Action_playSound, object: nil)
         
-        NotificationCenter.default.addObserver(self, selector: #selector(TaskActionsPerformaer.markTaskAsDone), name: NotificationsNames.kTask_Action_markAsDone, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(TaskActionsPerformaer.markTaskAsDone(notification:)), name: NotificationsNames.kTask_Action_markAsDone, object: nil)
         
-        NotificationCenter.default.addObserver(self, selector: #selector(TaskActionsPerformaer.snooze(_:)), name: NotificationsNames.kTask_Action_Snooze, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(TaskActionsPerformaer.snooze(notification:)), name: NotificationsNames.kTask_Action_Snooze, object: nil)
     }
     
     
-    func playSound(notification: NSNotification) {
+    internal func playSound(notification: NSNotification) {
         let task = notification.object as! Task
         let isSound = task.taskType.soundURL(localNotificationCategotry: LocalNotificationCategotry.verification)
         if ("" != isSound.absoluteString) {
             self.recorder.soundFileURL = isSound as URL!
             self.recorder.play()
-    }
-    
-    func markTaskAsDone(notification: NSNotification) {
-        let task = notification.object as! Task
-        self.taskNotificationsTracker.markTaskAsDone(task)
-    }
-    
-    func snooze(notification: NSNotification) {
-        self.scheduler.squeduleReminderForTask(task, date: Date() + snoozeMin.minutes)
         }
+    }
+    
+    internal func markTaskAsDone(notification: NSNotification) {
+        let task = notification.object as! Task
+        self.taskServices.setTaskAsDone(task)
+    }
+    
+    internal func snooze(notification: NSNotification) {
+        let task = notification.object as! Task
+        self.taskServices.snoozeTask(task: task)
     }
 }
