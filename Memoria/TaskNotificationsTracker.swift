@@ -91,7 +91,7 @@ class TaskNotificationsTracker : NSObject, IbeaconsTrackerDelegate {
         self.taskDB.saveTask(task)
         self.ibeaconsTracker.unRegisterForBeacon(uuid: (task.taskBeaconIdentifier?.uuid)!, major: (task.taskBeaconIdentifier?.major)!, minor: (task.taskBeaconIdentifier?.minor)!)
         NotificationCenter.default.post(name: Notification.Name(rawValue: NotificationsNames.kTaskDone), object: task, userInfo: nil)
-        NotificationCenter.default.post(name: Notification.Name(rawValue: NotificationsNames.kPresentTaskMarkedAsDone), object: task, userInfo: nil)
+        NotificationCenter.default.post(name: NotificationsNames.kPresentTaskMarkedAsDone, object: task, userInfo: nil)
     }
     
     //MARK: Private
@@ -153,7 +153,7 @@ class TaskNotificationsTracker : NSObject, IbeaconsTrackerDelegate {
             }
         }
         task.timeLastVerifyWasShow = now
-        NotificationCenter.default.post(name: Notification.Name(rawValue: NotificationsNames.kPresentTaskVerification), object: task, userInfo: nil)
+        NotificationCenter.default.post(name: NotificationsNames.kPresentTaskVerification, object: task, userInfo: nil)
     }
     
     fileprivate func taskWarning(_ task : Task) {
@@ -174,7 +174,7 @@ class TaskNotificationsTracker : NSObject, IbeaconsTrackerDelegate {
                     }
                 }
                 task.timeLastWarningWasShow = Date()
-                NotificationCenter.default.post(name: Notification.Name(rawValue: NotificationsNames.kPresentTaskWarning), object: task, userInfo: nil)
+                NotificationCenter.default.post(name: NotificationsNames.kPresentTaskWarning, object: task, userInfo: nil)
             }            
         }
     }

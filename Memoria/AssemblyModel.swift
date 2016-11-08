@@ -40,7 +40,8 @@ open class AssemblyModel {
         
         container.register(NotificationExecuter.self) { c in
             return NotificationExecuter(
-                tasksDB: container.resolve(TasksDB.self)!)
+                tasksDB: container.resolve(TasksDB.self)!
+                )
             }.inObjectScope(ObjectScope.container)
 
         container.register(NotificationScheduler.self) { c in

@@ -12,12 +12,8 @@ import UserNotifications
 
 class NotificationExecuter: NSObject, UNUserNotificationCenterDelegate {
     let tasksDB : TasksDB
-    let recorder = VoiceRecorder()
-    let taskNotificationsTracker: TaskNotificationsTracker
     
-    init(tasksDB : TasksDB, recorder: VoiceRecorder, taskNotificationsTracker: TaskNotificationsTracker) {
-        self.taskNotificationsTracker = taskNotificationsTracker
-        self.recorder = recorder
+    init(tasksDB : TasksDB) {
         self.tasksDB = tasksDB
         super.init()
         UNUserNotificationCenter.current().delegate = self
@@ -39,7 +35,7 @@ class NotificationExecuter: NSObject, UNUserNotificationCenterDelegate {
         }
         
         if isTask.isTaskDone == false {
-            NotificationCenter.default.post(name: Notification.Name(rawValue: NotificationsNames.kPresentTaskNotification), object: task, userInfo: nil)
+            NotificationCenter.default.post(name: NotificationsNames.kPresentTaskNotification, object: task, userInfo: nil)
         }
     }
     
@@ -53,15 +49,11 @@ class NotificationExecuter: NSObject, UNUserNotificationCenterDelegate {
         }
         switch response.actionIdentifier {
         case NotificationActionsInfos.playSound.identifer:
-            let isSound = isTask.taskType.soundURL(localNotificationCategotry: LocalNotificationCategotry.verification)
-            if ("" != isSound.absoluteString) {
-                self.recorder.soundFileURL = isSound as URL!
-                self.recorder.play()
-            }
+            NotificationCenter.default.post(name: NotificationsNames.kVerificationPlaysSoundPress, object: isTask)
         case NotificationActionsInfos.verificationConfirm.identifer:
-            self.taskNotificationsTracker.markTaskAsDone(isTask)
+            NotificationCenter.default.post(name: NotificationsNames.kVerificationConfirmPress, object: isTask)
         case NotificationActionsInfos.verificationRemindMeLater.identifer:
-            self.scheduler.squeduleReminderForTask(task, date: Date() + snoozeMin.minutes)
+            NotificationCenter.default.post(name: NotificationsNames.kVericiationRemindMeLaterPress, object: isTask)
         case NotificationActionsInfos.warningThankYou.identifer: break
             
         }

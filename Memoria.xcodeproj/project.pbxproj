@@ -91,6 +91,7 @@
 		9075214F1CE904A800FDFF3D /* LabelsTextsHe.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9075214E1CE904A800FDFF3D /* LabelsTextsHe.plist */; };
 		90B0C53F1DAAE3870019D59B /* LocalNotificationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B0C53E1DAAE3870019D59B /* LocalNotificationPresenter.swift */; };
 		90C5887B1C46E0AC00D84C73 /* TaskManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C5887A1C46E0AC00D84C73 /* TaskManagerViewController.swift */; };
+		90C7AB031DD2397300185630 /* TaskActionsPerformaer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C7AB021DD2397300185630 /* TaskActionsPerformaer.swift */; };
 		90CE2AF51CF4DE0E00511ED4 /* ButtonsTextsHe.plist in Resources */ = {isa = PBXBuildFile; fileRef = 90CE2AF41CF4DE0E00511ED4 /* ButtonsTextsHe.plist */; };
 		90CE2AF71CF4E6A200511ED4 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CE2AF61CF4E6A200511ED4 /* Fonts.swift */; };
 		90DC620C1C6F62BB000C4457 /* DictionaryExntentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DC620B1C6F62BB000C4457 /* DictionaryExntentions.swift */; };
@@ -255,6 +256,7 @@
 		9075214E1CE904A800FDFF3D /* LabelsTextsHe.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LabelsTextsHe.plist; sourceTree = "<group>"; };
 		90B0C53E1DAAE3870019D59B /* LocalNotificationPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalNotificationPresenter.swift; sourceTree = "<group>"; };
 		90C5887A1C46E0AC00D84C73 /* TaskManagerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskManagerViewController.swift; sourceTree = "<group>"; };
+		90C7AB021DD2397300185630 /* TaskActionsPerformaer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskActionsPerformaer.swift; sourceTree = "<group>"; };
 		90CE2AF41CF4DE0E00511ED4 /* ButtonsTextsHe.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ButtonsTextsHe.plist; sourceTree = "<group>"; };
 		90CE2AF61CF4E6A200511ED4 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		90DC620B1C6F62BB000C4457 /* DictionaryExntentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryExntentions.swift; sourceTree = "<group>"; };
@@ -725,6 +727,14 @@
 			name = ManageTasksViewController;
 			sourceTree = "<group>";
 		};
+		90C7AB011DD2395500185630 /* NotificationsActionsPerformer */ = {
+			isa = PBXGroup;
+			children = (
+				90C7AB021DD2397300185630 /* TaskActionsPerformaer.swift */,
+			);
+			name = NotificationsActionsPerformer;
+			sourceTree = "<group>";
+		};
 		90D4ACEB1DD0779D00CA47CB /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -864,6 +874,7 @@
 		90F009F81C4A7AFA002C98BA /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				90C7AB011DD2395500185630 /* NotificationsActionsPerformer */,
 				903B30D71DCFAED10015C6FA /* Presenters */,
 				9013498C1DB4E047005FA445 /* Views */,
 				9011271F1C1AF6730088DD6B /* Screens */,
@@ -1311,6 +1322,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9035FE2C1C1ECFC300D98022 /* TextField.swift in Sources */,
+				90C7AB031DD2397300185630 /* TaskActionsPerformaer.swift in Sources */,
 				90F00A081C4A7C06002C98BA /* IbeaconsTrackerHelper.swift in Sources */,
 				9019EBF01C99F3B3008962A5 /* TaskNotificationsTracker.swift in Sources */,
 				9035FE171C1B17BA00D98022 /* Content.swift in Sources */,
