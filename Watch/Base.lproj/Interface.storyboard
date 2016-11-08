@@ -76,5 +76,119 @@
             </objects>
             <point key="canvasLocation" x="665" y="643"/>
         </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="N3q-um-Skd">
+            <objects>
+                <notificationController id="EiO-RV-XBF">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="wUJ-r7-thl">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </label>
+                        <imageView width="136" height="96" alignment="left" image="food" contentMode="scaleAspectFit" id="jyk-uL-oDR"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="food-verification" id="IzK-5q-Pn4"/>
+                    <color key="backgroundColor" red="0.1450980392" green="0.78823529410000004" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="wUJ-r7-thl" id="Gpg-GF-ddE"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="220" y="1094"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="Ofr-PU-IQB">
+            <objects>
+                <notificationController id="ZY8-I3-anF">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="j0m-rR-Y3e">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </label>
+                        <imageView width="136" height="96" alignment="left" image="food" contentMode="scaleAspectFit" id="1u0-s6-5NM"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="food-notification" id="tXN-UH-U3p"/>
+                    <color key="backgroundColor" red="0.29803921570000003" green="0.59999999999999998" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="j0m-rR-Y3e" id="Sdz-VF-Mne"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="673" y="1094"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="gwY-Iv-mq4">
+            <objects>
+                <notificationController id="Qug-oG-hK4">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="EfP-4R-1rb">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </label>
+                        <imageView width="136" height="96" alignment="left" image="food" contentMode="scaleAspectFit" id="aHc-xz-fhS"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="food-warning" id="mEb-er-ege"/>
+                    <color key="backgroundColor" red="0.8862745098" green="0.20000000000000001" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="EfP-4R-1rb" id="cyx-48-2fY"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="443" y="897"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="M5a-8g-IBE">
+            <objects>
+                <notificationController id="u1C-Ln-40E">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="vA2-Ct-WAp">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </label>
+                        <imageView width="136" height="96" alignment="left" image="brushTeeth" contentMode="scaleAspectFit" id="1VC-e7-XCT"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="brushTeeth-verification" id="8Vz-xS-nxh"/>
+                    <color key="backgroundColor" red="0.1450980392" green="0.78823529410000004" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="vA2-Ct-WAp" id="pDa-IL-kPO"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="220" y="1479"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="oMo-Pc-Ldz">
+            <objects>
+                <notificationController id="hJb-Sy-gE5">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="2QK-53-BST">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </label>
+                        <imageView width="136" height="96" alignment="left" image="brushTeeth" contentMode="scaleAspectFit" id="7T9-e9-mGq"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="brushTeeth-warning" id="7PB-Xj-ay6"/>
+                    <color key="backgroundColor" red="0.8862745098" green="0.20000000000000001" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="2QK-53-BST" id="GTI-9c-mAf"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="453" y="1374"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="Skp-QR-udK">
+            <objects>
+                <notificationController id="L9e-Si-265">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="s8X-xm-vH0">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </label>
+                        <imageView width="136" height="96" alignment="left" image="brushTeeth" contentMode="scaleAspectFit" id="qVo-zl-xAM"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="brushTeeth-notification" id="Pqk-CV-Pu7"/>
+                    <color key="backgroundColor" red="0.29803921570000003" green="0.59999999999999998" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="s8X-xm-vH0" id="tXr-LT-qzK"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="673" y="1479"/>
+        </scene>
     </scenes>
 </document>

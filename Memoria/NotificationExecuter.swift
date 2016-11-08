@@ -12,8 +12,12 @@ import UserNotifications
 
 class NotificationExecuter: NSObject, UNUserNotificationCenterDelegate {
     let tasksDB : TasksDB
+    let recorder = VoiceRecorder()
+    let taskNotificationsTracker: TaskNotificationsTracker
     
-    init(tasksDB : TasksDB) {
+    init(tasksDB : TasksDB, recorder: VoiceRecorder, taskNotificationsTracker: TaskNotificationsTracker) {
+        self.taskNotificationsTracker = taskNotificationsTracker
+        self.recorder = recorder
         self.tasksDB = tasksDB
         super.init()
         UNUserNotificationCenter.current().delegate = self
@@ -42,11 +46,26 @@ class NotificationExecuter: NSObject, UNUserNotificationCenterDelegate {
     //On Tap
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Swift.Void) {
         print(#function)
-        if response.notification.request.content.categoryIdentifier == LocalNotificationCategotry.notification.rawValue {
-            if let isTask = self.getTaskFromNotification(notification: response.notification) {
-             NotificationCenter.default.post(name: Notification.Name(rawValue: NotificationsNames.kPresentTaskNotification), object: isTask, userInfo: nil)
-            }
+        
+        let task = self.getTaskFromNotification(notification: response.notification)
+        guard let isTask = task else {
+            return
         }
+        switch response.actionIdentifier {
+        case NotificationActionsInfos.playSound.identifer:
+            let isSound = isTask.taskType.soundURL(localNotificationCategotry: LocalNotificationCategotry.verification)
+            if ("" != isSound.absoluteString) {
+                self.recorder.soundFileURL = isSound as URL!
+                self.recorder.play()
+            }
+        case NotificationActionsInfos.verificationConfirm.identifer:
+            self.taskNotificationsTracker.markTaskAsDone(isTask)
+        case NotificationActionsInfos.verificationRemindMeLater.identifer:
+            self.scheduler.squeduleReminderForTask(task, date: Date() + snoozeMin.minutes)
+        case NotificationActionsInfos.warningThankYou.identifer: break
+            
+        }
+        
     }
     
     func getTaskFromNotification(notification: UNNotification)->Task? {

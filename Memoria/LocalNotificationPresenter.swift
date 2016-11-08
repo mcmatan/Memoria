@@ -62,12 +62,15 @@ class LocalNotificationPresenter {
     }
     
     static func showLocalNotification(title: String, subtitle: String, body: String, localNotificationCategory: LocalNotificationCategotry, date: Date?, userInfo: [String: Any]?, sound: URL?, imageURL: URL?, taskType: String) {
+        
+        LocalNotificationActions.setupActions()
+        
         let content = UNMutableNotificationContent()
         content.title = title
         content.subtitle = subtitle
         content.body = body
         content.sound = UNNotificationSound(named: "pillsVerification.diff")
-        content.categoryIdentifier =  "\(taskType)-\(localNotificationCategory.rawValue)"
+        content.categoryIdentifier = LocalNotificationCategoryBuilder.buildCategory(taskType: taskType, localNotificationCategory: localNotificationCategory)
         
         if let isUserInfo = userInfo {
             content.userInfo = isUserInfo
@@ -78,7 +81,10 @@ class LocalNotificationPresenter {
             content.attachments = attachments
         }
         
-        let fireTimeInterval = (date != nil) ? date!.timeIntervalSinceNow : TimeInterval(0.01)
+        var fireTimeInterval = (date != nil) ? date!.timeIntervalSinceNow : TimeInterval(0.01)
+        if fireTimeInterval < 0 {
+            fireTimeInterval = 0.01
+        }
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: fireTimeInterval, repeats: false)
         let requestIdentifier = content.categoryIdentifier
         let request = UNNotificationRequest(identifier: requestIdentifier, content: content,trigger: trigger)

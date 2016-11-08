@@ -28,6 +28,8 @@ enum TaskType: String {
     case food = "food"
     case drugs = "drugs"
     
+    static func getAllValus()-> [TaskType] {return [TaskType.brushTeeth, TaskType.food, TaskType.drugs]}
+    
     func name()->String {
         switch self {
         case .brushTeeth:

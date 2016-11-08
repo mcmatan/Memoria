@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.rootViewController = rootViewController
         self.window?.makeKeyAndVisible()
         self .navigationBarAppearance()
+    
         return true
     }
     
@@ -51,26 +52,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-    }
-    
-    func presentTestNoficiationScreen() {
-        let delayTime = DispatchTime.now() + Double(Int64(1 * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
-        DispatchQueue.main.asyncAfter(deadline: delayTime) {
-            
-//            let beaconIdentifier = IBeaconIdentifier(uuid: "124", major: "123", minor: "123")
-//            let date = Date() - 3.hours
-//            _ = Task(taskName: "להוציא את הכלב", taskTime: date, taskVoiceURL: URL(string: "www.google.com")!, taskBeaconIdentifier: beaconIdentifier, taskTimePriorityHi: true)
-//            
-//            //            self.vc = Bootstrapper.container.resolve(TaskNotificationPopUp.self, argument: task)
-//            //            self.vc = Bootstrapper.container.resolve(TaskVerificationPopUp.self, argument: task)
-//            //            self.vc = Bootstrapper.container.resolve(TaskWarningPopUp.self, argument: task)
-//            
-//            //            rootViewController!.presentViewController(self.vc, animated: true, completion: nil)
-//            
-//            AEConsole.launch(with: self)
-            
-            
-        }
     }
 
 }

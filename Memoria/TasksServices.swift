@@ -9,8 +9,9 @@
 import Foundation
 import SwiftDate
 
+let snoozeMin = 5
+
 class TasksServices {
-    private let snoozeMin = 5
     private var tasksDB : TasksDB
     private let scheduler : NotificationScheduler
     private let beaconTracker: IbeaconsTracker

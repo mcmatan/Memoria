@@ -47,6 +47,10 @@ open class AssemblyModel {
             return NotificationScheduler()
             }.inObjectScope(ObjectScope.container)
         
+        container.register(TestingNotifications.self) { c in
+            return TestingNotifications()
+            }.inObjectScope(ObjectScope.container)
+        let _ = container.resolve(TestingNotifications.self)
         
         container.register(WatchCommunicationType.self) { c in
             return WatchCommunication()
