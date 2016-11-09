@@ -14,11 +14,11 @@ let snoozeMin = 5
 class TasksServices {
     private var tasksDB : TasksDB
     private let scheduler : NotificationScheduler
-    private let beaconTracker: IbeaconsTracker
+    private let nearableStriggerManager: NearableStriggerManager
     fileprivate let taskNotificationsTracker : TaskNotificationsTracker
 
-    init(tasksDB : TasksDB, scheduler : NotificationScheduler, taskNotificationsTracker : TaskNotificationsTracker, beaconTracker: IbeaconsTracker) {
-        self.beaconTracker = beaconTracker
+    init(tasksDB : TasksDB, scheduler : NotificationScheduler, taskNotificationsTracker : TaskNotificationsTracker, nearableStriggerManager: NearableStriggerManager) {
+        self.nearableStriggerManager = nearableStriggerManager
         self.scheduler = scheduler
         self.tasksDB = tasksDB
         self.taskNotificationsTracker = taskNotificationsTracker
@@ -27,7 +27,7 @@ class TasksServices {
     func saveTask(_ task :Task) {
         self.scheduler.squeduleReminderForTask(task)
         self.tasksDB.saveTask(task)
-        self.beaconTracker.registerForBeacon(uuid: (task.taskBeaconIdentifier?.uuid)!, major: (task.taskBeaconIdentifier?.major)!, minor: (task.taskBeaconIdentifier?.minor)!)
+        self.nearableStriggerManager.startTrackingForMotion(identifer: task.nearableIdentifer)
     }
     
     func snoozeTask(task: Task) {
@@ -54,12 +54,8 @@ class TasksServices {
        return self.tasksDB.getAllTasks()
     }
     
-    func getTaskForIBeaconIdentifier(_ iBeaconIdentifier : IBeaconIdentifier) ->Task {
-        return self.getTaskForMajorAppendedByMinorString(iBeaconIdentifier.majorAppendedByMinorString())
-    }
-
-    func getTaskForMajorAppendedByMinorString(_ majorAppendedByMinorString : String) ->Task {
-        return self.tasksDB.tasksByMajorAppendedWithMinor[majorAppendedByMinorString]!
+    func getTaskForNearableIdentifier(_ nearableIdentifer : String) ->Task {
+        return self.tasksDB.getTaskForNearableIdentifer(nearableIdentifer)!
     }
 
 }

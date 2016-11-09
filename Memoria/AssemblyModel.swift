@@ -9,12 +9,14 @@ open class AssemblyModel {
         container.register(NotificationScheduler.self) { c in
             return NotificationScheduler()
             }.inObjectScope(ObjectScope.container)
-
         
-        container.register(IbeaconsTracker.self) { c in
-            let ibeaconLocationFinder = IbeaconsTracker()
-            return ibeaconLocationFinder
-        }.inObjectScope(ObjectScope.container)
+        container.register(NearableLocator.self) { c in
+            return NearableLocator()
+            }.inObjectScope(ObjectScope.container)
+        
+        container.register(NearableStriggerManager.self) { c in
+            return NearableStriggerManager()
+            }.inObjectScope(ObjectScope.container)
 
         container.register(TasksDB.self) { c in
             return TasksDB()
@@ -25,7 +27,7 @@ open class AssemblyModel {
             }.inObjectScope(ObjectScope.container)
 
         container.register(IBeaconServices.self) { c in
-            return IBeaconServices(ibeaconLocationFinder: container.resolve(IbeaconsTracker.self)!,
+            return IBeaconServices(nearableLocator: container.resolve(NearableLocator.self)!,
                                    tasksDB:container.resolve(TasksDB.self)!,
             beaconCloud:container.resolve(IBeaconCloudType.self)!)
         }.inObjectScope(ObjectScope.container)
@@ -34,7 +36,7 @@ open class AssemblyModel {
             return TasksServices(tasksDB: container.resolve(TasksDB.self)!,
                 scheduler: container.resolve(NotificationScheduler.self)!,
                 taskNotificationsTracker: container.resolve(TaskNotificationsTracker.self)!,
-                beaconTracker: container.resolve(IbeaconsTracker.self)!
+                nearableStriggerManager: container.resolve(NearableStriggerManager.self)!
             )
         }.inObjectScope(ObjectScope.container)
 
@@ -56,7 +58,7 @@ open class AssemblyModel {
             return TaskNotificationsTracker(
                 taskDB: container.resolve(TasksDB.self)!,
                 scheduler: container.resolve(NotificationScheduler.self)!,
-                ibeaconsTracker: container.resolve(IbeaconsTracker.self)!)
+                nearableStriggerManager: container.resolve(NearableStriggerManager.self)!)
             }.inObjectScope(ObjectScope.container)
          let _ = container.resolve(TaskNotificationsTracker.self)
         

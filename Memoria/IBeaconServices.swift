@@ -10,30 +10,31 @@ import Foundation
 import UIKit
 
 class IBeaconServices {
-    var ibeaconLocationFinder : IbeaconsTracker
+    var nearableLocator : NearableLocator
     var tasksDB : TasksDB
     let beaconCloud: IBeaconCloudType
     
-    init(ibeaconLocationFinder : IbeaconsTracker, tasksDB : TasksDB, beaconCloud: IBeaconCloudType) {
-        self.ibeaconLocationFinder = ibeaconLocationFinder
+    init(nearableLocator : NearableLocator, tasksDB : TasksDB, beaconCloud: IBeaconCloudType) {
+        self.nearableLocator = nearableLocator
         self.tasksDB = tasksDB
         self.beaconCloud = beaconCloud
     }
     
-    func isThereABeaconInArea(_ handler: (( _ result : Bool, _ beacon : CLBeacon?) -> Void)!) {
-        return self.ibeaconLocationFinder.isThereABeaconInArea(handler)
+    func isThereNearableInErea(_ handler: (( _ result : Bool, _ beacon : ESTNearable?) -> Void)!) {
+        nearableLocator.getClosestNearable({ nearable in
+            if let _ = nearable {
+                handler(true, nearable)
+            } else {
+                handler(false, nearable)
+            }
+        })
     }
     
-    internal func isBeaconInErea(_ iBeaconIdentifier : IBeaconIdentifier , handler: (( _ result : Bool) -> Void)!) {
-        return self.ibeaconLocationFinder.isBeaconInErea(iBeaconIdentifier, handler: handler)
+    func isBeaconAlreadyHasATaskAssigned(_ nearable :ESTNearable)->Bool {
+        return self.tasksDB.isThereTaskForNearableIdentifier(nearable.identifier)
     }
     
-    func isBeaconAlreadyHasATaskAssigned(_ beacon :CLBeacon)->Bool {
-        let closestIBeacon = beacon
-        return self.tasksDB.isThereTaskForIBeaconIdentifier(IBeaconIdentifier.creatFromCLBeacon(closestIBeacon))
-    }
-    
-    func getBeaconColorFor(beaconIdentifier :IBeaconIdentifier)->UIColor {
-        return self.beaconCloud.getColorFor(beaconIdentifier: beaconIdentifier)
+    func getBeaconColorFor(nearableIdentifer :String)->UIColor {
+        return self.beaconCloud.getColorFor(nearableIdentifer: nearableIdentifer)
     }
 }

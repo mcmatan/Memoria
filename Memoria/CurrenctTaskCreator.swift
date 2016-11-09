@@ -12,7 +12,7 @@ import SwiftDate
 class CurrenctTaskCreator {
     
     class func emptyTask()->Task {
-      return  Task(taskType: TaskType.drugs, taskTime: nil, taskBeaconIdentifier: IBeaconIdentifier(uuid: "", major: "", minor: ""), taskTimePriorityHi: false)
+      return  Task(taskType: TaskType.drugs, taskTime: nil, nearableIdentifer: "", taskTimePriorityHi: false)
     }
     
     var task = CurrenctTaskCreator.emptyTask()
@@ -39,8 +39,8 @@ class CurrenctTaskCreator {
         self.task.taskTime = date
     }
     
-    func setTaskBeaconIdentifier(_ iBeaconIdentifier : IBeaconIdentifier) {
-        self.task.taskBeaconIdentifier = iBeaconIdentifier
+    func setTaskNearableIdentifer(_ nearableIdentifer : String) {
+        self.task.nearableIdentifer = nearableIdentifer
     }
     
     func setTaskTimePriority(_ hi : Bool) {
@@ -58,8 +58,8 @@ class CurrenctTaskCreator {
         return self.task.taskTime
     }
     
-    func getTaskBeaconIdentifier()->IBeaconIdentifier? {
-        return self.task.taskBeaconIdentifier!
+    func getTaskNearableIdentifer()->String {
+        return self.task.nearableIdentifer
     }
     
     func getTaskTimePriority()->Bool? {

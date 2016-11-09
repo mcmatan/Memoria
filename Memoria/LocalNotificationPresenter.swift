@@ -91,9 +91,9 @@ class LocalNotificationPresenter {
         content.sound = UNNotificationSound(named: "\(caregtoryIdentifer).aiff") // This doe't work for now, apple bug
         content.categoryIdentifier = caregtoryIdentifer
         
-        let majorAppendedByMinorString = task.taskBeaconIdentifier!.majorAppendedByMinorString()
+        let nearableIdentifer = task.nearableIdentifer
         let key = NotificationScheduler.TaskNotificationKey
-        let userInfo = [key: majorAppendedByMinorString]
+        let userInfo = [key: nearableIdentifer]
 
         content.userInfo = userInfo
         

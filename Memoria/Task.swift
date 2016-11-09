@@ -11,12 +11,9 @@ import UIKit
 
 class Task : NSObject {
     var taskTime: Date?
-    var taskBeaconIdentifier : IBeaconIdentifier?
+    var nearableIdentifer : String
     var taskTimePriorityHi : Bool?
-    var standingNearFromDate : Date?
     var isTaskDone = false
-    var timeLastWarningWasShow : Date?
-    var timeLastVerifyWasShow : Date?
     var taskType: TaskType
     
 
@@ -24,12 +21,12 @@ class Task : NSObject {
      init(
         taskType: TaskType,
         taskTime : Date?,
-        taskBeaconIdentifier : IBeaconIdentifier,
+        nearableIdentifer : String,
         taskTimePriorityHi : Bool
         ) {
         self.taskTime = taskTime
         self.taskType = taskType
-        self.taskBeaconIdentifier = taskBeaconIdentifier
+        self.nearableIdentifer = nearableIdentifer
         self.taskTimePriorityHi = taskTimePriorityHi
     }
 
@@ -37,46 +34,36 @@ class Task : NSObject {
     init(
         taskType: TaskType,
         taskTime : Date,
-        taskBeaconIdentifier : IBeaconIdentifier,
+        nearableIdentifer : String,
         taskTimePriorityHi : Bool,
-        standingNearFromDate : Date?,
-        timeLastWarningWasShow : Date?,
         isTaskDone :Bool
         ) {
             self.taskType = taskType
             self.taskTime = taskTime
-            self.taskBeaconIdentifier = taskBeaconIdentifier
+            self.nearableIdentifer = nearableIdentifer
             self.taskTimePriorityHi = taskTimePriorityHi
             self.isTaskDone = isTaskDone
-            self.standingNearFromDate = standingNearFromDate
-            self.timeLastWarningWasShow = timeLastWarningWasShow
     }
     
     required convenience init(coder aDecoder: NSCoder) {
         let taskTime = aDecoder.decodeObject(forKey: "taskTime") as! Date
-        let taskBeaconIdentifier = aDecoder.decodeObject(forKey: "taskBeaconIdentifier") as! IBeaconIdentifier
+        let nearableIdentifer = aDecoder.decodeObject(forKey: "nearableIdentifer")
         let taskTimePriorityHi = aDecoder.decodeBool(forKey: "taskTimePriorityHi")
-        let standingNearFromDate = aDecoder.decodeObject(forKey: "standingNearFromDate") as! Date?
-        let timeLastWarningWasShow = aDecoder.decodeObject(forKey: "timeLastWarningWasShow") as! Date?
         let isTaskDone = aDecoder.decodeBool(forKey: "isTaskDone")
         let taskType = aDecoder.decodeObject(forKey: "taskType")
         self.init(taskType: TaskType(typeString: taskType as! String),
                   taskTime : taskTime,
-                  taskBeaconIdentifier : taskBeaconIdentifier ,
+                  nearableIdentifer : nearableIdentifer as! String,
                   taskTimePriorityHi : taskTimePriorityHi,
-                  standingNearFromDate : standingNearFromDate,
-                  timeLastWarningWasShow : timeLastWarningWasShow,
-                  isTaskDone : isTaskDone
+            isTaskDone: isTaskDone
         )
     }
     
     func encodeWithCoder(_ aCoder: NSCoder) {
         aCoder.encode(taskType.rawValue, forKey: "taskType")
         aCoder.encode(taskTime, forKey: "taskTime")
-        aCoder.encode(taskBeaconIdentifier, forKey: "taskBeaconIdentifier")
+        aCoder.encode(nearableIdentifer, forKey: "nearableIdentifer")
         aCoder.encode(taskTimePriorityHi!, forKey: "taskTimePriorityHi")
         aCoder.encode(isTaskDone, forKey: "isTaskDone")
-        aCoder.encode(standingNearFromDate, forKey: "standingNearFromDate")
-        aCoder.encode(timeLastWarningWasShow, forKey: "timeLastWarningWasShow")
     }
 }

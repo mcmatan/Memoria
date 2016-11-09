@@ -12,7 +12,7 @@ import SwiftDate
 import UserNotifications
 
 class NotificationScheduler : NSObject {
-    static var TaskNotificationKey : String = "majorAppendedByMinorString"
+    static var TaskNotificationKey : String = "nearableIdentifier"
     
     internal func squeduleReminderForTask(_ task : Task) {
         self.squeduleReminderForTask(task, date: task.taskTime!)

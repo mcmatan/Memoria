@@ -31,6 +31,7 @@ class UINotificationExecuter: NSObject, UNUserNotificationCenterDelegate {
     //On Show
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Swift.Void) {
         print(#function)
+        return //MC REMOVE
         let task = self.getTaskFromNotification(notification: notification)
         guard let isTask = task else {
             return
@@ -82,11 +83,11 @@ class UINotificationExecuter: NSObject, UNUserNotificationCenterDelegate {
     
     func getTaskFromNotification(notification: UNNotification)->Task? {
         let key = NotificationScheduler.TaskNotificationKey
-        let majorAppendedByMinor = notification.request.content.userInfo[key] as? String
-        guard let _ = majorAppendedByMinor else {
+        let nearableIdentifer = notification.request.content.userInfo[key] as? String
+        guard let isNearableIdentifer = nearableIdentifer else {
             return nil
         }
-        let task = self.taskServices.getTaskForMajorAppendedByMinorString(majorAppendedByMinor!)
+        let task = self.taskServices.getTaskForNearableIdentifier(isNearableIdentifer)
         return task
     }
 }

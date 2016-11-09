@@ -19,13 +19,29 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Memoria/NotificationExecuter.swift"
-            timestampString = "500335942.607458"
+            filePath = "Memoria/NearableStriggerManager.swift"
+            timestampString = "500403736.205228"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
-            landmarkName = "userNotificationCenter(_:willPresent:withCompletionHandler:)"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "stopTrackingForMotion(identifer:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Memoria/NearableLocator.swift"
+            timestampString = "500405776.225775"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "nearableManager(_:didRangeNearables:with:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

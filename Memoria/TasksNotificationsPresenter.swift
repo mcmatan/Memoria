@@ -37,7 +37,6 @@ class TasksNotificationsPresenter : NSObject {
         let task = notification.object as? Task
         let text = "Task has marked as done"
         let cancelButton = ButtonAction(title: "Ok", handler: { (ButtonAction) -> Void in
-            self.iBeaconServices.isBeaconInErea(task!.taskBeaconIdentifier!, handler: { (result) -> Void in})
         })
         
         if UIApplication.isActive() == true {

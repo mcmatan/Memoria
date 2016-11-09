@@ -10,36 +10,38 @@ import Foundation
 import UIKit
 
 protocol IBeaconCloudType {
- func getColorFor(beaconIdentifier: IBeaconIdentifier)->UIColor
+    func getColorFor(nearableIdentifer: String)->UIColor
 }
 
-enum ColorForIBeaconIdentifier {
-    case Lemon
-    case Beetroot
-    case Candy
-    case Nun
+struct NearbleColors {
+    static let perpule = UIColor(red: 73.0/255.0, green: 63.0/255.0, blue: 152.0/255.0, alpha: 1)
+    static let lightBlue = UIColor(red: 143.0/255.0, green: 210.0/255.0, blue: 247.0/255.0, alpha: 1)
+    static let pink = UIColor(red: 240.0/255.0, green: 130.0/255.0, blue: 179.0/255.0, alpha: 1)
+    static let lightGreen = UIColor(red: 142.0/255.0, green: 197.0/255.0, blue: 157.0/255.0, alpha: 1)
+    static let yellow = UIColor(red: 193.0/255.0, green: 190.0/255.0, blue: 10.0/255.0, alpha: 1)
     
-    static func fromMajor(major: String)->ColorForIBeaconIdentifier {
-        switch major {
-        case "58227":
-            return .Lemon
-        case "5487":
-            return .Beetroot
-        case "17042":
-            return .Candy
-        default:
-            return .Nun
-        }
-    }
-    
-    func color()->UIColor {
-        switch self {
-        case .Lemon:
-            return UIColor(red: 243.0/255.0, green: 224.0/255.0, blue: 0.0/255.0, alpha: 1)
-        case .Beetroot:
-            return UIColor(red: 113.0/255.0, green: 47.0/255.0, blue: 71.0/255.0, alpha: 1)
-        case .Candy:
-            return UIColor(red: 246.0/255.0, green: 190.0/255.0, blue: 214.0/255.0, alpha: 1)
+    static func getColorFor(nearableIdentifer: String)->UIColor {
+        switch nearableIdentifer {
+        case "d886be9f04ca4a3b":
+            return NearbleColors.perpule
+        case "1160295d91075eaa":
+            return NearbleColors.perpule
+        case "66dca145bccee801":
+            return NearbleColors.perpule
+        case "b56617d88f702942":
+            return NearbleColors.lightBlue
+        case "79a5e664f02beff6":
+            return NearbleColors.pink
+        case "c720d7e9e2808c5d":
+            return NearbleColors.lightGreen
+        case "c7a5b1e662a5e798":
+            return NearbleColors.lightGreen
+        case "f1796cdd42911c9c":
+            return NearbleColors.pink
+        case "4338e96fc7711be0":
+            return NearbleColors.yellow
+        case "b9240b46784d9e8f":
+            return NearbleColors.lightGreen
         default:
             return UIColor.black
         }
@@ -47,9 +49,7 @@ enum ColorForIBeaconIdentifier {
 }
 
 class IBeaconCloud: IBeaconCloudType {
-    
-    func getColorFor(beaconIdentifier: IBeaconIdentifier)->UIColor {
-        let colorForBeaconIdentifer = ColorForIBeaconIdentifier.fromMajor(major: beaconIdentifier.major)
-        return colorForBeaconIdentifer.color()
+    func getColorFor(nearableIdentifer: String)->UIColor {
+        return NearbleColors.getColorFor(nearableIdentifer: nearableIdentifer)
     }
 }

@@ -12,75 +12,44 @@ import Foundation
 
 
 class TasksDB {
-    var tasksByMajorAppendedWithMinor = [String : Task]()
+    var tasksByNearableIdentifer = [String : Task]()
     
     init() {
         self.loadDB()
     }
-    
-    func getTaskForIBeaconMajorAppendedByMinor(_ majorAppendedMyMinor : String) ->Task? {
-        return self.tasksByMajorAppendedWithMinor[majorAppendedMyMinor]
-    }
-    
-    func getTaskForIBeaconIdentifier(_ iBeaconIdentifier : IBeaconIdentifier) ->Task? {
-        return self.getTaskForIBeaconMajorAppendedByMinor(iBeaconIdentifier.majorAppendedByMinorString())
-    }
-    
-    func getTaskForCLBeacn(_ beacon : CLBeacon)->Task? {
-        let beaconIdentifier = IBeaconIdentifier.creatFromCLBeacon(beacon)
-        return self.getTaskForIBeaconIdentifier(beaconIdentifier)
-    }
-    
-    func isTaskExistsForIbeaconIdentifier(_ iBeaconIdentifier : IBeaconIdentifier) ->Bool {
-        if let _ = self.tasksByMajorAppendedWithMinor[iBeaconIdentifier.majorAppendedByMinorString()] {
-            return true
-        } else {
-            return false
-        }
+
+    func getTaskForNearableIdentifer(_ nearableIdentifer : String) ->Task? {
+        return self.tasksByNearableIdentifer[nearableIdentifer]
     }
     
     func saveTask(_ task : Task) {
-        if let isTaskBeaconIdentifier = task.taskBeaconIdentifier {
-            self.tasksByMajorAppendedWithMinor[isTaskBeaconIdentifier.majorAppendedByMinorString()] = task
-            self.saveDB()
-            self.loadDB()
-        } else {
-         print("Did not save task!!!!!")   
-        }
+        self.tasksByNearableIdentifer[task.nearableIdentifer] = task
+        self.saveDB()
+        self.loadDB()
     }
     
-    func removeTask(_ task : Task)->Bool {
-        if let isTaskBeaconIdentifier = task.taskBeaconIdentifier {
-            self.tasksByMajorAppendedWithMinor.removeValue(forKey: isTaskBeaconIdentifier.majorAppendedByMinorString())
-            self.saveDB()
-            self.loadDB()
-            return true
-        }
-        return false
-
+    func removeTask(_ task : Task) {
+        self.tasksByNearableIdentifer.removeValue(forKey: task.nearableIdentifer)
+        self.saveDB()
+        self.loadDB()
     }
     
     func getAllTasks()->[Task] {
-        return Array(self.tasksByMajorAppendedWithMinor.values)
+        return Array(self.tasksByNearableIdentifer.values)
     }
     
-    func isThereTaskForIBeaconIdentifier(_ iBeaconIdentifier : IBeaconIdentifier)->Bool {
-        return self.isThereTaskForMajorAppendedByMinor(iBeaconIdentifier.majorAppendedByMinorString())  
-    }
-
-    func isThereTaskForMajorAppendedByMinor(_ MajorAppendedByMinor : String)->Bool {
-        if let _ = self.tasksByMajorAppendedWithMinor[MajorAppendedByMinor] {
+    func isThereTaskForNearableIdentifier(_ nearableIdentifer : String)->Bool {
+        if let _ = self.tasksByNearableIdentifer[nearableIdentifer] {
             return true
         } else {
             return false
         }
-        
     }
 
     
     func saveDB() {
         let userDefaults = UserDefaults.standard
-        let encodedData = NSKeyedArchiver.archivedData(withRootObject: self.tasksByMajorAppendedWithMinor)
+        let encodedData = NSKeyedArchiver.archivedData(withRootObject: self.tasksByNearableIdentifer)
         userDefaults.set(encodedData, forKey: "tasks")
         userDefaults.synchronize()
     }
@@ -92,7 +61,7 @@ class TasksDB {
         if let isDecoded = decoded {
             if let isDecodedTasks = NSKeyedUnarchiver.unarchiveObject(with: isDecoded){
                 if let isDecodedTasksAsStringToTask = isDecodedTasks as? [String : Task] {
-                    self.tasksByMajorAppendedWithMinor = isDecodedTasksAsStringToTask
+                    self.tasksByNearableIdentifer = isDecodedTasksAsStringToTask
                 }
             }
 

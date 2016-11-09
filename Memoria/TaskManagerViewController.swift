@@ -150,7 +150,7 @@ class TaskManagerViewController : ViewController, UITableViewDelegate, UITableVi
         
         cell?.textLabel?.text = textForCell
         cell?.accessoryType = UITableViewCellAccessoryType.disclosureIndicator;
-        _ = String.localizedStringWithFormat(Content.getContent(ContentType.labelTxt, name: "TaskManagerVCDetailsTxtCell"), (task.taskTime?.toStringWithCurrentRegion())! , (task.taskBeaconIdentifier!.major))
+        _ = String.localizedStringWithFormat(Content.getContent(ContentType.labelTxt, name: "TaskManagerVCDetailsTxtCell"), (task.taskTime?.toStringWithCurrentRegion())! , task.nearableIdentifer)
         
         cell?.contentView.backgroundColor = task.isTaskDone ? Colors.lightGreen() : UIColor.white
 
@@ -208,18 +208,19 @@ class TaskManagerViewController : ViewController, UITableViewDelegate, UITableVi
     
     func createNewTask() {
         self.activityIndicator.startAnimating()
-        self.iBeaconServices.isThereABeaconInArea { (result, beacon) -> Void in
+        self.iBeaconServices.isThereNearableInErea { (result, nearable) -> Void in
             self.activityIndicator.stopAnimating()
             if result == false {
                 self.showNoBeaconInEreaMessage()
                 return
             }
-            if self.iBeaconServices.isBeaconAlreadyHasATaskAssigned(beacon!) == true {
-                self.showBeaconHasAlreadyTaskAssignedMessage(beacon!)
+            
+            if self.iBeaconServices.isBeaconAlreadyHasATaskAssigned(nearable!) == true {
+                self.showBeaconHasAlreadyTaskAssignedMessage(nearable!)
                 return
             }
             
-            self.goToNextPage(beacon!)
+            self.goToNextPage(nearable!)
         }
     }
     
@@ -234,16 +235,15 @@ class TaskManagerViewController : ViewController, UITableViewDelegate, UITableVi
         
     }
     
-    func showBeaconHasAlreadyTaskAssignedMessage(_ closestBeacon : CLBeacon) {
-        let closeiBeaconIdentifier = IBeaconIdentifier.creatFromCLBeacon(closestBeacon)
+    func showBeaconHasAlreadyTaskAssignedMessage(_ closestNearable : ESTNearable) {
         let title = Content.getContent(ContentType.labelTxt, name: "TaskManagerVCTheBeaconHasTaskAllreadyMessage")
         let btnYesTxt = Content.getContent(ContentType.buttonTxt, name: "Yes")
         let btnNoTxt = Content.getContent(ContentType.buttonTxt, name: "No")
         let alert = UIAlertController(title: title, message: "", preferredStyle: UIAlertControllerStyle.alert)
         let btnYes = UIAlertAction(title: btnYesTxt, style: UIAlertActionStyle.default) { (action : UIAlertAction) in
-            let task = self.tasksServices.getTaskForIBeaconIdentifier(closeiBeaconIdentifier)
+            let task = self.tasksServices.getTaskForNearableIdentifier(closestNearable.identifier)
             self.currenctTaskCreator.setCurrenctTask(task)
-            self.goToNextPage(closestBeacon)
+            self.goToNextPage(closestNearable)
         }
         
         let btnNo = UIAlertAction(title: btnNoTxt, style: UIAlertActionStyle.cancel) { (action : UIAlertAction) in
@@ -255,11 +255,9 @@ class TaskManagerViewController : ViewController, UITableViewDelegate, UITableVi
     
     //MARK: Navgiation
     
-    func goToNextPage(_ closestBeacon : CLBeacon) {
-        let closeiBeaconIdentifier = IBeaconIdentifier.creatFromCLBeacon(closestBeacon)
+    func goToNextPage(_ closestNearable : ESTNearable) {
         self.currenctTaskCreator.startNewTask()
-        self.currenctTaskCreator.setTaskBeaconIdentifier(closeiBeaconIdentifier)
-        
+        self.currenctTaskCreator.setTaskNearableIdentifer(closestNearable.identifier)
         if let _ = self.addTaskTypeViewController {} else {
             self.addTaskTypeViewController = self.container.resolve(AddTaskTypeViewController.self)
         }

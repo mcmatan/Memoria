@@ -10,6 +10,9 @@ class Bootstrapper {
         AssemblyControllers.run(container)
         
         let _ = container.resolve(UINotificationExecuter.self)
+        let _ = container.resolve(NearableStriggerManager.self)
+        let _ = container.resolve(NearableLocator.self)
+        
      
     }
     
