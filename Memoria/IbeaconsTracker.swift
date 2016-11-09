@@ -18,7 +18,6 @@ class IbeaconsTracker : NSObject  , ESTBeaconManagerDelegate {
     
     override init() {
         super.init()
-        
         self.beaconManager.delegate = self
         self.beaconManager.requestAlwaysAuthorization() // Location for the app also when in background
 
