@@ -1,5 +1,5 @@
 //
-//  NotificationExecuter.swift
+//  UINotificationExecuter.swift
 //  Memoria
 //
 //  Created by Matan Cohen on 11/10/2016.
@@ -8,13 +8,15 @@
 
 import Foundation
 import UIKit
+import Swinject
 import UserNotifications
 
-class NotificationExecuter: NSObject, UNUserNotificationCenterDelegate {
-    let tasksDB : TasksDB
-    
-    init(tasksDB : TasksDB) {
-        self.tasksDB = tasksDB
+class UINotificationExecuter: NSObject, UNUserNotificationCenterDelegate {
+    let taskServices: TasksServices
+    let tasksNotificationsPresenter: TasksNotificationsPresenter
+    init(taskServices: TasksServices, tasksNotificationsPresenter: TasksNotificationsPresenter) {
+        self.taskServices = taskServices
+        self.tasksNotificationsPresenter = tasksNotificationsPresenter
         super.init()
         UNUserNotificationCenter.current().delegate = self
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) { (granted, error) in
@@ -47,17 +49,35 @@ class NotificationExecuter: NSObject, UNUserNotificationCenterDelegate {
         guard let isTask = task else {
             return
         }
+        
         switch response.actionIdentifier {
         case NotificationActionsInfos.playSound.identifer:
-            NotificationCenter.default.post(name: NotificationsNames.kTask_Action_playSound, object: isTask)
+            NotificationCenter.default.post(name: NotificationsNames.kTask_Action_playSound,
+                                            object: TaskActionDTO(task: isTask,
+                                                                  localNotificationCategort: LocalNotificationCategotry.notification))
         case NotificationActionsInfos.verificationConfirm.identifer:
-            NotificationCenter.default.post(name: NotificationsNames.kTask_Action_markAsDone, object: isTask)
+            NotificationCenter.default.post(name: NotificationsNames.kTask_Action_markAsDone,
+                                            object: TaskActionDTO(task: isTask,
+                                                                  localNotificationCategort: LocalNotificationCategotry.verification))
         case NotificationActionsInfos.verificationRemindMeLater.identifer:
-            NotificationCenter.default.post(name: NotificationsNames.kTask_Action_Snooze, object: isTask)
+            NotificationCenter.default.post(name: NotificationsNames.kTask_Action_Snooze,
+                                            object: TaskActionDTO(task: isTask,
+                                                                  localNotificationCategort: LocalNotificationCategotry.verification))
         case NotificationActionsInfos.warningThankYou.identifer: break
-        default: break;
+            default:
+                let category = LocalNotificationCategoryBuilder.getLocalNotificationCategory(category: response.notification.request.content.categoryIdentifier)
+                switch category {
+                case LocalNotificationCategotry.done:
+                    break;
+                case LocalNotificationCategotry.notification:
+                    self.tasksNotificationsPresenter.presentTaskNotification(task: task!, playSound: false)
+                case LocalNotificationCategotry.verification:
+                    self.tasksNotificationsPresenter.presentTaskVerification(task: task!, playSound: false)
+                case LocalNotificationCategotry.warning:
+                    self.tasksNotificationsPresenter.presentTaskWarning(task: task!, playSound: false)
         }
         
+     }
     }
     
     func getTaskFromNotification(notification: UNNotification)->Task? {
@@ -66,7 +86,7 @@ class NotificationExecuter: NSObject, UNUserNotificationCenterDelegate {
         guard let _ = majorAppendedByMinor else {
             return nil
         }
-        let task = self.tasksDB.getTaskForIBeaconMajorAppendedByMinor(majorAppendedByMinor!)
+        let task = self.taskServices.getTaskForMajorAppendedByMinorString(majorAppendedByMinor!)
         return task
     }
 }

@@ -19,7 +19,12 @@ class NotificationsNames {
     
     
     //All will pass "Task" Object"
-    static let kTask_Action_playSound = Notification.Name(rawValue: "kTask_Action_playSound")  //WillPassTask
-    static let kTask_Action_markAsDone = Notification.Name(rawValue: "kTask_Action_markAsDone") //WillPassTask
-    static let kTask_Action_Snooze = Notification.Name(rawValue: "kTask_Action_Snooz") //WillPassTask
+    static let kTask_Action_playSound = Notification.Name(rawValue: "kTask_Action_playSound")  //WillPass TaskActionDTO
+    static let kTask_Action_markAsDone = Notification.Name(rawValue: "kTask_Action_markAsDone") //WillPass TaskActionDTO
+    static let kTask_Action_Snooze = Notification.Name(rawValue: "kTask_Action_Snooz") //WillPass TaskActionDTO
+}
+
+struct TaskActionDTO {
+    let task: Task
+    let localNotificationCategort: LocalNotificationCategotry
 }

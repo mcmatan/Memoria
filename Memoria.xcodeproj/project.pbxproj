@@ -13,7 +13,7 @@
 		900E72291DBEBDCD00C9AC93 /* CLBeaconExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900E72281DBEBDCD00C9AC93 /* CLBeaconExtentions.swift */; };
 		900E722B1DBF58D700C9AC93 /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900E722A1DBF58D700C9AC93 /* SoundPlayer.swift */; };
 		901127221C1AF8CA0088DD6B /* MemoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901127211C1AF8CA0088DD6B /* MemoriesViewController.swift */; };
-		9011272E1C1AFBE20088DD6B /* AssemblyViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901127291C1AFBE20088DD6B /* AssemblyViewControllers.swift */; };
+		9011272E1C1AFBE20088DD6B /* AssemblyUIComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901127291C1AFBE20088DD6B /* AssemblyUIComponents.swift */; };
 		9011272F1C1AFBE20088DD6B /* Bootstrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9011272A1C1AFBE20088DD6B /* Bootstrapper.swift */; };
 		901127301C1AFBE20088DD6B /* AssemblyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9011272B1C1AFBE20088DD6B /* AssemblyModel.swift */; };
 		901349861DB4C8B0005FA445 /* IBeaconCloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901349851DB4C8B0005FA445 /* IBeaconCloud.swift */; };
@@ -65,20 +65,10 @@
 		9035FE2C1C1ECFC300D98022 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9035FE2B1C1ECFC300D98022 /* TextField.swift */; };
 		903B30C11DCE957E0015C6FA /* LocalNotificationCategotry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903B30C01DCE957E0015C6FA /* LocalNotificationCategotry.swift */; };
 		903B30C21DCE957E0015C6FA /* LocalNotificationCategotry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903B30C01DCE957E0015C6FA /* LocalNotificationCategotry.swift */; };
-		903B30C71DCF53D20015C6FA /* pillsNotification.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 903B30C41DCF53D20015C6FA /* pillsNotification.m4a */; };
-		903B30C81DCF53D20015C6FA /* pillsNotification.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 903B30C41DCF53D20015C6FA /* pillsNotification.m4a */; };
-		903B30C91DCF53D30015C6FA /* pillsNotification.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 903B30C41DCF53D20015C6FA /* pillsNotification.m4a */; };
-		903B30CA1DCF53D30015C6FA /* pillsVerification.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 903B30C51DCF53D20015C6FA /* pillsVerification.m4a */; };
-		903B30CB1DCF53D30015C6FA /* pillsVerification.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 903B30C51DCF53D20015C6FA /* pillsVerification.m4a */; };
-		903B30CC1DCF53D30015C6FA /* pillsVerification.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 903B30C51DCF53D20015C6FA /* pillsVerification.m4a */; };
-		903B30CD1DCF53D30015C6FA /* pillsWarning.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 903B30C61DCF53D20015C6FA /* pillsWarning.m4a */; };
-		903B30CE1DCF53D30015C6FA /* pillsWarning.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 903B30C61DCF53D20015C6FA /* pillsWarning.m4a */; };
-		903B30CF1DCF53D30015C6FA /* pillsWarning.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 903B30C61DCF53D20015C6FA /* pillsWarning.m4a */; };
 		903B30D21DCF5B2C0015C6FA /* AddTaskTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903B30D11DCF5B2C0015C6FA /* AddTaskTypeViewController.swift */; };
 		903B30D61DCF87010015C6FA /* UIPickerWithBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903B30D51DCF87000015C6FA /* UIPickerWithBlock.swift */; };
-		904E6D591DCFDBD1007EAE93 /* pillsNotification.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 904E6D561DCFDBD1007EAE93 /* pillsNotification.aiff */; };
-		904E6D5A1DCFDBD1007EAE93 /* pillsVerification.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 904E6D571DCFDBD1007EAE93 /* pillsVerification.aiff */; };
-		904E6D5B1DCFDBD1007EAE93 /* pillsWarning.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 904E6D581DCFDBD1007EAE93 /* pillsWarning.aiff */; };
+		904E6D591DCFDBD1007EAE93 /* drugs-notification.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 904E6D561DCFDBD1007EAE93 /* drugs-notification.aiff */; };
+		904E6D5B1DCFDBD1007EAE93 /* drugs-warning.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 904E6D581DCFDBD1007EAE93 /* drugs-warning.aiff */; };
 		905AF3BB1C1F2AEF0063713A /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905AF3BA1C1F2AEF0063713A /* Task.swift */; };
 		905AF3C11C1F3BD60063713A /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905AF3C01C1F3BD60063713A /* NavigationController.swift */; };
 		905AF3C41C1F41260063713A /* AddTaskTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905AF3C31C1F41260063713A /* AddTaskTimeViewController.swift */; };
@@ -101,6 +91,9 @@
 		90DC779C1C3AFC6F0062BCE3 /* DatePickerDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DC779B1C3AFC6F0062BCE3 /* DatePickerDialog.swift */; };
 		90DC77A21C3DA0F70062BCE3 /* VoiceRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DC77A11C3DA0F70062BCE3 /* VoiceRecorder.swift */; };
 		90DC77A71C3DAF440062BCE3 /* AddTaskConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DC77A61C3DAF440062BCE3 /* AddTaskConfirmationViewController.swift */; };
+		90E739EB1DD2663A008A7FA9 /* ApplicationExntentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E739EA1DD2663A008A7FA9 /* ApplicationExntentions.swift */; };
+		90E739F21DD26AAE008A7FA9 /* drugs-done.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 90E739F01DD26AAE008A7FA9 /* drugs-done.aiff */; };
+		90E739F31DD26AAE008A7FA9 /* drugs-verification.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 90E739F11DD26AAE008A7FA9 /* drugs-verification.aiff */; };
 		90E8C4971C1AA2B8009304A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E8C4961C1AA2B8009304A9 /* AppDelegate.swift */; };
 		90E8C49E1C1AA2B8009304A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90E8C49D1C1AA2B8009304A9 /* Assets.xcassets */; };
 		90E8C4A11C1AA2B8009304A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90E8C49F1C1AA2B8009304A9 /* LaunchScreen.storyboard */; };
@@ -185,7 +178,7 @@
 		900E72281DBEBDCD00C9AC93 /* CLBeaconExtentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLBeaconExtentions.swift; sourceTree = "<group>"; };
 		900E722A1DBF58D700C9AC93 /* SoundPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
 		901127211C1AF8CA0088DD6B /* MemoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoriesViewController.swift; sourceTree = "<group>"; };
-		901127291C1AFBE20088DD6B /* AssemblyViewControllers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssemblyViewControllers.swift; sourceTree = "<group>"; };
+		901127291C1AFBE20088DD6B /* AssemblyUIComponents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssemblyUIComponents.swift; sourceTree = "<group>"; };
 		9011272A1C1AFBE20088DD6B /* Bootstrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bootstrapper.swift; sourceTree = "<group>"; };
 		9011272B1C1AFBE20088DD6B /* AssemblyModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssemblyModel.swift; sourceTree = "<group>"; };
 		901349851DB4C8B0005FA445 /* IBeaconCloud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBeaconCloud.swift; sourceTree = "<group>"; };
@@ -235,14 +228,10 @@
 		9035FE241C1EC64500D98022 /* ReminderPopUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReminderPopUp.swift; sourceTree = "<group>"; };
 		9035FE2B1C1ECFC300D98022 /* TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		903B30C01DCE957E0015C6FA /* LocalNotificationCategotry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalNotificationCategotry.swift; sourceTree = "<group>"; };
-		903B30C41DCF53D20015C6FA /* pillsNotification.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = pillsNotification.m4a; sourceTree = "<group>"; };
-		903B30C51DCF53D20015C6FA /* pillsVerification.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = pillsVerification.m4a; sourceTree = "<group>"; };
-		903B30C61DCF53D20015C6FA /* pillsWarning.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = pillsWarning.m4a; sourceTree = "<group>"; };
 		903B30D11DCF5B2C0015C6FA /* AddTaskTypeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskTypeViewController.swift; sourceTree = "<group>"; };
 		903B30D51DCF87000015C6FA /* UIPickerWithBlock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIPickerWithBlock.swift; sourceTree = "<group>"; };
-		904E6D561DCFDBD1007EAE93 /* pillsNotification.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = pillsNotification.aiff; sourceTree = "<group>"; };
-		904E6D571DCFDBD1007EAE93 /* pillsVerification.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = pillsVerification.aiff; sourceTree = "<group>"; };
-		904E6D581DCFDBD1007EAE93 /* pillsWarning.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = pillsWarning.aiff; sourceTree = "<group>"; };
+		904E6D561DCFDBD1007EAE93 /* drugs-notification.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "drugs-notification.aiff"; sourceTree = "<group>"; };
+		904E6D581DCFDBD1007EAE93 /* drugs-warning.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "drugs-warning.aiff"; sourceTree = "<group>"; };
 		905AF3BA1C1F2AEF0063713A /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		905AF3C01C1F3BD60063713A /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		905AF3C31C1F41260063713A /* AddTaskTimeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskTimeViewController.swift; sourceTree = "<group>"; };
@@ -266,6 +255,9 @@
 		90DC779B1C3AFC6F0062BCE3 /* DatePickerDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerDialog.swift; sourceTree = "<group>"; };
 		90DC77A11C3DA0F70062BCE3 /* VoiceRecorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceRecorder.swift; sourceTree = "<group>"; };
 		90DC77A61C3DAF440062BCE3 /* AddTaskConfirmationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskConfirmationViewController.swift; sourceTree = "<group>"; };
+		90E739EA1DD2663A008A7FA9 /* ApplicationExntentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationExntentions.swift; sourceTree = "<group>"; };
+		90E739F01DD26AAE008A7FA9 /* drugs-done.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "drugs-done.aiff"; sourceTree = "<group>"; };
+		90E739F11DD26AAE008A7FA9 /* drugs-verification.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "drugs-verification.aiff"; sourceTree = "<group>"; };
 		90E8C4931C1AA2B8009304A9 /* Memoria.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memoria.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90E8C4961C1AA2B8009304A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		90E8C49D1C1AA2B8009304A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -386,7 +378,7 @@
 		901127321C1AFD020088DD6B /* Assemblies */ = {
 			isa = PBXGroup;
 			children = (
-				901127291C1AFBE20088DD6B /* AssemblyViewControllers.swift */,
+				901127291C1AFBE20088DD6B /* AssemblyUIComponents.swift */,
 				9011272B1C1AFBE20088DD6B /* AssemblyModel.swift */,
 				9035FE091C1B09EA00D98022 /* AssemblyControllers.swift */,
 			);
@@ -599,12 +591,10 @@
 		903B30C31DCF53C20015C6FA /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
-				904E6D561DCFDBD1007EAE93 /* pillsNotification.aiff */,
-				904E6D571DCFDBD1007EAE93 /* pillsVerification.aiff */,
-				904E6D581DCFDBD1007EAE93 /* pillsWarning.aiff */,
-				903B30C41DCF53D20015C6FA /* pillsNotification.m4a */,
-				903B30C51DCF53D20015C6FA /* pillsVerification.m4a */,
-				903B30C61DCF53D20015C6FA /* pillsWarning.m4a */,
+				90E739F01DD26AAE008A7FA9 /* drugs-done.aiff */,
+				90E739F11DD26AAE008A7FA9 /* drugs-verification.aiff */,
+				904E6D561DCFDBD1007EAE93 /* drugs-notification.aiff */,
+				904E6D581DCFDBD1007EAE93 /* drugs-warning.aiff */,
 			);
 			name = Sounds;
 			sourceTree = "<group>";
@@ -629,9 +619,7 @@
 			isa = PBXGroup;
 			children = (
 				90F009F91C4A7B0B002C98BA /* TasksNotificationsPresenter.swift */,
-				90B0C53E1DAAE3870019D59B /* LocalNotificationPresenter.swift */,
-				902E9AE61DD2010100282AB7 /* LocalNotificationActions.swift */,
-				902E9AE81DD201E400282AB7 /* LocalNotificationCategoryBuilder.swift */,
+				90E739E91DD24727008A7FA9 /* LocalNotificationPresenter */,
 			);
 			name = Presenters;
 			sourceTree = "<group>";
@@ -730,6 +718,7 @@
 				90DC620D1C6F6B45000C4457 /* NSDateExntentions.swift */,
 				907224C71DBCFFB4001A3A7C /* StringExtentions.swift */,
 				900E72281DBEBDCD00C9AC93 /* CLBeaconExtentions.swift */,
+				90E739EA1DD2663A008A7FA9 /* ApplicationExntentions.swift */,
 			);
 			name = Categoris;
 			sourceTree = "<group>";
@@ -764,6 +753,16 @@
 				90DC77A61C3DAF440062BCE3 /* AddTaskConfirmationViewController.swift */,
 			);
 			name = AddTaskConfirmationViewController;
+			sourceTree = "<group>";
+		};
+		90E739E91DD24727008A7FA9 /* LocalNotificationPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				90B0C53E1DAAE3870019D59B /* LocalNotificationPresenter.swift */,
+				902E9AE61DD2010100282AB7 /* LocalNotificationActions.swift */,
+				902E9AE81DD201E400282AB7 /* LocalNotificationCategoryBuilder.swift */,
+			);
+			name = LocalNotificationPresenter;
 			sourceTree = "<group>";
 		};
 		90E8C48A1C1AA2B8009304A9 = {
@@ -1094,12 +1093,9 @@
 				90222C681DCE1CD300A5A80D /* weather-icon-png-27.png in Resources */,
 				90222C621DCE0DFF00A5A80D /* images.png in Resources */,
 				902E9AE01DD0BF1000282AB7 /* drugs.png in Resources */,
-				903B30C81DCF53D20015C6FA /* pillsNotification.m4a in Resources */,
 				90222C3F1DCDD7F200A5A80D /* Assets.xcassets in Resources */,
-				903B30CB1DCF53D30015C6FA /* pillsVerification.m4a in Resources */,
 				902E9ADD1DD0BF0F00282AB7 /* food.png in Resources */,
 				902E9ADA1DD0BF0F00282AB7 /* brushTeeth.png in Resources */,
-				903B30CE1DCF53D30015C6FA /* pillsWarning.m4a in Resources */,
 				90222C3D1DCDD7F200A5A80D /* Interface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1108,11 +1104,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				903B30C91DCF53D30015C6FA /* pillsNotification.m4a in Resources */,
 				902E9ADB1DD0BF0F00282AB7 /* brushTeeth.png in Resources */,
-				903B30CC1DCF53D30015C6FA /* pillsVerification.m4a in Resources */,
 				902E9AE11DD0BF1000282AB7 /* drugs.png in Resources */,
-				903B30CF1DCF53D30015C6FA /* pillsWarning.m4a in Resources */,
 				90222C531DCDD7F200A5A80D /* Assets.xcassets in Resources */,
 				902E9ADE1DD0BF0F00282AB7 /* food.png in Resources */,
 			);
@@ -1122,22 +1115,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				903B30C71DCF53D20015C6FA /* pillsNotification.m4a in Resources */,
 				906648EF1DCB699F00896220 /* 3.wav in Resources */,
-				904E6D5A1DCFDBD1007EAE93 /* pillsVerification.aiff in Resources */,
 				90E8C4A11C1AA2B8009304A9 /* LaunchScreen.storyboard in Resources */,
 				9035FE191C1B18EE00D98022 /* ButtonsTexts.plist in Resources */,
-				903B30CA1DCF53D30015C6FA /* pillsVerification.m4a in Resources */,
-				904E6D591DCFDBD1007EAE93 /* pillsNotification.aiff in Resources */,
+				90E739F21DD26AAE008A7FA9 /* drugs-done.aiff in Resources */,
+				904E6D591DCFDBD1007EAE93 /* drugs-notification.aiff in Resources */,
 				9075214F1CE904A800FDFF3D /* LabelsTextsHe.plist in Resources */,
 				902E9ADC1DD0BF0F00282AB7 /* food.png in Resources */,
 				9035FE1D1C1B2B9B00D98022 /* LabelsTexts.plist in Resources */,
 				90CE2AF51CF4DE0E00511ED4 /* ButtonsTextsHe.plist in Resources */,
-				903B30CD1DCF53D30015C6FA /* pillsWarning.m4a in Resources */,
 				90E8C49E1C1AA2B8009304A9 /* Assets.xcassets in Resources */,
-				904E6D5B1DCFDBD1007EAE93 /* pillsWarning.aiff in Resources */,
+				904E6D5B1DCFDBD1007EAE93 /* drugs-warning.aiff in Resources */,
 				902E9ADF1DD0BF0F00282AB7 /* drugs.png in Resources */,
 				902E9AD91DD0BF0F00282AB7 /* brushTeeth.png in Resources */,
+				90E739F31DD26AAE008A7FA9 /* drugs-verification.aiff in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1307,6 +1298,7 @@
 				907224C81DBCFFB4001A3A7C /* StringExtentions.swift in Sources */,
 				900E722B1DBF58D700C9AC93 /* SoundPlayer.swift in Sources */,
 				901127221C1AF8CA0088DD6B /* MemoriesViewController.swift in Sources */,
+				90E739EB1DD2663A008A7FA9 /* ApplicationExntentions.swift in Sources */,
 				9013498A1DB4D554005FA445 /* BeaconShape.swift in Sources */,
 				9019EBED1C90D573008962A5 /* TaskWarningPopUp.swift in Sources */,
 				9035FE081C1B095A00D98022 /* TabBarController.swift in Sources */,
@@ -1358,7 +1350,7 @@
 				90F00A071C4A7C06002C98BA /* IbeaconsTracker.swift in Sources */,
 				9035FE121C1B0D1200D98022 /* DrugsViewController.swift in Sources */,
 				9035FE1F1C1B2BFB00D98022 /* TextView.swift in Sources */,
-				9011272E1C1AFBE20088DD6B /* AssemblyViewControllers.swift in Sources */,
+				9011272E1C1AFBE20088DD6B /* AssemblyUIComponents.swift in Sources */,
 				9035FE0A1C1B09EA00D98022 /* AssemblyControllers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

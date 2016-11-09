@@ -42,17 +42,17 @@ fileprivate func >= <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
 class TaskNotificationsTracker : NSObject, IbeaconsTrackerDelegate {
     fileprivate let taskDB : TasksDB
     fileprivate let shouldWaitForWarningToWarning = true
-    fileprivate let secoundsTimeFromWarningToWarning = 10 //100 // Sec
-    fileprivate let timeFromTaskDoneToShowWarningWhenNear = 0//60 //Sec
+    fileprivate let secoundsTimeFromWarningToWarning = 30 //100 // Sec
+    fileprivate let timeFromTaskDoneToShowWarningWhenNear = 20//60 //Sec
     fileprivate let maxTimeStandingNearTaskBeforeAction = 0//2 //Sec
     fileprivate let shouldPerformTaskTimeWindow = 60 * 5 // Sec
     fileprivate let onHoldIntervalIntilNextNotification = 0 // 60 * 5 // Sec
-    fileprivate let minTimeFromVerificationToVerification = 10//30 // Sec
+    fileprivate let minTimeFromVerificationToVerification = 25//30 // Sec
     fileprivate let scheduler : NotificationScheduler
     fileprivate let ibeaconsTracker : IbeaconsTracker
     
     
-    init(taskDB : TasksDB, scheduler : NotificationScheduler, ibeaconsTracker : IbeaconsTracker, notificationExecuter: NotificationExecuter) {
+    init(taskDB : TasksDB, scheduler : NotificationScheduler, ibeaconsTracker : IbeaconsTracker) {
         self.taskDB = taskDB
         self.scheduler = scheduler
         self.ibeaconsTracker = ibeaconsTracker

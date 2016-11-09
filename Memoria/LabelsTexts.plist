@@ -70,7 +70,8 @@ Then click on the button to add a task.</string>
 	<key>TaskVerificationPopUpGoodTimeOfDay</key>
 	<string>Good %@ %@</string>
 	<key>TaskVerificationPopUpItsTimeFor</key>
-	<string>It&apos;s %@,\ntime to %@!&quot;</string>
+	<string>It&apos;s %@,
+time to %@!&quot;</string>
 	<key>TabBarTasksLbl</key>
 	<string>Tasks</string>
 	<key>TaskManagerTitle</key>

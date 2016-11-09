@@ -30,8 +30,8 @@ class TaskActionsPerformaer: NSObject {
     
     
     internal func playSound(notification: NSNotification) {
-        let task = notification.object as! Task
-        let isSound = task.taskType.soundURL(localNotificationCategotry: LocalNotificationCategotry.verification)
+        let taskActionDTO = notification.object as! TaskActionDTO
+        let isSound = taskActionDTO.task.taskType.soundURL(localNotificationCategotry: taskActionDTO.localNotificationCategort)
         if ("" != isSound.absoluteString) {
             self.recorder.soundFileURL = isSound as URL!
             self.recorder.play()
@@ -39,12 +39,12 @@ class TaskActionsPerformaer: NSObject {
     }
     
     internal func markTaskAsDone(notification: NSNotification) {
-        let task = notification.object as! Task
-        self.taskServices.setTaskAsDone(task)
+        let taskActionDTO = notification.object as! TaskActionDTO
+        self.taskServices.setTaskAsDone(taskActionDTO.task)
     }
     
     internal func snooze(notification: NSNotification) {
-        let task = notification.object as! Task
-        self.taskServices.snoozeTask(task: task)
+        let taskActionDTO = notification.object as! TaskActionDTO
+        self.taskServices.snoozeTask(task: taskActionDTO.task)
     }
 }

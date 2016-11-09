@@ -77,23 +77,16 @@ class TaskNotificationPopUp : ViewController {
 
     }
     
-    //MARK: LifeCircul
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        self.playSound()
-    }
-    
     //MARK: Actions
     
     func playSound() {
-        NotificationCenter.default.post(name: NotificationsNames.kTask_Action_playSound, object: self.task)
+        NotificationCenter.default.post(name: NotificationsNames.kTask_Action_playSound, object: TaskActionDTO(task: self.task, localNotificationCategort: LocalNotificationCategotry.notification))
     }
     
     //MARK: Buttons
     
     func btnOkPress() {
-        NotificationCenter.default.post(name: NotificationsNames.kTask_Action_Snooze, object: self.task)
+        NotificationCenter.default.post(name: NotificationsNames.kTask_Action_Snooze, object: TaskActionDTO(task: self.task, localNotificationCategort: LocalNotificationCategotry.notification))
         self.dismiss(animated: true, completion: nil)
     }
     

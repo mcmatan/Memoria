@@ -11,7 +11,7 @@ let shouldTest = true
 
 class TestingNotifications {
     var timer = Timer()
-    let repeatTimeInterval = 3.0
+    let repeatTimeInterval = 7.0
     
     init() {
         if (shouldTest == false) {
@@ -19,7 +19,7 @@ class TestingNotifications {
         }
         //self.startShowingDrugsNotifications()
         //self.startShowingDrugsVerification()
-        self.startShowingDrugsWarning()
+        //self.startShowingDrugsWarning()
     }
     
     //App is not active (local notifications)

@@ -11,12 +11,7 @@ import UIKit
 import SwiftDate
 import UserNotifications
 
-protocol INotificationScheduler {
-    func squeduleReminderForTask(_ task : Task)
-    func cancelReminderForTask(_ task : Task)
-}
-
-class NotificationScheduler : NSObject, INotificationScheduler {
+class NotificationScheduler : NSObject {
     static var TaskNotificationKey : String = "majorAppendedByMinorString"
     
     internal func squeduleReminderForTask(_ task : Task) {
@@ -24,19 +19,11 @@ class NotificationScheduler : NSObject, INotificationScheduler {
     }
     
     internal func squeduleReminderForTask(_ task : Task, date: Date) {
-        
         LocalNotificationPresenter.showLocalNotificationForTask(task: task, localNotificationCategotry: LocalNotificationCategotry.notification, date: date)
-//        
-//        let alertBody = task.taskType.name()
-//        let majorAppendedByMinorString = task.taskBeaconIdentifier!.majorAppendedByMinorString()
-//        let key = NotificationScheduler.TaskNotificationKey
-//        let userInfo = [key: majorAppendedByMinorString]
-//        
-//        LocalNotificationPresenter.showLocalNotification(title: alertBody, subtitle: alertBody, body: "Tap to open", localNotificationCategory: LocalNotificationCategotry.notification, date: date, userInfo: userInfo)
-
     }
     
     internal func cancelReminderForTask(_ task : Task) {
-        UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [task.taskType.name()])
+        let allCaterogies = LocalNotificationCategoryBuilder.getAllCategoriesFor(taskType: task.taskType)
+        UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: allCaterogies)
     }
 }

@@ -31,7 +31,15 @@ class LocalNotificationPresenter {
         let goodTimeOfDatString = String.localizedStringWithFormat(Content.getContent(ContentType.labelTxt, name: "TaskVerificationPopUpGoodTimeOfDay"), (task.taskTime!.dateToDayPartDeifinisionString()), userName)
         let timeForString = String.localizedStringWithFormat(Content.getContent(ContentType.labelTxt, name: "TaskVerificationPopUpItsTimeFor"), currentDate.toStringCurrentRegionShortTime(), (task.taskType.name)())
         
-        LocalNotificationPresenter.showLocalNotification(title: "Notification", subtitle: (task.taskType.name()), body: goodTimeOfDatString + " " + timeForString, localNotificationCategory: LocalNotificationCategotry.notification, sound: task.taskType.soundURL(localNotificationCategotry: .verification), imageURL: task.taskType.imageURL(), date: date, taskType: task.taskType.rawValue)
+        LocalNotificationPresenter.showLocalNotification(
+            title: "Notification",
+            subtitle: (task.taskType.name()),
+            body: goodTimeOfDatString + " " + timeForString,
+            localNotificationCategory: LocalNotificationCategotry.notification,
+            date: date,
+            sound: task.taskType.soundURL(localNotificationCategotry: .verification),
+            imageURL: task.taskType.imageURL(),
+            task: task)
     }
     
     static func showWarningCategory(task: Task) {
@@ -43,25 +51,35 @@ class LocalNotificationPresenter {
         let laterTodayStringBecareful = String.localizedStringWithFormat(Content.getContent(ContentType.labelTxt, name: "TaskWarningPopUpDidPleaseWaitFor"), task.taskTime!.toStringCurrentRegionShortTime())
         let beCarefulString = (task.taskTime! <= Date()) ? didAllreadyStringBecareful : laterTodayStringBecareful
         
-        LocalNotificationPresenter.showLocalNotification(title: "Warning", subtitle: task.taskType.name(), body: warningString + " " + beCarefulString, localNotificationCategory: LocalNotificationCategotry.warning, sound: task.taskType.soundURL(localNotificationCategotry: .verification), imageURL: task.taskType.imageURL(), taskType: task.taskType.rawValue)
+        LocalNotificationPresenter.showLocalNotification(
+            title: "Warning",
+            subtitle: task.taskType.name(),
+            body: warningString + " " + beCarefulString,
+            localNotificationCategory: LocalNotificationCategotry.warning,
+            date: nil,
+            sound: task.taskType.soundURL(localNotificationCategotry: .verification),
+            imageURL: task.taskType.imageURL(),
+            task: task)
+        
     }
     
     static func showVerificationCategory(task: Task) {
         let iSeeYourNear = String.localizedStringWithFormat(Content.getContent(ContentType.labelTxt, name: "TaskVerificationPopUpISeeYourNeer"), (task.taskType.name)())
         let didYouYet = String.localizedStringWithFormat(Content.getContent(ContentType.labelTxt, name: "TaskVerificationPopUpDidYouYet"), (task.taskType.name)())
-        LocalNotificationPresenter.showLocalNotification(title: "Verification", subtitle: (task.taskType.name()), body: iSeeYourNear + " " + didYouYet, localNotificationCategory: LocalNotificationCategotry.verification, sound: task.taskType.soundURL(localNotificationCategotry: .verification), imageURL: task.taskType.imageURL(), taskType: task.taskType.rawValue)
+        
+        LocalNotificationPresenter.showLocalNotification(
+            title: "Verification",
+            subtitle: (task.taskType.name()),
+            body: iSeeYourNear + " " + didYouYet,
+            localNotificationCategory: LocalNotificationCategotry.verification,
+            date: nil,
+            sound: task.taskType.soundURL(localNotificationCategotry: .verification),
+            imageURL: task.taskType.imageURL(),
+            task: task)
 
     }
 
-    static func showLocalNotification(title: String, subtitle: String, body: String, localNotificationCategory: LocalNotificationCategotry, sound: URL, imageURL: URL, taskType: String) {
-        self.showLocalNotification(title: title, subtitle: subtitle, body: body, localNotificationCategory: localNotificationCategory,sound: sound, imageURL: imageURL, date: nil, taskType: taskType)
-    }
-    
-    static func showLocalNotification(title: String, subtitle: String, body: String, localNotificationCategory: LocalNotificationCategotry, sound: URL, imageURL: URL, date: Date?, taskType: String) {
-        self.showLocalNotification(title: title, subtitle: subtitle, body: body, localNotificationCategory: localNotificationCategory, date: date, userInfo: nil, sound: sound, imageURL: imageURL, taskType: taskType)
-    }
-    
-    static func showLocalNotification(title: String, subtitle: String, body: String, localNotificationCategory: LocalNotificationCategotry, date: Date?, userInfo: [String: Any]?, sound: URL?, imageURL: URL?, taskType: String) {
+    static func showLocalNotification(title: String, subtitle: String, body: String, localNotificationCategory: LocalNotificationCategotry, date: Date?, sound: URL?, imageURL: URL?, task: Task) {
         
         LocalNotificationActions.setupActions()
         
@@ -69,12 +87,15 @@ class LocalNotificationPresenter {
         content.title = title
         content.subtitle = subtitle
         content.body = body
-        content.sound = UNNotificationSound(named: "pillsVerification.diff")
-        content.categoryIdentifier = LocalNotificationCategoryBuilder.buildCategory(taskType: taskType, localNotificationCategory: localNotificationCategory)
+        let caregtoryIdentifer = LocalNotificationCategoryBuilder.buildCategory(taskType: task.taskType.rawValue, localNotificationCategory: localNotificationCategory)
+        content.sound = UNNotificationSound(named: "\(caregtoryIdentifer).aiff") // This doe't work for now, apple bug
+        content.categoryIdentifier = caregtoryIdentifer
         
-        if let isUserInfo = userInfo {
-            content.userInfo = isUserInfo
-        }
+        let majorAppendedByMinorString = task.taskBeaconIdentifier!.majorAppendedByMinorString()
+        let key = NotificationScheduler.TaskNotificationKey
+        let userInfo = [key: majorAppendedByMinorString]
+
+        content.userInfo = userInfo
         
         let attachments = self.getAttachments(soundURL : sound,imageURL: imageURL)
         if attachments.count > 0 {
@@ -97,13 +118,7 @@ class LocalNotificationPresenter {
     
     static func getAttachments(soundURL: URL?, imageURL: URL?) -> [UNNotificationAttachment] {
         var attachments = [UNNotificationAttachment]()
-//        if let isSoundURL = soundURL {
-//            let notificationOptions = [UNNotificationAttachmentOptionsTypeHintKey:kUTTypeMPEG4Audio]
-//            /// Creating an attachment object
-//            let notificationImageAttachment =  try! UNNotificationAttachment(identifier: "audio_identifier", url:isSoundURL , options: notificationOptions)
-//            attachments.append(notificationImageAttachment)
-//        }
-//        
+
         if let isImageURL = imageURL {
             /// Creating an attachment object
             let notificationImageAttachment =  try! UNNotificationAttachment(identifier: "jpg_identifier", url:isImageURL , options: nil)

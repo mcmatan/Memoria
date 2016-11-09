@@ -37,7 +37,6 @@ class TaskWarningPopUp : ViewController {
     let btnYes = Button()
     let btnSoundPlaying = Button()
     let task : Task
-    let recorder = VoiceRecorder()
 
     init(task : Task) {
         self.task  = task
@@ -49,11 +48,6 @@ class TaskWarningPopUp : ViewController {
     }
     
     //MARK: LifeCircle
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        self.btnPlayRecordPress()
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -111,11 +105,7 @@ class TaskWarningPopUp : ViewController {
     //MARK: Actions
     
     func playSound() {
-        let isSound = self.task.taskType.soundURL(localNotificationCategotry: LocalNotificationCategotry.warning)
-            if ("" != isSound.absoluteString) {
-                self.recorder.soundFileURL = isSound
-                self.recorder.play()
-            }
+        NotificationCenter.default.post(name: NotificationsNames.kTask_Action_playSound, object: TaskActionDTO(task: self.task, localNotificationCategort: LocalNotificationCategotry.warning))
     }
     
     //MARK: Buttons

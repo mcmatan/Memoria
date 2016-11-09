@@ -6,6 +6,10 @@ import Swinject
 open class AssemblyModel {
     
     class func run(_ container : Container) {
+        container.register(NotificationScheduler.self) { c in
+            return NotificationScheduler()
+            }.inObjectScope(ObjectScope.container)
+
         
         container.register(IbeaconsTracker.self) { c in
             let ibeaconLocationFinder = IbeaconsTracker()
@@ -38,16 +42,6 @@ open class AssemblyModel {
             return CurrenctTaskCreator()
             }.inObjectScope(ObjectScope.container)
         
-        container.register(NotificationExecuter.self) { c in
-            return NotificationExecuter(
-                tasksDB: container.resolve(TasksDB.self)!
-                )
-            }.inObjectScope(ObjectScope.container)
-
-        container.register(NotificationScheduler.self) { c in
-            return NotificationScheduler()
-            }.inObjectScope(ObjectScope.container)
-        
         container.register(TestingNotifications.self) { c in
             return TestingNotifications()
             }.inObjectScope(ObjectScope.container)
@@ -62,19 +56,15 @@ open class AssemblyModel {
             return TaskNotificationsTracker(
                 taskDB: container.resolve(TasksDB.self)!,
                 scheduler: container.resolve(NotificationScheduler.self)!,
-                ibeaconsTracker: container.resolve(IbeaconsTracker.self)!,
-            notificationExecuter: container.resolve(NotificationExecuter.self)!)
+                ibeaconsTracker: container.resolve(IbeaconsTracker.self)!)
             }.inObjectScope(ObjectScope.container)
          let _ = container.resolve(TaskNotificationsTracker.self)
-        
         
         container.register(TaskActionsPerformaer.self) { c in
             return TaskActionsPerformaer(
                 taskServices: container.resolve(TasksServices.self)!)
             }.inObjectScope(ObjectScope.container)
         let _ = container.resolve(TaskActionsPerformaer.self)
-        
-
     }
     
 }

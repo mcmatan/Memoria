@@ -31,7 +31,7 @@ class AddTaskTypeViewController : ViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.title = self.currenctTaskCreator.task.taskType.name()
+        self.title = "Choose task type"
         self.lblTaskType.text = self.currenctTaskCreator.task.taskType.name()
     }
     

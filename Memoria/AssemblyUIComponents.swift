@@ -3,7 +3,7 @@
 import Foundation
 import Swinject
 
-open class AssemblyViewControllers {
+open class AssemblyUIComponents {
 
     class func run(_ container : Container) {
         container.register(MemoriesViewController.self) { c in
@@ -44,12 +44,19 @@ open class AssemblyViewControllers {
         }
 
         container.register(TaskVerificationPopUp.self) { _, task in
-            return TaskVerificationPopUp(task: task, tasksServices: container.resolve(TasksServices.self)!)
+            return TaskVerificationPopUp(task: task)
         }
 
         container.register(TaskWarningPopUp.self) { _, task in
             return TaskWarningPopUp(task: task)
         }
+        
+        container.register(UINotificationExecuter.self) { c in
+            return UINotificationExecuter(
+                taskServices: container.resolve(TasksServices.self)!,
+                tasksNotificationsPresenter: container.resolve(TasksNotificationsPresenter.self)!
+            )
+            }.inObjectScope(ObjectScope.container)
 
     }
 }

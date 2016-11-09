@@ -15,6 +15,10 @@ enum LocalNotificationCategotry: String {
     case verification = "verification"
     case done = "done"
     
+    static func allValus()-> [LocalNotificationCategotry] {
+        return [LocalNotificationCategotry.notification, LocalNotificationCategotry.warning, LocalNotificationCategotry.verification, LocalNotificationCategotry.done]
+    }
+    
 //    func image()->UIImage {
 //        switch self {
 //            case .notification
@@ -58,17 +62,16 @@ enum TaskType: String {
     func soundURL(localNotificationCategotry: LocalNotificationCategotry)->URL {
         switch localNotificationCategotry {
         case .notification:
-            let url = Bundle.main.url(forResource: "pillsNotification", withExtension: "aiff")
+            let url = Bundle.main.url(forResource: "drugs-notification", withExtension: "aiff")
             return url!
         case .warning:
-            let url = Bundle.main.url(forResource: "pillsWarning", withExtension: "aiff")
+            let url = Bundle.main.url(forResource: "drugs-warning", withExtension: "aiff")
             return url!
         case .verification:
-            let url = Bundle.main.url(forResource: "pillsVerification", withExtension: "aiff")
+            let url = Bundle.main.url(forResource: "drugs-verification", withExtension: "aiff")
             return url!
-        default:
-            print("No maching notification category!")
-            let url = Bundle.main.url(forResource: "pillsVerification", withExtension: "aiff")
+        case .done:
+            let url = Bundle.main.url(forResource: "drugs-done", withExtension: "aiff")
             return url!
         }
     }

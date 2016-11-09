@@ -18,9 +18,8 @@ class TaskVerificationPopUp : ViewController {
     let btnRemindMeLayer = Button()
     let btnSoundPlaying = Button()
     let task : Task
-    let recorder = VoiceRecorder()
     
-    init(task : Task, tasksServices : TasksServices) {
+    init(task : Task) {
         self.task = task
         super.init(nibName: nil, bundle: nil)
     }
@@ -30,10 +29,7 @@ class TaskVerificationPopUp : ViewController {
     }
     
     //MARK: LifeCircle
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        self.playSound()
-    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -91,21 +87,17 @@ class TaskVerificationPopUp : ViewController {
     //MARK: Actions
     
     func playSound() {
-        let isSound = self.task.taskType.soundURL(localNotificationCategotry: LocalNotificationCategotry.verification)
-            if ("" != isSound.absoluteString) {
-                self.recorder.soundFileURL = isSound as URL!
-                self.recorder.play()
-            }
+        NotificationCenter.default.post(name: NotificationsNames.kTask_Action_playSound, object: TaskActionDTO(task: self.task, localNotificationCategort: LocalNotificationCategotry.verification))
     }
     
     //MARK: Buttons
     
     func btnYesPress() {
-        NotificationCenter.default.post(name: NotificationsNames.kTask_Action_markAsDone, object: self.task)
+        NotificationCenter.default.post(name: NotificationsNames.kTask_Action_markAsDone, object: TaskActionDTO(task: self.task, localNotificationCategort: LocalNotificationCategotry.verification))
     }
     
     func btnRemoingMeLaterPress() {
-        NotificationCenter.default.post(name: NotificationsNames.kTask_Action_Snooze, object: self.task)
+        NotificationCenter.default.post(name: NotificationsNames.kTask_Action_Snooze, object: TaskActionDTO(task: self.task, localNotificationCategort: LocalNotificationCategotry.verification))
         self.dismiss(animated: true, completion: nil)
     }
     
