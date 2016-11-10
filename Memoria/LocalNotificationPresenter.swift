@@ -38,7 +38,7 @@ class LocalNotificationPresenter {
             localNotificationCategory: LocalNotificationCategotry.notification,
             date: date,
             sound: task.taskType.soundURL(localNotificationCategotry: .verification),
-            imageURL: task.taskType.imageURL(),
+            imageURL: task.taskType.imageURL(localNotificationCategory: LocalNotificationCategotry.notification),
             task: task)
     }
     
@@ -58,7 +58,7 @@ class LocalNotificationPresenter {
             localNotificationCategory: LocalNotificationCategotry.warning,
             date: nil,
             sound: task.taskType.soundURL(localNotificationCategotry: .verification),
-            imageURL: task.taskType.imageURL(),
+            imageURL: task.taskType.imageURL(localNotificationCategory: LocalNotificationCategotry.warning),
             task: task)
         
     }
@@ -74,7 +74,7 @@ class LocalNotificationPresenter {
             localNotificationCategory: LocalNotificationCategotry.verification,
             date: nil,
             sound: task.taskType.soundURL(localNotificationCategotry: .verification),
-            imageURL: task.taskType.imageURL(),
+            imageURL: task.taskType.imageURL(localNotificationCategory: LocalNotificationCategotry.verification),
             task: task)
 
     }

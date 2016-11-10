@@ -76,17 +76,33 @@ enum TaskType: String {
         }
     }
 
-    func imageURL()->URL {
+    func imageURL(localNotificationCategory: LocalNotificationCategotry)->URL {
+        
+        let color = self.colorLocalNotificationType(localNotificationType: localNotificationCategory)
+        
         switch self {
         case .brushTeeth:
-            let url = Bundle.main.url(forResource: "brushTeeth", withExtension: "png")
+            let url = Bundle.main.url(forResource: "brushTeeth\(color)", withExtension: "png")
             return url!
         case .drugs:
-            let url = Bundle.main.url(forResource: "drugs", withExtension: "png")
+            let url = Bundle.main.url(forResource: "drugs\(color)", withExtension: "png")
             return url!
         case .food:
-            let url = Bundle.main.url(forResource: "food", withExtension: "png")
+            let url = Bundle.main.url(forResource: "food\(color)", withExtension: "png")
             return url!
+        }
+    }
+    
+    func colorLocalNotificationType(localNotificationType: LocalNotificationCategotry)->String {
+        switch localNotificationType {
+        case .done:
+            return ""
+        case .notification:
+            return "Blue"
+        case .verification:
+            return "Green"
+        case .warning:
+            return "Red"
         }
     }
 }
