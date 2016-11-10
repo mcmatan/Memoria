@@ -17,7 +17,10 @@ class TasksServices {
     private let nearableStriggerManager: NearableStriggerManager
     fileprivate let taskNotificationsTracker : TaskNotificationsTracker
 
-    init(tasksDB : TasksDB, scheduler : NotificationScheduler, taskNotificationsTracker : TaskNotificationsTracker, nearableStriggerManager: NearableStriggerManager) {
+    init(tasksDB : TasksDB,
+         scheduler : NotificationScheduler,
+         taskNotificationsTracker : TaskNotificationsTracker,
+         nearableStriggerManager: NearableStriggerManager) {
         self.nearableStriggerManager = nearableStriggerManager
         self.scheduler = scheduler
         self.tasksDB = tasksDB
@@ -35,7 +38,11 @@ class TasksServices {
     }
 
     func setTaskAsDone(_ task : Task) {
-        self.taskNotificationsTracker.markTaskAsDone(task)
+        task.isTaskDone = true
+        self.scheduler.cancelReminderForTask(task)
+        self.tasksDB.saveTask(task)
+        NotificationCenter.default.post(name: Notification.Name(rawValue: NotificationsNames.kTaskDone), object: task, userInfo: nil)
+        NotificationCenter.default.post(name: NotificationsNames.kPresentTaskMarkedAsDone, object: task, userInfo: nil)
     }
     
     func resqueduleTaskTimeTo(_ task : Task , time : Date) {
@@ -47,7 +54,8 @@ class TasksServices {
 
     func removeTask(_ task : Task) {
         self.scheduler.cancelReminderForTask(task)
-       let _ = self.tasksDB.removeTask(task)
+        let _ = self.tasksDB.removeTask(task)
+        self.nearableStriggerManager.stopTrackingForMotion(identifer: task.nearableIdentifer)
     }
     
     func getAllTasks()->[Task] {

@@ -58,28 +58,20 @@ class TaskNotificationsTracker : NSObject, NearableStriggerManagerDelegate {
         let task = self.taskDB.getTaskForNearableIdentifer(nearableIdentifer)
         if let _ = task {
                 if task!.isTaskDone == true {
-                    print("Task allready done, and standing near")
+                    print("Task allready done, and moving object")
                     self.taskWarning(task!)
                 } else if self.shouldPerformTaskNow(task!) == true {
-                    print("Asking if doing task, since standing near at task time")
+                    print("Asking if doing task, moving object near at task time")
                     self.showVerification(task!)
                 } else {
-                    print("Task not done and standing near")
-                    self.taskNotDoneAndStandingNear(task!)
+                    print("Task not done and moving object")
+                    self.taskNotDoneMovingObject(task!)
                 }
         }
     }
     
     func nearableStoppedMoving(nearableIdentifer: String) {
         
-    }
-    
-    internal func markTaskAsDone(_ task : Task) {
-        task.isTaskDone = true
-        self.scheduler.cancelReminderForTask(task)
-        self.taskDB.saveTask(task)
-        NotificationCenter.default.post(name: Notification.Name(rawValue: NotificationsNames.kTaskDone), object: task, userInfo: nil)
-        NotificationCenter.default.post(name: NotificationsNames.kPresentTaskMarkedAsDone, object: task, userInfo: nil)
     }
     
     //MARK: Private
@@ -95,10 +87,10 @@ class TaskNotificationsTracker : NSObject, NearableStriggerManagerDelegate {
         return false
     }
     
-    fileprivate func taskNotDoneAndStandingNear(_ task : Task) {
+    fileprivate func taskNotDoneMovingObject(_ task : Task) {
         if task.taskTimePriorityHi == true {
                 if task.taskTime?.isInTheFuture() == true { // If the task in the future, warn user about not doing it now.
-                    print("Showing warning since stadning near not at time, and hi prioriry")
+                    print("Showing warning since moving object not at time, and hi prioriry")
                 self.taskWarning(task)
                 } else { // If the task is at the past, and its not done. so let the user confiem he allready did.
                     print("If the task is at the past, and its not done. so let the user confiem he allready did.")

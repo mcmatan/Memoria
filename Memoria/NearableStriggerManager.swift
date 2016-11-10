@@ -41,10 +41,12 @@ class NearableStriggerManager: NSObject, ESTTriggerManagerDelegate  {
             true, forNearableIdentifier: identifer)
         let trigger = ESTTrigger(rules: [rule2], identifier: identifer)
         self.triggerManager.startMonitoring(for: trigger)
+        print("Started monitoring for movement nearable = \(identifer)")
     }
     
     func stopTrackingForMotion(identifer: String) {
         self.triggerManager.stopMonitoringForTrigger(withIdentifier: identifer)
+        print("Stopped monitoring for movement nearable = \(identifer)")
     }
  
     //MARK: Delegate

@@ -94,6 +94,7 @@ class TaskVerificationPopUp : ViewController {
     
     func btnYesPress() {
         NotificationCenter.default.post(name: NotificationsNames.kTask_Action_markAsDone, object: TaskActionDTO(task: self.task, localNotificationCategort: LocalNotificationCategotry.verification))
+        self.dismiss(animated: true, completion: nil)
     }
     
     func btnRemoingMeLaterPress() {
