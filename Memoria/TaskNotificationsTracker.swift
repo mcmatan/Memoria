@@ -78,7 +78,6 @@ class TaskNotificationsTracker : NSObject, NearableStriggerManagerDelegate {
         task.isTaskDone = true
         self.scheduler.cancelReminderForTask(task)
         self.taskDB.saveTask(task)
-        self.nearableStriggerManager.stopTrackingForMotion(identifer: task.nearableIdentifer)
         NotificationCenter.default.post(name: Notification.Name(rawValue: NotificationsNames.kTaskDone), object: task, userInfo: nil)
         NotificationCenter.default.post(name: NotificationsNames.kPresentTaskMarkedAsDone, object: task, userInfo: nil)
     }

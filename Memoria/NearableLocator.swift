@@ -43,37 +43,6 @@ class NearableLocator:NSObject, ESTNearableManagerDelegate {
             if nearable.zone() == ESTNearableZone.immediate {
                 self.closeNearable = nearable
             }
-            if nearable.isMoving {
-                self.tempFireNotification()
-            }
-        }
-    }
-    
-    func tempFireNotification() {
-        let content = UNMutableNotificationContent()
-        content.title = "wdwd"
-        content.subtitle = "wdwd"
-        content.body = "wdwd"
-        let caregtoryIdentifer = "efwef"
-        content.categoryIdentifier = caregtoryIdentifer
-        
-        let nearableIdentifer = "wqdwd"
-        let key = NotificationScheduler.TaskNotificationKey
-        let userInfo = [key: nearableIdentifer]
-        
-        content.userInfo = userInfo
-        
-        var fireTimeInterval = 0.1
-        if fireTimeInterval < 0 {
-            fireTimeInterval = 0.01
-        }
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: fireTimeInterval, repeats: false)
-        let requestIdentifier = content.categoryIdentifier
-        let request = UNNotificationRequest(identifier: requestIdentifier, content: content,trigger: trigger)
-        UNUserNotificationCenter.current().add(request) { (error) in
-            if let isError = error {
-                print("Error on notification reuqest = \(isError)")
-            }
         }
     }
 }

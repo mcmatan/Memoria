@@ -31,7 +31,6 @@ class UINotificationExecuter: NSObject, UNUserNotificationCenterDelegate {
     //On Show
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Swift.Void) {
         print(#function)
-        return //MC REMOVE
         let task = self.getTaskFromNotification(notification: notification)
         guard let isTask = task else {
             return

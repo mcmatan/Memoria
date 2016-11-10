@@ -13,6 +13,11 @@ import UserNotifications
 
 class NotificationScheduler : NSObject {
     static var TaskNotificationKey : String = "nearableIdentifier"
+    let nearableStriggerManager: NearableStriggerManager
+    
+    init(nearableStriggerManager: NearableStriggerManager) {
+        self.nearableStriggerManager = nearableStriggerManager
+    }
     
     internal func squeduleReminderForTask(_ task : Task) {
         self.squeduleReminderForTask(task, date: task.taskTime!)

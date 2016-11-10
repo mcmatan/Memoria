@@ -2,29 +2,36 @@ PODS:
   - AEConsole (0.3.0):
     - AELog (~> 0.3)
   - AELog (0.3.0)
-  - EstimoteSDK (4.11.1)
-  - KontaktSDK (1.2.3)
+  - EstimoteSDK (4.11.2)
   - SnapKit (3.0.2)
   - SwiftDate (4.0.7)
   - Swinject (2.0.0-beta.2)
 
 DEPENDENCIES:
   - AEConsole (~> 0.3)
-  - EstimoteSDK (~> 4.9)
-  - KontaktSDK (~> 1.1)
+  - EstimoteSDK (from `https://github.com/Estimote/iOS-SDK.git`, commit `66c9cf13467bc0f61fcf197116dadfe22e1cd10d`)
   - SnapKit (~> 3.0.1)
   - SwiftDate (~> 4.0)
   - Swinject (~> 2.0.0-beta.2)
 
+EXTERNAL SOURCES:
+  EstimoteSDK:
+    :commit: 66c9cf13467bc0f61fcf197116dadfe22e1cd10d
+    :git: https://github.com/Estimote/iOS-SDK.git
+
+CHECKOUT OPTIONS:
+  EstimoteSDK:
+    :commit: 66c9cf13467bc0f61fcf197116dadfe22e1cd10d
+    :git: https://github.com/Estimote/iOS-SDK.git
+
 SPEC CHECKSUMS:
   AEConsole: bde8ae8616522b88909dff1ba7a4aa6e86568e6e
   AELog: 69608a89a1d0460ad32bba73f8e1043e12764d85
-  EstimoteSDK: 01c96fc7aaa87e4de2528d511603374963bfff1b
-  KontaktSDK: 1716f9c7f6d71914f8f3489d5da8bde58252d581
+  EstimoteSDK: 79e289736d75b56bbd8ecb4cf518c3a007c6fb49
   SnapKit: 2e456761aa92d4d4067a7a5594c18769d451a8ad
   SwiftDate: 0efb04a6751b1ab804049b2b09a69848cd304c12
   Swinject: 69a893192efa9f2cc44be79ef423d04d571b6af9
 
-PODFILE CHECKSUM: 52e637a65f0e13c5d4462bfdd034c9c121b4fc8d
+PODFILE CHECKSUM: b0f5c944175184695fc0511905f012d642ddbd1f
 
 COCOAPODS: 1.0.1

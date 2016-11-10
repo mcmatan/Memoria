@@ -7,7 +7,7 @@ open class AssemblyModel {
     
     class func run(_ container : Container) {
         container.register(NotificationScheduler.self) { c in
-            return NotificationScheduler()
+            return NotificationScheduler(nearableStriggerManager: container.resolve(NearableStriggerManager.self)!)
             }.inObjectScope(ObjectScope.container)
         
         container.register(NearableLocator.self) { c in
