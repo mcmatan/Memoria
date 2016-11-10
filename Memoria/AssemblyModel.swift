@@ -14,13 +14,15 @@ open class AssemblyModel {
             return NearableLocator()
             }.inObjectScope(ObjectScope.container)
         
-        container.register(NearableStriggerManager.self) { c in
-            return NearableStriggerManager()
-            }.inObjectScope(ObjectScope.container)
-
         container.register(TasksDB.self) { c in
             return TasksDB()
         }.inObjectScope(ObjectScope.container)
+        
+        container.register(NearableStriggerManager.self) { c in
+            return NearableStriggerManager(
+                tasksDB: container.resolve(TasksDB.self)!)
+            }.inObjectScope(ObjectScope.container)
+
         
         container.register(IBeaconCloudType.self) { c in
             return IBeaconCloud()

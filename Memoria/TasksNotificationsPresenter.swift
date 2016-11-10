@@ -57,8 +57,7 @@ class TasksNotificationsPresenter : NSObject {
             LocalNotificationPresenter.showLocalNotificationForTask(task: task, localNotificationCategotry: LocalNotificationCategotry.notification)
         }else {
             let notificationPopUp = self.container.resolve(TaskNotificationPopUp.self, argument: task)
-            let mainViewController = UIApplication.shared.keyWindow?.rootViewController
-            mainViewController?.present(notificationPopUp!, animated: true, completion: nil)
+            self.presentOnMainView(viewController: notificationPopUp!)
         }
         
         if playSound {
@@ -77,8 +76,7 @@ class TasksNotificationsPresenter : NSObject {
             LocalNotificationPresenter.showLocalNotificationForTask(task: task, localNotificationCategotry: LocalNotificationCategotry.verification)
         } else {
             let notificationPopUp = self.container.resolve(TaskVerificationPopUp.self, argument: task)
-            let mainViewController = UIApplication.shared.keyWindow?.rootViewController
-            mainViewController?.present(notificationPopUp!, animated: true, completion: nil)
+            self.presentOnMainView(viewController: notificationPopUp!)
         }
         
         if playSound {
@@ -97,8 +95,7 @@ class TasksNotificationsPresenter : NSObject {
             LocalNotificationPresenter.showLocalNotificationForTask(task: task, localNotificationCategotry: LocalNotificationCategotry.warning)
         } else {
             let notificationPopUp = self.container.resolve(TaskWarningPopUp.self, argument: task)
-            let mainViewController = UIApplication.shared.keyWindow?.rootViewController
-            mainViewController?.present(notificationPopUp!, animated: true, completion: nil)
+            self.presentOnMainView(viewController: notificationPopUp!)
         }
         
         if playSound {
@@ -109,6 +106,17 @@ class TasksNotificationsPresenter : NSObject {
     func playSoundForTask(task: Task, localNotificationCategory: LocalNotificationCategotry) {
         //The delayis becouse the task has a default sound of system that can not be removed for now, system apple bug
         NotificationCenter.default.post(name: NotificationsNames.kTask_Action_playSound, object: TaskActionDTO(task: task, localNotificationCategort: localNotificationCategory))
+    }
+    
+    func presentOnMainView(viewController: UIViewController) {
+        let mainViewController = UIApplication.shared.keyWindow?.rootViewController
+        if let isPresentedViewController = mainViewController?.presentedViewController {
+            isPresentedViewController.dismiss(animated: false, completion: { 
+                mainViewController?.present(viewController, animated: true, completion: nil)
+            })
+        }else {
+            mainViewController?.present(viewController, animated: true, completion: nil)
+        }
     }
 
 }

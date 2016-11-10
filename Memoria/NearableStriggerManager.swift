@@ -17,10 +17,22 @@ protocol NearableStriggerManagerDelegate {
 class NearableStriggerManager: NSObject, ESTTriggerManagerDelegate  {
     var delegate: NearableStriggerManagerDelegate!
     let triggerManager = ESTTriggerManager()
+    let tasksDB: TasksDB
     
-    override init() {
+    init(tasksDB: TasksDB) {
+        self.tasksDB = tasksDB
         super.init()
         self.triggerManager.delegate = self
+        self.registerForAllTasks()
+    }
+    
+    func registerForAllTasks() {
+        let tasks = self.tasksDB.getAllTasks()
+        let _ = tasks.map { task -> String in
+            self.startTrackingForMotion(identifer: task.nearableIdentifer)
+            return task.nearableIdentifer
+        }
+        
     }
     
     //MARK: API
