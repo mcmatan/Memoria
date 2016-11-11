@@ -13,11 +13,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     
         Bootstrapper.run()
-        let rootViewController = Bootstrapper.container.resolve(NavigationController.self)
+        let rootViewController = Bootstrapper.container.resolve(RootViewController.self)!
+        //let rootViewController = LogInViewController()
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.rootViewController = rootViewController
         self.window?.makeKeyAndVisible()
         self .navigationBarAppearance()
+        
+        rootViewController.presentLogIn()
     
         return true
     }

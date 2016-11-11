@@ -82,5 +82,11 @@ time to %@!&quot;</string>
 	<string>afternoon</string>
 	<key>TimeOfDayEavning</key>
 	<string>eavning</string>
+	<key>LogInBtn</key>
+	<string>Log in</string>
+	<key>passwordPlaceHolder</key>
+	<string>Password</string>
+	<key>userNamePlaceHolder</key>
+	<string>User name</string>
 </dict>
 </plist>

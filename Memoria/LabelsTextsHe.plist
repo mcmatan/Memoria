@@ -79,7 +79,13 @@
 	<string>בוקר טוב</string>
 	<key>TimeOfDayAfterNoon</key>
 	<string>צהריים טובים</string>
+	<key>LogInBtn</key>
+	<string>התחבר</string>
 	<key>TimeOfDayEavning</key>
 	<string>ערב טוב</string>
+	<key>passwordPlaceHolder</key>
+	<string>סיסמא</string>
+	<key>userNamePlaceHolder</key>
+	<string>שם משתמש</string>
 </dict>
 </plist>

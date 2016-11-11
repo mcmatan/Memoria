@@ -4,8 +4,8 @@ import UIKit
 import SnapKit
 
 class Button : UIButton {
-    var myDefaultWidth = Double(UIScreen.main.bounds.size.width) - 40.0
-    var myDefaultHeight = 50.0
+    var myDefaultWidth = UIElementsDefaultValues.longWidth
+    var myDefaultHeight = UIElementsDefaultValues.buttonHegiht
     
     var colorFlicker = UIColor.red
     var flickerTimer : Timer?
@@ -37,7 +37,7 @@ class Button : UIButton {
     }
     
     func defaultHeight() {
-        self.heightLayoutAs(myDefaultHeight)
+        self.heightLayoutAs(Double(myDefaultHeight))
     }
     
     func defaultWidth() {
@@ -45,7 +45,7 @@ class Button : UIButton {
     }
     
     func defaultColor() {
-        self.backgroundColor = UIColor(rgba: "#6d9de0")
+        self.backgroundColor = Colors.blue()
     }
     
     func defaultCornerRaduis() {
@@ -81,13 +81,13 @@ class Button : UIButton {
     }
     
     internal func notificiationOkThanksBtn() {
-        self.backgroundColor = Colors.lightGray()
+        self.backgroundColor = Colors.lightBlue()
         self.defaultBigButton()
         self.setTitle(Content.getContent(ContentType.buttonTxt, name: "OkThanks"), for: UIControlState())
     }
 
     internal func notificiationRemindMeLater() {
-        self.backgroundColor = Colors.lightGray()
+        self.backgroundColor = Colors.lightBlue()
         self.defaultBigButton()
         self.setTitle(Content.getContent(ContentType.buttonTxt, name: "RemingMeLater"), for: UIControlState())
     }

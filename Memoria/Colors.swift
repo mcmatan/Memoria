@@ -18,8 +18,11 @@ class Colors {
         return UIColor(rgba: "#59b58f")
     }
 
-    static func lightGray()->UIColor {
+    static func lightBlue()->UIColor {
         return UIColor(rgba: "#b9cbd5")
     }
 
+    static func blue()->UIColor {
+        return UIColor(rgba: "#6d9de0")
+    }
 }

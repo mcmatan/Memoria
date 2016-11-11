@@ -15,15 +15,14 @@ extension UIView {
         }
     }
     func centerInSuperView() {
-        let _ = self.centerHorizontalyInSuperView()
+        self.centerHorizontalyInSuperView()
         self.centerVerticlyInSuperView()
     }
     
-    func centerHorizontalyInSuperView()->NSLayoutConstraint { //Y
+    func centerHorizontalyInSuperView() { //Y
         self.translatesAutoresizingMaskIntoConstraints = false
         let constraint = NSLayoutConstraint(item: self, attribute: NSLayoutAttribute.centerY, relatedBy: NSLayoutRelation.equal, toItem: superview, attribute: NSLayoutAttribute.centerY, multiplier: 1.0, constant: 0)
         superview?.addConstraint(constraint)
-        return constraint
     }
     
     func centerVerticlyInSuperView() { //X
@@ -85,15 +84,14 @@ extension UIView {
         NSLayoutConstraint.activate([contrain])
     }
 
-    func topAlighnToViewTop(_ view : UIView)->NSLayoutConstraint {
-        return self.topAlighnToViewTop(view, offset: 0)
+    func topAlighnToViewTop(_ view : UIView){
+        self.topAlighnToViewTop(view, offset: 0)
     }
     
-    func topAlighnToViewTop(_ view : UIView, offset : CGFloat)->NSLayoutConstraint {
+    func topAlighnToViewTop(_ view : UIView, offset : CGFloat) {
         self.translatesAutoresizingMaskIntoConstraints = false
         let contrain =  NSLayoutConstraint(item: self, attribute: NSLayoutAttribute.top, relatedBy: NSLayoutRelation.equal, toItem: view, attribute: NSLayoutAttribute.top, multiplier: 1.0, constant: offset)
         NSLayoutConstraint.activate([contrain])
-        return contrain
     }
 
     func topAlighnToViewBottom(_ view : UIView) {
