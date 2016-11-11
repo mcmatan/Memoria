@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11542" systemVersion="15F34" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11760" systemVersion="15F34" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
     <device id="watch38" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11755"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11508"/>
     </dependencies>
     <scenes>
@@ -29,7 +29,7 @@
                         </label>
                         <imageView width="136" height="96" alignment="left" image="pills" contentMode="scaleAspectFit" id="KRN-Eh-LuV"/>
                     </items>
-                    <notificationCategory key="notificationCategory" identifier="pills-verification" id="JfB-70-Muf"/>
+                    <notificationCategory key="notificationCategory" identifier="drugs-verification" id="JfB-70-Muf"/>
                     <color key="backgroundColor" red="0.14509803921568626" green="0.78823529411764703" blue="0.36470588235294116" alpha="1" colorSpace="calibratedRGB"/>
                     <connections>
                         <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
@@ -48,7 +48,7 @@
                         </label>
                         <imageView width="136" height="96" alignment="left" image="pills" contentMode="scaleAspectFit" id="KOd-Mp-dSB"/>
                     </items>
-                    <notificationCategory key="notificationCategory" identifier="pills-warning" id="2og-VL-2ne"/>
+                    <notificationCategory key="notificationCategory" identifier="drugs-warning" id="2og-VL-2ne"/>
                     <color key="backgroundColor" red="0.88627450980392153" green="0.20000000000000001" blue="0.23137254901960785" alpha="1" colorSpace="calibratedRGB"/>
                     <connections>
                         <outlet property="notificationAlertLabel" destination="kR2-AB-yCX" id="d4x-aP-6Yb"/>
@@ -67,7 +67,7 @@
                         </label>
                         <imageView width="136" height="96" alignment="left" image="pills" contentMode="scaleAspectFit" id="1un-ed-1ZD"/>
                     </items>
-                    <notificationCategory key="notificationCategory" identifier="pills-notification" id="MgM-3b-iFM"/>
+                    <notificationCategory key="notificationCategory" identifier="drugs-notification" id="MgM-3b-iFM"/>
                     <color key="backgroundColor" red="0.29803921568627451" green="0.59999999999999998" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
                     <connections>
                         <outlet property="notificationAlertLabel" destination="PK2-dG-pji" id="gFO-Yf-OV0"/>
