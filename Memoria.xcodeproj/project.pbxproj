@@ -24,7 +24,6 @@
 		9019EBEB1C90CA16008962A5 /* TaskVerificationPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9019EBEA1C90CA16008962A5 /* TaskVerificationPopUp.swift */; };
 		9019EBED1C90D573008962A5 /* TaskWarningPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9019EBEC1C90D573008962A5 /* TaskWarningPopUp.swift */; };
 		9019EBF01C99F3B3008962A5 /* TaskNotificationsTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9019EBEF1C99F3B3008962A5 /* TaskNotificationsTracker.swift */; };
-		9019EBF31C99F5FE008962A5 /* NotificationScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9019EBF21C99F5FE008962A5 /* NotificationScheduler.swift */; };
 		901AEDF41C4136F500DD518A /* UIViewAutoLayoutExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901AEDF31C4136F500DD518A /* UIViewAutoLayoutExtentions.swift */; };
 		902147CB1DD4EDBC00D4B8E0 /* brushTeethBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = 902147C21DD4EDBC00D4B8E0 /* brushTeethBlue.png */; };
 		902147CC1DD4EDBC00D4B8E0 /* brushTeethGreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 902147C31DD4EDBC00D4B8E0 /* brushTeethGreen.png */; };
@@ -194,7 +193,6 @@
 		9019EBEA1C90CA16008962A5 /* TaskVerificationPopUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskVerificationPopUp.swift; sourceTree = "<group>"; };
 		9019EBEC1C90D573008962A5 /* TaskWarningPopUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskWarningPopUp.swift; sourceTree = "<group>"; };
 		9019EBEF1C99F3B3008962A5 /* TaskNotificationsTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskNotificationsTracker.swift; sourceTree = "<group>"; };
-		9019EBF21C99F5FE008962A5 /* NotificationScheduler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationScheduler.swift; sourceTree = "<group>"; };
 		901AEDF31C4136F500DD518A /* UIViewAutoLayoutExtentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewAutoLayoutExtentions.swift; sourceTree = "<group>"; };
 		902147C21DD4EDBC00D4B8E0 /* brushTeethBlue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brushTeethBlue.png; sourceTree = "<group>"; };
 		902147C31DD4EDBC00D4B8E0 /* brushTeethGreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brushTeethGreen.png; sourceTree = "<group>"; };
@@ -443,14 +441,6 @@
 			name = TaskNotificationsTracker;
 			sourceTree = "<group>";
 		};
-		9019EBF11C99F5E6008962A5 /* NotificationScheduler */ = {
-			isa = PBXGroup;
-			children = (
-				9019EBF21C99F5FE008962A5 /* NotificationScheduler.swift */,
-			);
-			name = NotificationScheduler;
-			sourceTree = "<group>";
-		};
 		901AEDF21C4136C900DD518A /* AutoLayoutMCExtentions */ = {
 			isa = PBXGroup;
 			children = (
@@ -594,7 +584,6 @@
 				906648EB1DCB649F00896220 /* InfitineBackgroundTask */,
 				900E722C1DBF58DA00C9AC93 /* SoundPlayer */,
 				901349871DB4C8B9005FA445 /* IBeaconCloud */,
-				9019EBF11C99F5E6008962A5 /* NotificationScheduler */,
 				9019EBEE1C99F39C008962A5 /* TaskNotificationsTracker */,
 				9008FB661C53D32F003C1549 /* CurrenctTaskCreator */,
 				900912BB1DD37A8A00AEEFC2 /* NearableTriggerManager */,
@@ -655,7 +644,7 @@
 			isa = PBXGroup;
 			children = (
 				90F009F91C4A7B0B002C98BA /* TasksNotificationsPresenter.swift */,
-				90E739E91DD24727008A7FA9 /* LocalNotificationPresenter */,
+				90E739E91DD24727008A7FA9 /* LocalNotificationScheduler */,
 			);
 			name = Presenters;
 			sourceTree = "<group>";
@@ -788,14 +777,14 @@
 			name = AddTaskConfirmationViewController;
 			sourceTree = "<group>";
 		};
-		90E739E91DD24727008A7FA9 /* LocalNotificationPresenter */ = {
+		90E739E91DD24727008A7FA9 /* LocalNotificationScheduler */ = {
 			isa = PBXGroup;
 			children = (
 				90B0C53E1DAAE3870019D59B /* LocalNotificationScheduler.swift */,
 				902E9AE61DD2010100282AB7 /* LocalNotificationActions.swift */,
 				902E9AE81DD201E400282AB7 /* LocalNotificationCategoryBuilder.swift */,
 			);
-			name = LocalNotificationPresenter;
+			name = LocalNotificationScheduler;
 			sourceTree = "<group>";
 		};
 		90E8C48A1C1AA2B8009304A9 = {
@@ -1342,7 +1331,6 @@
 				9019EBED1C90D573008962A5 /* TaskWarningPopUp.swift in Sources */,
 				9035FE081C1B095A00D98022 /* TabBarController.swift in Sources */,
 				9066491A1DCDD00800896220 /* WatchCommunication.swift in Sources */,
-				9019EBF31C99F5FE008962A5 /* NotificationScheduler.swift in Sources */,
 				9019EBEB1C90CA16008962A5 /* TaskVerificationPopUp.swift in Sources */,
 				90DC779C1C3AFC6F0062BCE3 /* DatePickerDialog.swift in Sources */,
 				9035C6D71C2024BA00088434 /* UIConstants.swift in Sources */,

@@ -42,13 +42,11 @@ fileprivate func >= <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
 class TaskNotificationsTracker : NSObject, NearableStriggerManagerDelegate {
     fileprivate let taskDB : TasksDB
     fileprivate let shouldPerformTaskTimeWindow = 60 * 5 // Sec
-    fileprivate let scheduler : NotificationScheduler
     fileprivate let nearableStriggerManager : NearableStriggerManager
     
     
-    init(taskDB : TasksDB, scheduler : NotificationScheduler, nearableStriggerManager : NearableStriggerManager) {
+    init(taskDB : TasksDB, nearableStriggerManager : NearableStriggerManager) {
         self.taskDB = taskDB
-        self.scheduler = scheduler
         self.nearableStriggerManager = nearableStriggerManager
         super.init()
         self.nearableStriggerManager.delegate = self
