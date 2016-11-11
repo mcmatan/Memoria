@@ -16,11 +16,13 @@ class TasksNotificationsPresenter : NSObject {
     let recorder : VoiceRecorder
     let reminderPopUp = ReminderPopUp()
     let container : Container
+    let localNotificationScheduler: LocalNotificationScheduler
     
-    init(iNearableServices : NearableServices, container : Container) {
+    init(iNearableServices : NearableServices, container : Container, localNotificationScheduler: LocalNotificationScheduler) {
         self.iNearableServices = iNearableServices
         self.recorder = VoiceRecorder()
         self.container = container
+        self.localNotificationScheduler = localNotificationScheduler
         super.init()
 
         NotificationCenter.default.addObserver(self, selector: #selector(TasksNotificationsPresenter.presentTaskNotification(_:)), name: NotificationsNames.kPresentTaskNotification, object: nil)
@@ -52,7 +54,7 @@ class TasksNotificationsPresenter : NSObject {
     
     internal func presentTaskNotification(task: Task, playSound: Bool) {
         if (UIApplication.isInBackground() == true) {
-            LocalNotificationScheduler.scheduleLocalNotificationForTask(task: task, localNotificationCategotry: LocalNotificationCategotry.notification)
+            self.localNotificationScheduler.scheduleLocalNotificationForTask(task: task, localNotificationCategotry: LocalNotificationCategotry.notification)
         }else {
             let notificationPopUp = self.container.resolve(TaskNotificationPopUp.self, argument: task)
             self.presentOnMainView(viewController: notificationPopUp!)
@@ -71,7 +73,7 @@ class TasksNotificationsPresenter : NSObject {
     
     internal func presentTaskVerification(task: Task, playSound: Bool) {
         if (UIApplication.isInBackground() == true) {
-            LocalNotificationScheduler.scheduleLocalNotificationForTask(task: task, localNotificationCategotry: LocalNotificationCategotry.verification)
+            self.localNotificationScheduler.scheduleLocalNotificationForTask(task: task, localNotificationCategotry: LocalNotificationCategotry.verification)
         } else {
             let notificationPopUp = self.container.resolve(TaskVerificationPopUp.self, argument: task)
             self.presentOnMainView(viewController: notificationPopUp!)
@@ -90,7 +92,7 @@ class TasksNotificationsPresenter : NSObject {
     
     internal func presentTaskWarning(task: Task,  playSound: Bool) {
         if (UIApplication.isInBackground() == true) {
-            LocalNotificationScheduler.scheduleLocalNotificationForTask(task: task, localNotificationCategotry: LocalNotificationCategotry.warning)
+            self.localNotificationScheduler.scheduleLocalNotificationForTask(task: task, localNotificationCategotry: LocalNotificationCategotry.warning)
         } else {
             let notificationPopUp = self.container.resolve(TaskWarningPopUp.self, argument: task)
             self.presentOnMainView(viewController: notificationPopUp!)

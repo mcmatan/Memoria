@@ -12,8 +12,10 @@ let shouldTest = true
 class TestingNotifications {
     var timer = Timer()
     let repeatTimeInterval = 7.0
+    let localNotificationScheduler: LocalNotificationScheduler
     
-    init() {
+    init(localNotificationScheduler: LocalNotificationScheduler) {
+        self.localNotificationScheduler = localNotificationScheduler
         if (shouldTest == false) {
             return
         }
@@ -33,7 +35,7 @@ class TestingNotifications {
     @objc func showSingleGrugWarning() {
         let task = Task(taskType: TaskType.drugs, taskTime: Date(), nearableIdentifer: "", taskTimePriorityHi: true)
         
-        LocalNotificationScheduler.scheduleLocalNotificationForTask(task: task, localNotificationCategotry: LocalNotificationCategotry.warning)
+        self.localNotificationScheduler.scheduleLocalNotificationForTask(task: task, localNotificationCategotry: LocalNotificationCategotry.warning)
     }
     
     //Verification:
@@ -45,7 +47,7 @@ class TestingNotifications {
     @objc func showSingleGrugVerification() {
         let task = Task(taskType: TaskType.drugs, taskTime: Date(), nearableIdentifer:"", taskTimePriorityHi: true)
         
-        LocalNotificationScheduler.scheduleLocalNotificationForTask(task: task, localNotificationCategotry: LocalNotificationCategotry.verification)
+        self.localNotificationScheduler.scheduleLocalNotificationForTask(task: task, localNotificationCategotry: LocalNotificationCategotry.verification)
     }
     
     //Notification 
@@ -57,6 +59,6 @@ class TestingNotifications {
     @objc func showSingleGrugNotification() {
         let task = Task(taskType: TaskType.drugs, taskTime: Date(), nearableIdentifer: "", taskTimePriorityHi: true)
         
-        LocalNotificationScheduler.scheduleLocalNotificationForTask(task: task, localNotificationCategotry: LocalNotificationCategotry.notification)
+        self.localNotificationScheduler.scheduleLocalNotificationForTask(task: task, localNotificationCategotry: LocalNotificationCategotry.notification)
     }
 }

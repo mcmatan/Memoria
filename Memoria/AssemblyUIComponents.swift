@@ -63,7 +63,10 @@ open class AssemblyUIComponents {
 
         container.register(TasksNotificationsPresenter.self) { c in
             return TasksNotificationsPresenter(
-                                               iNearableServices:  container.resolve(NearableServices.self)! , container: container)
+                                               iNearableServices:  container.resolve(NearableServices.self)! ,
+                                               container: container,
+                                               localNotificationScheduler: container.resolve(LocalNotificationScheduler.self)!
+                                               )
             }.inObjectScope(ObjectScope.container)
         let _ = container.resolve(TasksNotificationsPresenter.self)
 

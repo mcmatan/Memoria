@@ -35,7 +35,8 @@ open class AssemblyModel {
         container.register(TasksServices.self) { c in
             return TasksServices(tasksDB: container.resolve(TasksDB.self)!,
                 taskNotificationsTracker: container.resolve(TaskNotificationsTracker.self)!,
-                nearableStriggerManager: container.resolve(NearableStriggerManager.self)!
+                nearableStriggerManager: container.resolve(NearableStriggerManager.self)!,
+                localNotificationScheduler: container.resolve(LocalNotificationScheduler.self)!
             )
         }.inObjectScope(ObjectScope.container)
 
@@ -44,7 +45,9 @@ open class AssemblyModel {
             }.inObjectScope(ObjectScope.container)
         
         container.register(TestingNotifications.self) { c in
-            return TestingNotifications()
+            return TestingNotifications(
+                localNotificationScheduler: container.resolve(LocalNotificationScheduler.self)!
+            )
             }.inObjectScope(ObjectScope.container)
         let _ = container.resolve(TestingNotifications.self)
         
@@ -58,6 +61,10 @@ open class AssemblyModel {
                 taskServices: container.resolve(TasksServices.self)!)
             }.inObjectScope(ObjectScope.container)
         let _ = container.resolve(TaskActionsPerformer.self)
+        
+        container.register(LocalNotificationScheduler.self) { c in
+            return LocalNotificationScheduler()
+        }.inObjectScope(ObjectScope.container)
     }
     
 }
