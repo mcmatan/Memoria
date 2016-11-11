@@ -6,6 +6,16 @@ import Swinject
 open class AssemblyModel {
     
     class func run(_ container : Container) {
+        
+        container.register(TasksDB.self) { c in
+            return TasksDB()
+            }.inObjectScope(ObjectScope.container)
+        
+        container.register(NearableStriggerManager.self) { c in
+            return NearableStriggerManager(
+                tasksDB: container.resolve(TasksDB.self)!)
+            }.inObjectScope(ObjectScope.container)
+        
         container.register(NotificationScheduler.self) { c in
             return NotificationScheduler(nearableStriggerManager: container.resolve(NearableStriggerManager.self)!)
             }.inObjectScope(ObjectScope.container)
@@ -13,25 +23,10 @@ open class AssemblyModel {
         container.register(NearableLocator.self) { c in
             return NearableLocator()
             }.inObjectScope(ObjectScope.container)
-        
-        container.register(TasksDB.self) { c in
-            return TasksDB()
-        }.inObjectScope(ObjectScope.container)
-        
-        container.register(NearableStriggerManager.self) { c in
-            return NearableStriggerManager(
-                tasksDB: container.resolve(TasksDB.self)!)
-            }.inObjectScope(ObjectScope.container)
-
-        
-        container.register(IBeaconCloudType.self) { c in
-            return IBeaconCloud()
-            }.inObjectScope(ObjectScope.container)
 
         container.register(IBeaconServices.self) { c in
             return IBeaconServices(nearableLocator: container.resolve(NearableLocator.self)!,
-                                   tasksDB:container.resolve(TasksDB.self)!,
-            beaconCloud:container.resolve(IBeaconCloudType.self)!)
+                                   tasksDB:container.resolve(TasksDB.self)!)
         }.inObjectScope(ObjectScope.container)
 
         container.register(TasksServices.self) { c in

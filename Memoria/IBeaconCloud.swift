@@ -1,5 +1,4 @@
 //
-//  IBeaconCloud.swift
 //  Memoria
 //
 //  Created by Matan Cohen on 17/10/2016.
@@ -9,9 +8,6 @@
 import Foundation
 import UIKit
 
-protocol IBeaconCloudType {
-    func getColorFor(nearableIdentifer: String)->UIColor
-}
 
 struct NearbleColors {
     static let perpule = UIColor(red: 73.0/255.0, green: 63.0/255.0, blue: 152.0/255.0, alpha: 1)
@@ -45,11 +41,5 @@ struct NearbleColors {
         default:
             return UIColor.black
         }
-    }
-}
-
-class IBeaconCloud: IBeaconCloudType {
-    func getColorFor(nearableIdentifer: String)->UIColor {
-        return NearbleColors.getColorFor(nearableIdentifer: nearableIdentifer)
     }
 }

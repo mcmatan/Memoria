@@ -34,7 +34,7 @@ class AddTaskTypeViewController : ViewController {
         self.title = "Choose task type"
         self.lblTaskType.text = self.currenctTaskCreator.task.taskType.name()
         
-        let beaconImage = BeaconShape(rect: CGRect(x: 0,y: 0,width: 25,height: 40), backgroundColor: NearbleColors.getColorFor(nearableIdentifer: self.currenctTaskCreator.task.nearableIdentifer), lineColor: UIColor.black)
+        let beaconImage = BeaconShape(rect: CGRect(x: 0,y: 0,width: 25,height: 40), backgroundColor: self.be.getColorFor(nearableIdentifer: self.currenctTaskCreator.task.nearableIdentifer), lineColor: UIColor.black)
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: beaconImage)
     }

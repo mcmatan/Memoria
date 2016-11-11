@@ -12,12 +12,10 @@ import UIKit
 class IBeaconServices {
     var nearableLocator : NearableLocator
     var tasksDB : TasksDB
-    let beaconCloud: IBeaconCloudType
     
-    init(nearableLocator : NearableLocator, tasksDB : TasksDB, beaconCloud: IBeaconCloudType) {
+    init(nearableLocator : NearableLocator, tasksDB : TasksDB) {
         self.nearableLocator = nearableLocator
         self.tasksDB = tasksDB
-        self.beaconCloud = beaconCloud
     }
     
     func isThereNearableInErea(_ handler: (( _ result : Bool, _ beacon : ESTNearable?) -> Void)!) {
@@ -35,6 +33,6 @@ class IBeaconServices {
     }
     
     func getBeaconColorFor(nearableIdentifer :String)->UIColor {
-        return self.beaconCloud.getColorFor(nearableIdentifer: nearableIdentifer)
+        return NearbleColors.getColorFor(nearableIdentifer: nearableIdentifer)
     }
 }
