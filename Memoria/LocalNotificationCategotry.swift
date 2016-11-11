@@ -18,13 +18,6 @@ enum LocalNotificationCategotry: String {
     static func allValus()-> [LocalNotificationCategotry] {
         return [LocalNotificationCategotry.notification, LocalNotificationCategotry.warning, LocalNotificationCategotry.verification, LocalNotificationCategotry.done]
     }
-    
-//    func image()->UIImage {
-//        switch self {
-//            case .notification
-//                return UIImage(named: <#T##String#>)
-//        }
-//    }
 }
 
 enum TaskType: String {
