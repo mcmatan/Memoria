@@ -1,5 +1,5 @@
 //
-//  IBeaconServices.swift
+//  NearableServices.swift
 //  KontactTest
 //
 //  Created by Matan Cohen on 1/14/16.
@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class IBeaconServices {
+class NearableServices {
     var nearableLocator : NearableLocator
     var tasksDB : TasksDB
     
@@ -18,7 +18,7 @@ class IBeaconServices {
         self.tasksDB = tasksDB
     }
     
-    func isThereNearableInErea(_ handler: (( _ result : Bool, _ beacon : ESTNearable?) -> Void)!) {
+    func isThereNearableInErea(_ handler: (( _ result : Bool, _ nearable : ESTNearable?) -> Void)!) {
         nearableLocator.getClosestNearable({ nearable in
             if let _ = nearable {
                 handler(true, nearable)
@@ -28,11 +28,11 @@ class IBeaconServices {
         })
     }
     
-    func isBeaconAlreadyHasATaskAssigned(_ nearable :ESTNearable)->Bool {
+    func isNearableAlreadyHasATaskAssigned(_ nearable :ESTNearable)->Bool {
         return self.tasksDB.isThereTaskForNearableIdentifier(nearable.identifier)
     }
     
-    func getBeaconColorFor(nearableIdentifer :String)->UIColor {
+    func getNearableColorFor(nearableIdentifer :String)->UIColor {
         return NearbleColors.getColorFor(nearableIdentifer: nearableIdentifer)
     }
 }

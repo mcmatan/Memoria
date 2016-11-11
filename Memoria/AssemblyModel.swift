@@ -17,17 +17,26 @@ open class AssemblyModel {
             }.inObjectScope(ObjectScope.container)
         
         container.register(NotificationScheduler.self) { c in
-            return NotificationScheduler(nearableStriggerManager: container.resolve(NearableStriggerManager.self)!)
+            return NotificationScheduler(
+                nearableStriggerManager: container.resolve(NearableStriggerManager.self)!)
             }.inObjectScope(ObjectScope.container)
         
         container.register(NearableLocator.self) { c in
             return NearableLocator()
             }.inObjectScope(ObjectScope.container)
 
-        container.register(IBeaconServices.self) { c in
-            return IBeaconServices(nearableLocator: container.resolve(NearableLocator.self)!,
+        container.register(NearableServices.self) { c in
+            return NearableServices(nearableLocator: container.resolve(NearableLocator.self)!,
                                    tasksDB:container.resolve(TasksDB.self)!)
         }.inObjectScope(ObjectScope.container)
+        
+        container.register(TaskNotificationsTracker.self) { c in
+            return TaskNotificationsTracker(
+                taskDB: container.resolve(TasksDB.self)!,
+                scheduler: container.resolve(NotificationScheduler.self)!,
+                nearableStriggerManager: container.resolve(NearableStriggerManager.self)!)
+            }.inObjectScope(ObjectScope.container)
+        let _ = container.resolve(TaskNotificationsTracker.self)
 
         container.register(TasksServices.self) { c in
             return TasksServices(tasksDB: container.resolve(TasksDB.self)!,
@@ -51,19 +60,11 @@ open class AssemblyModel {
             }.inObjectScope(ObjectScope.container)
         let _ = container.resolve(WatchCommunicationType.self)
         
-        container.register(TaskNotificationsTracker.self) { c in
-            return TaskNotificationsTracker(
-                taskDB: container.resolve(TasksDB.self)!,
-                scheduler: container.resolve(NotificationScheduler.self)!,
-                nearableStriggerManager: container.resolve(NearableStriggerManager.self)!)
-            }.inObjectScope(ObjectScope.container)
-         let _ = container.resolve(TaskNotificationsTracker.self)
-        
-        container.register(TaskActionsPerformaer.self) { c in
-            return TaskActionsPerformaer(
+        container.register(TaskActionsPerformer.self) { c in
+            return TaskActionsPerformer(
                 taskServices: container.resolve(TasksServices.self)!)
             }.inObjectScope(ObjectScope.container)
-        let _ = container.resolve(TaskActionsPerformaer.self)
+        let _ = container.resolve(TaskActionsPerformer.self)
     }
     
 }

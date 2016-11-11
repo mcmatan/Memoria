@@ -1,5 +1,5 @@
 //
-//  UINotificationExecuter.swift
+//  UINotificationActionsExecuter.swift
 //  Memoria
 //
 //  Created by Matan Cohen on 11/10/2016.
@@ -11,7 +11,7 @@ import UIKit
 import Swinject
 import UserNotifications
 
-class UINotificationExecuter: NSObject, UNUserNotificationCenterDelegate {
+class UINotificationActionsExecuter: NSObject, UNUserNotificationCenterDelegate {
     let taskServices: TasksServices
     let tasksNotificationsPresenter: TasksNotificationsPresenter
     init(taskServices: TasksServices, tasksNotificationsPresenter: TasksNotificationsPresenter) {

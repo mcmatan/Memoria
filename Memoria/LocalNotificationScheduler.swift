@@ -11,9 +11,9 @@ import UIKit
 import UserNotifications
 import MobileCoreServices
 
-class LocalNotificationPresenter {
+class LocalNotificationScheduler {
     
-    static func showLocalNotificationForTask(task: Task, localNotificationCategotry:  LocalNotificationCategotry, date: Date = Date()) {
+    static func scheduleLocalNotificationForTask(task: Task, localNotificationCategotry:  LocalNotificationCategotry, date: Date = Date()) {
         switch localNotificationCategotry {
         case LocalNotificationCategotry.notification:
             self.showNotificationCategory(task: task, date: date)
@@ -31,7 +31,7 @@ class LocalNotificationPresenter {
         let goodTimeOfDatString = String.localizedStringWithFormat(Content.getContent(ContentType.labelTxt, name: "TaskVerificationPopUpGoodTimeOfDay"), (task.taskTime!.dateToDayPartDeifinisionString()), userName)
         let timeForString = String.localizedStringWithFormat(Content.getContent(ContentType.labelTxt, name: "TaskVerificationPopUpItsTimeFor"), currentDate.toStringCurrentRegionShortTime(), (task.taskType.name)())
         
-        LocalNotificationPresenter.showLocalNotification(
+        LocalNotificationScheduler.showLocalNotification(
             title: "Notification",
             subtitle: (task.taskType.name()),
             body: goodTimeOfDatString + " " + timeForString,
@@ -51,7 +51,7 @@ class LocalNotificationPresenter {
         let laterTodayStringBecareful = String.localizedStringWithFormat(Content.getContent(ContentType.labelTxt, name: "TaskWarningPopUpDidPleaseWaitFor"), task.taskTime!.toStringCurrentRegionShortTime())
         let beCarefulString = (task.taskTime! <= Date()) ? didAllreadyStringBecareful : laterTodayStringBecareful
         
-        LocalNotificationPresenter.showLocalNotification(
+        LocalNotificationScheduler.showLocalNotification(
             title: "Warning",
             subtitle: task.taskType.name(),
             body: warningString + " " + beCarefulString,
@@ -67,7 +67,7 @@ class LocalNotificationPresenter {
         let iSeeYourNear = String.localizedStringWithFormat(Content.getContent(ContentType.labelTxt, name: "TaskVerificationPopUpISeeYourNeer"), (task.taskType.name)())
         let didYouYet = String.localizedStringWithFormat(Content.getContent(ContentType.labelTxt, name: "TaskVerificationPopUpDidYouYet"), (task.taskType.name)())
         
-        LocalNotificationPresenter.showLocalNotification(
+        LocalNotificationScheduler.showLocalNotification(
             title: "Verification",
             subtitle: (task.taskType.name()),
             body: iSeeYourNear + " " + didYouYet,

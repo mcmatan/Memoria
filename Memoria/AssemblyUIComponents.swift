@@ -28,7 +28,7 @@ open class AssemblyUIComponents {
         }
 
         container.register(TaskManagerViewController.self) { _ in
-            return TaskManagerViewController(tasksServices: container.resolve(TasksServices.self)!,currenctTaskCreator: container.resolve(CurrenctTaskCreator.self)!, container: container, iBeaconServices: container.resolve(IBeaconServices.self)!)
+            return TaskManagerViewController(tasksServices: container.resolve(TasksServices.self)!,currenctTaskCreator: container.resolve(CurrenctTaskCreator.self)!, container: container, iNearableServices: container.resolve(NearableServices.self)!)
         }
         container.register(AddTaskTimePriorityController.self) { _ in
             return AddTaskTimePriorityController(container: container,
@@ -36,7 +36,10 @@ open class AssemblyUIComponents {
         }
         
         container.register(AddTaskTypeViewController.self) { _ in
-            return AddTaskTypeViewController(container: container, currenctTaskCreator: container.resolve(CurrenctTaskCreator.self)!)
+            return AddTaskTypeViewController(container: container,
+                                             currenctTaskCreator: container.resolve(CurrenctTaskCreator.self)!,
+                                             nearableService: container.resolve(NearableServices.self)!
+                                             )
         }
         
         container.register(TaskNotificationPopUp.self) { _, task in
@@ -51,12 +54,18 @@ open class AssemblyUIComponents {
             return TaskWarningPopUp(task: task)
         }
         
-        container.register(UINotificationExecuter.self) { c in
-            return UINotificationExecuter(
+        container.register(UINotificationActionsExecuter.self) { c in
+            return UINotificationActionsExecuter(
                 taskServices: container.resolve(TasksServices.self)!,
                 tasksNotificationsPresenter: container.resolve(TasksNotificationsPresenter.self)!
             )
             }.inObjectScope(ObjectScope.container)
+
+        container.register(TasksNotificationsPresenter.self) { c in
+            return TasksNotificationsPresenter(
+                                               iNearableServices:  container.resolve(NearableServices.self)! , container: container)
+            }.inObjectScope(ObjectScope.container)
+        let _ = container.resolve(TasksNotificationsPresenter.self)
 
     }
 }

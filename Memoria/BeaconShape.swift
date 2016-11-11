@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class BeaconShape: UIView {
+class NearableShape: UIView {
     var lineColor = UIColor.black
     var shapeBackgroundColor = UIColor.black
     

@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import SwiftDate
 
-class TaskActionsPerformaer: NSObject {
+class TaskActionsPerformer: NSObject {
     let recorder = VoiceRecorder()
     let taskServices: TasksServices
     
@@ -21,11 +21,11 @@ class TaskActionsPerformaer: NSObject {
     }
     
     func regidterForEvents() {
-        NotificationCenter.default.addObserver(self, selector: #selector(TaskActionsPerformaer.playSound(notification:)), name: NotificationsNames.kTask_Action_playSound, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(TaskActionsPerformer.playSound(notification:)), name: NotificationsNames.kTask_Action_playSound, object: nil)
         
-        NotificationCenter.default.addObserver(self, selector: #selector(TaskActionsPerformaer.markTaskAsDone(notification:)), name: NotificationsNames.kTask_Action_markAsDone, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(TaskActionsPerformer.markTaskAsDone(notification:)), name: NotificationsNames.kTask_Action_markAsDone, object: nil)
         
-        NotificationCenter.default.addObserver(self, selector: #selector(TaskActionsPerformaer.snooze(notification:)), name: NotificationsNames.kTask_Action_Snooze, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(TaskActionsPerformer.snooze(notification:)), name: NotificationsNames.kTask_Action_Snooze, object: nil)
     }
     
     

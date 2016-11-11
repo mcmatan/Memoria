@@ -25,12 +25,5 @@ open class AssemblyControllers {
             let navigationController = NavigationController(rootViewController : c.resolve(TabBarController.self)!)
             return navigationController
         }
-
-        container.register(TasksNotificationsPresenter.self) { c in
-            return TasksNotificationsPresenter(tasksServices: container.resolve(TasksServices.self)!,
-                iBeaconServices:  container.resolve(IBeaconServices.self)! , container: container)
-            }.inObjectScope(ObjectScope.container)
-        let _ = container.resolve(TasksNotificationsPresenter.self)
-
     }
 }

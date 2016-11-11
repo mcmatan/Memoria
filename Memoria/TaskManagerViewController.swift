@@ -18,17 +18,17 @@ class TaskManagerViewController : ViewController, UITableViewDelegate, UITableVi
     let tableView = UITableView()
     let currenctTaskCreator : CurrenctTaskCreator
     let container : Container
-    let iBeaconServices : IBeaconServices
+    let iNearableServices : NearableServices
     let lblCount = Label()
     var addTaskTypeViewController: AddTaskTypeViewController?
     let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.whiteLarge)
 
     
-    init(tasksServices : TasksServices, currenctTaskCreator : CurrenctTaskCreator, container : Container, iBeaconServices : IBeaconServices) {
+    init(tasksServices : TasksServices, currenctTaskCreator : CurrenctTaskCreator, container : Container, iNearableServices : NearableServices) {
         self.tasksServices = tasksServices
         self.currenctTaskCreator = currenctTaskCreator
         self.container = container
-        self.iBeaconServices = iBeaconServices
+        self.iNearableServices = iNearableServices
         super.init(nibName: nil, bundle: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(TaskManagerViewController.reloadTable), name: NSNotification.Name(rawValue: NotificationsNames.kTaskDone), object: nil)
     }
@@ -208,15 +208,15 @@ class TaskManagerViewController : ViewController, UITableViewDelegate, UITableVi
     
     func createNewTask() {
         self.activityIndicator.startAnimating()
-        self.iBeaconServices.isThereNearableInErea { (result, nearable) -> Void in
+        self.iNearableServices.isThereNearableInErea { (result, nearable) -> Void in
             self.activityIndicator.stopAnimating()
             if result == false {
-                self.showNoBeaconInEreaMessage()
+                self.showNoNearableInEreaMessage()
                 return
             }
             
-            if self.iBeaconServices.isBeaconAlreadyHasATaskAssigned(nearable!) == true {
-                self.showBeaconHasAlreadyTaskAssignedMessage(nearable!)
+            if self.iNearableServices.isNearableAlreadyHasATaskAssigned(nearable!) == true {
+                self.showNearableHasAlreadyTaskAssignedMessage(nearable!)
                 return
             }
             
@@ -226,8 +226,8 @@ class TaskManagerViewController : ViewController, UITableViewDelegate, UITableVi
     
     //MARK: Alerts
     
-    func showNoBeaconInEreaMessage() {
-        let alert = UIAlertController(title: Content.getContent(ContentType.labelTxt, name: "TaskManagerVCNoBeaconInEreas"), message: "", preferredStyle: UIAlertControllerStyle.alert)
+    func showNoNearableInEreaMessage() {
+        let alert = UIAlertController(title: Content.getContent(ContentType.labelTxt, name: "TaskManagerVCNoNearableInEreas"), message: "", preferredStyle: UIAlertControllerStyle.alert)
         let btnOk = UIAlertAction(title: Content.getContent(ContentType.buttonTxt, name: "Ok"), style: UIAlertActionStyle.cancel) { (action : UIAlertAction) in
         }
         alert.addAction(btnOk)
@@ -235,8 +235,8 @@ class TaskManagerViewController : ViewController, UITableViewDelegate, UITableVi
         
     }
     
-    func showBeaconHasAlreadyTaskAssignedMessage(_ closestNearable : ESTNearable) {
-        let title = Content.getContent(ContentType.labelTxt, name: "TaskManagerVCTheBeaconHasTaskAllreadyMessage")
+    func showNearableHasAlreadyTaskAssignedMessage(_ closestNearable : ESTNearable) {
+        let title = Content.getContent(ContentType.labelTxt, name: "TaskManagerVCTheNearableHasTaskAllreadyMessage")
         let btnYesTxt = Content.getContent(ContentType.buttonTxt, name: "Yes")
         let btnNoTxt = Content.getContent(ContentType.buttonTxt, name: "No")
         let alert = UIAlertController(title: title, message: "", preferredStyle: UIAlertControllerStyle.alert)

@@ -18,10 +18,12 @@ class AddTaskTypeViewController : ViewController {
     var currenctTaskCreator : CurrenctTaskCreator
     var addTaskTimeViewController: AddTaskTimeViewController?
     var pickerWithBlock: UIPickerWithBlock?
+    let nearableService : NearableServices
     
-    init(container : Container, currenctTaskCreator : CurrenctTaskCreator) {
+    init(container : Container, currenctTaskCreator : CurrenctTaskCreator, nearableService : NearableServices) {
         self.container = container
         self.currenctTaskCreator = currenctTaskCreator
+        self.nearableService = nearableService
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -34,9 +36,9 @@ class AddTaskTypeViewController : ViewController {
         self.title = "Choose task type"
         self.lblTaskType.text = self.currenctTaskCreator.task.taskType.name()
         
-        let beaconImage = BeaconShape(rect: CGRect(x: 0,y: 0,width: 25,height: 40), backgroundColor: self.be.getColorFor(nearableIdentifer: self.currenctTaskCreator.task.nearableIdentifer), lineColor: UIColor.black)
+        let nearableImage = NearableShape(rect: CGRect(x: 0,y: 0,width: 25,height: 40), backgroundColor: self.nearableService.getNearableColorFor(nearableIdentifer: self.currenctTaskCreator.task.nearableIdentifer), lineColor: UIColor.black)
         
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: beaconImage)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: nearableImage)
     }
     
     override func viewDidLoad() {

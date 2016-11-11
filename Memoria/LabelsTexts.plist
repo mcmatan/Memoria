@@ -45,11 +45,11 @@ Then click on the button to add a task.</string>
 	<string>Schedule time: %@  major: %@</string>
 	<key>TaskManagerVCNoTasksAssigened</key>
 	<string>No tasks assigned</string>
-	<key>TaskManagerVCNoBeaconInEreas</key>
+	<key>TaskManagerVCNoNearableInEreas</key>
 	<string>No beacons detected in current area</string>
-	<key>TaskManagerVCTheBeaconHasTaskAllreadyMessage</key>
+	<key>TaskManagerVCTheNearableHasTaskAllreadyMessage</key>
 	<string>The beacon you have selected %@, already has a task assigend to it</string>
-	<key>TaskManagerVCTheBeaconHasTaskAllreadyTitle</key>
+	<key>TaskManagerVCTheNearableHasTaskAllreadyTitle</key>
 	<string>Do you want to edit the task?</string>
 	<key>AddTaskTimeDatePickerDialog</key>
 	<string>Choose a date</string>

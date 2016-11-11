@@ -33,7 +33,7 @@ class TestingNotifications {
     @objc func showSingleGrugWarning() {
         let task = Task(taskType: TaskType.drugs, taskTime: Date(), nearableIdentifer: "", taskTimePriorityHi: true)
         
-        LocalNotificationPresenter.showLocalNotificationForTask(task: task, localNotificationCategotry: LocalNotificationCategotry.warning)
+        LocalNotificationScheduler.scheduleLocalNotificationForTask(task: task, localNotificationCategotry: LocalNotificationCategotry.warning)
     }
     
     //Verification:
@@ -45,7 +45,7 @@ class TestingNotifications {
     @objc func showSingleGrugVerification() {
         let task = Task(taskType: TaskType.drugs, taskTime: Date(), nearableIdentifer:"", taskTimePriorityHi: true)
         
-        LocalNotificationPresenter.showLocalNotificationForTask(task: task, localNotificationCategotry: LocalNotificationCategotry.verification)
+        LocalNotificationScheduler.scheduleLocalNotificationForTask(task: task, localNotificationCategotry: LocalNotificationCategotry.verification)
     }
     
     //Notification 
@@ -57,30 +57,6 @@ class TestingNotifications {
     @objc func showSingleGrugNotification() {
         let task = Task(taskType: TaskType.drugs, taskTime: Date(), nearableIdentifer: "", taskTimePriorityHi: true)
         
-        LocalNotificationPresenter.showLocalNotificationForTask(task: task, localNotificationCategotry: LocalNotificationCategotry.notification)
-    }
-    
-    //App is active
-    func presentTestNoficiationScreen() {
-        
-        let delayTime = DispatchTime.now() + Double(Int64(15 * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
-        DispatchQueue.main.asyncAfter(deadline: delayTime) {
-            
-            
-            
-            //            let beaconIdentifier = IBeaconIdentifier(uuid: "124", major: "123", minor: "123")
-            //            let date = Date() - 3.hours
-            //            _ = Task(taskName: "להוציא את הכלב", taskTime: date, taskVoiceURL: URL(string: "www.google.com")!, taskBeaconIdentifier: beaconIdentifier, taskTimePriorityHi: true)
-            //
-            //            //            self.vc = Bootstrapper.container.resolve(TaskNotificationPopUp.self, argument: task)
-            //            //            self.vc = Bootstrapper.container.resolve(TaskVerificationPopUp.self, argument: task)
-            //            //            self.vc = Bootstrapper.container.resolve(TaskWarningPopUp.self, argument: task)
-            //
-            //            //            rootViewController!.presentViewController(self.vc, animated: true, completion: nil)
-            //            
-            //            AEConsole.launch(with: self)
-            
-            
-        }
+        LocalNotificationScheduler.scheduleLocalNotificationForTask(task: task, localNotificationCategotry: LocalNotificationCategotry.notification)
     }
 }

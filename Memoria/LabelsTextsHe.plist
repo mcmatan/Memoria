@@ -45,11 +45,11 @@
 	<string>זמן משימה: %@  major: %@</string>
 	<key>TaskManagerVCNoTasksAssigened</key>
 	<string>אין משימה משוייכת</string>
-	<key>TaskManagerVCNoBeaconInEreas</key>
+	<key>TaskManagerVCNoNearableInEreas</key>
 	<string>לא נמצאו ביקויינים בטווח</string>
-	<key>TaskManagerVCTheBeaconHasTaskAllreadyMessage</key>
+	<key>TaskManagerVCTheNearableHasTaskAllreadyMessage</key>
 	<string>לביקון שבחרת %@ כבר יש משימה משוייכת</string>
-	<key>TaskManagerVCTheBeaconHasTaskAllreadyTitle</key>
+	<key>TaskManagerVCTheNearableHasTaskAllreadyTitle</key>
 	<string>האם ברצונך לערוך את המשימה?</string>
 	<key>AddTaskTimeDatePickerDialog</key>
 	<string>בחר תאריך</string>

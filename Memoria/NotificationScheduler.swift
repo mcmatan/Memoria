@@ -24,7 +24,7 @@ class NotificationScheduler : NSObject {
     }
     
     internal func squeduleReminderForTask(_ task : Task, date: Date) {
-        LocalNotificationPresenter.showLocalNotificationForTask(task: task, localNotificationCategotry: LocalNotificationCategotry.notification, date: date)
+        LocalNotificationScheduler.scheduleLocalNotificationForTask(task: task, localNotificationCategotry: LocalNotificationCategotry.notification, date: date)
     }
     
     internal func cancelReminderForTask(_ task : Task) {
