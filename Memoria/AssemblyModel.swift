@@ -31,6 +31,10 @@ open class AssemblyModel {
                 nearableStriggerManager: container.resolve(NearableStriggerManager.self)!)
             }.inObjectScope(ObjectScope.container)
         let _ = container.resolve(TaskNotificationsTracker.self)
+        
+        container.register(LocalNotificationScheduler.self) { c in
+            return LocalNotificationScheduler()
+            }.inObjectScope(ObjectScope.container)
 
         container.register(TasksServices.self) { c in
             return TasksServices(tasksDB: container.resolve(TasksDB.self)!,
@@ -62,9 +66,6 @@ open class AssemblyModel {
             }.inObjectScope(ObjectScope.container)
         let _ = container.resolve(TaskActionsPerformer.self)
         
-        container.register(LocalNotificationScheduler.self) { c in
-            return LocalNotificationScheduler()
-        }.inObjectScope(ObjectScope.container)
     }
     
 }

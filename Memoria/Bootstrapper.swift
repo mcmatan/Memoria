@@ -5,8 +5,8 @@ class Bootstrapper {
     static var container = Container()
 
     class func run() {
-        AssemblyUIComponents.run(container)
         AssemblyModel.run(container)
+        AssemblyUIComponents.run(container)
         AssemblyControllers.run(container)
         
         let _ = container.resolve(UINotificationActionsExecuter.self)
