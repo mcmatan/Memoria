@@ -15,7 +15,7 @@ struct NotificationText {
 
 class NotificationsTextsBuilder {
     
-    func getNotificationText(task: Task, localNotificationCategory: LocalNotificationCategotry)->NotificationText {
+    static func getNotificationText(task: Task, localNotificationCategory: LocalNotificationCategotry)->NotificationText {
         switch task.taskType {
         case TaskType.brushTeeth:
             return self.bruthTeeth(localNotificationCategory: localNotificationCategory, taskDate: task.taskTime!)
@@ -26,7 +26,7 @@ class NotificationsTextsBuilder {
         }
     }
         
-    func bruthTeeth(localNotificationCategory: LocalNotificationCategotry, taskDate: Date)->NotificationText {
+    static func bruthTeeth(localNotificationCategory: LocalNotificationCategotry, taskDate: Date)->NotificationText {
         switch localNotificationCategory {
         case .warning:
             let title = "You have already brushed your teeth earlier!"
@@ -47,7 +47,7 @@ class NotificationsTextsBuilder {
         }
     }
 
-    func drugs(localNotificationCategory: LocalNotificationCategotry, taskDate: Date)->NotificationText {
+    static func drugs(localNotificationCategory: LocalNotificationCategotry, taskDate: Date)->NotificationText {
         switch localNotificationCategory {
         case .warning:
             let title = "You have already took your medicine at \(taskDate.toStringCurrentRegionShortTime())"
@@ -68,7 +68,7 @@ class NotificationsTextsBuilder {
         }
     }
 
-    func food(localNotificationCategory: LocalNotificationCategotry, taskDate: Date)->NotificationText {
+    static func food(localNotificationCategory: LocalNotificationCategotry, taskDate: Date)->NotificationText {
         switch localNotificationCategory {
         case .warning:
             let title = "You have already made dinner today!"
@@ -89,12 +89,12 @@ class NotificationsTextsBuilder {
         }
     }
 
-    func goodTimeOfDayString(date: Date)->String {
+    static func goodTimeOfDayString(date: Date)->String {
         let goodTimeOfDayString = String.localizedStringWithFormat(Content.getContent(ContentType.labelTxt, name: "TaskVerificationPopUpGoodTimeOfDay"), date.dateToDayPartDeifinisionString())
         return goodTimeOfDayString
     }
     
-    func itsTimeWithTime(date: Date)->String {
+    static func itsTimeWithTime(date: Date)->String {
         let timeForString = String.localizedStringWithFormat(Content.getContent(ContentType.labelTxt, name: "TaskVerificationPopUpItsTimeWithTime"), date.toStringCurrentRegionShortTime())
         return timeForString
     }

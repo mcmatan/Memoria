@@ -40,15 +40,12 @@ class LocalNotificationScheduler {
     }
     
     func scheduleNotification(task: Task, date: Date = Date()) {
-        let currentDate = Date()
-        let userName = Content.getContent(ContentType.labelTxt, name: "TaskVerificationPopUpUserName")
-        let goodTimeOfDatString = String.localizedStringWithFormat(Content.getContent(ContentType.labelTxt, name: "TaskVerificationPopUpGoodTimeOfDay"), (task.taskTime!.dateToDayPartDeifinisionString()), userName)
-        let timeForString = String.localizedStringWithFormat(Content.getContent(ContentType.labelTxt, name: "TaskVerificationPopUpItsTimeWithTime"), currentDate.toStringCurrentRegionShortTime(), (task.taskType.name)())
+        let notificationText = NotificationsTextsBuilder.getNotificationText(task: task, localNotificationCategory: LocalNotificationCategotry.notification)
         
         self.scheduleNotification(
-            title: "Notification",
-            subtitle: (task.taskType.name()),
-            body: goodTimeOfDatString + " " + timeForString,
+            title: notificationText.title,
+            subtitle: "",
+            body: notificationText.body,
             localNotificationCategory: LocalNotificationCategotry.notification,
             date: date,
             sound: task.taskType.soundURL(localNotificationCategotry: .verification),
@@ -57,18 +54,12 @@ class LocalNotificationScheduler {
     }
     
     func scheduleWarning(task: Task) {
-        let didAllreadyString = String.localizedStringWithFormat(Content.getContent(ContentType.labelTxt, name: "TaskWarningPopUpDidAllready"), task.taskType.name())
-        let laterTodayString = String.localizedStringWithFormat(Content.getContent(ContentType.labelTxt, name: "TaskWarningPopUpDidLaterToday"), task.taskType.name())
-        let warningString = (task.taskTime! <= Date()) ? didAllreadyString : laterTodayString
-        
-        let didAllreadyStringBecareful = Content.getContent(ContentType.labelTxt, name: "TaskWarningPopUpDidCerfulNotToTakeTwice")
-        let laterTodayStringBecareful = String.localizedStringWithFormat(Content.getContent(ContentType.labelTxt, name: "TaskWarningPopUpDidPleaseWaitFor"), task.taskTime!.toStringCurrentRegionShortTime())
-        let beCarefulString = (task.taskTime! <= Date()) ? didAllreadyStringBecareful : laterTodayStringBecareful
+        let notificationText = NotificationsTextsBuilder.getNotificationText(task: task, localNotificationCategory: LocalNotificationCategotry.warning)
         
         self.scheduleNotification(
-            title: "Warning",
-            subtitle: task.taskType.name(),
-            body: warningString + " " + beCarefulString,
+            title: notificationText.title,
+            subtitle: "",
+            body: notificationText.body,
             localNotificationCategory: LocalNotificationCategotry.warning,
             date: nil,
             sound: task.taskType.soundURL(localNotificationCategotry: .verification),
@@ -78,13 +69,12 @@ class LocalNotificationScheduler {
     }
     
     func scheduleVerification(task: Task) {
-        let iSeeYourNear = String.localizedStringWithFormat(Content.getContent(ContentType.labelTxt, name: "TaskVerificationPopUpISeeYourNeer"), (task.taskType.name)())
-        let didYouYet = String.localizedStringWithFormat(Content.getContent(ContentType.labelTxt, name: "TaskVerificationPopUpDidYouYet"), (task.taskType.name)())
+        let notificationText = NotificationsTextsBuilder.getNotificationText(task: task, localNotificationCategory: LocalNotificationCategotry.verification)
         
         self.scheduleNotification(
-            title: "Verification",
-            subtitle: (task.taskType.name()),
-            body: iSeeYourNear + " " + didYouYet,
+            title: notificationText.title,
+            subtitle: "",
+            body: notificationText.body,
             localNotificationCategory: LocalNotificationCategotry.verification,
             date: nil,
             sound: task.taskType.soundURL(localNotificationCategotry: .verification),

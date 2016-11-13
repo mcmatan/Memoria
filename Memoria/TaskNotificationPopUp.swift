@@ -37,8 +37,9 @@ class TaskNotificationPopUp : ViewController {
         imgLight.heightLayoutAs(150)
         imgLight.topToViewControllerTopLayoutGuide(self, offset: 70)
         
-        //format Good morning dor
-        let goodTimeOfDatString = String.localizedStringWithFormat(Content.getContent(ContentType.labelTxt, name: "TaskVerificationPopUpGoodTimeOfDay"), task.taskTime!.dateToDayPartDeifinisionString())
+        let notificationText = NotificationsTextsBuilder.getNotificationText(task: task, localNotificationCategory: LocalNotificationCategotry.notification)
+        
+        let goodTimeOfDatString = notificationText.title
         self.lblGoodAfternoon.text = goodTimeOfDatString
         self.lblGoodAfternoon.font = UIFont.systemFont(ofSize: 26)
         self.lblGoodAfternoon.numberOfLines = 0
@@ -47,11 +48,7 @@ class TaskNotificationPopUp : ViewController {
         self.lblGoodAfternoon.topAlighnToViewBottom(imgLight, offset: 10)
         self.lblGoodAfternoon.centerVerticlyInSuperView()
         
-        let currentDate = Date()
-        
-        let timeForString = String.localizedStringWithFormat(Content.getContent(ContentType.labelTxt, name: "TaskVerificationPopUpItsTimeWithTime"), currentDate.toStringCurrentRegionShortTime(), task.taskType.name())
-        // format"It's 4:00 PM.\nTime to feed your dog!"
-        self.lblItsTimeFor.text = timeForString
+        self.lblItsTimeFor.text = notificationText.body
         self.lblItsTimeFor.titleGray()
         self.lblItsTimeFor.font = UIFont.systemFont(ofSize: 23)
         self.lblItsTimeFor.textAlignment = NSTextAlignment.center

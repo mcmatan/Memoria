@@ -61,12 +61,9 @@ class TaskWarningPopUp : ViewController {
         imgError.heightLayoutAs(117)
         imgError.topToViewControllerTopLayoutGuide(self, offset: 70)
         
+        let notificationText = NotificationsTextsBuilder.getNotificationText(task: task, localNotificationCategory: LocalNotificationCategotry.warning)
         
-        let didAllreadyString = String.localizedStringWithFormat(Content.getContent(ContentType.labelTxt, name: "TaskWarningPopUpDidAllready"), self.task.taskType.name())
-        let laterTodayString = String.localizedStringWithFormat(Content.getContent(ContentType.labelTxt, name: "TaskWarningPopUpDidLaterToday"), self.task.taskType.name())
-        let warningString = (self.task.taskTime <= Date()) ? didAllreadyString : laterTodayString
-        
-        self.lblYouAllreadyTook.text = warningString
+        self.lblYouAllreadyTook.text = notificationText.title
         self.lblYouAllreadyTook.font = UIFont.systemFont(ofSize: 26)
         self.lblYouAllreadyTook.numberOfLines = 2
         self.lblYouAllreadyTook.textAlignment = NSTextAlignment.center
@@ -75,12 +72,9 @@ class TaskWarningPopUp : ViewController {
         self.lblYouAllreadyTook.centerVerticlyInSuperView()
         self.lblYouAllreadyTook.leadingToSuperView(true)
         self.lblYouAllreadyTook.trailingToSuperView(true)
+    
         
-        let didAllreadyStringBecareful = Content.getContent(ContentType.labelTxt, name: "TaskWarningPopUpDidCerfulNotToTakeTwice")
-        let laterTodayStringBecareful = String.localizedStringWithFormat(Content.getContent(ContentType.labelTxt, name: "TaskWarningPopUpDidPleaseWaitFor"), task.taskTime!.toStringCurrentRegionShortTime())
-        let beCarefulString = (self.task.taskTime <= Date()) ? didAllreadyStringBecareful : laterTodayStringBecareful
-        
-        self.lblBeCareful.text = beCarefulString
+        self.lblBeCareful.text = notificationText.body
         self.lblBeCareful.titleGray()
         self.lblBeCareful.font = UIFont.systemFont(ofSize: 24)
         self.lblBeCareful.textAlignment = NSTextAlignment.center
