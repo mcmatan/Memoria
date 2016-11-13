@@ -78,7 +78,7 @@ class AddTaskTimePriorityController: ViewController {
         NSLayoutConstraint.activate(verticalLayout)
         
         lblExplenation.topToViewControllerTopLayoutGuide(self, offset: 20)
-        switchPrairity.centerVerticlyInSuperView()
+        switchPrairity.centerHorizontlyInSuperView()
     }
     
     func timePriorirtySwitchStateChage(_ change : UISwitch) {

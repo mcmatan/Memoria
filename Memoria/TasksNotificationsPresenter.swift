@@ -17,8 +17,14 @@ class TasksNotificationsPresenter : NSObject {
     let reminderPopUp = ReminderPopUp()
     let container : Container
     let localNotificationScheduler: LocalNotificationScheduler
+    let mainApplicationViewController: UIViewController
     
-    init(iNearableServices : NearableServices, container : Container, localNotificationScheduler: LocalNotificationScheduler) {
+    init(iNearableServices : NearableServices,
+         container : Container,
+         localNotificationScheduler: LocalNotificationScheduler,
+         mainApplicationViewController: UIViewController
+        ) {
+        self.mainApplicationViewController = mainApplicationViewController
         self.iNearableServices = iNearableServices
         self.recorder = VoiceRecorder()
         self.container = container
@@ -109,13 +115,13 @@ class TasksNotificationsPresenter : NSObject {
     }
     
     func presentOnMainView(viewController: UIViewController) {
-        let mainViewController = UIApplication.shared.keyWindow?.rootViewController
-        if let isPresentedViewController = mainViewController?.presentedViewController {
+        let mainViewController = self.mainApplicationViewController
+        if let isPresentedViewController = mainViewController.presentedViewController {
             isPresentedViewController.dismiss(animated: false, completion: { 
-                mainViewController?.present(viewController, animated: true, completion: nil)
+                mainViewController.present(viewController, animated: true, completion: nil)
             })
         }else {
-            mainViewController?.present(viewController, animated: true, completion: nil)
+            mainViewController.present(viewController, animated: true, completion: nil)
         }
     }
 

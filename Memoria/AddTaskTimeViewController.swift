@@ -76,7 +76,7 @@ class AddTaskTimeViewController : ViewController {
         NSLayoutConstraint.activate(verticalLayout)
         
         addTaskBtn.topToViewControllerTopLayoutGuide(self, offset: 20)
-        addTaskBtn.centerVerticlyInSuperView()
+        addTaskBtn.centerHorizontlyInSuperView()
     }
     
     

@@ -49,15 +49,6 @@ open class AssemblyUIComponents {
                 tasksNotificationsPresenter: container.resolve(TasksNotificationsPresenter.self)!
             )
             }.inObjectScope(ObjectScope.container)
-
-        container.register(TasksNotificationsPresenter.self) { c in
-            return TasksNotificationsPresenter(
-                                               iNearableServices:  container.resolve(NearableServices.self)! ,
-                                               container: container,
-                                               localNotificationScheduler: container.resolve(LocalNotificationScheduler.self)!
-                                               )
-            }.inObjectScope(ObjectScope.container)
-        let _ = container.resolve(TasksNotificationsPresenter.self)
         
         container.register(TabBarController.self) { c in
             let tabBar = TabBarController()
@@ -75,11 +66,11 @@ open class AssemblyUIComponents {
         container.register(NavigationController.self) { c in
             let navigationController = NavigationController(rootViewController : c.resolve(TabBarController.self)!)
             return navigationController
-        }
+        }.inObjectScope(ObjectScope.container)
         
         container.register(LogInViewController.self) { c in
             return LogInViewController()
-        }
+        }.inObjectScope(ObjectScope.container)
         
         container.register(RootViewController.self) { c in
             return RootViewController(
@@ -87,6 +78,17 @@ open class AssemblyUIComponents {
                 mainApplicationController: container.resolve(NavigationController.self)!
             )
         }
+        
+        
+        container.register(TasksNotificationsPresenter.self) { c in
+            return TasksNotificationsPresenter(
+                iNearableServices:  container.resolve(NearableServices.self)! ,
+                container: container,
+                localNotificationScheduler: container.resolve(LocalNotificationScheduler.self)!,
+                mainApplicationViewController : container.resolve(NavigationController.self)!
+            )
+            }.inObjectScope(ObjectScope.container)
+        let _ = container.resolve(TasksNotificationsPresenter.self)
 
     }
 }

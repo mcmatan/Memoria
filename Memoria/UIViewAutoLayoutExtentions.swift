@@ -15,17 +15,17 @@ extension UIView {
         }
     }
     func centerInSuperView() {
-        self.centerHorizontalyInSuperView()
         self.centerVerticlyInSuperView()
+        self.centerHorizontlyInSuperView()
     }
     
-    func centerHorizontalyInSuperView() { //Y
+    func centerVerticlyInSuperView() { //Y
         self.translatesAutoresizingMaskIntoConstraints = false
         let constraint = NSLayoutConstraint(item: self, attribute: NSLayoutAttribute.centerY, relatedBy: NSLayoutRelation.equal, toItem: superview, attribute: NSLayoutAttribute.centerY, multiplier: 1.0, constant: 0)
         superview?.addConstraint(constraint)
     }
     
-    func centerVerticlyInSuperView() { //X
+    func centerHorizontlyInSuperView() { //X
         self.translatesAutoresizingMaskIntoConstraints = false
         let constraint = NSLayoutConstraint(item: self, attribute: NSLayoutAttribute.centerX, relatedBy: NSLayoutRelation.equal, toItem: superview, attribute: NSLayoutAttribute.centerX, multiplier: 1.0, constant: 0)
         superview?.addConstraint(constraint)
@@ -141,12 +141,12 @@ extension UIView {
 class UIViewAutoLayoutExtentions {
     class func centerVerticlyAlViewsInSuperView(_ views : [UIView]) {
         for view in views {
-            view.centerVerticlyInSuperView()
+            view.centerHorizontlyInSuperView()
         }
     }
     class func centerHorizontalyAlViewsInSuperView(_ views : [UIView]) {
         for view in views {
-            view.centerHorizontalyInSuperView()
+            view.centerVerticlyInSuperView()
         }
     }
     class func equalHegihtForViews(_ views : [UIView]) {

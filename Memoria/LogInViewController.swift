@@ -34,10 +34,10 @@ class LogInViewController: ViewController {
         self.view.addSubview(self.textFiledPassword)
         self.view.addSubview(self.btnLogIn)
         
-        self.imgLogo.centerVerticlyInSuperView()
-        self.textFiledPassword.centerVerticlyInSuperView()
-        self.textFieldUserName.centerVerticlyInSuperView()
-        self.btnLogIn.centerVerticlyInSuperView()
+        self.imgLogo.centerHorizontlyInSuperView()
+        self.textFiledPassword.centerHorizontlyInSuperView()
+        self.textFieldUserName.centerHorizontlyInSuperView()
+        self.btnLogIn.centerHorizontlyInSuperView()
         
         let paddingBetweenElements = CGFloat(13.0)
         self.imgLogo.topAlighnToViewTop(self.view, offset: 60)

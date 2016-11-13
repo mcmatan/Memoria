@@ -37,7 +37,7 @@ class TaskVerificationPopUp : ViewController {
         
         let imgLight = ImageView(image: UIImage(named: "NotificationLight"))
         self.view.addSubview(imgLight)
-        imgLight.centerVerticlyInSuperView()
+        imgLight.centerHorizontlyInSuperView()
         imgLight.setWidthAs(120)
         imgLight.setHeightAs(150)
         imgLight.topToViewControllerTopLayoutGuide(self, offset: 70)
@@ -48,7 +48,7 @@ class TaskVerificationPopUp : ViewController {
         self.lblISeeYourNear.textAlignment = NSTextAlignment.center
         self.view .addSubview(self.lblISeeYourNear)
         self.lblISeeYourNear.topAlighnToViewBottom(imgLight, offset: 10)
-        self.lblISeeYourNear.centerVerticlyInSuperView()
+        self.lblISeeYourNear.centerHorizontlyInSuperView()
         self.lblISeeYourNear.leadingToSuperView(true)
         self.lblISeeYourNear.trailingToSuperView(true)
         
@@ -59,26 +59,26 @@ class TaskVerificationPopUp : ViewController {
         self.lblDidYouYet.textAlignment = NSTextAlignment.center
         self.lblDidYouYet.numberOfLines = 0
         self.view.addSubview(self.lblDidYouYet)
-        self.lblDidYouYet.centerVerticlyInSuperView()
+        self.lblDidYouYet.centerHorizontlyInSuperView()
         self.lblDidYouYet.topAlighnToViewBottom(self.lblISeeYourNear, offset: 13)
         self.lblDidYouYet.leadingToSuperView(true)
         self.lblDidYouYet.trailingToSuperView(true)
         
         self.view.addSubview(self.btnYes)
         self.btnYes.notificiationYesVericiation()
-        self.btnYes.centerVerticlyInSuperView()
+        self.btnYes.centerHorizontlyInSuperView()
         self.btnYes.topAlighnToViewBottom(self.lblDidYouYet, offset: 53)
         self.btnYes.addTarget(self, action: #selector(TaskVerificationPopUp.btnYesPress), for: UIControlEvents.touchUpInside)
 
         self.view.addSubview(self.btnRemindMeLayer)
         self.btnRemindMeLayer.notificiationRemindMeLater()
-        self.btnRemindMeLayer.centerVerticlyInSuperView()
+        self.btnRemindMeLayer.centerHorizontlyInSuperView()
         self.btnRemindMeLayer.topAlighnToViewBottom(self.btnYes, offset: 13)
         self.btnRemindMeLayer.addTarget(self, action: #selector(TaskVerificationPopUp.btnRemoingMeLaterPress), for: UIControlEvents.touchUpInside)
 
         self.view.addSubview(self.btnSoundPlaying)
         self.btnSoundPlaying.notificiationPlayingGray()
-        self.btnSoundPlaying.centerVerticlyInSuperView()
+        self.btnSoundPlaying.centerHorizontlyInSuperView()
         self.btnSoundPlaying.bottomAlighnToViewBottom(self.view, offset: -40)
         self.btnSoundPlaying.addTarget(self, action: #selector(TaskVerificationPopUp.btnPlayRecordPress), for: UIControlEvents.touchUpInside)
         
