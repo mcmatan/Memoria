@@ -108,7 +108,9 @@ class NotificationsTextsBuilder {
     }
     
     static func itsTimeWithTime(date: Date)->String {
-        let timeForString = String.localizedStringWithFormat(Content.getContent(ContentType.labelTxt, name: "TaskVerificationPopUpItsTimeWithTime"), date.toStringCurrentRegionShortTime())
+        let dateString = date.toStringCurrentRegionShortTime()
+        let text = Content.getContent(ContentType.labelTxt, name: "TaskVerificationPopUpItsTimeWithTime")
+        let timeForString = String.localizedStringWithFormat(text, dateString)
         return timeForString
     }
 }

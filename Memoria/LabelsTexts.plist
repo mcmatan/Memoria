@@ -68,8 +68,7 @@ Then click on the button to add a task.</string>
 	<key>TaskVerificationPopUpGoodTimeOfDay</key>
 	<string>Good %@!</string>
 	<key>TaskVerificationPopUpItsTimeWithTime</key>
-	<string>It&apos;s %@,
-time to %@!&quot;</string>
+	<string>It&apos;s %@</string>
 	<key>TabBarTasksLbl</key>
 	<string>Tasks</string>
 	<key>TaskManagerTitle</key>
@@ -79,6 +78,6 @@ time to %@!&quot;</string>
 	<key>TimeOfDayAfterNoon</key>
 	<string>afternoon</string>
 	<key>TimeOfDayEavning</key>
-	<string>eavning</string>
+	<string>evening</string>
 </dict>
 </plist>
