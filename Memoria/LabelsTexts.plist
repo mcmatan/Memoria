@@ -48,7 +48,7 @@ Then click on the button to add a task.</string>
 	<key>TaskManagerVCNoNearableInEreas</key>
 	<string>No beacons detected in current area</string>
 	<key>TaskManagerVCTheNearableHasTaskAllreadyMessage</key>
-	<string>The beacon you have selected %@, already has a task assigend to it</string>
+	<string>The beacon you have selected already has a task assigend to it. Would you like to override it?</string>
 	<key>TaskManagerVCTheNearableHasTaskAllreadyTitle</key>
 	<string>Do you want to edit the task?</string>
 	<key>AddTaskTimeDatePickerDialog</key>

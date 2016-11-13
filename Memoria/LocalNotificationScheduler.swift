@@ -43,9 +43,9 @@ class LocalNotificationScheduler {
         let notificationText = NotificationsTextsBuilder.getNotificationText(task: task, localNotificationCategory: LocalNotificationCategotry.notification)
         
         self.scheduleNotification(
-            title: notificationText.title,
+            title: notificationText.notificationTitle,
             subtitle: "",
-            body: notificationText.body,
+            body: notificationText.notificationBody,
             localNotificationCategory: LocalNotificationCategotry.notification,
             date: date,
             sound: task.taskType.soundURL(localNotificationCategotry: .verification),
@@ -57,9 +57,9 @@ class LocalNotificationScheduler {
         let notificationText = NotificationsTextsBuilder.getNotificationText(task: task, localNotificationCategory: LocalNotificationCategotry.warning)
         
         self.scheduleNotification(
-            title: notificationText.title,
+            title: notificationText.notificationTitle,
             subtitle: "",
-            body: notificationText.body,
+            body: notificationText.notificationBody,
             localNotificationCategory: LocalNotificationCategotry.warning,
             date: nil,
             sound: task.taskType.soundURL(localNotificationCategotry: .verification),
@@ -72,9 +72,9 @@ class LocalNotificationScheduler {
         let notificationText = NotificationsTextsBuilder.getNotificationText(task: task, localNotificationCategory: LocalNotificationCategotry.verification)
         
         self.scheduleNotification(
-            title: notificationText.title,
+            title: notificationText.notificationTitle,
             subtitle: "",
-            body: notificationText.body,
+            body: notificationText.notificationBody,
             localNotificationCategory: LocalNotificationCategotry.verification,
             date: nil,
             sound: task.taskType.soundURL(localNotificationCategotry: .verification),

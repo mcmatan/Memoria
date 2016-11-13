@@ -63,7 +63,7 @@ class TaskWarningPopUp : ViewController {
         
         let notificationText = NotificationsTextsBuilder.getNotificationText(task: task, localNotificationCategory: LocalNotificationCategotry.warning)
         
-        self.lblYouAllreadyTook.text = notificationText.title
+        self.lblYouAllreadyTook.text = notificationText.popUpTitle
         self.lblYouAllreadyTook.font = UIFont.systemFont(ofSize: 26)
         self.lblYouAllreadyTook.numberOfLines = 2
         self.lblYouAllreadyTook.textAlignment = NSTextAlignment.center
@@ -74,13 +74,15 @@ class TaskWarningPopUp : ViewController {
         self.lblYouAllreadyTook.trailingToSuperView(true)
     
         
-        self.lblBeCareful.text = notificationText.body
+        self.lblBeCareful.text = notificationText.popUpBody
         self.lblBeCareful.titleGray()
         self.lblBeCareful.font = UIFont.systemFont(ofSize: 24)
         self.lblBeCareful.textAlignment = NSTextAlignment.center
         self.lblBeCareful.numberOfLines = 0
         self.view.addSubview(self.lblBeCareful)
         self.lblBeCareful.centerVerticlyInSuperView()
+        self.lblBeCareful.leadingToSuperView(true)
+        self.lblBeCareful.trailingToSuperView(true)
         self.lblBeCareful.topAlighnToViewBottom(self.lblYouAllreadyTook, offset: 13)
         
         self.view.addSubview(self.btnYes)

@@ -39,7 +39,7 @@ class TaskNotificationPopUp : ViewController {
         
         let notificationText = NotificationsTextsBuilder.getNotificationText(task: task, localNotificationCategory: LocalNotificationCategotry.notification)
         
-        let goodTimeOfDatString = notificationText.title
+        let goodTimeOfDatString = notificationText.popUpTitle
         self.lblGoodAfternoon.text = goodTimeOfDatString
         self.lblGoodAfternoon.font = UIFont.systemFont(ofSize: 26)
         self.lblGoodAfternoon.numberOfLines = 0
@@ -48,7 +48,7 @@ class TaskNotificationPopUp : ViewController {
         self.lblGoodAfternoon.topAlighnToViewBottom(imgLight, offset: 10)
         self.lblGoodAfternoon.centerVerticlyInSuperView()
         
-        self.lblItsTimeFor.text = notificationText.body
+        self.lblItsTimeFor.text = notificationText.popUpBody
         self.lblItsTimeFor.titleGray()
         self.lblItsTimeFor.font = UIFont.systemFont(ofSize: 23)
         self.lblItsTimeFor.textAlignment = NSTextAlignment.center

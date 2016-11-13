@@ -48,7 +48,7 @@
 	<key>TaskManagerVCNoNearableInEreas</key>
 	<string>לא נמצאו ביקויינים בטווח</string>
 	<key>TaskManagerVCTheNearableHasTaskAllreadyMessage</key>
-	<string>לביקון שבחרת %@ כבר יש משימה משוייכת</string>
+	<string>לביקון שבחרת כבר יש משימה משוייכת</string>
 	<key>TaskManagerVCTheNearableHasTaskAllreadyTitle</key>
 	<string>האם ברצונך לערוך את המשימה?</string>
 	<key>AddTaskTimeDatePickerDialog</key>

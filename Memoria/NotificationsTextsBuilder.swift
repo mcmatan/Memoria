@@ -9,8 +9,10 @@
 import Foundation
 
 struct NotificationText {
-    let title: String
-    let body: String
+    let popUpTitle: String
+    let popUpBody: String
+    let notificationTitle: String
+    let notificationBody: String
 }
 
 class NotificationsTextsBuilder {
@@ -29,42 +31,50 @@ class NotificationsTextsBuilder {
     static func bruthTeeth(localNotificationCategory: LocalNotificationCategotry, taskDate: Date)->NotificationText {
         switch localNotificationCategory {
         case .warning:
-            let title = "You have already brushed your teeth earlier!"
+            let popUpTitle = "You have already brushed your teeth earlier!"
+            let notificationTitle = "You already brushed your teeth earlier!"
             let body = "Are you sure you want to do that again?"
-            return NotificationText(title: title, body: body)
+            return NotificationText(popUpTitle: popUpTitle, popUpBody: body, notificationTitle: notificationTitle, notificationBody: body)
         case .notification:
             let goodTimeOfDayString = self.goodTimeOfDayString(date: taskDate)
             let timeForString = self.itsTimeWithTime(date: taskDate)
             let title = goodTimeOfDayString
-            let body = "\(timeForString). time to Brush your teeth."
-            return NotificationText(title: title, body: body)
+            let body = "\(timeForString). time to brush your teeth."
+            return NotificationText(popUpTitle: title, popUpBody: body, notificationTitle: title, notificationBody: body)
         case .verification:
-            let title = "Hi there! i’ve noticed you are using your toothbrush."
+            let popUpTitle = "Hi there! I’ve noticed you are using your toothbrush."
+            let notificationTitle = "You are using your toothbrush."
             let body = "Are you brushing your teeth right now?"
-            return NotificationText(title: title, body: body)
+            return NotificationText(popUpTitle: popUpTitle, popUpBody: body, notificationTitle: notificationTitle, notificationBody: body)
         case .done:
-            return NotificationText(title: "Brushing teeth marked as done.", body: "")
+            let title = "Brushing teeth marked as done."
+            let body = ""
+            return NotificationText(popUpTitle: title, popUpBody: body, notificationTitle: title, notificationBody: body)
         }
     }
 
     static func drugs(localNotificationCategory: LocalNotificationCategotry, taskDate: Date)->NotificationText {
         switch localNotificationCategory {
         case .warning:
-            let title = "You have already took your medicine at \(taskDate.toStringCurrentRegionShortTime())"
+            let popUpTitle = "You have already took your medicine at \(taskDate.toStringCurrentRegionShortTime())"
+            let notificationTitle = "You already took your medicine today"
             let body = "Carefull not to take too many."
-            return NotificationText(title: title, body: body)
+               return NotificationText(popUpTitle: popUpTitle, popUpBody: body, notificationTitle: notificationTitle, notificationBody: body)
         case .notification:
             let goodTimeOfDayString = self.goodTimeOfDayString(date: taskDate)
             let timeForString = self.itsTimeWithTime(date: taskDate)
             let title = goodTimeOfDayString
             let body = "\(timeForString). Time to go and take your pills."
-            return NotificationText(title: title, body: body)
+               return NotificationText(popUpTitle: title, popUpBody: body, notificationTitle: title, notificationBody: body)
         case .verification:
-            let title = "Hi there! i’ve noticed you opened your pill box."
+            let popUpTitle = "Hi there! I’ve noticed you opened your pill box."
+            let notificationTitle = "I’ve noticed you opened your pill box."
             let body = "Are you taking your pills right now?"
-            return NotificationText(title: title, body: body)
+            return NotificationText(popUpTitle: popUpTitle, popUpBody: body, notificationTitle: notificationTitle, notificationBody: body)
         case .done:
-            return NotificationText(title: "Taking pills marked as done.", body: "")
+            let title = "Taking pills marked as done."
+            let body = ""
+            return NotificationText(popUpTitle: title, popUpBody: body, notificationTitle: title, notificationBody: body)
         }
     }
 
@@ -73,19 +83,22 @@ class NotificationsTextsBuilder {
         case .warning:
             let title = "You have already made dinner today!"
             let body = "Are you sure you want to do that again?"
-            return NotificationText(title: title, body: body)
+            return NotificationText(popUpTitle: title, popUpBody: body, notificationTitle: title, notificationBody: body)
         case .notification:
             let goodTimeOfDayString = self.goodTimeOfDayString(date: taskDate)
             let timeForString = self.itsTimeWithTime(date: taskDate)
             let title = goodTimeOfDayString
             let body = "\(timeForString). Time to make dinner."
-            return NotificationText(title: title, body: body)
+            return NotificationText(popUpTitle: title, popUpBody: body, notificationTitle: title, notificationBody: body)
         case .verification:
-            let title = "Hey there!  I’ve noticed you opened your fridge"
+            let popUpTitle = "Hi there! I’ve noticed you opened your fridge"
+            let notificationTitle = "I’ve noticed you opened your fridge"
             let body = "Are you making dinner?"
-            return NotificationText(title: title, body: body)
+            return NotificationText(popUpTitle: popUpTitle, popUpBody: body, notificationTitle: notificationTitle, notificationBody: body)
         case .done:
-            return NotificationText(title: "Making dinner marked as done.", body: "")
+            let title = "Making dinner marked as done."
+            let body = ""
+            return NotificationText(popUpTitle: title, popUpBody: body, notificationTitle: title, notificationBody: body)
         }
     }
 
