@@ -144,7 +144,7 @@ class UIViewAutoLayoutExtentions {
             view.centerHorizontlyInSuperView()
         }
     }
-    class func centerHorizontalyAlViewsInSuperView(_ views : [UIView]) {
+    class func centerVerticalyAlViewsInSuperView(_ views : [UIView]) {
         for view in views {
             view.centerVerticlyInSuperView()
         }

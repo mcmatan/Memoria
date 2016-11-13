@@ -128,7 +128,7 @@ class TaskManagerViewController : ViewController, UITableViewDelegate, UITableVi
 
         NSLayoutConstraint.activate(allConstrins)
         UIViewAutoLayoutExtentions.centerVerticlyAlViewsInSuperView([activityIndicator])
-        UIViewAutoLayoutExtentions.centerHorizontalyAlViewsInSuperView([activityIndicator])
+        UIViewAutoLayoutExtentions.centerVerticalyAlViewsInSuperView([activityIndicator])
 
         
         self.tableView.delegate = self
