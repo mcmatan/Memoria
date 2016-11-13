@@ -53,18 +53,19 @@ enum TaskType: String {
     }
     
     func soundURL(localNotificationCategotry: LocalNotificationCategotry)->URL {
+        let taskTypeString = self.rawValue
         switch localNotificationCategotry {
         case .notification:
-            let url = Bundle.main.url(forResource: "drugs-notification", withExtension: "aiff")
+            let url = Bundle.main.url(forResource: "\(taskTypeString)-notification", withExtension: "aiff")
             return url!
         case .warning:
-            let url = Bundle.main.url(forResource: "drugs-warning", withExtension: "aiff")
+            let url = Bundle.main.url(forResource: "\(taskTypeString)-warning", withExtension: "aiff")
             return url!
         case .verification:
-            let url = Bundle.main.url(forResource: "drugs-verification", withExtension: "aiff")
+            let url = Bundle.main.url(forResource: "\(taskTypeString)-verification", withExtension: "aiff")
             return url!
         case .done:
-            let url = Bundle.main.url(forResource: "drugs-done", withExtension: "aiff")
+            let url = Bundle.main.url(forResource: "\(taskTypeString)-done", withExtension: "aiff")
             return url!
         }
     }

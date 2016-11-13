@@ -31,8 +31,8 @@
 		902147CE1DD4EDBC00D4B8E0 /* drugsBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = 902147C51DD4EDBC00D4B8E0 /* drugsBlue.png */; };
 		902147CF1DD4EDBC00D4B8E0 /* drugsGreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 902147C61DD4EDBC00D4B8E0 /* drugsGreen.png */; };
 		902147D01DD4EDBC00D4B8E0 /* drugsRed.png in Resources */ = {isa = PBXBuildFile; fileRef = 902147C71DD4EDBC00D4B8E0 /* drugsRed.png */; };
-		902147D11DD4EDBC00D4B8E0 /* feedBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = 902147C81DD4EDBC00D4B8E0 /* feedBlue.png */; };
-		902147D21DD4EDBC00D4B8E0 /* feedRed.png in Resources */ = {isa = PBXBuildFile; fileRef = 902147C91DD4EDBC00D4B8E0 /* feedRed.png */; };
+		902147D11DD4EDBC00D4B8E0 /* foodBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = 902147C81DD4EDBC00D4B8E0 /* foodBlue.png */; };
+		902147D21DD4EDBC00D4B8E0 /* foodRed.png in Resources */ = {isa = PBXBuildFile; fileRef = 902147C91DD4EDBC00D4B8E0 /* foodRed.png */; };
 		902147D31DD4EDBC00D4B8E0 /* foodGreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 902147CA1DD4EDBC00D4B8E0 /* foodGreen.png */; };
 		902147D81DD4EFC900D4B8E0 /* brushTeeth.png in Resources */ = {isa = PBXBuildFile; fileRef = 902147D51DD4EFC900D4B8E0 /* brushTeeth.png */; };
 		902147D91DD4EFC900D4B8E0 /* brushTeeth.png in Resources */ = {isa = PBXBuildFile; fileRef = 902147D51DD4EFC900D4B8E0 /* brushTeeth.png */; };
@@ -51,6 +51,20 @@
 		90222C601DCDFC9F00A5A80D /* IOSCommunication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90222C5F1DCDFC9F00A5A80D /* IOSCommunication.swift */; };
 		90222C621DCE0DFF00A5A80D /* images.png in Resources */ = {isa = PBXBuildFile; fileRef = 90222C611DCE0DFF00A5A80D /* images.png */; };
 		90222C681DCE1CD300A5A80D /* weather-icon-png-27.png in Resources */ = {isa = PBXBuildFile; fileRef = 90222C671DCE1CD300A5A80D /* weather-icon-png-27.png */; };
+		902546741DD8C97000D53C58 /* brushTeeth-done.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 902546681DD8C96F00D53C58 /* brushTeeth-done.aiff */; };
+		902546751DD8C97000D53C58 /* brushTeeth-notification.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 902546691DD8C97000D53C58 /* brushTeeth-notification.aiff */; };
+		902546761DD8C97000D53C58 /* brushTeeth-verification.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 9025466A1DD8C97000D53C58 /* brushTeeth-verification.aiff */; };
+		902546771DD8C97000D53C58 /* brushTeeth-warning.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 9025466B1DD8C97000D53C58 /* brushTeeth-warning.aiff */; };
+		902546781DD8C97000D53C58 /* drugs-done.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 9025466C1DD8C97000D53C58 /* drugs-done.aiff */; };
+		902546791DD8C97000D53C58 /* drugs-notification.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 9025466D1DD8C97000D53C58 /* drugs-notification.aiff */; };
+		9025467A1DD8C97000D53C58 /* drugs-verification.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 9025466E1DD8C97000D53C58 /* drugs-verification.aiff */; };
+		9025467B1DD8C97000D53C58 /* drugs-warning.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 9025466F1DD8C97000D53C58 /* drugs-warning.aiff */; };
+		9025467C1DD8C97000D53C58 /* food-done.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 902546701DD8C97000D53C58 /* food-done.aiff */; };
+		9025467D1DD8C97000D53C58 /* food-notification.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 902546711DD8C97000D53C58 /* food-notification.aiff */; };
+		9025467E1DD8C97000D53C58 /* food-verification.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 902546721DD8C97000D53C58 /* food-verification.aiff */; };
+		9025467F1DD8C97000D53C58 /* food-warning.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 902546731DD8C97000D53C58 /* food-warning.aiff */; };
+		902546831DD8CD0E00D53C58 /* NotificationsTexts.plist in Resources */ = {isa = PBXBuildFile; fileRef = 902546821DD8CD0E00D53C58 /* NotificationsTexts.plist */; };
+		902546861DD8D07F00D53C58 /* NotificationsTextsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902546851DD8D07F00D53C58 /* NotificationsTextsBuilder.swift */; };
 		902E9AE41DD1DBD400282AB7 /* TestingNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902E9AE31DD1DBD400282AB7 /* TestingNotifications.swift */; };
 		902E9AE71DD2010100282AB7 /* LocalNotificationActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902E9AE61DD2010100282AB7 /* LocalNotificationActions.swift */; };
 		902E9AE91DD201E400282AB7 /* LocalNotificationCategoryBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902E9AE81DD201E400282AB7 /* LocalNotificationCategoryBuilder.swift */; };
@@ -72,8 +86,6 @@
 		903B30C21DCE957E0015C6FA /* LocalNotificationCategotry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903B30C01DCE957E0015C6FA /* LocalNotificationCategotry.swift */; };
 		903B30D21DCF5B2C0015C6FA /* AddTaskTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903B30D11DCF5B2C0015C6FA /* AddTaskTypeViewController.swift */; };
 		903B30D61DCF87010015C6FA /* UIPickerWithBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903B30D51DCF87000015C6FA /* UIPickerWithBlock.swift */; };
-		904E6D591DCFDBD1007EAE93 /* drugs-notification.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 904E6D561DCFDBD1007EAE93 /* drugs-notification.aiff */; };
-		904E6D5B1DCFDBD1007EAE93 /* drugs-warning.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 904E6D581DCFDBD1007EAE93 /* drugs-warning.aiff */; };
 		905AF3BB1C1F2AEF0063713A /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905AF3BA1C1F2AEF0063713A /* Task.swift */; };
 		905AF3C11C1F3BD60063713A /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905AF3C01C1F3BD60063713A /* NavigationController.swift */; };
 		905AF3C41C1F41260063713A /* AddTaskTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905AF3C31C1F41260063713A /* AddTaskTimeViewController.swift */; };
@@ -97,8 +109,6 @@
 		90DC77A21C3DA0F70062BCE3 /* VoiceRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DC77A11C3DA0F70062BCE3 /* VoiceRecorder.swift */; };
 		90DC77A71C3DAF440062BCE3 /* AddTaskConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DC77A61C3DAF440062BCE3 /* AddTaskConfirmationViewController.swift */; };
 		90E739EB1DD2663A008A7FA9 /* ApplicationExntentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E739EA1DD2663A008A7FA9 /* ApplicationExntentions.swift */; };
-		90E739F21DD26AAE008A7FA9 /* drugs-done.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 90E739F01DD26AAE008A7FA9 /* drugs-done.aiff */; };
-		90E739F31DD26AAE008A7FA9 /* drugs-verification.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 90E739F11DD26AAE008A7FA9 /* drugs-verification.aiff */; };
 		90E8C4971C1AA2B8009304A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E8C4961C1AA2B8009304A9 /* AppDelegate.swift */; };
 		90E8C49E1C1AA2B8009304A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90E8C49D1C1AA2B8009304A9 /* Assets.xcassets */; };
 		90E8C4A11C1AA2B8009304A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90E8C49F1C1AA2B8009304A9 /* LaunchScreen.storyboard */; };
@@ -200,8 +210,8 @@
 		902147C51DD4EDBC00D4B8E0 /* drugsBlue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = drugsBlue.png; sourceTree = "<group>"; };
 		902147C61DD4EDBC00D4B8E0 /* drugsGreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = drugsGreen.png; sourceTree = "<group>"; };
 		902147C71DD4EDBC00D4B8E0 /* drugsRed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = drugsRed.png; sourceTree = "<group>"; };
-		902147C81DD4EDBC00D4B8E0 /* feedBlue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = feedBlue.png; sourceTree = "<group>"; };
-		902147C91DD4EDBC00D4B8E0 /* feedRed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = feedRed.png; sourceTree = "<group>"; };
+		902147C81DD4EDBC00D4B8E0 /* foodBlue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = foodBlue.png; sourceTree = "<group>"; };
+		902147C91DD4EDBC00D4B8E0 /* foodRed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = foodRed.png; sourceTree = "<group>"; };
 		902147CA1DD4EDBC00D4B8E0 /* foodGreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = foodGreen.png; sourceTree = "<group>"; };
 		902147D51DD4EFC900D4B8E0 /* brushTeeth.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brushTeeth.png; sourceTree = "<group>"; };
 		902147D61DD4EFC900D4B8E0 /* food.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = food.png; sourceTree = "<group>"; };
@@ -220,6 +230,20 @@
 		90222C5F1DCDFC9F00A5A80D /* IOSCommunication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOSCommunication.swift; sourceTree = "<group>"; };
 		90222C611DCE0DFF00A5A80D /* images.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = images.png; sourceTree = "<group>"; };
 		90222C671DCE1CD300A5A80D /* weather-icon-png-27.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weather-icon-png-27.png"; sourceTree = "<group>"; };
+		902546681DD8C96F00D53C58 /* brushTeeth-done.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "brushTeeth-done.aiff"; sourceTree = "<group>"; };
+		902546691DD8C97000D53C58 /* brushTeeth-notification.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "brushTeeth-notification.aiff"; sourceTree = "<group>"; };
+		9025466A1DD8C97000D53C58 /* brushTeeth-verification.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "brushTeeth-verification.aiff"; sourceTree = "<group>"; };
+		9025466B1DD8C97000D53C58 /* brushTeeth-warning.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "brushTeeth-warning.aiff"; sourceTree = "<group>"; };
+		9025466C1DD8C97000D53C58 /* drugs-done.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "drugs-done.aiff"; sourceTree = "<group>"; };
+		9025466D1DD8C97000D53C58 /* drugs-notification.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "drugs-notification.aiff"; sourceTree = "<group>"; };
+		9025466E1DD8C97000D53C58 /* drugs-verification.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "drugs-verification.aiff"; sourceTree = "<group>"; };
+		9025466F1DD8C97000D53C58 /* drugs-warning.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "drugs-warning.aiff"; sourceTree = "<group>"; };
+		902546701DD8C97000D53C58 /* food-done.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "food-done.aiff"; sourceTree = "<group>"; };
+		902546711DD8C97000D53C58 /* food-notification.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "food-notification.aiff"; sourceTree = "<group>"; };
+		902546721DD8C97000D53C58 /* food-verification.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "food-verification.aiff"; sourceTree = "<group>"; };
+		902546731DD8C97000D53C58 /* food-warning.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "food-warning.aiff"; sourceTree = "<group>"; };
+		902546821DD8CD0E00D53C58 /* NotificationsTexts.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = NotificationsTexts.plist; sourceTree = "<group>"; };
+		902546851DD8D07F00D53C58 /* NotificationsTextsBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsTextsBuilder.swift; sourceTree = "<group>"; };
 		902E9AE31DD1DBD400282AB7 /* TestingNotifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestingNotifications.swift; sourceTree = "<group>"; };
 		902E9AE61DD2010100282AB7 /* LocalNotificationActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalNotificationActions.swift; sourceTree = "<group>"; };
 		902E9AE81DD201E400282AB7 /* LocalNotificationCategoryBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalNotificationCategoryBuilder.swift; sourceTree = "<group>"; };
@@ -241,8 +265,6 @@
 		903B30C01DCE957E0015C6FA /* LocalNotificationCategotry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalNotificationCategotry.swift; sourceTree = "<group>"; };
 		903B30D11DCF5B2C0015C6FA /* AddTaskTypeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskTypeViewController.swift; sourceTree = "<group>"; };
 		903B30D51DCF87000015C6FA /* UIPickerWithBlock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIPickerWithBlock.swift; sourceTree = "<group>"; };
-		904E6D561DCFDBD1007EAE93 /* drugs-notification.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "drugs-notification.aiff"; sourceTree = "<group>"; };
-		904E6D581DCFDBD1007EAE93 /* drugs-warning.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "drugs-warning.aiff"; sourceTree = "<group>"; };
 		905AF3BA1C1F2AEF0063713A /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		905AF3C01C1F3BD60063713A /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		905AF3C31C1F41260063713A /* AddTaskTimeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskTimeViewController.swift; sourceTree = "<group>"; };
@@ -267,8 +289,6 @@
 		90DC77A11C3DA0F70062BCE3 /* VoiceRecorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceRecorder.swift; sourceTree = "<group>"; };
 		90DC77A61C3DAF440062BCE3 /* AddTaskConfirmationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskConfirmationViewController.swift; sourceTree = "<group>"; };
 		90E739EA1DD2663A008A7FA9 /* ApplicationExntentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationExntentions.swift; sourceTree = "<group>"; };
-		90E739F01DD26AAE008A7FA9 /* drugs-done.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "drugs-done.aiff"; sourceTree = "<group>"; };
-		90E739F11DD26AAE008A7FA9 /* drugs-verification.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "drugs-verification.aiff"; sourceTree = "<group>"; };
 		90E8C4931C1AA2B8009304A9 /* Memoria.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memoria.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90E8C4961C1AA2B8009304A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		90E8C49D1C1AA2B8009304A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -493,6 +513,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		902546841DD8D07100D53C58 /* NotificationsTextsBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				902546851DD8D07F00D53C58 /* NotificationsTextsBuilder.swift */,
+			);
+			name = NotificationsTextsBuilder;
+			sourceTree = "<group>";
+		};
 		902E9AE21DD1DBC600282AB7 /* TestingNotifications */ = {
 			isa = PBXGroup;
 			children = (
@@ -545,6 +573,7 @@
 			isa = PBXGroup;
 			children = (
 				9035FE161C1B17BA00D98022 /* Content.swift */,
+				902546821DD8CD0E00D53C58 /* NotificationsTexts.plist */,
 				90CE2AF41CF4DE0E00511ED4 /* ButtonsTextsHe.plist */,
 				9035FE181C1B18EE00D98022 /* ButtonsTexts.plist */,
 				9035FE1C1C1B2B9B00D98022 /* LabelsTexts.plist */,
@@ -579,6 +608,7 @@
 		9035FE2E1C1EDA4C00D98022 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				902546841DD8D07100D53C58 /* NotificationsTextsBuilder */,
 				902E9AE21DD1DBC600282AB7 /* TestingNotifications */,
 				906649181DCDCFF100896220 /* WatchCommunication */,
 				906648EB1DCB649F00896220 /* InfitineBackgroundTask */,
@@ -616,10 +646,18 @@
 		903B30C31DCF53C20015C6FA /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
-				90E739F01DD26AAE008A7FA9 /* drugs-done.aiff */,
-				90E739F11DD26AAE008A7FA9 /* drugs-verification.aiff */,
-				904E6D561DCFDBD1007EAE93 /* drugs-notification.aiff */,
-				904E6D581DCFDBD1007EAE93 /* drugs-warning.aiff */,
+				902546681DD8C96F00D53C58 /* brushTeeth-done.aiff */,
+				902546691DD8C97000D53C58 /* brushTeeth-notification.aiff */,
+				9025466A1DD8C97000D53C58 /* brushTeeth-verification.aiff */,
+				9025466B1DD8C97000D53C58 /* brushTeeth-warning.aiff */,
+				9025466C1DD8C97000D53C58 /* drugs-done.aiff */,
+				9025466D1DD8C97000D53C58 /* drugs-notification.aiff */,
+				9025466E1DD8C97000D53C58 /* drugs-verification.aiff */,
+				9025466F1DD8C97000D53C58 /* drugs-warning.aiff */,
+				902546701DD8C97000D53C58 /* food-done.aiff */,
+				902546711DD8C97000D53C58 /* food-notification.aiff */,
+				902546721DD8C97000D53C58 /* food-verification.aiff */,
+				902546731DD8C97000D53C58 /* food-warning.aiff */,
 			);
 			name = Sounds;
 			sourceTree = "<group>";
@@ -725,8 +763,8 @@
 				902147C51DD4EDBC00D4B8E0 /* drugsBlue.png */,
 				902147C61DD4EDBC00D4B8E0 /* drugsGreen.png */,
 				902147C71DD4EDBC00D4B8E0 /* drugsRed.png */,
-				902147C81DD4EDBC00D4B8E0 /* feedBlue.png */,
-				902147C91DD4EDBC00D4B8E0 /* feedRed.png */,
+				902147C81DD4EDBC00D4B8E0 /* foodBlue.png */,
+				902147C91DD4EDBC00D4B8E0 /* foodRed.png */,
 				902147CA1DD4EDBC00D4B8E0 /* foodGreen.png */,
 			);
 			name = Images;
@@ -1138,26 +1176,35 @@
 				906648EF1DCB699F00896220 /* 3.wav in Resources */,
 				90E8C4A11C1AA2B8009304A9 /* LaunchScreen.storyboard in Resources */,
 				9035FE191C1B18EE00D98022 /* ButtonsTexts.plist in Resources */,
-				902147D21DD4EDBC00D4B8E0 /* feedRed.png in Resources */,
+				902546781DD8C97000D53C58 /* drugs-done.aiff in Resources */,
+				902546831DD8CD0E00D53C58 /* NotificationsTexts.plist in Resources */,
+				902147D21DD4EDBC00D4B8E0 /* foodRed.png in Resources */,
 				902147CC1DD4EDBC00D4B8E0 /* brushTeethGreen.png in Resources */,
 				902147CB1DD4EDBC00D4B8E0 /* brushTeethBlue.png in Resources */,
-				90E739F21DD26AAE008A7FA9 /* drugs-done.aiff in Resources */,
-				904E6D591DCFDBD1007EAE93 /* drugs-notification.aiff in Resources */,
 				902147CF1DD4EDBC00D4B8E0 /* drugsGreen.png in Resources */,
 				902147CD1DD4EDBC00D4B8E0 /* brushTeethRed.png in Resources */,
 				902147D01DD4EDBC00D4B8E0 /* drugsRed.png in Resources */,
+				902546741DD8C97000D53C58 /* brushTeeth-done.aiff in Resources */,
 				902147DC1DD4EFC900D4B8E0 /* drugs.png in Resources */,
+				902546791DD8C97000D53C58 /* drugs-notification.aiff in Resources */,
 				9075214F1CE904A800FDFF3D /* LabelsTextsHe.plist in Resources */,
 				9035FE1D1C1B2B9B00D98022 /* LabelsTexts.plist in Resources */,
 				90CE2AF51CF4DE0E00511ED4 /* ButtonsTextsHe.plist in Resources */,
+				9025467F1DD8C97000D53C58 /* food-warning.aiff in Resources */,
 				90E8C49E1C1AA2B8009304A9 /* Assets.xcassets in Resources */,
+				9025467B1DD8C97000D53C58 /* drugs-warning.aiff in Resources */,
 				902147DA1DD4EFC900D4B8E0 /* food.png in Resources */,
+				9025467A1DD8C97000D53C58 /* drugs-verification.aiff in Resources */,
 				902147CE1DD4EDBC00D4B8E0 /* drugsBlue.png in Resources */,
-				902147D11DD4EDBC00D4B8E0 /* feedBlue.png in Resources */,
+				9025467C1DD8C97000D53C58 /* food-done.aiff in Resources */,
+				9025467D1DD8C97000D53C58 /* food-notification.aiff in Resources */,
+				9025467E1DD8C97000D53C58 /* food-verification.aiff in Resources */,
+				902546751DD8C97000D53C58 /* brushTeeth-notification.aiff in Resources */,
+				902147D11DD4EDBC00D4B8E0 /* foodBlue.png in Resources */,
 				902147D31DD4EDBC00D4B8E0 /* foodGreen.png in Resources */,
-				904E6D5B1DCFDBD1007EAE93 /* drugs-warning.aiff in Resources */,
-				90E739F31DD26AAE008A7FA9 /* drugs-verification.aiff in Resources */,
+				902546761DD8C97000D53C58 /* brushTeeth-verification.aiff in Resources */,
 				902147D81DD4EFC900D4B8E0 /* brushTeeth.png in Resources */,
+				902546771DD8C97000D53C58 /* brushTeeth-warning.aiff in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1374,6 +1421,7 @@
 				90B0C53F1DAAE3870019D59B /* LocalNotificationScheduler.swift in Sources */,
 				901127301C1AFBE20088DD6B /* AssemblyModel.swift in Sources */,
 				9013498E1DB4E40B005FA445 /* UIViewExntentions.swift in Sources */,
+				902546861DD8D07F00D53C58 /* NotificationsTextsBuilder.swift in Sources */,
 				9035FE121C1B0D1200D98022 /* DrugsViewController.swift in Sources */,
 				9035FE1F1C1B2BFB00D98022 /* TextView.swift in Sources */,
 				9011272E1C1AFBE20088DD6B /* AssemblyUIComponents.swift in Sources */,

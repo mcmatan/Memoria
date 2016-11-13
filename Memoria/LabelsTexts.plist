@@ -65,11 +65,9 @@ Then click on the button to add a task.</string>
 	<string>I see your near %@</string>
 	<key>TaskVerificationPopUpDidYouYet</key>
 	<string>Did you %@ yet?</string>
-	<key>TaskVerificationPopUpUserName</key>
-	<string>Dor</string>
 	<key>TaskVerificationPopUpGoodTimeOfDay</key>
-	<string>Good %@ %@</string>
-	<key>TaskVerificationPopUpItsTimeFor</key>
+	<string>Good %@!</string>
+	<key>TaskVerificationPopUpItsTimeWithTime</key>
 	<string>It&apos;s %@,
 time to %@!&quot;</string>
 	<key>TabBarTasksLbl</key>

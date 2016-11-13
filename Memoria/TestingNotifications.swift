@@ -19,7 +19,7 @@ class TestingNotifications {
         if (shouldTest == false) {
             return
         }
-        //self.startShowingDrugsNotifications()
+        self.startShowingDrugsNotifications()
         //self.startShowingDrugsVerification()
         //self.startShowingDrugsWarning()
     }

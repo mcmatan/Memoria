@@ -37,9 +37,8 @@ class TaskNotificationPopUp : ViewController {
         imgLight.heightLayoutAs(150)
         imgLight.topToViewControllerTopLayoutGuide(self, offset: 70)
         
-        let userName = Content.getContent(ContentType.labelTxt, name: "TaskVerificationPopUpUserName")
         //format Good morning dor
-        let goodTimeOfDatString = String.localizedStringWithFormat(Content.getContent(ContentType.labelTxt, name: "TaskVerificationPopUpGoodTimeOfDay"), task.taskTime!.dateToDayPartDeifinisionString(), userName)
+        let goodTimeOfDatString = String.localizedStringWithFormat(Content.getContent(ContentType.labelTxt, name: "TaskVerificationPopUpGoodTimeOfDay"), task.taskTime!.dateToDayPartDeifinisionString())
         self.lblGoodAfternoon.text = goodTimeOfDatString
         self.lblGoodAfternoon.font = UIFont.systemFont(ofSize: 26)
         self.lblGoodAfternoon.numberOfLines = 0
@@ -50,7 +49,7 @@ class TaskNotificationPopUp : ViewController {
         
         let currentDate = Date()
         
-        let timeForString = String.localizedStringWithFormat(Content.getContent(ContentType.labelTxt, name: "TaskVerificationPopUpItsTimeFor"), currentDate.toStringCurrentRegionShortTime(), task.taskType.name())
+        let timeForString = String.localizedStringWithFormat(Content.getContent(ContentType.labelTxt, name: "TaskVerificationPopUpItsTimeWithTime"), currentDate.toStringCurrentRegionShortTime(), task.taskType.name())
         // format"It's 4:00 PM.\nTime to feed your dog!"
         self.lblItsTimeFor.text = timeForString
         self.lblItsTimeFor.titleGray()

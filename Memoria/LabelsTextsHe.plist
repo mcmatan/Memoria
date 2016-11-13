@@ -65,11 +65,9 @@
 	<string>אני רואה שאתה לייד %@</string>
 	<key>TaskVerificationPopUpDidYouYet</key>
 	<string>האם כבר בצעת את %@ היום?</string>
-	<key>TaskVerificationPopUpUserName</key>
-	<string>דור</string>
 	<key>TaskVerificationPopUpGoodTimeOfDay</key>
-	<string>%@ %@</string>
-	<key>TaskVerificationPopUpItsTimeFor</key>
+	<string>%@</string>
+	<key>TaskVerificationPopUpItsTimeWithTime</key>
 	<string>עכשיו %@ זה הזמן ל %@</string>
 	<key>TabBarTasksLbl</key>
 	<string>משימות</string>

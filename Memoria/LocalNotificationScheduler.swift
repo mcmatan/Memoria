@@ -43,7 +43,7 @@ class LocalNotificationScheduler {
         let currentDate = Date()
         let userName = Content.getContent(ContentType.labelTxt, name: "TaskVerificationPopUpUserName")
         let goodTimeOfDatString = String.localizedStringWithFormat(Content.getContent(ContentType.labelTxt, name: "TaskVerificationPopUpGoodTimeOfDay"), (task.taskTime!.dateToDayPartDeifinisionString()), userName)
-        let timeForString = String.localizedStringWithFormat(Content.getContent(ContentType.labelTxt, name: "TaskVerificationPopUpItsTimeFor"), currentDate.toStringCurrentRegionShortTime(), (task.taskType.name)())
+        let timeForString = String.localizedStringWithFormat(Content.getContent(ContentType.labelTxt, name: "TaskVerificationPopUpItsTimeWithTime"), currentDate.toStringCurrentRegionShortTime(), (task.taskType.name)())
         
         self.scheduleNotification(
             title: "Notification",

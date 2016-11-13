@@ -64,6 +64,9 @@ class TasksServices {
     }
     
     func getTaskForNearableIdentifier(_ nearableIdentifer : String) ->Task {
+    //REMOVEMC
+        return Task(taskType: TaskType.food, taskTime: Date(timeIntervalSinceNow: 100000), nearableIdentifer: "34234", taskTimePriorityHi: true)
+        
         return self.tasksDB.getTaskForNearableIdentifer(nearableIdentifer)!
     }
 
