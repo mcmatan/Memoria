@@ -9,18 +9,24 @@ class TextField : UITextField {
     func defaultStyle() {
         self.defaultSize()
         self.defaultBackgroundColor()
+        self.defaultCornerRaduis()
     }
     
     func defaultSize() {
         self.setWidthAs(myWidth)
-        self.setHeightAs(30)
+        self.setHeightAs(self.byHeight)
+    }
+    
+    func defaultBorder() {
+        self.layer.borderColor = UIColor.lightGray.cgColor
+        self.layer.borderWidth = 0.5
     }
     
     func defaultBackgroundColor() {
         self.backgroundColor = UIColor.white
     }
     
-    let padding = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5);
+    let padding = UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 8);
     
     override func textRect(forBounds bounds: CGRect) -> CGRect {
         return UIEdgeInsetsInsetRect(bounds, padding)

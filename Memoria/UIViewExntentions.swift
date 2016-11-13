@@ -35,4 +35,9 @@ extension UIView {
             return self.frame.size.height + self.frame.origin.x
         }
     }
+    
+    func defaultCornerRaduis() {
+        self.clipsToBounds = false
+        self.layer.cornerRadius = 4.0
+    }
 }

@@ -11,5 +11,5 @@ import UIKit
 
 class UIElementsDefaultValues {
     static let longWidth = Double(UIScreen.main.bounds.size.width) - 40.0
-    static let buttonHegiht = 50
+    static let buttonHegiht = Double(50)
 }

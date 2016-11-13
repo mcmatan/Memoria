@@ -39,11 +39,16 @@ class LogInViewController: ViewController {
         self.textFieldUserName.centerVerticlyInSuperView()
         self.btnLogIn.centerVerticlyInSuperView()
         
-        let paddingBetweenElements = CGFloat(50.0)
-        self.imgLogo.topAlighnToViewTop(self.view, offset: 50)
-        self.textFieldUserName.topAlighnToViewTop(self.imgLogo, offset: 100)
-        self.textFiledPassword.topAlighnToViewTop(self.textFieldUserName, offset: paddingBetweenElements)
-        self.btnLogIn.topAlighnToViewTop(self.textFiledPassword, offset: 50)
+        let paddingBetweenElements = CGFloat(13.0)
+        self.imgLogo.topAlighnToViewTop(self.view, offset: 60)
+        self.textFieldUserName.topAlighnToViewBottom(self.imgLogo, offset: 30)
+        self.textFiledPassword.topAlighnToViewBottom(self.textFieldUserName, offset: paddingBetweenElements)
+        self.btnLogIn.topAlighnToViewBottom(self.textFiledPassword, offset: paddingBetweenElements)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
+        self.self.textFieldUserName.becomeFirstResponder()
     }
 }

@@ -48,11 +48,6 @@ class Button : UIButton {
         self.backgroundColor = Colors.blue()
     }
     
-    func defaultCornerRaduis() {
-        self.clipsToBounds = false
-        self.layer.cornerRadius = 4.0
-    }
-    
     func defaultBigButton() {
         self.clipsToBounds = false
         self.layer.cornerRadius = 3.0
