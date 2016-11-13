@@ -14,7 +14,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
         Bootstrapper.run()
         let rootViewController = Bootstrapper.container.resolve(RootViewController.self)!
-        //let rootViewController = LogInViewController()
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.rootViewController = rootViewController
         self.window?.makeKeyAndVisible()
