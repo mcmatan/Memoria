@@ -72,13 +72,13 @@ extension UIView {
         NSLayoutConstraint.activate(allConstrains)
     }
     
-    func heightLayoutAs(_ height : Double) {
+    func setHeightAs(_ height : Double) {
         self.translatesAutoresizingMaskIntoConstraints = false
         self.translatesAutoresizingMaskIntoConstraints = false
         let contrain =  NSLayoutConstraint(item: self, attribute: NSLayoutAttribute.height, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.notAnAttribute, multiplier: 1.0, constant: CGFloat(height))
         NSLayoutConstraint.activate([contrain])
     }
-    func widthLayoutAs(_ width : Double) {
+    func setWidthAs(_ width : Double) {
         self.translatesAutoresizingMaskIntoConstraints = false
         let contrain =  NSLayoutConstraint(item: self, attribute: NSLayoutAttribute.width, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.notAnAttribute, multiplier: 1.0, constant: CGFloat(width))
         NSLayoutConstraint.activate([contrain])

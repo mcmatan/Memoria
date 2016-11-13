@@ -33,8 +33,8 @@ class TaskNotificationPopUp : ViewController {
         let imgLight = ImageView(image: UIImage(named: "NotificationLight"))
         self.view.addSubview(imgLight)
         imgLight.centerVerticlyInSuperView()
-        imgLight.widthLayoutAs(120)
-        imgLight.heightLayoutAs(150)
+        imgLight.setWidthAs(120)
+        imgLight.setHeightAs(150)
         imgLight.topToViewControllerTopLayoutGuide(self, offset: 70)
         
         let userName = Content.getContent(ContentType.labelTxt, name: "TaskVerificationPopUpUserName")

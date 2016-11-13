@@ -53,6 +53,8 @@
 		9025460C1DD616EF00D53C58 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9025460B1DD616EF00D53C58 /* LogInViewController.swift */; };
 		9025460E1DD61C1D00D53C58 /* UIElementsDefaultValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9025460D1DD61C1D00D53C58 /* UIElementsDefaultValues.swift */; };
 		902546101DD621E800D53C58 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9025460F1DD621E800D53C58 /* RootViewController.swift */; };
+		902546131DD62EA000D53C58 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 902546121DD62EA000D53C58 /* GoogleService-Info.plist */; };
+		902546161DD62FDC00D53C58 /* FireBaseWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902546151DD62FDC00D53C58 /* FireBaseWrapper.swift */; };
 		902E9AE41DD1DBD400282AB7 /* TestingNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902E9AE31DD1DBD400282AB7 /* TestingNotifications.swift */; };
 		902E9AE71DD2010100282AB7 /* LocalNotificationActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902E9AE61DD2010100282AB7 /* LocalNotificationActions.swift */; };
 		902E9AE91DD201E400282AB7 /* LocalNotificationCategoryBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902E9AE81DD201E400282AB7 /* LocalNotificationCategoryBuilder.swift */; };
@@ -222,6 +224,8 @@
 		9025460B1DD616EF00D53C58 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		9025460D1DD61C1D00D53C58 /* UIElementsDefaultValues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIElementsDefaultValues.swift; sourceTree = "<group>"; };
 		9025460F1DD621E800D53C58 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		902546121DD62EA000D53C58 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		902546151DD62FDC00D53C58 /* FireBaseWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FireBaseWrapper.swift; sourceTree = "<group>"; };
 		902E9AE31DD1DBD400282AB7 /* TestingNotifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestingNotifications.swift; sourceTree = "<group>"; };
 		902E9AE61DD2010100282AB7 /* LocalNotificationActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalNotificationActions.swift; sourceTree = "<group>"; };
 		902E9AE81DD201E400282AB7 /* LocalNotificationCategoryBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalNotificationCategoryBuilder.swift; sourceTree = "<group>"; };
@@ -484,6 +488,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		902546141DD62FCE00D53C58 /* FireBaseWrapper */ = {
+			isa = PBXGroup;
+			children = (
+				902546151DD62FDC00D53C58 /* FireBaseWrapper.swift */,
+			);
+			name = FireBaseWrapper;
+			sourceTree = "<group>";
+		};
 		902E9AE21DD1DBC600282AB7 /* TestingNotifications */ = {
 			isa = PBXGroup;
 			children = (
@@ -563,6 +575,7 @@
 		9035FE2E1C1EDA4C00D98022 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				902546141DD62FCE00D53C58 /* FireBaseWrapper */,
 				902E9AE21DD1DBC600282AB7 /* TestingNotifications */,
 				906649181DCDCFF100896220 /* WatchCommunication */,
 				906648EB1DCB649F00896220 /* InfitineBackgroundTask */,
@@ -820,6 +833,7 @@
 				901127251C1AFAAF0088DD6B /* DipendencyInjection */,
 				90E8C4961C1AA2B8009304A9 /* AppDelegate.swift */,
 				9008FB731C6F3E3E003C1549 /* Memoria-Bridging-Header.h */,
+				902546121DD62EA000D53C58 /* GoogleService-Info.plist */,
 				90E8C49D1C1AA2B8009304A9 /* Assets.xcassets */,
 				90E8C49F1C1AA2B8009304A9 /* LaunchScreen.storyboard */,
 				90E8C4A21C1AA2B8009304A9 /* Info.plist */,
@@ -1136,6 +1150,7 @@
 				90CE2AF51CF4DE0E00511ED4 /* ButtonsTextsHe.plist in Resources */,
 				90E8C49E1C1AA2B8009304A9 /* Assets.xcassets in Resources */,
 				902147DA1DD4EFC900D4B8E0 /* food.png in Resources */,
+				902546131DD62EA000D53C58 /* GoogleService-Info.plist in Resources */,
 				902147CE1DD4EDBC00D4B8E0 /* drugsBlue.png in Resources */,
 				902147D11DD4EDBC00D4B8E0 /* feedBlue.png in Resources */,
 				902147D31DD4EDBC00D4B8E0 /* foodGreen.png in Resources */,
@@ -1325,6 +1340,7 @@
 				9019EBE91C8F76AB008962A5 /* ImageView.swift in Sources */,
 				900912BD1DD37AAD00AEEFC2 /* NearableStriggerManager.swift in Sources */,
 				9035C6C71C20225300088434 /* TableView.swift in Sources */,
+				902546161DD62FDC00D53C58 /* FireBaseWrapper.swift in Sources */,
 				902E9AE71DD2010100282AB7 /* LocalNotificationActions.swift in Sources */,
 				901349861DB4C8B0005FA445 /* IBeaconCloud.swift in Sources */,
 				90E8C4971C1AA2B8009304A9 /* AppDelegate.swift in Sources */,

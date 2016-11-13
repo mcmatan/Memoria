@@ -38,8 +38,8 @@ class TaskVerificationPopUp : ViewController {
         let imgLight = ImageView(image: UIImage(named: "NotificationLight"))
         self.view.addSubview(imgLight)
         imgLight.centerVerticlyInSuperView()
-        imgLight.widthLayoutAs(120)
-        imgLight.heightLayoutAs(150)
+        imgLight.setWidthAs(120)
+        imgLight.setHeightAs(150)
         imgLight.topToViewControllerTopLayoutGuide(self, offset: 70)
         
         self.lblISeeYourNear.text = String.localizedStringWithFormat(Content.getContent(ContentType.labelTxt, name: "TaskVerificationPopUpISeeYourNeer"), self.task.taskType.name())

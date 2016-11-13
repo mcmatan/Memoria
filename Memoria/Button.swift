@@ -37,11 +37,11 @@ class Button : UIButton {
     }
     
     func defaultHeight() {
-        self.heightLayoutAs(Double(myDefaultHeight))
+        self.setHeightAs(Double(myDefaultHeight))
     }
     
     func defaultWidth() {
-        self.widthLayoutAs(myDefaultWidth)
+        self.setWidthAs(myDefaultWidth)
     }
     
     func defaultColor() {
@@ -56,22 +56,22 @@ class Button : UIButton {
     func defaultBigButton() {
         self.clipsToBounds = false
         self.layer.cornerRadius = 3.0
-        self.widthLayoutAs(242)
-        self.heightLayoutAs(44)
+        self.setWidthAs(242)
+        self.setHeightAs(44)
         let font = Fonts.defaultBigButtonFont()
         self.titleLabel?.font = font
     }
     
     internal func editBtn() {
         self.setBackgroundImage(UIImage(named: "EditBtn"), for: UIControlState())
-        self.widthLayoutAs(67)
-        self.heightLayoutAs(30)
+        self.setWidthAs(67)
+        self.setHeightAs(30)
     }
     
     internal func playSoundBtn() {
         self.setBackgroundImage(UIImage(named: "PlaySoundBtn"), for: UIControlState())
-        self.widthLayoutAs(136)
-        self.heightLayoutAs(32)
+        self.setWidthAs(136)
+        self.setHeightAs(32)
     }
     
     internal func notificiationPlaySoundBtn() {
@@ -106,8 +106,8 @@ class Button : UIButton {
     
     internal func notificiationPlayingGray() {
         self.setBackgroundImage(UIImage(named: "BtnSoundPlayingGrayNotification"), for: UIControlState())
-        self.widthLayoutAs(165)
-        self.heightLayoutAs(22)
+        self.setWidthAs(165)
+        self.setHeightAs(22)
     }
 
 

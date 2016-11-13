@@ -20,7 +20,7 @@ class LogInViewController: ViewController {
         super.viewDidLoad()
         
         self.imgLogo.contentMode = UIViewContentMode.scaleAspectFill
-        self.imgLogo.heightLayoutAs(50)
+        self.imgLogo.setHeightAs(50)
         self.btnLogIn.defaultStyle()
         self.btnLogIn.setTitle(Content.getContent(ContentType.labelTxt, name: "LogInBtn"), for: UIControlState.normal)
         self.btnLogIn.backgroundColor = Colors.green()

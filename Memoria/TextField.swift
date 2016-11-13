@@ -12,8 +12,8 @@ class TextField : UITextField {
     }
     
     func defaultSize() {
-        self.widthLayoutAs(myWidth)
-        self.heightLayoutAs(30)
+        self.setWidthAs(myWidth)
+        self.setHeightAs(30)
     }
     
     func defaultBackgroundColor() {

@@ -57,8 +57,8 @@ class TaskWarningPopUp : ViewController {
         let imgError = ImageView(image: UIImage(named: "NotificationWarningImg"))
         self.view.addSubview(imgError)
         imgError.centerVerticlyInSuperView()
-        imgError.widthLayoutAs(87)
-        imgError.heightLayoutAs(117)
+        imgError.setWidthAs(87)
+        imgError.setHeightAs(117)
         imgError.topToViewControllerTopLayoutGuide(self, offset: 70)
         
         
