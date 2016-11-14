@@ -66,6 +66,11 @@ open class AssemblyModel {
             }.inObjectScope(ObjectScope.container)
         let _ = container.resolve(TaskActionsPerformer.self)
         
+        container.register(FireBaseWrapper.self) { c in
+            return FireBaseWrapper()
+        }
+        let _ = container.resolve(FireBaseWrapper.self)
+        
     }
     
 }

@@ -83,7 +83,7 @@ class AddTaskTypeViewController : ViewController {
         NSLayoutConstraint.activate(verticalLayout)
         
         setTaskTypeBtn.topToViewControllerTopLayoutGuide(self, offset: 20)
-        setTaskTypeBtn.centerVerticlyInSuperView()
+        setTaskTypeBtn.centerHorizontlyInSuperView()
     }
     
     func btnChooseTaskTypePress() {

@@ -18,6 +18,16 @@
 			<key>orderHint</key>
 			<integer>7</integer>
 		</dict>
+		<key>GTMSessionFetcher.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>GoogleToolboxForMac.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Memoria.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -83,7 +93,7 @@
 			<key>primary</key>
 			<true />
 		</dict>
-		<key>5E6F0876401C257514F6AC5751A7BA49</key>
+		<key>23BA9083ED0D2392A167A8AFA04427FA</key>
 		<dict>
 			<key>primary</key>
 			<true />
@@ -93,7 +103,7 @@
 			<key>primary</key>
 			<true />
 		</dict>
-		<key>7167030DB592C2725B979CBB237F1ADB</key>
+		<key>389C75EC67307C88C13A715956305C82</key>
 		<dict>
 			<key>primary</key>
 			<true />
@@ -108,12 +118,22 @@
 			<key>primary</key>
 			<true />
 		</dict>
-		<key>CBFA0553FDB68E5E84B3CF80F0112AA9</key>
+		<key>6454734D2454879F0CB307DA3976167D</key>
 		<dict>
 			<key>primary</key>
 			<true />
 		</dict>
-		<key>D8F77563BF425B353693D6B85C45C3FE</key>
+		<key>743B218653F30724AC6773CD7F62653D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7D04535608058A2FABC0D16935868FB9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CBFA0553FDB68E5E84B3CF80F0112AA9</key>
 		<dict>
 			<key>primary</key>
 			<true />
@@ -128,7 +148,7 @@
 			<key>primary</key>
 			<true />
 		</dict>
-		<key>FAA9CF07F99E674FC8A913E85166CB43</key>
+		<key>E8FF9BE1D7F45D219E7CF7D255245100</key>
 		<dict>
 			<key>primary</key>
 			<true />

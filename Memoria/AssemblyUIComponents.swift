@@ -6,17 +6,6 @@ import Swinject
 open class AssemblyUIComponents {
 
     class func run(_ container : Container) {
-        container.register(MemoriesViewController.self) { c in
-            return MemoriesViewController()
-        }
-        
-        container.register(MemoriesViewController.self) { c in
-             return MemoriesViewController()
-        }
-        
-        container.register(DrugsViewController.self) { c in
-            return DrugsViewController()
-        }
         
         container.register(AddTaskTimeViewController.self) { _   in
             return AddTaskTimeViewController(container: container, currenctTaskCreator: container.resolve(CurrenctTaskCreator.self)!)
@@ -60,13 +49,44 @@ open class AssemblyUIComponents {
                 tasksNotificationsPresenter: container.resolve(TasksNotificationsPresenter.self)!
             )
             }.inObjectScope(ObjectScope.container)
-
+        
+        container.register(TabBarController.self) { c in
+            let tabBar = TabBarController()
+            guard let left = c.resolve(TaskManagerViewController.self) else {return tabBar}
+            let controllers = [left]
+            tabBar.viewControllers = controllers
+            left.tabBarItem = UITabBarItem(
+                title: Content.getContent(ContentType.labelTxt, name: "TabBarTasksLbl"),
+                image: UIImage(named: "TasksManagerLogoTabOnlyImage"),
+                tag: 1)
+            tabBar.selectedIndex = 1
+            return tabBar
+        }
+        
+        container.register(NavigationController.self) { c in
+            let navigationController = NavigationController(rootViewController : c.resolve(TabBarController.self)!)
+            return navigationController
+        }.inObjectScope(ObjectScope.container)
+        
+        container.register(LogInViewController.self) { c in
+            return LogInViewController()
+        }.inObjectScope(ObjectScope.container)
+        
+        container.register(RootViewController.self) { c in
+            return RootViewController(
+                logInViewController: container.resolve(LogInViewController.self)!,
+                mainApplicationController: container.resolve(NavigationController.self)!
+            )
+        }
+        
+        
         container.register(TasksNotificationsPresenter.self) { c in
             return TasksNotificationsPresenter(
-                                               iNearableServices:  container.resolve(NearableServices.self)! ,
-                                               container: container,
-                                               localNotificationScheduler: container.resolve(LocalNotificationScheduler.self)!
-                                               )
+                iNearableServices:  container.resolve(NearableServices.self)! ,
+                container: container,
+                localNotificationScheduler: container.resolve(LocalNotificationScheduler.self)!,
+                mainApplicationViewController : container.resolve(NavigationController.self)!
+            )
             }.inObjectScope(ObjectScope.container)
         let _ = container.resolve(TasksNotificationsPresenter.self)
 

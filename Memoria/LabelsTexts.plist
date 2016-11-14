@@ -79,5 +79,11 @@ Then click on the button to add a task.</string>
 	<string>afternoon</string>
 	<key>TimeOfDayEavning</key>
 	<string>evening</string>
+	<key>LogInBtn</key>
+	<string>Log in</string>
+	<key>passwordPlaceHolder</key>
+	<string>Password</string>
+	<key>userNamePlaceHolder</key>
+	<string>User name</string>
 </dict>
 </plist>

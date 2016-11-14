@@ -8,6 +8,8 @@ target 'Memoria' do
 pod 'Swinject', '~> 2.0.0-beta.2'
 pod 'SnapKit', '~> 3.0.1'
 pod 'SwiftDate', '~> 4.0'
+pod 'Firebase/Core'
+pod 'Firebase/Auth'
 pod 'EstimoteSDK', :git => 'https://github.com/Estimote/iOS-SDK.git', :commit => '66c9cf13467bc0f61fcf197116dadfe22e1cd10d'
 
 pod 'AEConsole', '~> 0.3'

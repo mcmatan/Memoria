@@ -4,8 +4,8 @@ import UIKit
 import SnapKit
 
 class Button : UIButton {
-    var myDefaultWidth = Double(UIScreen.main.bounds.size.width) - 40.0
-    var myDefaultHeight = 50.0
+    var myDefaultWidth = UIElementsDefaultValues.longWidth
+    var myDefaultHeight = UIElementsDefaultValues.buttonHegiht
     
     var colorFlicker = UIColor.red
     var flickerTimer : Timer?
@@ -37,41 +37,36 @@ class Button : UIButton {
     }
     
     func defaultHeight() {
-        self.heightLayoutAs(myDefaultHeight)
+        self.setHeightAs(Double(myDefaultHeight))
     }
     
     func defaultWidth() {
-        self.widthLayoutAs(myDefaultWidth)
+        self.setWidthAs(myDefaultWidth)
     }
     
     func defaultColor() {
-        self.backgroundColor = UIColor(rgba: "#6d9de0")
-    }
-    
-    func defaultCornerRaduis() {
-        self.clipsToBounds = false
-        self.layer.cornerRadius = 4.0
+        self.backgroundColor = Colors.blue()
     }
     
     func defaultBigButton() {
         self.clipsToBounds = false
         self.layer.cornerRadius = 3.0
-        self.widthLayoutAs(242)
-        self.heightLayoutAs(44)
+        self.setWidthAs(242)
+        self.setHeightAs(44)
         let font = Fonts.defaultBigButtonFont()
         self.titleLabel?.font = font
     }
     
     internal func editBtn() {
         self.setBackgroundImage(UIImage(named: "EditBtn"), for: UIControlState())
-        self.widthLayoutAs(67)
-        self.heightLayoutAs(30)
+        self.setWidthAs(67)
+        self.setHeightAs(30)
     }
     
     internal func playSoundBtn() {
         self.setBackgroundImage(UIImage(named: "PlaySoundBtn"), for: UIControlState())
-        self.widthLayoutAs(136)
-        self.heightLayoutAs(32)
+        self.setWidthAs(136)
+        self.setHeightAs(32)
     }
     
     internal func notificiationPlaySoundBtn() {
@@ -81,13 +76,13 @@ class Button : UIButton {
     }
     
     internal func notificiationOkThanksBtn() {
-        self.backgroundColor = Colors.lightGray()
+        self.backgroundColor = Colors.lightBlue()
         self.defaultBigButton()
         self.setTitle(Content.getContent(ContentType.buttonTxt, name: "OkThanks"), for: UIControlState())
     }
 
     internal func notificiationRemindMeLater() {
-        self.backgroundColor = Colors.lightGray()
+        self.backgroundColor = Colors.lightBlue()
         self.defaultBigButton()
         self.setTitle(Content.getContent(ContentType.buttonTxt, name: "RemingMeLater"), for: UIControlState())
     }
@@ -106,8 +101,8 @@ class Button : UIButton {
     
     internal func notificiationPlayingGray() {
         self.setBackgroundImage(UIImage(named: "BtnSoundPlayingGrayNotification"), for: UIControlState())
-        self.widthLayoutAs(165)
-        self.heightLayoutAs(22)
+        self.setWidthAs(165)
+        self.setHeightAs(22)
     }
 
 

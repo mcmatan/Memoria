@@ -12,7 +12,6 @@
 		900912BD1DD37AAD00AEEFC2 /* NearableStriggerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900912BC1DD37AAD00AEEFC2 /* NearableStriggerManager.swift */; };
 		900912BF1DD37AB400AEEFC2 /* NearableLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900912BE1DD37AB400AEEFC2 /* NearableLocator.swift */; };
 		900E722B1DBF58D700C9AC93 /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900E722A1DBF58D700C9AC93 /* SoundPlayer.swift */; };
-		901127221C1AF8CA0088DD6B /* MemoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901127211C1AF8CA0088DD6B /* MemoriesViewController.swift */; };
 		9011272E1C1AFBE20088DD6B /* AssemblyUIComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901127291C1AFBE20088DD6B /* AssemblyUIComponents.swift */; };
 		9011272F1C1AFBE20088DD6B /* Bootstrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9011272A1C1AFBE20088DD6B /* Bootstrapper.swift */; };
 		901127301C1AFBE20088DD6B /* AssemblyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9011272B1C1AFBE20088DD6B /* AssemblyModel.swift */; };
@@ -65,6 +64,11 @@
 		9025467F1DD8C97000D53C58 /* food-warning.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 902546731DD8C97000D53C58 /* food-warning.aiff */; };
 		902546831DD8CD0E00D53C58 /* NotificationsTexts.plist in Resources */ = {isa = PBXBuildFile; fileRef = 902546821DD8CD0E00D53C58 /* NotificationsTexts.plist */; };
 		902546861DD8D07F00D53C58 /* NotificationsTextsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902546851DD8D07F00D53C58 /* NotificationsTextsBuilder.swift */; };
+		9025460C1DD616EF00D53C58 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9025460B1DD616EF00D53C58 /* LogInViewController.swift */; };
+		9025460E1DD61C1D00D53C58 /* UIElementsDefaultValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9025460D1DD61C1D00D53C58 /* UIElementsDefaultValues.swift */; };
+		902546101DD621E800D53C58 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9025460F1DD621E800D53C58 /* RootViewController.swift */; };
+		902546131DD62EA000D53C58 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 902546121DD62EA000D53C58 /* GoogleService-Info.plist */; };
+		902546161DD62FDC00D53C58 /* FireBaseWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902546151DD62FDC00D53C58 /* FireBaseWrapper.swift */; };
 		902E9AE41DD1DBD400282AB7 /* TestingNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902E9AE31DD1DBD400282AB7 /* TestingNotifications.swift */; };
 		902E9AE71DD2010100282AB7 /* LocalNotificationActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902E9AE61DD2010100282AB7 /* LocalNotificationActions.swift */; };
 		902E9AE91DD201E400282AB7 /* LocalNotificationCategoryBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902E9AE81DD201E400282AB7 /* LocalNotificationCategoryBuilder.swift */; };
@@ -72,8 +76,6 @@
 		9035C6D71C2024BA00088434 /* UIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9035C6D61C2024BA00088434 /* UIConstants.swift */; };
 		9035FE051C1B064F00D98022 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9035FE041C1B064F00D98022 /* Button.swift */; };
 		9035FE081C1B095A00D98022 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9035FE071C1B095A00D98022 /* TabBarController.swift */; };
-		9035FE0A1C1B09EA00D98022 /* AssemblyControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9035FE091C1B09EA00D98022 /* AssemblyControllers.swift */; };
-		9035FE121C1B0D1200D98022 /* DrugsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9035FE111C1B0D1200D98022 /* DrugsViewController.swift */; };
 		9035FE171C1B17BA00D98022 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9035FE161C1B17BA00D98022 /* Content.swift */; };
 		9035FE191C1B18EE00D98022 /* ButtonsTexts.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9035FE181C1B18EE00D98022 /* ButtonsTexts.plist */; };
 		9035FE1B1C1B2B1D00D98022 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9035FE1A1C1B2B1D00D98022 /* ViewController.swift */; };
@@ -190,7 +192,6 @@
 		900912BC1DD37AAD00AEEFC2 /* NearableStriggerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearableStriggerManager.swift; sourceTree = "<group>"; };
 		900912BE1DD37AB400AEEFC2 /* NearableLocator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearableLocator.swift; sourceTree = "<group>"; };
 		900E722A1DBF58D700C9AC93 /* SoundPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
-		901127211C1AF8CA0088DD6B /* MemoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoriesViewController.swift; sourceTree = "<group>"; };
 		901127291C1AFBE20088DD6B /* AssemblyUIComponents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssemblyUIComponents.swift; sourceTree = "<group>"; };
 		9011272A1C1AFBE20088DD6B /* Bootstrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bootstrapper.swift; sourceTree = "<group>"; };
 		9011272B1C1AFBE20088DD6B /* AssemblyModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssemblyModel.swift; sourceTree = "<group>"; };
@@ -244,6 +245,11 @@
 		902546731DD8C97000D53C58 /* food-warning.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "food-warning.aiff"; sourceTree = "<group>"; };
 		902546821DD8CD0E00D53C58 /* NotificationsTexts.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = NotificationsTexts.plist; sourceTree = "<group>"; };
 		902546851DD8D07F00D53C58 /* NotificationsTextsBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsTextsBuilder.swift; sourceTree = "<group>"; };
+		9025460B1DD616EF00D53C58 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		9025460D1DD61C1D00D53C58 /* UIElementsDefaultValues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIElementsDefaultValues.swift; sourceTree = "<group>"; };
+		9025460F1DD621E800D53C58 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		902546121DD62EA000D53C58 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		902546151DD62FDC00D53C58 /* FireBaseWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FireBaseWrapper.swift; sourceTree = "<group>"; };
 		902E9AE31DD1DBD400282AB7 /* TestingNotifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestingNotifications.swift; sourceTree = "<group>"; };
 		902E9AE61DD2010100282AB7 /* LocalNotificationActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalNotificationActions.swift; sourceTree = "<group>"; };
 		902E9AE81DD201E400282AB7 /* LocalNotificationCategoryBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalNotificationCategoryBuilder.swift; sourceTree = "<group>"; };
@@ -252,8 +258,6 @@
 		9035C6DD1C203F8B00088434 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		9035FE041C1B064F00D98022 /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		9035FE071C1B095A00D98022 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
-		9035FE091C1B09EA00D98022 /* AssemblyControllers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssemblyControllers.swift; sourceTree = "<group>"; };
-		9035FE111C1B0D1200D98022 /* DrugsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrugsViewController.swift; sourceTree = "<group>"; };
 		9035FE161C1B17BA00D98022 /* Content.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
 		9035FE181C1B18EE00D98022 /* ButtonsTexts.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ButtonsTexts.plist; sourceTree = "<group>"; };
 		9035FE1A1C1B2B1D00D98022 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -394,20 +398,12 @@
 		9011271F1C1AF6730088DD6B /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				9025460F1DD621E800D53C58 /* RootViewController.swift */,
+				9025460B1DD616EF00D53C58 /* LogInViewController.swift */,
 				9035FE2D1C1ED15900D98022 /* Tasks */,
 				9035FE231C1EC60E00D98022 /* ReminderPopUp */,
-				9035FE101C1B0D0800D98022 /* DrugsViewController */,
-				901127201C1AF6820088DD6B /* MemoriesViewController */,
 			);
 			name = Screens;
-			sourceTree = "<group>";
-		};
-		901127201C1AF6820088DD6B /* MemoriesViewController */ = {
-			isa = PBXGroup;
-			children = (
-				901127211C1AF8CA0088DD6B /* MemoriesViewController.swift */,
-			);
-			name = MemoriesViewController;
 			sourceTree = "<group>";
 		};
 		901127251C1AFAAF0088DD6B /* DipendencyInjection */ = {
@@ -424,7 +420,6 @@
 			children = (
 				901127291C1AFBE20088DD6B /* AssemblyUIComponents.swift */,
 				9011272B1C1AFBE20088DD6B /* AssemblyModel.swift */,
-				9035FE091C1B09EA00D98022 /* AssemblyControllers.swift */,
 			);
 			name = Assemblies;
 			sourceTree = "<group>";
@@ -521,6 +516,14 @@
 			name = NotificationsTextsBuilder;
 			sourceTree = "<group>";
 		};
+		902546141DD62FCE00D53C58 /* FireBaseWrapper */ = {
+			isa = PBXGroup;
+			children = (
+				902546151DD62FDC00D53C58 /* FireBaseWrapper.swift */,
+			);
+			name = FireBaseWrapper;
+			sourceTree = "<group>";
+		};
 		902E9AE21DD1DBC600282AB7 /* TestingNotifications */ = {
 			isa = PBXGroup;
 			children = (
@@ -549,6 +552,7 @@
 				906C36841C8E1CA80058EC85 /* Colors.swift */,
 				9019EBE81C8F76AB008962A5 /* ImageView.swift */,
 				90CE2AF61CF4E6A200511ED4 /* Fonts.swift */,
+				9025460D1DD61C1D00D53C58 /* UIElementsDefaultValues.swift */,
 			);
 			name = UIElements;
 			sourceTree = "<group>";
@@ -559,14 +563,6 @@
 				9035FE071C1B095A00D98022 /* TabBarController.swift */,
 			);
 			name = NavigationSegmentedController;
-			sourceTree = "<group>";
-		};
-		9035FE101C1B0D0800D98022 /* DrugsViewController */ = {
-			isa = PBXGroup;
-			children = (
-				9035FE111C1B0D1200D98022 /* DrugsViewController.swift */,
-			);
-			name = DrugsViewController;
 			sourceTree = "<group>";
 		};
 		9035FE151C1B17B200D98022 /* Cms */ = {
@@ -609,6 +605,7 @@
 			isa = PBXGroup;
 			children = (
 				902546841DD8D07100D53C58 /* NotificationsTextsBuilder */,
+				902546141DD62FCE00D53C58 /* FireBaseWrapper */,
 				902E9AE21DD1DBC600282AB7 /* TestingNotifications */,
 				906649181DCDCFF100896220 /* WatchCommunication */,
 				906648EB1DCB649F00896220 /* InfitineBackgroundTask */,
@@ -874,6 +871,7 @@
 				901127251C1AFAAF0088DD6B /* DipendencyInjection */,
 				90E8C4961C1AA2B8009304A9 /* AppDelegate.swift */,
 				9008FB731C6F3E3E003C1549 /* Memoria-Bridging-Header.h */,
+				902546121DD62EA000D53C58 /* GoogleService-Info.plist */,
 				90E8C49D1C1AA2B8009304A9 /* Assets.xcassets */,
 				90E8C49F1C1AA2B8009304A9 /* LaunchScreen.storyboard */,
 				90E8C4A21C1AA2B8009304A9 /* Info.plist */,
@@ -1195,6 +1193,7 @@
 				9025467B1DD8C97000D53C58 /* drugs-warning.aiff in Resources */,
 				902147DA1DD4EFC900D4B8E0 /* food.png in Resources */,
 				9025467A1DD8C97000D53C58 /* drugs-verification.aiff in Resources */,
+				902546131DD62EA000D53C58 /* GoogleService-Info.plist in Resources */,
 				902147CE1DD4EDBC00D4B8E0 /* drugsBlue.png in Resources */,
 				9025467C1DD8C97000D53C58 /* food-done.aiff in Resources */,
 				9025467D1DD8C97000D53C58 /* food-notification.aiff in Resources */,
@@ -1372,20 +1371,23 @@
 				905D0BE31DACF47300845973 /* UINotificationActionsExecuter.swift in Sources */,
 				907224C81DBCFFB4001A3A7C /* StringExtentions.swift in Sources */,
 				900E722B1DBF58D700C9AC93 /* SoundPlayer.swift in Sources */,
-				901127221C1AF8CA0088DD6B /* MemoriesViewController.swift in Sources */,
+				9025460C1DD616EF00D53C58 /* LogInViewController.swift in Sources */,
 				90E739EB1DD2663A008A7FA9 /* ApplicationExntentions.swift in Sources */,
 				9013498A1DB4D554005FA445 /* BeaconShape.swift in Sources */,
 				9019EBED1C90D573008962A5 /* TaskWarningPopUp.swift in Sources */,
 				9035FE081C1B095A00D98022 /* TabBarController.swift in Sources */,
 				9066491A1DCDD00800896220 /* WatchCommunication.swift in Sources */,
 				9019EBEB1C90CA16008962A5 /* TaskVerificationPopUp.swift in Sources */,
+				9025460E1DD61C1D00D53C58 /* UIElementsDefaultValues.swift in Sources */,
 				90DC779C1C3AFC6F0062BCE3 /* DatePickerDialog.swift in Sources */,
 				9035C6D71C2024BA00088434 /* UIConstants.swift in Sources */,
 				906C36851C8E1CA80058EC85 /* Colors.swift in Sources */,
 				90DC77A71C3DAF440062BCE3 /* AddTaskConfirmationViewController.swift in Sources */,
+				902546101DD621E800D53C58 /* RootViewController.swift in Sources */,
 				9019EBE91C8F76AB008962A5 /* ImageView.swift in Sources */,
 				900912BD1DD37AAD00AEEFC2 /* NearableStriggerManager.swift in Sources */,
 				9035C6C71C20225300088434 /* TableView.swift in Sources */,
+				902546161DD62FDC00D53C58 /* FireBaseWrapper.swift in Sources */,
 				902E9AE71DD2010100282AB7 /* LocalNotificationActions.swift in Sources */,
 				901349861DB4C8B0005FA445 /* IBeaconCloud.swift in Sources */,
 				90E8C4971C1AA2B8009304A9 /* AppDelegate.swift in Sources */,
@@ -1425,7 +1427,6 @@
 				9035FE121C1B0D1200D98022 /* DrugsViewController.swift in Sources */,
 				9035FE1F1C1B2BFB00D98022 /* TextView.swift in Sources */,
 				9011272E1C1AFBE20088DD6B /* AssemblyUIComponents.swift in Sources */,
-				9035FE0A1C1B09EA00D98022 /* AssemblyControllers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
