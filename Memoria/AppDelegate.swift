@@ -20,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self .navigationBarAppearance()
         
         rootViewController.presentMainApplication()
+        //rootViewController.presentLogIn()
     
         return true
     }

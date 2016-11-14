@@ -9,24 +9,28 @@
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
-			<integer>6</integer>
+			<integer>4</integer>
 		</dict>
 		<key>AELog.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
-			<integer>7</integer>
+			<integer>6</integer>
 		</dict>
 		<key>GTMSessionFetcher.xcscheme</key>
 		<dict>
 			<key>isShown</key>
-			<false/>
+			<false />
+			<key>orderHint</key>
+			<integer>14</integer>
 		</dict>
 		<key>GoogleToolboxForMac.xcscheme</key>
 		<dict>
 			<key>isShown</key>
-			<false/>
+			<false />
+			<key>orderHint</key>
+			<integer>15</integer>
 		</dict>
 		<key>Pods-Memoria.xcscheme</key>
 		<dict>
@@ -93,17 +97,7 @@
 			<key>primary</key>
 			<true />
 		</dict>
-		<key>23BA9083ED0D2392A167A8AFA04427FA</key>
-		<dict>
-			<key>primary</key>
-			<true />
-		</dict>
 		<key>6454734D2454879F0CB307DA3976167D</key>
-		<dict>
-			<key>primary</key>
-			<true />
-		</dict>
-		<key>389C75EC67307C88C13A715956305C82</key>
 		<dict>
 			<key>primary</key>
 			<true />
@@ -117,21 +111,6 @@
 		<dict>
 			<key>primary</key>
 			<true />
-		</dict>
-		<key>6454734D2454879F0CB307DA3976167D</key>
-		<dict>
-			<key>primary</key>
-			<true />
-		</dict>
-		<key>743B218653F30724AC6773CD7F62653D</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>7D04535608058A2FABC0D16935868FB9</key>
-		<dict>
-			<key>primary</key>
-			<true/>
 		</dict>
 		<key>CBFA0553FDB68E5E84B3CF80F0112AA9</key>
 		<dict>
@@ -139,11 +118,6 @@
 			<true />
 		</dict>
 		<key>E0B1204E84C4C3CAEDA0AB979D1159C2</key>
-		<dict>
-			<key>primary</key>
-			<true />
-		</dict>
-		<key>E8FF9BE1D7F45D219E7CF7D255245100</key>
 		<dict>
 			<key>primary</key>
 			<true />

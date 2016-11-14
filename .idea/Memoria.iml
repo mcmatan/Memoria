@@ -5,327 +5,12 @@
       <sourceFolder url="file://$MODULE_DIR$/MyPlayground2.playground" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MemoriaTests/Info.plist" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MemoriaTests/MemoriaTests.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRequestV2GetDevices.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRequestBeaconColor.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingBase.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingsEddystoneURL.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingsEstimoteTLM.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTUtilityManager.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationEddystoneConfigurationServiceEnable.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingEstimoteLocationPower.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBluetoothBeacon.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingIBeaconNonStrictMode.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceManager.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationEddystoneUIDPower.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceSettingsAdvertiserEddystoneUID.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceFilterNearable.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRequestAnalyticsTrack.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTEddystoneFilterUID.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRequestGetSettingsHistory.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTNotificationGPIOData.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingEstimoteTLMEnable.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationEddystoneEIDEnable.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRequestRegisterDevice.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationIBeaconMotionUUID.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRequestFirmwareV4.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceSettingsAdvertiserEddystoneTLM.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTNearableOperationBroadcastingScheme.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRequestBeaconMac.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTNearable.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTTelemetryNotificationSystemStatus.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceNotificationProtocol.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingSensorsPressure.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTCloudManager.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingGPIOConfigPort1.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingPowerSmartPowerModeEnable.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceFilterBeaconV1.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRequestV2GetDevicesPending.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconBatteryLifetimesVO.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingEddystoneURLEnable.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceShadow.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingPowerBatteryVoltage.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconManagerDelegate.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceGeoLocation.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTNearableOperationIBeaconMinor.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconFirmwareVO.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingIBeaconMinor.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconRecentUpdateInfo.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTCloudOperationDeviceInfoName.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTNearableVO.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTNotificationTransporter.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTCloudOperationDeviceInfoFirmwareVersion.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTMonitoringManager.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingEstimoteTLMPower.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRequestBase.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconSettingsManager.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationSensorsTemperature.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTAnalyticsManager.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingEddystoneTLMPower.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTEddystone.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingDeviceInfoIndoorLocationIdentifier.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingEstimoteLocationEnable.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconUpdateConfig.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTEddystoneManager.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceSettingsAdvertiserEstimoteLocation.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTPeripheral.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTTime.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconUpdateInfo.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTNearableOperationName.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconConnection.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRequestV2GetDeviceDetails.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconManager.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingDeviceInfoUTCTime.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingProtocol.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceIndoorLocation.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTCloudSettingProtocol.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationPowerBatteryPercentage.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingsSensors.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationConnectivityPower.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingNearableBroadcastingScheme.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTFirmwareInfoVO.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRequestCancelPendingSettings.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceSettingsAdvertiserEddystoneURL.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationEstimoteTLMPower.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRequestGetNearables.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTNearableOperationNearableInterval.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationEstimoteTLMEnable.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationEddystoneTLMInterval.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTNearableManager.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTGPIOPortsData.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTTelemetryInfoMagnetometer.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationEddystoneTLMEnable.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTNearableOperationHardware.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTTemperatureRule.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceSettingProtocol.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTPeripheralTypeUtility.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationEddystoneUIDInstance.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingEddystoneUIDEnable.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconBaseVO.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingsGPIO.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSecureBeaconManagerDelegate.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingDeviceInfoGeoLocation.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingEddystoneEIDInterval.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationEstimoteTLMInterval.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTTimePeriod.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationShakeToConnectEnable.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceSettingsCollection.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationSensorsMotionNotificationEnable.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTFirmwareInfoV4VO.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTOrientationRule.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingConnectivityPower.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTCloudOperationDeviceInfoGeoLocation.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingEddystoneTLMInterval.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceFilter.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTEddystoneFilter.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDefinitions.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeacon.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconRecentConfig.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingNearableEddystoneURL.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTNearableOperationNearablePower.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRequestGetJSON.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingEddystoneUIDInstance.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingIBeaconSecureUUIDPeriodScaler.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingEddystoneUIDPower.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTLocationBeaconBulkUpdateConfiguration.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationSensorsPressure.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTPeripheralNearable.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationEddystoneEIDInterval.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationEddystoneURLData.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconVO.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingShakeToConnectEnable.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBaseVO.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTTriggerManager.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationEstimoteLocationInterval.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRequestPostFormData.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingEddystoneEIDEnable.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTTelemetryInfo.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTNearableOperationMotionOnly.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTEddystoneAttachment.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingPowerScheduledAdvertisingEnable.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingNearableInterval.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTGPIOPort.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTCloudOperationProtocol.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingsEddystoneTLM.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTNearableRule.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingDeviceInfoApplicationVersion.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingDeviceInfoUptime.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingEstimoteLocationInterval.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTStorageManager.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSecureBeaconManager.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceSettings.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTCloudOperationDeviceInfoColor.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTLogger.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTTelemetryNotificationTemperature.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingSensorsTemperature.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRequestGetBeaconsDetails.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingEddystoneEIDPower.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRequestAssignGPSLocation.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationEddystoneUIDNamespace.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingsEddystoneConfigurationService.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingEddystoneURLData.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingDeviceInfoHardwareVersion.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRequestPutJSON.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationPowerMotionOnlyBroadcastingDelay.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingIBeaconMotionUUID.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTTelemetryNotificationAmbientLight.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationPowerMotionOnlyBroadcastingEnable.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceSchedule.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationEddystoneEIDPower.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingGPIONotificationEnable.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationEddystoneUIDInterval.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingPowerFlipToSleepEnable.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingPowerDarkToSleepEnable.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingGPIOConfigPort0.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingsPower.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSimulatedNearableManager.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTNearableOperationEddystoneURL.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationSensorsAmbientLight.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTNearableFirmwareVO.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRequestBeaconDetails.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationIBeaconSecureUUIDPeriodScaler.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTEddystoneEID.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingDeviceInfoName.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingDeviceInfoTags.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationProtocol.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingsEstimoteLocation.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBulkUpdater.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingsConnectivity.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTTrigger.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTCloudOperationIBeaconNonStrictMode.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTTelemetryInfoSystemStatus.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingGPIOPortsData.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDevice.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceDetails.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRequestV2DevicesUpdate.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingReadWrite.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTTelemetryNotificationGPIO.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTCloudOperationPowerBatteryLifetime.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTNearableOperationApplicationVersion.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationIBeaconEnable.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceSettingsGeneral.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingPowerScheduledAdvertisingPeriod.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRequestGetBeaconsPublicDetails.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationIBeaconSecureUUIDEnable.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTMotionRule.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTNearableSettingsManager.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTNearableOperationIBeaconMajor.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingEddystoneUIDInterval.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingsDeviceInfo.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconDefinitions.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRequestGetBeacons.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceSettingsAdvertiser.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceNearableSettingProtocol.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTEddystoneUID.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingSensorsAmbientLight.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationIBeaconMotionUUIDEnable.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRule.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTCloudOperationDeviceInfoTags.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/EstimoteSDK.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationEddystoneURLInterval.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRequestDelete.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationIBeaconProximityUUID.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTEddystoneFilterURL.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingPowerMotionOnlyBroadcastingDelay.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTNearableFirmwareUpdateVO.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingPowerMotionOnlyBroadcastingEnable.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationIBeaconMajor.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationEstimoteLocationPower.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingEddystoneTLMEnable.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationPowerScheduledAdvertisingEnable.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationConnectivityInterval.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceSettingsAdvertiserIBeacon.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingIBeaconEnable.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationDeviceInfoUTCTime.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationDeviceInfoHardwareVersion.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTTelemetryNotificationMagnetometer.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingsEddystoneEID.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTEddystoneFilterURLDomain.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTLocationBeaconBulkUpdater.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingPowerBatteryLifetime.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTTelemetryNotificationMotion.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTTelemetryNotificationProtocol.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTMonitoringZone.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingEddystoneURLInterval.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTNotificationMotion.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingIBeaconProximityUUID.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTAnalyticsEventVO.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingDeviceInfoBootloaderVersion.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationPowerBatteryVoltage.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingIBeaconInterval.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingIBeaconMotionUUIDEnable.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingDeviceInfoFirmwareVersion.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingEstimoteTLMInterval.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTEddystoneURL.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTGPIOConfig.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingIBeaconMajor.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceLocationBeacon.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingConnectivityInterval.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationGPIOConfigPort1.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceUpdateInfo.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingDeviceInfoColor.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingsEddystoneUID.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationGPIONotificationEnable.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTProximityRule.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceNearable.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationPowerFlipToSleepEnable.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationPowerDarkToSleepEnable.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingEddystoneURLPower.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingEddystoneUIDNamespace.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTFeaturesetEstimoteMonitoring.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTTelemetryInfoPressure.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationPowerScheduledAdvertisingPeriod.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRequestPostJSON.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationDeviceInfoUptime.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingNearablePower.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingIBeaconPower.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationPowerSmartPowerModeEnable.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceSettingsAdvertiserEstimoteTLM.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingPowerBatteryPercentage.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationIBeaconInterval.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingReadOnly.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingIBeaconSecureUUIDEnable.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRequestPatchJSON.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceFilterLocationBeacon.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingDeviceInfoIndoorLocationName.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingEddystoneConfigurationServiceEnable.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationDeviceInfoApplicationVersion.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationEddystoneTLMPower.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceStatusReport.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTNearableOperationIBeaconProximityUUID.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTNearableDefinitions.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTTelemetryInfoGPIO.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTTelemetryNotificationPressure.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTTelemetryInfoMotion.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationEddystoneURLEnable.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationEddystoneURLPower.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTCloudOperationDeviceInfoIndoorLocationIdentifier.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationEstimoteLocationEnable.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationIBeaconMinor.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDateRule.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceSettingsAdvertiserEddystoneEID.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingSensorsMotionNotificationEnable.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTEddystoneFilterEID.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationIBeaconPower.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationDeviceInfoBootloaderVersion.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationGPIOConfigPort0.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRequestGetPendingSettings.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTConfig.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingOperation.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTEddystoneTLM.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceConnectable.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTTelemetryInfoAmbientLight.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingsIBeacon.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationEddystoneUIDEnable.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTTelemetryInfoTemperature.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationGPIOPortsData.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTNearableOperationProtocol.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/SnapKit/Source/ConstraintLayoutSupportDSL.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/SnapKit/Source/ConstraintPriorityTarget.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/SnapKit/Source/UILayoutGuide+Extensions.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/SnapKit/Source/ConstraintMultiplierTarget.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/SnapKit/Source/ConstraintDescription.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/SnapKit/Source/ConstraintView+Extensions.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/SnapKit/Source/ConstraintConfig.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/SnapKit/Source/UILayoutGuide+Extensions.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/SnapKit/Source/ConstraintLayoutGuideDSL.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/SnapKit/Source/ConstraintViewDSL.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/SnapKit/Source/ConstraintItem.swift" isTestSource="false" />
@@ -344,26 +29,19 @@
       <sourceFolder url="file://$MODULE_DIR$/Pods/SnapKit/Source/UILayoutSupport+Extensions.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/SnapKit/Source/ConstraintView.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/SnapKit/Source/ConstraintMakerEditable.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/SnapKit/Source/ConstraintConfig.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/SnapKit/Source/ConstraintMakerExtendable.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/SnapKit/Source/ConstraintDSL.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/SnapKit/Source/ConstraintMakerPriortizable.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/SnapKit/Source/ConstraintRelation.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/SnapKit/Source/ConstraintRelatableTarget.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/SnapKit/Source/ConstraintMakerFinalizable.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/AEConsole/Sources/Config.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/AEConsole/Sources/Brain.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/AEConsole/Sources/AEConsole.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/AEConsole/Sources/Cell.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/AEConsole/Sources/View.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/AELog/Sources/Config.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/AELog/Sources/AELog.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/AELog/Sources/Line.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-MemoriaUITests/Pods-MemoriaUITests-umbrella.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-MemoriaUITests/Pods-MemoriaUITests.debug.xcconfig" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-MemoriaUITests/Pods-MemoriaUITests-resources.sh" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-MemoriaUITests/Pods-MemoriaUITests.debug.xcconfig" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-MemoriaUITests/Pods-MemoriaUITests-dummy.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-MemoriaUITests/Pods-MemoriaUITests.modulemap" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-MemoriaUITests/Info.plist" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-MemoriaUITests/Pods-MemoriaUITests-dummy.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-MemoriaUITests/Pods-MemoriaUITests-umbrella.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-MemoriaUITests/Pods-MemoriaUITests-acknowledgements.plist" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-MemoriaUITests/Pods-MemoriaUITests-acknowledgements.markdown" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-MemoriaUITests/Pods-MemoriaUITests.release.xcconfig" isTestSource="false" />
@@ -374,37 +52,49 @@
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/SnapKit/Info.plist" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/SnapKit/SnapKit.modulemap" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/SnapKit/SnapKit-umbrella.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/AELog/AELog-prefix.pch" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/AELog/AELog.modulemap" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/AELog/Info.plist" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/AELog/AELog-dummy.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/AELog/AELog-umbrella.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/AELog/AELog.xcconfig" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/GoogleToolboxForMac/GoogleToolboxForMac.xcconfig" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/GoogleToolboxForMac/GoogleToolboxForMac-dummy.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/GoogleToolboxForMac/Info.plist" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/GoogleToolboxForMac/GoogleToolboxForMac.modulemap" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/GoogleToolboxForMac/GoogleToolboxForMac-prefix.pch" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/GoogleToolboxForMac/GoogleToolboxForMac-umbrella.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/GTMSessionFetcher/GTMSessionFetcher.xcconfig" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/GTMSessionFetcher/GTMSessionFetcher-dummy.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/GTMSessionFetcher/GTMSessionFetcher-prefix.pch" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/GTMSessionFetcher/GTMSessionFetcher-umbrella.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/GTMSessionFetcher/GTMSessionFetcher.modulemap" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/GTMSessionFetcher/Info.plist" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/AEConsole/AEConsole-umbrella.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/AEConsole/AEConsole-dummy.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/AEConsole/AEConsole.xcconfig" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/AEConsole/Info.plist" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/AEConsole/AEConsole-prefix.pch" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/AEConsole/AEConsole.modulemap" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/AELog/AELog-prefix.pch" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/AELog/AELog.modulemap" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/AELog/Info.plist" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/AELog/AELog-dummy.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/AELog/AELog-umbrella.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/AELog/AELog.xcconfig" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-Memoria/Pods-Memoria-dummy.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-Memoria/Pods-Memoria-frameworks.sh" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-Memoria/Pods-Memoria-acknowledgements.markdown" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-Memoria/Pods-Memoria-acknowledgements.plist" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-Memoria/Pods-Memoria.debug.xcconfig" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-Memoria/Info.plist" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-Memoria/Pods-Memoria-frameworks.sh" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-Memoria/Pods-Memoria.release.xcconfig" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-Memoria/Pods-Memoria-resources.sh" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-Memoria/Pods-Memoria-umbrella.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-Memoria/Info.plist" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-Memoria/Pods-Memoria.modulemap" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-MemoriaTests/Pods-MemoriaTests-acknowledgements.plist" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-MemoriaTests/Pods-MemoriaTests-acknowledgements.markdown" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-MemoriaTests/Pods-MemoriaTests.debug.xcconfig" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-MemoriaTests/Pods-MemoriaTests-resources.sh" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-MemoriaTests/Pods-MemoriaTests-dummy.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-MemoriaTests/Pods-MemoriaTests.debug.xcconfig" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-MemoriaTests/Pods-MemoriaTests-acknowledgements.markdown" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-MemoriaTests/Pods-MemoriaTests-umbrella.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-MemoriaTests/Pods-MemoriaTests-frameworks.sh" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-MemoriaTests/Info.plist" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-MemoriaTests/Pods-MemoriaTests-umbrella.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-MemoriaTests/Pods-MemoriaTests.modulemap" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-MemoriaTests/Pods-MemoriaTests-resources.sh" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-MemoriaTests/Pods-MemoriaTests.release.xcconfig" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/SwiftDate/SwiftDate.xcconfig" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/SwiftDate/SwiftDate-prefix.pch" isTestSource="false" />
@@ -424,21 +114,22 @@
       <sourceFolder url="file://$MODULE_DIR$/Pods/SwiftDate/Sources/SwiftDate/TimeZoneName.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/SwiftDate/Sources/SwiftDate/Extensions.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/SwiftDate/Sources/SwiftDate/DateComponents+Extension.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/SwiftDate/Sources/SwiftDate/Date+Math.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/SwiftDate/Sources/SwiftDate/LocaleName.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/SwiftDate/Sources/SwiftDate/TimeInterval+Extensions.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/SwiftDate/Sources/SwiftDate/ISO8601DateTimeFormatter.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/SwiftDate/Sources/SwiftDate/Region.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/SwiftDate/Sources/SwiftDate/Date+Formatter.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/SwiftDate/Sources/SwiftDate/DateInRegionFormatter.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/SwiftDate/Sources/SwiftDate/DateInRegion.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/SwiftDate/Sources/SwiftDate/DateInRegion+Components.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/SwiftDate/Sources/SwiftDate/DateTimeInterval.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/SwiftDate/Sources/SwiftDate/Date+Math.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/SwiftDate/Sources/SwiftDate/DateInRegion+Formatter.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/SwiftDate/Sources/SwiftDate/LocaleName.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/SwiftDate/Sources/SwiftDate/DateInRegion+Components.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/SwiftDate/Sources/SwiftDate/DateInRegion.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/SwiftDate/Sources/SwiftDate/DateTimeInterval.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/SwiftDate/Sources/SwiftDate/Date+Components.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/SwiftDate/Sources/SwiftDate/Date+Compare.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/SwiftDate/Sources/SwiftDate/Commons.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/SwiftDate/Sources/SwiftDate/SwiftDate.bundle" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/SwiftDate/Sources/SwiftDate/Date+Components.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/FirebaseInstanceID/Sources/FIRInstanceID.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Swinject/Sources/Swinject.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Swinject/Sources/FunctionType.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Swinject/Sources/Assembler.swift" isTestSource="false" />
@@ -454,79 +145,420 @@
       <sourceFolder url="file://$MODULE_DIR$/Pods/Swinject/Sources/Container.Arguments.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Swinject/Sources/ServiceKey.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Swinject/Sources/SynchronizedResolver.Arguments.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AEConsole/Sources/Cell.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AEConsole/Sources/Config.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AEConsole/Sources/Brain.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AEConsole/Sources/AEConsole.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AEConsole/Sources/View.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AELog/Sources/Config.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AELog/Sources/AELog.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AELog/Sources/Line.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRequestV2GetDevices.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingsGPIO.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingBase.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingsEddystoneURL.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingsEstimoteTLM.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTUtilityManager.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationEddystoneConfigurationServiceEnable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingEstimoteLocationPower.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTCloudManager.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingsConnectivity.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationEddystoneUIDPower.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceSettingsAdvertiserEddystoneUID.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTCloudOperationPowerBatteryLifetime.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRequestAnalyticsTrack.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingIBeaconSecureUUIDPeriodScaler.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRequestGetSettingsHistory.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTNotificationGPIOData.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingEstimoteTLMEnable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationEddystoneEIDEnable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRequestRegisterDevice.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingEddystoneUIDEnable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRequestFirmwareV4.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTNearableOperationBroadcastingScheme.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRequestBeaconMac.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationSensorsAmbientLight.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTTelemetryNotificationSystemStatus.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceNotificationProtocol.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingSensorsPressure.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingGPIOConfigPort1.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingPowerSmartPowerModeEnable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceFilterBeaconV1.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRequestV2GetDevicesPending.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconBatteryLifetimesVO.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingEddystoneURLEnable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTNearableManager.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceShadow.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingPowerBatteryVoltage.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconManagerDelegate.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTNearableOperationIBeaconMinor.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconFirmwareVO.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingIBeaconMinor.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconRecentUpdateInfo.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTCloudOperationDeviceInfoName.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationPowerMotionOnlyBroadcastingEnable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingsEstimoteLocation.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTMonitoringManager.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingEstimoteTLMPower.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRequestBase.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconSettingsManager.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationSensorsTemperature.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTAnalyticsManager.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingEddystoneTLMPower.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTEddystone.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingDeviceInfoIndoorLocationIdentifier.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingEstimoteLocationEnable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconUpdateConfig.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTEddystoneManager.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceSettingsAdvertiserEstimoteLocation.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTPeripheral.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTTime.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconUpdateInfo.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTNearableOperationName.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconConnection.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingIBeaconEnable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconManager.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingDeviceInfoUTCTime.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingProtocol.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceIndoorLocation.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTCloudSettingProtocol.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTNearableVO.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationPowerBatteryPercentage.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTEddystoneEID.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingsSensors.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationConnectivityPower.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBluetoothBeacon.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingNearableBroadcastingScheme.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTFirmwareInfoVO.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceSettingsAdvertiserEddystoneURL.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationEstimoteTLMPower.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTCloudOperationDeviceInfoGeoLocation.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRequestGetNearables.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTNearableOperationNearableInterval.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationEstimoteTLMEnable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationEddystoneTLMInterval.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationEddystoneTLMPower.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTGPIOPortsData.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTTelemetryInfoMagnetometer.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTNearableOperationHardware.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTTemperatureRule.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceSettingProtocol.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationEstimoteTLMInterval.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTNearable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceFilterNearable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconDefinitions.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSecureBeaconManagerDelegate.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingDeviceInfoGeoLocation.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingEddystoneEIDInterval.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationIBeaconPower.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTTimePeriod.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationShakeToConnectEnable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceSettingsCollection.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationSensorsMotionNotificationEnable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTFirmwareInfoV4VO.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTOrientationRule.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingConnectivityPower.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRequestBeaconColor.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingEddystoneUIDPower.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationEddystoneUIDNamespace.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingEddystoneTLMInterval.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceFilter.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTEddystoneFilter.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDefinitions.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeacon.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconRecentConfig.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingNearableEddystoneURL.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTNearableOperationNearablePower.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTPeripheralNearable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationEddystoneUIDInstance.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingEddystoneUIDInstance.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingSensorsMotionNotificationEnable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTPeripheralTypeUtility.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationEddystoneURLEnable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationPowerMotionOnlyBroadcastingDelay.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTLocationBeaconBulkUpdateConfiguration.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationSensorsPressure.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingsDeviceInfo.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationEddystoneEIDInterval.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconVO.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingShakeToConnectEnable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBaseVO.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTTriggerManager.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationEstimoteLocationInterval.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRequestPostFormData.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingEddystoneEIDEnable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTTelemetryInfo.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTNearableOperationMotionOnly.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTEddystoneAttachment.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingPowerScheduledAdvertisingEnable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingNearableInterval.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTGPIOPort.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTCloudOperationProtocol.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingsEddystoneTLM.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTNearableRule.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingDeviceInfoApplicationVersion.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingEstimoteLocationInterval.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTStorageManager.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceGeoLocation.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceSettings.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTCloudOperationDeviceInfoColor.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTLogger.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTTelemetryNotificationTemperature.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingSensorsTemperature.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRequestGetBeaconsDetails.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingEddystoneEIDPower.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingEddystoneURLData.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingDeviceInfoName.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingsEddystoneConfigurationService.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRequestCancelPendingSettings.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingDeviceInfoHardwareVersion.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRequestPutJSON.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTNotificationTransporter.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationDeviceInfoApplicationVersion.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingIBeaconMotionUUID.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTTelemetryNotificationAmbientLight.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceSchedule.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationEddystoneEIDPower.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingGPIONotificationEnable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationEddystoneUIDInterval.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingPowerFlipToSleepEnable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingPowerDarkToSleepEnable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingGPIOConfigPort0.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingsPower.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSimulatedNearableManager.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTNearableOperationEddystoneURL.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationPowerSmartPowerModeEnable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTNearableFirmwareVO.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRequestBeaconDetails.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationIBeaconSecureUUIDPeriodScaler.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationGPIOConfigPort1.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTFeaturesetEstimoteMonitoring.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingDeviceInfoTags.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceManager.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationProtocol.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationEddystoneURLData.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTTrigger.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTNearableSettingsManager.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTTelemetryInfoSystemStatus.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingGPIOPortsData.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDevice.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceDetails.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTCloudOperationDeviceInfoFirmwareVersion.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRequestV2DevicesUpdate.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingReadWrite.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTTelemetryNotificationGPIO.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationIBeaconMotionUUID.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTNearableOperationApplicationVersion.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationIBeaconEnable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceSettingsGeneral.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingPowerScheduledAdvertisingPeriod.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRequestGetBeaconsPublicDetails.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationIBeaconSecureUUIDEnable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTMotionRule.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceSettingsAdvertiserEddystoneTLM.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTNearableOperationIBeaconMajor.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingEddystoneTLMEnable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingEddystoneUIDInterval.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTCloudOperationDeviceInfoIndoorLocationIdentifier.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRequestGetBeacons.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationConnectivityInterval.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceSettingsAdvertiser.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRequestAssignGPSLocation.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTMonitoringZone.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationPowerScheduledAdvertisingPeriod.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingSensorsAmbientLight.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconBaseVO.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationIBeaconMotionUUIDEnable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRule.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTCloudOperationDeviceInfoTags.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/EstimoteSDK.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationEddystoneURLInterval.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTEddystoneUID.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRequestDelete.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationIBeaconProximityUUID.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTEddystoneFilterURL.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingPowerMotionOnlyBroadcastingDelay.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTNearableFirmwareUpdateVO.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingPowerMotionOnlyBroadcastingEnable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSecureBeaconManager.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationIBeaconMajor.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationEstimoteLocationPower.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTTelemetryNotificationProtocol.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationPowerScheduledAdvertisingEnable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingIBeaconMotionUUIDEnable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceSettingsAdvertiserIBeacon.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationDeviceInfoUTCTime.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRequestV2GetDeviceDetails.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTTelemetryNotificationMagnetometer.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingsEddystoneEID.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTLocationBeaconBulkUpdater.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingPowerBatteryLifetime.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTTelemetryNotificationMotion.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingDeviceInfoUptime.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTNearableOperationIBeaconProximityUUID.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingEddystoneURLInterval.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTNotificationMotion.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingIBeaconProximityUUID.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTAnalyticsEventVO.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingDeviceInfoBootloaderVersion.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationPowerBatteryVoltage.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingIBeaconInterval.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBulkUpdater.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingDeviceInfoFirmwareVersion.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingEstimoteTLMInterval.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTEddystoneURL.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTGPIOConfig.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingIBeaconMajor.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceLocationBeacon.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingConnectivityInterval.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationEddystoneTLMEnable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceUpdateInfo.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingDeviceInfoColor.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingsEddystoneUID.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationGPIONotificationEnable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTProximityRule.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceNearable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationPowerFlipToSleepEnable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationPowerDarkToSleepEnable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingEddystoneURLPower.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingEddystoneUIDNamespace.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTEddystoneFilterURLDomain.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTTelemetryInfoPressure.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceNearableSettingProtocol.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRequestPostJSON.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationDeviceInfoUptime.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingNearablePower.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingIBeaconPower.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceSettingsAdvertiserEstimoteTLM.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingPowerBatteryPercentage.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationIBeaconInterval.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingReadOnly.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingIBeaconSecureUUIDEnable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRequestPatchJSON.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceFilterLocationBeacon.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingDeviceInfoIndoorLocationName.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingEddystoneConfigurationServiceEnable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationDeviceInfoHardwareVersion.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRequestGetJSON.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceStatusReport.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTNearableDefinitions.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTTelemetryInfoGPIO.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTTelemetryNotificationPressure.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTEddystoneFilterUID.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTTelemetryInfoMotion.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationEddystoneURLPower.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationEstimoteLocationEnable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationIBeaconMinor.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDateRule.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceSettingsAdvertiserEddystoneEID.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTCloudOperationIBeaconNonStrictMode.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingIBeaconNonStrictMode.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTEddystoneFilterEID.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationDeviceInfoBootloaderVersion.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationGPIOConfigPort0.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRequestGetPendingSettings.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTConfig.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingOperation.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTEddystoneTLM.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceConnectable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTTelemetryInfoAmbientLight.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingsIBeacon.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationEddystoneUIDEnable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTTelemetryInfoTemperature.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationGPIOPortsData.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTNearableOperationProtocol.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/GTMSessionFetcher/Source/GTMSessionFetcherService.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/GTMSessionFetcher/Source/GTMSessionFetcherLogging.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/GTMSessionFetcher/Source/GTMSessionUploadFetcher.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/GTMSessionFetcher/Source/GTMSessionFetcher.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/GTMSessionFetcher/Source/GTMSessionFetcherLogging.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/GTMSessionFetcher/Source/GTMSessionFetcherService.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/GTMSessionFetcher/Source/GTMSessionFetcher.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/GTMSessionFetcher/Source/GTMSessionUploadFetcher.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/GoogleToolboxForMac/GTMDefines.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/GoogleToolboxForMac/DebugUtils/GTMDebugSelectorValidation.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/GoogleToolboxForMac/DebugUtils/GTMMethodCheck.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/GoogleToolboxForMac/DebugUtils/GTMDebugThreadValidation.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/GoogleToolboxForMac/Foundation/GTMNSData+zlib.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/GoogleToolboxForMac/Foundation/GTMNSString+URLArguments.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/GoogleToolboxForMac/Foundation/GTMNSData+zlib.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/GoogleToolboxForMac/Foundation/GTMNSString+URLArguments.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/GoogleToolboxForMac/Foundation/GTMNSDictionary+URLArguments.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/GoogleToolboxForMac/Foundation/GTMNSDictionary+URLArguments.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Firebase/Core/Sources/Firebase.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Memoria/foodRed.png" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Memoria/brushTeethRed.png" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Memoria/AddTaskTimeViewController.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Memoria/foodBlue.png" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Memoria/UIViewExntentions.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Memoria/IBeaconCloud.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Memoria/food-warning.aiff" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/UIViewExntentions.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/TabBarController.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Memoria/Memoria-Bridging-Header.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Memoria/Colors.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Memoria/TextField.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Memoria/TaskNotificationPopUp.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Memoria/Bootstrapper.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Memoria/BeaconShape.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/food-warning.aiff" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Memoria/UINotificationActionsExecuter.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/AssemblyModel.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Memoria/Fonts.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Memoria/ApplicationExntentions.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Memoria/LocalNotificationCategotry.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Memoria/brushTeeth-warning.aiff" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Memoria/TabBarController.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Memoria/ReminderPopUp.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Memoria/Content.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Memoria/LocalNotificationCategoryBuilder.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/TableView.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/FireBaseWrapper.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Memoria/foodGreen.png" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Memoria/ButtonsTextsHe.plist" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Memoria/food-done.aiff" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Memoria/TasksNotificationsPresenter.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Memoria/TaskNotificationsTracker.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/TasksDB.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Memoria/drugsBlue.png" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Memoria/brushTeeth-notification.aiff" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/TestingNotifications.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/brushTeethGreen.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/LocalNotificationCategoryBuilder.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Memoria/ImageView.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Memoria/drugs-notification.aiff" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Memoria/brushTeeth.png" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Memoria/NearableLocator.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/RootViewController.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Memoria/Base.lproj/LaunchScreen.storyboard" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Memoria/brushTeethBlue.png" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Memoria/drugs-verification.aiff" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/TaskVerificationPopUp.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/TaskWarningPopUp.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Memoria/drugsGreen.png" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Memoria/LocalNotificationActions.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Memoria/drugsRed.png" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Memoria/NSDateExntentions.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/drugs-verification.aiff" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Memoria/UIConstants.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Memoria/ButtonsTexts.plist" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Memoria/DatePickerDialog.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Memoria/IBeaconServices.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Memoria/Assets.xcassets" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Memoria/NotificationsNames.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/brushTeethBlue.png" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Memoria/WatchCommunication.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Memoria/TestingNotifications.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/brushTeeth-notification.aiff" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Memoria/3.wav" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Memoria/DrugsViewController.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Memoria/MemoriesViewController.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Memoria/Label.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/GoogleService-Info.plist" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Memoria/TaskManagerViewController.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Memoria/Memoria.entitlements" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Memoria/Info.plist" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Memoria/LabelsTextsHe.plist" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Memoria/TasksDB.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Memoria/brushTeethGreen.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/food-verification.aiff" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Memoria/NavigationController.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/LabelsTextsHe.plist" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/Content.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/NotificationsNames.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/AppDelegate.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/Label.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Memoria/NearableStriggerManager.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Memoria/TasksServices.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Memoria/LabelsTexts.plist" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Memoria/AddTaskConfirmationViewController.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/UIElementsDefaultValues.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/LocalNotificationCategotry.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Memoria/brushTeeth-done.aiff" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Memoria/TableView.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/Button.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Memoria/UIColorExtension.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Memoria/TaskWarningPopUp.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/drugsRed.png" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Memoria/BackgroundTask.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Memoria/TaskActionsPerformaer.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Memoria/LocalNotificationScheduler.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Memoria/AssemblyControllers.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Memoria/NotificationsTexts.plist" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Memoria/AppDelegate.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Memoria/TextView.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Memoria/AddTaskTypeViewController.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Memoria/drugs-done.aiff" isTestSource="false" />
@@ -535,21 +567,23 @@
       <sourceFolder url="file://$MODULE_DIR$/Memoria/drugs.png" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Memoria/ViewController.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Memoria/AssemblyUIComponents.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Memoria/AssemblyModel.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/BeaconShape.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Memoria/Task.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Memoria/drugs-warning.aiff" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/LabelsTexts.plist" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Memoria/StringExtentions.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Memoria/NotificationsTextsBuilder.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Memoria/DictionaryExntentions.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Memoria/VoiceRecorder.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Memoria/CurrenctTaskCreator.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Memoria/food-notification.aiff" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Memoria/TaskVerificationPopUp.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/NSDateExntentions.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Memoria/AddTaskTimePriorityController.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Memoria/UIPickerWithBlock.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Memoria/Button.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/Info.plist" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Memoria/UIViewAutoLayoutExtentions.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Memoria/food-verification.aiff" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/LogInViewController.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/drugs-warning.aiff" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/AddTaskConfirmationViewController.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Memoria/SoundPlayer.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Watch Extension/PushNotificationPayload.apns" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Watch Extension/IOSCommunication.swift" isTestSource="false" />
@@ -568,9 +602,10 @@
       <sourceFolder url="file://$MODULE_DIR$/Watch/weather-icon-png-27.png" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Watch/images.png" isTestSource="false" />
     </content>
-    <content url="file://$USER_HOME$/Library/Caches/AppCode2016.2/DerivedData/Memoria-glfgwxykquucdoexceqopqueqlgq/Build/Intermediates/Memoria.build/Debug-watchos/Watch Extension.build/DerivedSources" />
     <content url="file://$USER_HOME$/Library/Caches/AppCode2016.2/DerivedData/Memoria-glfgwxykquucdoexceqopqueqlgq/Build/Intermediates/Pods.build/Debug-iphoneos/AEConsole.build/DerivedSources" />
     <content url="file://$USER_HOME$/Library/Caches/AppCode2016.2/DerivedData/Memoria-glfgwxykquucdoexceqopqueqlgq/Build/Intermediates/Pods.build/Debug-iphoneos/AELog.build/DerivedSources" />
+    <content url="file://$USER_HOME$/Library/Caches/AppCode2016.2/DerivedData/Memoria-glfgwxykquucdoexceqopqueqlgq/Build/Intermediates/Pods.build/Debug-iphoneos/GTMSessionFetcher.build/DerivedSources" />
+    <content url="file://$USER_HOME$/Library/Caches/AppCode2016.2/DerivedData/Memoria-glfgwxykquucdoexceqopqueqlgq/Build/Intermediates/Pods.build/Debug-iphoneos/GoogleToolboxForMac.build/DerivedSources" />
     <content url="file://$USER_HOME$/Library/Caches/AppCode2016.2/DerivedData/Memoria-glfgwxykquucdoexceqopqueqlgq/Build/Intermediates/Pods.build/Debug-iphoneos/Pods-Memoria.build/DerivedSources" />
     <content url="file://$USER_HOME$/Library/Caches/AppCode2016.2/DerivedData/Memoria-glfgwxykquucdoexceqopqueqlgq/Build/Intermediates/Pods.build/Debug-iphoneos/Pods-MemoriaTests.build/DerivedSources" />
     <content url="file://$USER_HOME$/Library/Caches/AppCode2016.2/DerivedData/Memoria-glfgwxykquucdoexceqopqueqlgq/Build/Intermediates/Pods.build/Debug-iphoneos/Pods-MemoriaUITests.build/DerivedSources" />
@@ -589,35 +624,6 @@
           <root url="file:///Applications/Xcode.app/Contents/PlugIns/Xcode3Core.ideplugin/Contents/SharedSupport/Developer/Library/Frameworks/XcodeKit.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/PlugIns/Xcode3Core.ideplugin/Contents/SharedSupport/Developer/Library/Frameworks/InterfaceBuilderKit.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/PlugIns/Xcode3Core.ideplugin/Contents/SharedSupport/Developer/Library/Frameworks/DTPerformanceSession.framework/Headers" />
-          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/HealthKit.framework/Headers" />
-          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/MapKit.framework/Headers" />
-          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/SpriteKit.framework/Headers" />
-          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/CoreLocation.framework/Headers" />
-          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/EventKit.framework/Headers" />
-          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/WatchConnectivity.framework/Headers" />
-          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/CoreText.framework/Headers" />
-          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/MobileCoreServices.framework/Headers" />
-          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/ClockKit.framework/Headers" />
-          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/CoreData.framework/Headers" />
-          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/SceneKit.framework/Headers" />
-          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/GameKit.framework/Headers" />
-          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/Contacts.framework/Headers" />
-          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/CoreAudio.framework/Headers" />
-          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers" />
-          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/CloudKit.framework/Headers" />
-          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/CoreMotion.framework/Headers" />
-          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/UserNotifications.framework/Headers" />
-          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/Foundation.framework/Headers" />
-          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/ImageIO.framework/Headers" />
-          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers" />
-          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/Security.framework/Headers" />
-          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/WatchKit.framework/Headers" />
-          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/PassKit.framework/Headers" />
-          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/HomeKit.framework/Headers" />
-          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/AVFoundation.framework/Headers" />
-          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/AVFoundation.framework/Frameworks/AVFAudio.framework/Headers" />
-          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/UIKit.framework/Headers" />
-          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/usr/include" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/CallKit.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/HealthKit.framework/Headers" />
@@ -724,35 +730,6 @@
           <root url="file:///Applications/Xcode.app/Contents/PlugIns/Xcode3Core.ideplugin/Contents/SharedSupport/Developer/Library/Frameworks/XcodeKit.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/PlugIns/Xcode3Core.ideplugin/Contents/SharedSupport/Developer/Library/Frameworks/InterfaceBuilderKit.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/PlugIns/Xcode3Core.ideplugin/Contents/SharedSupport/Developer/Library/Frameworks/DTPerformanceSession.framework/Headers" />
-          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/HealthKit.framework/Headers" />
-          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/MapKit.framework/Headers" />
-          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/SpriteKit.framework/Headers" />
-          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/CoreLocation.framework/Headers" />
-          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/EventKit.framework/Headers" />
-          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/WatchConnectivity.framework/Headers" />
-          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/CoreText.framework/Headers" />
-          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/MobileCoreServices.framework/Headers" />
-          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/ClockKit.framework/Headers" />
-          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/CoreData.framework/Headers" />
-          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/SceneKit.framework/Headers" />
-          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/GameKit.framework/Headers" />
-          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/Contacts.framework/Headers" />
-          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/CoreAudio.framework/Headers" />
-          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers" />
-          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/CloudKit.framework/Headers" />
-          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/CoreMotion.framework/Headers" />
-          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/UserNotifications.framework/Headers" />
-          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/Foundation.framework/Headers" />
-          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/ImageIO.framework/Headers" />
-          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers" />
-          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/Security.framework/Headers" />
-          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/WatchKit.framework/Headers" />
-          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/PassKit.framework/Headers" />
-          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/HomeKit.framework/Headers" />
-          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/AVFoundation.framework/Headers" />
-          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/AVFoundation.framework/Frameworks/AVFAudio.framework/Headers" />
-          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/UIKit.framework/Headers" />
-          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/usr/include" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/CallKit.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/HealthKit.framework/Headers" />
