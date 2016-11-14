@@ -2,392 +2,634 @@
 <module type="CIDR_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/MyPlayground2.playground" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MemoriaTests/Info.plist" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/MemoriaTests/MemoriaTests.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Podfile" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Memoria/LabelsTexts.plist" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Memoria/AddTaskTimeViewController.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Memoria/Memoria-Bridging-Header.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Memoria/Info.plist" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Memoria/ViewController.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Memoria/IbeaconLocationFinderHelper.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Memoria/TextView.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Memoria/TasksDB.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Memoria/Bootstrapper.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Memoria/AddTaskVoiceViewController.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Memoria/ManageTasksViewController.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Memoria/UIConstants.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Memoria/IBeaconIdentifier.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Memoria/Label.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Memoria/AssemblyModel.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Memoria/MemoriesViewController.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Memoria/ButtonsTexts.plist" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Memoria/TasksServices.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Memoria/AssemblyControllers.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Memoria/Content.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Memoria/IBeaconServices.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Memoria/AddTaskConfirmationViewController.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Memoria/TableView.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Memoria/TasksNotificationsTracker.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Memoria/AppDelegate.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Memoria/Base.lproj/LaunchScreen.storyboard" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Memoria/TabBarController.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Memoria/AddTaskNameViewController.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Memoria/AddTasksLocationViewController.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Memoria/TextField.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Memoria/DrugsViewController.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Memoria/AssemblyViewControllers.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Memoria/ReminderPopUp.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Memoria/UIViewAutoLayoutExtentions.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Memoria/Recorder.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Memoria/Assets.xcassets" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Memoria/NavigationController.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Memoria/TasksNotificationsPresenter.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Memoria/IbeaconLocationFinder.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Memoria/CurrenctTaskCreator.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Memoria/DatePickerDialog.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Memoria/Button.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Memoria/NotificationsNames.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Memoria/Task.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Memoria/Reminder.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/MyPlayground.playground" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/DateInRegion.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/NSDate+Extension.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/MemoriaUITests/Info.plist" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/MemoriaUITests/MemoriaUITests.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/DataStructures.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/KontaktSDK/KontaktSDK/Headers/KTKEddystoneURLConverter.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/KontaktSDK/KontaktSDK/Headers/KTKPagingVenues.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/KontaktSDK/KontaktSDK/Headers/KTKBeaconDevice.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/KontaktSDK/KontaktSDK/Headers/KTKBeaconManager.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/KontaktSDK/KontaktSDK/Headers/KTKNumberConverter.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/KontaktSDK/KontaktSDK/Headers/KTKLocationManager.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/KontaktSDK/KontaktSDK/Headers/KTKCharacteristicDescriptor.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/KontaktSDK/KontaktSDK/Headers/KTKAction.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/KontaktSDK/KontaktSDK/Headers/KTKNumberLinearConverter.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/KontaktSDK/KontaktSDK/Headers/KTKEddystoneRegion.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/KontaktSDK/KontaktSDK/Headers/KTKEddystoneTLM.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/KontaktSDK/KontaktSDK/Headers/KTKFirmware.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/KontaktSDK/KontaktSDK/Headers/KTKUser.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/KontaktSDK/KontaktSDK/Headers/KTKBluetoothManager.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/KontaktSDK/KontaktSDK/Headers/KTKEddystoneDevice.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/KontaktSDK/KontaktSDK/Headers/KTKHexConverter.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/KontaktSDK/KontaktSDK/Headers/KTKPagingConfigs.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/KontaktSDK/KontaktSDK/Headers/KTKManager.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/KontaktSDK/KontaktSDK/Headers/KTKBeacon.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/KontaktSDK/KontaktSDK/Headers/KTKPublicAction.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/KontaktSDK/KontaktSDK/Headers/KTKBluetoothDevice.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/KontaktSDK/KontaktSDK/Headers/KTKSubordinate.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/KontaktSDK/KontaktSDK/Headers/KTKNumberDiscreteConverter.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/KontaktSDK/KontaktSDK/Headers/KTKBeaconProfile.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/KontaktSDK/KontaktSDK/Headers/KTKStringConverter.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/KontaktSDK/KontaktSDK/Headers/KTKEddystoneFrame.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/KontaktSDK/KontaktSDK/Headers/KTKConverter.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/KontaktSDK/KontaktSDK/Headers/KTKActionManager.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/KontaktSDK/KontaktSDK/Headers/KTKEddystoneUID.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/KontaktSDK/KontaktSDK/Headers/KTKCompany.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/KontaktSDK/KontaktSDK/Headers/KTKPagingDevices.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/KontaktSDK/KontaktSDK/Headers/KTKPublicBeacon.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/KontaktSDK/KontaktSDK/Headers/KTKEddystoneURL.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/KontaktSDK/KontaktSDK/Headers/KTKError.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/KontaktSDK/KontaktSDK/Headers/KTKPublicVenue.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/KontaktSDK/KontaktSDK/Headers/KTKEddystone.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/KontaktSDK/KontaktSDK/Headers/KTKRegion.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/KontaktSDK/KontaktSDK/Headers/KTKVenueBase.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/KontaktSDK/KontaktSDK/Headers/KTKServiceDescriptor.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/KontaktSDK/KontaktSDK/Headers/KTKDescriptor.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/KontaktSDK/KontaktSDK/Headers/KTKDevice.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/KontaktSDK/KontaktSDK/Headers/KTKDataTransferObject.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/KontaktSDK/KontaktSDK/Headers/KontaktSDK.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/KontaktSDK/KontaktSDK/Headers/KTKUUIDConverter.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/KontaktSDK/KontaktSDK/Headers/KTKVenue.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/KontaktSDK/KontaktSDK/Headers/KTKPaging.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/KontaktSDK/KontaktSDK/Headers/KTKPagingBeacons.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/KontaktSDK/KontaktSDK/Headers/KTKCloudBeacon.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/KontaktSDK/KontaktSDK/Headers/KTKClient.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/KontaktSDK/KontaktSDK/libkontakt-ios-sdk.a" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/SnapKit/Source/View+SnapKit.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/SnapKit/Source/ConstraintMaker.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRequestV2GetDevices.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRequestBeaconColor.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingBase.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingsEddystoneURL.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingsEstimoteTLM.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTUtilityManager.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationEddystoneConfigurationServiceEnable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingEstimoteLocationPower.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBluetoothBeacon.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingIBeaconNonStrictMode.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceManager.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationEddystoneUIDPower.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceSettingsAdvertiserEddystoneUID.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceFilterNearable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRequestAnalyticsTrack.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTEddystoneFilterUID.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRequestGetSettingsHistory.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTNotificationGPIOData.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingEstimoteTLMEnable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationEddystoneEIDEnable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRequestRegisterDevice.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationIBeaconMotionUUID.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRequestFirmwareV4.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceSettingsAdvertiserEddystoneTLM.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTNearableOperationBroadcastingScheme.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRequestBeaconMac.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTNearable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTTelemetryNotificationSystemStatus.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceNotificationProtocol.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingSensorsPressure.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTCloudManager.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingGPIOConfigPort1.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingPowerSmartPowerModeEnable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceFilterBeaconV1.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRequestV2GetDevicesPending.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconBatteryLifetimesVO.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingEddystoneURLEnable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceShadow.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingPowerBatteryVoltage.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconManagerDelegate.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceGeoLocation.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTNearableOperationIBeaconMinor.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconFirmwareVO.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingIBeaconMinor.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconRecentUpdateInfo.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTCloudOperationDeviceInfoName.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTNearableVO.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTNotificationTransporter.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTCloudOperationDeviceInfoFirmwareVersion.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTMonitoringManager.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingEstimoteTLMPower.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRequestBase.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconSettingsManager.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationSensorsTemperature.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTAnalyticsManager.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingEddystoneTLMPower.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTEddystone.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingDeviceInfoIndoorLocationIdentifier.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingEstimoteLocationEnable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconUpdateConfig.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTEddystoneManager.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceSettingsAdvertiserEstimoteLocation.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTPeripheral.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTTime.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconUpdateInfo.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTNearableOperationName.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconConnection.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRequestV2GetDeviceDetails.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconManager.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingDeviceInfoUTCTime.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingProtocol.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceIndoorLocation.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTCloudSettingProtocol.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationPowerBatteryPercentage.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingsSensors.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationConnectivityPower.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingNearableBroadcastingScheme.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTFirmwareInfoVO.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRequestCancelPendingSettings.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceSettingsAdvertiserEddystoneURL.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationEstimoteTLMPower.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRequestGetNearables.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTNearableOperationNearableInterval.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationEstimoteTLMEnable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationEddystoneTLMInterval.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTNearableManager.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTGPIOPortsData.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTTelemetryInfoMagnetometer.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationEddystoneTLMEnable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTNearableOperationHardware.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTTemperatureRule.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceSettingProtocol.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTPeripheralTypeUtility.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationEddystoneUIDInstance.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingEddystoneUIDEnable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconBaseVO.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingsGPIO.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSecureBeaconManagerDelegate.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingDeviceInfoGeoLocation.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingEddystoneEIDInterval.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationEstimoteTLMInterval.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTTimePeriod.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationShakeToConnectEnable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceSettingsCollection.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationSensorsMotionNotificationEnable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTFirmwareInfoV4VO.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTOrientationRule.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingConnectivityPower.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTCloudOperationDeviceInfoGeoLocation.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingEddystoneTLMInterval.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceFilter.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTEddystoneFilter.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDefinitions.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeacon.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconRecentConfig.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingNearableEddystoneURL.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTNearableOperationNearablePower.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRequestGetJSON.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingEddystoneUIDInstance.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingIBeaconSecureUUIDPeriodScaler.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingEddystoneUIDPower.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTLocationBeaconBulkUpdateConfiguration.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationSensorsPressure.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTPeripheralNearable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationEddystoneEIDInterval.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationEddystoneURLData.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconVO.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingShakeToConnectEnable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBaseVO.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTTriggerManager.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationEstimoteLocationInterval.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRequestPostFormData.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingEddystoneEIDEnable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTTelemetryInfo.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTNearableOperationMotionOnly.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTEddystoneAttachment.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingPowerScheduledAdvertisingEnable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingNearableInterval.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTGPIOPort.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTCloudOperationProtocol.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingsEddystoneTLM.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTNearableRule.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingDeviceInfoApplicationVersion.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingDeviceInfoUptime.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingEstimoteLocationInterval.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTStorageManager.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSecureBeaconManager.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceSettings.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTCloudOperationDeviceInfoColor.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTLogger.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTTelemetryNotificationTemperature.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingSensorsTemperature.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRequestGetBeaconsDetails.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingEddystoneEIDPower.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRequestAssignGPSLocation.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationEddystoneUIDNamespace.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingsEddystoneConfigurationService.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingEddystoneURLData.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingDeviceInfoHardwareVersion.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRequestPutJSON.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationPowerMotionOnlyBroadcastingDelay.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingIBeaconMotionUUID.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTTelemetryNotificationAmbientLight.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationPowerMotionOnlyBroadcastingEnable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceSchedule.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationEddystoneEIDPower.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingGPIONotificationEnable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationEddystoneUIDInterval.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingPowerFlipToSleepEnable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingPowerDarkToSleepEnable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingGPIOConfigPort0.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingsPower.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSimulatedNearableManager.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTNearableOperationEddystoneURL.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationSensorsAmbientLight.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTNearableFirmwareVO.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRequestBeaconDetails.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationIBeaconSecureUUIDPeriodScaler.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTEddystoneEID.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingDeviceInfoName.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingDeviceInfoTags.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationProtocol.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingsEstimoteLocation.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBulkUpdater.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingsConnectivity.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTTrigger.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTCloudOperationIBeaconNonStrictMode.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTTelemetryInfoSystemStatus.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingGPIOPortsData.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDevice.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceDetails.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRequestV2DevicesUpdate.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingReadWrite.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTTelemetryNotificationGPIO.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTCloudOperationPowerBatteryLifetime.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTNearableOperationApplicationVersion.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationIBeaconEnable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceSettingsGeneral.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingPowerScheduledAdvertisingPeriod.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRequestGetBeaconsPublicDetails.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationIBeaconSecureUUIDEnable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTMotionRule.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTNearableSettingsManager.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTNearableOperationIBeaconMajor.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingEddystoneUIDInterval.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingsDeviceInfo.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconDefinitions.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRequestGetBeacons.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceSettingsAdvertiser.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceNearableSettingProtocol.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTEddystoneUID.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingSensorsAmbientLight.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationIBeaconMotionUUIDEnable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRule.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTCloudOperationDeviceInfoTags.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/EstimoteSDK.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationEddystoneURLInterval.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRequestDelete.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationIBeaconProximityUUID.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTEddystoneFilterURL.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingPowerMotionOnlyBroadcastingDelay.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTNearableFirmwareUpdateVO.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingPowerMotionOnlyBroadcastingEnable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationIBeaconMajor.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationEstimoteLocationPower.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingEddystoneTLMEnable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationPowerScheduledAdvertisingEnable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationConnectivityInterval.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceSettingsAdvertiserIBeacon.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingIBeaconEnable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationDeviceInfoUTCTime.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationDeviceInfoHardwareVersion.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTTelemetryNotificationMagnetometer.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingsEddystoneEID.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTEddystoneFilterURLDomain.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTLocationBeaconBulkUpdater.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingPowerBatteryLifetime.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTTelemetryNotificationMotion.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTTelemetryNotificationProtocol.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTMonitoringZone.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingEddystoneURLInterval.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTNotificationMotion.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingIBeaconProximityUUID.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTAnalyticsEventVO.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingDeviceInfoBootloaderVersion.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationPowerBatteryVoltage.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingIBeaconInterval.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingIBeaconMotionUUIDEnable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingDeviceInfoFirmwareVersion.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingEstimoteTLMInterval.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTEddystoneURL.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTGPIOConfig.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingIBeaconMajor.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceLocationBeacon.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingConnectivityInterval.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationGPIOConfigPort1.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceUpdateInfo.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingDeviceInfoColor.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingsEddystoneUID.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationGPIONotificationEnable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTProximityRule.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceNearable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationPowerFlipToSleepEnable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationPowerDarkToSleepEnable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingEddystoneURLPower.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingEddystoneUIDNamespace.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTFeaturesetEstimoteMonitoring.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTTelemetryInfoPressure.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationPowerScheduledAdvertisingPeriod.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRequestPostJSON.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationDeviceInfoUptime.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingNearablePower.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingIBeaconPower.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationPowerSmartPowerModeEnable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceSettingsAdvertiserEstimoteTLM.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingPowerBatteryPercentage.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationIBeaconInterval.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingReadOnly.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingIBeaconSecureUUIDEnable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRequestPatchJSON.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceFilterLocationBeacon.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingDeviceInfoIndoorLocationName.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingEddystoneConfigurationServiceEnable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationDeviceInfoApplicationVersion.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationEddystoneTLMPower.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceStatusReport.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTNearableOperationIBeaconProximityUUID.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTNearableDefinitions.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTTelemetryInfoGPIO.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTTelemetryNotificationPressure.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTTelemetryInfoMotion.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationEddystoneURLEnable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationEddystoneURLPower.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTCloudOperationDeviceInfoIndoorLocationIdentifier.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationEstimoteLocationEnable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationIBeaconMinor.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDateRule.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceSettingsAdvertiserEddystoneEID.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingSensorsMotionNotificationEnable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTEddystoneFilterEID.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationIBeaconPower.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationDeviceInfoBootloaderVersion.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationGPIOConfigPort0.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTRequestGetPendingSettings.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTConfig.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingOperation.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTEddystoneTLM.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTDeviceConnectable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTTelemetryInfoAmbientLight.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTSettingsIBeacon.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationEddystoneUIDEnable.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTTelemetryInfoTemperature.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTBeaconOperationGPIOPortsData.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/EstimoteSDK/EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/ESTNearableOperationProtocol.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/SnapKit/Source/ConstraintLayoutSupportDSL.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/SnapKit/Source/ConstraintPriorityTarget.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/SnapKit/Source/UILayoutGuide+Extensions.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/SnapKit/Source/ConstraintMultiplierTarget.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/SnapKit/Source/ConstraintDescription.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/SnapKit/Source/ViewController+SnapKit.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/SnapKit/Source/EdgeInsets.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/SnapKit/Source/ConstraintAttributes.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/SnapKit/Source/Constraint.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/SnapKit/Source/Debugging.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/SnapKit/Source/LayoutConstraint.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/SnapKit/Source/SnapKit.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/SnapKit/Source/ConstraintRelation.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/SnapKit/Source/ConstraintView+Extensions.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/SnapKit/Source/ConstraintConfig.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/SnapKit/Source/ConstraintLayoutGuideDSL.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/SnapKit/Source/ConstraintViewDSL.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/SnapKit/Source/ConstraintItem.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/RealmSwift/RealmSwift/SortDescriptor.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/RealmSwift/RealmSwift/Schema.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/RealmSwift/RealmSwift/Results.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/RealmSwift/RealmSwift/Migration.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/RealmSwift/RealmSwift/Object.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/RealmSwift/RealmSwift/Property.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/RealmSwift/RealmSwift/Aliases.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/RealmSwift/RealmSwift/Util.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/RealmSwift/RealmSwift/ObjectSchema.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/RealmSwift/RealmSwift/RealmCollectionType.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/RealmSwift/RealmSwift/List.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/RealmSwift/RealmSwift/RealmConfiguration.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/RealmSwift/RealmSwift/Realm.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/RealmSwift/RealmSwift/Optional.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/column_string.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/RLMRealm.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/RLMRealmConfiguration.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/column_type_traits.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/realm_nmmintrin.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/RLMResults_Private.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/table_view.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/RLMQueryUtil.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/owned_data.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/utilities.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/views.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/query_engine.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/RLMRealm_Private.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/RLMObjectSchema_Private.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/RLMSchema_Private.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/RLMPrefix.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/group_shared.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/descriptor_fwd.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/column.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/query_expression.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/RLMArray_Private.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/column_linkbase.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/column_mixed_tpl.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/data_type.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/RLMMigration_Private.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/RLMProperty_Private.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/object_store_exceptions.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/alloc_slab.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/exceptions.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/RLMObjectSchema.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/table_ref.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/RLMRealm_Dynamic.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/link_view.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/descriptor.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/group.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/table_accessors.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/RLMObject_Private.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/column_binary.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/binary_data.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/column_table.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/RLMSchema.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/array_blobs_big.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/RLMAccessor.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/array_basic_tpl.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/RLMProperty.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/table.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/table_view_basic.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/column_mixed.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/property.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/replication.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/RLMArray.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/column_string_enum.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/mixed.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/row.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/RLMAnalytics.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/bptree.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/array_string.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/array_integer.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/importer.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/RLMCollection.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/RLMConstants.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/spec.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/index_string.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/handover_defs.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/RLMRealmConfiguration_Private.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/group_writer.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/object_schema.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/RLMObjectBase.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/RLMRealm_Private.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/unicode.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/RLMObjectBase_Dynamic.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/column_linklist.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/array_string_long.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/history.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/RLMObjectSchema_Private.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/object_store.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/RLMListBase.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/RLMUtil.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/Realm.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/query_conditions.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/RLMPlatform.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/RLMUpdateChecker.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/util/type_traits.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/util/features.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/util/utf8.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/util/priority_queue.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/util/bind_ptr.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/util/network.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/util/assert.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/util/file_mapper.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/util/config.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/util/meta.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/util/basic_system_errors.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/util/encrypted_file_mapping.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/util/uri.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/util/misc_errors.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/util/safe_int_ops.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/util/thread.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/util/shared_ptr.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/util/logger.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/util/terminate.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/util/buffer.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/util/string_buffer.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/util/type_list.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/util/optional.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/util/inspect.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/util/file.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/util/memory_stream.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/util/platform_specific_condvar.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/util/tuple.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/array.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/link_view_fwd.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/RLMDefines.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/RLMArray_Private.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/RLMObservation.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/query.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/RLMObject.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/column_link.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/datetime.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/RLMObject_Private.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/RLMOptionalBase.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/table_basic_fwd.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/array_binary.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/RLMMigration.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/RLMRealmUtil.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/RLMResults.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/disable_sync_to_disk.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/column_type.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/impl/destroy_guard.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/impl/array_writer.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/impl/input_stream.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/impl/sequential_getter.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/impl/transact_log.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/impl/output_stream.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/impl/simulated_failure.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/table_basic.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/array_blob.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/column_fwd.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/array_basic.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/RLMObjectStore.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/lang_bind_helper.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/commit_log.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/column_backlink.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/alloc.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/RLMSwiftBridgingHeader.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/version.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/table_macros.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/string_data.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/RLMSwiftSupport.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/include/realm/column_tpl.hpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/core/librealm-ios.a" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/Realm/RLMMigration.mm" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/Realm/RLMRealm.mm" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/Realm/ObjectStore/object_store_exceptions.cpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/Realm/ObjectStore/object_store.cpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/Realm/ObjectStore/object_schema.cpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/Realm/RLMObservation.mm" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/Realm/RLMOptionalBase.mm" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/Realm/RLMSchema.mm" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/Realm/RLMUtil.mm" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/Realm/RLMRealmUtil.mm" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/Realm/RLMObjectStore.mm" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/Realm/RLMObjectBase.mm" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/Realm/RLMProperty.mm" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/Realm/RLMArray.mm" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/Realm/RLMUpdateChecker.mm" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/Realm/RLMAnalytics.mm" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/Realm/RLMListBase.mm" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/Realm/RLMResults.mm" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/Realm/RLMSwiftSupport.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/Realm/RLMRealmConfiguration.mm" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/Realm/RLMObject.mm" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/Realm/RLMConstants.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/Realm/RLMQueryUtil.mm" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/Realm/RLMAccessor.mm" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/Realm/RLMArrayLinkView.mm" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Realm/Realm/RLMObjectSchema.mm" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/RealmSwift/RealmSwift.xcconfig" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/RealmSwift/RealmSwift-umbrella.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/RealmSwift/Info.plist" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/RealmSwift/RealmSwift.modulemap" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/RealmSwift/RealmSwift-prefix.pch" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/RealmSwift/RealmSwift-dummy.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Swinject/Swinject.modulemap" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Swinject/Swinject-umbrella.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Swinject/Swinject-dummy.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Swinject/Info.plist" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Swinject/Swinject.xcconfig" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Swinject/Swinject-prefix.pch" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/SnapKit/Source/LayoutConstraint.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/SnapKit/Source/ConstraintLayoutSupport.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/SnapKit/Source/ConstraintMaker.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/SnapKit/Source/ConstraintInsets.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/SnapKit/Source/ConstraintAttributes.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/SnapKit/Source/ConstraintConstantTarget.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/SnapKit/Source/Constraint.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/SnapKit/Source/ConstraintMakerRelatable.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/SnapKit/Source/Debugging.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/SnapKit/Source/ConstraintOffsetTarget.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/SnapKit/Source/ConstraintInsetTarget.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/SnapKit/Source/ConstraintLayoutGuide.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/SnapKit/Source/UILayoutSupport+Extensions.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/SnapKit/Source/ConstraintView.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/SnapKit/Source/ConstraintMakerEditable.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/SnapKit/Source/ConstraintMakerExtendable.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/SnapKit/Source/ConstraintDSL.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/SnapKit/Source/ConstraintMakerPriortizable.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/SnapKit/Source/ConstraintRelation.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/SnapKit/Source/ConstraintRelatableTarget.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/SnapKit/Source/ConstraintMakerFinalizable.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AEConsole/Sources/Config.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AEConsole/Sources/Brain.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AEConsole/Sources/AEConsole.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AEConsole/Sources/Cell.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AEConsole/Sources/View.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AELog/Sources/Config.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AELog/Sources/AELog.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AELog/Sources/Line.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-MemoriaUITests/Pods-MemoriaUITests-umbrella.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-MemoriaUITests/Pods-MemoriaUITests.debug.xcconfig" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-MemoriaUITests/Pods-MemoriaUITests-resources.sh" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-MemoriaUITests/Pods-MemoriaUITests.modulemap" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-MemoriaUITests/Info.plist" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-MemoriaUITests/Pods-MemoriaUITests-dummy.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-MemoriaUITests/Pods-MemoriaUITests-acknowledgements.plist" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-MemoriaUITests/Pods-MemoriaUITests-acknowledgements.markdown" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-MemoriaUITests/Pods-MemoriaUITests.release.xcconfig" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-MemoriaUITests/Pods-MemoriaUITests-frameworks.sh" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/SnapKit/SnapKit-prefix.pch" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/SnapKit/SnapKit-dummy.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/SnapKit/SnapKit.xcconfig" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/SnapKit/Info.plist" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/SnapKit/SnapKit.modulemap" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/SnapKit/SnapKit-umbrella.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Realm/Realm.modulemap" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Realm/Realm.xcconfig" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Realm/Info.plist" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Realm/Realm-dummy.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Realm/Realm-prefix.pch" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/AELog/AELog-prefix.pch" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/AELog/AELog.modulemap" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/AELog/Info.plist" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/AELog/AELog-dummy.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/AELog/AELog-umbrella.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/AELog/AELog.xcconfig" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/AEConsole/AEConsole-umbrella.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/AEConsole/AEConsole-dummy.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/AEConsole/AEConsole.xcconfig" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/AEConsole/Info.plist" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/AEConsole/AEConsole-prefix.pch" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/AEConsole/AEConsole.modulemap" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-Memoria/Pods-Memoria-dummy.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-Memoria/Pods-Memoria-acknowledgements.markdown" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-Memoria/Pods-Memoria-resources.sh" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-Memoria/Pods-Memoria-frameworks.sh" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-Memoria/Pods-Memoria.debug.xcconfig" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-Memoria/Pods-Memoria-acknowledgements.markdown" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-Memoria/Pods-Memoria-acknowledgements.plist" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-Memoria/Pods-Memoria.debug.xcconfig" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-Memoria/Info.plist" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-Memoria/Pods-Memoria.release.xcconfig" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-Memoria/Pods-Memoria-resources.sh" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-Memoria/Pods-Memoria-umbrella.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-Memoria/Pods-Memoria.modulemap" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Swinject/Swinject/Container.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Swinject/Swinject/Resolvable.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Swinject/Swinject/PropertyRetrievable.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Swinject/Swinject/SwinjectStoryboardType.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Swinject/Swinject/PlistPropertyLoader.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Swinject/Swinject/ServiceEntry.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Swinject/Swinject/Box.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Swinject/Swinject/ResolutionPool.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Swinject/Swinject/SynchronizedResolver.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Swinject/Swinject/ObjectScope.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Swinject/Swinject/SpinLock.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Swinject/Swinject/JsonPropertyLoader.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Swinject/Swinject/RegistrationNameAssociatable.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Swinject/Swinject/PropertyLoaderError.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Swinject/Swinject/Container.Arguments.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Swinject/Swinject/iOS-tvOS/Swinject.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Swinject/Swinject/iOS-tvOS/_SwinjectStoryboardBase.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Swinject/Swinject/iOS-tvOS/Container+Typealias.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Swinject/Swinject/iOS-tvOS/SwinjectStoryboard.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Swinject/Swinject/iOS-tvOS/_SwinjectStoryboardBase.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Swinject/Swinject/iOS-tvOS/UIStoryboard+Swizzling.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Swinject/Swinject/iOS-tvOS/UIViewController+Swinject.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Swinject/Swinject/Container+SwinjectStoryboard.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Swinject/Swinject/FunctionType.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Swinject/Swinject/ServiceKey.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Swinject/Swinject/SynchronizedResolver.Arguments.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Swinject/Swinject/PropertyLoaderType.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-MemoriaTests/Pods-MemoriaTests-acknowledgements.plist" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-MemoriaTests/Pods-MemoriaTests-acknowledgements.markdown" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-MemoriaTests/Pods-MemoriaTests.debug.xcconfig" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-MemoriaTests/Pods-MemoriaTests-resources.sh" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-MemoriaTests/Pods-MemoriaTests-dummy.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-MemoriaTests/Pods-MemoriaTests-frameworks.sh" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-MemoriaTests/Info.plist" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-MemoriaTests/Pods-MemoriaTests-umbrella.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-MemoriaTests/Pods-MemoriaTests.modulemap" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-MemoriaTests/Pods-MemoriaTests.release.xcconfig" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/SwiftDate/SwiftDate.xcconfig" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/SwiftDate/SwiftDate-prefix.pch" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/SwiftDate/SwiftDate-dummy.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/SwiftDate/Info.plist" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/SwiftDate/SwiftDate-umbrella.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/SwiftDate/SwiftDate.modulemap" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Swinject/Swinject.modulemap" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Swinject/Swinject-umbrella.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Swinject/Swinject-dummy.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Swinject/Info.plist" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Swinject/Swinject.xcconfig" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Swinject/Swinject-prefix.pch" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/SwiftDate/Sources/SwiftDate/CalendarName.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/SwiftDate/Sources/SwiftDate/DateInRegion+Compare.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/SwiftDate/Sources/SwiftDate/DateInRegion+Math.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/SwiftDate/Sources/SwiftDate/TimeZoneName.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/SwiftDate/Sources/SwiftDate/Extensions.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/SwiftDate/Sources/SwiftDate/DateComponents+Extension.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/SwiftDate/Sources/SwiftDate/Date+Math.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/SwiftDate/Sources/SwiftDate/TimeInterval+Extensions.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/SwiftDate/Sources/SwiftDate/ISO8601DateTimeFormatter.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/SwiftDate/Sources/SwiftDate/Region.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/SwiftDate/Sources/SwiftDate/Date+Formatter.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/SwiftDate/Sources/SwiftDate/DateInRegionFormatter.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/SwiftDate/Sources/SwiftDate/DateInRegion.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/SwiftDate/Sources/SwiftDate/DateInRegion+Components.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/SwiftDate/Sources/SwiftDate/DateTimeInterval.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/SwiftDate/Sources/SwiftDate/DateInRegion+Formatter.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/SwiftDate/Sources/SwiftDate/LocaleName.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/SwiftDate/Sources/SwiftDate/Date+Compare.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/SwiftDate/Sources/SwiftDate/Commons.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/SwiftDate/Sources/SwiftDate/SwiftDate.bundle" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/SwiftDate/Sources/SwiftDate/Date+Components.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Swinject/Sources/Swinject.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Swinject/Sources/FunctionType.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Swinject/Sources/Assembler.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Swinject/Sources/SynchronizedResolver.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Swinject/Sources/ServiceEntry.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Swinject/Sources/ResolutionPool.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Swinject/Sources/ResolverType.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Swinject/Sources/_ResolverType.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Swinject/Sources/ObjectScope.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Swinject/Sources/AssemblyType.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Swinject/Sources/Container.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Swinject/Sources/SpinLock.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Swinject/Sources/Container.Arguments.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Swinject/Sources/ServiceKey.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Swinject/Sources/SynchronizedResolver.Arguments.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/foodRed.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/brushTeethRed.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/AddTaskTimeViewController.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/foodBlue.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/UIViewExntentions.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/IBeaconCloud.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/food-warning.aiff" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/Memoria-Bridging-Header.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/Colors.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/TextField.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/TaskNotificationPopUp.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/Bootstrapper.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/BeaconShape.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/UINotificationActionsExecuter.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/Fonts.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/ApplicationExntentions.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/LocalNotificationCategotry.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/brushTeeth-warning.aiff" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/TabBarController.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/ReminderPopUp.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/Content.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/LocalNotificationCategoryBuilder.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/foodGreen.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/ButtonsTextsHe.plist" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/food-done.aiff" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/TasksNotificationsPresenter.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/TaskNotificationsTracker.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/drugsBlue.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/brushTeeth-notification.aiff" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/ImageView.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/drugs-notification.aiff" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/brushTeeth.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/NearableLocator.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/Base.lproj/LaunchScreen.storyboard" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/brushTeethBlue.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/drugs-verification.aiff" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/drugsGreen.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/LocalNotificationActions.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/drugsRed.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/NSDateExntentions.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/UIConstants.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/ButtonsTexts.plist" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/DatePickerDialog.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/IBeaconServices.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/Assets.xcassets" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/NotificationsNames.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/WatchCommunication.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/TestingNotifications.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/3.wav" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/DrugsViewController.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/MemoriesViewController.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/Label.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/TaskManagerViewController.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/Memoria.entitlements" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/Info.plist" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/LabelsTextsHe.plist" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/TasksDB.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/brushTeethGreen.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/NavigationController.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/NearableStriggerManager.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/TasksServices.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/LabelsTexts.plist" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/AddTaskConfirmationViewController.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/brushTeeth-done.aiff" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/TableView.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/UIColorExtension.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/TaskWarningPopUp.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/BackgroundTask.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/TaskActionsPerformaer.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/LocalNotificationScheduler.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/AssemblyControllers.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/NotificationsTexts.plist" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/AppDelegate.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/TextView.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/AddTaskTypeViewController.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/drugs-done.aiff" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/food.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/brushTeeth-verification.aiff" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/drugs.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/ViewController.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/AssemblyUIComponents.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/AssemblyModel.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/Task.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/drugs-warning.aiff" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/StringExtentions.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/NotificationsTextsBuilder.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/DictionaryExntentions.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/VoiceRecorder.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/CurrenctTaskCreator.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/food-notification.aiff" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/TaskVerificationPopUp.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/AddTaskTimePriorityController.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/UIPickerWithBlock.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/Button.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/UIViewAutoLayoutExtentions.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/food-verification.aiff" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Memoria/SoundPlayer.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Watch Extension/PushNotificationPayload.apns" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Watch Extension/IOSCommunication.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Watch Extension/InterfaceController.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Watch Extension/Info.plist" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Watch Extension/Assets.xcassets" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Watch Extension/NotificationController.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Watch Extension/ExtensionDelegate.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Podfile" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MemoriaUITests/Info.plist" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MemoriaUITests/MemoriaUITests.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/MyPlayground.playground" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Watch/Base.lproj/Interface.storyboard" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Watch/Assets.xcassets" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Watch/Info.plist" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Watch/weather-icon-png-27.png" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Watch/images.png" isTestSource="false" />
     </content>
+    <content url="file://$USER_HOME$/Library/Caches/AppCode2016.2/DerivedData/Memoria-glfgwxykquucdoexceqopqueqlgq/Build/Intermediates/Memoria.build/Debug-watchos/Watch Extension.build/DerivedSources" />
+    <content url="file://$USER_HOME$/Library/Caches/AppCode2016.2/DerivedData/Memoria-glfgwxykquucdoexceqopqueqlgq/Build/Intermediates/Pods.build/Debug-iphoneos/AEConsole.build/DerivedSources" />
+    <content url="file://$USER_HOME$/Library/Caches/AppCode2016.2/DerivedData/Memoria-glfgwxykquucdoexceqopqueqlgq/Build/Intermediates/Pods.build/Debug-iphoneos/AELog.build/DerivedSources" />
+    <content url="file://$USER_HOME$/Library/Caches/AppCode2016.2/DerivedData/Memoria-glfgwxykquucdoexceqopqueqlgq/Build/Intermediates/Pods.build/Debug-iphoneos/Pods-Memoria.build/DerivedSources" />
+    <content url="file://$USER_HOME$/Library/Caches/AppCode2016.2/DerivedData/Memoria-glfgwxykquucdoexceqopqueqlgq/Build/Intermediates/Pods.build/Debug-iphoneos/Pods-MemoriaTests.build/DerivedSources" />
+    <content url="file://$USER_HOME$/Library/Caches/AppCode2016.2/DerivedData/Memoria-glfgwxykquucdoexceqopqueqlgq/Build/Intermediates/Pods.build/Debug-iphoneos/Pods-MemoriaUITests.build/DerivedSources" />
+    <content url="file://$USER_HOME$/Library/Caches/AppCode2016.2/DerivedData/Memoria-glfgwxykquucdoexceqopqueqlgq/Build/Intermediates/Pods.build/Debug-iphoneos/SnapKit.build/DerivedSources" />
+    <content url="file://$USER_HOME$/Library/Caches/AppCode2016.2/DerivedData/Memoria-glfgwxykquucdoexceqopqueqlgq/Build/Intermediates/Pods.build/Debug-iphoneos/SwiftDate.build/DerivedSources" />
+    <content url="file://$USER_HOME$/Library/Caches/AppCode2016.2/DerivedData/Memoria-glfgwxykquucdoexceqopqueqlgq/Build/Intermediates/Pods.build/Debug-iphoneos/Swinject.build/DerivedSources" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library">
       <library name="Header Search Paths">
         <CLASSES>
-          <root url="file://$MODULE_DIR$/Pods/Headers/Public" />
-          <root url="file://$MODULE_DIR$/Pods/Headers/Private" />
+          <root url="file://$USER_HOME$/Library/Caches/AppCode2016.2/DerivedData/Memoria-glfgwxykquucdoexceqopqueqlgq/Build/Products/Debug-iphoneos/SwiftDate/SwiftDate.framework/Headers" />
+          <root url="file://$USER_HOME$/Library/Caches/AppCode2016.2/DerivedData/Memoria-glfgwxykquucdoexceqopqueqlgq/Build/Products/Debug-iphoneos/AEConsole/AEConsole.framework/Headers" />
+          <root url="file://$USER_HOME$/Library/Caches/AppCode2016.2/DerivedData/Memoria-glfgwxykquucdoexceqopqueqlgq/Build/Products/Debug-iphoneos/SnapKit/SnapKit.framework/Headers" />
+          <root url="file://$USER_HOME$/Library/Caches/AppCode2016.2/DerivedData/Memoria-glfgwxykquucdoexceqopqueqlgq/Build/Products/Debug-iphoneos/Swinject/Swinject.framework/Headers" />
+          <root url="file://$USER_HOME$/Library/Caches/AppCode2016.2/DerivedData/Memoria-glfgwxykquucdoexceqopqueqlgq/Build/Products/Debug-iphoneos/AELog/AELog.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/PlugIns/Xcode3Core.ideplugin/Contents/SharedSupport/Developer/Library/Frameworks/XcodeKit.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/PlugIns/Xcode3Core.ideplugin/Contents/SharedSupport/Developer/Library/Frameworks/InterfaceBuilderKit.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/PlugIns/Xcode3Core.ideplugin/Contents/SharedSupport/Developer/Library/Frameworks/DTPerformanceSession.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/HealthKit.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/MapKit.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/SpriteKit.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/CoreLocation.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/EventKit.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/WatchConnectivity.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/CoreText.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/MobileCoreServices.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/ClockKit.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/CoreData.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/SceneKit.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/GameKit.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/Contacts.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/CoreAudio.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/CloudKit.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/CoreMotion.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/UserNotifications.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/Foundation.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/ImageIO.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/Security.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/WatchKit.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/PassKit.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/HomeKit.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/AVFoundation.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/AVFoundation.framework/Frameworks/AVFAudio.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/UIKit.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/usr/include" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/CallKit.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/HealthKit.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/PassKit.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/StoreKit.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/CoreAudioKit.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/MultipeerConnectivity.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/AssetsLibrary.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/WatchConnectivity.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/IntentsUI.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/CoreVideo.framework/Headers" />
-          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/StoreKit.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/Messages.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/SceneKit.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/OpenGLES.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/CFNetwork.framework/Headers" />
@@ -401,7 +643,7 @@
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/AudioUnit.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/CoreSpotlight.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/LocalAuthentication.framework/Headers" />
-          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/EventKitUI.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/HealthKitUI.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/Metal.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/VideoToolbox.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers" />
@@ -413,14 +655,18 @@
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/WebKit.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/CloudKit.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/CoreImage.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/EventKitUI.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/Photos.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/MetalPerformanceShaders.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/MediaPlayer.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/AVFoundation.framework/Headers" />
-          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/JavaScriptCore.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/AVFoundation.framework/Frameworks/AVFAudio.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/Intents.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/PushKit.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/UserNotificationsUI.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/CoreText.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/Speech.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/ReplayKit.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/SpriteKit.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/Twitter.framework/Headers" />
@@ -434,6 +680,7 @@
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/ContactsUI.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/CoreMedia.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/MediaAccessibility.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/UserNotifications.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/ExternalAccessory.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/Security.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/ModelIO.framework/Headers" />
@@ -446,11 +693,13 @@
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/CoreBluetooth.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/AdSupport.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/CoreMIDI.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/VideoSubscriberAccount.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/Social.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/SystemConfiguration.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/Accounts.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/OpenAL.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/NotificationCenter.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/JavaScriptCore.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/ImageIO.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/PhotosUI.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/MobileCoreServices.framework/Headers" />
@@ -463,23 +712,59 @@
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/iAd.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/CoreMotion.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/usr/include" />
-          <root url="file:///Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/7.0.2/include" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/8.0.0/include" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1" />
         </CLASSES>
         <SOURCES>
-          <root url="file://$MODULE_DIR$/Pods/Headers/Public" />
-          <root url="file://$MODULE_DIR$/Pods/Headers/Private" />
+          <root url="file://$USER_HOME$/Library/Caches/AppCode2016.2/DerivedData/Memoria-glfgwxykquucdoexceqopqueqlgq/Build/Products/Debug-iphoneos/SwiftDate/SwiftDate.framework/Headers" />
+          <root url="file://$USER_HOME$/Library/Caches/AppCode2016.2/DerivedData/Memoria-glfgwxykquucdoexceqopqueqlgq/Build/Products/Debug-iphoneos/AEConsole/AEConsole.framework/Headers" />
+          <root url="file://$USER_HOME$/Library/Caches/AppCode2016.2/DerivedData/Memoria-glfgwxykquucdoexceqopqueqlgq/Build/Products/Debug-iphoneos/SnapKit/SnapKit.framework/Headers" />
+          <root url="file://$USER_HOME$/Library/Caches/AppCode2016.2/DerivedData/Memoria-glfgwxykquucdoexceqopqueqlgq/Build/Products/Debug-iphoneos/Swinject/Swinject.framework/Headers" />
+          <root url="file://$USER_HOME$/Library/Caches/AppCode2016.2/DerivedData/Memoria-glfgwxykquucdoexceqopqueqlgq/Build/Products/Debug-iphoneos/AELog/AELog.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/PlugIns/Xcode3Core.ideplugin/Contents/SharedSupport/Developer/Library/Frameworks/XcodeKit.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/PlugIns/Xcode3Core.ideplugin/Contents/SharedSupport/Developer/Library/Frameworks/InterfaceBuilderKit.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/PlugIns/Xcode3Core.ideplugin/Contents/SharedSupport/Developer/Library/Frameworks/DTPerformanceSession.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/HealthKit.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/MapKit.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/SpriteKit.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/CoreLocation.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/EventKit.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/WatchConnectivity.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/CoreText.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/MobileCoreServices.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/ClockKit.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/CoreData.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/SceneKit.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/GameKit.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/Contacts.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/CoreAudio.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/CloudKit.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/CoreMotion.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/UserNotifications.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/Foundation.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/ImageIO.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/Security.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/WatchKit.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/PassKit.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/HomeKit.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/AVFoundation.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/AVFoundation.framework/Frameworks/AVFAudio.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/System/Library/Frameworks/UIKit.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/WatchOS.platform/Developer/SDKs/WatchOS.sdk/usr/include" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/CallKit.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/HealthKit.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/PassKit.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/StoreKit.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/CoreAudioKit.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/MultipeerConnectivity.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/AssetsLibrary.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/WatchConnectivity.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/IntentsUI.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/CoreVideo.framework/Headers" />
-          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/StoreKit.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/Messages.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/SceneKit.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/OpenGLES.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/CFNetwork.framework/Headers" />
@@ -493,7 +778,7 @@
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/AudioUnit.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/CoreSpotlight.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/LocalAuthentication.framework/Headers" />
-          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/EventKitUI.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/HealthKitUI.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/Metal.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/VideoToolbox.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers" />
@@ -505,14 +790,18 @@
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/WebKit.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/CloudKit.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/CoreImage.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/EventKitUI.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/Photos.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/MetalPerformanceShaders.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/MediaPlayer.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/AVFoundation.framework/Headers" />
-          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/JavaScriptCore.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/AVFoundation.framework/Frameworks/AVFAudio.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/Intents.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/PushKit.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/CoreTelephony.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/UserNotificationsUI.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/CoreText.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/Speech.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/ReplayKit.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/SpriteKit.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/Twitter.framework/Headers" />
@@ -526,6 +815,7 @@
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/ContactsUI.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/CoreMedia.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/MediaAccessibility.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/UserNotifications.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/ExternalAccessory.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/Security.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/ModelIO.framework/Headers" />
@@ -538,11 +828,13 @@
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/CoreBluetooth.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/AdSupport.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/CoreMIDI.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/VideoSubscriberAccount.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/Social.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/SystemConfiguration.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/Accounts.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/OpenAL.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/NotificationCenter.framework/Headers" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/JavaScriptCore.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/ImageIO.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/PhotosUI.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/MobileCoreServices.framework/Headers" />
@@ -555,7 +847,7 @@
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/iAd.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/CoreMotion.framework/Headers" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/usr/include" />
-          <root url="file:///Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/7.0.2/include" />
+          <root url="file:///Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/8.0.0/include" />
           <root url="file:///Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1" />
         </SOURCES>
       </library>
