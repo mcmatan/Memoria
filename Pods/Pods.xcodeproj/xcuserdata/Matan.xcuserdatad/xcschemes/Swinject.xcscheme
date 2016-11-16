@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '743B218653F30724AC6773CD7F62653D'
+               BlueprintIdentifier = 'BCB0EB2773F045F5DEB6B5CF7D1FD071'
                BlueprintName = 'Swinject'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Swinject.framework'>

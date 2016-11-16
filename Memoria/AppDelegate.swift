@@ -19,8 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.makeKeyAndVisible()
         self .navigationBarAppearance()
         
-        rootViewController.presentMainApplication()
-        //rootViewController.presentLogIn()
+        //rootViewController.presentMainApplication()
+        rootViewController.presentLogIn()
     
         return true
     }

@@ -69,7 +69,7 @@ open class AssemblyUIComponents {
         }.inObjectScope(ObjectScope.container)
         
         container.register(LogInViewController.self) { c in
-            return LogInViewController()
+            return LogInViewController(viewModel: container.resolve(LoginViewModel.self)!)
         }.inObjectScope(ObjectScope.container)
         
         container.register(RootViewController.self) { c in

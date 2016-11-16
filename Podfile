@@ -11,6 +11,10 @@ pod 'SwiftDate', '~> 4.0'
 pod 'Firebase/Core'
 pod 'Firebase/Auth'
 pod 'EstimoteSDK', :git => 'https://github.com/Estimote/iOS-SDK.git', :commit => '66c9cf13467bc0f61fcf197116dadfe22e1cd10d'
+    pod 'RxSwift',    '~> 3.0'
+    pod 'RxCocoa',    '~> 3.0'
+    pod 'Kingfisher', '~> 3.2'
+
 
 pod 'AEConsole', '~> 0.3'
 

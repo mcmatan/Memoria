@@ -24,6 +24,11 @@
 		9019EBED1C90D573008962A5 /* TaskWarningPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9019EBEC1C90D573008962A5 /* TaskWarningPopUp.swift */; };
 		9019EBF01C99F3B3008962A5 /* TaskNotificationsTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9019EBEF1C99F3B3008962A5 /* TaskNotificationsTracker.swift */; };
 		901AEDF41C4136F500DD518A /* UIViewAutoLayoutExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901AEDF31C4136F500DD518A /* UIViewAutoLayoutExtentions.swift */; };
+		901EC5BB1DDBB0CB00AF2728 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901EC5BA1DDBB0CB00AF2728 /* LoginViewModel.swift */; };
+		901EC5C31DDBCBBF00AF2728 /* Bounder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901EC5BF1DDBCBBF00AF2728 /* Bounder.swift */; };
+		901EC5C41DDBCBBF00AF2728 /* Prefixes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901EC5C01DDBCBBF00AF2728 /* Prefixes.swift */; };
+		901EC5C51DDBCBBF00AF2728 /* Observers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901EC5C11DDBCBBF00AF2728 /* Observers.swift */; };
+		901EC5C61DDBCBBF00AF2728 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901EC5C21DDBCBBF00AF2728 /* Operators.swift */; };
 		902147CB1DD4EDBC00D4B8E0 /* brushTeethBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = 902147C21DD4EDBC00D4B8E0 /* brushTeethBlue.png */; };
 		902147CC1DD4EDBC00D4B8E0 /* brushTeethGreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 902147C31DD4EDBC00D4B8E0 /* brushTeethGreen.png */; };
 		902147CD1DD4EDBC00D4B8E0 /* brushTeethRed.png in Resources */ = {isa = PBXBuildFile; fileRef = 902147C41DD4EDBC00D4B8E0 /* brushTeethRed.png */; };
@@ -50,6 +55,11 @@
 		90222C601DCDFC9F00A5A80D /* IOSCommunication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90222C5F1DCDFC9F00A5A80D /* IOSCommunication.swift */; };
 		90222C621DCE0DFF00A5A80D /* images.png in Resources */ = {isa = PBXBuildFile; fileRef = 90222C611DCE0DFF00A5A80D /* images.png */; };
 		90222C681DCE1CD300A5A80D /* weather-icon-png-27.png in Resources */ = {isa = PBXBuildFile; fileRef = 90222C671DCE1CD300A5A80D /* weather-icon-png-27.png */; };
+		9025460C1DD616EF00D53C58 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9025460B1DD616EF00D53C58 /* LogInViewController.swift */; };
+		9025460E1DD61C1D00D53C58 /* UIElementsDefaultValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9025460D1DD61C1D00D53C58 /* UIElementsDefaultValues.swift */; };
+		902546101DD621E800D53C58 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9025460F1DD621E800D53C58 /* RootViewController.swift */; };
+		902546131DD62EA000D53C58 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 902546121DD62EA000D53C58 /* GoogleService-Info.plist */; };
+		902546161DD62FDC00D53C58 /* FireBaseWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902546151DD62FDC00D53C58 /* FireBaseWrapper.swift */; };
 		902546741DD8C97000D53C58 /* brushTeeth-done.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 902546681DD8C96F00D53C58 /* brushTeeth-done.aiff */; };
 		902546751DD8C97000D53C58 /* brushTeeth-notification.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 902546691DD8C97000D53C58 /* brushTeeth-notification.aiff */; };
 		902546761DD8C97000D53C58 /* brushTeeth-verification.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 9025466A1DD8C97000D53C58 /* brushTeeth-verification.aiff */; };
@@ -64,11 +74,6 @@
 		9025467F1DD8C97000D53C58 /* food-warning.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 902546731DD8C97000D53C58 /* food-warning.aiff */; };
 		902546831DD8CD0E00D53C58 /* NotificationsTexts.plist in Resources */ = {isa = PBXBuildFile; fileRef = 902546821DD8CD0E00D53C58 /* NotificationsTexts.plist */; };
 		902546861DD8D07F00D53C58 /* NotificationsTextsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902546851DD8D07F00D53C58 /* NotificationsTextsBuilder.swift */; };
-		9025460C1DD616EF00D53C58 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9025460B1DD616EF00D53C58 /* LogInViewController.swift */; };
-		9025460E1DD61C1D00D53C58 /* UIElementsDefaultValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9025460D1DD61C1D00D53C58 /* UIElementsDefaultValues.swift */; };
-		902546101DD621E800D53C58 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9025460F1DD621E800D53C58 /* RootViewController.swift */; };
-		902546131DD62EA000D53C58 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 902546121DD62EA000D53C58 /* GoogleService-Info.plist */; };
-		902546161DD62FDC00D53C58 /* FireBaseWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902546151DD62FDC00D53C58 /* FireBaseWrapper.swift */; };
 		902E9AE41DD1DBD400282AB7 /* TestingNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902E9AE31DD1DBD400282AB7 /* TestingNotifications.swift */; };
 		902E9AE71DD2010100282AB7 /* LocalNotificationActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902E9AE61DD2010100282AB7 /* LocalNotificationActions.swift */; };
 		902E9AE91DD201E400282AB7 /* LocalNotificationCategoryBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902E9AE81DD201E400282AB7 /* LocalNotificationCategoryBuilder.swift */; };
@@ -96,6 +101,7 @@
 		906648EF1DCB699F00896220 /* 3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 906648EE1DCB699F00896220 /* 3.wav */; };
 		9066491A1DCDD00800896220 /* WatchCommunication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906649191DCDD00800896220 /* WatchCommunication.swift */; };
 		906C36851C8E1CA80058EC85 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906C36841C8E1CA80058EC85 /* Colors.swift */; };
+		90719A0A1DDBCEC100852BA3 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90719A091DDBCEC100852BA3 /* ViewModel.swift */; };
 		907224C81DBCFFB4001A3A7C /* StringExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907224C71DBCFFB4001A3A7C /* StringExtentions.swift */; };
 		9075214F1CE904A800FDFF3D /* LabelsTextsHe.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9075214E1CE904A800FDFF3D /* LabelsTextsHe.plist */; };
 		90B0C53F1DAAE3870019D59B /* LocalNotificationScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B0C53E1DAAE3870019D59B /* LocalNotificationScheduler.swift */; };
@@ -205,6 +211,11 @@
 		9019EBEC1C90D573008962A5 /* TaskWarningPopUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskWarningPopUp.swift; sourceTree = "<group>"; };
 		9019EBEF1C99F3B3008962A5 /* TaskNotificationsTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskNotificationsTracker.swift; sourceTree = "<group>"; };
 		901AEDF31C4136F500DD518A /* UIViewAutoLayoutExtentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewAutoLayoutExtentions.swift; sourceTree = "<group>"; };
+		901EC5BA1DDBB0CB00AF2728 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		901EC5BF1DDBCBBF00AF2728 /* Bounder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bounder.swift; sourceTree = "<group>"; };
+		901EC5C01DDBCBBF00AF2728 /* Prefixes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Prefixes.swift; sourceTree = "<group>"; };
+		901EC5C11DDBCBBF00AF2728 /* Observers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Observers.swift; sourceTree = "<group>"; };
+		901EC5C21DDBCBBF00AF2728 /* Operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
 		902147C21DD4EDBC00D4B8E0 /* brushTeethBlue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brushTeethBlue.png; sourceTree = "<group>"; };
 		902147C31DD4EDBC00D4B8E0 /* brushTeethGreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brushTeethGreen.png; sourceTree = "<group>"; };
 		902147C41DD4EDBC00D4B8E0 /* brushTeethRed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brushTeethRed.png; sourceTree = "<group>"; };
@@ -231,6 +242,11 @@
 		90222C5F1DCDFC9F00A5A80D /* IOSCommunication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOSCommunication.swift; sourceTree = "<group>"; };
 		90222C611DCE0DFF00A5A80D /* images.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = images.png; sourceTree = "<group>"; };
 		90222C671DCE1CD300A5A80D /* weather-icon-png-27.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weather-icon-png-27.png"; sourceTree = "<group>"; };
+		9025460B1DD616EF00D53C58 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		9025460D1DD61C1D00D53C58 /* UIElementsDefaultValues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIElementsDefaultValues.swift; sourceTree = "<group>"; };
+		9025460F1DD621E800D53C58 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		902546121DD62EA000D53C58 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		902546151DD62FDC00D53C58 /* FireBaseWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FireBaseWrapper.swift; sourceTree = "<group>"; };
 		902546681DD8C96F00D53C58 /* brushTeeth-done.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "brushTeeth-done.aiff"; sourceTree = "<group>"; };
 		902546691DD8C97000D53C58 /* brushTeeth-notification.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "brushTeeth-notification.aiff"; sourceTree = "<group>"; };
 		9025466A1DD8C97000D53C58 /* brushTeeth-verification.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "brushTeeth-verification.aiff"; sourceTree = "<group>"; };
@@ -245,11 +261,6 @@
 		902546731DD8C97000D53C58 /* food-warning.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "food-warning.aiff"; sourceTree = "<group>"; };
 		902546821DD8CD0E00D53C58 /* NotificationsTexts.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = NotificationsTexts.plist; sourceTree = "<group>"; };
 		902546851DD8D07F00D53C58 /* NotificationsTextsBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsTextsBuilder.swift; sourceTree = "<group>"; };
-		9025460B1DD616EF00D53C58 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
-		9025460D1DD61C1D00D53C58 /* UIElementsDefaultValues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIElementsDefaultValues.swift; sourceTree = "<group>"; };
-		9025460F1DD621E800D53C58 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
-		902546121DD62EA000D53C58 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		902546151DD62FDC00D53C58 /* FireBaseWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FireBaseWrapper.swift; sourceTree = "<group>"; };
 		902E9AE31DD1DBD400282AB7 /* TestingNotifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestingNotifications.swift; sourceTree = "<group>"; };
 		902E9AE61DD2010100282AB7 /* LocalNotificationActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalNotificationActions.swift; sourceTree = "<group>"; };
 		902E9AE81DD201E400282AB7 /* LocalNotificationCategoryBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalNotificationCategoryBuilder.swift; sourceTree = "<group>"; };
@@ -278,6 +289,7 @@
 		906648EE1DCB699F00896220 /* 3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 3.wav; sourceTree = "<group>"; };
 		906649191DCDD00800896220 /* WatchCommunication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchCommunication.swift; sourceTree = "<group>"; };
 		906C36841C8E1CA80058EC85 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		90719A091DDBCEC100852BA3 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		907224C71DBCFFB4001A3A7C /* StringExtentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtentions.swift; sourceTree = "<group>"; };
 		9075214E1CE904A800FDFF3D /* LabelsTextsHe.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LabelsTextsHe.plist; sourceTree = "<group>"; };
 		90B0C53E1DAAE3870019D59B /* LocalNotificationScheduler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalNotificationScheduler.swift; sourceTree = "<group>"; };
@@ -399,7 +411,7 @@
 			isa = PBXGroup;
 			children = (
 				9025460F1DD621E800D53C58 /* RootViewController.swift */,
-				9025460B1DD616EF00D53C58 /* LogInViewController.swift */,
+				901EC5B91DDBB0BB00AF2728 /* LoginView */,
 				9035FE2D1C1ED15900D98022 /* Tasks */,
 				9035FE231C1EC60E00D98022 /* ReminderPopUp */,
 			);
@@ -464,6 +476,26 @@
 			name = AutoLayoutMCExtentions;
 			sourceTree = "<group>";
 		};
+		901EC5B21DDBAF8800AF2728 /* Bounder */ = {
+			isa = PBXGroup;
+			children = (
+				901EC5BF1DDBCBBF00AF2728 /* Bounder.swift */,
+				901EC5C01DDBCBBF00AF2728 /* Prefixes.swift */,
+				901EC5C11DDBCBBF00AF2728 /* Observers.swift */,
+				901EC5C21DDBCBBF00AF2728 /* Operators.swift */,
+			);
+			name = Bounder;
+			sourceTree = "<group>";
+		};
+		901EC5B91DDBB0BB00AF2728 /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+				9025460B1DD616EF00D53C58 /* LogInViewController.swift */,
+				901EC5BA1DDBB0CB00AF2728 /* LoginViewModel.swift */,
+			);
+			name = LoginView;
+			sourceTree = "<group>";
+		};
 		902147D41DD4EFB100D4B8E0 /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -508,20 +540,20 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		902546841DD8D07100D53C58 /* NotificationsTextsBuilder */ = {
-			isa = PBXGroup;
-			children = (
-				902546851DD8D07F00D53C58 /* NotificationsTextsBuilder.swift */,
-			);
-			name = NotificationsTextsBuilder;
-			sourceTree = "<group>";
-		};
 		902546141DD62FCE00D53C58 /* FireBaseWrapper */ = {
 			isa = PBXGroup;
 			children = (
 				902546151DD62FDC00D53C58 /* FireBaseWrapper.swift */,
 			);
 			name = FireBaseWrapper;
+			sourceTree = "<group>";
+		};
+		902546841DD8D07100D53C58 /* NotificationsTextsBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				902546851DD8D07F00D53C58 /* NotificationsTextsBuilder.swift */,
+			);
+			name = NotificationsTextsBuilder;
 			sourceTree = "<group>";
 		};
 		902E9AE21DD1DBC600282AB7 /* TestingNotifications */ = {
@@ -908,6 +940,7 @@
 		90F009F81C4A7AFA002C98BA /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				90719A091DDBCEC100852BA3 /* ViewModel.swift */,
 				905D0BE21DACF47300845973 /* UINotificationActionsExecuter.swift */,
 				90C7AB011DD2395500185630 /* NotificationsActionsPerformer */,
 				903B30D71DCFAED10015C6FA /* Presenters */,
@@ -969,6 +1002,7 @@
 		B4427CF2D9A98A2F2E8DB352 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				901EC5B21DDBAF8800AF2728 /* Bounder */,
 				AE2216E1B6AD497467804F14 /* Pods_Memoria.framework */,
 				C63E54DC6EDD468C89232C63 /* Pods_MemoriaTests.framework */,
 				54BE932400BB9F6741D73728 /* Pods_MemoriaUITests.framework */,
@@ -1380,23 +1414,29 @@
 				9019EBEB1C90CA16008962A5 /* TaskVerificationPopUp.swift in Sources */,
 				9025460E1DD61C1D00D53C58 /* UIElementsDefaultValues.swift in Sources */,
 				90DC779C1C3AFC6F0062BCE3 /* DatePickerDialog.swift in Sources */,
+				901EC5C51DDBCBBF00AF2728 /* Observers.swift in Sources */,
 				9035C6D71C2024BA00088434 /* UIConstants.swift in Sources */,
 				906C36851C8E1CA80058EC85 /* Colors.swift in Sources */,
 				90DC77A71C3DAF440062BCE3 /* AddTaskConfirmationViewController.swift in Sources */,
 				902546101DD621E800D53C58 /* RootViewController.swift in Sources */,
+				901EC5C41DDBCBBF00AF2728 /* Prefixes.swift in Sources */,
 				9019EBE91C8F76AB008962A5 /* ImageView.swift in Sources */,
 				900912BD1DD37AAD00AEEFC2 /* NearableStriggerManager.swift in Sources */,
 				9035C6C71C20225300088434 /* TableView.swift in Sources */,
 				902546161DD62FDC00D53C58 /* FireBaseWrapper.swift in Sources */,
 				902E9AE71DD2010100282AB7 /* LocalNotificationActions.swift in Sources */,
+				90719A0A1DDBCEC100852BA3 /* ViewModel.swift in Sources */,
 				901349861DB4C8B0005FA445 /* IBeaconCloud.swift in Sources */,
+				901EC5C61DDBCBBF00AF2728 /* Operators.swift in Sources */,
 				90E8C4971C1AA2B8009304A9 /* AppDelegate.swift in Sources */,
 				90F009FA1C4A7B0B002C98BA /* TasksNotificationsPresenter.swift in Sources */,
 				9008FB681C53D356003C1549 /* CurrenctTaskCreator.swift in Sources */,
 				900912BF1DD37AB400AEEFC2 /* NearableLocator.swift in Sources */,
+				901EC5C31DDBCBBF00AF2728 /* Bounder.swift in Sources */,
 				9035FE051C1B064F00D98022 /* Button.swift in Sources */,
 				905AF3BB1C1F2AEF0063713A /* Task.swift in Sources */,
 				905AF3C41C1F41260063713A /* AddTaskTimeViewController.swift in Sources */,
+				901EC5BB1DDBB0CB00AF2728 /* LoginViewModel.swift in Sources */,
 				9019EBE71C8F68A2008962A5 /* TaskNotificationPopUp.swift in Sources */,
 				9035FE211C1B2CF800D98022 /* Label.swift in Sources */,
 				901AEDF41C4136F500DD518A /* UIViewAutoLayoutExtentions.swift in Sources */,
@@ -1424,7 +1464,6 @@
 				901127301C1AFBE20088DD6B /* AssemblyModel.swift in Sources */,
 				9013498E1DB4E40B005FA445 /* UIViewExntentions.swift in Sources */,
 				902546861DD8D07F00D53C58 /* NotificationsTextsBuilder.swift in Sources */,
-				9035FE121C1B0D1200D98022 /* DrugsViewController.swift in Sources */,
 				9035FE1F1C1B2BFB00D98022 /* TextView.swift in Sources */,
 				9011272E1C1AFBE20088DD6B /* AssemblyUIComponents.swift in Sources */,
 			);

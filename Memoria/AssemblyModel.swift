@@ -71,6 +71,10 @@ open class AssemblyModel {
         }
         let _ = container.resolve(FireBaseWrapper.self)
         
+        container.register(LoginViewModel.self) { c in
+            return LoginViewModel()
+        }
+        
     }
     
 }

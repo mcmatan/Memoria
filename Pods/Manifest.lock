@@ -37,6 +37,10 @@ PODS:
     - GoogleToolboxForMac/NSString+URLArguments (= 2.1.0)
   - GoogleToolboxForMac/NSString+URLArguments (2.1.0)
   - GTMSessionFetcher/Core (1.1.7)
+  - Kingfisher (3.2.1)
+  - RxCocoa (3.0.1):
+    - RxSwift (~> 3.0)
+  - RxSwift (3.0.1)
   - SnapKit (3.0.2)
   - SwiftDate (4.0.7)
   - Swinject (2.0.0-beta.2)
@@ -46,6 +50,9 @@ DEPENDENCIES:
   - EstimoteSDK (from `https://github.com/Estimote/iOS-SDK.git`, commit `66c9cf13467bc0f61fcf197116dadfe22e1cd10d`)
   - Firebase/Auth
   - Firebase/Core
+  - Kingfisher (~> 3.2)
+  - RxCocoa (~> 3.0)
+  - RxSwift (~> 3.0)
   - SnapKit (~> 3.0.1)
   - SwiftDate (~> 4.0)
   - Swinject (~> 2.0.0-beta.2)
@@ -73,10 +80,13 @@ SPEC CHECKSUMS:
   GoogleSymbolUtilities: 631ee17048aa5e9ab133470d768ea997a5ef9b96
   GoogleToolboxForMac: 2b2596cbb7186865e98cadf2b1e262d851c2b168
   GTMSessionFetcher: a1f8ed39e4fe21c68957daed472c7afbcdf29166
+  Kingfisher: 64ef28c6d3d6f344e3ae2d7f5c9da80439505d99
+  RxCocoa: 15a52fc590dcc700cb4a690a633b5c5184ce3a78
+  RxSwift: af5680055c4ad04480189c52d28385b1029493a6
   SnapKit: 2e456761aa92d4d4067a7a5594c18769d451a8ad
   SwiftDate: 0efb04a6751b1ab804049b2b09a69848cd304c12
   Swinject: 69a893192efa9f2cc44be79ef423d04d571b6af9
 
-PODFILE CHECKSUM: 1370ee734086c7f41d96ff98ffa27c8bce8313a2
+PODFILE CHECKSUM: c929c351e237e585f287fc4e4a5eef7184aee6f8
 
 COCOAPODS: 1.0.1
