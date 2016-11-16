@@ -15,6 +15,9 @@ class TasksDB {
     var tasksByNearableIdentifer = [String : Task]()
     
     init() {
+        
+        //let ref = FIRDatabase.database().reference(withPath: "grocery-items")
+
         self.loadDB()
     }
 
