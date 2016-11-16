@@ -42,7 +42,6 @@ enum Prefixes: String {
             self = .isLoading
             return
         }
-        print("Mirror did not find maching type!")
         self = .noPrefix
     }
 }

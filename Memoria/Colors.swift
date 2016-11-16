@@ -25,4 +25,8 @@ class Colors {
     static func blue()->UIColor {
         return UIColor(rgba: "#6d9de0")
     }
+    
+    static func red()->UIColor {
+        return UIColor.red
+    }
 }

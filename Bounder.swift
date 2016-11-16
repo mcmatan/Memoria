@@ -49,7 +49,7 @@ class Bounder {
             self.bound(imageView: child.value as! UIImageView, imageViewNameWithoutPrefix: labelNameWithoutPrefix!, toViewModel: toViewModel)
         case .isLoading:
             let labelNameWithoutPrefix = labelName?.replacingOccurrences(of: Prefixes.isLoading.rawValue , with: "")
-            self.bound(isLoading: child.value as! BehaviorSubject<Bool>, isLoadingNameWithoutPrefix: labelNameWithoutPrefix!, toViewModel: toViewModel)
+            self.bound(isLoading: child.value as! Variable<Bool>, isLoadingNameWithoutPrefix: labelNameWithoutPrefix!, toViewModel: toViewModel)
         case .noPrefix:
             print("")
         }
@@ -139,7 +139,7 @@ class Bounder {
         })
     }
     
-    static func bound(isLoading: BehaviorSubject<Bool>, isLoadingNameWithoutPrefix: String, toViewModel: Any) {
+    static func bound(isLoading: Variable<Bool>, isLoadingNameWithoutPrefix: String, toViewModel: Any) {
         
         let withLoadingPrefix = Prefixes.isLoading.rawValue + isLoadingNameWithoutPrefix
         let viewModelMirror = Mirror(reflecting: toViewModel)
@@ -148,9 +148,9 @@ class Bounder {
         //On tap
             for child in viewModelChildren {
                 if (child.label?.lowercased().contains(withLoadingPrefix.lowercased()))! {
-                    if let isObserver = child.value as? BehaviorSubject<Bool>{
-                        let _ = isObserver.subscribe({ eventreq in
-                            isLoading.on(eventreq)
+                    if let isObserver = child.value as? Variable<Bool>{
+                        let _ = isObserver.asObservable().subscribe({ eventreq in
+                            isLoading.value = eventreq.element!
                         })
                     }
                 }

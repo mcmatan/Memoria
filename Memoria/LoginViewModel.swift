@@ -20,27 +20,29 @@ class LoginViewModel: ViewModel {
     let btnLogIn = Variable<Void>()
     let btnLogInTitle = Variable(Content.getContent(ContentType.labelTxt, name: "LogInBtn"))
     let logo = Variable<UIImage>(UIImage(named: "logo")!)
+    let error = Variable("")
+    let isLoading = Variable<Bool>(false)
     
     
     init(fireBaseWrapper: FireBaseWrapper) {
         self.fireBaseWrapper = fireBaseWrapper
-        self.userName.asObservable().subscribe { eventreq in
-            print(eventreq.element)
-        }
-        
-        self.password.asObservable().subscribe { eventreq in
-            print(eventreq.element)
-        }
-        
-        self.btnLogIn.asObservable().subscribe { press in
-            print("Did press")
+        self.bindings()
+    }
+    
+    func bindings() {
+        let _ = self.btnLogIn.asObservable().skip(1).subscribe { event in
             self.login()
         }
-        
     }
     
     func login() {
-        self.fireBaseWrapper.logIn(email: self.userName.value, password: self.password.value)
+        self.error.value = ""
+        self.isLoading.value = true
+        self.fireBaseWrapper.logIn(email: self.userName.value, password: self.password.value) { success, error in
+            self.isLoading.value = false
+            self.error.value = error!
+        }
+        
     }
     
 }
