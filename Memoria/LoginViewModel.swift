@@ -40,9 +40,7 @@ class LoginViewModel: ViewModel {
         self.isLoading.value = true
         self.loginService.logIn(email: self.userName.value, password: self.password.value) { success, error in
             self.isLoading.value = false
-            if (success) {
-                Events.shared.loginSuccess.emit(())
-            } else {
+            if (success) {} else {
                 self.error.value = error!
             }
         }
