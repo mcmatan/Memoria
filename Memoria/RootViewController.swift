@@ -8,15 +8,30 @@
 
 import Foundation
 import UIKit
+import EmitterKit
 
 class RootViewController: ViewController {
     let logInViewController: UIViewController
-    let mainApplicationController: UIViewController
+    lazy var mainApplicationController: UIViewController = {
+        return ServiceLocator.locate(NavigationController.self)!
+    }()
+    var loginListener: EventListener<Any>?
+    var logoutListener: EventListener<Any>?
     
-    init(logInViewController: UIViewController, mainApplicationController: UIViewController) {
-        self.mainApplicationController = mainApplicationController
+    init(logInViewController: UIViewController) {
         self.logInViewController = logInViewController
         super.init(nibName: nil, bundle: nil)
+        self.binding()
+    }
+    
+    func binding() {
+        self.loginListener = Events.shared.loginSuccess.on { event in
+            self.presentMainApplication()
+        }
+        
+        self.logoutListener = Events.shared.logout.on { event in
+            self.presentLogIn()
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {

@@ -15,7 +15,6 @@ class Task : NSObject {
     var taskTimePriorityHi : Bool?
     var isTaskDone = false
     var taskType: TaskType
-    
 
     //Convinece
      init(

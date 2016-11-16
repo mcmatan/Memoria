@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'D15906E0F3B406BB3946D2906E2D41C1'
-               BlueprintName = 'Swinject'
+               BlueprintIdentifier = '690D40CDF12D240C64E7A038AED607E2'
+               BlueprintName = 'EmitterKit'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'Swinject.framework'>
+               BuildableName = 'EmitterKit.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

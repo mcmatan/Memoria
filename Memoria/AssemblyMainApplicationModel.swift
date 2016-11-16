@@ -3,7 +3,7 @@
 import Foundation
 import Swinject
 
-open class AssemblyModel {
+open class AssemblyMainApplicationModel {
     
     class func run(_ container : Container) {
         
@@ -55,25 +55,11 @@ open class AssemblyModel {
             }.inObjectScope(ObjectScope.container)
         let _ = container.resolve(TestingNotifications.self)
         
-        container.register(WatchCommunicationType.self) { c in
-            return WatchCommunication()
-            }.inObjectScope(ObjectScope.container)
-        let _ = container.resolve(WatchCommunicationType.self)
-        
         container.register(TaskActionsPerformer.self) { c in
             return TaskActionsPerformer(
                 taskServices: container.resolve(TasksServices.self)!)
             }.inObjectScope(ObjectScope.container)
         let _ = container.resolve(TaskActionsPerformer.self)
-        
-        container.register(FireBaseWrapper.self) { c in
-            return FireBaseWrapper()
-        }.inObjectScope(ObjectScope.container)
-        let _ = container.resolve(FireBaseWrapper.self)
-        
-        container.register(LoginViewModel.self) { c in
-            return LoginViewModel(fireBaseWrapper: container.resolve(FireBaseWrapper.self)!)
-        }
         
     }
     

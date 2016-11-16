@@ -8,15 +8,15 @@
 
 import Foundation
 import RxSwift
-
+import EmitterKit
 
 class LoginViewModel: ViewModel {
     
-    let fireBaseWrapper: FireBaseWrapper
+    let loginService: LoginService
     let userNamePlaceHolder = Variable(Content.getContent(ContentType.labelTxt, name: "passwordPlaceHolder"))
     let passwordPlaceHolder = Variable(Content.getContent(ContentType.labelTxt, name: "userNamePlaceHolder"))
-    let userName = Variable("")
-    let password = Variable("")
+    let userName = Variable("matan@memoria-tech.com")
+    let password = Variable("7437711")
     let btnLogIn = Variable<Void>()
     let btnLogInTitle = Variable(Content.getContent(ContentType.labelTxt, name: "LogInBtn"))
     let logo = Variable<UIImage>(UIImage(named: "logo")!)
@@ -24,8 +24,8 @@ class LoginViewModel: ViewModel {
     let isLoading = Variable<Bool>(false)
     
     
-    init(fireBaseWrapper: FireBaseWrapper) {
-        self.fireBaseWrapper = fireBaseWrapper
+    init(loginService: LoginService) {
+        self.loginService = loginService
         self.bindings()
     }
     
@@ -38,9 +38,13 @@ class LoginViewModel: ViewModel {
     func login() {
         self.error.value = ""
         self.isLoading.value = true
-        self.fireBaseWrapper.logIn(email: self.userName.value, password: self.password.value) { success, error in
+        self.loginService.logIn(email: self.userName.value, password: self.password.value) { success, error in
             self.isLoading.value = false
-            self.error.value = error!
+            if (success) {
+                Events.shared.loginSuccess.emit(())
+            } else {
+                self.error.value = error!
+            }
         }
         
     }

@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>EmitterKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>GTMSessionFetcher.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -72,11 +77,6 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>00C9956AEA69FA8C772CB10651061E80</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>0C4AC792A9B15A03BC1A03ADA2507CF7</key>
 		<dict>
 			<key>primary</key>
@@ -97,7 +97,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5B45E20339835096B84BE4CF49E55B2B</key>
+		<key>2D4C35CE4EB9F97B74DC69DE271F0C72</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>362F94DE33340189102FFA3D9C8071B8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>690D40CDF12D240C64E7A038AED607E2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6E9A3AC54719D628D9B67D02C5676E5D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7391E9235E169698EF136D1D1928F469</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -107,27 +127,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>97319E25AFEDB1644E3A68ABB2D79F8C</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>9F1143BE8A90AC32CA2BC9B76471FDA4</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>BCB0EB2773F045F5DEB6B5CF7D1FD071</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>C9395E6309120B0594E28BB9CF031873</key>
+		<key>B7F1EF606CFBB5A210CEF93218FA5508</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>CBFA0553FDB68E5E84B3CF80F0112AA9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D15906E0F3B406BB3946D2906E2D41C1</key>
 		<dict>
 			<key>primary</key>
 			<true/>

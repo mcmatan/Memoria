@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import EmitterKit
+
 
 class NotificationsNames {
     
@@ -27,4 +29,12 @@ class NotificationsNames {
 struct TaskActionDTO {
     let task: Task
     let localNotificationCategort: LocalNotificationCategotry
+}
+
+class Events {
+    static let shared = Events()
+    
+    
+    let loginSuccess = Event<Any>()
+    let logout = Event<Any>()
 }

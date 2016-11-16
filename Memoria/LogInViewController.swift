@@ -54,6 +54,10 @@ class LogInViewController: ViewController {
         self.lblError.setHeightAs(70)
         self.lblError.numberOfLines = 0
         self.activityIndicator.hidesWhenStopped = true
+        self.tfUserName.disableAutoCurrection()
+        self.tfUserName.emailFiled()
+        self.tfPassword.disableAutoCurrection()
+        self.tfPassword.passwordFiled()
         
         self.view.addSubview(self.imgLogo)
         self.view.addSubview(self.tfUserName)

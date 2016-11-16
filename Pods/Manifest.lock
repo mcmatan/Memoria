@@ -2,6 +2,7 @@ PODS:
   - AEConsole (0.3.0):
     - AELog (~> 0.3)
   - AELog (0.3.0)
+  - EmitterKit (5.0.0)
   - EstimoteSDK (4.11.2)
   - Firebase/Auth (3.8.0):
     - Firebase/Core
@@ -47,6 +48,7 @@ PODS:
 
 DEPENDENCIES:
   - AEConsole (~> 0.3)
+  - EmitterKit (~> 5.0)
   - EstimoteSDK (from `https://github.com/Estimote/iOS-SDK.git`, commit `66c9cf13467bc0f61fcf197116dadfe22e1cd10d`)
   - Firebase/Auth
   - Firebase/Core
@@ -70,6 +72,7 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   AEConsole: bde8ae8616522b88909dff1ba7a4aa6e86568e6e
   AELog: 69608a89a1d0460ad32bba73f8e1043e12764d85
+  EmitterKit: 0057b2086840f20987cb8d4445b4490b96c0bfd8
   EstimoteSDK: 79e289736d75b56bbd8ecb4cf518c3a007c6fb49
   Firebase: fdbecadb7b5cbef2774852d4fa659b9daf11f2af
   FirebaseAnalytics: 6e58fc9b397664369ac7617fb0ba93fab6ba7b5b
@@ -87,6 +90,6 @@ SPEC CHECKSUMS:
   SwiftDate: 0efb04a6751b1ab804049b2b09a69848cd304c12
   Swinject: 69a893192efa9f2cc44be79ef423d04d571b6af9
 
-PODFILE CHECKSUM: c929c351e237e585f287fc4e4a5eef7184aee6f8
+PODFILE CHECKSUM: 5a3a5a9163b1ae7f1fbe93e54c85a9e40ce89b43
 
 COCOAPODS: 1.0.1

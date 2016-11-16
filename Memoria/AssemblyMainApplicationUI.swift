@@ -3,7 +3,7 @@
 import Foundation
 import Swinject
 
-open class AssemblyUIComponents {
+open class AssemblyMainApplicationUI {
 
     class func run(_ container : Container) {
         
@@ -67,18 +67,7 @@ open class AssemblyUIComponents {
             let navigationController = NavigationController(rootViewController : c.resolve(TabBarController.self)!)
             return navigationController
         }.inObjectScope(ObjectScope.container)
-        
-        container.register(LogInViewController.self) { c in
-            return LogInViewController(viewModel: container.resolve(LoginViewModel.self)!)
-        }.inObjectScope(ObjectScope.container)
-        
-        container.register(RootViewController.self) { c in
-            return RootViewController(
-                logInViewController: container.resolve(LogInViewController.self)!,
-                mainApplicationController: container.resolve(NavigationController.self)!
-            )
-        }
-        
+        let _ = container.resolve(NavigationController.self)
         
         container.register(TasksNotificationsPresenter.self) { c in
             return TasksNotificationsPresenter(

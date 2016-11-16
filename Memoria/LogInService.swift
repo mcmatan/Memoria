@@ -1,19 +1,18 @@
 //
-//  FireBase.swift
+//  LogInService.swift
 //  Memoria
 //
-//  Created by Matan Cohen on 11/11/2016.
+//  Created by Matan Cohen on 16/11/2016.
 //  Copyright © 2016 MACMatan. All rights reserved.
 //
 
 import Foundation
-import FirebaseCore
 import FirebaseAuth
 
-class FireBaseWrapper {
-    
-    init() {
-        FIRApp.configure()
+class LoginService {
+    let fireBaseCoreWrapper: FireBaseCoreWrapper
+    init(fireBaseCoreWrapper: FireBaseCoreWrapper) {
+        self.fireBaseCoreWrapper = fireBaseCoreWrapper
     }
     
     func logIn(email: String, password: String, complation: @escaping (_ success: Bool, _ error: String?) -> Void) {
@@ -22,6 +21,7 @@ class FireBaseWrapper {
                 complation(false, "Error = \(isError.localizedDescription)")
                 print("Error at loggin = \(isError.localizedDescription)")
             } else {
+                Bootstrapper.runMainApplication()
                 complation(true, nil)
                 print("Login success!")
             }
