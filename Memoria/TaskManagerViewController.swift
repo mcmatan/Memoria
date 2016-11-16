@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import Swinject
+import EmitterKit
 
 class TaskManagerViewController : ViewController, UITableViewDelegate, UITableViewDataSource {
     let kCellHeight = 70
@@ -22,6 +23,7 @@ class TaskManagerViewController : ViewController, UITableViewDelegate, UITableVi
     let lblCount = Label()
     var addTaskTypeViewController: AddTaskTypeViewController?
     let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.whiteLarge)
+    var tasksChangedListener: EventListener<Any>!
 
     
     init(tasksServices : TasksServices, currenctTaskCreator : CurrenctTaskCreator, container : Container, iNearableServices : NearableServices) {
@@ -67,12 +69,23 @@ class TaskManagerViewController : ViewController, UITableViewDelegate, UITableVi
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.setupView()
+        self.bindings()
+    }
+    
+    func bindings() {
+        self.tasksChangedListener = Events.shared.tasksChanged.on { event in
+            self.reloadTable()
+        }
+    }
+    
+    func setupView() {
         let image = UIImage(named: "navigationBar")
         self.navigationController?.navigationBar.setBackgroundImage(image, for: UIBarMetrics.default)
-
+        
         
         self.allTasks = self.tasksServices.getAllTasks()
-
+        
         let doneButton = UIBarButtonItem(title: Content.getContent(ContentType.buttonTxt, name: "Done"), style: UIBarButtonItemStyle.done, target: self, action: #selector(TaskManagerViewController.doneButtonPress))
         self.navigationItem.rightBarButtonItem = doneButton
         
@@ -80,7 +93,7 @@ class TaskManagerViewController : ViewController, UITableViewDelegate, UITableVi
         createTaskBtn.defaultStyle()
         createTaskBtn.setTitle(Content.getContent(ContentType.labelTxt, name: "TaskManagerVCCreateTask"), for: UIControlState())
         createTaskBtn.addTarget(self, action: #selector(TaskManagerViewController.createNewTask), for: UIControlEvents.touchUpInside)
-
+        
         let lblTop = Label()
         lblTop.defaultyTitle()
         lblTop.text = Content.getContent(ContentType.labelTxt, name: "TaskManagerVCLblTop")
@@ -88,11 +101,11 @@ class TaskManagerViewController : ViewController, UITableViewDelegate, UITableVi
         lblCount.defaultyTitle()
         lblCount.text = Content.getContent(ContentType.labelTxt, name: "TaskManagerVCNoRemainingTasks")
         lblCount.textColor = UIColor.gray
-
+        
         tableView.tableFooterView = UIView(frame: CGRect.zero)
         
         let topLayout = self.topLayoutGuide
-
+        
         self.view.addSubviewWithAutoLayoutOn(createTaskBtn)
         self.view.addSubviewWithAutoLayoutOn(lblTop)
         self.view.addSubviewWithAutoLayoutOn(tableView)
@@ -100,24 +113,24 @@ class TaskManagerViewController : ViewController, UITableViewDelegate, UITableVi
         createTaskBtn.addSubviewWithAutoLayoutOn(activityIndicator)
         
         let viewKeys : [String : AnyObject] =
-        [
-            "lblTop" : lblTop,
-            "lblCount" : lblCount,
-            "tableView" : tableView,
-            "topLayout" : topLayout,
-            "createTaskBtn" : createTaskBtn,
-        ]
+            [
+                "lblTop" : lblTop,
+                "lblCount" : lblCount,
+                "tableView" : tableView,
+                "topLayout" : topLayout,
+                "createTaskBtn" : createTaskBtn,
+                ]
         
         var allConstrins = [NSLayoutConstraint]()
         
         let verticalLayout = NSLayoutConstraint.constraints(
             withVisualFormat: "V:[topLayout]-(20)-[createTaskBtn]-(20)-[lblTop]-[tableView]-(20)-|", options: NSLayoutFormatOptions.alignAllCenterX, metrics: nil, views: viewKeys)
-
+        
         let horizintalTableConstrain = NSLayoutConstraint.constraints(
             withVisualFormat: "H:|-[tableView]-|", options: [], metrics: nil, views: viewKeys)
-
+        
         let horizintalTopLblConstrain = NSLayoutConstraint.constraints(
-        withVisualFormat: "H:|-[lblTop]-|", options: [], metrics: nil, views: viewKeys)
+            withVisualFormat: "H:|-[lblTop]-|", options: [], metrics: nil, views: viewKeys)
         
         let _ = lblCount.topAlighnToViewTop(lblTop)
         lblCount.trailingToSuperView(true)
@@ -125,16 +138,17 @@ class TaskManagerViewController : ViewController, UITableViewDelegate, UITableVi
         allConstrins += verticalLayout
         allConstrins += horizintalTableConstrain
         allConstrins += horizintalTopLblConstrain
-
+        
         NSLayoutConstraint.activate(allConstrins)
         UIViewAutoLayoutExtentions.centerVerticlyAlViewsInSuperView([activityIndicator])
         UIViewAutoLayoutExtentions.centerVerticalyAlViewsInSuperView([activityIndicator])
-
+        
         
         self.tableView.delegate = self
         self.tableView.dataSource = self
-     
+
     }
+    
 
     //MARK: TableView
     

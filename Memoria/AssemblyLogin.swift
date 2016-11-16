@@ -13,13 +13,20 @@ open class AssemblyLogin {
 
     class func run(_ container : Container) {
         
+        container.register(CurrentUserContext.self) { c in
+            return CurrentUserContext()
+        }.inObjectScope(ObjectScope.container)
+        
         container.register(FireBaseCoreWrapper.self) { c in
             return FireBaseCoreWrapper()
             }.inObjectScope(ObjectScope.container)
         let _ = container.resolve(FireBaseCoreWrapper.self)
         
         container.register(LoginService.self) { c in
-            return LoginService(fireBaseCoreWrapper: container.resolve(FireBaseCoreWrapper.self)!)
+            return LoginService(
+                fireBaseCoreWrapper: container.resolve(FireBaseCoreWrapper.self)!,
+                currentUserContext: container.resolve(CurrentUserContext.self)!
+                )
         }
         
         container.register(LoginViewModel.self) { c in

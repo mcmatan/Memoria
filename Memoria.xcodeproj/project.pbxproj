@@ -108,6 +108,8 @@
 		90B7D3CE1DDC77C00095BF6A /* AssemblyLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B7D3CD1DDC77C00095BF6A /* AssemblyLogin.swift */; };
 		90B7D3D01DDC78D60095BF6A /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B7D3CF1DDC78D60095BF6A /* ServiceLocator.swift */; };
 		90B7D3D21DDC7CAE0095BF6A /* LogInService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B7D3D11DDC7CAE0095BF6A /* LogInService.swift */; };
+		90B7D3D51DDC8FE20095BF6A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B7D3D41DDC8FE20095BF6A /* User.swift */; };
+		90B7D3D71DDC90BA0095BF6A /* CurrentUserContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B7D3D61DDC90BA0095BF6A /* CurrentUserContext.swift */; };
 		90C5887B1C46E0AC00D84C73 /* TaskManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C5887A1C46E0AC00D84C73 /* TaskManagerViewController.swift */; };
 		90C7AB031DD2397300185630 /* TaskActionsPerformaer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C7AB021DD2397300185630 /* TaskActionsPerformaer.swift */; };
 		90CE2AF51CF4DE0E00511ED4 /* ButtonsTextsHe.plist in Resources */ = {isa = PBXBuildFile; fileRef = 90CE2AF41CF4DE0E00511ED4 /* ButtonsTextsHe.plist */; };
@@ -299,6 +301,8 @@
 		90B7D3CD1DDC77C00095BF6A /* AssemblyLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssemblyLogin.swift; sourceTree = "<group>"; };
 		90B7D3CF1DDC78D60095BF6A /* ServiceLocator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
 		90B7D3D11DDC7CAE0095BF6A /* LogInService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInService.swift; sourceTree = "<group>"; };
+		90B7D3D41DDC8FE20095BF6A /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		90B7D3D61DDC90BA0095BF6A /* CurrentUserContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentUserContext.swift; sourceTree = "<group>"; };
 		90C5887A1C46E0AC00D84C73 /* TaskManagerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskManagerViewController.swift; sourceTree = "<group>"; };
 		90C7AB021DD2397300185630 /* TaskActionsPerformaer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskActionsPerformaer.swift; sourceTree = "<group>"; };
 		90CE2AF41CF4DE0E00511ED4 /* ButtonsTextsHe.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ButtonsTextsHe.plist; sourceTree = "<group>"; };
@@ -644,6 +648,7 @@
 		9035FE2E1C1EDA4C00D98022 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				90B7D3D81DDC90BE0095BF6A /* CurrentUserContext */,
 				90B7D3D31DDC7CB10095BF6A /* LoginService */,
 				902546841DD8D07100D53C58 /* NotificationsTextsBuilder */,
 				902546141DD62FCE00D53C58 /* FireBaseCoreWrapper */,
@@ -773,6 +778,14 @@
 				90B7D3D11DDC7CAE0095BF6A /* LogInService.swift */,
 			);
 			name = LoginService;
+			sourceTree = "<group>";
+		};
+		90B7D3D81DDC90BE0095BF6A /* CurrentUserContext */ = {
+			isa = PBXGroup;
+			children = (
+				90B7D3D61DDC90BA0095BF6A /* CurrentUserContext.swift */,
+			);
+			name = CurrentUserContext;
 			sourceTree = "<group>";
 		};
 		90C588791C46E09500D84C73 /* ManageTasksViewController */ = {
@@ -971,6 +984,7 @@
 			isa = PBXGroup;
 			children = (
 				90F00A021C4A7BB2002C98BA /* Task.swift */,
+				90B7D3D41DDC8FE20095BF6A /* User.swift */,
 			);
 			name = Entities;
 			sourceTree = "<group>";
@@ -1467,6 +1481,8 @@
 				90DC77A21C3DA0F70062BCE3 /* VoiceRecorder.swift in Sources */,
 				9035FE251C1EC64500D98022 /* ReminderPopUp.swift in Sources */,
 				905AF3C11C1F3BD60063713A /* NavigationController.swift in Sources */,
+				90B7D3D51DDC8FE20095BF6A /* User.swift in Sources */,
+				90B7D3D71DDC90BA0095BF6A /* CurrentUserContext.swift in Sources */,
 				90F00A001C4A7B73002C98BA /* TasksDB.swift in Sources */,
 				902E9AE91DD201E400282AB7 /* LocalNotificationCategoryBuilder.swift in Sources */,
 				90DC620E1C6F6B45000C4457 /* NSDateExntentions.swift in Sources */,

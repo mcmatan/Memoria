@@ -37,4 +37,5 @@ class Events {
     
     let loginSuccess = Event<Any>()
     let logout = Event<Any>()
+    let tasksChanged = Event<Any>()
 }

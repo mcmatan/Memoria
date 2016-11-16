@@ -8,7 +8,10 @@ open class AssemblyMainApplicationModel {
     class func run(_ container : Container) {
         
         container.register(TasksDB.self) { c in
-            return TasksDB()
+            return TasksDB(
+                fireBaseCoreWrapper: container.resolve(FireBaseCoreWrapper.self)!,
+                currentUserContext: container.resolve(CurrentUserContext.self)!
+            )
             }.inObjectScope(ObjectScope.container)
         
         container.register(NearableStriggerManager.self) { c in
