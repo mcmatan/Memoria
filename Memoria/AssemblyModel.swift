@@ -68,11 +68,11 @@ open class AssemblyModel {
         
         container.register(FireBaseWrapper.self) { c in
             return FireBaseWrapper()
-        }
+        }.inObjectScope(ObjectScope.container)
         let _ = container.resolve(FireBaseWrapper.self)
         
         container.register(LoginViewModel.self) { c in
-            return LoginViewModel()
+            return LoginViewModel(fireBaseWrapper: container.resolve(FireBaseWrapper.self)!)
         }
         
     }

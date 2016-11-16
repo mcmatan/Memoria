@@ -12,6 +12,7 @@ import RxSwift
 
 class LoginViewModel: ViewModel {
     
+    let fireBaseWrapper: FireBaseWrapper
     let userNamePlaceHolder = Variable(Content.getContent(ContentType.labelTxt, name: "passwordPlaceHolder"))
     let passwordPlaceHolder = Variable(Content.getContent(ContentType.labelTxt, name: "userNamePlaceHolder"))
     let userName = Variable("")
@@ -21,7 +22,8 @@ class LoginViewModel: ViewModel {
     let logo = Variable<UIImage>(UIImage(named: "logo")!)
     
     
-    init() {
+    init(fireBaseWrapper: FireBaseWrapper) {
+        self.fireBaseWrapper = fireBaseWrapper
         self.userName.asObservable().subscribe { eventreq in
             print(eventreq.element)
         }
@@ -32,7 +34,13 @@ class LoginViewModel: ViewModel {
         
         self.btnLogIn.asObservable().subscribe { press in
             print("Did press")
+            self.login()
         }
+        
+    }
+    
+    func login() {
+        self.fireBaseWrapper.logIn(email: self.userName.value, password: self.password.value)
     }
     
 }
