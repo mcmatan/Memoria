@@ -33,8 +33,12 @@ Then click on the button to add a task.</string>
 	<string>Turn switch on for Hi priority.\n That means You cannot accomplish the task not at time</string>
 	<key>TaskManagerRemaining</key>
 	<string>Remining %@</string>
-	<key>TaskManagerVCCreateTask</key>
-	<string>+ Create a new task</string>
+	<key>TaskManagerCreateStickerTask</key>
+	<string>+ Create sticker task</string>
+	<key>TaskManagerCreateTask</key>
+	<string>+ Create time task</string>
+	<key>TaskManagerCreateGPSLocationTask</key>
+	<string>+ Create GPS Location task</string>
 	<key>TaskManagerVCLblTop</key>
 	<string>My Memories</string>
 	<key>TaskManagerVCNoRemainingTasks</key>

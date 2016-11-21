@@ -33,7 +33,7 @@ class TestingNotifications {
     }
     
     @objc func showSingleGrugWarning() {
-        let task = Task(taskType: TaskType.drugs, taskTime: Date(), nearableIdentifer: "", taskTimePriorityHi: true)
+        let task = Task(taskType: TaskType.drugs, taskTime: Date(), nearableIdentifer: "", taskTimePriorityHi: true, isTaskDone: false)
         
         self.localNotificationScheduler.scheduleLocalNotificationForTask(task: task, localNotificationCategotry: LocalNotificationCategotry.warning)
     }
@@ -45,7 +45,7 @@ class TestingNotifications {
     }
     
     @objc func showSingleGrugVerification() {
-        let task = Task(taskType: TaskType.drugs, taskTime: Date(), nearableIdentifer:"", taskTimePriorityHi: true)
+        let task = Task(taskType: TaskType.drugs, taskTime: Date(), nearableIdentifer:"", taskTimePriorityHi: true, isTaskDone: false)
         
         self.localNotificationScheduler.scheduleLocalNotificationForTask(task: task, localNotificationCategotry: LocalNotificationCategotry.verification)
     }
@@ -57,7 +57,7 @@ class TestingNotifications {
     }
     
     @objc func showSingleGrugNotification() {
-        let task = Task(taskType: TaskType.drugs, taskTime: Date(), nearableIdentifer: "", taskTimePriorityHi: true)
+        let task = Task(taskType: TaskType.drugs, taskTime: Date(), nearableIdentifer: "", taskTimePriorityHi: true, isTaskDone: false)
         
         self.localNotificationScheduler.scheduleLocalNotificationForTask(task: task, localNotificationCategotry: LocalNotificationCategotry.notification)
     }

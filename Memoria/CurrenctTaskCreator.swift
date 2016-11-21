@@ -12,7 +12,7 @@ import SwiftDate
 class CurrenctTaskCreator {
     
     class func emptyTask()->Task {
-      return  Task(taskType: TaskType.drugs, taskTime: nil, nearableIdentifer: "", taskTimePriorityHi: false)
+        return  Task(taskType: TaskType.drugs, taskTime: nil, nearableIdentifer: nil, taskTimePriorityHi: false ,isTaskDone: false)
     }
     
     var task = CurrenctTaskCreator.emptyTask()
@@ -58,7 +58,7 @@ class CurrenctTaskCreator {
         return self.task.taskTime
     }
     
-    func getTaskNearableIdentifer()->String {
+    func getTaskNearableIdentifer()->String? {
         return self.task.nearableIdentifer
     }
     

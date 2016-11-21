@@ -35,10 +35,17 @@ class AddTaskTypeViewController : ViewController {
         super.viewWillAppear(animated)
         self.title = "Choose task type"
         self.lblTaskType.text = self.currenctTaskCreator.task.taskType.name()
+        self.configureNavigationBar()
+    }
+    
+    func configureNavigationBar() {
         
-        let nearableImage = NearableShape(rect: CGRect(x: 0,y: 0,width: 25,height: 40), backgroundColor: self.nearableService.getNearableColorFor(nearableIdentifer: self.currenctTaskCreator.task.nearableIdentifer), lineColor: UIColor.black)
-        
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: nearableImage)
+        if self.currenctTaskCreator.task.hasSticker() == true {
+            
+            let nearableImage = NearableShape(rect: CGRect(x: 0,y: 0,width: 25,height: 40), backgroundColor: self.nearableService.getNearableColorFor(nearableIdentifer: self.currenctTaskCreator.task.nearableIdentifer!), lineColor: UIColor.black)
+            
+            self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: nearableImage)
+        }
     }
     
     override func viewDidLoad() {
@@ -87,7 +94,7 @@ class AddTaskTypeViewController : ViewController {
     }
     
     func btnChooseTaskTypePress() {
-        let titles = [TaskType.drugs.name(), TaskType.brushTeeth.name(), TaskType.food.name()]
+        let titles = [TaskType.drugs.name(), TaskType.brushTeeth.name(), TaskType.food.name(), TaskType.wakeUp.name(), TaskType.goToGym.name(), TaskType.goToWork.name()]
         self.pickerWithBlock = UIPickerWithBlock(viewController: self, titles: titles) { index, title  in
             var choosenTaskType: TaskType
             switch title {
@@ -97,6 +104,12 @@ class AddTaskTypeViewController : ViewController {
                 choosenTaskType = TaskType.drugs
             case TaskType.food.name():
                 choosenTaskType = TaskType.food
+            case TaskType.goToWork.name():
+                choosenTaskType = TaskType.goToWork
+            case TaskType.goToGym.name():
+                choosenTaskType = TaskType.goToGym
+            case TaskType.wakeUp.name():
+                choosenTaskType = TaskType.wakeUp
             default:
                 print("No Task title has match")
                 choosenTaskType = TaskType.food

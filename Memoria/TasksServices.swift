@@ -31,7 +31,11 @@ class TasksServices {
     func saveTask(_ task :Task) {
         self.localNotificationScheduler.squeduleReminderForTask(task)
         self.tasksDB.saveTask(task)
-        self.nearableStriggerManager.startTrackingForMotion(identifer: task.nearableIdentifer)
+        
+        if task.hasSticker() {
+            self.nearableStriggerManager.startTrackingForMotion(identifer: task.nearableIdentifer!)
+        }
+        
     }
     
     func snoozeTask(task: Task) {
@@ -56,7 +60,11 @@ class TasksServices {
     func removeTask(_ task : Task) {
         self.localNotificationScheduler.cancelReminderForTask(task)
         let _ = self.tasksDB.removeTask(task)
-        self.nearableStriggerManager.stopTrackingForMotion(identifer: task.nearableIdentifer)
+        
+        if task.hasSticker() {
+            self.nearableStriggerManager.stopTrackingForMotion(identifer: task.nearableIdentifer!)
+        }
+        
     }
     
     func getAllTasks()->[Task] {

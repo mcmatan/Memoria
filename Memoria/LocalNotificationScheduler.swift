@@ -40,45 +40,48 @@ class LocalNotificationScheduler {
     }
     
     func scheduleNotification(task: Task, date: Date = Date()) {
-        let notificationText = NotificationsTextsBuilder.getNotificationText(task: task, localNotificationCategory: LocalNotificationCategotry.notification)
+        let localNotificationCategory = LocalNotificationCategotry.notification
+        let notificationText = NotificationsTextsBuilder.getNotificationText(task: task, localNotificationCategory: localNotificationCategory)
         
         self.scheduleNotification(
             title: notificationText.notificationTitle,
             subtitle: "",
             body: notificationText.notificationBody,
-            localNotificationCategory: LocalNotificationCategotry.notification,
+            localNotificationCategory: localNotificationCategory,
             date: date,
-            sound: task.taskType.soundURL(localNotificationCategotry: .verification),
-            imageURL: task.taskType.imageURL(localNotificationCategory: LocalNotificationCategotry.notification),
+            sound: task.taskType.soundURL(localNotificationCategotry: localNotificationCategory),
+            imageURL: task.taskType.imageURL(localNotificationCategory: localNotificationCategory),
             task: task)
     }
     
     func scheduleWarning(task: Task) {
-        let notificationText = NotificationsTextsBuilder.getNotificationText(task: task, localNotificationCategory: LocalNotificationCategotry.warning)
+        let localNotificationCategory = LocalNotificationCategotry.warning
+        let notificationText = NotificationsTextsBuilder.getNotificationText(task: task, localNotificationCategory: localNotificationCategory)
         
         self.scheduleNotification(
             title: notificationText.notificationTitle,
             subtitle: "",
             body: notificationText.notificationBody,
-            localNotificationCategory: LocalNotificationCategotry.warning,
+            localNotificationCategory: localNotificationCategory,
             date: nil,
-            sound: task.taskType.soundURL(localNotificationCategotry: .verification),
-            imageURL: task.taskType.imageURL(localNotificationCategory: LocalNotificationCategotry.warning),
+            sound: task.taskType.soundURL(localNotificationCategotry: localNotificationCategory),
+            imageURL: task.taskType.imageURL(localNotificationCategory: localNotificationCategory),
             task: task)
         
     }
     
     func scheduleVerification(task: Task) {
-        let notificationText = NotificationsTextsBuilder.getNotificationText(task: task, localNotificationCategory: LocalNotificationCategotry.verification)
+        let localNotificationCategory = LocalNotificationCategotry.verification
+        let notificationText = NotificationsTextsBuilder.getNotificationText(task: task, localNotificationCategory: localNotificationCategory)
         
         self.scheduleNotification(
             title: notificationText.notificationTitle,
             subtitle: "",
             body: notificationText.notificationBody,
-            localNotificationCategory: LocalNotificationCategotry.verification,
+            localNotificationCategory: localNotificationCategory,
             date: nil,
-            sound: task.taskType.soundURL(localNotificationCategotry: .verification),
-            imageURL: task.taskType.imageURL(localNotificationCategory: LocalNotificationCategotry.verification),
+            sound: task.taskType.soundURL(localNotificationCategotry: localNotificationCategory),
+            imageURL: task.taskType.imageURL(localNotificationCategory: localNotificationCategory),
             task: task)
 
     }
@@ -106,11 +109,23 @@ class LocalNotificationScheduler {
             content.attachments = attachments
         }
         
-        var fireTimeInterval = (date != nil) ? date!.timeIntervalSinceNow : TimeInterval(0.01)
-        if fireTimeInterval < 0 {
-            fireTimeInterval = 0.01
+        var trigger: UNNotificationTrigger?
+        
+        if let isDate = date { // Repetetive task
+            var fireDateRepeat = DateComponents()
+            fireDateRepeat.hour = isDate.hour
+            fireDateRepeat.minute = isDate.minute
+            trigger = UNCalendarNotificationTrigger(dateMatching: fireDateRepeat, repeats: true)
+            
+        } else { //One time fire
+            var fireTimeInterval = TimeInterval(0.01)
+            if fireTimeInterval < 0 {
+                fireTimeInterval = 0.01
+            }
+            trigger = UNTimeIntervalNotificationTrigger(timeInterval: fireTimeInterval, repeats: false)
         }
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: fireTimeInterval, repeats: false)
+        
+        
         let requestIdentifier = content.categoryIdentifier
         let request = UNNotificationRequest(identifier: requestIdentifier, content: content,trigger: trigger)
         UNUserNotificationCenter.current().add(request) { (error) in

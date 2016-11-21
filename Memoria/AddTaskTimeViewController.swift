@@ -86,13 +86,18 @@ class AddTaskTimeViewController : ViewController {
         let txt = Content.getContent(ContentType.labelTxt, name: "AddTaskTimeDatePickerDialog")
         let datePicker = DatePickerDialog()
         
-        datePicker.setMinimunDate(date: minimunDate)
-        
-        datePicker.show(txt, doneButtonTitle: "Done", cancelButtonTitle: "Cancel", defaultDate: minimunDate, datePickerMode: UIDatePickerMode.dateAndTime) { (date) in
+        datePicker.show(txt, doneButtonTitle: "Done", cancelButtonTitle: "Cancel", defaultDate: minimunDate, datePickerMode: UIDatePickerMode.time) { (date) in
             print(date)
-            self.chosenTime = date
+            self.chosenTime = self.getRoundedSecoundsDate(date: date)
             self.setTimeToDisplay(date)
         }
+    }
+    
+    func getRoundedSecoundsDate(date: Date)->Date {
+        var dateRounded = NSDate();
+        let timeInterval = floor(dateRounded.timeIntervalSinceReferenceDate / 60.0) * 60.0
+        dateRounded = Date(timeIntervalSinceReferenceDate: timeInterval) as NSDate
+        return dateRounded as Date
     }
     
     func getMinimunDate() ->Date {
@@ -102,7 +107,7 @@ class AddTaskTimeViewController : ViewController {
     }
     
     func setTimeToDisplay(_ date : Date) {
-        let timeString = date.description(with: Locale.current)
+        let timeString = date.toStringCurrentRegionShortTime()
         self.lblTime.text = "\(timeString)"
     }
 

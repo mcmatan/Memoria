@@ -24,6 +24,9 @@ enum TaskType: String {
     case brushTeeth = "brushTeeth"
     case food = "food"
     case drugs = "drugs"
+    case goToWork = "goToWork"
+    case goToGym = "goToGym"
+    case wakeUp = "wakeUp"
     
     static func getAllValus()-> [TaskType] {return [TaskType.brushTeeth, TaskType.food, TaskType.drugs]}
     
@@ -35,7 +38,14 @@ enum TaskType: String {
             return "Eat food"
         case .drugs:
             return "Take your pills"
+        case .goToWork:
+            return "Go to work"
+        case .goToGym:
+            return "Go to the GYM"
+        case .wakeUp:
+            return "Wake up"
         }
+        
     }
     
     init(typeString: String) {
@@ -46,9 +56,14 @@ enum TaskType: String {
             self = .food
         case TaskType.drugs.rawValue:
             self = .drugs
+        case TaskType.goToGym.rawValue:
+            self = .goToGym
+        case TaskType.goToWork.rawValue:
+            self = .goToWork
+        case TaskType.wakeUp.rawValue:
+            self = .wakeUp
         default:
-            print("No maching Task type string!")
-            self = .drugs
+            self = .wakeUp
         }
     }
     
@@ -83,6 +98,15 @@ enum TaskType: String {
             return url!
         case .food:
             let url = Bundle.main.url(forResource: "food\(color)", withExtension: "png")
+            return url!
+        case .goToWork:
+            let url = Bundle.main.url(forResource: "goToWork\(color)", withExtension: "png")
+            return url!
+        case .goToGym:
+            let url = Bundle.main.url(forResource: "goToGym\(color)", withExtension: "png")
+            return url!
+        case .wakeUp:
+            let url = Bundle.main.url(forResource: "wakeUp\(color)", withExtension: "png")
             return url!
         }
     }

@@ -36,11 +36,11 @@ class TasksDB {
     }
     
     func saveTask(_ task : Task) {
-        self.tasksRef.child(task.nearableIdentifer).setValue(task.toAnyObject())
+        self.tasksRef.child(task.uid).setValue(task.toAnyObject())
     }
     
     func removeTask(_ task : Task) {
-        self.tasksRef.child(task.nearableIdentifer).removeValue()
+        self.tasksRef.child(task.uid).removeValue()
     }
     
     func getAllTasks()->[Task] {
@@ -63,7 +63,7 @@ class TasksDB {
             self.tasksByNearableIdentifer = [String : Task]()
             for tasksDic in postDict.values {
                 let task = Task(dic: tasksDic as! Dictionary<String, Any>)
-                self.tasksByNearableIdentifer[task.nearableIdentifer] = task
+                self.tasksByNearableIdentifer[task.uid] = task
             }
             
             Events.shared.tasksChanged.emit(())

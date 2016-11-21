@@ -16,25 +16,40 @@ enum TaskPropNames: String {
     nearableIdentifer =  "kNearableIdentifer",
     taskTimePriorityHi = "kTaskTimePriorityHi",
     isTaskDone = "kIsTaskDone",
-    taskType = "kTaskType"
+    taskType = "kTaskType",
+    uid = "uid"
 }
 
 class Task : NSObject {
     var taskTime: Date?
-    var nearableIdentifer : String
+    var nearableIdentifer : String?
     var taskTimePriorityHi : Bool
     var isTaskDone = false
     var taskType: TaskType
+    let uid: String
+    
+    func hasSticker() -> Bool {
+        if let _ = self.nearableIdentifer {
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    func hasGPSLocation() -> Bool {
+        return false
+    }
     
     init(snapshot: FIRDataSnapshot) {
         let snapshotValue = snapshot.value as! [String: AnyObject]
         let taskTime = snapshotValue[TaskPropNames.taskTime.rawValue] as! Int
         let taskTimeAsDate = Date(timeIntervalSince1970: TimeInterval(taskTime))
         self.taskTime = taskTimeAsDate
-        self.nearableIdentifer = snapshotValue[TaskPropNames.nearableIdentifer.rawValue] as! String
+        self.nearableIdentifer = snapshotValue[TaskPropNames.nearableIdentifer.rawValue] as? String
         self.taskTimePriorityHi = snapshotValue[TaskPropNames.taskTimePriorityHi.rawValue] as! Bool
         self.isTaskDone = snapshotValue[TaskPropNames.isTaskDone.rawValue] as! Bool
         self.taskType = TaskType(rawValue: snapshotValue[TaskPropNames.taskType.rawValue] as! String)!
+        self.uid = snapshotValue[TaskPropNames.uid.rawValue] as! String
     }
     
     init(dic: Dictionary<String, Any>) {
@@ -42,41 +57,35 @@ class Task : NSObject {
         let taskTime = snapshotValue[TaskPropNames.taskTime.rawValue] as! TimeInterval
         let taskTimeAsDate = Date(timeIntervalSince1970: TimeInterval(taskTime))
         self.taskTime = taskTimeAsDate
-        self.nearableIdentifer = snapshotValue[TaskPropNames.nearableIdentifer.rawValue] as! String
+        self.nearableIdentifer = snapshotValue[TaskPropNames.nearableIdentifer.rawValue] as? String
         self.taskTimePriorityHi = snapshotValue[TaskPropNames.taskTimePriorityHi.rawValue] as! Bool
         self.isTaskDone = snapshotValue[TaskPropNames.isTaskDone.rawValue] as! Bool
         self.taskType = TaskType(rawValue: snapshotValue[TaskPropNames.taskType.rawValue] as! String)!
+        self.uid = snapshotValue[TaskPropNames.uid.rawValue] as! String
     }
     
     func toAnyObject() -> Any {
         let taskTimeAsInterval = self.taskTime?.timeIntervalSince1970
-        return [
+        
+        var dic = [
             TaskPropNames.taskTime.rawValue: taskTimeAsInterval!,
-            TaskPropNames.nearableIdentifer.rawValue: nearableIdentifer,
             TaskPropNames.taskTimePriorityHi.rawValue: taskTimePriorityHi,
             TaskPropNames.isTaskDone.rawValue: isTaskDone,
-            TaskPropNames.taskType.rawValue: taskType.rawValue
-        ]
+            TaskPropNames.taskType.rawValue: taskType.rawValue,
+            TaskPropNames.uid.rawValue: uid
+        ] as [String : Any]
+        
+        if let isNearableIdentifer = nearableIdentifer {
+            dic[TaskPropNames.nearableIdentifer.rawValue] = isNearableIdentifer
+        }
+        
+        return dic
     }
-
-    //Convinece
-     init(
-        taskType: TaskType,
-        taskTime : Date?,
-        nearableIdentifer : String,
-        taskTimePriorityHi : Bool
-        ) {
-        self.taskTime = taskTime
-        self.taskType = taskType
-        self.nearableIdentifer = nearableIdentifer
-        self.taskTimePriorityHi = taskTimePriorityHi
-    }
-
     
     init(
         taskType: TaskType,
-        taskTime : Date,
-        nearableIdentifer : String,
+        taskTime : Date?,
+        nearableIdentifer : String?,
         taskTimePriorityHi : Bool,
         isTaskDone :Bool
         ) {
@@ -85,6 +94,7 @@ class Task : NSObject {
             self.nearableIdentifer = nearableIdentifer
             self.taskTimePriorityHi = taskTimePriorityHi
             self.isTaskDone = isTaskDone
+            self.uid = "\(UUID.init().hashValue)"
     }
     
     required convenience init(coder aDecoder: NSCoder) {
@@ -95,7 +105,7 @@ class Task : NSObject {
         let taskType = aDecoder.decodeObject(forKey: "taskType")
         self.init(taskType: TaskType(typeString: taskType as! String),
                   taskTime : taskTime,
-                  nearableIdentifer : nearableIdentifer as! String,
+                  nearableIdentifer : nearableIdentifer as? String,
                   taskTimePriorityHi : taskTimePriorityHi,
             isTaskDone: isTaskDone
         )

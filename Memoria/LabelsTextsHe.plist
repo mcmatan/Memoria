@@ -33,8 +33,10 @@
 	<string>בחר בעדיפות גבוהה על מנת לא לאפשר ביצוע משימה שלא בזמן המוגדר</string>
 	<key>TaskManagerRemaining</key>
 	<string>משימות שטרם הושלמו: %@</string>
-	<key>TaskManagerVCCreateTask</key>
-	<string>+ משימה חדשה</string>
+	<key>TaskManagerCreateStickerTask</key>
+	<string>+ משימת סטיקר חדשה</string>
+	<key>TaskManagerCreateTask</key>
+	<string>+ משימת זמן חדשה</string>
 	<key>TaskManagerVCLblTop</key>
 	<string>הזכרונות שלי</string>
 	<key>TaskManagerVCNoRemainingTasks</key>

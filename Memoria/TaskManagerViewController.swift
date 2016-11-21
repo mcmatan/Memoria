@@ -89,10 +89,20 @@ class TaskManagerViewController : ViewController, UITableViewDelegate, UITableVi
         let doneButton = UIBarButtonItem(title: Content.getContent(ContentType.buttonTxt, name: "Done"), style: UIBarButtonItemStyle.done, target: self, action: #selector(TaskManagerViewController.doneButtonPress))
         self.navigationItem.rightBarButtonItem = doneButton
         
-        let createTaskBtn = Button()
-        createTaskBtn.defaultStyle()
-        createTaskBtn.setTitle(Content.getContent(ContentType.labelTxt, name: "TaskManagerVCCreateTask"), for: UIControlState())
-        createTaskBtn.addTarget(self, action: #selector(TaskManagerViewController.createNewTask), for: UIControlEvents.touchUpInside)
+        let btnCreateStickerTask = Button()
+        btnCreateStickerTask.defaultStyle()
+        btnCreateStickerTask.setTitle(Content.getContent(ContentType.labelTxt, name: "TaskManagerCreateStickerTask"), for: UIControlState())
+        btnCreateStickerTask.addTarget(self, action: #selector(TaskManagerViewController.createNewStickerTask), for: UIControlEvents.touchUpInside)
+        
+        let btnCreateTask = Button()
+        btnCreateTask.defaultStyle()
+        btnCreateTask.setTitle(Content.getContent(ContentType.labelTxt, name: "TaskManagerCreateTask"), for: UIControlState())
+        btnCreateTask.addTarget(self, action: #selector(TaskManagerViewController.createNewTimeTask), for: UIControlEvents.touchUpInside)
+        
+        let btnCreateGPSLocationTask = Button()
+        btnCreateGPSLocationTask.defaultStyle()
+        btnCreateGPSLocationTask.setTitle(Content.getContent(ContentType.labelTxt, name: "TaskManagerCreateGPSLocationTask"), for: UIControlState())
+        btnCreateGPSLocationTask.addTarget(self, action: #selector(TaskManagerViewController.createNewStickerTask), for: UIControlEvents.touchUpInside)
         
         let lblTop = Label()
         lblTop.defaultyTitle()
@@ -106,11 +116,13 @@ class TaskManagerViewController : ViewController, UITableViewDelegate, UITableVi
         
         let topLayout = self.topLayoutGuide
         
-        self.view.addSubviewWithAutoLayoutOn(createTaskBtn)
+        self.view.addSubviewWithAutoLayoutOn(btnCreateStickerTask)
+        self.view.addSubviewWithAutoLayoutOn(btnCreateTask)
+        self.view.addSubviewWithAutoLayoutOn(btnCreateGPSLocationTask)
         self.view.addSubviewWithAutoLayoutOn(lblTop)
         self.view.addSubviewWithAutoLayoutOn(tableView)
         self.view.addSubviewWithAutoLayoutOn(lblCount)
-        createTaskBtn.addSubviewWithAutoLayoutOn(activityIndicator)
+        btnCreateStickerTask.addSubviewWithAutoLayoutOn(activityIndicator)
         
         let viewKeys : [String : AnyObject] =
             [
@@ -118,13 +130,15 @@ class TaskManagerViewController : ViewController, UITableViewDelegate, UITableVi
                 "lblCount" : lblCount,
                 "tableView" : tableView,
                 "topLayout" : topLayout,
-                "createTaskBtn" : createTaskBtn,
+                "btnCreateStickerTask" : btnCreateStickerTask,
+                "btnCreateTask" : btnCreateTask,
+                "btnCreateGPSLocationTask": btnCreateGPSLocationTask,
                 ]
         
         var allConstrins = [NSLayoutConstraint]()
         
         let verticalLayout = NSLayoutConstraint.constraints(
-            withVisualFormat: "V:[topLayout]-(20)-[createTaskBtn]-(20)-[lblTop]-[tableView]-(20)-|", options: NSLayoutFormatOptions.alignAllCenterX, metrics: nil, views: viewKeys)
+            withVisualFormat: "V:[topLayout]-(20)-[btnCreateTask]-(20)-[btnCreateStickerTask]-(20)-[btnCreateGPSLocationTask]-(20)-[lblTop]-[tableView]-(20)-|", options: NSLayoutFormatOptions.alignAllCenterX, metrics: nil, views: viewKeys)
         
         let horizintalTableConstrain = NSLayoutConstraint.constraints(
             withVisualFormat: "H:|-[tableView]-|", options: [], metrics: nil, views: viewKeys)
@@ -164,8 +178,6 @@ class TaskManagerViewController : ViewController, UITableViewDelegate, UITableVi
         
         cell?.textLabel?.text = textForCell
         cell?.accessoryType = UITableViewCellAccessoryType.disclosureIndicator;
-        _ = String.localizedStringWithFormat(Content.getContent(ContentType.labelTxt, name: "TaskManagerVCDetailsTxtCell"), (task.taskTime?.toStringWithCurrentRegion())! , task.nearableIdentifer)
-        
         cell?.contentView.backgroundColor = task.isTaskDone ? Colors.lightGreen() : UIColor.white
 
         return cell!
@@ -218,9 +230,9 @@ class TaskManagerViewController : ViewController, UITableViewDelegate, UITableVi
         self.navigationController?.pushViewController(addTaskConfirmationViewController!, animated: true)
     }
     
-    //MARK: Button press
+    //MARK: Create task
     
-    func createNewTask() {
+    func createNewStickerTask() {
         self.activityIndicator.startAnimating()
         self.iNearableServices.isThereNearableInErea { (result, nearable) -> Void in
             self.activityIndicator.stopAnimating()
@@ -234,8 +246,15 @@ class TaskManagerViewController : ViewController, UITableViewDelegate, UITableVi
                 return
             }
             
-            self.goToNextPage(nearable!)
+            self.currenctTaskCreator.startNewTask()
+            self.currenctTaskCreator.setTaskNearableIdentifer(nearable!.identifier)
+            self.goToNextPage()
         }
+    }
+    
+    func createNewTimeTask() {
+        self.currenctTaskCreator.startNewTask()
+        self.goToNextPage()
     }
     
     //MARK: Alerts
@@ -257,7 +276,10 @@ class TaskManagerViewController : ViewController, UITableViewDelegate, UITableVi
         let btnYes = UIAlertAction(title: btnYesTxt, style: UIAlertActionStyle.default) { (action : UIAlertAction) in
             let task = self.tasksServices.getTaskForNearableIdentifier(closestNearable.identifier)
             self.currenctTaskCreator.setCurrenctTask(task)
-            self.goToNextPage(closestNearable)
+            
+            self.currenctTaskCreator.startNewTask()
+            self.currenctTaskCreator.setTaskNearableIdentifer(closestNearable.identifier)
+            self.goToNextPage()
         }
         
         let btnNo = UIAlertAction(title: btnNoTxt, style: UIAlertActionStyle.cancel) { (action : UIAlertAction) in
@@ -269,9 +291,7 @@ class TaskManagerViewController : ViewController, UITableViewDelegate, UITableVi
     
     //MARK: Navgiation
     
-    func goToNextPage(_ closestNearable : ESTNearable) {
-        self.currenctTaskCreator.startNewTask()
-        self.currenctTaskCreator.setTaskNearableIdentifer(closestNearable.identifier)
+    func goToNextPage() {
         if let _ = self.addTaskTypeViewController {} else {
             self.addTaskTypeViewController = self.container.resolve(AddTaskTypeViewController.self)
         }

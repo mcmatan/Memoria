@@ -29,8 +29,10 @@ class NearableStriggerManager: NSObject, ESTTriggerManagerDelegate  {
     func registerForAllTasks() {
         let tasks = self.tasksDB.getAllTasks()
         let _ = tasks.map { task -> String in
-            self.startTrackingForMotion(identifer: task.nearableIdentifer)
-            return task.nearableIdentifer
+            if task.hasSticker() {
+                self.startTrackingForMotion(identifer: task.nearableIdentifer!)   
+            }
+            return task.nearableIdentifer!
         }
         
     }

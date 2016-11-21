@@ -1,10 +1,3 @@
-//
-//  NotificationsTextsBuilder.swift
-//  Memoria
-//
-//  Created by Matan Cohen on 13/11/2016.
-//  Copyright © 2016 MACMatan. All rights reserved.
-//
 
 import Foundation
 
@@ -14,6 +7,7 @@ struct NotificationText {
     let notificationTitle: String
     let notificationBody: String
 }
+
 
 class NotificationsTextsBuilder {
     
@@ -25,6 +19,13 @@ class NotificationsTextsBuilder {
             return self.drugs(localNotificationCategory: localNotificationCategory, taskDate: task.taskTime!)
         case TaskType.food:
             return self.food(localNotificationCategory: localNotificationCategory, taskDate: task.taskTime!)
+        case TaskType.wakeUp:
+            return self.wakeUp(localNotificationCategory: localNotificationCategory, taskDate: task.taskTime!)
+        case TaskType.goToWork:
+            return self.goToWork(localNotificationCategory: localNotificationCategory, taskDate: task.taskTime!)
+        case TaskType.goToGym:
+            return self.goToGym(localNotificationCategory: localNotificationCategory, taskDate: task.taskTime!)
+            
         }
     }
         
@@ -97,6 +98,79 @@ class NotificationsTextsBuilder {
             return NotificationText(popUpTitle: popUpTitle, popUpBody: body, notificationTitle: notificationTitle, notificationBody: body)
         case .done:
             let title = "Making dinner marked as done."
+            let body = ""
+            return NotificationText(popUpTitle: title, popUpBody: body, notificationTitle: title, notificationBody: body)
+        }
+    }
+    
+    static func wakeUp(localNotificationCategory: LocalNotificationCategotry, taskDate: Date)->NotificationText {
+        switch localNotificationCategory {
+        case .warning:
+            let title = ""
+            let body = ""
+            return NotificationText(popUpTitle: title, popUpBody: body, notificationTitle: title, notificationBody: body)
+        case .notification:
+            let goodTimeOfDayString = self.goodTimeOfDayString(date: taskDate)
+            let timeForString = self.itsTimeWithTime(date: taskDate)
+            let title = goodTimeOfDayString
+            let body = "\(timeForString). Time to wake up!"
+            return NotificationText(popUpTitle: title, popUpBody: body, notificationTitle: title, notificationBody: body)
+        case .verification:
+            let popUpTitle = ""
+            let notificationTitle = ""
+            let body = ""
+            return NotificationText(popUpTitle: popUpTitle, popUpBody: body, notificationTitle: notificationTitle, notificationBody: body)
+        case .done:
+            let title = ""
+            let body = ""
+            
+            return NotificationText(popUpTitle: title, popUpBody: body, notificationTitle: title, notificationBody: body)
+        }
+    }
+
+    static func goToWork(localNotificationCategory: LocalNotificationCategotry, taskDate: Date)->NotificationText {
+        switch localNotificationCategory {
+        case .warning:
+            let title = ""
+            let body = ""
+            return NotificationText(popUpTitle: title, popUpBody: body, notificationTitle: title, notificationBody: body)
+        case .notification:
+            let goodTimeOfDayString = self.goodTimeOfDayString(date: taskDate)
+            let timeForString = self.itsTimeWithTime(date: taskDate)
+            let title = goodTimeOfDayString
+            let body = "\(timeForString). Time to go to work"
+            return NotificationText(popUpTitle: title, popUpBody: body, notificationTitle: title, notificationBody: body)
+        case .verification:
+            let popUpTitle = ""
+            let notificationTitle = ""
+            let body = ""
+            return NotificationText(popUpTitle: popUpTitle, popUpBody: body, notificationTitle: notificationTitle, notificationBody: body)
+        case .done:
+            let title = ""
+            let body = ""
+            return NotificationText(popUpTitle: title, popUpBody: body, notificationTitle: title, notificationBody: body)
+        }
+    }
+    
+    static func goToGym(localNotificationCategory: LocalNotificationCategotry, taskDate: Date)->NotificationText {
+        switch localNotificationCategory {
+        case .warning:
+            let title = ""
+            let body = ""
+            return NotificationText(popUpTitle: title, popUpBody: body, notificationTitle: title, notificationBody: body)
+        case .notification:
+            let goodTimeOfDayString = self.goodTimeOfDayString(date: taskDate)
+            let timeForString = self.itsTimeWithTime(date: taskDate)
+            let title = goodTimeOfDayString
+            let body = "\(timeForString). Time to go to the gym"
+            return NotificationText(popUpTitle: title, popUpBody: body, notificationTitle: title, notificationBody: body)
+        case .verification:
+            let popUpTitle = ""
+            let notificationTitle = ""
+            let body = ""
+            return NotificationText(popUpTitle: popUpTitle, popUpBody: body, notificationTitle: notificationTitle, notificationBody: body)
+        case .done:
+            let title = ""
             let body = ""
             return NotificationText(popUpTitle: title, popUpBody: body, notificationTitle: title, notificationBody: body)
         }
