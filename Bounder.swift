@@ -12,6 +12,10 @@ import RxSwift
 import RxCocoa
 import Kingfisher
 
+/*
+ Support both UIImage and URL to download
+ */
+
 class Bounder {
     static func bound(view: Any, toViewModel: Any) {
         

@@ -38,6 +38,7 @@ class NearableLocator:NSObject, ESTNearableManagerDelegate {
     }
     
     func nearableManager(_ manager: ESTNearableManager, didRangeNearables nearables: [ESTNearable], with type: ESTNearableType) {
+        
         self.closeNearable = nil
         for nearable in nearables {
             if nearable.zone() == ESTNearableZone.immediate {
