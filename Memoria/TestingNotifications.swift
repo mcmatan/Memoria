@@ -33,9 +33,9 @@ class TestingNotifications {
     }
     
     @objc func showSingleGrugWarning() {
-        let task = Task(taskType: TaskType.drugs, taskTime: Date(), nearableIdentifer: "", taskTimePriorityHi: true, isTaskDone: false)
+      //  let task = Task(taskType: TaskType.drugs, taskTime: Date(), nearableIdentifer: "", taskTimePriorityHi: true, isTaskDone: false)
         
-        self.localNotificationScheduler.scheduleLocalNotificationForTask(task: task, localNotificationCategotry: LocalNotificationCategotry.warning)
+//        self.localNotificationScheduler.scheduleLocalNotificationForTask(task: task, localNotificationCategotry: LocalNotificationCategotry.warning)
     }
     
     //Verification:
@@ -45,9 +45,9 @@ class TestingNotifications {
     }
     
     @objc func showSingleGrugVerification() {
-        let task = Task(taskType: TaskType.drugs, taskTime: Date(), nearableIdentifer:"", taskTimePriorityHi: true, isTaskDone: false)
+     //   let task = Task(taskType: TaskType.drugs, taskTime: Date(), nearableIdentifer:"", taskTimePriorityHi: true, isTaskDone: false)
         
-        self.localNotificationScheduler.scheduleLocalNotificationForTask(task: task, localNotificationCategotry: LocalNotificationCategotry.verification)
+//        self.localNotificationScheduler.scheduleLocalNotificationForTask(task: task, localNotificationCategotry: LocalNotificationCategotry.verification)
     }
     
     //Notification 
@@ -57,8 +57,8 @@ class TestingNotifications {
     }
     
     @objc func showSingleGrugNotification() {
-        let task = Task(taskType: TaskType.drugs, taskTime: Date(), nearableIdentifer: "", taskTimePriorityHi: true, isTaskDone: false)
+   //     let task = Task(taskType: TaskType.drugs, taskTime: Date(), nearableIdentifer: "", taskTimePriorityHi: true, isTaskDone: false)
         
-        self.localNotificationScheduler.scheduleLocalNotificationForTask(task: task, localNotificationCategotry: LocalNotificationCategotry.notification)
+//        self.localNotificationScheduler.scheduleLocalNotificationForTask(task: task, localNotificationCategotry: LocalNotificationCategotry.notification)
     }
 }

@@ -144,6 +144,8 @@
 		90F00A001C4A7B73002C98BA /* TasksDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F009FF1C4A7B73002C98BA /* TasksDB.swift */; };
 		90F00A0D1C4A7C25002C98BA /* TasksServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F00A0C1C4A7C25002C98BA /* TasksServices.swift */; };
 		90F00A0F1C4A7C2F002C98BA /* IBeaconServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F00A0E1C4A7C2F002C98BA /* IBeaconServices.swift */; };
+		90F4E2131DE46DEA00218DAF /* RepeateOnDates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F4E2121DE46DEA00218DAF /* RepeateOnDates.swift */; };
+		90F4E2151DE479C300218DAF /* CompleateOnDates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F4E2141DE479C300218DAF /* CompleateOnDates.swift */; };
 		B92DC516395A9D906DE0E162 /* Pods_Memoria.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE2216E1B6AD497467804F14 /* Pods_Memoria.framework */; };
 		EE76AB32A0992B34963CCDBB /* Pods_MemoriaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54BE932400BB9F6741D73728 /* Pods_MemoriaUITests.framework */; };
 /* End PBXBuildFile section */
@@ -356,6 +358,8 @@
 		90F00A021C4A7BB2002C98BA /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		90F00A0C1C4A7C25002C98BA /* TasksServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksServices.swift; sourceTree = "<group>"; };
 		90F00A0E1C4A7C2F002C98BA /* IBeaconServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBeaconServices.swift; sourceTree = "<group>"; };
+		90F4E2121DE46DEA00218DAF /* RepeateOnDates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepeateOnDates.swift; sourceTree = "<group>"; };
+		90F4E2141DE479C300218DAF /* CompleateOnDates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompleateOnDates.swift; sourceTree = "<group>"; };
 		AE2216E1B6AD497467804F14 /* Pods_Memoria.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Memoria.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C63E54DC6EDD468C89232C63 /* Pods_MemoriaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MemoriaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDD77D9E984A3EDA2AE776FD /* Pods-Memoria.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Memoria.release.xcconfig"; path = "Pods/Target Support Files/Pods-Memoria/Pods-Memoria.release.xcconfig"; sourceTree = "<group>"; };
@@ -500,6 +504,8 @@
 			isa = PBXGroup;
 			children = (
 				90F00A021C4A7BB2002C98BA /* Task.swift */,
+				90F4E2121DE46DEA00218DAF /* RepeateOnDates.swift */,
+				90F4E2141DE479C300218DAF /* CompleateOnDates.swift */,
 			);
 			name = Task;
 			sourceTree = "<group>";
@@ -1478,6 +1484,7 @@
 			files = (
 				9035FE2C1C1ECFC300D98022 /* TextField.swift in Sources */,
 				90C7AB031DD2397300185630 /* TaskActionsPerformaer.swift in Sources */,
+				90F4E2131DE46DEA00218DAF /* RepeateOnDates.swift in Sources */,
 				9019EBF01C99F3B3008962A5 /* TaskNotificationsTracker.swift in Sources */,
 				9035FE171C1B17BA00D98022 /* Content.swift in Sources */,
 				9011272F1C1AFBE20088DD6B /* Bootstrapper.swift in Sources */,
@@ -1504,6 +1511,7 @@
 				9035C6C71C20225300088434 /* TableView.swift in Sources */,
 				902546161DD62FDC00D53C58 /* FireBaseCoreWrapper.swift in Sources */,
 				902E9AE71DD2010100282AB7 /* LocalNotificationActions.swift in Sources */,
+				90F4E2151DE479C300218DAF /* CompleateOnDates.swift in Sources */,
 				90719A0A1DDBCEC100852BA3 /* ViewModel.swift in Sources */,
 				901349861DB4C8B0005FA445 /* IBeaconCloud.swift in Sources */,
 				901EC5C61DDBCBBF00AF2728 /* Operators.swift in Sources */,

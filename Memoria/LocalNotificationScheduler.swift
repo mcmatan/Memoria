@@ -20,17 +20,13 @@ class LocalNotificationScheduler {
     }
     
     func squeduleReminderForTask(_ task : Task) {
-        self.squeduleReminderForTask(task, date: task.taskTime!)
+        self.scheduleLocalNotificationForTask(task: task, localNotificationCategotry: LocalNotificationCategotry.notification)
     }
     
-    func squeduleReminderForTask(_ task : Task, date: Date) {
-        self.scheduleLocalNotificationForTask(task: task, localNotificationCategotry: LocalNotificationCategotry.notification, date: date)
-    }
-    
-    func scheduleLocalNotificationForTask(task: Task, localNotificationCategotry:  LocalNotificationCategotry, date: Date = Date()) {
+    func scheduleLocalNotificationForTask(task: Task, localNotificationCategotry:  LocalNotificationCategotry) {
         switch localNotificationCategotry {
         case LocalNotificationCategotry.notification:
-            self.scheduleNotification(task: task, date: date)
+            self.scheduleNotification(task: task)
         case LocalNotificationCategotry.warning:
             self.scheduleWarning(task: task)
         case LocalNotificationCategotry.verification:
@@ -39,7 +35,7 @@ class LocalNotificationScheduler {
         }
     }
     
-    func scheduleNotification(task: Task, date: Date = Date()) {
+    func scheduleNotification(task: Task) {
         let localNotificationCategory = LocalNotificationCategotry.notification
         let notificationText = NotificationsTextsBuilder.getNotificationText(task: task, localNotificationCategory: localNotificationCategory)
         
@@ -54,37 +50,37 @@ class LocalNotificationScheduler {
             task: task)
     }
     
-    func scheduleWarning(task: Task) {
-        let localNotificationCategory = LocalNotificationCategotry.warning
-        let notificationText = NotificationsTextsBuilder.getNotificationText(task: task, localNotificationCategory: localNotificationCategory)
-        
-        self.scheduleNotification(
-            title: notificationText.notificationTitle,
-            subtitle: "",
-            body: notificationText.notificationBody,
-            localNotificationCategory: localNotificationCategory,
-            date: nil,
-            sound: task.taskType.soundURL(localNotificationCategotry: localNotificationCategory),
-            imageURL: task.taskType.imageURL(localNotificationCategory: localNotificationCategory),
-            task: task)
-        
-    }
-    
-    func scheduleVerification(task: Task) {
-        let localNotificationCategory = LocalNotificationCategotry.verification
-        let notificationText = NotificationsTextsBuilder.getNotificationText(task: task, localNotificationCategory: localNotificationCategory)
-        
-        self.scheduleNotification(
-            title: notificationText.notificationTitle,
-            subtitle: "",
-            body: notificationText.notificationBody,
-            localNotificationCategory: localNotificationCategory,
-            date: nil,
-            sound: task.taskType.soundURL(localNotificationCategotry: localNotificationCategory),
-            imageURL: task.taskType.imageURL(localNotificationCategory: localNotificationCategory),
-            task: task)
-
-    }
+//    func scheduleWarning(task: Task) {
+//        let localNotificationCategory = LocalNotificationCategotry.warning
+//        let notificationText = NotificationsTextsBuilder.getNotificationText(task: task, localNotificationCategory: localNotificationCategory)
+//        
+//        self.scheduleNotification(
+//            title: notificationText.notificationTitle,
+//            subtitle: "",
+//            body: notificationText.notificationBody,
+//            localNotificationCategory: localNotificationCategory,
+//            date: nil,
+//            sound: task.taskType.soundURL(localNotificationCategotry: localNotificationCategory),
+//            imageURL: task.taskType.imageURL(localNotificationCategory: localNotificationCategory),
+//            task: task)
+//        
+//    }
+//    
+//    func scheduleVerification(task: Task) {
+//        let localNotificationCategory = LocalNotificationCategotry.verification
+//        let notificationText = NotificationsTextsBuilder.getNotificationText(task: task, localNotificationCategory: localNotificationCategory)
+//        
+//        self.scheduleNotification(
+//            title: notificationText.notificationTitle,
+//            subtitle: "",
+//            body: notificationText.notificationBody,
+//            localNotificationCategory: localNotificationCategory,
+//            date: nil,
+//            sound: task.taskType.soundURL(localNotificationCategotry: localNotificationCategory),
+//            imageURL: task.taskType.imageURL(localNotificationCategory: localNotificationCategory),
+//            task: task)
+//
+//    }
 
     func scheduleNotification(title: String, subtitle: String, body: String, localNotificationCategory: LocalNotificationCategotry, date: Date?, sound: URL?, imageURL: URL?, task: Task) {
         

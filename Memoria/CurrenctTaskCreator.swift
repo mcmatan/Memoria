@@ -11,12 +11,11 @@ import SwiftDate
 
 class CurrenctTaskCreator {
     
+    var task = CurrenctTaskCreator.emptyTask()
+    
     class func emptyTask()->Task {
         return  Task(taskType: TaskType.drugs, taskTime: nil, nearableIdentifer: nil, taskTimePriorityHi: false ,isTaskDone: false)
     }
-    
-    var task = CurrenctTaskCreator.emptyTask()
-    
     
     func startNewTask() {
         self.task = CurrenctTaskCreator.emptyTask()

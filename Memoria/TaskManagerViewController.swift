@@ -22,7 +22,7 @@ class TaskManagerViewController : ViewController, UITableViewDelegate, UITableVi
     let iNearableServices : NearableServices
     let lblCount = Label()
     var addTaskTypeViewController: AddTaskTypeViewController?
-    let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.whiteLarge)
+    //let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.whiteLarge)
     var tasksChangedListener: EventListener<Any>!
 
     
@@ -89,20 +89,20 @@ class TaskManagerViewController : ViewController, UITableViewDelegate, UITableVi
         let doneButton = UIBarButtonItem(title: Content.getContent(ContentType.buttonTxt, name: "Done"), style: UIBarButtonItemStyle.done, target: self, action: #selector(TaskManagerViewController.doneButtonPress))
         self.navigationItem.rightBarButtonItem = doneButton
         
-        let btnCreateStickerTask = Button()
-        btnCreateStickerTask.defaultStyle()
-        btnCreateStickerTask.setTitle(Content.getContent(ContentType.labelTxt, name: "TaskManagerCreateStickerTask"), for: UIControlState())
-        btnCreateStickerTask.addTarget(self, action: #selector(TaskManagerViewController.createNewStickerTask), for: UIControlEvents.touchUpInside)
+//        let btnCreateStickerTask = Button()
+//        btnCreateStickerTask.defaultStyle()
+//        btnCreateStickerTask.setTitle(Content.getContent(ContentType.labelTxt, name: "TaskManagerCreateStickerTask"), for: UIControlState())
+//        btnCreateStickerTask.addTarget(self, action: #selector(TaskManagerViewController.createNewStickerTask), for: UIControlEvents.touchUpInside)
         
         let btnCreateTask = Button()
         btnCreateTask.defaultStyle()
         btnCreateTask.setTitle(Content.getContent(ContentType.labelTxt, name: "TaskManagerCreateTask"), for: UIControlState())
         btnCreateTask.addTarget(self, action: #selector(TaskManagerViewController.createNewTimeTask), for: UIControlEvents.touchUpInside)
         
-        let btnCreateGPSLocationTask = Button()
-        btnCreateGPSLocationTask.defaultStyle()
-        btnCreateGPSLocationTask.setTitle(Content.getContent(ContentType.labelTxt, name: "TaskManagerCreateGPSLocationTask"), for: UIControlState())
-        btnCreateGPSLocationTask.addTarget(self, action: #selector(TaskManagerViewController.createNewStickerTask), for: UIControlEvents.touchUpInside)
+//        let btnCreateGPSLocationTask = Button()
+//        btnCreateGPSLocationTask.defaultStyle()
+//        btnCreateGPSLocationTask.setTitle(Content.getContent(ContentType.labelTxt, name: "TaskManagerCreateGPSLocationTask"), for: UIControlState())
+//        btnCreateGPSLocationTask.addTarget(self, action: #selector(TaskManagerViewController.createNewStickerTask), for: UIControlEvents.touchUpInside)
         
         let lblTop = Label()
         lblTop.defaultyTitle()
@@ -116,13 +116,13 @@ class TaskManagerViewController : ViewController, UITableViewDelegate, UITableVi
         
         let topLayout = self.topLayoutGuide
         
-        self.view.addSubviewWithAutoLayoutOn(btnCreateStickerTask)
+        //self.view.addSubviewWithAutoLayoutOn(btnCreateStickerTask)
         self.view.addSubviewWithAutoLayoutOn(btnCreateTask)
-        self.view.addSubviewWithAutoLayoutOn(btnCreateGPSLocationTask)
+        //self.view.addSubviewWithAutoLayoutOn(btnCreateGPSLocationTask)
         self.view.addSubviewWithAutoLayoutOn(lblTop)
         self.view.addSubviewWithAutoLayoutOn(tableView)
         self.view.addSubviewWithAutoLayoutOn(lblCount)
-        btnCreateStickerTask.addSubviewWithAutoLayoutOn(activityIndicator)
+        //btnCreateStickerTask.addSubviewWithAutoLayoutOn(activityIndicator)
         
         let viewKeys : [String : AnyObject] =
             [
@@ -130,15 +130,15 @@ class TaskManagerViewController : ViewController, UITableViewDelegate, UITableVi
                 "lblCount" : lblCount,
                 "tableView" : tableView,
                 "topLayout" : topLayout,
-                "btnCreateStickerTask" : btnCreateStickerTask,
+                //"btnCreateStickerTask" : btnCreateStickerTask,
                 "btnCreateTask" : btnCreateTask,
-                "btnCreateGPSLocationTask": btnCreateGPSLocationTask,
+                //"btnCreateGPSLocationTask": btnCreateGPSLocationTask,
                 ]
         
         var allConstrins = [NSLayoutConstraint]()
         
         let verticalLayout = NSLayoutConstraint.constraints(
-            withVisualFormat: "V:[topLayout]-(20)-[btnCreateTask]-(20)-[btnCreateStickerTask]-(20)-[btnCreateGPSLocationTask]-(20)-[lblTop]-[tableView]-(20)-|", options: NSLayoutFormatOptions.alignAllCenterX, metrics: nil, views: viewKeys)
+            withVisualFormat: "V:[topLayout]-(20)-[btnCreateTask]-(20)-[lblTop]-[tableView]-(20)-|", options: NSLayoutFormatOptions.alignAllCenterX, metrics: nil, views: viewKeys)
         
         let horizintalTableConstrain = NSLayoutConstraint.constraints(
             withVisualFormat: "H:|-[tableView]-|", options: [], metrics: nil, views: viewKeys)
@@ -154,8 +154,8 @@ class TaskManagerViewController : ViewController, UITableViewDelegate, UITableVi
         allConstrins += horizintalTopLblConstrain
         
         NSLayoutConstraint.activate(allConstrins)
-        UIViewAutoLayoutExtentions.centerVerticlyAlViewsInSuperView([activityIndicator])
-        UIViewAutoLayoutExtentions.centerVerticalyAlViewsInSuperView([activityIndicator])
+        //UIViewAutoLayoutExtentions.centerVerticlyAlViewsInSuperView([activityIndicator])
+        //UIViewAutoLayoutExtentions.centerVerticalyAlViewsInSuperView([activityIndicator])
         
         
         self.tableView.delegate = self
@@ -232,25 +232,25 @@ class TaskManagerViewController : ViewController, UITableViewDelegate, UITableVi
     
     //MARK: Create task
     
-    func createNewStickerTask() {
-        self.activityIndicator.startAnimating()
-        self.iNearableServices.isThereNearableInErea { (result, nearable) -> Void in
-            self.activityIndicator.stopAnimating()
-            if result == false {
-                self.showNoNearableInEreaMessage()
-                return
-            }
-            
-            if self.iNearableServices.isNearableAlreadyHasATaskAssigned(nearable!) == true {
-                self.showNearableHasAlreadyTaskAssignedMessage(nearable!)
-                return
-            }
-            
-            self.currenctTaskCreator.startNewTask()
-            self.currenctTaskCreator.setTaskNearableIdentifer(nearable!.identifier)
-            self.goToNextPage()
-        }
-    }
+//    func createNewStickerTask() {
+//        self.activityIndicator.startAnimating()
+//        self.iNearableServices.isThereNearableInErea { (result, nearable) -> Void in
+//            self.activityIndicator.stopAnimating()
+//            if result == false {
+//                self.showNoNearableInEreaMessage()
+//                return
+//            }
+//            
+//            if self.iNearableServices.isNearableAlreadyHasATaskAssigned(nearable!) == true {
+//                self.showNearableHasAlreadyTaskAssignedMessage(nearable!)
+//                return
+//            }
+//            
+//            self.currenctTaskCreator.startNewTask()
+//            self.currenctTaskCreator.setTaskNearableIdentifer(nearable!.identifier)
+//            self.goToNextPage()
+//        }
+//    }
     
     func createNewTimeTask() {
         self.currenctTaskCreator.startNewTask()
