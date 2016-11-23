@@ -152,7 +152,7 @@ class TaskManagerViewController : ViewController, UITableViewDelegate, UITableVi
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let task = self.allTasks[(indexPath as NSIndexPath).row]
-        let textForCell = Content.getContent(ContentType.labelTxt, name: "TaskManagerVCTaskNameCell") + " " + task.taskType.name()
+        let textForCell = task.taskType.name()
         let cellIdentifier = "Cell"
         
         var cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) 
@@ -210,8 +210,10 @@ class TaskManagerViewController : ViewController, UITableViewDelegate, UITableVi
         let task = self.allTasks[(indexPath as NSIndexPath).row]
         self.currenctTaskCreator.setCurrenctTask(task)
         
-//        let addTaskConfirmationViewController = self.container.resolve(AddTaskConfirmationViewController.self)
-//        self.navigationController?.pushViewController(addTaskConfirmationViewController!, animated: true)
+        let dic = task.toAnyObject() as? Dictionary<String, Any>
+        
+        Events.shared.showAlert.emit((dic?.description)!)
+
     }
 
     func createNewTimeTask() {
