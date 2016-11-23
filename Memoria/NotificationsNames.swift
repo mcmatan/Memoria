@@ -25,4 +25,6 @@ class Events {
     
     let playSound = Event<Task>()
     let markTaskAsDone = Event<Task>()
+    
+    let showAlert = Event<String>()
 }

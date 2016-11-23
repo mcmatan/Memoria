@@ -42,5 +42,10 @@ open class AssemblyLogin {
                 logInViewController: container.resolve(LogInViewController.self)!
             )
         }
+        
+        container.register(AlertPresenter.self) { c in
+            return AlertPresenter()
+        }.inObjectScope(.container)
+        let _ = container.resolve(AlertPresenter.self)
     }
 }

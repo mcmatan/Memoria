@@ -28,7 +28,7 @@ struct Time {
     
     init(string: String) {
         self.timeString = string
-        timeDateFormatter.dateFormat = "hh:mm"
+        timeDateFormatter.dateFormat = "HH:mm"
         let date = timeDateFormatter.date(from: string)
         self.hour = (date?.hour)!
         self.minute = (date?.minute)!

@@ -23,8 +23,8 @@ enum TaskPropNames: String {
 class Task : NSObject {
     var nearableIdentifer : String?
     var taskType: TaskType
-    var repeateOnDates: RepeateOnDates
-    var compleateOnDates: CompleateOnDates
+    var repeateOnDates = RepeateOnDates()
+    var compleateOnDates = CompleateOnDates()
     let uid: String
     
     func hasSticker() -> Bool {
@@ -40,8 +40,15 @@ class Task : NSObject {
         
         self.nearableIdentifer = snapshotValue[TaskPropNames.nearableIdentifer.rawValue] as? String
         self.taskType = TaskType(rawValue: snapshotValue[TaskPropNames.taskType.rawValue] as! String)!
-        self.repeateOnDates = RepeateOnDates(dic: snapshotValue[TaskPropNames.repeateOnDates.rawValue] as! [String : [String]])
-        self.compleateOnDates = CompleateOnDates(dic: snapshotValue[TaskPropNames.compleateOnDates.rawValue] as! [String : [String]])
+        
+        if let isCompleatedOnDates = snapshotValue[TaskPropNames.compleateOnDates.rawValue] as? [String : [String]] {
+            self.compleateOnDates = CompleateOnDates(dic: isCompleatedOnDates)
+        }
+        
+        if let isRepeateOnDates = snapshotValue[TaskPropNames.repeateOnDates.rawValue] as? [String : [String]] {
+            self.repeateOnDates = RepeateOnDates(dic: isRepeateOnDates)
+        }
+        
         self.uid = snapshotValue[TaskPropNames.uid.rawValue] as! String
     }
     

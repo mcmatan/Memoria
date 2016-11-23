@@ -29,6 +29,10 @@ class CurrenctTaskCreator {
         self.task = task
     }
     
+    func setRepeateOnDates(withDayAndTime: (days: [Day], times: [Time])) {
+        self.task.repeateOnDates = RepeateOnDates(withDayAndTime: withDayAndTime)
+    }
+    
     //MARK: Setters
     
     func setTaskNearableIdentifer(_ nearableIdentifer : String) {
@@ -38,7 +42,6 @@ class CurrenctTaskCreator {
     func setTaskType(type: TaskType) {
         self.task.taskType = type
     }
-
 
     //MARK: Getters
     

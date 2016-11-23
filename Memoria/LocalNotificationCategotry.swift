@@ -63,7 +63,7 @@ enum TaskType: String {
     }
 
     func imageURL()->URL {
-        let color = "blue"
+        let color = "Blue"
 
             switch self {
             case .brushTeeth:

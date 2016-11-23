@@ -88,6 +88,8 @@
 		903181B21DE5D47800044330 /* DayTimeRepeatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903181B11DE5D47800044330 /* DayTimeRepeatePicker.swift */; };
 		903181B41DE5D5B900044330 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903181B31DE5D5B900044330 /* Time.swift */; };
 		903181B61DE5D5CA00044330 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903181B51DE5D5CA00044330 /* Day.swift */; };
+		903181B81DE5E6EA00044330 /* WeekRepeat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903181B71DE5E6EA00044330 /* WeekRepeat.swift */; };
+		903181BA1DE5ED4000044330 /* AlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903181B91DE5ED4000044330 /* AlertPresenter.swift */; };
 		903326521DE32C8900AEF254 /* goToGym-notification.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 9033264F1DE32C8900AEF254 /* goToGym-notification.aiff */; };
 		903326531DE32C8900AEF254 /* goToWork-notification.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 903326501DE32C8900AEF254 /* goToWork-notification.aiff */; };
 		903326541DE32C8900AEF254 /* wakeUp-notification.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 903326511DE32C8900AEF254 /* wakeUp-notification.aiff */; };
@@ -293,6 +295,8 @@
 		903181B11DE5D47800044330 /* DayTimeRepeatePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayTimeRepeatePicker.swift; sourceTree = "<group>"; };
 		903181B31DE5D5B900044330 /* Time.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
 		903181B51DE5D5CA00044330 /* Day.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
+		903181B71DE5E6EA00044330 /* WeekRepeat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekRepeat.swift; sourceTree = "<group>"; };
+		903181B91DE5ED4000044330 /* AlertPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertPresenter.swift; sourceTree = "<group>"; };
 		9033264F1DE32C8900AEF254 /* goToGym-notification.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "goToGym-notification.aiff"; sourceTree = "<group>"; };
 		903326501DE32C8900AEF254 /* goToWork-notification.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "goToWork-notification.aiff"; sourceTree = "<group>"; };
 		903326511DE32C8900AEF254 /* wakeUp-notification.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "wakeUp-notification.aiff"; sourceTree = "<group>"; };
@@ -735,6 +739,7 @@
 		903B30D71DCFAED10015C6FA /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
+				903181B91DE5ED4000044330 /* AlertPresenter.swift */,
 				90F009F91C4A7B0B002C98BA /* TasksNotificationsPresenter.swift */,
 				90E739E91DD24727008A7FA9 /* NotificationScheduler */,
 			);
@@ -984,6 +989,7 @@
 				90B7D3D41DDC8FE20095BF6A /* User.swift */,
 				903181B31DE5D5B900044330 /* Time.swift */,
 				903181B51DE5D5CA00044330 /* Day.swift */,
+				903181B71DE5E6EA00044330 /* WeekRepeat.swift */,
 			);
 			name = Entities;
 			sourceTree = "<group>";
@@ -1432,6 +1438,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9035FE2C1C1ECFC300D98022 /* TextField.swift in Sources */,
+				903181BA1DE5ED4000044330 /* AlertPresenter.swift in Sources */,
 				90C7AB031DD2397300185630 /* TaskActionsPerformaer.swift in Sources */,
 				90F4E2131DE46DEA00218DAF /* RepeateOnDates.swift in Sources */,
 				9035FE171C1B17BA00D98022 /* Content.swift in Sources */,
@@ -1487,6 +1494,7 @@
 				906648ED1DCB64B600896220 /* BackgroundTask.swift in Sources */,
 				90CE2AF71CF4E6A200511ED4 /* Fonts.swift in Sources */,
 				903181B21DE5D47800044330 /* DayTimeRepeatePicker.swift in Sources */,
+				903181B81DE5E6EA00044330 /* WeekRepeat.swift in Sources */,
 				9035FE1B1C1B2B1D00D98022 /* ViewController.swift in Sources */,
 				90DC620C1C6F62BB000C4457 /* DictionaryExntentions.swift in Sources */,
 				90F009F71C4A7AE2002C98BA /* NotificationsNames.swift in Sources */,

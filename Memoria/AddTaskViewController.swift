@@ -16,6 +16,7 @@ class AddTaskViewController: ViewController {
     var pickerWithBlock: UIPickerWithBlock?
     let currentTaskCreator: CurrenctTaskCreator
     let taskServices: TasksServices
+    var choosenTaskType: TaskType?
     
     init(currentTaskCreator: CurrenctTaskCreator, taskServices: TasksServices) {
         self.currentTaskCreator = currentTaskCreator
@@ -49,6 +50,8 @@ class AddTaskViewController: ViewController {
         
         btnCreate.bottomAlighnToViewBottom(view, offset: -20)
         btnCreate.centerHorizontlyInSuperView()
+        
+        self.btnCreate.addTarget(self, action: #selector(btnCreatePress), for: UIControlEvents.touchUpInside)
     }
     
     func btnChooseTaskTypePress() {
@@ -72,13 +75,28 @@ class AddTaskViewController: ViewController {
                 print("No Task title has match")
                 choosenTaskType = TaskType.food
             }
-            
+            self.choosenTaskType = choosenTaskType
             self.btnTaskType.setTitle(title, for: UIControlState.normal)
-            self.currentTaskCreator.setTaskType(type: choosenTaskType)
+            
         }
     }
     
     func btnCreatePress() {
+        
+        guard let didChooseType = self.choosenTaskType else {
+            Events.shared.showAlert.emit("Please choose -type-")
+            return
+        }
+        
+        let daysAndTimes = self.dayTimeRepeatePicker.getSelected()
+        if (daysAndTimes.days.count == 0 || daysAndTimes.times.count == 0) {
+            Events.shared.showAlert.emit("Please choose at least one day and one time to repeat")
+            return
+        }
+        
+        self.currentTaskCreator.setRepeateOnDates(withDayAndTime: daysAndTimes)
+        self.currentTaskCreator.setTaskType(type: didChooseType)
+        
         self.taskServices.saveTask(self.currentTaskCreator.getCurrenctTask())
         
         let _ = self.navigationController?.popToRootViewController(animated: true)
