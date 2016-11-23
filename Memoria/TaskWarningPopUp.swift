@@ -61,9 +61,9 @@ class TaskWarningPopUp : ViewController {
         imgError.setHeightAs(117)
         imgError.topToViewControllerTopLayoutGuide(self, offset: 70)
         
-        let notificationText = NotificationsTextsBuilder.getNotificationText(task: task, localNotificationCategory: LocalNotificationCategotry.warning)
+        let notificationText = NotificationsTextsBuilder.getNotificationText(task: task)
 
-        self.lblYouAllreadyTook.text = notificationText.popUpTitle
+        self.lblYouAllreadyTook.text = notificationText.title
         self.lblYouAllreadyTook.font = UIFont.systemFont(ofSize: 26)
         self.lblYouAllreadyTook.numberOfLines = 2
         self.lblYouAllreadyTook.textAlignment = NSTextAlignment.center
@@ -74,7 +74,7 @@ class TaskWarningPopUp : ViewController {
         self.lblYouAllreadyTook.trailingToSuperView(true)
 
 
-        self.lblBeCareful.text = notificationText.popUpBody
+        self.lblBeCareful.text = notificationText.body
         self.lblBeCareful.titleGray()
         self.lblBeCareful.font = UIFont.systemFont(ofSize: 24)
         self.lblBeCareful.textAlignment = NSTextAlignment.center
@@ -102,7 +102,7 @@ class TaskWarningPopUp : ViewController {
     //MARK: Actions
     
     func playSound() {
-        NotificationCenter.default.post(name: NotificationsNames.kTask_Action_playSound, object: TaskActionDTO(task: self.task, localNotificationCategort: LocalNotificationCategotry.warning))
+           Events.shared.playSound.emit(task)
     }
     
     //MARK: Buttons

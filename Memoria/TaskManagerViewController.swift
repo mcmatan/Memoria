@@ -22,8 +22,9 @@ class TaskManagerViewController : ViewController, UITableViewDelegate, UITableVi
     let iNearableServices : NearableServices
     let lblCount = Label()
     var addTaskTypeViewController: AddTaskTypeViewController?
-    //let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.whiteLarge)
+    
     var tasksChangedListener: EventListener<Any>!
+    var taskMarkedAsDoneListener: EventListener<Any>?
 
     
     init(tasksServices : TasksServices, currenctTaskCreator : CurrenctTaskCreator, container : Container, iNearableServices : NearableServices) {
@@ -32,7 +33,10 @@ class TaskManagerViewController : ViewController, UITableViewDelegate, UITableVi
         self.container = container
         self.iNearableServices = iNearableServices
         super.init(nibName: nil, bundle: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(TaskManagerViewController.reloadTable), name: NSNotification.Name(rawValue: NotificationsNames.kTaskDone), object: nil)
+        
+        self.tasksChangedListener = Events.shared.taskMarkedAsDone.on({ task in
+            self.reloadTable()
+        })
     }
 
     required init?(coder aDecoder: NSCoder) {

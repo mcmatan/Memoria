@@ -73,7 +73,7 @@ open class AssemblyMainApplicationUI {
             return TasksNotificationsPresenter(
                 iNearableServices:  container.resolve(NearableServices.self)! ,
                 container: container,
-                localNotificationScheduler: container.resolve(LocalNotificationScheduler.self)!,
+                notificationScheduler: container.resolve(NotificationScheduler.self)!,
                 mainApplicationViewController : container.resolve(NavigationController.self)!
             )
             }.inObjectScope(ObjectScope.container)

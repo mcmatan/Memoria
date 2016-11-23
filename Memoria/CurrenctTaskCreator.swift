@@ -30,13 +30,6 @@ class CurrenctTaskCreator {
     }
     
     //MARK: Setters
-
-    func setTaskTime(_ date : Date) {
-        if Date() < date {
-            self.task.isTaskDone = false
-        }
-        self.task.taskTime = date
-    }
     
     func setTaskNearableIdentifer(_ nearableIdentifer : String) {
         self.task.nearableIdentifer = nearableIdentifer
@@ -52,10 +45,6 @@ class CurrenctTaskCreator {
 
 
     //MARK: Getters
-    
-    func getTaskTime()->Date? {
-        return self.task.taskTime
-    }
     
     func getTaskNearableIdentifer()->String? {
         return self.task.nearableIdentifer

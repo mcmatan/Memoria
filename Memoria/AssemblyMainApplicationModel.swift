@@ -28,35 +28,21 @@ open class AssemblyMainApplicationModel {
                                    tasksDB:container.resolve(TasksDB.self)!)
         }.inObjectScope(ObjectScope.container)
         
-        container.register(TaskNotificationsTracker.self) { c in
-            return TaskNotificationsTracker(
-                taskDB: container.resolve(TasksDB.self)!,
-                nearableStriggerManager: container.resolve(NearableStriggerManager.self)!)
-            }.inObjectScope(ObjectScope.container)
-        let _ = container.resolve(TaskNotificationsTracker.self)
         
-        container.register(LocalNotificationScheduler.self) { c in
-            return LocalNotificationScheduler()
+        container.register(NotificationScheduler.self) { c in
+            return NotificationScheduler()
             }.inObjectScope(ObjectScope.container)
 
         container.register(TasksServices.self) { c in
             return TasksServices(tasksDB: container.resolve(TasksDB.self)!,
-                taskNotificationsTracker: container.resolve(TaskNotificationsTracker.self)!,
                 nearableStriggerManager: container.resolve(NearableStriggerManager.self)!,
-                localNotificationScheduler: container.resolve(LocalNotificationScheduler.self)!
+                notificationScheduler: container.resolve(NotificationScheduler.self)!
             )
         }.inObjectScope(ObjectScope.container)
 
         container.register(CurrenctTaskCreator.self) { c in
             return CurrenctTaskCreator()
             }.inObjectScope(ObjectScope.container)
-        
-        container.register(TestingNotifications.self) { c in
-            return TestingNotifications(
-                localNotificationScheduler: container.resolve(LocalNotificationScheduler.self)!
-            )
-            }.inObjectScope(ObjectScope.container)
-        let _ = container.resolve(TestingNotifications.self)
         
         container.register(TaskActionsPerformer.self) { c in
             return TaskActionsPerformer(

@@ -25,14 +25,6 @@ class AddTaskTimeViewController : ViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.title = self.currenctTaskCreator.task.taskType.name()
-        if let isTimes = currenctTaskCreator.getTaskTime() {
-            self.chosenTime = isTimes as Date
-            self.setTimeToDisplay(isTimes as Date)
-        }else {
-            let minumunDate = self.getMinimunDate()
-            self.chosenTime = minumunDate as Date
-            self.setTimeToDisplay(minumunDate as Date)
-        }
     }
     
     override func viewDidLoad() {
@@ -112,8 +104,6 @@ class AddTaskTimeViewController : ViewController {
     }
 
     func doneBtnPress() {
-        
-        self.currenctTaskCreator.setTaskTime(self.chosenTime)
     
         if let _ = self.addTaskTimePriorityController {} else {
             self.addTaskTimePriorityController =  self.container.resolve(AddTaskTimePriorityController.self)

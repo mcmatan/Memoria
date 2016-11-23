@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import EmitterKit
 
 class TaskNotificationPopUp : ViewController {
     let lblGoodAfternoon = Label()
@@ -76,13 +77,12 @@ class TaskNotificationPopUp : ViewController {
     //MARK: Actions
     
     func playSound() {
-        NotificationCenter.default.post(name: NotificationsNames.kTask_Action_playSound, object: TaskActionDTO(task: self.task, localNotificationCategort: LocalNotificationCategotry.notification))
+        Events.shared.playSound.emit(self.task)
     }
     
     //MARK: Buttons
     
     func btnOkPress() {
-        NotificationCenter.default.post(name: NotificationsNames.kTask_Action_Snooze, object: TaskActionDTO(task: self.task, localNotificationCategort: LocalNotificationCategotry.notification))
         self.dismiss(animated: true, completion: nil)
     }
     

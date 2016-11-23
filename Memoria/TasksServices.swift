@@ -8,28 +8,26 @@
 
 import Foundation
 import SwiftDate
+import EmitterKit
 
 let snoozeMin = 5
 
 class TasksServices {
     private var tasksDB : TasksDB
     private let nearableStriggerManager: NearableStriggerManager
-    fileprivate let taskNotificationsTracker : TaskNotificationsTracker
-    let localNotificationScheduler: LocalNotificationScheduler
+    let notificationScheduler: NotificationScheduler
 
     init(tasksDB : TasksDB,
-         taskNotificationsTracker : TaskNotificationsTracker,
          nearableStriggerManager: NearableStriggerManager,
-         localNotificationScheduler: LocalNotificationScheduler
+         notificationScheduler: NotificationScheduler
         ) {
         self.nearableStriggerManager = nearableStriggerManager
         self.tasksDB = tasksDB
-        self.taskNotificationsTracker = taskNotificationsTracker
-        self.localNotificationScheduler = localNotificationScheduler
+        self.notificationScheduler = notificationScheduler
     }
     
     func saveTask(_ task :Task) {
-        self.localNotificationScheduler.squeduleReminderForTask(task)
+        self.notificationScheduler.squeduleReminderForTask(task)
         self.tasksDB.saveTask(task)
         
         if task.hasSticker() {
@@ -39,26 +37,26 @@ class TasksServices {
     }
     
     func snoozeTask(task: Task) {
-        self.localNotificationScheduler.squeduleReminderForTask(task, date: Date() + snoozeMin.minutes)
+        self.notificationScheduler.squeduleReminderForTask(task, date: Date() + snoozeMin.minutes)
     }
 
-    func setTaskAsDone(_ task : Task) {
+    func setTaskAsDone(task : Task) {
         task.isTaskDone = true
-        self.localNotificationScheduler.cancelReminderForTask(task)
+        self.notificationScheduler.cancelReminderForTask(task)
         self.tasksDB.saveTask(task)
-        NotificationCenter.default.post(name: Notification.Name(rawValue: NotificationsNames.kTaskDone), object: task, userInfo: nil)
-        NotificationCenter.default.post(name: NotificationsNames.kPresentTaskMarkedAsDone, object: task, userInfo: nil)
+        
+        Events.shared.taskMarkedAsDone.emit(task)
     }
     
     func resqueduleTaskTimeTo(_ task : Task , time : Date) {
-        self.localNotificationScheduler.cancelReminderForTask(task)
+        self.notificationScheduler.cancelReminderForTask(task)
         task.taskTime = time
-        self.localNotificationScheduler.squeduleReminderForTask(task)
+        self.notificationScheduler.squeduleReminderForTask(task)
         self.tasksDB.saveTask(task)
     }
 
     func removeTask(_ task : Task) {
-        self.localNotificationScheduler.cancelReminderForTask(task)
+        self.notificationScheduler.cancelReminderForTask(task)
         let _ = self.tasksDB.removeTask(task)
         
         if task.hasSticker() {

@@ -41,8 +41,7 @@ class Task : NSObject {
     
     init(dic: Dictionary<String, Any>) {
         let snapshotValue = dic
-        let taskTime = snapshotValue[TaskPropNames.taskTime.rawValue] as! TimeInterval
-        let taskTimeAsDate = Date(timeIntervalSince1970: TimeInterval(taskTime))
+        
         self.nearableIdentifer = snapshotValue[TaskPropNames.nearableIdentifer.rawValue] as? String
         self.taskTimePriorityHi = snapshotValue[TaskPropNames.taskTimePriorityHi.rawValue] as! Bool
         self.isTaskDone = snapshotValue[TaskPropNames.isTaskDone.rawValue] as! Bool

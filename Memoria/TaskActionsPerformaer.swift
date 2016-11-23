@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import SwiftDate
+import EmitterKit
 
 class TaskActionsPerformer: NSObject {
     let recorder = VoiceRecorder()
@@ -21,30 +22,27 @@ class TaskActionsPerformer: NSObject {
     }
     
     func regidterForEvents() {
-        NotificationCenter.default.addObserver(self, selector: #selector(TaskActionsPerformer.playSound(notification:)), name: NotificationsNames.kTask_Action_playSound, object: nil)
         
-        NotificationCenter.default.addObserver(self, selector: #selector(TaskActionsPerformer.markTaskAsDone(notification:)), name: NotificationsNames.kTask_Action_markAsDone, object: nil)
+        Events.shared.playSound.on { task in
+            self.playSound(task: task)
+        }
         
-        NotificationCenter.default.addObserver(self, selector: #selector(TaskActionsPerformer.snooze(notification:)), name: NotificationsNames.kTask_Action_Snooze, object: nil)
+        Events.shared.taskMarkedAsDone.on { task in
+            self.markTaskAsDone(task: task)
+        }
     }
     
     
-    internal func playSound(notification: NSNotification) {
-        let taskActionDTO = notification.object as! TaskActionDTO
-        let isSound = taskActionDTO.task.taskType.soundURL(localNotificationCategotry: taskActionDTO.localNotificationCategort)
+    internal func playSound(task: Task) {
+        let isSound = task.taskType.soundURL()
         if ("" != isSound.absoluteString) {
             self.recorder.soundFileURL = isSound as URL!
             self.recorder.play()
         }
     }
     
-    internal func markTaskAsDone(notification: NSNotification) {
-        let taskActionDTO = notification.object as! TaskActionDTO
-        self.taskServices.setTaskAsDone(taskActionDTO.task)
+    internal func markTaskAsDone(task:task) {
+        self.taskServices.setTaskAsDone(task: task)
     }
     
-    internal func snooze(notification: NSNotification) {
-        let taskActionDTO = notification.object as! TaskActionDTO
-        self.taskServices.snoozeTask(task: taskActionDTO.task)
-    }
 }

@@ -76,7 +76,6 @@ class TaskVerificationPopUp : ViewController {
         self.btnRemindMeLayer.notificiationRemindMeLater()
         self.btnRemindMeLayer.centerHorizontlyInSuperView()
         self.btnRemindMeLayer.topAlighnToViewBottom(self.btnYes, offset: 13)
-        self.btnRemindMeLayer.addTarget(self, action: #selector(TaskVerificationPopUp.btnRemoingMeLaterPress), for: UIControlEvents.touchUpInside)
 
         self.view.addSubview(self.btnSoundPlaying)
         self.btnSoundPlaying.notificiationPlayingGray()
@@ -89,18 +88,13 @@ class TaskVerificationPopUp : ViewController {
     //MARK: Actions
     
     func playSound() {
-        NotificationCenter.default.post(name: NotificationsNames.kTask_Action_playSound, object: TaskActionDTO(task: self.task, localNotificationCategort: LocalNotificationCategotry.verification))
+           Events.shared.playSound.emit(task)
     }
     
     //MARK: Buttons
     
     func btnYesPress() {
-        NotificationCenter.default.post(name: NotificationsNames.kTask_Action_markAsDone, object: TaskActionDTO(task: self.task, localNotificationCategort: LocalNotificationCategotry.verification))
-        self.dismiss(animated: true, completion: nil)
-    }
-    
-    func btnRemoingMeLaterPress() {
-        NotificationCenter.default.post(name: NotificationsNames.kTask_Action_Snooze, object: TaskActionDTO(task: self.task, localNotificationCategort: LocalNotificationCategotry.verification))
+        Events.shared.markTaskAsDone.emit(self.task)
         self.dismiss(animated: true, completion: nil)
     }
     

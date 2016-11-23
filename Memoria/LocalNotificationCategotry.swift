@@ -9,17 +9,6 @@
 import Foundation
 import UIKit
 
-enum LocalNotificationCategotry: String {
-    case notification = "notification"
-    case warning = "warning"
-    case verification = "verification"
-    case done = "done"
-    
-    static func allValus()-> [LocalNotificationCategotry] {
-        return [LocalNotificationCategotry.notification, LocalNotificationCategotry.warning, LocalNotificationCategotry.verification, LocalNotificationCategotry.done]
-    }
-}
-
 enum TaskType: String {
     case brushTeeth = "brushTeeth"
     case food = "food"
@@ -67,61 +56,36 @@ enum TaskType: String {
         }
     }
     
-    func soundURL(localNotificationCategotry: LocalNotificationCategotry)->URL {
+    func soundURL()->URL {
         let taskTypeString = self.rawValue
-        switch localNotificationCategotry {
-        case .notification:
-            let url = Bundle.main.url(forResource: "\(taskTypeString)-notification", withExtension: "aiff")
-            return url!
-        case .warning:
-            let url = Bundle.main.url(forResource: "\(taskTypeString)-warning", withExtension: "aiff")
-            return url!
-        case .verification:
-            let url = Bundle.main.url(forResource: "\(taskTypeString)-verification", withExtension: "aiff")
-            return url!
-        case .done:
-            let url = Bundle.main.url(forResource: "\(taskTypeString)-done", withExtension: "aiff")
-            return url!
-        }
+        let url = Bundle.main.url(forResource: "\(taskTypeString)-notification", withExtension: "aiff")
+        return url!
     }
 
-    func imageURL(localNotificationCategory: LocalNotificationCategotry)->URL {
-        
-        let color = self.colorLocalNotificationType(localNotificationType: localNotificationCategory)
-        
-        switch self {
-        case .brushTeeth:
-            let url = Bundle.main.url(forResource: "brushTeeth\(color)", withExtension: "png")
-            return url!
-        case .drugs:
-            let url = Bundle.main.url(forResource: "drugs\(color)", withExtension: "png")
-            return url!
-        case .food:
-            let url = Bundle.main.url(forResource: "food\(color)", withExtension: "png")
-            return url!
-        case .goToWork:
-            let url = Bundle.main.url(forResource: "goToWork\(color)", withExtension: "png")
-            return url!
-        case .goToGym:
-            let url = Bundle.main.url(forResource: "goToGym\(color)", withExtension: "png")
-            return url!
-        case .wakeUp:
-            let url = Bundle.main.url(forResource: "wakeUp\(color)", withExtension: "png")
-            return url!
-        }
+    func imageURL()->URL {
+        let color = "blue"
+
+            switch self {
+            case .brushTeeth:
+                let url = Bundle.main.url(forResource: "brushTeeth\(color)", withExtension: "png")
+                return url!
+            case .drugs:
+                let url = Bundle.main.url(forResource: "drugs\(color)", withExtension: "png")
+                return url!
+            case .food:
+                let url = Bundle.main.url(forResource: "food\(color)", withExtension: "png")
+                return url!
+            case .goToWork:
+                let url = Bundle.main.url(forResource: "goToWork\(color)", withExtension: "png")
+                return url!
+            case .goToGym:
+                let url = Bundle.main.url(forResource: "goToGym\(color)", withExtension: "png")
+                return url!
+            case .wakeUp:
+                let url = Bundle.main.url(forResource: "wakeUp\(color)", withExtension: "png")
+                return url!
+            }
     }
-    
-    func colorLocalNotificationType(localNotificationType: LocalNotificationCategotry)->String {
-        switch localNotificationType {
-        case .done:
-            return ""
-        case .notification:
-            return "Blue"
-        case .verification:
-            return "Green"
-        case .warning:
-            return "Red"
-        }
-    }
+
 }
 

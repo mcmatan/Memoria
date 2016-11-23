@@ -36,9 +36,7 @@ class AddTaskConfirmationViewController : ViewController {
 
         lblTaskName.text = self.currenctTaskCreator.task.taskType.name()
 
-        let currenctTime = self.currenctTaskCreator.getTaskTime()
-        let timeString = currenctTime!.toStringCurrentRegionShortTime()
-        self.lblTaskTime.text = "\(timeString)"
+        self.lblTaskTime.text = "task time old"
         
         if let isTimePriority = self.currenctTaskCreator.getTaskTimePriority() {
             let timePriorityToString = (isTimePriority == true) ? "Hi" : "Low"
