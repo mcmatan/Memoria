@@ -24,7 +24,7 @@ class TaskManagerViewController : ViewController, UITableViewDelegate, UITableVi
     var addTaskTypeViewController: AddTaskTypeViewController?
     
     var tasksChangedListener: EventListener<Any>!
-    var taskMarkedAsDoneListener: EventListener<Any>?
+    var taskMarkedAsDoneListener: EventListener<Task>?
 
     
     init(tasksServices : TasksServices, currenctTaskCreator : CurrenctTaskCreator, container : Container, iNearableServices : NearableServices) {
@@ -34,7 +34,7 @@ class TaskManagerViewController : ViewController, UITableViewDelegate, UITableVi
         self.iNearableServices = iNearableServices
         super.init(nibName: nil, bundle: nil)
         
-        self.tasksChangedListener = Events.shared.taskMarkedAsDone.on({ task in
+        self.taskMarkedAsDoneListener = Events.shared.taskMarkedAsDone.on({ task in
             self.reloadTable()
         })
     }

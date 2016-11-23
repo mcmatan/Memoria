@@ -15,6 +15,9 @@ class TaskActionsPerformer: NSObject {
     let recorder = VoiceRecorder()
     let taskServices: TasksServices
     
+    var playSound: EventListener<Task>?
+    var taskMarkedAsDone: EventListener<Task>?
+    
     init(taskServices: TasksServices) {
         self.taskServices = taskServices
         super.init()
@@ -23,11 +26,11 @@ class TaskActionsPerformer: NSObject {
     
     func regidterForEvents() {
         
-        Events.shared.playSound.on { task in
+        self.playSound = Events.shared.playSound.on { task in
             self.playSound(task: task)
         }
         
-        Events.shared.taskMarkedAsDone.on { task in
+        self.taskMarkedAsDone = Events.shared.taskMarkedAsDone.on { task in
             self.markTaskAsDone(task: task)
         }
     }
@@ -41,7 +44,7 @@ class TaskActionsPerformer: NSObject {
         }
     }
     
-    internal func markTaskAsDone(task:task) {
+    internal func markTaskAsDone(task:Task) {
         self.taskServices.setTaskAsDone(task: task)
     }
     

@@ -27,7 +27,7 @@ class TasksServices {
     }
     
     func saveTask(_ task :Task) {
-        self.notificationScheduler.squeduleReminderForTask(task)
+        self.notificationScheduler.squeduleNotification(task: task)
         self.tasksDB.saveTask(task)
         
         if task.hasSticker() {
@@ -35,28 +35,17 @@ class TasksServices {
         }
         
     }
-    
-    func snoozeTask(task: Task) {
-        self.notificationScheduler.squeduleReminderForTask(task, date: Date() + snoozeMin.minutes)
-    }
 
     func setTaskAsDone(task : Task) {
         task.isTaskDone = true
-        self.notificationScheduler.cancelReminderForTask(task)
+        self.notificationScheduler.cancelNotification(task: task)
         self.tasksDB.saveTask(task)
         
         Events.shared.taskMarkedAsDone.emit(task)
     }
-    
-    func resqueduleTaskTimeTo(_ task : Task , time : Date) {
-        self.notificationScheduler.cancelReminderForTask(task)
-        task.taskTime = time
-        self.notificationScheduler.squeduleReminderForTask(task)
-        self.tasksDB.saveTask(task)
-    }
 
     func removeTask(_ task : Task) {
-        self.notificationScheduler.cancelReminderForTask(task)
+        self.notificationScheduler.cancelNotification(task: task)
         let _ = self.tasksDB.removeTask(task)
         
         if task.hasSticker() {

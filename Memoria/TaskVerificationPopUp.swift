@@ -42,9 +42,9 @@ class TaskVerificationPopUp : ViewController {
         imgLight.setHeightAs(150)
         imgLight.topToViewControllerTopLayoutGuide(self, offset: 70)
         
-        let notificationText = NotificationsTextsBuilder.getNotificationText(task: task, localNotificationCategory: LocalNotificationCategotry.verification)
+        let notificationText = NotificationsTextsBuilder.getNotificationText(task: self.task)
         
-        self.lblISeeYourNear.text = notificationText.popUpTitle
+        self.lblISeeYourNear.text = notificationText.title
         self.lblISeeYourNear.font = UIFont.systemFont(ofSize: 28)
         self.lblISeeYourNear.numberOfLines = 0
         self.lblISeeYourNear.textAlignment = NSTextAlignment.center
@@ -55,7 +55,7 @@ class TaskVerificationPopUp : ViewController {
         self.lblISeeYourNear.trailingToSuperView(true)
         
         
-        self.lblDidYouYet.text = notificationText.popUpBody
+        self.lblDidYouYet.text = notificationText.body
         self.lblDidYouYet.titleGray()
         self.lblDidYouYet.font = UIFont.systemFont(ofSize: 22)
         self.lblDidYouYet.textAlignment = NSTextAlignment.center

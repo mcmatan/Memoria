@@ -9,7 +9,7 @@
 import Foundation
 
 class CaregtoryIdentifer {
-    func from(task: Task)-> String {
+    static func from(task: Task)-> String {
         return "default-caregtoryIdentifer"
     }
 }
