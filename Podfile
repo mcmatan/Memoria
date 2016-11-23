@@ -16,7 +16,7 @@ pod 'EstimoteSDK', :git => 'https://github.com/Estimote/iOS-SDK.git', :commit =>
     pod 'RxCocoa',    '~> 3.0'
     pod 'Kingfisher', '~> 3.2'
 pod 'EmitterKit', '~> 5.0'
-
+pod "ATHMultiSelectionSegmentedControl"
 
 
 pod 'AEConsole', '~> 0.3'

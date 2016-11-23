@@ -42,4 +42,8 @@ class Content : NSObject {
         return ""
     }
     
+    @objc class func getContent(name : String)->String  {
+        return self.getContent(ContentType.labelTxt, name: name)
+    }
+    
 }

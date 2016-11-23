@@ -89,5 +89,9 @@ Then click on the button to add a task.</string>
 	<string>Password</string>
 	<key>userNamePlaceHolder</key>
 	<string>User name</string>
+	<key>btnChooseTaskType</key>
+	<string>Choose task type</string>
+	<key>btnCreateTask</key>
+	<string> + Create task </string>
 </dict>
 </plist>

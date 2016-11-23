@@ -34,19 +34,6 @@ let kThursday = "thursday"
 let kFriday = "friday"
 let kSaturday = "saturday"
 
-class Time {
-    let hours: Int
-    let minutes: Int
-    let string: String
-    init(string: String) {
-        self.string = string
-        timeDateFormatter.dateFormat = "hh:mm"
-        let date = timeDateFormatter.date(from: string)
-        self.hours = (date?.hour)!
-        self.minutes = (date?.minute)!
-    }
-}
-
 class RepeateOnDates {
     var sunday = [Time]()
     var monday = [Time]()
@@ -81,7 +68,7 @@ class RepeateOnDates {
     func getDayStringsFromDayTimes(day: [Time])->[String] {
         var allTimes = [String]()
         for time in day {
-            allTimes.append(time.string)
+            allTimes.append(time.timeString)
         }
         return allTimes
     }

@@ -37,23 +37,25 @@ class NotificationScheduler {
         let attachments = [UNNotificationAttachment.with(imageURL: imageURL)]
         
         
-        let content = UNMutableNotificationContent.with(tite: title,
+        let content = UNMutableNotificationContent.with(title: title,
                                           subtitle: subtitle,
                                           body: body,
                                           sound: sound,
                                           categoryIdentifier: caregtoryIdentifer,
                                           userInfo: userInfo,
-                                          attachments: attachments)()
+                                          attachments: attachments)
+
+        // Get all dates insted of just one
         
-        let trigger = UNNotificationTrigger.with(date: date)
-        
-        let requestIdentifier = content.categoryIdentifier
-        let request = UNNotificationRequest(identifier: requestIdentifier, content: content,trigger: trigger)
-        UNUserNotificationCenter.current().add(request) { (error) in
-            if let isError = error {
-                print("Error on notification reuqest = \(isError)")
-            }
-        }
+//        let trigger = UNNotificationTrigger.with(date: date)
+//        
+//        let requestIdentifier = content.categoryIdentifier
+//        let request = UNNotificationRequest(identifier: requestIdentifier, content: content,trigger: trigger)
+//        UNUserNotificationCenter.current().add(request) { (error) in
+//            if let isError = error {
+//                print("Error on notification reuqest = \(isError)")
+//            }
+//        }
     }
     
 }

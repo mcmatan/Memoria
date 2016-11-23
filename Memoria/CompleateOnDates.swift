@@ -42,7 +42,7 @@ class CompleateOnDates {
     func getDayStringsFromDayTimes(day: [Time])->[String] {
         var allTimes = [String]()
         for time in day {
-            allTimes.append(time.string)
+            allTimes.append(time.timeString)
         }
         return allTimes
     }

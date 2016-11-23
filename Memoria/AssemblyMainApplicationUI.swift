@@ -7,28 +7,12 @@ open class AssemblyMainApplicationUI {
 
     class func run(_ container : Container) {
         
-        container.register(AddTaskTimeViewController.self) { _   in
-            return AddTaskTimeViewController(container: container, currenctTaskCreator: container.resolve(CurrenctTaskCreator.self)!)
-        }
-
-        container.register(AddTaskConfirmationViewController.self) { _  in
-            let currentTaskCreator = container.resolve(CurrenctTaskCreator.self)
-            return AddTaskConfirmationViewController(container: container, tasksServices: container.resolve(TasksServices.self)!, currenctTaskCreator: currentTaskCreator!)
-        }
-
         container.register(TaskManagerViewController.self) { _ in
             return TaskManagerViewController(tasksServices: container.resolve(TasksServices.self)!,currenctTaskCreator: container.resolve(CurrenctTaskCreator.self)!, container: container, iNearableServices: container.resolve(NearableServices.self)!)
         }
-        container.register(AddTaskTimePriorityController.self) { _ in
-            return AddTaskTimePriorityController(container: container,
-                currenctTaskCreator: container.resolve(CurrenctTaskCreator.self)!, tasksServices: container.resolve(TasksServices.self)!)
-        }
         
-        container.register(AddTaskTypeViewController.self) { _ in
-            return AddTaskTypeViewController(container: container,
-                                             currenctTaskCreator: container.resolve(CurrenctTaskCreator.self)!,
-                                             nearableService: container.resolve(NearableServices.self)!
-                                             )
+        container.register(AddTaskViewController.self) { _ in
+            return AddTaskViewController(currentTaskCreator: container.resolve(CurrenctTaskCreator.self)!)
         }
         
         container.register(TaskNotificationPopUp.self) { _, task in

@@ -38,9 +38,9 @@ class TaskNotificationPopUp : ViewController {
         imgLight.setHeightAs(150)
         imgLight.topToViewControllerTopLayoutGuide(self, offset: 70)
         
-        let notificationText = NotificationsTextsBuilder.getNotificationText(task: task, localNotificationCategory: LocalNotificationCategotry.notification)
+        let notificationText = NotificationsTextsBuilder.getNotificationText(task: task)
         
-        let goodTimeOfDatString = notificationText.popUpTitle
+        let goodTimeOfDatString = notificationText.title
         self.lblGoodAfternoon.text = goodTimeOfDatString
         self.lblGoodAfternoon.font = UIFont.systemFont(ofSize: 26)
         self.lblGoodAfternoon.numberOfLines = 0
@@ -49,7 +49,7 @@ class TaskNotificationPopUp : ViewController {
         self.lblGoodAfternoon.topAlighnToViewBottom(imgLight, offset: 10)
         self.lblGoodAfternoon.centerHorizontlyInSuperView()
         
-        self.lblItsTimeFor.text = notificationText.popUpBody
+        self.lblItsTimeFor.text = notificationText.body
         self.lblItsTimeFor.titleGray()
         self.lblItsTimeFor.font = UIFont.systemFont(ofSize: 23)
         self.lblItsTimeFor.textAlignment = NSTextAlignment.center
