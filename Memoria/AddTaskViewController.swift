@@ -15,9 +15,11 @@ class AddTaskViewController: ViewController {
     let btnCreate = Button()
     var pickerWithBlock: UIPickerWithBlock?
     let currentTaskCreator: CurrenctTaskCreator
+    let taskServices: TasksServices
     
-    init(currentTaskCreator: CurrenctTaskCreator) {
+    init(currentTaskCreator: CurrenctTaskCreator, taskServices: TasksServices) {
         self.currentTaskCreator = currentTaskCreator
+        self.taskServices = taskServices
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -38,7 +40,7 @@ class AddTaskViewController: ViewController {
         
         btnTaskType.centerHorizontlyInSuperView()
         btnTaskType.topAlighnToViewBottom(dayTimeRepeatePicker, offset: 30)
-        btnTaskType.defaultStyleMini()
+        btnTaskType.defaultStyle()
         btnTaskType.setTitle(Content.getContent(name: "btnChooseTaskType"), for: UIControlState.normal)
         btnTaskType.addTarget(self, action: #selector(btnChooseTaskTypePress), for: UIControlEvents.touchUpInside)
         
@@ -77,8 +79,7 @@ class AddTaskViewController: ViewController {
     }
     
     func btnCreatePress() {
-        self.currenctTaskCreator.setTaskTimePriority(self.switchPrairity.isOn)
-        self.tasksServices.saveTask(self.currenctTaskCreator.getCurrenctTask())
+        self.taskServices.saveTask(self.currentTaskCreator.getCurrenctTask())
         
         let _ = self.navigationController?.popToRootViewController(animated: true)
     }

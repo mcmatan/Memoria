@@ -37,7 +37,7 @@ class TasksServices {
     }
 
     func setTaskAsDone(task : Task) {
-        task.isTaskDone = true
+        //TBD Should add on task that I'ts one
         self.notificationScheduler.cancelNotification(task: task)
         self.tasksDB.saveTask(task)
         

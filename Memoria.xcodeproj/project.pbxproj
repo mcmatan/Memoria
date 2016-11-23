@@ -447,8 +447,9 @@
 			isa = PBXGroup;
 			children = (
 				9025460F1DD621E800D53C58 /* RootViewController.swift */,
+				90C588791C46E09500D84C73 /* TaskManagerViewController */,
+				903181AE1DE5D43700044330 /* AddTaskViewController */,
 				901EC5B91DDBB0BB00AF2728 /* LoginView */,
-				9035FE2D1C1ED15900D98022 /* Tasks */,
 				9035FE231C1EC60E00D98022 /* ReminderPopUp */,
 			);
 			name = Screens;
@@ -659,15 +660,6 @@
 				9035FE241C1EC64500D98022 /* ReminderPopUp.swift */,
 			);
 			name = ReminderPopUp;
-			sourceTree = "<group>";
-		};
-		9035FE2D1C1ED15900D98022 /* Tasks */ = {
-			isa = PBXGroup;
-			children = (
-				903181AE1DE5D43700044330 /* AddTaskViewController */,
-				90C588791C46E09500D84C73 /* TaskManagerViewController */,
-			);
-			name = Tasks;
 			sourceTree = "<group>";
 		};
 		9035FE2E1C1EDA4C00D98022 /* Model */ = {

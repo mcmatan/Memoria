@@ -12,7 +12,7 @@ open class AssemblyMainApplicationUI {
         }
         
         container.register(AddTaskViewController.self) { _ in
-            return AddTaskViewController(currentTaskCreator: container.resolve(CurrenctTaskCreator.self)!)
+            return AddTaskViewController(currentTaskCreator: container.resolve(CurrenctTaskCreator.self)!, taskServices: container.resolve(TasksServices.self)!)
         }
         
         container.register(TaskNotificationPopUp.self) { _, task in

@@ -59,10 +59,9 @@ class TaskManagerViewController : ViewController, UITableViewDelegate, UITableVi
         self.allTasks = self.tasksServices.getAllTasks()        
         self.tableView .reloadData()
         
-        let remainingTasks = self.allTasks.filter { task in
-            return task.isTaskDone
-        }
+        let remainingTasks = self.allTasks!
         let remainingCount = remainingTasks.count
+        
         if (remainingCount > 0) {
             let text = Content.getContent(ContentType.labelTxt, name: "TaskManagerRemaining")
             let format = String.localizedStringWithFormat(text, "\(remainingCount)")
@@ -163,7 +162,7 @@ class TaskManagerViewController : ViewController, UITableViewDelegate, UITableVi
         
         cell?.textLabel?.text = textForCell
         cell?.accessoryType = UITableViewCellAccessoryType.disclosureIndicator;
-        cell?.contentView.backgroundColor = task.isTaskDone ? Colors.lightGreen() : UIColor.white
+        cell?.contentView.backgroundColor = UIColor.white
 
         return cell!
     }
@@ -211,8 +210,8 @@ class TaskManagerViewController : ViewController, UITableViewDelegate, UITableVi
         let task = self.allTasks[(indexPath as NSIndexPath).row]
         self.currenctTaskCreator.setCurrenctTask(task)
         
-        let addTaskConfirmationViewController = self.container.resolve(AddTaskConfirmationViewController.self)
-        self.navigationController?.pushViewController(addTaskConfirmationViewController!, animated: true)
+//        let addTaskConfirmationViewController = self.container.resolve(AddTaskConfirmationViewController.self)
+//        self.navigationController?.pushViewController(addTaskConfirmationViewController!, animated: true)
     }
 
     func createNewTimeTask() {

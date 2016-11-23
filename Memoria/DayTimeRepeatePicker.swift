@@ -22,7 +22,7 @@ class DayTimeRepeatePicker: UIView {
     private var selectedTimes = [Time]()
     private let daySegmentedControl = MultiSelectionSegmentedControl(items: Day.allStringValues())
     private let timesStack =  UIStackView()
-    private let btnAddTime = UIButton()
+    private let btnAddTime = Button()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -40,7 +40,7 @@ class DayTimeRepeatePicker: UIView {
     func setup() {
 
         self.timesStack.spacing = 10
-        self.btnAddTime.backgroundColor = UIColor.blue
+        self.btnAddTime.defaultStyle()
         self.timesStack.axis = UILayoutConstraintAxis.vertical
         self.addSubview(self.daySegmentedControl)
         self.addSubview(self.btnAddTime)
@@ -54,13 +54,12 @@ class DayTimeRepeatePicker: UIView {
         self.timesStack.centerHorizontlyInSuperView()
         self.timesStack.topAlighnToViewBottom(self.daySegmentedControl, offset: 20)
         
-        self.btnAddTime.setTitle(" +Add time ", for: UIControlState.normal)
+        self.btnAddTime.setTitle(" - Choose time - ", for: UIControlState.normal)
         self.btnAddTime.topAlighnToViewBottom(self.timesStack, offset: 20)
         self.btnAddTime.addTarget(self, action: #selector(btnAddTimePress), for: UIControlEvents.touchUpInside)
         self.btnAddTime.centerHorizontlyInSuperView()
         
         self.bottomAlighnToViewBottom(self.btnAddTime, offset: 10)
-        self.backgroundColor = UIColor.lightGray
         
         self.corners()
     }
@@ -74,6 +73,7 @@ class DayTimeRepeatePicker: UIView {
     }
     
     func timePicked(date: Date) {
+        self.btnAddTime.setTitle(" +Add time ", for: UIControlState.normal)
         let time = Time(date: date)
         self.selectedTimes.append(time)
         self.addTimeStringToStack(timeString: time.timeString)
@@ -86,7 +86,7 @@ class DayTimeRepeatePicker: UIView {
     }
     
     func btnAddTimePress() {
-        let txt = "Choose time"
+        let txt = " - Choose time - "
         let datePicker = DatePickerDialog()
         
         datePicker.show(txt, doneButtonTitle: "Done", cancelButtonTitle: "Cancel", defaultDate: Date(), datePickerMode: UIDatePickerMode.time) { (date) in

@@ -14,8 +14,6 @@ import FirebaseDatabase
 enum TaskPropNames: String {
     case taskTime =  "taskTime",
     nearableIdentifer =  "nearableIdentifer",
-    taskTimePriorityHi = "taskTimePriorityHi",
-    isTaskDone = "isTaskDone",
     taskType = "kTaskType",
     repeateOnDates = "repeateOnDates",
     compleateOnDates = "compleateOnDates",
@@ -24,8 +22,6 @@ enum TaskPropNames: String {
 
 class Task : NSObject {
     var nearableIdentifer : String?
-    var taskTimePriorityHi : Bool
-    var isTaskDone = false
     var taskType: TaskType
     var repeateOnDates: RepeateOnDates
     var compleateOnDates: CompleateOnDates
@@ -43,8 +39,6 @@ class Task : NSObject {
         let snapshotValue = dic
         
         self.nearableIdentifer = snapshotValue[TaskPropNames.nearableIdentifer.rawValue] as? String
-        self.taskTimePriorityHi = snapshotValue[TaskPropNames.taskTimePriorityHi.rawValue] as! Bool
-        self.isTaskDone = snapshotValue[TaskPropNames.isTaskDone.rawValue] as! Bool
         self.taskType = TaskType(rawValue: snapshotValue[TaskPropNames.taskType.rawValue] as! String)!
         self.repeateOnDates = RepeateOnDates(dic: snapshotValue[TaskPropNames.repeateOnDates.rawValue] as! [String : [String]])
         self.compleateOnDates = CompleateOnDates(dic: snapshotValue[TaskPropNames.compleateOnDates.rawValue] as! [String : [String]])
@@ -54,8 +48,6 @@ class Task : NSObject {
     func toAnyObject() -> Any {
         
         var dic = [
-            TaskPropNames.taskTimePriorityHi.rawValue: taskTimePriorityHi,
-            TaskPropNames.isTaskDone.rawValue: isTaskDone,
             TaskPropNames.taskType.rawValue: taskType.rawValue,
             TaskPropNames.repeateOnDates.rawValue: repeateOnDates.toAnyObject(),
             TaskPropNames.compleateOnDates.rawValue: compleateOnDates.toAnyObject(),
@@ -72,14 +64,10 @@ class Task : NSObject {
     init(
         taskType: TaskType,
         taskTime : Date?,
-        nearableIdentifer : String?,
-        taskTimePriorityHi : Bool,
-        isTaskDone :Bool
+        nearableIdentifer : String?
         ) {
             self.taskType = taskType
             self.nearableIdentifer = nearableIdentifer
-            self.taskTimePriorityHi = taskTimePriorityHi
-            self.isTaskDone = isTaskDone
             self.uid = "\(UUID.init().hashValue)"
             self.repeateOnDates = RepeateOnDates()
             self.compleateOnDates = CompleateOnDates()

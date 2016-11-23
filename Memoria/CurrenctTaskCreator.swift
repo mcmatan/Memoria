@@ -14,7 +14,7 @@ class CurrenctTaskCreator {
     var task = CurrenctTaskCreator.emptyTask()
     
     class func emptyTask()->Task {
-        return  Task(taskType: TaskType.drugs, taskTime: nil, nearableIdentifer: nil, taskTimePriorityHi: false ,isTaskDone: false)
+        return  Task(taskType: TaskType.drugs, taskTime: nil, nearableIdentifer: nil)
     }
     
     func startNewTask() {
@@ -35,10 +35,6 @@ class CurrenctTaskCreator {
         self.task.nearableIdentifer = nearableIdentifer
     }
     
-    func setTaskTimePriority(_ hi : Bool) {
-        self.task.taskTimePriorityHi = hi
-    }
-    
     func setTaskType(type: TaskType) {
         self.task.taskType = type
     }
@@ -48,10 +44,6 @@ class CurrenctTaskCreator {
     
     func getTaskNearableIdentifer()->String? {
         return self.task.nearableIdentifer
-    }
-    
-    func getTaskTimePriority()->Bool? {
-        return self.task.taskTimePriorityHi
     }
 
 }

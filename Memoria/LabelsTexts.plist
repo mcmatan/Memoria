@@ -90,7 +90,7 @@ Then click on the button to add a task.</string>
 	<key>userNamePlaceHolder</key>
 	<string>User name</string>
 	<key>btnChooseTaskType</key>
-	<string>Choose task type</string>
+	<string> - Choose type - </string>
 	<key>btnCreateTask</key>
 	<string> + Create task </string>
 </dict>
