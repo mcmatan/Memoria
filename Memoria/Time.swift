@@ -36,4 +36,36 @@ struct Time {
         hourString = hour > 9 ? "\(hour)" : "0\(hour)"
         minuteString = minute > 9 ? "\(minute)" : "0\(minute)"
     }
+    
+    init(hour: Int, minute: Int) {
+        self.hour = hour
+        self.minute = minute
+        hourString = hour > 9 ? "\(hour)" : "0\(hour)"
+        minuteString = minute > 9 ? "\(minute)" : "0\(minute)"
+        self.timeString = "\(hourString):\(minuteString)"
+    }
+    
+    static func addMinteToTime(minute: Int, hour: Int, day: Int, minuteToAdd: Int)->(minute: Int, hour: Int, day: Int) {
+        var minteAfterAdd = minute + minuteToAdd
+        var hourAfterAdd = hour
+        var dayAfterAdd = day
+        
+        if minteAfterAdd > 60 {
+           minteAfterAdd -= 60
+            
+            hourAfterAdd += 1
+            
+            if hourAfterAdd > 60 {
+               hourAfterAdd -= 60
+                
+                dayAfterAdd += 1
+                
+                if dayAfterAdd > 7 {
+                   dayAfterAdd -= 7
+                }
+            }
+        }
+        
+        return (minteAfterAdd, hourAfterAdd, dayAfterAdd)
+    }
 }

@@ -25,7 +25,7 @@ class NotificationScheduler {
     }
     
     func cancelNotification(task: Task, time: Time, day: Day) {
-        UNUserNotificationCenter.remove(task: task, time: time, day: day)
+        UNUserNotificationCenter.remove(task: task, atTime: time, andDay: day)
     }
     
     func squeduleNotification(task : Task) {
@@ -49,7 +49,7 @@ class NotificationScheduler {
                                           userInfo: userInfo,
                                           attachments: attachments)
 
-        UNUserNotificationCenter.add(task: task, content: content)
+        UNUserNotificationCenter.add(task: task, content: content, shouldRepeate: true)
     }
     
 }

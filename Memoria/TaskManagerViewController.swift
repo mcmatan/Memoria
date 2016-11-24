@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import Swinject
 import EmitterKit
+import UserNotifications
 
 class TaskManagerViewController : ViewController, UITableViewDelegate, UITableViewDataSource {
     let kCellHeight = 70
@@ -97,6 +98,11 @@ class TaskManagerViewController : ViewController, UITableViewDelegate, UITableVi
         btnCreateTask.setTitle(Content.getContent(ContentType.labelTxt, name: "TaskManagerCreateTask"), for: UIControlState())
         btnCreateTask.addTarget(self, action: #selector(TaskManagerViewController.createNewTimeTask), for: UIControlEvents.touchUpInside)
         
+        let btnShowLocalNotifications = Button()
+        btnShowLocalNotifications.defaultStyle()
+        btnShowLocalNotifications.setTitle("Show localNotifications", for: UIControlState.normal)
+        btnShowLocalNotifications.addTarget(self, action: #selector(TaskManagerViewController.showLocalNotifications), for: UIControlEvents.touchUpInside)
+        
         let lblTop = Label()
         lblTop.defaultyTitle()
         lblTop.text = Content.getContent(ContentType.labelTxt, name: "TaskManagerVCLblTop")
@@ -110,6 +116,7 @@ class TaskManagerViewController : ViewController, UITableViewDelegate, UITableVi
         let topLayout = self.topLayoutGuide
         
         self.view.addSubviewWithAutoLayoutOn(btnCreateTask)
+        self.view.addSubviewWithAutoLayoutOn(btnShowLocalNotifications)
         self.view.addSubviewWithAutoLayoutOn(lblTop)
         self.view.addSubviewWithAutoLayoutOn(tableView)
         self.view.addSubviewWithAutoLayoutOn(lblCount)
@@ -121,12 +128,17 @@ class TaskManagerViewController : ViewController, UITableViewDelegate, UITableVi
                 "tableView" : tableView,
                 "topLayout" : topLayout,
                 "btnCreateTask" : btnCreateTask,
+                "btnShowLocalNotifications" : btnShowLocalNotifications
                 ]
         
         var allConstrins = [NSLayoutConstraint]()
         
+        var layoutString: String!
+
+        layoutString = "V:[topLayout]-(20)-[btnCreateTask]-(20)-[btnShowLocalNotifications]-(20)-[lblTop]-[tableView]-(20)-|"
+        
         let verticalLayout = NSLayoutConstraint.constraints(
-            withVisualFormat: "V:[topLayout]-(20)-[btnCreateTask]-(20)-[lblTop]-[tableView]-(20)-|", options: NSLayoutFormatOptions.alignAllCenterX, metrics: nil, views: viewKeys)
+            withVisualFormat: layoutString, options: NSLayoutFormatOptions.alignAllCenterX, metrics: nil, views: viewKeys)
         
         let horizintalTableConstrain = NSLayoutConstraint.constraints(
             withVisualFormat: "H:|-[tableView]-|", options: [], metrics: nil, views: viewKeys)
@@ -219,6 +231,12 @@ class TaskManagerViewController : ViewController, UITableViewDelegate, UITableVi
     func createNewTimeTask() {
         self.currenctTaskCreator.startNewTask()
         self.goToNextPage()
+    }
+    
+    func showLocalNotifications() {
+        UNUserNotificationCenter.getNotificationsInfoJson { array in
+            Events.shared.showAlert.emit(array.joined(separator: ","))
+        }
     }
     
     //MARK: Alerts

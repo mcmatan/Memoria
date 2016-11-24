@@ -89,6 +89,7 @@
 		903181B61DE5D5CA00044330 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903181B51DE5D5CA00044330 /* Day.swift */; };
 		903181B81DE5E6EA00044330 /* WeekRepeat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903181B71DE5E6EA00044330 /* WeekRepeat.swift */; };
 		903181BA1DE5ED4000044330 /* AlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903181B91DE5ED4000044330 /* AlertPresenter.swift */; };
+		903181BC1DE7321C00044330 /* ArrayExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903181BB1DE7321C00044330 /* ArrayExtentions.swift */; };
 		903326521DE32C8900AEF254 /* goToGym-notification.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 9033264F1DE32C8900AEF254 /* goToGym-notification.aiff */; };
 		903326531DE32C8900AEF254 /* goToWork-notification.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 903326501DE32C8900AEF254 /* goToWork-notification.aiff */; };
 		903326541DE32C8900AEF254 /* wakeUp-notification.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 903326511DE32C8900AEF254 /* wakeUp-notification.aiff */; };
@@ -295,6 +296,7 @@
 		903181B51DE5D5CA00044330 /* Day.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 		903181B71DE5E6EA00044330 /* WeekRepeat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekRepeat.swift; sourceTree = "<group>"; };
 		903181B91DE5ED4000044330 /* AlertPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertPresenter.swift; sourceTree = "<group>"; };
+		903181BB1DE7321C00044330 /* ArrayExtentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtentions.swift; sourceTree = "<group>"; };
 		9033264F1DE32C8900AEF254 /* goToGym-notification.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "goToGym-notification.aiff"; sourceTree = "<group>"; };
 		903326501DE32C8900AEF254 /* goToWork-notification.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "goToWork-notification.aiff"; sourceTree = "<group>"; };
 		903326511DE32C8900AEF254 /* wakeUp-notification.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = "wakeUp-notification.aiff"; sourceTree = "<group>"; };
@@ -845,6 +847,7 @@
 				907224C71DBCFFB4001A3A7C /* StringExtentions.swift */,
 				90E739EA1DD2663A008A7FA9 /* ApplicationExntentions.swift */,
 				90B7D3CB1DDC735E0095BF6A /* TextFiledExtentions.swift */,
+				903181BB1DE7321C00044330 /* ArrayExtentions.swift */,
 			);
 			name = Categoris;
 			sourceTree = "<group>";
@@ -1481,6 +1484,7 @@
 				905AF3BB1C1F2AEF0063713A /* Task.swift in Sources */,
 				901EC5BB1DDBB0CB00AF2728 /* LoginViewModel.swift in Sources */,
 				9019EBE71C8F68A2008962A5 /* TaskNotificationPopUp.swift in Sources */,
+				903181BC1DE7321C00044330 /* ArrayExtentions.swift in Sources */,
 				9035FE211C1B2CF800D98022 /* Label.swift in Sources */,
 				901AEDF41C4136F500DD518A /* UIViewAutoLayoutExtentions.swift in Sources */,
 				90F00A0D1C4A7C25002C98BA /* TasksServices.swift in Sources */,

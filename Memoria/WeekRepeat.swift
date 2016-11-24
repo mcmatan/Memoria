@@ -45,7 +45,7 @@ class WeekRepeate {
         self.week[Day.wednesday] = self.getDayTimesFromDayString(day: dic[kWednesday])
         self.week[Day.thursday] = self.getDayTimesFromDayString(day: dic[kThursday])
         self.week[Day.friday] = self.getDayTimesFromDayString(day: dic[kFriday])
-        self.week[Day.saturday] = self.getDayTimesFromDayString(day: dic[kSunday])
+        self.week[Day.saturday] = self.getDayTimesFromDayString(day: dic[kSaturday])
     }
     
     init(dic: [Day: [Time]]) {
@@ -60,7 +60,7 @@ class WeekRepeate {
             case Day.monday:
                 self.week[Day.monday] = withDayAndTime.times
             case Day.tuesday:
-                self.week[Day.thursday] = withDayAndTime.times
+                self.week[Day.tuesday] = withDayAndTime.times
             case Day.wednesday:
                 self.week[Day.wednesday] = withDayAndTime.times
             case Day.thursday:
@@ -107,7 +107,7 @@ class WeekRepeate {
         let dic = [
             kSunday: self.getDayStringsFromDayTimes(day: self.week[Day.sunday]),
             kMonday: self.getDayStringsFromDayTimes(day: self.week[Day.monday]),
-            kTuesday: self.getDayStringsFromDayTimes(day: self.week[Day.thursday]),
+            kTuesday: self.getDayStringsFromDayTimes(day: self.week[Day.tuesday]),
             kWednesday: self.getDayStringsFromDayTimes(day: self.week[Day.wednesday]),
             kThursday: self.getDayStringsFromDayTimes(day: self.week[Day.thursday]),
             kFriday: self.getDayStringsFromDayTimes(day: self.week[Day.friday]),
