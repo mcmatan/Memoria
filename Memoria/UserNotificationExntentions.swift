@@ -83,13 +83,13 @@ extension UNUserNotificationCenter {
         
         let hour = time.hour
         let minute = time.minute
+        let identifier = self.requestIndetifer(task: task,day: day, time: time)
+        content.categoryIdentifier = identifier
+        let requestIdentifier = identifier
+        
         
         let trigger = UNNotificationTrigger.with(hour: hour, minute: minute, day: day.rawValue)
         
-        let identifier = self.requestIndetifer(task: task,day: day, time: time)
-        
-        content.categoryIdentifier = identifier
-        let requestIdentifier = identifier
         
         let request = UNNotificationRequest(identifier: requestIdentifier, content: content,trigger: trigger)
         UNUserNotificationCenter.current().add(request) { (error) in
@@ -98,6 +98,7 @@ extension UNUserNotificationCenter {
             }
         }
     }
+    
     
     static func requestIndetifer(task: Task,day: Day, time: Time)-> String {
         return "\(task.taskType.rawValue)-\(day.stringLong())-\(time.timeString)"
