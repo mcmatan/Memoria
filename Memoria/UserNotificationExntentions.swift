@@ -77,11 +77,27 @@ extension UNUserNotificationCenter {
         }
     }
     
+    static func stopRepeate(contentIdentifer: String) {
+        
+        var str = contentIdentifer
+        
+        if let dotRange = str.range(of: "||") {
+            str.removeSubrange(dotRange.lowerBound..<str.endIndex)
+        }
+        
+        UNUserNotificationCenter.current().getPendingNotificationRequests { allReq in
+            let identifersToBeRemoved = allReq.filter{ return $0.identifier.contains(str) }.map{ $0.content.categoryIdentifier }
+            UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: identifersToBeRemoved)
+        }
+    }
+    
     static func getNotificationsInfoJson(comletation: @escaping (_ discriptions: Array<String>)->Void) {
         UNUserNotificationCenter.current().getPendingNotificationRequests { allReq in
             let discription = allReq.map({ req -> String in
                 let identifer = req.content.categoryIdentifier
-                return "\(identifer)"
+                let trigger = req.trigger as! UNCalendarNotificationTrigger
+                let time = trigger.dateComponents.description
+                return "\(identifer)&&DisplayTime=\(time)"
             })
             
             comletation(discription)
@@ -126,9 +142,9 @@ extension UNUserNotificationCenter {
             let minuteAfterAdd = numbersAfterAdd.minute
             let hourAfterAdd = numbersAfterAdd.hour
             let dayAfterAdd = numbersAfterAdd.day
-            let timeAfterAdd = Time(hour: hourAfterAdd, minute: minuteAfterAdd)
+            //let timeAfterAdd = Time(hour: hourAfterAdd, minute: minuteAfterAdd)
             
-            let identifier = self.requestIndetifer(task: task,day: Day(rawValue: dayAfterAdd)!, time: timeAfterAdd, repeateNumber: i)
+            let identifier = self.requestIndetifer(task: task,day: day, time: time, repeateNumber: i)
             content.categoryIdentifier = identifier
             let requestIdentifier = identifier
             
@@ -152,6 +168,6 @@ extension UNUserNotificationCenter {
     
     static func requestIndetifer(task: Task,day: Day, time: Time, repeateNumber: Int)-> String {
         let repeateTime = (repeateNumber == 0) ? "originalMasage" : "repeateNumber=\(repeateNumber)"
-        return "\(task.taskType.rawValue)-\(day.stringLong())-\(time.timeString)-\(repeateTime)"
+        return "\(task.taskType.rawValue)-\(day.stringLong())-\(time.timeString)-||\(repeateTime)"
     }
 }

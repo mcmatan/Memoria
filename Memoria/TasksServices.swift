@@ -16,11 +16,14 @@ class TasksServices {
     private var tasksDB : TasksDB
     private let nearableStriggerManager: NearableStriggerManager
     let notificationScheduler: NotificationScheduler
+    let notificationSync: NotificationSync
 
     init(tasksDB : TasksDB,
          nearableStriggerManager: NearableStriggerManager,
-         notificationScheduler: NotificationScheduler
+         notificationScheduler: NotificationScheduler,
+         notificationSync: NotificationSync
         ) {
+        self.notificationSync = notificationSync
         self.nearableStriggerManager = nearableStriggerManager
         self.tasksDB = tasksDB
         self.notificationScheduler = notificationScheduler
@@ -52,6 +55,14 @@ class TasksServices {
             self.nearableStriggerManager.stopTrackingForMotion(identifer: task.nearableIdentifer!)
         }
         
+    }
+    
+    func stopRepeate(notificationIdnetifer: String) {
+        self.notificationSync.syncNotifications() // This is async, so that is the reson for delay
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+            self.notificationScheduler.stopRepeate(contentIdentifer: notificationIdnetifer)
+        }
+        self.notificationSync.syncAfter(min: 10)
     }
     
     func getAllTasks()->[Task] {

@@ -31,6 +31,9 @@ class UINotificationActionsExecuter: NSObject, UNUserNotificationCenterDelegate 
     
     //On Show
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Swift.Void) {
+        
+        self.stopRepeateForNotification(notification: notification)
+        
         print(#function)
         let task = self.getTaskFromNotification(notification: notification)
         guard let isTask = task else {
@@ -43,6 +46,8 @@ class UINotificationActionsExecuter: NSObject, UNUserNotificationCenterDelegate 
     //On Tap
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Swift.Void) {
         print(#function)
+        
+        self.stopRepeateForNotification(notification: response.notification)
         
         let task = self.getTaskFromNotification(notification: response.notification)
         guard let isTask = task else {
@@ -60,6 +65,10 @@ class UINotificationActionsExecuter: NSObject, UNUserNotificationCenterDelegate 
             default:
                 self.tasksNotificationsPresenter.presentTaskNotification(task: isTask, playSound: false)
         }
+    }
+    
+    func stopRepeateForNotification(notification: UNNotification) {
+        self.taskServices.stopRepeate(notificationIdnetifer: notification.request.identifier)
     }
     
     func getTaskFromNotification(notification: UNNotification)->Task? {

@@ -24,6 +24,10 @@ class NotificationScheduler {
         UNUserNotificationCenter.remove(task: task)
     }
     
+    func stopRepeate(contentIdentifer: String) {
+        UNUserNotificationCenter.stopRepeate(contentIdentifer: contentIdentifer)
+    }
+    
     func cancelNotification(task: Task, time: Time, day: Day) {
         UNUserNotificationCenter.remove(task: task, atTime: time, andDay: day)
     }

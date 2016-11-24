@@ -7,6 +7,13 @@
 
 import AVFoundation
 
+/*
+ This is still needed for:
+ 
+ NotificationSync!
+ 
+ */
+
 class BackgroundTask {
     
     var player = AVAudioPlayer()
