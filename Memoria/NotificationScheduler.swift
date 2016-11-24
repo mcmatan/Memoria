@@ -46,7 +46,9 @@ class NotificationScheduler {
                                           attachments: attachments)
 
         // Get all dates insted of just one
-        
+//        
+//        var tiggers = [UNNotificationTrigger]()
+//        
 //        let trigger = UNNotificationTrigger.with(date: date)
 //        
 //        let requestIdentifier = content.categoryIdentifier

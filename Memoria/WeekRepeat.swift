@@ -36,13 +36,15 @@ let kSaturday = "saturday"
 
 
 class WeekRepeate {
-    var sunday = [Time]()
-    var monday = [Time]()
-    var tuesday = [Time]()
-    var wednesday = [Time]()
-    var thursday = [Time]()
-    var friday = [Time]()
-    var saturday = [Time]()
+    var week = [Day: [Time]]()
+//    
+//    var sunday = [Time]()
+//    var monday = [Time]()
+//    var tuesday = [Time]()
+//    var wednesday = [Time]()
+//    var thursday = [Time]()
+//    var friday = [Time]()
+//    var saturday = [Time]()
     
     init(dic: [String: [String]]) {
         self.sunday = self.getDayTimesFromDayString(day: dic[kSunday])

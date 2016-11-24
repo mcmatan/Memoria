@@ -256,9 +256,7 @@ class TaskManagerViewController : ViewController, UITableViewDelegate, UITableVi
     //MARK: Navgiation
     
     func goToNextPage() {
-        if let _ = self.addTaskViewController {} else {
-            self.addTaskViewController = self.container.resolve(AddTaskViewController.self)
-        }
+        self.addTaskViewController = self.container.resolve(AddTaskViewController.self)
         self.navigationController?.pushViewController(self.addTaskViewController!, animated: true)
     }
 

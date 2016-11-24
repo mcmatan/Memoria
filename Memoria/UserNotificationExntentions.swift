@@ -10,10 +10,11 @@ import Foundation
 import UserNotifications
 
 extension UNNotificationTrigger {
-    static func with(date: Date)->UNNotificationTrigger {
+    static func with(hour: Int, minute: Int, day: Int)->UNNotificationTrigger {
         var fireDateRepeat = DateComponents()
-        fireDateRepeat.hour = date.hour
-        fireDateRepeat.minute = date.minute
+        fireDateRepeat.hour = hour
+        fireDateRepeat.minute = minute
+        fireDateRepeat.day = day
         let trigger = UNCalendarNotificationTrigger(dateMatching: fireDateRepeat, repeats: true)
         return trigger
     }

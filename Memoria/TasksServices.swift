@@ -28,12 +28,12 @@ class TasksServices {
     
     func saveTask(_ task :Task) {
         self.notificationScheduler.squeduleNotification(task: task)
+        
         self.tasksDB.saveTask(task)
         
         if task.hasSticker() {
             self.nearableStriggerManager.startTrackingForMotion(identifer: task.nearableIdentifer!)
         }
-        
     }
 
     func setTaskAsDone(task : Task) {
