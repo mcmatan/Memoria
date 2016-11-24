@@ -83,7 +83,6 @@
 		902546831DD8CD0E00D53C58 /* NotificationsTexts.plist in Resources */ = {isa = PBXBuildFile; fileRef = 902546821DD8CD0E00D53C58 /* NotificationsTexts.plist */; };
 		902546861DD8D07F00D53C58 /* NotificationsTextsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902546851DD8D07F00D53C58 /* NotificationsTextsBuilder.swift */; };
 		902E9AE71DD2010100282AB7 /* LocalNotificationActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902E9AE61DD2010100282AB7 /* LocalNotificationActions.swift */; };
-		903181791DE592B900044330 /* CaregtoryIdentifer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903181781DE592B900044330 /* CaregtoryIdentifer.swift */; };
 		903181B01DE5D45400044330 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903181AF1DE5D45400044330 /* AddTaskViewController.swift */; };
 		903181B21DE5D47800044330 /* DayTimeRepeatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903181B11DE5D47800044330 /* DayTimeRepeatePicker.swift */; };
 		903181B41DE5D5B900044330 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903181B31DE5D5B900044330 /* Time.swift */; };
@@ -290,7 +289,6 @@
 		902546821DD8CD0E00D53C58 /* NotificationsTexts.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = NotificationsTexts.plist; sourceTree = "<group>"; };
 		902546851DD8D07F00D53C58 /* NotificationsTextsBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsTextsBuilder.swift; sourceTree = "<group>"; };
 		902E9AE61DD2010100282AB7 /* LocalNotificationActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalNotificationActions.swift; sourceTree = "<group>"; };
-		903181781DE592B900044330 /* CaregtoryIdentifer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaregtoryIdentifer.swift; sourceTree = "<group>"; };
 		903181AF1DE5D45400044330 /* AddTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
 		903181B11DE5D47800044330 /* DayTimeRepeatePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayTimeRepeatePicker.swift; sourceTree = "<group>"; };
 		903181B31DE5D5B900044330 /* Time.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
@@ -873,7 +871,6 @@
 				90B0C53E1DAAE3870019D59B /* NotificationScheduler.swift */,
 				902E9AE61DD2010100282AB7 /* LocalNotificationActions.swift */,
 				904587B61DE4E2800034E463 /* UserNotificationExntentions.swift */,
-				903181781DE592B900044330 /* CaregtoryIdentifer.swift */,
 			);
 			name = NotificationScheduler;
 			sourceTree = "<group>";
@@ -1471,7 +1468,6 @@
 				90719A0A1DDBCEC100852BA3 /* ViewModel.swift in Sources */,
 				901349861DB4C8B0005FA445 /* IBeaconCloud.swift in Sources */,
 				903181B61DE5D5CA00044330 /* Day.swift in Sources */,
-				903181791DE592B900044330 /* CaregtoryIdentifer.swift in Sources */,
 				901EC5C61DDBCBBF00AF2728 /* Operators.swift in Sources */,
 				90E8C4971C1AA2B8009304A9 /* AppDelegate.swift in Sources */,
 				90F009FA1C4A7B0B002C98BA /* TasksNotificationsPresenter.swift in Sources */,

@@ -12,7 +12,7 @@ import Foundation
 import FirebaseDatabase
 
 class TasksDB {
-    var tasksByNearableIdentifer = [String : Task]()
+    var tasksByUid = [String : Task]()
     let fireBaseCoreWrapper: FireBaseCoreWrapper
     let ref: FIRDatabaseReference
     let tasksRef: FIRDatabaseReference
@@ -30,9 +30,8 @@ class TasksDB {
         self.startListeningForChanges()
     }
     
-
-    func getTaskForNearableIdentifer(_ nearableIdentifer : String) ->Task? {
-        return self.tasksByNearableIdentifer[nearableIdentifer]
+    func getTask(taskUid: String)->Task? {
+        return self.tasksByUid[taskUid]
     }
     
     func saveTask(_ task : Task) {
@@ -44,15 +43,7 @@ class TasksDB {
     }
     
     func getAllTasks()->[Task] {
-        return Array(self.tasksByNearableIdentifer.values)
-    }
-    
-    func isThereTaskForNearableIdentifier(_ nearableIdentifer : String)->Bool {
-        if let _ = self.tasksByNearableIdentifer[nearableIdentifer] {
-            return true
-        } else {
-            return false
-        }
+        return Array(self.tasksByUid.values)
     }
     
     func startListeningForChanges() {
@@ -60,10 +51,10 @@ class TasksDB {
         self.tasksRef.observe(FIRDataEventType.value, with: { (snapshot) in
             let postDict = snapshot.value as? [String : AnyObject] ?? [:]
             
-            self.tasksByNearableIdentifer = [String : Task]()
+            self.tasksByUid = [String : Task]()
             for tasksDic in postDict.values {
                 let task = Task(dic: tasksDic as! Dictionary<String, Any>)
-                self.tasksByNearableIdentifer[task.uid] = task
+                self.tasksByUid[task.uid] = task
             }
             
             Events.shared.tasksChanged.emit(())

@@ -9,7 +9,7 @@
 import Foundation
 
 enum Day: Int {
-    case sunday, monday, tuesday, wednesday, thursday, friday, saturday
+    case sunday = 1, monday, tuesday, wednesday, thursday, friday, saturday
     
     static func all()->[Day] {
         return [Day.sunday,
@@ -21,7 +21,7 @@ enum Day: Int {
                 Day.saturday]
     }
     
-    func string()->String {
+    func stringShort()->String {
         switch self {
         case .sunday:
             return "S"
@@ -40,13 +40,32 @@ enum Day: Int {
         }
     }
     
-    static func allStringValues()->[String] {
-        return [Day.sunday.string(),
-                Day.monday.string(),
-                Day.tuesday.string(),
-                Day.wednesday.string(),
-                Day.thursday.string(),
-                Day.friday.string(),
-                Day.saturday.string()]
+    func stringLong()->String {
+        switch self {
+        case .sunday:
+            return "Sunday"
+        case .monday:
+            return "Monday"
+        case .tuesday:
+            return "Tuesday"
+        case .wednesday:
+            return "Wednesday"
+        case .thursday:
+            return "Thursday"
+        case .friday:
+            return "Friday"
+        case .saturday:
+            return "Saturday"
+        }
+    }
+    
+    static func allStringShortValues()->[String] {
+        return [Day.sunday.stringShort(),
+                Day.monday.stringShort(),
+                Day.tuesday.stringShort(),
+                Day.wednesday.stringShort(),
+                Day.thursday.stringShort(),
+                Day.friday.stringShort(),
+                Day.saturday.stringShort()]
     }
 }

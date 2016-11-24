@@ -64,11 +64,11 @@ class UINotificationActionsExecuter: NSObject, UNUserNotificationCenterDelegate 
     
     func getTaskFromNotification(notification: UNNotification)->Task? {
         let key = TaskNotificationUid
-        let nearableIdentifer = notification.request.content.userInfo[key] as? String
-        guard let isNearableIdentifer = nearableIdentifer else {
+        let uid = notification.request.content.userInfo[key] as? String
+        guard let isUid = uid else {
             return nil
         }
-        let task = self.taskServices.getTaskForNearableIdentifier(isNearableIdentifer)
+        let task = self.taskServices.getTask(taskUid: isUid)
         return task
     }
 }

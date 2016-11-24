@@ -29,7 +29,7 @@ class NotificationsTextsBuilder {
         
     static func bruthTeeth()->NotificationText {
         let title = "Time to brush your teeth"
-        let body = "Many dentists agree that proper brushing takes at least two minutes. Dr. Anna Guarna, a dentist for over twenty years in Connecticut, goes one step further and typically has her patients brush for three minutes — one and a half minutes on both the upper teeth and the bottom teeth."
+        let body = "And have a great day (:"
         return NotificationText(title: title, body: body)
     }
 

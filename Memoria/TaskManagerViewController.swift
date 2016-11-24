@@ -233,24 +233,24 @@ class TaskManagerViewController : ViewController, UITableViewDelegate, UITableVi
     }
     
     func showNearableHasAlreadyTaskAssignedMessage(_ closestNearable : ESTNearable) {
-        let title = Content.getContent(ContentType.labelTxt, name: "TaskManagerVCTheNearableHasTaskAllreadyMessage")
-        let btnYesTxt = Content.getContent(ContentType.buttonTxt, name: "Yes")
-        let btnNoTxt = Content.getContent(ContentType.buttonTxt, name: "No")
-        let alert = UIAlertController(title: title, message: "", preferredStyle: UIAlertControllerStyle.alert)
-        let btnYes = UIAlertAction(title: btnYesTxt, style: UIAlertActionStyle.default) { (action : UIAlertAction) in
-            let task = self.tasksServices.getTaskForNearableIdentifier(closestNearable.identifier)
-            self.currenctTaskCreator.setCurrenctTask(task)
-            
-            self.currenctTaskCreator.startNewTask()
-            self.currenctTaskCreator.setTaskNearableIdentifer(closestNearable.identifier)
-            self.goToNextPage()
-        }
-        
-        let btnNo = UIAlertAction(title: btnNoTxt, style: UIAlertActionStyle.cancel) { (action : UIAlertAction) in
-        }
-        alert.addAction(btnNo)
-        alert.addAction(btnYes)
-        self.present(alert, animated: true, completion: nil)
+//        let title = Content.getContent(ContentType.labelTxt, name: "TaskManagerVCTheNearableHasTaskAllreadyMessage")
+//        let btnYesTxt = Content.getContent(ContentType.buttonTxt, name: "Yes")
+//        let btnNoTxt = Content.getContent(ContentType.buttonTxt, name: "No")
+//        let alert = UIAlertController(title: title, message: "", preferredStyle: UIAlertControllerStyle.alert)
+//        let btnYes = UIAlertAction(title: btnYesTxt, style: UIAlertActionStyle.default) { (action : UIAlertAction) in
+//            let task = self.tasksServices.getTaskForNearableIdentifier(closestNearable.identifier)
+//            self.currenctTaskCreator.setCurrenctTask(task)
+//            
+//            self.currenctTaskCreator.startNewTask()
+//            self.currenctTaskCreator.setTaskNearableIdentifer(closestNearable.identifier)
+//            self.goToNextPage()
+//        }
+//        
+//        let btnNo = UIAlertAction(title: btnNoTxt, style: UIAlertActionStyle.cancel) { (action : UIAlertAction) in
+//        }
+//        alert.addAction(btnNo)
+//        alert.addAction(btnYes)
+//        self.present(alert, animated: true, completion: nil)
     }
     
     //MARK: Navgiation

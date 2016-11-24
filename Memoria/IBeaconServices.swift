@@ -29,7 +29,8 @@ class NearableServices {
     }
     
     func isNearableAlreadyHasATaskAssigned(_ nearable :ESTNearable)->Bool {
-        return self.tasksDB.isThereTaskForNearableIdentifier(nearable.identifier)
+        return false
+        //return self.tasksDB.isThereTaskForNearableIdentifier(nearable.identifier)
     }
     
     func getNearableColorFor(nearableIdentifer :String)->UIColor {

@@ -14,13 +14,13 @@ class DayTimeRepeatePicker: UIView {
     func getSelected()->(times: [Time], days: [Day]) {
         
         let days = self.daySegmentedControl.selectedSegmentIndices.map { dayNumber in
-            return Day(rawValue: dayNumber)
+            return Day(rawValue: dayNumber + 1) // Adding one for the Becouse the day starts from 1, and segemented controller starts as 0
         }
         return (self.selectedTimes, days as! [Day])
     }
     
     private var selectedTimes = [Time]()
-    private let daySegmentedControl = MultiSelectionSegmentedControl(items: Day.allStringValues())
+    private let daySegmentedControl = MultiSelectionSegmentedControl(items: Day.allStringShortValues())
     private let timesStack =  UIStackView()
     private let btnAddTime = Button()
 

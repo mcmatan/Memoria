@@ -58,8 +58,8 @@ class TasksServices {
        return self.tasksDB.getAllTasks()
     }
     
-    func getTaskForNearableIdentifier(_ nearableIdentifer : String) ->Task {
-        return self.tasksDB.getTaskForNearableIdentifer(nearableIdentifer)!
+    func getTask(taskUid: String)-> Task? {
+        return self.tasksDB.getTask(taskUid: taskUid)
     }
 
 }

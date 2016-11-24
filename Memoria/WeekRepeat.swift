@@ -37,67 +37,38 @@ let kSaturday = "saturday"
 
 class WeekRepeate {
     var week = [Day: [Time]]()
-//    
-//    var sunday = [Time]()
-//    var monday = [Time]()
-//    var tuesday = [Time]()
-//    var wednesday = [Time]()
-//    var thursday = [Time]()
-//    var friday = [Time]()
-//    var saturday = [Time]()
-    
+
     init(dic: [String: [String]]) {
-        self.sunday = self.getDayTimesFromDayString(day: dic[kSunday])
-        self.monday = self.getDayTimesFromDayString(day: dic[kMonday])
-        self.tuesday = self.getDayTimesFromDayString(day: dic[kTuesday])
-        self.wednesday = self.getDayTimesFromDayString(day: dic[kWednesday])
-        self.thursday = self.getDayTimesFromDayString(day: dic[kThursday])
-        self.friday = self.getDayTimesFromDayString(day: dic[kFriday])
-        self.saturday = self.getDayTimesFromDayString(day: dic[kSunday])
+        self.week[Day.sunday] = self.getDayTimesFromDayString(day: dic[kSunday])
+        self.week[Day.monday] = self.getDayTimesFromDayString(day: dic[kMonday])
+        self.week[Day.tuesday] = self.getDayTimesFromDayString(day: dic[kTuesday])
+        self.week[Day.wednesday] = self.getDayTimesFromDayString(day: dic[kWednesday])
+        self.week[Day.thursday] = self.getDayTimesFromDayString(day: dic[kThursday])
+        self.week[Day.friday] = self.getDayTimesFromDayString(day: dic[kFriday])
+        self.week[Day.saturday] = self.getDayTimesFromDayString(day: dic[kSunday])
     }
     
     init(dic: [Day: [Time]]) {
-        if let isSunday = dic[Day.sunday] {
-            self.sunday = isSunday
-        }
-        if let isMonday = dic[Day.monday] {
-            self.monday = isMonday
-        }
-        if let isTusday = dic[Day.tuesday] {
-            self.tuesday = isTusday
-        }
-        if let isWednesday = dic[Day.wednesday] {
-            self.wednesday = isWednesday
-        }
-        if let isThusday = dic[Day.thursday] {
-            self.thursday = isThusday
-        }
-        if let isFriday = dic[Day.friday] {
-            self.friday = isFriday
-        }
-        if let isSaterday = dic[Day.saturday] {
-            self.saturday = isSaterday
-        }
-        
+        self.week = dic
     }
     
     init(withDayAndTime: (days: [Day], times: [Time])) { // This is only for the time beeing when you are can not input diffrent times for diffrent days for the same task
         for day in withDayAndTime.days {
             switch day {
             case Day.sunday:
-                self.sunday = withDayAndTime.times
+                self.week[Day.sunday] = withDayAndTime.times
             case Day.monday:
-                self.monday = withDayAndTime.times
+                self.week[Day.monday] = withDayAndTime.times
             case Day.tuesday:
-                self.tuesday = withDayAndTime.times
+                self.week[Day.thursday] = withDayAndTime.times
             case Day.wednesday:
-                self.wednesday = withDayAndTime.times
+                self.week[Day.wednesday] = withDayAndTime.times
             case Day.thursday:
-                self.thursday = withDayAndTime.times
+                self.week[Day.thursday] = withDayAndTime.times
             case Day.friday:
-                self.friday = withDayAndTime.times
+                self.week[Day.friday] = withDayAndTime.times
             case Day.saturday:
-                self.saturday = withDayAndTime.times
+                self.week[Day.saturday] = withDayAndTime.times
             }
         }
     }
@@ -119,9 +90,14 @@ class WeekRepeate {
         return allTimes
     }
     
-    func getDayStringsFromDayTimes(day: [Time])->[String] {
+    func getDayStringsFromDayTimes(day: [Time]?)->[String] {
         var allTimes = [String]()
-        for time in day {
+        
+        guard let isDay = day else {
+            return allTimes
+        }
+        
+        for time in isDay {
             allTimes.append(time.timeString)
         }
         return allTimes
@@ -129,13 +105,13 @@ class WeekRepeate {
     
     func toAnyObject() -> Any {
         let dic = [
-            kSunday: self.getDayStringsFromDayTimes(day: self.sunday),
-            kMonday: self.getDayStringsFromDayTimes(day: self.monday),
-            kTuesday: self.getDayStringsFromDayTimes(day: self.tuesday),
-            kWednesday: self.getDayStringsFromDayTimes(day: self.wednesday),
-            kThursday: self.getDayStringsFromDayTimes(day: self.thursday),
-            kFriday: self.getDayStringsFromDayTimes(day: self.friday),
-            kSaturday: self.getDayStringsFromDayTimes(day: self.saturday)
+            kSunday: self.getDayStringsFromDayTimes(day: self.week[Day.sunday]),
+            kMonday: self.getDayStringsFromDayTimes(day: self.week[Day.monday]),
+            kTuesday: self.getDayStringsFromDayTimes(day: self.week[Day.thursday]),
+            kWednesday: self.getDayStringsFromDayTimes(day: self.week[Day.wednesday]),
+            kThursday: self.getDayStringsFromDayTimes(day: self.week[Day.thursday]),
+            kFriday: self.getDayStringsFromDayTimes(day: self.week[Day.friday]),
+            kSaturday: self.getDayStringsFromDayTimes(day: self.week[Day.saturday])
             ] as [String : Any]
         
         return dic

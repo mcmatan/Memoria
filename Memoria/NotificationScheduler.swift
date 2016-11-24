@@ -11,6 +11,8 @@ import UIKit
 import UserNotifications
 import MobileCoreServices
 
+
+
 let TaskNotificationUid : String = "TaskNotificationUid"
 class NotificationScheduler {
     
@@ -19,7 +21,11 @@ class NotificationScheduler {
     }
     
     func cancelNotification(task : Task) {
-        //TBD
+        UNUserNotificationCenter.remove(task: task)
+    }
+    
+    func cancelNotification(task: Task, time: Time, day: Day) {
+        UNUserNotificationCenter.remove(task: task, time: time, day: day)
     }
     
     func squeduleNotification(task : Task) {
@@ -29,8 +35,7 @@ class NotificationScheduler {
         let subtitle = ""
         let body = notificationText.body
         let imageURL = task.taskType.imageURL()
-        let caregtoryIdentifer = CaregtoryIdentifer.from(task: task)
-        let sound = UNNotificationSound(named: "\(caregtoryIdentifer).aiff")
+        let sound = UNNotificationSound(named: "\(task.taskType.rawValue)-notification.aiff")
         let uid = task.uid
         let key = TaskNotificationUid
         let userInfo = [key: uid]
@@ -41,23 +46,10 @@ class NotificationScheduler {
                                           subtitle: subtitle,
                                           body: body,
                                           sound: sound,
-                                          categoryIdentifier: caregtoryIdentifer,
                                           userInfo: userInfo,
                                           attachments: attachments)
 
-        // Get all dates insted of just one
-//        
-//        var tiggers = [UNNotificationTrigger]()
-//        
-//        let trigger = UNNotificationTrigger.with(date: date)
-//        
-//        let requestIdentifier = content.categoryIdentifier
-//        let request = UNNotificationRequest(identifier: requestIdentifier, content: content,trigger: trigger)
-//        UNUserNotificationCenter.current().add(request) { (error) in
-//            if let isError = error {
-//                print("Error on notification reuqest = \(isError)")
-//            }
-//        }
+        UNUserNotificationCenter.add(task: task, content: content)
     }
     
 }
