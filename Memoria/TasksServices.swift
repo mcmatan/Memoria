@@ -40,7 +40,6 @@ class TasksServices {
     }
 
     func setTaskAsDone(task : Task) {
-        //TBD Should add on task that I'ts one
         self.notificationScheduler.cancelNotification(task: task)
         self.tasksDB.saveTask(task)
         
@@ -54,7 +53,6 @@ class TasksServices {
         if task.hasSticker() {
             self.nearableStriggerManager.stopTrackingForMotion(identifer: task.nearableIdentifer!)
         }
-        
     }
     
     func stopRepeate(notificationIdnetifer: String) {
