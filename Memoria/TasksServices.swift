@@ -58,10 +58,7 @@ class TasksServices {
     }
     
     func stopRepeate(notificationIdnetifer: String) {
-        self.notificationSync.syncNotifications() // This is async, so that is the reson for delay
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
-            self.notificationScheduler.stopRepeate(contentIdentifer: notificationIdnetifer)
-        }
+        self.notificationScheduler.stopRepeate(contentIdentifer: notificationIdnetifer)
         self.notificationSync.syncAfter(min: 10)
     }
     
