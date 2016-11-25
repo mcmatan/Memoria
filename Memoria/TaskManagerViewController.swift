@@ -73,6 +73,7 @@ class TaskManagerViewController : ViewController, UITableViewDelegate, UITableVi
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = Content.getContent(ContentType.labelTxt, name: "TaskManagerTitle")
         self.setupView()
         self.bindings()
     }

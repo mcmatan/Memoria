@@ -74,9 +74,17 @@ Then click on the button to add a task.</string>
 	<key>TaskVerificationPopUpItsTimeWithTime</key>
 	<string>It&apos;s %@</string>
 	<key>TabBarTasksLbl</key>
+	<string>Manager</string>
+	<key>TabBarFeedLbl</key>
 	<string>Tasks</string>
+	<key>TabBarNextTaskLbl</key>
+	<string>Now</string>
 	<key>TaskManagerTitle</key>
 	<string>Tasks manager</string>
+	<key>FeedTitle</key>
+	<string>Tasks</string>
+	<key>NextTaskTitle</key>
+	<string>Next task</string>
 	<key>TimeOfDayMorining</key>
 	<string>morning</string>
 	<key>TimeOfDayAfterNoon</key>

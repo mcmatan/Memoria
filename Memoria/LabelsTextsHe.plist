@@ -73,8 +73,12 @@
 	<string>עכשיו %@ זה הזמן ל %@</string>
 	<key>TabBarTasksLbl</key>
 	<string>משימות</string>
+	<key>TabBarFeedLbl</key>
+	<string>פיד</string>
 	<key>TaskManagerTitle</key>
 	<string>מנהל משימות</string>
+	<key>FeedTitle</key>
+	<string>פיד</string>
 	<key>TimeOfDayMorining</key>
 	<string>בוקר טוב</string>
 	<key>TimeOfDayAfterNoon</key>

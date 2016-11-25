@@ -78,9 +78,17 @@ extension UIView {
         let contrain =  NSLayoutConstraint(item: self, attribute: NSLayoutAttribute.height, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.notAnAttribute, multiplier: 1.0, constant: CGFloat(height))
         NSLayoutConstraint.activate([contrain])
     }
+    
+    //MARK: Width
     func setWidthAs(_ width : Double) {
         self.translatesAutoresizingMaskIntoConstraints = false
         let contrain =  NSLayoutConstraint(item: self, attribute: NSLayoutAttribute.width, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.notAnAttribute, multiplier: 1.0, constant: CGFloat(width))
+        NSLayoutConstraint.activate([contrain])
+    }
+    
+    func widthAsViewHeight(viewHeight: UIView) {
+        self.translatesAutoresizingMaskIntoConstraints = false
+        let contrain =  NSLayoutConstraint(item: self, attribute: NSLayoutAttribute.width, relatedBy: NSLayoutRelation.equal, toItem: viewHeight, attribute: NSLayoutAttribute.height, multiplier: 1.0, constant: 0)
         NSLayoutConstraint.activate([contrain])
     }
 
@@ -111,20 +119,56 @@ extension UIView {
         let contrain =  NSLayoutConstraint(item: self, attribute: NSLayoutAttribute.bottom, relatedBy: NSLayoutRelation.equal, toItem: view, attribute: NSLayoutAttribute.bottom, multiplier: 1.0, constant: offset)
         NSLayoutConstraint.activate([contrain])
     }
-
+    
+    func bottomAlighnToViewBottom(_ view : UIView) {
+        self.bottomAlighnToViewBottom(view,offset: 0)
+    }
     
     func trailingToSuperView(_ withMargin : Bool) {
+        self.translatesAutoresizingMaskIntoConstraints =  false
         var att = NSLayoutAttribute.trailing
         att = withMargin ?  NSLayoutAttribute.trailingMargin : NSLayoutAttribute.trailing
         let contrain =  NSLayoutConstraint(item: self, attribute: NSLayoutAttribute.trailing, relatedBy: NSLayoutRelation.equal, toItem: self.superview, attribute: att, multiplier: 1.0, constant: 0)
         NSLayoutConstraint.activate([contrain])
     }
+    
+    //MARK: Leading
     func leadingToSuperView(_ withMargin : Bool) {
+        self.translatesAutoresizingMaskIntoConstraints =  false
         var att = NSLayoutAttribute.leading
         att = withMargin ?  NSLayoutAttribute.leadingMargin : NSLayoutAttribute.leading
         let contrain =  NSLayoutConstraint(item: self, attribute: NSLayoutAttribute.leading, relatedBy: NSLayoutRelation.equal, toItem: self.superview, attribute: att, multiplier: 1.0, constant: 0)
         NSLayoutConstraint.activate([contrain])
     }
+    
+    func leadingToViewTrailing(view: UIView, offset: CGFloat) {
+        self.translatesAutoresizingMaskIntoConstraints =  false
+        let contrain =  NSLayoutConstraint(item: self, attribute: NSLayoutAttribute.leading, relatedBy: NSLayoutRelation.equal, toItem: view, attribute: NSLayoutAttribute.trailing, multiplier: 1.0, constant: offset)
+        NSLayoutConstraint.activate([contrain])
+    }
+    
+    func leadingToViewLeading(view: UIView, offset: CGFloat) {
+        self.translatesAutoresizingMaskIntoConstraints =  false
+        let contrain =  NSLayoutConstraint(item: self, attribute: NSLayoutAttribute.leading, relatedBy: NSLayoutRelation.equal, toItem: view, attribute: NSLayoutAttribute.leading, multiplier: 1.0, constant: offset)
+        NSLayoutConstraint.activate([contrain])
+    }
+    
+    func topToSuperView(_ withMargin : Bool) {
+        self.translatesAutoresizingMaskIntoConstraints =  false
+        var att = NSLayoutAttribute.top
+        att = withMargin ?  NSLayoutAttribute.topMargin : NSLayoutAttribute.top
+        let contrain =  NSLayoutConstraint(item: self, attribute: NSLayoutAttribute.top, relatedBy: NSLayoutRelation.equal, toItem: self.superview, attribute: att, multiplier: 1.0, constant: 0)
+        NSLayoutConstraint.activate([contrain])
+    }
+    
+    func bottomToSuperView(_ withMargin : Bool) {
+        self.translatesAutoresizingMaskIntoConstraints =  false
+        var att = NSLayoutAttribute.bottom
+        att = withMargin ?  NSLayoutAttribute.bottomMargin : NSLayoutAttribute.bottom
+        let contrain =  NSLayoutConstraint(item: self, attribute: NSLayoutAttribute.bottom, relatedBy: NSLayoutRelation.equal, toItem: self.superview, attribute: att, multiplier: 1.0, constant: 0)
+        NSLayoutConstraint.activate([contrain])
+    }
+    
     func clipToWidthSuperView() {
         let viewsKeys : [String : AnyObject] =
         [
@@ -136,6 +180,14 @@ extension UIView {
         NSLayoutConstraint.activate(constrain)
     }
 
+    //MARK: Edges
+    
+    func edgesToSuperView(withPadding: Bool) {
+        self.leadingToSuperView(withPadding)
+        self.trailingToSuperView(withPadding)
+        self.topToSuperView(withPadding)
+        self.bottomToSuperView(withPadding)
+    }
 }
 
 class UIViewAutoLayoutExtentions {

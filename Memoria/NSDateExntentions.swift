@@ -51,6 +51,16 @@ extension Date {
         return Date() < self
     }
     
+    func dayNumberOfWeek() -> Int {
+        return Calendar.current.dateComponents([.weekday], from: self).weekday!
+    }
+    
+    func set(minute: Int, hour: Int)->Date {
+        let cal: Calendar = Calendar(identifier: .gregorian)
+        let newDate: Date = cal.date(bySettingHour: hour, minute: minute, second: 0, of: self)!
+        return newDate
+    }
+    
     func toStringWithCurrentRegion()-> String {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy/MM/dd-hh:mm:ss"

@@ -27,6 +27,14 @@ open class AssemblyMainApplicationUI {
             return TaskWarningPopUp(task: task)
         }
         
+        container.register(FeedViewController.self) { _ in
+            return FeedViewController(taskServices: container.resolve(TasksServices.self)!)
+        }
+        
+        container.register(NextTaskViewController.self) { _ in
+            return NextTaskViewController(tesksService: container.resolve(TasksServices.self)!)
+        }
+        
         container.register(UINotificationActionsExecuter.self) { c in
             return UINotificationActionsExecuter(
                 taskServices: container.resolve(TasksServices.self)!,
@@ -36,13 +44,23 @@ open class AssemblyMainApplicationUI {
         
         container.register(TabBarController.self) { c in
             let tabBar = TabBarController()
-            guard let left = c.resolve(TaskManagerViewController.self) else {return tabBar}
-            let controllers = [left]
+            let taskManager = c.resolve(TaskManagerViewController.self)!
+            let feed = c.resolve(FeedViewController.self)!
+            let nextTesk = c.resolve(NextTaskViewController.self)!
+            let controllers = [taskManager, feed, nextTesk]
             tabBar.viewControllers = controllers
-            left.tabBarItem = UITabBarItem(
+            taskManager.tabBarItem = UITabBarItem(
                 title: Content.getContent(ContentType.labelTxt, name: "TabBarTasksLbl"),
-                image: UIImage(named: "TasksManagerLogoTabOnlyImage"),
+                image: UIImage(named: "TaskManagerLogoTab"),
                 tag: 1)
+            feed.tabBarItem = UITabBarItem(
+                title: Content.getContent(ContentType.labelTxt, name: "TabBarFeedLbl"),
+                image: UIImage(named: "feedIcon"),
+                tag: 2)
+            nextTesk.tabBarItem = UITabBarItem(
+                title: Content.getContent(ContentType.labelTxt, name: "TabBarNextTaskLbl"),
+                image: UIImage(named: "bell"),
+                tag: 3)
             tabBar.selectedIndex = 1
             return tabBar
         }

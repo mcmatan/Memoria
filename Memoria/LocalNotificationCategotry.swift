@@ -63,28 +63,37 @@ enum TaskType: String {
     }
 
     func imageURL()->URL {
+        let url = Bundle.main.url(forResource: self.imageName(), withExtension: "png")
+        return url!
+    }
+    
+    func imageName()->String {
         let color = "Blue"
-
-            switch self {
-            case .brushTeeth:
-                let url = Bundle.main.url(forResource: "brushTeeth\(color)", withExtension: "png")
-                return url!
-            case .drugs:
-                let url = Bundle.main.url(forResource: "drugs\(color)", withExtension: "png")
-                return url!
-            case .food:
-                let url = Bundle.main.url(forResource: "food\(color)", withExtension: "png")
-                return url!
-            case .goToWork:
-                let url = Bundle.main.url(forResource: "goToWork\(color)", withExtension: "png")
-                return url!
-            case .goToGym:
-                let url = Bundle.main.url(forResource: "goToGym\(color)", withExtension: "png")
-                return url!
-            case .wakeUp:
-                let url = Bundle.main.url(forResource: "wakeUp\(color)", withExtension: "png")
-                return url!
-            }
+        
+        switch self {
+        case .brushTeeth:
+            let name = "brushTeeth\(color)"
+            return name
+        case .drugs:
+            let name = "drugs\(color)"
+            return name
+        case .food:
+            let name = "food\(color)"
+            return name
+        case .goToWork:
+            let name = "goToWork\(color)"
+            return name
+        case .goToGym:
+            let name = "goToGym\(color)"
+            return name
+        case .wakeUp:
+            let name = "wakeUp\(color)"
+            return name
+        }
+    }
+    
+    func image()->UIImage {
+        return UIImage(named: self.imageName())!
     }
 
 }
