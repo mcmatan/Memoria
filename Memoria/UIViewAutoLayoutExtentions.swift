@@ -20,8 +20,12 @@ extension UIView {
     }
     
     func centerVerticlyInSuperView() { //Y
+        self.centerVerticlyInSuperView(offset:0)
+    }
+    
+    func centerVerticlyInSuperView(offset: CGFloat) { //Y
         self.translatesAutoresizingMaskIntoConstraints = false
-        let constraint = NSLayoutConstraint(item: self, attribute: NSLayoutAttribute.centerY, relatedBy: NSLayoutRelation.equal, toItem: superview, attribute: NSLayoutAttribute.centerY, multiplier: 1.0, constant: 0)
+        let constraint = NSLayoutConstraint(item: self, attribute: NSLayoutAttribute.centerY, relatedBy: NSLayoutRelation.equal, toItem: superview, attribute: NSLayoutAttribute.centerY, multiplier: 1.0, constant: offset)
         superview?.addConstraint(constraint)
     }
     
@@ -117,6 +121,12 @@ extension UIView {
     func bottomAlighnToViewBottom(_ view : UIView, offset : CGFloat) {
         self.translatesAutoresizingMaskIntoConstraints =  false
         let contrain =  NSLayoutConstraint(item: self, attribute: NSLayoutAttribute.bottom, relatedBy: NSLayoutRelation.equal, toItem: view, attribute: NSLayoutAttribute.bottom, multiplier: 1.0, constant: offset)
+        NSLayoutConstraint.activate([contrain])
+    }
+    
+    func bottomAlighnToViewTop(_ view : UIView, offset : CGFloat) {
+        self.translatesAutoresizingMaskIntoConstraints =  false
+        let contrain =  NSLayoutConstraint(item: self, attribute: NSLayoutAttribute.bottom, relatedBy: NSLayoutRelation.equal, toItem: view, attribute: NSLayoutAttribute.top, multiplier: 1.0, constant: offset)
         NSLayoutConstraint.activate([contrain])
     }
     

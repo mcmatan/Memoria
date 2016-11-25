@@ -84,7 +84,7 @@ Then click on the button to add a task.</string>
 	<key>FeedTitle</key>
 	<string>Tasks</string>
 	<key>NextTaskTitle</key>
-	<string>Next task</string>
+	<string>What next</string>
 	<key>TimeOfDayMorining</key>
 	<string>morning</string>
 	<key>TimeOfDayAfterNoon</key>

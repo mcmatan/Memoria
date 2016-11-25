@@ -157,5 +157,15 @@ extension Date {
         
         return "There is no time definision"
     }
+    
+    func hoursIntillDateDescription(date: Date)->String {
+        let hoursToTask = date.hoursFrom(self)
+        if hoursToTask > 1 {
+            return "In \(hoursToTask) hours"
+        } else {
+            let minutesTo = date.minutesFrom(self)
+            return "In \(minutesTo) minutes"
+        }
+    }
 }
 

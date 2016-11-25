@@ -62,13 +62,13 @@ enum TaskType: String {
         return url!
     }
 
-    func imageURL()->URL {
-        let url = Bundle.main.url(forResource: self.imageName(), withExtension: "png")
+    func imageURL(withColor: Bool)->URL {
+        let url = Bundle.main.url(forResource: self.imageName(withColor: withColor), withExtension: "png")
         return url!
     }
     
-    func imageName()->String {
-        let color = "Blue"
+    func imageName(withColor: Bool)->String {
+        let color = withColor ? "Blue" : ""
         
         switch self {
         case .brushTeeth:
@@ -92,8 +92,8 @@ enum TaskType: String {
         }
     }
     
-    func image()->UIImage {
-        return UIImage(named: self.imageName())!
+    func image(withColor: Bool)->UIImage {
+        return UIImage(named: self.imageName(withColor: withColor))!
     }
 
 }

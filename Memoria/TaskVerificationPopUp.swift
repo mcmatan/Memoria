@@ -56,7 +56,7 @@ class TaskVerificationPopUp : ViewController {
         
         
         self.lblDidYouYet.text = notificationText.body
-        self.lblDidYouYet.titleGray()
+        self.lblDidYouYet.defaultySubtitleGray()
         self.lblDidYouYet.font = UIFont.systemFont(ofSize: 22)
         self.lblDidYouYet.textAlignment = NSTextAlignment.center
         self.lblDidYouYet.numberOfLines = 0

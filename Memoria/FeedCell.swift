@@ -32,14 +32,19 @@ class FeedCell: Cell {
         imgTask.topToSuperView(false)
         imgTask.bottomToSuperView(false)
         imgTask.widthAsViewHeight(viewHeight: self.contentView)
+        imgTask.contentMode = UIViewContentMode.scaleAspectFit
+        imgTask.clipsToBounds = true
         
         lblTitle.topToSuperView(true)
-        lblTitle.defaultyLargeTitle()
+        lblTitle.defaultyTitle()
         lblTitle.leadingToViewTrailing(view: imgTask, offset: 20)
         
         lblSubtitle.defaultySubtitle()
         lblSubtitle.topAlighnToViewBottom(lblTitle)
         lblSubtitle.leadingToViewLeading(view: lblTitle, offset: 0)
+        
+        self.contentView.backgroundColor = UIColor.clear
+        self.backgroundColor = UIColor.clear
     }
     
     func setModel(taskDispaly: TaskDisplay) {

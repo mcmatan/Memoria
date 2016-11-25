@@ -14,5 +14,7 @@
 #import <CoreBluetooth/CoreBluetooth.h>
 
 #import <EstimoteSDK/EstimoteSDK.h>
+#import <DZNEmptyDataSet/UIScrollView+EmptyDataSet.h>
+
 
 #endif

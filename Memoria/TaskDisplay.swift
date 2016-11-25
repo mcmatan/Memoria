@@ -20,7 +20,7 @@ struct  TaskDisplay {
         self.taskType = task.taskType.name()
         self.isCompeate = false //TBD
         self.date = date
-        self.image = task.taskType.image()
+        self.image = task.taskType.image(withColor: false)
         self.uid = task.uid
     }
 }

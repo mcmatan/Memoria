@@ -75,7 +75,7 @@ class TaskWarningPopUp : ViewController {
 
 
         self.lblBeCareful.text = notificationText.body
-        self.lblBeCareful.titleGray()
+        self.lblBeCareful.defaultySubtitleGray()
         self.lblBeCareful.font = UIFont.systemFont(ofSize: 24)
         self.lblBeCareful.textAlignment = NSTextAlignment.center
         self.lblBeCareful.numberOfLines = 0

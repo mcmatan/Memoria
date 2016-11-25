@@ -50,26 +50,24 @@ class NextTaskViewController: ViewController {
         view.addSubview(self.imgTaskIcon)
         view.addSubview(lblTimeToTask)
         
-        lblGoodTimeOfDay.defaultyLargeTitle()
-        lblTaskName.defaultyTitle()
+        lblGoodTimeOfDay.defaultyTitleLarge()
+        lblTaskName.defaultyTitleLarge()
         
         lblTimeToTask.defaultyTitle()
         
-        lblGoodTimeOfDay.centerHorizontlyInSuperView()
-        lblGoodTimeOfDay.topToSuperView(true)
-        
-        lblTaskName.topAlighnToViewBottom(lblGoodTimeOfDay)
-        lblTaskName.centerHorizontlyInSuperView()
-        
-        self.imgTaskIcon.topAlighnToViewBottom(lblTaskName, offset: 20)
         self.imgTaskIcon.centerHorizontlyInSuperView()
+        self.imgTaskIcon.centerVerticlyInSuperView(offset: -20)
         self.imgTaskIcon.setHeightAs(200)
         self.imgTaskIcon.setWidthAs(200)
         self.imgTaskIcon.contentMode = UIViewContentMode.scaleAspectFit
-        self.imgTaskIcon.clipsToBounds = true
         
+        lblTaskName.bottomAlighnToViewTop(self.imgTaskIcon, offset: -10)
+        lblTaskName.centerHorizontlyInSuperView()
         
-        lblTimeToTask.topAlighnToViewBottom(self.imgTaskIcon, offset: 20)
+        lblGoodTimeOfDay.centerHorizontlyInSuperView()
+        lblGoodTimeOfDay.bottomAlighnToViewTop(lblTaskName, offset: -5)
+        
+        lblTimeToTask.topAlighnToViewBottom(self.imgTaskIcon, offset: 10)
         lblTimeToTask.centerHorizontlyInSuperView()
     }
     
@@ -92,16 +90,22 @@ class NextTaskViewController: ViewController {
     //MARK: Show
     
     func showNoTask() {
-        self.lblGoodTimeOfDay.text = "There is no next task for today"
+        self.lblGoodTimeOfDay.text = "No next task for today"
         self.lblTaskName.text = "Have a rest (:"
         self.lblTimeToTask.text = ""
-        self.imgTaskIcon.image = UIImage(named: "smilyNoTasks")
+        self.imgTaskIcon.image = UIImage(named: "relax")
+        lblGoodTimeOfDay.defaultySubtitleGray()
+        lblTaskName.defaultySubtitleGray()
     }
     
     func showTaskInfo(taskDisplay: TaskDisplay) {
-        self.lblGoodTimeOfDay.text = "Good evening"//TBD Inset currect time text THERE IS IN THE DATE EXTENTINOS
+        let today = Date()
+        lblGoodTimeOfDay.defaultyTitleLarge()
+        lblTaskName.defaultyTitleLarge()
+        self.lblGoodTimeOfDay.text = "Good \(today.dateToDayPartDeifinisionString() )"
         self.lblTaskName.text = taskDisplay.taskType
-        self.lblTimeToTask.text = "In 1 houre" //TBD
+        self.lblTimeToTask.text = today.hoursIntillDateDescription(date: taskDisplay.date)
         self.imgTaskIcon.image = taskDisplay.image
+        self.imgTaskIcon.defaultCornerRaduis()
     }
 }

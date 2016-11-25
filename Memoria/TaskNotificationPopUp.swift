@@ -50,7 +50,7 @@ class TaskNotificationPopUp : ViewController {
         self.lblGoodAfternoon.centerHorizontlyInSuperView()
         
         self.lblItsTimeFor.text = notificationText.body
-        self.lblItsTimeFor.titleGray()
+        self.lblItsTimeFor.defaultySubtitleGray()
         self.lblItsTimeFor.font = UIFont.systemFont(ofSize: 23)
         self.lblItsTimeFor.textAlignment = NSTextAlignment.center
         self.lblItsTimeFor.numberOfLines = 0

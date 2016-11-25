@@ -38,7 +38,7 @@ class NotificationScheduler {
         let title = notificationText.title
         let subtitle = ""
         let body = notificationText.body
-        let imageURL = task.taskType.imageURL()
+        let imageURL = task.taskType.imageURL(withColor: true)
         let sound = UNNotificationSound(named: "\(task.taskType.rawValue)-notification.aiff")
         let uid = task.uid
         let key = TaskNotificationUid

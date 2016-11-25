@@ -9,8 +9,9 @@
 import Foundation
 import UIKit
 import EmitterKit
+import DZNEmptyDataSet
 
-class FeedViewController: ViewController, UITableViewDataSource, UITableViewDelegate {
+class FeedViewController: ViewController, UITableViewDataSource, UITableViewDelegate, DZNEmptyDataSetSource, DZNEmptyDataSetDelegate {
     let tableView = TableView()
     let taskServices: TasksServices
     var tasksDisplays = [TaskDisplay]()
@@ -45,6 +46,9 @@ class FeedViewController: ViewController, UITableViewDataSource, UITableViewDele
         tableView.delegate = self
         tableView.dataSource = self
         self.tableView.contentInset = UIEdgeInsetsMake(-34, 0, -34, 0);
+        tableView.emptyDataSetSource = self
+        tableView.emptyDataSetDelegate = self
+        tableView.tableFooterView = UIView()
     }
     
     //MARK: Reload
@@ -52,6 +56,7 @@ class FeedViewController: ViewController, UITableViewDataSource, UITableViewDele
     func reloadTable() {
         self.tasksDisplays = self.taskServices.getUpcomingTasksDisplays()
         self.tableView.reloadData()
+        self.tableView.backgroundColor = UIColor.clear
     }
     
     //MARK: Bind
@@ -78,4 +83,28 @@ class FeedViewController: ViewController, UITableViewDataSource, UITableViewDele
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return FeedCell.height()
     }
+    
+    //MARK: Exmpty state delegate
+    
+    func title(forEmptyDataSet scrollView: UIScrollView) -> NSAttributedString? {
+        let str = "No tasks schedules for today"
+        let attrs = [NSFontAttributeName: UIFont.preferredFont(forTextStyle: UIFontTextStyle.headline)]
+        return NSAttributedString(string: str, attributes: attrs)
+    }
+    
+    func description(forEmptyDataSet scrollView: UIScrollView) -> NSAttributedString? {
+        let str = "You can schedule more tasks from your Family web client."
+        let attrs = [NSFontAttributeName: UIFont.preferredFont(forTextStyle: UIFontTextStyle.body)]
+        return NSAttributedString(string: str, attributes: attrs)
+    }
+    
+    func image(forEmptyDataSet scrollView: UIScrollView) -> UIImage? {
+        return UIImage(named: "NoResults")
+    }
+    
+    func backgroundColor(forEmptyDataSet scrollView: UIScrollView!) -> UIColor! {
+        return self.defaultBackgroundColor
+    }
+    
+    
 }
