@@ -18,6 +18,9 @@ pod 'EstimoteSDK', :git => 'https://github.com/Estimote/iOS-SDK.git', :commit =>
 pod 'EmitterKit', '~> 5.0'
 pod "ATHMultiSelectionSegmentedControl"
 pod 'DZNEmptyDataSet'
+pod "TouchVisualizer", '~>2.0.1'
+
+
 
 
 pod 'AEConsole', '~> 0.3'

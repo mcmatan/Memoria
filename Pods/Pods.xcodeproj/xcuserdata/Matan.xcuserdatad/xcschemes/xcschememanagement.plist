@@ -84,6 +84,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>TouchVisualizer.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -93,11 +98,6 @@
 			<true/>
 		</dict>
 		<key>16FB872D0D2D4BA0F378AB34D47CF95F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>1796B737974E1298FD1E6B5E7D43F3AE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -117,12 +117,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>35A64230FB2A01DE4D451825CB4E4525</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4509BB2F63814C73FED0ECC78137AF25</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>493FEFDAF96453AAAA61CEE2D96CB1CC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>690D40CDF12D240C64E7A038AED607E2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6B54190D64FDDD87696902AC3493A00D</key>
+		<key>6CB4DB159A215C1D310855407D43F2EC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -132,17 +147,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9A0679340D731487060DFB18A846EF46</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>A822FC4880077BE237DFEEAA9221425F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>C182F4D6C3DD923497326FDB4D81E11F</key>
+		<key>81224A86848B3EF9D9F96434AB897D25</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -157,12 +162,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F184760E14BA60CCAEB6DEA896A64722</key>
+		<key>E4684BD73C8290C6E82FFBE95647F5BC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F1886C874C9A4BBEE06324EB13A02C88</key>
+		<key>F181F5959AF74899C2B8CB5E27435364</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F184760E14BA60CCAEB6DEA896A64722</key>
 		<dict>
 			<key>primary</key>
 			<true/>

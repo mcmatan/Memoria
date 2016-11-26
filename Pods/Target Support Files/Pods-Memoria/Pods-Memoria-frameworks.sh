@@ -97,6 +97,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/SnapKit/SnapKit.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SwiftDate/SwiftDate.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Swinject/Swinject.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/TouchVisualizer/TouchVisualizer.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/AEConsole/AEConsole.framework"
@@ -112,4 +113,5 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/SnapKit/SnapKit.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SwiftDate/SwiftDate.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Swinject/Swinject.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/TouchVisualizer/TouchVisualizer.framework"
 fi

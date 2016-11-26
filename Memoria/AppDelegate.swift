@@ -4,6 +4,8 @@ import UIKit
 import SwiftDate
 import UIKit
 import AEConsole
+import TouchVisualizer
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,6 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //rootViewController.presentMainApplication()
         rootViewController.presentLogIn()
     
+        Visualizer.start()
+
         return true
     }
     

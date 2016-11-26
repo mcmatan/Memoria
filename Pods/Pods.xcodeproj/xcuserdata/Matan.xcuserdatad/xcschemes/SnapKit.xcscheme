@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '1796B737974E1298FD1E6B5E7D43F3AE'
+               BlueprintIdentifier = '4509BB2F63814C73FED0ECC78137AF25'
                BlueprintName = 'SnapKit'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'SnapKit.framework'>

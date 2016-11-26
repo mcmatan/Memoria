@@ -52,6 +52,7 @@ PODS:
   - SnapKit (3.0.2)
   - SwiftDate (4.0.7)
   - Swinject (2.0.0-beta.2)
+  - TouchVisualizer (2.0.1)
 
 DEPENDENCIES:
   - AEConsole (~> 0.3)
@@ -68,6 +69,7 @@ DEPENDENCIES:
   - SnapKit (~> 3.0.1)
   - SwiftDate (~> 4.0)
   - Swinject (~> 2.0.0-beta.2)
+  - TouchVisualizer (~> 2.0.1)
 
 EXTERNAL SOURCES:
   EstimoteSDK:
@@ -102,7 +104,8 @@ SPEC CHECKSUMS:
   SnapKit: 2e456761aa92d4d4067a7a5594c18769d451a8ad
   SwiftDate: 0efb04a6751b1ab804049b2b09a69848cd304c12
   Swinject: 69a893192efa9f2cc44be79ef423d04d571b6af9
+  TouchVisualizer: d1bd1b438d084245332c222d9e14416c271c5f25
 
-PODFILE CHECKSUM: 1b321a114fc631dea99918c1422700ecf14678eb
+PODFILE CHECKSUM: 3648a7c664cf10144dc0ddd882fbb822092f1c80
 
 COCOAPODS: 1.0.1
