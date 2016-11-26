@@ -41,7 +41,10 @@ class FeedViewController: ViewController, UITableViewDataSource, UITableViewDele
     
     func setupView() {
         view.addSubview(tableView)
-        tableView.edgesToSuperView(withPadding: false)
+        tableView.leadingToSuperView(false)
+        tableView.trailingToSuperView(false)
+        tableView.topToSuperView(false)
+        tableView.bottomAlighnToViewBottom(self.view, offset: -50)
         tableView.register(FeedCell.self, forCellReuseIdentifier: String(describing: FeedCell.self))
         tableView.delegate = self
         tableView.dataSource = self
@@ -49,6 +52,7 @@ class FeedViewController: ViewController, UITableViewDataSource, UITableViewDele
         tableView.emptyDataSetSource = self
         tableView.emptyDataSetDelegate = self
         tableView.tableFooterView = UIView()
+        self.tableView.backgroundColor = UIColor.clear
     }
     
     //MARK: Reload
@@ -56,7 +60,6 @@ class FeedViewController: ViewController, UITableViewDataSource, UITableViewDele
     func reloadTable() {
         self.tasksDisplays = self.taskServices.getUpcomingTasksDisplays()
         self.tableView.reloadData()
-        self.tableView.backgroundColor = UIColor.clear
     }
     
     //MARK: Bind

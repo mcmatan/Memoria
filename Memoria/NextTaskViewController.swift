@@ -50,9 +50,6 @@ class NextTaskViewController: ViewController {
         view.addSubview(self.imgTaskIcon)
         view.addSubview(lblTimeToTask)
         
-        lblGoodTimeOfDay.defaultyTitleLarge()
-        lblTaskName.defaultyTitleLarge()
-        
         lblTimeToTask.defaultyTitle()
         
         self.imgTaskIcon.centerHorizontlyInSuperView()
@@ -91,16 +88,16 @@ class NextTaskViewController: ViewController {
     
     func showNoTask() {
         self.lblGoodTimeOfDay.text = "No next task for today"
-        self.lblTaskName.text = "Have a rest (:"
+        self.lblTaskName.text = "Have a rest."
         self.lblTimeToTask.text = ""
         self.imgTaskIcon.image = UIImage(named: "relax")
-        lblGoodTimeOfDay.defaultySubtitleGray()
+        lblGoodTimeOfDay.defaultTitleGrayBold()
         lblTaskName.defaultySubtitleGray()
     }
     
     func showTaskInfo(taskDisplay: TaskDisplay) {
         let today = Date()
-        lblGoodTimeOfDay.defaultyTitleLarge()
+        lblGoodTimeOfDay.defaultyTitleLargeBold()
         lblTaskName.defaultyTitleLarge()
         self.lblGoodTimeOfDay.text = "Good \(today.dateToDayPartDeifinisionString() )"
         self.lblTaskName.text = taskDisplay.taskType

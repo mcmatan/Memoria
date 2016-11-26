@@ -160,7 +160,7 @@ extension Date {
     
     func hoursIntillDateDescription(date: Date)->String {
         let hoursToTask = date.hoursFrom(self)
-        if hoursToTask > 1 {
+        if hoursToTask >= 1 {
             return "In \(hoursToTask) hours"
         } else {
             let minutesTo = date.minutesFrom(self)

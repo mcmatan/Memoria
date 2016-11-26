@@ -113,14 +113,15 @@ class TaskManagerViewController : ViewController, UITableViewDelegate, UITableVi
         lblCount.textColor = UIColor.gray
         
         tableView.tableFooterView = UIView(frame: CGRect.zero)
+        tableView.backgroundColor = Colors.lightGray()
         
         let topLayout = self.topLayoutGuide
         
         self.view.addSubviewWithAutoLayoutOn(btnCreateTask)
         self.view.addSubviewWithAutoLayoutOn(btnShowLocalNotifications)
         self.view.addSubviewWithAutoLayoutOn(lblTop)
-        self.view.addSubviewWithAutoLayoutOn(tableView)
         self.view.addSubviewWithAutoLayoutOn(lblCount)
+        self.view.addSubviewWithAutoLayoutOn(tableView)
         
         let viewKeys : [String : AnyObject] =
             [
@@ -136,7 +137,7 @@ class TaskManagerViewController : ViewController, UITableViewDelegate, UITableVi
         
         var layoutString: String!
 
-        layoutString = "V:[topLayout]-(20)-[btnCreateTask]-(20)-[btnShowLocalNotifications]-(20)-[lblTop]-[tableView]-(20)-|"
+        layoutString = "V:[topLayout]-(20)-[btnCreateTask]-(20)-[btnShowLocalNotifications]-(20)-[lblTop]-[tableView]-(60)-|"
         
         let verticalLayout = NSLayoutConstraint.constraints(
             withVisualFormat: layoutString, options: NSLayoutFormatOptions.alignAllCenterX, metrics: nil, views: viewKeys)

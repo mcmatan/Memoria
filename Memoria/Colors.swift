@@ -29,4 +29,12 @@ class Colors {
     static func red()->UIColor {
         return UIColor.red
     }
+    
+    static func gray()->UIColor {
+        return UIColor(white: 0.6, alpha: 1)
+    }
+    
+    static func lightGray()->UIColor {
+        return UIColor(white: 0.8, alpha: 1)
+    }
 }
