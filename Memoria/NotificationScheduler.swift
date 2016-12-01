@@ -12,7 +12,6 @@ import UserNotifications
 import MobileCoreServices
 
 
-
 let TaskNotificationUid : String = "TaskNotificationUid"
 class NotificationScheduler {
     
