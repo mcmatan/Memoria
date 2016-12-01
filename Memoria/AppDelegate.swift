@@ -23,8 +23,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //rootViewController.presentMainApplication()
         rootViewController.presentLogIn()
-    
-        Visualizer.start()
 
         return true
     }
