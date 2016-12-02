@@ -32,6 +32,7 @@ class NotificationSync {
     }
     
     func syncNotifications() {
+        self.notificationScheduler.cancelAllNotification()
         let allTasks = self.tasksDB.getAllTasks()
         for task in allTasks {
             self.notificationScheduler.squeduleNotification(task: task)

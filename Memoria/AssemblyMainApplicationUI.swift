@@ -8,7 +8,11 @@ open class AssemblyMainApplicationUI {
     class func run(_ container : Container) {
         
         container.register(TaskManagerViewController.self) { _ in
-            return TaskManagerViewController(tasksServices: container.resolve(TasksServices.self)!,currenctTaskCreator: container.resolve(CurrenctTaskCreator.self)!, container: container, iNearableServices: container.resolve(NearableServices.self)!)
+            return TaskManagerViewController(tasksServices: container.resolve(TasksServices.self)!,
+                                             currenctTaskCreator: container.resolve(CurrenctTaskCreator.self)!,
+                                             iNearableServices: container.resolve(NearableServices.self)!,
+                                             addTaskViewController: container.resolve(AddTaskViewController.self)!
+            )
         }
         
         container.register(AddTaskViewController.self) { _ in

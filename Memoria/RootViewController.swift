@@ -21,6 +21,7 @@ class RootViewController: ViewController {
     init(logInViewController: UIViewController) {
         self.logInViewController = logInViewController
         super.init(nibName: nil, bundle: nil)
+        self.view.backgroundColor = UIColor.blue
     }
     
     required init?(coder aDecoder: NSCoder) {

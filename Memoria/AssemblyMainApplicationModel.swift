@@ -5,62 +5,62 @@ import Swinject
 
 open class AssemblyMainApplicationModel {
     
-    class func run(_ container : Container) {
+    class func run(_ loginContainer: Container, mainApplicationContainer: Container) {
         
-        container.register(CurrenctTaskCreator.self) { c in
+        mainApplicationContainer.register(CurrenctTaskCreator.self) { c in
             return CurrenctTaskCreator()
             }.inObjectScope(ObjectScope.container)
 
         
-        container.register(TasksDB.self) { c in
+        mainApplicationContainer.register(TasksDB.self) { c in
             return TasksDB(
-                currentUserContext: container.resolve(CurrentUserContext.self)!
+                currentUserContext: loginContainer.resolve(CurrentUserContext.self)!
             )
             }.inObjectScope(ObjectScope.container)
         
-        container.register(NearableStriggerManager.self) { c in
+        mainApplicationContainer.register(NearableStriggerManager.self) { c in
             return NearableStriggerManager(
-                tasksDB: container.resolve(TasksDB.self)!)
+                tasksDB: mainApplicationContainer.resolve(TasksDB.self)!)
             }.inObjectScope(ObjectScope.container)
         
-        container.register(NearableLocator.self) { c in
+        mainApplicationContainer.register(NearableLocator.self) { c in
             return NearableLocator()
             }.inObjectScope(ObjectScope.container)
 
-        container.register(NearableServices.self) { c in
-            return NearableServices(nearableLocator: container.resolve(NearableLocator.self)!,
-                                   tasksDB:container.resolve(TasksDB.self)!)
+        mainApplicationContainer.register(NearableServices.self) { c in
+            return NearableServices(nearableLocator: mainApplicationContainer.resolve(NearableLocator.self)!,
+                                   tasksDB:mainApplicationContainer.resolve(TasksDB.self)!)
         }.inObjectScope(ObjectScope.container)
         
-        container.register(NotificationScheduler.self) { c in
+        mainApplicationContainer.register(NotificationScheduler.self) { c in
             return NotificationScheduler()
             }.inObjectScope(ObjectScope.container)
         
-        container.register(TasksServices.self) { c in
-            return TasksServices(tasksDB: container.resolve(TasksDB.self)!,
-                nearableStriggerManager: container.resolve(NearableStriggerManager.self)!,
-                notificationScheduler: container.resolve(NotificationScheduler.self)!
+        mainApplicationContainer.register(TasksServices.self) { c in
+            return TasksServices(tasksDB: mainApplicationContainer.resolve(TasksDB.self)!,
+                nearableStriggerManager: mainApplicationContainer.resolve(NearableStriggerManager.self)!,
+                notificationScheduler: mainApplicationContainer.resolve(NotificationScheduler.self)!
             )
         }.inObjectScope(ObjectScope.container)
         
-        container.register(TaskActionsPerformer.self) { c in
+        mainApplicationContainer.register(TaskActionsPerformer.self) { c in
             return TaskActionsPerformer(
-                taskServices: container.resolve(TasksServices.self)!)
+                taskServices: mainApplicationContainer.resolve(TasksServices.self)!)
             }.inObjectScope(ObjectScope.container)
-        let _ = container.resolve(TaskActionsPerformer.self)
+        let _ = mainApplicationContainer.resolve(TaskActionsPerformer.self)
     
-        container.register(NotificationSync.self) { c in
+        mainApplicationContainer.register(NotificationSync.self) { c in
             return NotificationSync(
-                notificationScheduler: container.resolve(NotificationScheduler.self)!,
-                tasksDB: container.resolve(TasksDB.self)!
+                notificationScheduler: mainApplicationContainer.resolve(NotificationScheduler.self)!,
+                tasksDB: mainApplicationContainer.resolve(TasksDB.self)!
                 )
         }.inObjectScope(.container)
-        let _ = container.resolve(NotificationSync.self)
+        let _ = mainApplicationContainer.resolve(NotificationSync.self)
         
-        container.register(RefreshEventEmitter.self) { c in
+        mainApplicationContainer.register(RefreshEventEmitter.self) { c in
             return RefreshEventEmitter()
         }.inObjectScope(ObjectScope.container)
-        let _ = container.resolve(RefreshEventEmitter.self)
+        let _ = mainApplicationContainer.resolve(RefreshEventEmitter.self)
     }
     
 }

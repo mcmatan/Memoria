@@ -18,6 +18,10 @@ class NotificationScheduler {
     init() {
         LocalNotificationActions.setupActions()
     }
+    
+    func cancelAllNotification() {
+        UNUserNotificationCenter.removeAll()
+    }
 
     func cancelNotification(task: Task) {
         UNUserNotificationCenter.remove(task: task)

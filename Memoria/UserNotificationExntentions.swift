@@ -69,6 +69,10 @@ extension UNUserNotificationCenter {
         }
     }
     
+    static func removeAll() {
+        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+    }
+    
     static func remove(task: Task, atTime: Time, andDay: Day) {
         let identifer = self.requestIndetifer(task: task, day: andDay, time: atTime)
         UNUserNotificationCenter.current().getPendingNotificationRequests { allReq in
@@ -138,7 +142,6 @@ extension UNUserNotificationCenter {
     
     
     static func requestIndetifer(task: Task,day: Day, time: Time)-> String {
-        let messageType = "originalMasage"
-        return "\(task.taskType.rawValue.uppercased())\n-\(day.stringLong())-\(time.timeString)-||\(messageType)"
+        return "\(task.taskType.rawValue.uppercased())\nTIME:\n-\(day.stringLong())-\(time.timeString)"
     }
 }

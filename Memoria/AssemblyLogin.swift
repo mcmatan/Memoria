@@ -37,7 +37,7 @@ open class AssemblyLogin {
             return RootViewController(
                 logInViewController: loginContainer.resolve(LogInViewController.self)!
             )
-        }
+        }.inObjectScope(.container)
         
         loginContainer.register(AlertPresenter.self) { c in
             return AlertPresenter()

@@ -19,19 +19,18 @@ class TaskManagerViewController : ViewController, UITableViewDelegate, UITableVi
     let cellIdentifer = "cell"
     let tableView = UITableView()
     let currenctTaskCreator : CurrenctTaskCreator
-    let container : Container
     let iNearableServices : NearableServices
     let lblCount = Label()
-    var addTaskViewController: AddTaskViewController?
+    var addTaskViewController: AddTaskViewController
     
     var tasksChangedListener: EventListener<Any>!
     var taskMarkedAsDoneListener: EventListener<Task>?
 
     
-    init(tasksServices : TasksServices, currenctTaskCreator : CurrenctTaskCreator, container : Container, iNearableServices : NearableServices) {
+    init(tasksServices : TasksServices, currenctTaskCreator : CurrenctTaskCreator, iNearableServices : NearableServices, addTaskViewController: AddTaskViewController) {
+        self.addTaskViewController = addTaskViewController
         self.tasksServices = tasksServices
         self.currenctTaskCreator = currenctTaskCreator
-        self.container = container
         self.iNearableServices = iNearableServices
         super.init(nibName: nil, bundle: nil)
         
@@ -276,8 +275,8 @@ class TaskManagerViewController : ViewController, UITableViewDelegate, UITableVi
     //MARK: Navgiation
     
     func goToNextPage() {
-        self.addTaskViewController = self.container.resolve(AddTaskViewController.self)
-        self.navigationController?.pushViewController(self.addTaskViewController!, animated: true)
+        self.addTaskViewController = AddTaskViewController(currentTaskCreator: self.currenctTaskCreator, taskServices: self.tasksServices)
+        self.navigationController?.pushViewController(self.addTaskViewController, animated: true)
     }
 
     //MARK: Buttons

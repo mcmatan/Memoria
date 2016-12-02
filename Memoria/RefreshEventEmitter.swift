@@ -10,7 +10,7 @@ import Foundation
 
 class RefreshEventEmitter {
     var refeshTimer: Timer?
-    let refresTimeInterval: TimeInterval = 60.0
+    let refresTimeInterval: TimeInterval = 2.0
     init() {
         self.setupTimer()
     }
