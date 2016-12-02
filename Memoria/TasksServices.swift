@@ -16,14 +16,11 @@ class TasksServices {
     private var tasksDB : TasksDB
     private let nearableStriggerManager: NearableStriggerManager
     let notificationScheduler: NotificationScheduler
-    let notificationSync: NotificationSync
 
     init(tasksDB : TasksDB,
          nearableStriggerManager: NearableStriggerManager,
-         notificationScheduler: NotificationScheduler,
-         notificationSync: NotificationSync
+         notificationScheduler: NotificationScheduler
         ) {
-        self.notificationSync = notificationSync
         self.nearableStriggerManager = nearableStriggerManager
         self.tasksDB = tasksDB
         self.notificationScheduler = notificationScheduler

@@ -32,17 +32,10 @@ open class AssemblyMainApplicationModel {
             return NotificationScheduler()
             }.inObjectScope(ObjectScope.container)
         
-        container.register(NotificationSync.self) { c in
-            return NotificationSync(taskDB: container.resolve(TasksDB.self)!,
-                                    notificationScheduler: container.resolve(NotificationScheduler.self)!
-            )
-            }.inObjectScope(.container)
-
         container.register(TasksServices.self) { c in
             return TasksServices(tasksDB: container.resolve(TasksDB.self)!,
                 nearableStriggerManager: container.resolve(NearableStriggerManager.self)!,
-                notificationScheduler: container.resolve(NotificationScheduler.self)!,
-                notificationSync: container.resolve(NotificationSync.self)!
+                notificationScheduler: container.resolve(NotificationScheduler.self)!
             )
         }.inObjectScope(ObjectScope.container)
 
@@ -58,7 +51,9 @@ open class AssemblyMainApplicationModel {
     
         container.register(NotificationSync.self) { c in
             return NotificationSync(
-                taskDB: container.resolve(TasksDB.self)!, notificationScheduler: container.resolve(NotificationScheduler.self)!)
+                notificationScheduler: container.resolve(NotificationScheduler.self)!,
+                tasksDB: container.resolve(TasksDB.self)!
+                )
         }.inObjectScope(.container)
         let _ = container.resolve(NotificationSync.self)
         

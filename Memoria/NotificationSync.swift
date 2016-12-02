@@ -8,35 +8,34 @@
 
 import Foundation
 import SwiftDate
+import EmitterKit
 
 /*
- When booking a notification, we will book repeates as will.
- When enteting application, we will remove all repeates.
- When removing they will not come back at the next day, but, we remove then only from local notification, so we will reregister for all notifications every 24 hour
+ When tasks are changed on server, App should squedule notification too.
  */
 
-class NotificationSync: NSObject {
-    let lastDateKey = "lastDateKey"
-    let taskDB: TasksDB
+class NotificationSync {
     let notificationScheduler: NotificationScheduler
+    let tasksDB: TasksDB
+    var changeListener: EventListener<Any>?
     
-    init(taskDB: TasksDB, notificationScheduler: NotificationScheduler) {
-        self.taskDB = taskDB
+    init(notificationScheduler: NotificationScheduler, tasksDB: TasksDB) {
         self.notificationScheduler = notificationScheduler
-        super.init()
+        self.tasksDB = tasksDB
+        self.listenToChange()
+    }
+    
+    func listenToChange() {
+        self.changeListener = Events.shared.tasksChanged.on { event in
+            self.syncNotifications()
+        }
     }
     
     func syncNotifications() {
-        let allTasks = self.taskDB.getAllTasks()
+        let allTasks = self.tasksDB.getAllTasks()
         for task in allTasks {
             self.notificationScheduler.squeduleNotification(task: task)
         }
     }
     
-    func syncAfter(min: Int) {
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + Double(min * 60)) {
-                self.syncNotifications()
-        }
-    }
 }
