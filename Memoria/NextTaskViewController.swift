@@ -8,15 +8,15 @@
 
 import Foundation
 import UIKit
+import EmitterKit
 
 class NextTaskViewController: ViewController {
     let tesksService: TasksServices
-    var refeshTimer: Timer?
-    let refresTimeInterval: TimeInterval = 60.0
     let lblGoodTimeOfDay = Label()
     let lblTaskName = Label()
     let lblTimeToTask = Label()
     let imgTaskIcon = ImageView(image: UIImage(named:"placeholder"))
+    var refreshIntervalListener: EventListener<Any>?
     
     //MARK: LifeCycle
     
@@ -33,12 +33,11 @@ class NextTaskViewController: ViewController {
         super.viewDidLoad()
         self.title = Content.getContent(ContentType.labelTxt, name: "NextTaskTitle")
         self.setupView()
-        self.setupTimer()
+        self.setupListener()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         self.loadViewWithData()
     }
     
@@ -66,12 +65,13 @@ class NextTaskViewController: ViewController {
         
         lblTimeToTask.topAlighnToViewBottom(self.imgTaskIcon, offset: 10)
         lblTimeToTask.centerHorizontlyInSuperView()
+        
     }
     
-    func setupTimer() {
-        self.refeshTimer = Timer.scheduledTimer(withTimeInterval: refresTimeInterval, repeats: true, block: { timer in
+    func setupListener() {
+        self.refreshIntervalListener = Events.shared.refreshInterval.on { event in
             self.loadViewWithData()
-        })
+        }
     }
     
     //MARK: Load

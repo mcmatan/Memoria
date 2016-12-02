@@ -27,4 +27,6 @@ class Events {
     let markTaskAsDone = Event<Task>()
     
     let showAlert = Event<String>()
+    
+    let refreshInterval = Event<Any>()
 }

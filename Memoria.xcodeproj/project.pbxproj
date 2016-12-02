@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		63E7386C4BCD17B9C29135D9 /* Pods_MemoriaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C63E54DC6EDD468C89232C63 /* Pods_MemoriaTests.framework */; };
+		8A1C16701DF17F0000897CB5 /* RefreshEventEmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1C166F1DF17F0000897CB5 /* RefreshEventEmitter.swift */; };
 		9008FB681C53D356003C1549 /* CurrenctTaskCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9008FB671C53D356003C1549 /* CurrenctTaskCreator.swift */; };
 		900912BD1DD37AAD00AEEFC2 /* NearableStriggerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900912BC1DD37AAD00AEEFC2 /* NearableStriggerManager.swift */; };
 		900912BF1DD37AB400AEEFC2 /* NearableLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900912BE1DD37AB400AEEFC2 /* NearableLocator.swift */; };
@@ -213,6 +214,7 @@
 		43E6309D377C47D3B4E9B681 /* Pods-MemoriaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemoriaUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MemoriaUITests/Pods-MemoriaUITests.release.xcconfig"; sourceTree = "<group>"; };
 		54BE932400BB9F6741D73728 /* Pods_MemoriaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MemoriaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		61745D56CC2A844FA0E1BF06 /* Pods-MemoriaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemoriaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MemoriaTests/Pods-MemoriaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8A1C166F1DF17F0000897CB5 /* RefreshEventEmitter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshEventEmitter.swift; sourceTree = "<group>"; };
 		9008FB671C53D356003C1549 /* CurrenctTaskCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrenctTaskCreator.swift; sourceTree = "<group>"; };
 		9008FB731C6F3E3E003C1549 /* Memoria-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Memoria-Bridging-Header.h"; sourceTree = "<group>"; };
 		900912BC1DD37AAD00AEEFC2 /* NearableStriggerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearableStriggerManager.swift; sourceTree = "<group>"; };
@@ -424,6 +426,14 @@
 				43E6309D377C47D3B4E9B681 /* Pods-MemoriaUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		8A1C166E1DF17EEF00897CB5 /* ApplicationUIRefreshRate */ = {
+			isa = PBXGroup;
+			children = (
+				8A1C166F1DF17F0000897CB5 /* RefreshEventEmitter.swift */,
+			);
+			name = ApplicationUIRefreshRate;
 			sourceTree = "<group>";
 		};
 		9008FB661C53D32F003C1549 /* CurrenctTaskCreator */ = {
@@ -683,6 +693,7 @@
 		9035FE2E1C1EDA4C00D98022 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8A1C166E1DF17EEF00897CB5 /* ApplicationUIRefreshRate */,
 				903181BD1DE7425C00044330 /* NotificationSync */,
 				90B7D3D81DDC90BE0095BF6A /* CurrentUserContext */,
 				90B7D3D31DDC7CB10095BF6A /* LoginService */,
@@ -1527,6 +1538,7 @@
 				9013498E1DB4E40B005FA445 /* UIViewExntentions.swift in Sources */,
 				902546861DD8D07F00D53C58 /* NotificationsTextsBuilder.swift in Sources */,
 				9035FE1F1C1B2BFB00D98022 /* TextView.swift in Sources */,
+				8A1C16701DF17F0000897CB5 /* RefreshEventEmitter.swift in Sources */,
 				9011272E1C1AFBE20088DD6B /* AssemblyMainApplicationUI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

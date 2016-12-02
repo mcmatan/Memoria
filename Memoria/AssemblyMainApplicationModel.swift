@@ -61,6 +61,11 @@ open class AssemblyMainApplicationModel {
                 taskDB: container.resolve(TasksDB.self)!, notificationScheduler: container.resolve(NotificationScheduler.self)!)
         }.inObjectScope(.container)
         let _ = container.resolve(NotificationSync.self)
+        
+        container.register(RefreshEventEmitter.self) { c in
+            return RefreshEventEmitter()
+        }.inObjectScope(ObjectScope.container)
+        let _ = container.resolve(RefreshEventEmitter.self)
     }
     
 }

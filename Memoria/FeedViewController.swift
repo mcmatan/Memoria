@@ -16,6 +16,7 @@ class FeedViewController: ViewController, UITableViewDataSource, UITableViewDele
     let taskServices: TasksServices
     var tasksDisplays = [TaskDisplay]()
     var taskChangedListener: EventListener<Any>?
+    var refreshIntervalListener: EventListener<Any>?
     
     init(taskServices: TasksServices) {
         self.taskServices = taskServices
@@ -35,6 +36,7 @@ class FeedViewController: ViewController, UITableViewDataSource, UITableViewDele
         self.setupView()
         self.reloadTable()
         self.bindView()
+        self.setupListener()
     }
     
     //MARK: Setup
@@ -53,6 +55,12 @@ class FeedViewController: ViewController, UITableViewDataSource, UITableViewDele
         tableView.emptyDataSetDelegate = self
         tableView.tableFooterView = UIView()
         self.tableView.backgroundColor = UIColor.clear
+    }
+    
+    func setupListener() {
+        self.refreshIntervalListener = Events.shared.refreshInterval.on { event in
+            self.reloadTable()
+        }
     }
     
     //MARK: Reload
