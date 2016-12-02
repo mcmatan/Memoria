@@ -10,10 +10,16 @@ import Foundation
 import Swinject
 
 class ServiceLocator {
-    static var container: Container!
+    static var mainApplicationContainer = Container()
+    static var loginContainer = Container()
     
     static func locate<Service>(_ serviceType: Service.Type) -> Service?
     {
-        return ServiceLocator.container.resolve(serviceType)
+        if let isLocated = self.loginContainer.resolve(serviceType) {
+            return isLocated
+        }
+        
+        return self.mainApplicationContainer.resolve(serviceType) 
     }
+        
 }

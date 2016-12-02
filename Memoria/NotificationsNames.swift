@@ -16,8 +16,6 @@ struct TaskActionDTO {
 class Events {
     static let shared = Events()
     
-    let loginSuccess = Event<Any>()
-    let logout = Event<Any>()
     let tasksChanged = Event<Any>()
     
     let presentTaskNotification = Event<Task>()

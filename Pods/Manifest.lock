@@ -6,6 +6,8 @@ PODS:
   - DZNEmptyDataSet (1.8.1)
   - EmitterKit (5.0.0)
   - EstimoteSDK (4.11.2)
+  - Firebase (3.8.0):
+    - Firebase/Core (= 3.8.0)
   - Firebase/Auth (3.8.0):
     - Firebase/Core
     - FirebaseAuth (= 3.0.6)
@@ -60,6 +62,7 @@ DEPENDENCIES:
   - DZNEmptyDataSet
   - EmitterKit (~> 5.0)
   - EstimoteSDK (from `https://github.com/Estimote/iOS-SDK.git`, commit `66c9cf13467bc0f61fcf197116dadfe22e1cd10d`)
+  - Firebase
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
@@ -106,6 +109,6 @@ SPEC CHECKSUMS:
   Swinject: 69a893192efa9f2cc44be79ef423d04d571b6af9
   TouchVisualizer: d1bd1b438d084245332c222d9e14416c271c5f25
 
-PODFILE CHECKSUM: 3648a7c664cf10144dc0ddd882fbb822092f1c80
+PODFILE CHECKSUM: c4b1e52f6b4de98d80e771b035601c3f0582d54c
 
-COCOAPODS: 1.0.1
+COCOAPODS: 1.1.1

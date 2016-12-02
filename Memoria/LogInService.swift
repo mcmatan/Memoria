@@ -9,27 +9,33 @@
 import Foundation
 import FirebaseAuth
 
+
 class LoginService {
-    let fireBaseCoreWrapper: FireBaseCoreWrapper
     let currentUserContext: CurrentUserContext
-    var isLoggedIn = false
-    
-    init(fireBaseCoreWrapper: FireBaseCoreWrapper, currentUserContext: CurrentUserContext) {
+    var isLoggedIn: Bool?
+
+    init( currentUserContext: CurrentUserContext) {
         self.currentUserContext = currentUserContext
-        self.fireBaseCoreWrapper = fireBaseCoreWrapper
-        
+
         FIRAuth.auth()?.addStateDidChangeListener { auth, user in
             if let user = user {
-               self.setCurrentUser(user: user)
-               self.startMainApplicationIfLoggedOut(fireBaseUser: user)
+                self.setCurrentUser(user: user)
+                self.startMainApplicationIfLoggedOut(fireBaseUser: user)
             } else {
-                // No user is signed in.
+                self.logoutIfLoggedIn()
             }
+
+            user?.reload(completion: { error in
+                if let _ = error {
+                    self.logoutIfLoggedIn()
+                }
+            })
         }
+
     }
-    
+
     func logIn(email: String, password: String, complation: @escaping (_ success: Bool, _ error: String?) -> Void) {
-        
+
         FIRAuth.auth()?.signIn(withEmail: email, password: password) { (fireBaseUser, error) in
             if let isError = error {
                 complation(false, "Error = \(isError.localizedDescription)")
@@ -42,18 +48,24 @@ class LoginService {
             }
         }
     }
-    
+
     func setCurrentUser(user: FIRUser) {
         let user = User(fIRUser: user)
         self.currentUserContext.setCurrentUser(user: user)
-        
+
     }
-    
+
     func startMainApplicationIfLoggedOut(fireBaseUser: FIRUser) {
-        if self.isLoggedIn == false {
+        if self.isLoggedIn == nil || self.isLoggedIn == false {
             self.isLoggedIn = true
-            Bootstrapper.runMainApplication()
-            Events.shared.loginSuccess.emit(())
+            Bootstrapper.loadMainApplication()
+        }
+    }
+
+    func logoutIfLoggedIn() {
+        if self.isLoggedIn == nil || self.isLoggedIn == true {
+            self.isLoggedIn = false
+            Bootstrapper.logout()
         }
     }
 }

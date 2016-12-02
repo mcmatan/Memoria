@@ -14,16 +14,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     
-        Bootstrapper.runLogin()
-        let rootViewController = Bootstrapper.container.resolve(RootViewController.self)!
-        self.window = UIWindow(frame: UIScreen.main.bounds)
-        self.window?.rootViewController = rootViewController
-        self.window?.makeKeyAndVisible()
+        Bootstrapper.onApplicationFirstLoad()
         self .navigationBarAppearance()
-        
-        //rootViewController.presentMainApplication()
-        rootViewController.presentLogIn()
-
         return true
     }
     

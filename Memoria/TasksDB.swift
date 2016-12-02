@@ -13,16 +13,13 @@ import FirebaseDatabase
 
 class TasksDB {
     var tasksByUid = [String : Task]()
-    let fireBaseCoreWrapper: FireBaseCoreWrapper
     let ref: FIRDatabaseReference
     let tasksRef: FIRDatabaseReference
     let currentUserContext: CurrentUserContext
     
-    init(fireBaseCoreWrapper: FireBaseCoreWrapper,
+    init(
          currentUserContext: CurrentUserContext) {
-        self.fireBaseCoreWrapper = fireBaseCoreWrapper
         self.currentUserContext = currentUserContext
-        FIRDatabase.database().persistenceEnabled = true
         let user = self.currentUserContext.getCurrentUser()
         self.ref = FIRDatabase.database().reference().child("users").child(user.uid)
         self.tasksRef = self.ref.child("tasks")

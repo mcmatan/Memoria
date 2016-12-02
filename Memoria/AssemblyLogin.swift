@@ -11,41 +11,37 @@ import Swinject
 
 open class AssemblyLogin {
 
-    class func run(_ container : Container) {
+    class func run(_ loginContainer : Container) {
         
-        container.register(CurrentUserContext.self) { c in
+        loginContainer.register(CurrentUserContext.self) { c in
             return CurrentUserContext()
         }.inObjectScope(ObjectScope.container)
         
-        container.register(FireBaseCoreWrapper.self) { c in
-            return FireBaseCoreWrapper()
-            }.inObjectScope(ObjectScope.container)
-        let _ = container.resolve(FireBaseCoreWrapper.self)
         
-        container.register(LoginService.self) { c in
+        loginContainer.register(LoginService.self) { c in
             return LoginService(
-                fireBaseCoreWrapper: container.resolve(FireBaseCoreWrapper.self)!,
-                currentUserContext: container.resolve(CurrentUserContext.self)!
+                currentUserContext: loginContainer.resolve(CurrentUserContext.self)!
                 )
+        }.inObjectScope(.container)
+        let _ = loginContainer.resolve(LoginService.self)
+        
+        loginContainer.register(LoginViewModel.self) { c in
+            return LoginViewModel(loginService: loginContainer.resolve(LoginService.self)!)
         }
         
-        container.register(LoginViewModel.self) { c in
-            return LoginViewModel(loginService: container.resolve(LoginService.self)!)
-        }
-        
-        container.register(LogInViewController.self) { c in
-            return LogInViewController(viewModel: container.resolve(LoginViewModel.self)!)
+        loginContainer.register(LogInViewController.self) { c in
+            return LogInViewController(viewModel: loginContainer.resolve(LoginViewModel.self)!)
             }.inObjectScope(ObjectScope.container)
         
-        container.register(RootViewController.self) { c in
+        loginContainer.register(RootViewController.self) { c in
             return RootViewController(
-                logInViewController: container.resolve(LogInViewController.self)!
+                logInViewController: loginContainer.resolve(LogInViewController.self)!
             )
         }
         
-        container.register(AlertPresenter.self) { c in
+        loginContainer.register(AlertPresenter.self) { c in
             return AlertPresenter()
         }.inObjectScope(.container)
-        let _ = container.resolve(AlertPresenter.self)
+        let _ = loginContainer.resolve(AlertPresenter.self)
     }
 }

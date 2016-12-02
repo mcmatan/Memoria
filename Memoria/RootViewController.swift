@@ -21,17 +21,6 @@ class RootViewController: ViewController {
     init(logInViewController: UIViewController) {
         self.logInViewController = logInViewController
         super.init(nibName: nil, bundle: nil)
-        self.binding()
-    }
-    
-    func binding() {
-        self.loginListener = Events.shared.loginSuccess.on { event in
-            self.presentMainApplication()
-        }
-        
-        self.logoutListener = Events.shared.logout.on { event in
-            self.presentLogIn()
-        }
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -47,6 +36,10 @@ class RootViewController: ViewController {
     }
     
     func present(viewController: UIViewController) {
+        if self.presentedViewController === viewController {
+            return
+        }
+        
         if let isPresentedViewController = self.presentedViewController {
             isPresentedViewController.dismiss(animated: true, completion: {
                 self.present(viewController, animated: true, completion: nil)

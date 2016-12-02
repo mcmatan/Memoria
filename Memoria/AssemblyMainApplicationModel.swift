@@ -7,9 +7,13 @@ open class AssemblyMainApplicationModel {
     
     class func run(_ container : Container) {
         
+        container.register(CurrenctTaskCreator.self) { c in
+            return CurrenctTaskCreator()
+            }.inObjectScope(ObjectScope.container)
+
+        
         container.register(TasksDB.self) { c in
             return TasksDB(
-                fireBaseCoreWrapper: container.resolve(FireBaseCoreWrapper.self)!,
                 currentUserContext: container.resolve(CurrentUserContext.self)!
             )
             }.inObjectScope(ObjectScope.container)
@@ -38,10 +42,6 @@ open class AssemblyMainApplicationModel {
                 notificationScheduler: container.resolve(NotificationScheduler.self)!
             )
         }.inObjectScope(ObjectScope.container)
-
-        container.register(CurrenctTaskCreator.self) { c in
-            return CurrenctTaskCreator()
-            }.inObjectScope(ObjectScope.container)
         
         container.register(TaskActionsPerformer.self) { c in
             return TaskActionsPerformer(
