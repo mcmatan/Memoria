@@ -97,7 +97,7 @@ extension UNUserNotificationCenter {
                 let identifer = req.content.categoryIdentifier
                 let trigger = req.trigger as! UNCalendarNotificationTrigger
                 let time = trigger.dateComponents.description
-                return "\(identifer)&&DisplayTime=\(time)"
+                return "\(identifer)\n&&DisplayTime=\(time)"
             })
             
             comletation(discription)
@@ -136,7 +136,9 @@ extension UNUserNotificationCenter {
         }
     }
     
+    
     static func requestIndetifer(task: Task,day: Day, time: Time)-> String {
-        return self.requestIndetifer(task: task, day: day, time: time)
+        let messageType = "originalMasage"
+        return "\(task.taskType.rawValue.uppercased())\n-\(day.stringLong())-\(time.timeString)-||\(messageType)"
     }
 }

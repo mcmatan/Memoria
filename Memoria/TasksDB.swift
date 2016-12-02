@@ -26,8 +26,15 @@ class TasksDB {
         let user = self.currentUserContext.getCurrentUser()
         self.ref = FIRDatabase.database().reference().child("users").child(user.uid)
         self.tasksRef = self.ref.child("tasks")
+        
         self.writeConnection()
         self.startListeningForChanges()
+        self.writeEmail()
+    }
+    
+    func writeEmail() {
+        let emailRef = self.ref.child("email")
+        emailRef.setValue(self.currentUserContext.getCurrentUser().email)
     }
     
     func getTask(taskUid: String)->Task? {
