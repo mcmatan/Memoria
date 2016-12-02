@@ -12,13 +12,13 @@ import EmitterKit
 
 class AlertPresenter {
     var showAlertListener: EventListener<String>?
-    
+
     init() {
         self.showAlertListener = Events.shared.showAlert.on({ text in
             self.showAlert(text: text)
         })
     }
-    
+
     func showAlert(text: String) {
         let alert = UIAlertController(title: text, message: "", preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
