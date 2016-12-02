@@ -54,11 +54,6 @@ class TasksServices {
         }
     }
     
-    func stopRepeate(notificationIdnetifer: String) {
-        self.notificationScheduler.stopRepeate(contentIdentifer: notificationIdnetifer)
-        self.notificationSync.syncAfter(min: 10)
-    }
-    
     func getAllTasks()->[Task] {
        return self.tasksDB.getAllTasks()
     }

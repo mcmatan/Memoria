@@ -115,7 +115,6 @@ extension UNUserNotificationCenter {
     
     static func add(time: Time, day: Day, task: Task, content: UNMutableNotificationContent, shouldRepeate: Bool) {
      
-        let shouldRepeat = true
         let hour = time.hour
         let minute = time.minute
         
@@ -126,32 +125,7 @@ extension UNUserNotificationCenter {
         let trigger = UNNotificationTrigger.with(hour: hour, minute: minute, day: day.rawValue)
         let request = UNNotificationRequest(identifier: requestIdentifier, content: content,trigger: trigger)
         self.add(request: request)
-        
-        if shouldRepeat {
-            self.addRepeate(day: day, hour: hour, minute: minute, task: task, content: content, repeateTimes: numberOfRepeates, repeateIntervalMin: repeateIntervalMin, time: time)
-        }
-    }
-    
-    static func addRepeate(day: Day, hour: Int, minute: Int, task: Task, content: UNMutableNotificationContent, repeateTimes: Int, repeateIntervalMin: Int, time: Time) {
-    
-        for i in 1...(repeateTimes) {
-            
-            let currentRepeatInterval = (i * repeateIntervalMin)
-            
-            let numbersAfterAdd = Time.addMinteToTime(minute: minute, hour: hour, day: day.rawValue, minuteToAdd: currentRepeatInterval)
-            let minuteAfterAdd = numbersAfterAdd.minute
-            let hourAfterAdd = numbersAfterAdd.hour
-            let dayAfterAdd = numbersAfterAdd.day
-            //let timeAfterAdd = Time(hour: hourAfterAdd, minute: minuteAfterAdd)
-            
-            let identifier = self.requestIndetifer(task: task,day: day, time: time, repeateNumber: i)
-            content.categoryIdentifier = identifier
-            let requestIdentifier = identifier
-            
-            let trigger = UNNotificationTrigger.with(hour: hourAfterAdd, minute: minuteAfterAdd, day: dayAfterAdd)
-            let request = UNNotificationRequest(identifier: requestIdentifier, content: content,trigger: trigger)
-            self.add(request: request)
-        }
+
     }
     
     static func add(request: UNNotificationRequest) {
@@ -163,11 +137,6 @@ extension UNUserNotificationCenter {
     }
     
     static func requestIndetifer(task: Task,day: Day, time: Time)-> String {
-        return self.requestIndetifer(task: task, day: day, time: time, repeateNumber: 0)
-    }
-    
-    static func requestIndetifer(task: Task,day: Day, time: Time, repeateNumber: Int)-> String {
-        let repeateTime = (repeateNumber == 0) ? "originalMasage" : "repeateNumber=\(repeateNumber)"
-        return "\(task.taskType.rawValue)-\(day.stringLong())-\(time.timeString)-||\(repeateTime)"
+        return self.requestIndetifer(task: task, day: day, time: time)
     }
 }
