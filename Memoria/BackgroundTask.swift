@@ -29,6 +29,7 @@ class BackgroundTask {
         self.playAudio()
     }
     
+    
     func stopBackgroundTask() {
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name.AVAudioSessionInterruption, object: nil)
         if self.player.isPlaying {
