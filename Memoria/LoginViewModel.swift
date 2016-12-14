@@ -15,8 +15,10 @@ class LoginViewModel: ViewModel {
     let loginService: LoginService
     let userNamePlaceHolder = Variable(Content.getContent(ContentType.labelTxt, name: "passwordPlaceHolder"))
     let passwordPlaceHolder = Variable(Content.getContent(ContentType.labelTxt, name: "userNamePlaceHolder"))
-    let userName = Variable("matan@memoria-tech.com")
-    let password = Variable("7437711")
+//    let userName = Variable("matan@memoria-tech.com")
+//    let password = Variable("7437711")
+    let userName = Variable("")
+    let password = Variable("")
     let btnLogIn = Variable<Void>()
     let btnLogInTitle = Variable(Content.getContent(ContentType.labelTxt, name: "LogInBtn"))
     let logo = Variable<UIImage>(UIImage(named: "logo")!)

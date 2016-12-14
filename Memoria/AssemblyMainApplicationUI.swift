@@ -51,12 +51,13 @@ open class AssemblyMainApplicationUI {
             let taskManager = c.resolve(TaskManagerViewController.self)!
             let feed = c.resolve(FeedViewController.self)!
             let nextTesk = c.resolve(NextTaskViewController.self)!
-            let controllers = [taskManager, feed, nextTesk]
+//            let controllers = [taskManager, feed, nextTesk]
+            let controllers = [feed, nextTesk]
             tabBar.viewControllers = controllers
-            taskManager.tabBarItem = UITabBarItem(
-                title: Content.getContent(ContentType.labelTxt, name: "TabBarTasksLbl"),
-                image: UIImage(named: "TaskManagerLogoTab"),
-                tag: 1)
+//            taskManager.tabBarItem = UITabBarItem(
+//                title: Content.getContent(ContentType.labelTxt, name: "TabBarTasksLbl"),
+//                image: UIImage(named: "TaskManagerLogoTab"),
+//                tag: 1)
             feed.tabBarItem = UITabBarItem(
                 title: Content.getContent(ContentType.labelTxt, name: "TabBarFeedLbl"),
                 image: UIImage(named: "feedIcon"),

@@ -39,7 +39,13 @@ class Task : NSObject {
         let snapshotValue = dic
         
         self.nearableIdentifer = snapshotValue[TaskPropNames.nearableIdentifer.rawValue] as? String
-        self.taskType = TaskType(rawValue: snapshotValue[TaskPropNames.taskType.rawValue] as! String)!
+        
+        if ((snapshotValue[TaskPropNames.taskType.rawValue]) != nil) {
+         self.taskType = TaskType(rawValue: snapshotValue[TaskPropNames.taskType.rawValue] as! String)!
+        } else {
+            self.taskType = TaskType.brushTeeth;
+            print("No task type returned!!");
+        }
         
         if let isCompleatedOnDates = snapshotValue[TaskPropNames.compleateOnDates.rawValue] as? [String : [String]] {
             self.compleateOnDates = CompleateOnDates(dic: isCompleatedOnDates)
