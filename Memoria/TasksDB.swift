@@ -1,5 +1,5 @@
 //
-//  TasksDB.swift
+//  DataBase.swift
 //  KontactTest
 //
 //  Created by Matan Cohen on 1/16/16.
@@ -11,7 +11,7 @@
 import Foundation
 import FirebaseDatabase
 
-class TasksDB {
+class DataBase {
     var tasksByUid = [String : Task]()
     let ref: FIRDatabaseReference
     let tasksRef: FIRDatabaseReference

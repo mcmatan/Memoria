@@ -12,15 +12,15 @@ open class AssemblyMainApplicationModel {
             }.inObjectScope(ObjectScope.container)
 
         
-        mainApplicationContainer.register(TasksDB.self) { c in
-            return TasksDB(
+        mainApplicationContainer.register(DataBase.self) { c in
+            return DataBase(
                 currentUserContext: loginContainer.resolve(CurrentUserContext.self)!
             )
             }.inObjectScope(ObjectScope.container)
         
         mainApplicationContainer.register(NearableStriggerManager.self) { c in
             return NearableStriggerManager(
-                tasksDB: mainApplicationContainer.resolve(TasksDB.self)!)
+                dataBase: mainApplicationContainer.resolve(DataBase.self)!)
             }.inObjectScope(ObjectScope.container)
         
         mainApplicationContainer.register(NearableLocator.self) { c in
@@ -29,7 +29,7 @@ open class AssemblyMainApplicationModel {
 
         mainApplicationContainer.register(NearableServices.self) { c in
             return NearableServices(nearableLocator: mainApplicationContainer.resolve(NearableLocator.self)!,
-                                   tasksDB:mainApplicationContainer.resolve(TasksDB.self)!)
+                                   dataBase:mainApplicationContainer.resolve(DataBase.self)!)
         }.inObjectScope(ObjectScope.container)
         
         mainApplicationContainer.register(NotificationScheduler.self) { c in
@@ -37,7 +37,7 @@ open class AssemblyMainApplicationModel {
             }.inObjectScope(ObjectScope.container)
         
         mainApplicationContainer.register(TasksServices.self) { c in
-            return TasksServices(tasksDB: mainApplicationContainer.resolve(TasksDB.self)!,
+            return TasksServices(dataBase: mainApplicationContainer.resolve(DataBase.self)!,
                 nearableStriggerManager: mainApplicationContainer.resolve(NearableStriggerManager.self)!,
                 notificationScheduler: mainApplicationContainer.resolve(NotificationScheduler.self)!
             )
@@ -52,7 +52,7 @@ open class AssemblyMainApplicationModel {
         mainApplicationContainer.register(NotificationSync.self) { c in
             return NotificationSync(
                 notificationScheduler: mainApplicationContainer.resolve(NotificationScheduler.self)!,
-                tasksDB: mainApplicationContainer.resolve(TasksDB.self)!
+                dataBase: mainApplicationContainer.resolve(DataBase.self)!
                 )
         }.inObjectScope(.container)
         let _ = mainApplicationContainer.resolve(NotificationSync.self)

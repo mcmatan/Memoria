@@ -16,12 +16,12 @@ import EmitterKit
 
 class NotificationSync {
     let notificationScheduler: NotificationScheduler
-    let tasksDB: TasksDB
+    let dataBase: DataBase
     var changeListener: EventListener<Any>?
     
-    init(notificationScheduler: NotificationScheduler, tasksDB: TasksDB) {
+    init(notificationScheduler: NotificationScheduler, dataBase: DataBase) {
         self.notificationScheduler = notificationScheduler
-        self.tasksDB = tasksDB
+        self.dataBase = dataBase
         self.listenToChange()
     }
     
@@ -33,7 +33,7 @@ class NotificationSync {
     
     func syncNotifications() {
         self.notificationScheduler.cancelAllNotification()
-        let allTasks = self.tasksDB.getAllTasks()
+        let allTasks = self.dataBase.getAllTasks()
         for task in allTasks {
             self.notificationScheduler.squeduleNotification(task: task)
         }

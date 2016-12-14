@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		63E7386C4BCD17B9C29135D9 /* Pods_MemoriaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C63E54DC6EDD468C89232C63 /* Pods_MemoriaTests.framework */; };
 		8A1C16701DF17F0000897CB5 /* RefreshEventEmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1C166F1DF17F0000897CB5 /* RefreshEventEmitter.swift */; };
+		8AF480A41E018BAD00F16D33 /* GPSMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF480A31E018BAD00F16D33 /* GPSMonitor.swift */; };
 		9008FB681C53D356003C1549 /* CurrenctTaskCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9008FB671C53D356003C1549 /* CurrenctTaskCreator.swift */; };
 		900912BD1DD37AAD00AEEFC2 /* NearableStriggerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900912BC1DD37AAD00AEEFC2 /* NearableStriggerManager.swift */; };
 		900912BF1DD37AB400AEEFC2 /* NearableLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900912BE1DD37AB400AEEFC2 /* NearableLocator.swift */; };
@@ -214,6 +215,7 @@
 		54BE932400BB9F6741D73728 /* Pods_MemoriaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MemoriaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		61745D56CC2A844FA0E1BF06 /* Pods-MemoriaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemoriaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MemoriaTests/Pods-MemoriaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8A1C166F1DF17F0000897CB5 /* RefreshEventEmitter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshEventEmitter.swift; sourceTree = "<group>"; };
+		8AF480A31E018BAD00F16D33 /* GPSMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPSMonitor.swift; sourceTree = "<group>"; };
 		9008FB671C53D356003C1549 /* CurrenctTaskCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrenctTaskCreator.swift; sourceTree = "<group>"; };
 		9008FB731C6F3E3E003C1549 /* Memoria-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Memoria-Bridging-Header.h"; sourceTree = "<group>"; };
 		900912BC1DD37AAD00AEEFC2 /* NearableStriggerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearableStriggerManager.swift; sourceTree = "<group>"; };
@@ -432,6 +434,14 @@
 				8A1C166F1DF17F0000897CB5 /* RefreshEventEmitter.swift */,
 			);
 			name = ApplicationUIRefreshRate;
+			sourceTree = "<group>";
+		};
+		8AF480A21E018B9000F16D33 /* GPSMonitor */ = {
+			isa = PBXGroup;
+			children = (
+				8AF480A31E018BAD00F16D33 /* GPSMonitor.swift */,
+			);
+			name = GPSMonitor;
 			sourceTree = "<group>";
 		};
 		9008FB661C53D32F003C1549 /* CurrenctTaskCreator */ = {
@@ -683,6 +693,7 @@
 		9035FE2E1C1EDA4C00D98022 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8AF480A21E018B9000F16D33 /* GPSMonitor */,
 				8A1C166E1DF17EEF00897CB5 /* ApplicationUIRefreshRate */,
 				903181BD1DE7425C00044330 /* NotificationSync */,
 				90B7D3D81DDC90BE0095BF6A /* CurrentUserContext */,
@@ -1513,6 +1524,7 @@
 				903181B01DE5D45400044330 /* AddTaskViewController.swift in Sources */,
 				9035FE051C1B064F00D98022 /* Button.swift in Sources */,
 				905AF3BB1C1F2AEF0063713A /* Task.swift in Sources */,
+				8AF480A41E018BAD00F16D33 /* GPSMonitor.swift in Sources */,
 				901EC5BB1DDBB0CB00AF2728 /* LoginViewModel.swift in Sources */,
 				9019EBE71C8F68A2008962A5 /* TaskNotificationPopUp.swift in Sources */,
 				903181BC1DE7321C00044330 /* ArrayExtentions.swift in Sources */,

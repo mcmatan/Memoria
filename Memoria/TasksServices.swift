@@ -13,22 +13,22 @@ import EmitterKit
 let snoozeMin = 5
 
 class TasksServices {
-    private var tasksDB : TasksDB
+    private var dataBase : DataBase
     private let nearableStriggerManager: NearableStriggerManager
     let notificationScheduler: NotificationScheduler
 
-    init(tasksDB : TasksDB,
+    init(dataBase : DataBase,
          nearableStriggerManager: NearableStriggerManager,
          notificationScheduler: NotificationScheduler
         ) {
         self.nearableStriggerManager = nearableStriggerManager
-        self.tasksDB = tasksDB
+        self.dataBase = dataBase
         self.notificationScheduler = notificationScheduler
     }
     
     func saveTask(_ task :Task) {
         self.notificationScheduler.squeduleNotification(task: task)
-        self.tasksDB.saveTask(task)
+        self.dataBase.saveTask(task)
         
         if task.hasSticker() {
             self.nearableStriggerManager.startTrackingForMotion(identifer: task.nearableIdentifer!)
@@ -37,14 +37,14 @@ class TasksServices {
 
     func setTaskAsDone(task : Task) {
         self.notificationScheduler.cancelNotification(task: task)
-        self.tasksDB.saveTask(task)
+        self.dataBase.saveTask(task)
         
         Events.shared.taskMarkedAsDone.emit(task)
     }
 
     func removeTask(_ task : Task) {
         self.notificationScheduler.cancelNotification(task: task)
-        let _ = self.tasksDB.removeTask(task)
+        let _ = self.dataBase.removeTask(task)
         
         if task.hasSticker() {
             self.nearableStriggerManager.stopTrackingForMotion(identifer: task.nearableIdentifer!)
@@ -52,7 +52,7 @@ class TasksServices {
     }
     
     func getAllTasks()->[Task] {
-       return self.tasksDB.getAllTasks()
+       return self.dataBase.getAllTasks()
     }
     
     func getUpcomingTasksDisplays()->[TaskDisplay] {
@@ -88,7 +88,7 @@ class TasksServices {
     }
     
     func getTask(taskUid: String)-> Task? {
-        return self.tasksDB.getTask(taskUid: taskUid)
+        return self.dataBase.getTask(taskUid: taskUid)
     }
 
 }

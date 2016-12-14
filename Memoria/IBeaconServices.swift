@@ -11,11 +11,11 @@ import UIKit
 
 class NearableServices {
     var nearableLocator : NearableLocator
-    var tasksDB : TasksDB
+    var dataBase : DataBase
     
-    init(nearableLocator : NearableLocator, tasksDB : TasksDB) {
+    init(nearableLocator : NearableLocator, dataBase : DataBase) {
         self.nearableLocator = nearableLocator
-        self.tasksDB = tasksDB
+        self.dataBase = dataBase
     }
     
     func isThereNearableInErea(_ handler: (( _ result : Bool, _ nearable : ESTNearable?) -> Void)!) {
@@ -30,7 +30,7 @@ class NearableServices {
     
     func isNearableAlreadyHasATaskAssigned(_ nearable :ESTNearable)->Bool {
         return false
-        //return self.tasksDB.isThereTaskForNearableIdentifier(nearable.identifier)
+        //return self.dataBase.isThereTaskForNearableIdentifier(nearable.identifier)
     }
     
     func getNearableColorFor(nearableIdentifer :String)->UIColor {

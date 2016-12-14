@@ -48,7 +48,7 @@ open class AssemblyMainApplicationUI {
         
         container.register(TabBarController.self) { c in
             let tabBar = TabBarController()
-            let taskManager = c.resolve(TaskManagerViewController.self)!
+            _ = c.resolve(TaskManagerViewController.self)!
             let feed = c.resolve(FeedViewController.self)!
             let nextTesk = c.resolve(NextTaskViewController.self)!
 //            let controllers = [taskManager, feed, nextTesk]
