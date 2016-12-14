@@ -11,10 +11,15 @@
 import Foundation
 import FirebaseDatabase
 
+let LOCATION_UPDATE_TIME = "updateTime"
+let LOCATION_LAT = "lat"
+let LOCATION_LON = "lon"
+
 class DataBase {
     var tasksByUid = [String : Task]()
     let ref: FIRDatabaseReference
     let tasksRef: FIRDatabaseReference
+    let locationRef: FIRDatabaseReference
     let currentUserContext: CurrentUserContext
     
     init(
@@ -23,6 +28,7 @@ class DataBase {
         let user = self.currentUserContext.getCurrentUser()
         self.ref = FIRDatabase.database().reference().child("users").child(user.uid)
         self.tasksRef = self.ref.child("tasks")
+        self.locationRef = self.ref.child("location")
         
         self.writeConnection()
         self.startListeningForChanges()
@@ -44,6 +50,14 @@ class DataBase {
     
     func removeTask(_ task : Task) {
         self.tasksRef.child(task.uid).removeValue()
+    }
+    
+    func saveLocation(lat: String, lon: String) {
+        
+        let nowDate = Date()
+        let timeIntervalSince70 = String(nowDate.timeIntervalSince1970)
+        let dic = [LOCATION_LAT : lat, LOCATION_LON: lon, LOCATION_UPDATE_TIME: timeIntervalSince70];
+        self.locationRef.setValue(dic);
     }
     
     func getAllTasks()->[Task] {

@@ -143,7 +143,7 @@
 		90E8C4B71C1AA2B9009304A9 /* MemoriaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E8C4B61C1AA2B9009304A9 /* MemoriaUITests.swift */; };
 		90F009F71C4A7AE2002C98BA /* NotificationsNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F009F61C4A7AE2002C98BA /* NotificationsNames.swift */; };
 		90F009FA1C4A7B0B002C98BA /* TasksNotificationsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F009F91C4A7B0B002C98BA /* TasksNotificationsPresenter.swift */; };
-		90F00A001C4A7B73002C98BA /* TasksDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F009FF1C4A7B73002C98BA /* TasksDB.swift */; };
+		90F00A001C4A7B73002C98BA /* DataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F009FF1C4A7B73002C98BA /* DataBase.swift */; };
 		90F00A0D1C4A7C25002C98BA /* TasksServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F00A0C1C4A7C25002C98BA /* TasksServices.swift */; };
 		90F00A0F1C4A7C2F002C98BA /* IBeaconServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F00A0E1C4A7C2F002C98BA /* IBeaconServices.swift */; };
 		90F4E2131DE46DEA00218DAF /* RepeateOnDates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F4E2121DE46DEA00218DAF /* RepeateOnDates.swift */; };
@@ -361,7 +361,7 @@
 		90E8C4B81C1AA2B9009304A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90F009F61C4A7AE2002C98BA /* NotificationsNames.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsNames.swift; sourceTree = "<group>"; };
 		90F009F91C4A7B0B002C98BA /* TasksNotificationsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksNotificationsPresenter.swift; sourceTree = "<group>"; };
-		90F009FF1C4A7B73002C98BA /* TasksDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksDB.swift; sourceTree = "<group>"; };
+		90F009FF1C4A7B73002C98BA /* DataBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataBase.swift; sourceTree = "<group>"; };
 		90F00A021C4A7BB2002C98BA /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		90F00A0C1C4A7C25002C98BA /* TasksServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksServices.swift; sourceTree = "<group>"; };
 		90F00A0E1C4A7C2F002C98BA /* IBeaconServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBeaconServices.swift; sourceTree = "<group>"; };
@@ -705,7 +705,7 @@
 				9008FB661C53D32F003C1549 /* CurrenctTaskCreator */,
 				900912BB1DD37A8A00AEEFC2 /* NearableTriggerManager */,
 				90F00A041C4A7BFD002C98BA /* NearableLocator */,
-				90F009FE1C4A7B69002C98BA /* TasksDB */,
+				90F009FE1C4A7B69002C98BA /* DataBase */,
 				90F009F51C4A7ADB002C98BA /* NotificationsNames */,
 				90DC77A01C3DA0ED0062BCE3 /* Recorder */,
 			);
@@ -999,12 +999,12 @@
 			name = UI;
 			sourceTree = "<group>";
 		};
-		90F009FE1C4A7B69002C98BA /* TasksDB */ = {
+		90F009FE1C4A7B69002C98BA /* DataBase */ = {
 			isa = PBXGroup;
 			children = (
-				90F009FF1C4A7B73002C98BA /* TasksDB.swift */,
+				90F009FF1C4A7B73002C98BA /* DataBase.swift */,
 			);
-			name = TasksDB;
+			name = DataBase;
 			sourceTree = "<group>";
 		};
 		90F00A011C4A7B7E002C98BA /* Entities */ = {
@@ -1550,7 +1550,7 @@
 				905AF3C11C1F3BD60063713A /* NavigationController.swift in Sources */,
 				90B7D3D51DDC8FE20095BF6A /* User.swift in Sources */,
 				90B7D3D71DDC90BA0095BF6A /* CurrentUserContext.swift in Sources */,
-				90F00A001C4A7B73002C98BA /* TasksDB.swift in Sources */,
+				90F00A001C4A7B73002C98BA /* DataBase.swift in Sources */,
 				90DC620E1C6F6B45000C4457 /* NSDateExntentions.swift in Sources */,
 				90B0C53F1DAAE3870019D59B /* NotificationScheduler.swift in Sources */,
 				901127301C1AFBE20088DD6B /* AssemblyMainApplicationModel.swift in Sources */,

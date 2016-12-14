@@ -18,6 +18,13 @@ open class AssemblyMainApplicationModel {
             )
             }.inObjectScope(ObjectScope.container)
         
+        mainApplicationContainer.register(GPSMonitor.self) { c in
+            return GPSMonitor(
+                dataBase: mainApplicationContainer.resolve(DataBase.self)!
+            )
+            }.inObjectScope(ObjectScope.container)
+        let _ = mainApplicationContainer.resolve(GPSMonitor.self)
+        
         mainApplicationContainer.register(NearableStriggerManager.self) { c in
             return NearableStriggerManager(
                 dataBase: mainApplicationContainer.resolve(DataBase.self)!)

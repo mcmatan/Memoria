@@ -55,5 +55,7 @@
 	<string>NO</string>
 	<key>FirebaseAutomaticScreenReportingEnabled</key>
 	<string>NO</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Memoria will use your location, to better understand daily routine and inform your family when needed.</string>
 </dict>
 </plist>
