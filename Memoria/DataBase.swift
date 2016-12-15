@@ -15,28 +15,43 @@ let LOCATION_UPDATE_TIME = "updateTime"
 let LOCATION_LAT = "lat"
 let LOCATION_LON = "lon"
 
-class DataBase {
+let USERS_REF = "users"
+let TASKS_REF = "tasks"
+let LOCATION_REF = "location"
+let LAST_ACTIVE_REF = "lastActive"
+let EMAIL_REF = "email"
+
+
+class DataBase: NSObject {
     var tasksByUid = [String : Task]()
     let ref: FIRDatabaseReference
     let tasksRef: FIRDatabaseReference
     let locationRef: FIRDatabaseReference
+    let lastActiveRef: FIRDatabaseReference
     let currentUserContext: CurrentUserContext
     
     init(
          currentUserContext: CurrentUserContext) {
         self.currentUserContext = currentUserContext
         let user = self.currentUserContext.getCurrentUser()
-        self.ref = FIRDatabase.database().reference().child("users").child(user.uid)
-        self.tasksRef = self.ref.child("tasks")
-        self.locationRef = self.ref.child("location")
-        
+        self.ref = FIRDatabase.database().reference().child(USERS_REF).child(user.uid)
+        self.tasksRef = self.ref.child(TASKS_REF)
+        self.locationRef = self.ref.child(LOCATION_REF)
+        self.lastActiveRef = self.ref.child(LAST_ACTIVE_REF)
+    
+        super.init()
         self.writeConnection()
         self.startListeningForChanges()
         self.writeEmail()
+        NotificationCenter.default.addObserver(self, selector:#selector(writeStateApplicationBecomeActive) , name: Notification.Name.UIApplicationDidBecomeActive, object: nil)
+    }
+    
+    deinit {
+          NotificationCenter.default.removeObserver(self)
     }
     
     func writeEmail() {
-        let emailRef = self.ref.child("email")
+        let emailRef = self.ref.child(EMAIL_REF)
         emailRef.setValue(self.currentUserContext.getCurrentUser().email)
     }
     
@@ -63,6 +78,13 @@ class DataBase {
     func getAllTasks()->[Task] {
         return Array(self.tasksByUid.values)
     }
+    
+    func writeStateApplicationBecomeActive() {
+        let nowDate = Date()
+        let timeIntervalSince70 = String(nowDate.timeIntervalSince1970)
+        self.lastActiveRef.setValue(timeIntervalSince70)
+    }
+    
     
     func startListeningForChanges() {
         
